@@ -133,6 +133,7 @@ public class HadithCategoryRepository {
                 }
             } catch (Exception ignored) {}
 
+            // Update memory cache and post to UI immediately
             memoryCache = Collections.synchronizedList(new ArrayList<>(list));
             final List<HadithBookCategory> updatedList = new ArrayList<>(list);
 
@@ -141,73 +142,7 @@ public class HadithCategoryRepository {
                     callback.onLoaded(updatedList);
                 }
             });
-
-            // 3. Fetch live data from remote on dedicated network thread
-            networkExecutor.execute(() -> fetchRemoteCategories(appContext, callback));
         });
-    }
-
-    private void fetchRemoteCategories(Context context, CategoryCallback callback) {
-        if (!NetworkConnectivityHelper.isOnline(context)) {
-            return;
-        }
-
-        try {
-            String endpoint = BackendConfigManager.getPhpApiEndpoint(context, "get_hadith_categories.php");
-            URL url = new URL(endpoint);
-            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-            conn.setRequestMethod("GET");
-            conn.setConnectTimeout(3500);
-            conn.setReadTimeout(3500);
-
-            int responseCode = conn.getResponseCode();
-            if (responseCode == HttpURLConnection.HTTP_OK) {
-                BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream(), StandardCharsets.UTF_8));
-                StringBuilder sb = new StringBuilder();
-                String line;
-                while ((line = reader.readLine()) != null) {
-                    sb.append(line);
-                }
-                reader.close();
-
-                JsonObject json = gson.fromJson(sb.toString(), JsonObject.class);
-                if (json != null && json.has("success") && json.get("success").getAsBoolean()) {
-                    JsonArray arr = json.has("categories") ? json.getAsJsonArray("categories") : new JsonArray();
-                    List<HadithBookCategory> remoteList = new ArrayList<>();
-
-                    for (JsonElement el : arr) {
-                        JsonObject obj = el.getAsJsonObject();
-                        String slug = obj.has("slug") ? obj.get("slug").getAsString() : "";
-                        String nameBn = obj.has("name_bn") ? obj.get("name_bn").getAsString() : "";
-                        String nameEn = obj.has("name_en") ? obj.get("name_en").getAsString() : "";
-                        String authorBn = obj.has("author_bn") ? obj.get("author_bn").getAsString() : "";
-                        String authorEn = obj.has("author_en") ? obj.get("author_en").getAsString() : "";
-                        String initials = obj.has("initials") ? obj.get("initials").getAsString() : "";
-                        String colorHex = obj.has("color_hex") ? obj.get("color_hex").getAsString() : "#10B981";
-                        int total = obj.has("total_hadith") ? obj.get("total_hadith").getAsInt() : 0;
-                        int order = obj.has("display_order") ? obj.get("display_order").getAsInt() : remoteList.size() + 1;
-
-                        remoteList.add(new HadithBookCategory(slug, nameBn, nameEn, authorBn, authorEn, initials, colorHex, total, order));
-                    }
-
-                    if (!remoteList.isEmpty()) {
-                        SharedPreferences prefs = context.getSharedPreferences(PREF_HADITH_CAT, Context.MODE_PRIVATE);
-                        prefs.edit().putString(KEY_CACHED_CATEGORIES, gson.toJson(remoteList)).apply();
-                        memoryCache = Collections.synchronizedList(new ArrayList<>(remoteList));
-
-                        final List<HadithBookCategory> finalList = new ArrayList<>(remoteList);
-                        mainHandler.post(() -> {
-                            if (callback != null) {
-                                callback.onLoaded(finalList);
-                            }
-                        });
-                    }
-                }
-            }
-            conn.disconnect();
-        } catch (Exception e) {
-            Log.w(TAG, "fetchRemoteCategories note: " + e.getMessage());
-        }
     }
 
     public static List<HadithBookCategory> getDefaultCategories() {

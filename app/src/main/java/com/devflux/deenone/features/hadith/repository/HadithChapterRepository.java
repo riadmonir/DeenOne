@@ -7,30 +7,19 @@ import android.util.Log;
 
 import androidx.lifecycle.LiveData;
 
-import com.devflux.deenone.core.backend.BackendConfigManager;
-import com.devflux.deenone.core.network.NetworkConnectivityHelper;
 import com.devflux.deenone.data.local.AppDatabase;
 import com.devflux.deenone.data.local.entity.HadithChapterEntity;
-import com.google.gson.Gson;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * Repository for Hadith Chapters with 3-tier ultra-fast architecture:
- * 1. Instant Room Database LiveData / local retrieval (0ms, 60 FPS, lag-free).
- * 2. Background PHP API sync via BackendConfigManager.
- * 3. Offline fallback with default pre-seeded Bukhari chapters.
+ * Repository for Hadith Chapters with direct SQLite & local Room database architecture:
+ * 1. Instant SQLite / Room Database LiveData / local retrieval (0ms, 60 FPS, lag-free).
+ * 2. Background GitHub CDN sync via HadithDatabaseManager.
+ * 3. 100% PHP decoupled, offline reliable.
  */
 public class HadithChapterRepository {
 
@@ -38,9 +27,7 @@ public class HadithChapterRepository {
     private static volatile HadithChapterRepository instance;
 
     private final ExecutorService diskExecutor = Executors.newFixedThreadPool(2);
-    private final ExecutorService networkExecutor = Executors.newSingleThreadExecutor();
     private final Handler mainHandler = new Handler(Looper.getMainLooper());
-    private final Gson gson = new Gson();
 
     public interface ChaptersCallback {
         void onLoaded(List<HadithChapterEntity> chapters);
@@ -67,104 +54,57 @@ public class HadithChapterRepository {
     }
 
     /**
-     * Load chapters with immediate local callback and background network sync.
+     * Load chapters with immediate local callback from HadithDatabaseManager / Room database.
+     * 100% decoupled from PHP server; purely offline and GitHub CDN SQLite synced.
      */
     public void loadChapters(Context context, String bookSlug, ChaptersCallback callback) {
         final Context appContext = context.getApplicationContext();
+        final String safeSlug = (bookSlug != null ? bookSlug.toLowerCase().trim() : "bukhari");
 
-        // 1. Immediately read from SQLite Database Manager / Room database on disk executor
         diskExecutor.execute(() -> {
-            // Check direct SQLite engine first (0ms instant)
+            // 1. Check direct SQLite engine first (0ms instant)
             HadithDatabaseManager dbMgr = HadithDatabaseManager.getInstance(appContext);
             if (dbMgr.isDatabaseReady()) {
-                List<HadithChapterEntity> sqliteChapters = dbMgr.getChaptersForBook(bookSlug);
+                List<HadithChapterEntity> sqliteChapters = dbMgr.getChaptersForBook(safeSlug);
                 if (sqliteChapters != null && !sqliteChapters.isEmpty()) {
-                    // Update Room DB in background
                     AppDatabase.getInstance(appContext).hadithChapterDao().insertAll(sqliteChapters);
-                    mainHandler.post(() -> callback.onLoaded(sqliteChapters));
+                    mainHandler.post(() -> {
+                        if (callback != null) callback.onLoaded(sqliteChapters);
+                    });
                     return;
                 }
             }
 
+            // 2. Check local Room Database
             AppDatabase db = AppDatabase.getInstance(appContext);
-            int count = db.hadithChapterDao().getChapterCount(bookSlug);
-            if (count < 41 && "bukhari".equalsIgnoreCase(bookSlug)) {
+            List<HadithChapterEntity> localList = db.hadithChapterDao().getChaptersByBookSync(safeSlug);
+            if (localList != null && !localList.isEmpty()) {
+                mainHandler.post(() -> {
+                    if (callback != null) callback.onLoaded(localList);
+                });
+            } else if ("bukhari".equalsIgnoreCase(safeSlug)) {
                 List<HadithChapterEntity> defaults = getDefaultBukhariChapters();
                 db.hadithChapterDao().insertAll(defaults);
-                mainHandler.post(() -> callback.onLoaded(defaults));
+                mainHandler.post(() -> {
+                    if (callback != null) callback.onLoaded(defaults);
+                });
             }
 
-            // Sync from remote backend API / GitHub CDN in background
-            if (NetworkConnectivityHelper.isOnline(appContext)) {
-                networkExecutor.execute(() -> fetchRemoteChapters(appContext, bookSlug, callback));
-            }
+            // 3. Ensure SQLite database is downloaded/verified from GitHub CDN in background
+            dbMgr.ensureDatabaseAvailable(success -> {
+                if (success) {
+                    diskExecutor.execute(() -> {
+                        List<HadithChapterEntity> loaded = dbMgr.getChaptersForBook(safeSlug);
+                        if (loaded != null && !loaded.isEmpty()) {
+                            AppDatabase.getInstance(appContext).hadithChapterDao().insertAll(loaded);
+                            mainHandler.post(() -> {
+                                if (callback != null) callback.onLoaded(loaded);
+                            });
+                        }
+                    });
+                }
+            });
         });
-    }
-
-    private void fetchRemoteChapters(Context context, String bookSlug, ChaptersCallback callback) {
-        HttpURLConnection conn = null;
-        try {
-            String endpoint = BackendConfigManager.getPhpApiEndpoint(context, "get_hadith_chapters.php?book_slug=" + bookSlug);
-            URL url = new URL(endpoint);
-            conn = (HttpURLConnection) url.openConnection();
-            conn.setRequestMethod("GET");
-            conn.setConnectTimeout(6000);
-            conn.setReadTimeout(6000);
-            conn.setRequestProperty("Accept", "application/json");
-
-            int responseCode = conn.getResponseCode();
-            if (responseCode == HttpURLConnection.HTTP_OK) {
-                BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream(), StandardCharsets.UTF_8));
-                StringBuilder response = new StringBuilder();
-                String line;
-                while ((line = reader.readLine()) != null) {
-                    response.append(line);
-                }
-                reader.close();
-
-                JsonObject json = gson.fromJson(response.toString(), JsonObject.class);
-                boolean isSuccess = json != null && (
-                        (json.has("success") && json.get("success").getAsBoolean()) ||
-                        (json.has("status") && "success".equalsIgnoreCase(json.get("status").getAsString()))
-                );
-                if (isSuccess) {
-                    JsonArray data = json.has("data") ? json.getAsJsonArray("data") : (json.has("chapters") ? json.getAsJsonArray("chapters") : null);
-                    if (data != null) {
-                        List<HadithChapterEntity> remoteList = new ArrayList<>();
-                        for (JsonElement elem : data) {
-                            JsonObject obj = elem.getAsJsonObject();
-                            HadithChapterEntity item = new HadithChapterEntity();
-                            item.setBookSlug(bookSlug);
-                            item.setChapterNumber(obj.has("chapter_number") ? obj.get("chapter_number").getAsInt() : 1);
-                            item.setChapterNumberBn(obj.has("chapter_number_bn") ? obj.get("chapter_number_bn").getAsString() : "");
-                            item.setTitleBn(obj.has("title_bn") ? obj.get("title_bn").getAsString() : "");
-                            item.setTitleEn(obj.has("title_en") ? obj.get("title_en").getAsString() : "");
-                            String rangeEn = obj.has("hadith_range") ? obj.get("hadith_range").getAsString() : (obj.has("hadith_range_text_en") ? obj.get("hadith_range_text_en").getAsString() : "");
-                            String rangeBn = obj.has("hadith_range_bn") ? obj.get("hadith_range_bn").getAsString() : (obj.has("hadith_range_text") ? obj.get("hadith_range_text").getAsString() : "");
-                            item.setHadithRange(rangeEn);
-                            item.setHadithRangeBn(rangeBn);
-                            item.setStartHadith(obj.has("hadith_range_start") ? obj.get("hadith_range_start").getAsInt() : (obj.has("start_hadith") ? obj.get("start_hadith").getAsInt() : 0));
-                            item.setEndHadith(obj.has("hadith_range_end") ? obj.get("hadith_range_end").getAsInt() : (obj.has("end_hadith") ? obj.get("end_hadith").getAsInt() : 0));
-                            item.setTotalHadith(obj.has("total_hadith") ? obj.get("total_hadith").getAsInt() : 0);
-                            item.setDisplayOrder(obj.has("display_order") ? obj.get("display_order").getAsInt() : 0);
-                            item.setActive(true);
-                            remoteList.add(item);
-                        }
-
-                        if (!remoteList.isEmpty()) {
-                            AppDatabase.getInstance(context).hadithChapterDao().insertAll(remoteList);
-                            if (callback != null) {
-                                mainHandler.post(() -> callback.onLoaded(remoteList));
-                            }
-                        }
-                    }
-                }
-            }
-        } catch (Exception e) {
-            Log.e(TAG, "fetchRemoteChapters error: " + e.getMessage());
-        } finally {
-            if (conn != null) conn.disconnect();
-        }
     }
 
     public static List<HadithChapterEntity> getDefaultBukhariChapters() {
