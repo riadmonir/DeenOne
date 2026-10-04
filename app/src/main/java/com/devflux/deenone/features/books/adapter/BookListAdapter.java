@@ -331,39 +331,47 @@ public class BookListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
   public static String getCategoryDisplayName(String cat, boolean isBn) {
     if (cat == null) return isBn ? "ইসলামিক কিতাব" : "Islamic Book";
     if (!isBn) {
-      return switch (cat) {
-        case "Quran" -> "Quran";
-        case "Tafsir" -> "Tafsir";
-        case "Hadith" -> "Hadith";
-        case "Fiqh" -> "Fiqh";
-        case "Aqeedah" -> "Aqeedah";
-        case "Seerah" -> "Seerah";
-        case "Islamic History" -> "History";
-        case "Dua & Azkar" -> "Dua & Azkar";
-        case "Salah" -> "Salah";
-        case "Islamic Ethics" -> "Ethics";
-        case "Family & Marriage" -> "Family";
-        case "Children" -> "Children";
-        case "Bangla Islamic Books" -> "Bangla Books";
-        case "English Islamic Books" -> "English Books";
+      return switch (cat.toLowerCase().trim()) {
+        case "aqeedah" -> "Aqeedah";
+        case "salah" -> "Salah";
+        case "zakat" -> "Zakat & Charity";
+        case "sawm" -> "Sawm & Ramadan";
+        case "hajj" -> "Hajj & Umrah";
+        case "dua" -> "Dua & Zikr";
+        case "fatwa" -> "Fatwa & Masail";
+        case "bidah" -> "Shirk & Bid'ah";
+        case "family" -> "Family & Life";
+        case "seerah" -> "Seerah & Biography";
+        case "firqa" -> "Sects & Groups";
+        case "quran_hadith" -> "Quran & Hadith";
+        case "qurbani_eid" -> "Qurbani & Eid";
+        case "tawhid_waseela" -> "Tawhid & Waseela";
+        case "quran" -> "Quran";
+        case "tafsir" -> "Tafsir";
+        case "hadith" -> "Hadith";
+        case "fiqh" -> "Fiqh";
         default -> cat;
       };
     }
-    return switch (cat) {
-      case "Quran" -> "কুরআন";
-      case "Tafsir" -> "তাফসীর";
-      case "Hadith" -> "হাদিস";
-      case "Fiqh" -> "ফিকহ";
-      case "Aqeedah" -> "আকিদা";
-      case "Seerah" -> "সীরাত";
-      case "Islamic History" -> "ইতিহাস";
-      case "Dua & Azkar" -> "দোয়া ও জিকির";
-      case "Salah" -> "সালাত";
-      case "Islamic Ethics" -> "আখলাক";
-      case "Family & Marriage" -> "পরিবার";
-      case "Children" -> "শিশু-কিশোর";
-      case "Bangla Islamic Books" -> "বাংলা বই";
-      case "English Islamic Books" -> "ইংরেজি বই";
+    return switch (cat.toLowerCase().trim()) {
+      case "aqeedah" -> "আকীদা";
+      case "salah" -> "সালাত";
+      case "zakat" -> "যাকাত ও সাদাকাহ";
+      case "sawm" -> "সাওম ও রমজান";
+      case "hajj" -> "হজ ও উমরাহ";
+      case "dua" -> "দো'আ ও যিকির";
+      case "fatwa" -> "ফতোয়া ও মাসআলা";
+      case "bidah" -> "শিরক ও বিদআত";
+      case "family" -> "পারিবারিক জীবন";
+      case "seerah" -> "সীরাত ও জীবনী";
+      case "firqa" -> "ফিরকা ও দল";
+      case "quran_hadith" -> "কুরআন ও হাদিস";
+      case "qurbani_eid" -> "কুরবানী ও ঈদ";
+      case "tawhid_waseela" -> "তাওহীদ ও উসীলা";
+      case "quran" -> "কুরআন";
+      case "tafsir" -> "তাফসীর";
+      case "hadith" -> "হাদিস";
+      case "fiqh" -> "ফিকহ";
       default -> cat;
     };
   }
