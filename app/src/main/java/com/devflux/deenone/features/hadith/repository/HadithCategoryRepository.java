@@ -98,37 +98,29 @@ public class HadithCategoryRepository {
         List<HadithBookCategory> list = new ArrayList<>();
 
         // 1 - 7: Kutub as-Sittah & Muwatta
-        list.add(new HadithBookCategory("bukhari", "সহীহ বুখারী", "Sahih Bukhari", "ইমাম বুখারি", "Imam Bukhari", "B", "#22C55E", 7563, 1));
-        list.add(new HadithBookCategory("muslim", "সহীহ মুসলিম", "Sahih Muslim", "ইমাম মুসলিম", "Imam Muslim", "M", "#0284C7", 7500, 2));
-        list.add(new HadithBookCategory("nasai", "সুনানে আন-নাসায়ী", "Sunan an-Nasa'i", "ইমাম নাসায়ী", "Imam Nasa'i", "N", "#0EA5E9", 5760, 3));
+        list.add(new HadithBookCategory("bukhari", "সহীহ বুখারী", "Sahih Bukhari", "ইমাম বুখারি", "Imam Bukhari", "B", "#22C55E", 7589, 1));
+        list.add(new HadithBookCategory("muslim", "সহীহ মুসলিম", "Sahih Muslim", "ইমাম মুসলিম", "Imam Muslim", "M", "#0284C7", 7563, 2));
+        list.add(new HadithBookCategory("nasai", "সুনানে আন-নাসায়ী", "Sunan an-Nasa'i", "ইমাম নাসায়ী", "Imam Nasa'i", "N", "#0EA5E9", 5765, 3));
         list.add(new HadithBookCategory("abu_dawood", "সুনানে আবু দাউদ", "Sunan Abu Dawood", "ইমাম আবু দাউদ", "Imam Abu Dawood", "AD", "#9333EA", 5274, 4));
-        list.add(new HadithBookCategory("tirmidhi", "জামে' আত-তিরমিযী", "Jami' at-Tirmidhi", "ইমাম তিরমিজি", "Imam Tirmidhi", "T", "#3B82F6", 3956, 5));
-        list.add(new HadithBookCategory("ibn_majah", "সুনানে ইবনে মাজাহ", "Sunan Ibn Majah", "ইমাম ইবনে মাজাহ", "Imam Ibn Majah", "IM", "#F97316", 4341, 6));
+        list.add(new HadithBookCategory("tirmidhi", "জামে' আত-তিরমিযী", "Jami' at-Tirmidhi", "ইমাম তিরমিজি", "Imam Tirmidhi", "T", "#3B82F6", 3998, 5));
+        list.add(new HadithBookCategory("ibn_majah", "সুনানে ইবনে মাজাহ", "Sunan Ibn Majah", "ইমাম ইবনে মাজাহ", "Imam Ibn Majah", "IM", "#F97316", 4343, 6));
         list.add(new HadithBookCategory("muwatta_malik", "মুয়াত্তা ইমাম মালিক", "Muwatta Imam Malik", "ইমাম মালিক", "Imam Malik", "MI", "#38BDF8", 1858, 7));
 
-        // 8 - 13: Classical Collections
-        list.add(new HadithBookCategory("riyadus_salihin", "রিয়াদুস সালেহীন", "Riyadus Salihin", "ইমাম নববী", "Imam Nawawi", "RS", "#EC4899", 1905, 8));
-        list.add(new HadithBookCategory("bulughul_maram", "বুলুগুল মারাম", "Bulughul Maram", "ইবনে হাজার আসকালানী", "Ibn Hajar al-Asqalani", "BM", "#FB923C", 1568, 9));
-        list.add(new HadithBookCategory("lulu_wal_marjan", "আল-লু'লু ওয়াল মারজান", "Al-Lu'lu wal Marjan", "আল্লামা ফুয়াদ আল বাকী", "Allama Fuad Al-Baqi", "LM", "#84CC16", 1906, 10));
-        list.add(new HadithBookCategory("hadith_sambhar", "হাদীস সম্ভার", "Hadith Sambhar", "আব্দুল হামিদ ফাইযি", "Abdul Hamid Faizi", "HS", "#14B8A6", 3000, 11));
-        list.add(new HadithBookCategory("silsila_sahiha", "সিলসিলা সহিহা", "Silsila Sahiha", "আল্লামা নাসিরুদ্দিন আলবানী", "Allama Nasiruddin Albani", "SS", "#F59E0B", 4035, 12));
-        list.add(new HadithBookCategory("jal_o_daif_series", "জাল ও যঈফ হাদীস সিরিজ", "Jal o Daif Hadith Series", "আল্লামা নাসিরুদ্দিন আলবানী", "Allama Nasiruddin Albani", "JH", "#FCA5A5", 4000, 13));
+        // 8 - 13: Classical & Authentic Collections
+        list.add(new HadithBookCategory("riyadus_salihin", "রিয়াদুস সালেহীন", "Riyadus Salihin", "ইমাম নববী", "Imam Nawawi", "RS", "#EC4899", 616, 8));
+        list.add(new HadithBookCategory("bulughul_maram", "বুলুগুল মারাম", "Bulughul Maram", "ইবনে হাজার আসকালানী", "Ibn Hajar al-Asqalani", "BM", "#FB923C", 178, 9));
+        list.add(new HadithBookCategory("jal_o_daif_series", "জাল ও যঈফ হাদীস সিরিজ", "Jal o Daif Hadith Series", "আল্লামা নাসিরুদ্দিন আলবানী", "Allama Nasiruddin Albani", "JH", "#FCA5A5", 342, 10));
+        list.add(new HadithBookCategory("nawawi_40", "আন্-নওয়াবীর চল্লিশ হাদীস", "An-Nawawi's 40 Hadith", "ইমাম নববী", "Imam Nawawi", "40", "#78716C", 42, 11));
+        list.add(new HadithBookCategory("adabul_mufrad", "আল-আদাবুল মুফরাদ", "Al-Adab al-Mufrad", "ইমাম বুখারি", "Imam Bukhari", "AM", "#0F766E", 183, 12));
+        list.add(new HadithBookCategory("hadithe_qudsi", "সহীহ হাদীসে কুদসী", "Sahih Hadithe Qudsi", "আল্লামা নাসিরুদ্দিন আলবানী", "Allama Nasiruddin Albani", "HK", "#10B981", 163, 13));
 
-        // 14 - 20: Famous Anthologies
-        list.add(new HadithBookCategory("mishkatul_masabih", "মিশকাতুল মাসাবীহ", "Mishkat al-Masabih", "আল্লামা খতীব তাবরেযী", "Allama Khatib Tabrizi", "MM", "#4B5563", 6294, 14));
-        list.add(new HadithBookCategory("nawawi_40", "আন্-নওয়াবীর চল্লিশ হাদীস", "An-Nawawi's 40 Hadith", "ইমাম নববী", "Imam Nawawi", "40", "#78716C", 42, 15));
-        list.add(new HadithBookCategory("adabul_mufrad", "আল-আদাবুল মুফরাদ", "Al-Adab al-Mufrad", "ইমাম বুখারি", "Imam Bukhari", "AM", "#0F766E", 1322, 16));
-        list.add(new HadithBookCategory("rafayel_yadain", "জুয'উল রাফায়েল ইয়াদাইন", "Juz'ul Raf'ul Yadayn", "ইমাম বুখারি", "Imam Bukhari", "JR", "#06B6D4", 114, 17));
-        list.add(new HadithBookCategory("hadithe_qudsi", "সহীহ হাদীসে কুদসী", "Sahih Hadithe Qudsi", "আল্লামা নাসিরুদ্দিন আলবানী", "Allama Nasiruddin Albani", "HK", "#10B981", 396, 18));
-        list.add(new HadithBookCategory("100_susabbasto_hadith", "১০০ সুসাব্যস্ত হাদীস", "100 Susabbasto Hadith", "সঙ্কলিত হাদিস", "Compiled Hadith", "100", "#4F46E5", 100, 19));
-        list.add(new HadithBookCategory("mishkate_daif_hadith", "মিশকাতে যঈফ হাদীস", "Mishkate Daif Hadith", "মুযাফফার বিন মুহসিন", "Muzaffar Bin Muhsin", "MJ", "#E11D48", 1150, 20));
-
-        // 21 - 25: Specialized & Moral Themes
-        list.add(new HadithBookCategory("shamayele_tirmidhi", "শামায়েলে তিরমিযি", "Shama'il al-Tirmidhi", "ইমাম তিরমিজি", "Imam Tirmidhi", "ST", "#EF4444", 397, 21));
-        list.add(new HadithBookCategory("sahih_at_targib", "সহীহ আত-তারগিব ওয়াত তাহরিব", "Sahih at-Targhib wat-Tahrib", "আল্লামা নাসিরুদ্দিন আলবানী", "Allama Nasiruddin Albani", "TW", "#A855F7", 3775, 22));
-        list.add(new HadithBookCategory("sahih_fazayele_amal", "সহিহ ফাযায়েলে আমল", "Sahih Fazayele Amal", "আহসানুল্লাহ বিন সানাউল্লাহ", "Ahsanullah Bin Sanaullah", "FA", "#475569", 172, 23));
-        list.add(new HadithBookCategory("upodesh", "উপদেশ", "Upodesh", "আব্দুর রাজ্জাক বিন ইউসুফ", "Abdur Razzak Bin Yousuf", "UP", "#22C55E", 125, 24));
-        list.add(new HadithBookCategory("ramadaner_durbol_hadith", "রমজানের দুর্বল হাদিস", "Ramadaner Durbol Hadith", "সানাউল্লাহ নজির আহমদ", "Sanaullah Nazir Ahmad", "RH", "#78350F", 45, 25));
+        // 14 - 19: Specialized & Thematic Books
+        list.add(new HadithBookCategory("100_susabbasto_hadith", "১০০ সুসাব্যস্ত হাদীস", "100 Susabbasto Hadith", "সঙ্কলিত হাদিস", "Compiled Hadith", "100", "#4F46E5", 197, 14));
+        list.add(new HadithBookCategory("mishkate_daif_hadith", "মিশকাতে যঈফ হাদীস", "Mishkate Daif Hadith", "মুযাফফার বিন মুহসিন", "Muzaffar Bin Muhsin", "MJ", "#E11D48", 106, 15));
+        list.add(new HadithBookCategory("sahih_at_targib", "সহীহ আত-তারগিব ওয়াত তাহরিব", "Sahih at-Targhib wat-Tahrib", "আল্লামা নাসিরুদ্দিন আলবানী", "Allama Nasiruddin Albani", "TW", "#A855F7", 200, 16));
+        list.add(new HadithBookCategory("sahih_fazayele_amal", "সহিহ ফাযায়েলে আমল", "Sahih Fazayele Amal", "আহসানুল্লাহ বিন সানাউল্লাহ", "Ahsanullah Bin Sanaullah", "FA", "#475569", 151, 17));
+        list.add(new HadithBookCategory("upodesh", "উপদেশ", "Upodesh", "আব্দুর রাজ্জাক বিন ইউসুফ", "Abdur Razzak Bin Yousuf", "UP", "#22C55E", 234, 18));
+        list.add(new HadithBookCategory("ramadaner_durbol_hadith", "রমজানের দুর্বল হাদিস", "Ramadaner Durbol Hadith", "সানাউল্লাহ নজির আহমদ", "Sanaullah Nazir Ahmad", "RH", "#78350F", 34, 19));
 
         return list;
     }

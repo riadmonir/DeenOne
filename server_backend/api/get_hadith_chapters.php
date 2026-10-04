@@ -127,7 +127,66 @@ try {
     }
 
     $chapters = [];
-    if (!empty($rows)) {
+    $hDb = getHadithDbPdo();
+    $bId = getHadithDbBookId($bookSlug);
+
+    if ($hDb && $bId !== null) {
+        $hStmt = $hDb->prepare("
+            SELECT s.SectionID, s.SectionBD, s.SectionEN,
+                   COALESCE(MIN(m.HadithNo), 0) as start_no,
+                   COALESCE(MAX(m.HadithNo), 0) as end_no,
+                   COUNT(m.HadithID) as total_cnt
+            FROM hadithsection s
+            JOIN hadithmain m ON s.SectionID = m.SectionID AND m.BookID = s.BookID
+            WHERE s.BookID = ?
+            GROUP BY s.SectionID
+            ORDER BY s.SectionID ASC
+        ");
+        $hStmt->execute([$bId]);
+        $hRows = $hStmt->fetchAll();
+        $chapIdx = 1;
+        foreach ($hRows as $hr) {
+            $rawTitleBn = $hr['SectionBD'];
+            $cleanTitleBn = preg_replace('/^[০-৯0-9\/\.\s\-]+/u', '', $rawTitleBn);
+            $cleanTitleBn = trim($cleanTitleBn);
+            if (empty($cleanTitleBn)) $cleanTitleBn = $rawTitleBn;
+
+            $rawTitleEn = $hr['SectionEN'];
+            $cleanTitleEn = !empty($rawTitleEn) ? preg_replace('/^[০-৯0-9\/\.\s\-]+/u', '', $rawTitleEn) : $cleanTitleBn;
+            $cleanTitleEn = trim($cleanTitleEn);
+            if (empty($cleanTitleEn)) $cleanTitleEn = $cleanTitleBn;
+
+            $start = (int)$hr['start_no'];
+            $end = (int)$hr['end_no'];
+            $cnt = (int)$hr['total_cnt'];
+            $rangeBn = toBengaliNum($start) . ' - ' . toBengaliNum($end);
+
+            $chapters[] = [
+                'id' => (int)$hr['SectionID'],
+                'book_slug' => $bookSlug,
+                'chapter_number' => $chapIdx,
+                'chapter_number_bn' => toBengaliNum($chapIdx),
+                'title_bn' => $cleanTitleBn,
+                'title_en' => $cleanTitleEn,
+                'title_ar' => '',
+                'hadith_range_start' => $start,
+                'hadith_range_end' => $end,
+                'hadith_range_text' => $rangeBn,
+                'hadith_range_text_en' => $start . ' - ' . $end,
+                'total_hadith' => $cnt,
+                'display_order' => $chapIdx
+            ];
+            $chapIdx++;
+        }
+    }
+
+    if (empty($chapters)) {
+        // Fallback to MySQL if SQLite is unavailable
+        $stmt = $pdo->prepare("SELECT * FROM hadith_chapters 
+                               WHERE book_slug = ? AND is_active = 1 
+                               ORDER BY display_order ASC, chapter_number ASC");
+        $stmt->execute([$bookSlug]);
+        $rows = $stmt->fetchAll();
         foreach ($rows as $r) {
             $start = (int)($r['hadith_range_start'] ?? $r['start_hadith'] ?? 1);
             $end = (int)($r['hadith_range_end'] ?? $r['end_hadith'] ?? 1);
@@ -151,54 +210,6 @@ try {
                 'total_hadith' => (int)$r['total_hadith'] > 0 ? (int)$r['total_hadith'] : max(1, ($end - $start + 1)),
                 'display_order' => (int)$r['display_order']
             ];
-        }
-    } else {
-        // Fallback to hadithbd.db SQLite database for complete authentic chapters
-        $hDb = getHadithDbPdo();
-        $bId = getHadithDbBookId($bookSlug);
-        if ($hDb && $bId !== null) {
-            $hStmt = $hDb->prepare("
-                SELECT s.SectionID, s.SectionBD, s.SectionEN,
-                       COALESCE(MIN(m.HadithNo), 0) as start_no,
-                       COALESCE(MAX(m.HadithNo), 0) as end_no,
-                       COUNT(m.HadithID) as total_cnt
-                FROM hadithsection s
-                LEFT JOIN hadithmain m ON s.SectionID = m.SectionID AND m.BookID = s.BookID
-                WHERE s.BookID = ?
-                GROUP BY s.SectionID
-                ORDER BY s.SectionID ASC
-            ");
-            $hStmt->execute([$bId]);
-            $hRows = $hStmt->fetchAll();
-            $chapIdx = 1;
-            foreach ($hRows as $hr) {
-                $rawTitle = $hr['SectionBD'];
-                $cleanTitle = preg_replace('/^[০-৯0-9\/\.\s\-]+/u', '', $rawTitle);
-                $cleanTitle = trim($cleanTitle);
-                if (empty($cleanTitle)) $cleanTitle = $rawTitle;
-
-                $start = (int)$hr['start_no'];
-                $end = (int)$hr['end_no'];
-                $cnt = (int)$hr['total_cnt'];
-                $rangeBn = toBengaliNum($start) . ' - ' . toBengaliNum($end);
-
-                $chapters[] = [
-                    'id' => (int)$hr['SectionID'],
-                    'book_slug' => $bookSlug,
-                    'chapter_number' => $chapIdx,
-                    'chapter_number_bn' => toBengaliNum($chapIdx),
-                    'title_bn' => $cleanTitle,
-                    'title_en' => !empty($hr['SectionEN']) ? trim($hr['SectionEN']) : $cleanTitle,
-                    'title_ar' => '',
-                    'hadith_range_start' => $start,
-                    'hadith_range_end' => $end,
-                    'hadith_range_text' => $rangeBn,
-                    'hadith_range_text_en' => $start . ' - ' . $end,
-                    'total_hadith' => $cnt > 0 ? $cnt : max(1, ($end - $start + 1)),
-                    'display_order' => $chapIdx
-                ];
-                $chapIdx++;
-            }
         }
     }
 
