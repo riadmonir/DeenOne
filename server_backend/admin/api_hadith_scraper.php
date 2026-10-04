@@ -117,26 +117,39 @@ function translateTextToEn($text) {
  * Get authentic HadithBD SQLite database connection
  */
 function getHadithBdConnection() {
-    $dbPath = dirname(__DIR__) . '/data/hadithbd.db';
-    if (!file_exists($dbPath) || filesize($dbPath) < 10000000) {
-        $dataDir = dirname(__DIR__) . '/data';
-        if (!is_dir($dataDir)) {
-            @mkdir($dataDir, 0755, true);
+    $rootDir = dirname(__DIR__, 2);
+    $primaryDbPath = $rootDir . '/database/hadithbd.db';
+    $primaryGzPath = $rootDir . '/database/hadithbd.db.gz';
+    $legacyDbPath  = dirname(__DIR__) . '/data/hadithbd.db';
+    $legacyGzPath  = dirname(__DIR__) . '/data/hadithbd.db.gz';
+
+    $dbPath = $primaryDbPath;
+    if (file_exists($primaryDbPath) && filesize($primaryDbPath) > 10000000) {
+        $dbPath = $primaryDbPath;
+    } elseif (file_exists($legacyDbPath) && filesize($legacyDbPath) > 10000000) {
+        $dbPath = $legacyDbPath;
+    } else {
+        $targetDir = dirname($primaryDbPath);
+        if (!is_dir($targetDir)) {
+            @mkdir($targetDir, 0755, true);
         }
-        $mirrorUrl = "https://raw.githubusercontent.com/showrav017/HadithBD/master/hadithbd/src/main/assets/db2.db";
-        $ch = curl_init($mirrorUrl);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-        curl_setopt($ch, CURLOPT_TIMEOUT, 60);
-        $content = curl_exec($ch);
-        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        curl_close($ch);
-        if ($httpCode === 200 && !empty($content)) {
-            file_put_contents($dbPath, $content);
+        $gzSource = null;
+        if (file_exists($primaryGzPath) && filesize($primaryGzPath) > 5000000) {
+            $gzSource = $primaryGzPath;
+        } elseif (file_exists($legacyGzPath) && filesize($legacyGzPath) > 5000000) {
+            $gzSource = $legacyGzPath;
+        }
+
+        if ($gzSource !== null) {
+            $uncompressed = @gzdecode(file_get_contents($gzSource));
+            if ($uncompressed !== false && strlen($uncompressed) > 10000000) {
+                @file_put_contents($primaryDbPath, $uncompressed);
+                $dbPath = $primaryDbPath;
+            }
         }
     }
-    if (!file_exists($dbPath)) {
+
+    if (!file_exists($dbPath) || filesize($dbPath) < 10000000) {
         throw new Exception("HadithBD ডাটাবেজ ফাইল (hadithbd.db) পাওয়া যায়নি।");
     }
     $hbd = new PDO('sqlite:' . $dbPath);

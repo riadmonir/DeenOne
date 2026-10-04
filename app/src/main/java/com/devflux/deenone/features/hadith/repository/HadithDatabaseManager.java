@@ -40,11 +40,11 @@ public class HadithDatabaseManager {
     private static final String DB_FILE_NAME = "hadithbd.db";
     private static final long MIN_VALID_DB_SIZE = 10_000_000L; // ~10MB minimum valid size
 
-    public static final String GITHUB_CDN_GZ_URL = "https://raw.githubusercontent.com/riadmonir/DeenOne/main/server_backend/data/hadithbd.db.gz";
-    public static final String JSDELIVR_CDN_GZ_URL = "https://cdn.jsdelivr.net/gh/riadmonir/DeenOne@main/server_backend/data/hadithbd.db.gz";
-    public static final String GITHUB_CDN_ZIP_URL = "https://raw.githubusercontent.com/riadmonir/DeenOne/main/server_backend/data/hadithbd.db.zip";
-    public static final String GITHUB_CDN_URL = "https://raw.githubusercontent.com/riadmonir/DeenOne/main/server_backend/data/hadithbd.db";
-    public static final String JSDELIVR_CDN_URL = "https://cdn.jsdelivr.net/gh/riadmonir/DeenOne@main/server_backend/data/hadithbd.db";
+    public static final String GITHUB_CDN_GZ_URL = "https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/hadithbd.db.gz";
+    public static final String JSDELIVR_CDN_GZ_URL = "https://cdn.jsdelivr.net/gh/riadmonir/DeenOne@main/database/hadithbd.db.gz";
+    public static final String GITHUB_CDN_ZIP_URL = "https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/hadithbd.db.zip";
+    public static final String GITHUB_CDN_URL = "https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/hadithbd.db";
+    public static final String JSDELIVR_CDN_URL = "https://cdn.jsdelivr.net/gh/riadmonir/DeenOne@main/database/hadithbd.db";
 
     private static volatile HadithDatabaseManager instance;
 

@@ -20,4 +20,6 @@ scratch/
 *.zip
 server_backend/downloads/*.apk
 server_backend/data/hadithbd.db
+database/hadithbd.db
+!database/hadithbd.db.gz
 write_salah_dialog.py

@@ -11,28 +11,48 @@ function getHadithDbPdo() {
     if ($hDb !== null) {
         return $hDb;
     }
-    $dbPath = __DIR__ . '/../data/hadithbd.db';
     
-    // Auto-fetch/extract from local GZ or GitHub CDN if uncompressed database is not present
-    if (!file_exists($dbPath) || filesize($dbPath) < 1000000) {
-        $dir = dirname($dbPath);
-        if (!is_dir($dir)) {
-            @mkdir($dir, 0755, true);
+    // Primary path: repository root database/hadithbd.db
+    $rootDir = dirname(__DIR__, 2);
+    $primaryDbPath = $rootDir . '/database/hadithbd.db';
+    $primaryGzPath = $rootDir . '/database/hadithbd.db.gz';
+    $legacyDbPath  = __DIR__ . '/../data/hadithbd.db';
+    $legacyGzPath  = __DIR__ . '/../data/hadithbd.db.gz';
+
+    $dbPath = $primaryDbPath;
+    if (file_exists($primaryDbPath) && filesize($primaryDbPath) > 10000000) {
+        $dbPath = $primaryDbPath;
+    } elseif (file_exists($legacyDbPath) && filesize($legacyDbPath) > 10000000) {
+        $dbPath = $legacyDbPath;
+    } else {
+        // Auto-extract from GZ if exists locally
+        $targetDir = dirname($primaryDbPath);
+        if (!is_dir($targetDir)) {
+            @mkdir($targetDir, 0755, true);
         }
-        $gzPath = $dir . '/hadithbd.db.gz';
-        if (file_exists($gzPath) && filesize($gzPath) > 5000000) {
-            $uncompressed = @gzdecode(file_get_contents($gzPath));
+        
+        $gzSource = null;
+        if (file_exists($primaryGzPath) && filesize($primaryGzPath) > 5000000) {
+            $gzSource = $primaryGzPath;
+        } elseif (file_exists($legacyGzPath) && filesize($legacyGzPath) > 5000000) {
+            $gzSource = $legacyGzPath;
+        }
+
+        if ($gzSource !== null) {
+            $uncompressed = @gzdecode(file_get_contents($gzSource));
             if ($uncompressed !== false && strlen($uncompressed) > 10000000) {
-                @file_put_contents($dbPath, $uncompressed);
+                @file_put_contents($primaryDbPath, $uncompressed);
+                $dbPath = $primaryDbPath;
             }
         }
         
+        // Auto-fetch from GitHub CDN if still missing
         if (!file_exists($dbPath) || filesize($dbPath) < 1000000) {
             $githubUrls = [
-                'https://raw.githubusercontent.com/riadmonir/DeenOne/main/server_backend/data/hadithbd.db.gz',
-                'https://cdn.jsdelivr.net/gh/riadmonir/DeenOne@main/server_backend/data/hadithbd.db.gz',
-                'https://raw.githubusercontent.com/riadmonir/DeenOne/main/server_backend/data/hadithbd.db',
-                'https://cdn.jsdelivr.net/gh/riadmonir/DeenOne@main/server_backend/data/hadithbd.db'
+                'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/hadithbd.db.gz',
+                'https://cdn.jsdelivr.net/gh/riadmonir/DeenOne@main/database/hadithbd.db.gz',
+                'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/hadithbd.db',
+                'https://cdn.jsdelivr.net/gh/riadmonir/DeenOne@main/database/hadithbd.db'
             ];
             foreach ($githubUrls as $url) {
                 $ctx = stream_context_create([
@@ -46,11 +66,13 @@ function getHadithDbPdo() {
                     if (str_ends_with($url, '.gz')) {
                         $decomp = @gzdecode($content);
                         if ($decomp !== false) {
-                            @file_put_contents($dbPath, $decomp);
+                            @file_put_contents($primaryDbPath, $decomp);
+                            $dbPath = $primaryDbPath;
                             break;
                         }
                     } else {
-                        @file_put_contents($dbPath, $content);
+                        @file_put_contents($primaryDbPath, $content);
+                        $dbPath = $primaryDbPath;
                         break;
                     }
                 }
