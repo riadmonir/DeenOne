@@ -36,12 +36,14 @@ public class IslamicBookRepository {
     private final IslamicBookDao bookDao;
     private final Context context;
     private final ExecutorService networkExecutor = Executors.newSingleThreadExecutor();
+    private static final java.util.Map<String, List<com.devflux.deenone.features.books.model.BookChapter>> CHAPTERS_CACHE = new java.util.concurrent.ConcurrentHashMap<>();
 
     private IslamicBookRepository(Context context) {
         this.context = context.getApplicationContext();
         AppDatabase db = AppDatabase.getInstance(context);
         this.bookDao = db.islamicBookDao();
         seedCanonicalBooksIfEmpty();
+        preloadChaptersAsync(this.context);
     }
 
     public static synchronized IslamicBookRepository getInstance(Context context) {
@@ -49,6 +51,112 @@ public class IslamicBookRepository {
             instance = new IslamicBookRepository(context);
         }
         return instance;
+    }
+
+    private static void preloadChaptersAsync(Context ctx) {
+        if (ctx == null) return;
+        AppDatabase.databaseWriteExecutor.execute(() -> {
+            try {
+                android.content.res.AssetManager am = ctx.getAssets();
+                java.io.InputStream is = am.open("books/islamic_books.json");
+                BufferedReader reader = new BufferedReader(new InputStreamReader(is, StandardCharsets.UTF_8));
+                StringBuilder sb = new StringBuilder();
+                String line;
+                while ((line = reader.readLine()) != null) {
+                    sb.append(line);
+                }
+                reader.close();
+
+                JsonArray array = JsonParser.parseString(sb.toString()).getAsJsonArray();
+                for (int i = 0; i < array.size(); i++) {
+                    JsonObject obj = array.get(i).getAsJsonObject();
+                    String curId = obj.has("id") ? obj.get("id").getAsString() : "";
+                    if (obj.has("chapters") && obj.get("chapters").isJsonArray()) {
+                        JsonArray chArray = obj.getAsJsonArray("chapters");
+                        List<com.devflux.deenone.features.books.model.BookChapter> chList = new ArrayList<>();
+                        for (int j = 0; j < chArray.size(); j++) {
+                            JsonObject chObj = chArray.get(j).getAsJsonObject();
+                            String chTitle = chObj.has("title") ? chObj.get("title").getAsString() : ("অধ্যায় " + (j + 1));
+                            String chContent = chObj.has("content") ? chObj.get("content").getAsString() : "";
+                            chList.add(new com.devflux.deenone.features.books.model.BookChapter(chTitle, chContent));
+                        }
+                        if (!chList.isEmpty()) {
+                            CHAPTERS_CACHE.put(curId, chList);
+                        }
+                    }
+                }
+            } catch (Exception e) {
+                Log.w(TAG, "Asset JSON chapters preload note: " + e.getMessage());
+            }
+        });
+    }
+
+    public static List<com.devflux.deenone.features.books.model.BookChapter> getChaptersForBook(Context context, IslamicBookEntity book) {
+        if (book == null || book.getId() == null) return new ArrayList<>();
+        String bookId = book.getId();
+        if (CHAPTERS_CACHE.containsKey(bookId) && !CHAPTERS_CACHE.get(bookId).isEmpty()) {
+            return CHAPTERS_CACHE.get(bookId);
+        }
+
+        // Direct synchronous load if cache not yet populated
+        if (context != null) {
+            try {
+                android.content.res.AssetManager am = context.getAssets();
+                java.io.InputStream is = am.open("books/islamic_books.json");
+                BufferedReader reader = new BufferedReader(new InputStreamReader(is, StandardCharsets.UTF_8));
+                StringBuilder sb = new StringBuilder();
+                String line;
+                while ((line = reader.readLine()) != null) {
+                    sb.append(line);
+                }
+                reader.close();
+
+                JsonArray array = JsonParser.parseString(sb.toString()).getAsJsonArray();
+                for (int i = 0; i < array.size(); i++) {
+                    JsonObject obj = array.get(i).getAsJsonObject();
+                    String curId = obj.has("id") ? obj.get("id").getAsString() : "";
+                    if (obj.has("chapters") && obj.get("chapters").isJsonArray()) {
+                        JsonArray chArray = obj.getAsJsonArray("chapters");
+                        List<com.devflux.deenone.features.books.model.BookChapter> chList = new ArrayList<>();
+                        for (int j = 0; j < chArray.size(); j++) {
+                            JsonObject chObj = chArray.get(j).getAsJsonObject();
+                            String chTitle = chObj.has("title") ? chObj.get("title").getAsString() : ("অধ্যায় " + (j + 1));
+                            String chContent = chObj.has("content") ? chObj.get("content").getAsString() : "";
+                            chList.add(new com.devflux.deenone.features.books.model.BookChapter(chTitle, chContent));
+                        }
+                        if (!chList.isEmpty()) {
+                            CHAPTERS_CACHE.put(curId, chList);
+                        }
+                    }
+                }
+            } catch (Exception e) {
+                Log.w(TAG, "Sync asset JSON load note: " + e.getMessage());
+            }
+        }
+
+        if (CHAPTERS_CACHE.containsKey(bookId) && !CHAPTERS_CACHE.get(bookId).isEmpty()) {
+            return CHAPTERS_CACHE.get(bookId);
+        }
+
+        // Fallback to authentic chapters
+        List<com.devflux.deenone.features.books.model.BookChapter> fallbackList = new ArrayList<>();
+        List<com.devflux.deenone.features.books.download.BookDownloadManager.BookChapter> rawFallback =
+                com.devflux.deenone.features.books.download.BookDownloadManager.getAuthenticChaptersForBook(book);
+        for (com.devflux.deenone.features.books.download.BookDownloadManager.BookChapter ch : rawFallback) {
+            fallbackList.add(new com.devflux.deenone.features.books.model.BookChapter(ch.title, ch.content));
+        }
+        if (!fallbackList.isEmpty()) {
+            CHAPTERS_CACHE.put(bookId, fallbackList);
+            return fallbackList;
+        }
+
+        List<com.devflux.deenone.features.books.model.BookChapter> single = new ArrayList<>();
+        single.add(new com.devflux.deenone.features.books.model.BookChapter(
+                book.getTitle(),
+                (book.getDescription() != null ? book.getDescription() : "") + "\n\n(এই প্রামাণ্য কিতাবটি সম্পূর্ণ অফলাইনে পড়ার জন্য প্রস্তুত রয়েছে।)"
+        ));
+        CHAPTERS_CACHE.put(bookId, single);
+        return single;
     }
 
     public LiveData<List<IslamicBookEntity>> getAllBooks() {

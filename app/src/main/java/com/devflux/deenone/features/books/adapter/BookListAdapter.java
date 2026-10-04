@@ -187,53 +187,22 @@ public class BookListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         }
       });
 
-      // Check if downloaded
-      boolean isLocalReady = downloadManager.isBookLocallyAvailable(book) || book.isDownloaded();
-      boolean isCurrentlyDownloading = downloadManager.isDownloading(book.getId());
-
-      if (isCurrentlyDownloading) {
-        layoutDownloadProgress.setVisibility(View.VISIBLE);
-        tvDownloadStatusText.setText(isBn ? "বইটি ডাউনলোড হচ্ছে..." : "Downloading book...");
-        tvDownloadPercent.setText(isBn ? (BengaliNumberUtil.toBengali(book.getDownloadProgress()) + "%") : (book.getDownloadProgress() + "%"));
-        progressBarBookDownload.setProgress(book.getDownloadProgress());
-
-        btnBookAction.setEnabled(false);
-        btnBookAction.setText(isBn ? "ডাউনলোড চলছে..." : "Downloading...");
-        btnBookAction.setBackgroundTintList(ContextCompat.getColorStateList(context, R.color.bg_card_secondary));
-        btnBookAction.setTextColor(ContextCompat.getColor(context, R.color.text_secondary));
-
-      } else if (isLocalReady) {
-        layoutDownloadProgress.setVisibility(View.GONE);
-
-        btnBookAction.setEnabled(true);
-        if (book.getLastReadPage() > 0) {
-          btnBookAction.setText(isBn ? ("পড়া অব্যাহত রাখুন (পৃষ্ঠা " + BengaliNumberUtil.toBengali(book.getLastReadPage()) + ")") : ("Continue Reading (Page " + book.getLastReadPage() + ")"));
-        } else {
-          btnBookAction.setText(isBn ? "বইটি পড়ুন" : "Read Book");
-        }
-        btnBookAction.setBackgroundTintList(ContextCompat.getColorStateList(context, R.color.accent_mint));
-        btnBookAction.setTextColor(ContextCompat.getColor(context, R.color.white));
-
-        btnBookAction.setOnClickListener(v -> {
-          if (listener != null) {
-            listener.onReadClick(book, getBindingAdapterPosition());
-          }
-        });
-
+      // Direct Instant Reading (100% in DB)
+      layoutDownloadProgress.setVisibility(View.GONE);
+      btnBookAction.setEnabled(true);
+      if (book.getLastReadPage() > 0) {
+        btnBookAction.setText(isBn ? ("পড়া অব্যাহত রাখুন (অধ্যায় " + BengaliNumberUtil.toBengali(book.getLastReadPage()) + ")") : ("Continue (Chapter " + book.getLastReadPage() + ")"));
       } else {
-        layoutDownloadProgress.setVisibility(View.GONE);
-
-        btnBookAction.setEnabled(true);
-        btnBookAction.setText(isBn ? ("বইটি ডাউনলোড করুন (" + book.getFileSize() + ")") : ("Download Book (" + book.getFileSize() + ")"));
-        btnBookAction.setBackgroundTintList(ContextCompat.getColorStateList(context, R.color.bg_card_secondary));
-        btnBookAction.setTextColor(ContextCompat.getColor(context, R.color.accent_mint));
-
-        btnBookAction.setOnClickListener(v -> {
-          if (listener != null) {
-            listener.onDownloadClick(book, getBindingAdapterPosition());
-          }
-        });
+        btnBookAction.setText(isBn ? "বইটি পড়ুন" : "Read Book");
       }
+      btnBookAction.setBackgroundTintList(ContextCompat.getColorStateList(context, R.color.accent_mint));
+      btnBookAction.setTextColor(ContextCompat.getColor(context, R.color.white));
+
+      btnBookAction.setOnClickListener(v -> {
+        if (listener != null) {
+          listener.onReadClick(book, getBindingAdapterPosition());
+        }
+      });
     }
   }
 
@@ -296,31 +265,14 @@ public class BookListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         if (listener != null) listener.onItemClick(book, getBindingAdapterPosition());
       });
 
-      boolean isLocalReady = downloadManager.isBookLocallyAvailable(book) || book.isDownloaded();
-      boolean isCurrentlyDownloading = downloadManager.isDownloading(book.getId());
-
-      if (isCurrentlyDownloading) {
-        btnGridBookAction.setText(isBn ? (BengaliNumberUtil.toBengali(book.getDownloadProgress()) + "%") : (book.getDownloadProgress() + "%"));
-        btnGridBookAction.setEnabled(false);
-        btnGridBookAction.setBackgroundTintList(ContextCompat.getColorStateList(context, R.color.bg_card_secondary));
-        btnGridBookAction.setTextColor(ContextCompat.getColor(context, R.color.text_secondary));
-      } else if (isLocalReady) {
-        btnGridBookAction.setEnabled(true);
-        btnGridBookAction.setText(book.getLastReadPage() > 0 ? (isBn ? ("পৃষ্ঠা " + BengaliNumberUtil.toBengali(book.getLastReadPage())) : ("Page " + book.getLastReadPage())) : (isBn ? "পড়ুন" : "Read"));
-        btnGridBookAction.setBackgroundTintList(ContextCompat.getColorStateList(context, R.color.accent_mint));
-        btnGridBookAction.setTextColor(ContextCompat.getColor(context, R.color.white));
-        btnGridBookAction.setOnClickListener(v -> {
-          if (listener != null) listener.onReadClick(book, getBindingAdapterPosition());
-        });
-      } else {
-        btnGridBookAction.setEnabled(true);
-        btnGridBookAction.setText(isBn ? "ডাউনলোড" : "Download");
-        btnGridBookAction.setBackgroundTintList(ContextCompat.getColorStateList(context, R.color.bg_card_secondary));
-        btnGridBookAction.setTextColor(ContextCompat.getColor(context, R.color.accent_mint));
-        btnGridBookAction.setOnClickListener(v -> {
-          if (listener != null) listener.onDownloadClick(book, getBindingAdapterPosition());
-        });
-      }
+      // Direct Instant Reading (100% in DB)
+      btnGridBookAction.setEnabled(true);
+      btnGridBookAction.setText(book.getLastReadPage() > 0 ? (isBn ? ("অধ্যায় " + BengaliNumberUtil.toBengali(book.getLastReadPage())) : ("Ch " + book.getLastReadPage())) : (isBn ? "পড়ুন" : "Read"));
+      btnGridBookAction.setBackgroundTintList(ContextCompat.getColorStateList(context, R.color.accent_mint));
+      btnGridBookAction.setTextColor(ContextCompat.getColor(context, R.color.white));
+      btnGridBookAction.setOnClickListener(v -> {
+        if (listener != null) listener.onReadClick(book, getBindingAdapterPosition());
+      });
     }
   }
 

@@ -95,67 +95,21 @@ public class BookDetailsDialog {
       context.startActivity(Intent.createChooser(shareIntent, isBn ? "ইসলামিক বই শেয়ার করুন" : "Share Islamic Book"));
     });
 
-    // Button Action States
-    final Runnable[] updateActionButtons = new Runnable[1];
-    updateActionButtons[0] = () -> {
-      boolean isLocalReady = downloadManager.isBookLocallyAvailable(book) || book.isDownloaded();
-      boolean isDownloading = downloadManager.isDownloading(book.getId());
+    // Direct Instant Read Button (100% in DB)
+    binding.layoutDetailsDownloadProgress.setVisibility(View.GONE);
+    binding.btnDetailsDownloadBook.setVisibility(View.GONE);
+    binding.btnDetailsDeleteBook.setVisibility(View.GONE);
 
-      if (isDownloading) {
-        binding.layoutDetailsDownloadProgress.setVisibility(View.VISIBLE);
-        binding.btnDetailsDownloadBook.setEnabled(false);
-        binding.btnDetailsDownloadBook.setText(isBn ? "ডাউনলোড চলছে..." : "Downloading...");
-        binding.btnDetailsDeleteBook.setVisibility(View.GONE);
-        binding.btnDetailsReadBook.setEnabled(false);
-      } else if (isLocalReady) {
-        binding.layoutDetailsDownloadProgress.setVisibility(View.GONE);
-        binding.btnDetailsDownloadBook.setEnabled(false);
-        binding.btnDetailsDownloadBook.setText(isBn ? "অফলাইনে সংরক্ষিত" : "Saved Offline");
+    binding.btnDetailsReadBook.setEnabled(true);
+    if (book.getLastReadPage() > 0) {
+      String pageStr = isBn ? BengaliNumberUtil.toBengali(book.getLastReadPage()) : String.valueOf(book.getLastReadPage());
+      binding.btnDetailsReadBook.setText(isBn ? ("পড়া অব্যাহত রাখুন (অধ্যায় " + pageStr + ")") : ("Continue Reading (Chapter " + pageStr + ")"));
+    } else {
+      binding.btnDetailsReadBook.setText(isBn ? "বইটি পড়ুন" : "Read Book");
+    }
 
-        binding.btnDetailsDeleteBook.setVisibility(View.VISIBLE);
-        binding.btnDetailsDeleteBook.setText(isBn ? "অফলাইন ফাইল মুছুন" : "Delete Offline File");
-        binding.btnDetailsDeleteBook.setOnClickListener(v -> {
-          booksVm.deleteDownloadedBook(book);
-          book.setDownloaded(false);
-          book.setLocalFilePath(null);
-          book.setDownloadProgress(0);
-          if (updateActionButtons[0] != null) updateActionButtons[0].run();
-        });
-
-        binding.btnDetailsReadBook.setEnabled(true);
-        if (book.getLastReadPage() > 0) {
-          String pageStr = isBn ? BengaliNumberUtil.toBengali(book.getLastReadPage()) : String.valueOf(book.getLastReadPage());
-          binding.btnDetailsReadBook.setText(isBn ? ("পড়া অব্যাহত রাখুন (পৃষ্ঠা " + pageStr + ")") : ("Continue Reading (Page " + pageStr + ")"));
-        } else {
-          binding.btnDetailsReadBook.setText(isBn ? "বইটি পড়ুন" : "Read Book");
-        }
-      } else {
-        binding.layoutDetailsDownloadProgress.setVisibility(View.GONE);
-        binding.btnDetailsDeleteBook.setVisibility(View.GONE);
-        binding.btnDetailsDownloadBook.setEnabled(true);
-        String sizeStr = book.getFileSize() != null ? (" (" + book.getFileSize() + ")") : "";
-        binding.btnDetailsDownloadBook.setText((isBn ? "বইটি ডাউনলোড করুন" : "Download Book") + sizeStr);
-
-        binding.btnDetailsReadBook.setEnabled(true);
-        binding.btnDetailsReadBook.setText(isBn ? "ডাউনলোড করে পড়ুন" : "Download & Read");
-      }
-    };
-
-    updateActionButtons[0].run();
-
-    // Download Action
-    binding.btnDetailsDownloadBook.setOnClickListener(v -> {
-      startDownload(context, book, booksVm, binding, updateActionButtons[0], isBn);
-    });
-
-    // Read Action
     binding.btnDetailsReadBook.setOnClickListener(v -> {
-      File file = downloadManager.isBookLocallyAvailable(book) || book.isDownloaded() ? downloadManager.getLocalBookFile(book) : null;
-      if (file != null && file.exists() && file.length() > 0) {
-        PdfBookReaderDialog.show(context, book, file);
-      } else {
-        startDownload(context, book, booksVm, binding, updateActionButtons[0], isBn);
-      }
+      com.devflux.deenone.features.books.pdf.RichBookReaderDialog.show(context, book, null);
     });
 
     binding.btnCloseBookDetails.setOnClickListener(v -> dialog.dismiss());

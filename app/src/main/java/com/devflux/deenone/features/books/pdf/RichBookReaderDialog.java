@@ -65,9 +65,20 @@ public class RichBookReaderDialog {
     String sourceText = (book.getVerifiedSource() != null && !book.getVerifiedSource().isEmpty()) ? (" • " + book.getVerifiedSource()) : "";
     binding.tvReaderAuthor.setText(book.getAuthor() + sourceText);
 
-    // Sample Chapters generator if reading in rich text mode
-    List<String> chapterTitles = generateChapterTitles(book);
-    List<String> chapterContents = generateChapterContents(book);
+    // Fetch authentic complete chapters from repository
+    List<com.devflux.deenone.features.books.model.BookChapter> authenticChapters =
+        IslamicBookRepository.getChaptersForBook(context, book);
+
+    List<String> chapterTitles = new ArrayList<>();
+    List<String> chapterContents = new ArrayList<>();
+    for (com.devflux.deenone.features.books.model.BookChapter ch : authenticChapters) {
+      chapterTitles.add(ch.getTitle());
+      chapterContents.add(ch.getContent());
+    }
+    if (chapterTitles.isEmpty()) {
+      chapterTitles.add(book.getTitle() != null ? book.getTitle() : (isBn ? "ভূমিকা ও বিবরণ" : "Overview"));
+      chapterContents.add(book.getDescription() != null ? book.getDescription() : "");
+    }
 
     int totalChapters = Math.max(1, chapterTitles.size());
     final int[] currentChapterIndex = {Math.max(0, Math.min(book.getLastReadPage() > 0 ? book.getLastReadPage() - 1 : 0, totalChapters - 1))};
