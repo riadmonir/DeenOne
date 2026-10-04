@@ -72,16 +72,29 @@ public class HadithChapterRepository {
     public void loadChapters(Context context, String bookSlug, ChaptersCallback callback) {
         final Context appContext = context.getApplicationContext();
 
-        // 1. Immediately read from Room database on disk executor
+        // 1. Immediately read from SQLite Database Manager / Room database on disk executor
         diskExecutor.execute(() -> {
+            // Check direct SQLite engine first (0ms instant)
+            HadithDatabaseManager dbMgr = HadithDatabaseManager.getInstance(appContext);
+            if (dbMgr.isDatabaseReady()) {
+                List<HadithChapterEntity> sqliteChapters = dbMgr.getChaptersForBook(bookSlug);
+                if (sqliteChapters != null && !sqliteChapters.isEmpty()) {
+                    // Update Room DB in background
+                    AppDatabase.getInstance(appContext).hadithChapterDao().insertAll(sqliteChapters);
+                    mainHandler.post(() -> callback.onLoaded(sqliteChapters));
+                    return;
+                }
+            }
+
             AppDatabase db = AppDatabase.getInstance(appContext);
             int count = db.hadithChapterDao().getChapterCount(bookSlug);
             if (count < 41 && "bukhari".equalsIgnoreCase(bookSlug)) {
                 List<HadithChapterEntity> defaults = getDefaultBukhariChapters();
                 db.hadithChapterDao().insertAll(defaults);
+                mainHandler.post(() -> callback.onLoaded(defaults));
             }
 
-            // Sync from remote backend API in background
+            // Sync from remote backend API / GitHub CDN in background
             if (NetworkConnectivityHelper.isOnline(appContext)) {
                 networkExecutor.execute(() -> fetchRemoteChapters(appContext, bookSlug, callback));
             }

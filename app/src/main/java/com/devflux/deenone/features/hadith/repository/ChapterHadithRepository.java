@@ -82,17 +82,35 @@ public class ChapterHadithRepository {
             callback.onLoaded(new ArrayList<>(memItems));
         }
 
-        // 2. TIER 2 & 3: L2 Disk Cache + L3 Realtime Sync on background executor
+        // 2. TIER 2, 3 & 4: L2 Disk Cache + SQLite Direct Engine + Remote Sync
         diskExecutor.execute(() -> {
             boolean hasLocalData = hasMemory;
 
             if (!hasMemory) {
+                // Check L2 Disk Cache first
                 List<HadithReaderItem> diskItems = readFromDiskCache(appContext, cacheKey, safeSlug);
                 if (diskItems != null && !diskItems.isEmpty()) {
                     memoryCache.put(cacheKey, diskItems);
                     hasLocalData = true;
                     mainHandler.post(() -> callback.onLoaded(diskItems));
-                } else if ("bukhari".equalsIgnoreCase(safeSlug) && chapterNumber == 1) {
+                }
+
+                // Check Direct SQLite Hadith Database Manager (0ms instant)
+                if (!hasLocalData) {
+                    HadithDatabaseManager dbMgr = HadithDatabaseManager.getInstance(appContext);
+                    if (dbMgr.isDatabaseReady()) {
+                        List<HadithReaderItem> sqliteItems = dbMgr.getChapterHadiths(safeSlug, chapterNumber);
+                        if (sqliteItems != null && !sqliteItems.isEmpty()) {
+                            memoryCache.put(cacheKey, sqliteItems);
+                            hasLocalData = true;
+                            mainHandler.post(() -> callback.onLoaded(sqliteItems));
+                            // Save to disk cache and Room DB in background
+                            syncToRoomDatabase(appContext, safeSlug, sqliteItems);
+                        }
+                    }
+                }
+
+                if (!hasLocalData && "bukhari".equalsIgnoreCase(safeSlug) && chapterNumber == 1) {
                     List<HadithReaderItem> defaultItems = getDefaultBukhariChapter1();
                     memoryCache.put(cacheKey, defaultItems);
                     hasLocalData = true;
@@ -100,7 +118,7 @@ public class ChapterHadithRepository {
                 }
             }
 
-            // 3. TIER 3: Realtime Remote Backend Sync (Syncs if online or if local offline PHP server is active)
+            // 3. TIER 4: Realtime Remote Backend Sync (Syncs if online or if local offline PHP server is active)
             if (NetworkConnectivityHelper.isOnline(appContext) || BackendConfigManager.isOfflinePhpMode(appContext)) {
                 fetchRemoteHadiths(appContext, safeSlug, chapterNumber, cacheKey, callback);
             }

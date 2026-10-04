@@ -101,7 +101,10 @@ public class HadithCategoryRepository {
                 list = getDefaultCategories();
             }
 
-            // Fast single-pass Room database count synchronization
+            // Trigger background SQLite Hadith Database Manager initialization from GitHub CDN
+            HadithDatabaseManager.getInstance(appContext).ensureDatabaseAvailable(null);
+
+            // Synchronize Room database count without overwriting canonical authentic totals
             try {
                 com.devflux.deenone.data.local.AppDatabase db = com.devflux.deenone.data.local.AppDatabase.getInstance(appContext);
                 List<com.devflux.deenone.data.local.dao.HadithDao.CollectionCount> countList = db.hadithDao().getAllCollectionCounts();
@@ -117,7 +120,6 @@ public class HadithCategoryRepository {
                 for (HadithBookCategory cat : list) {
                     String slug = cat.getSlug() != null ? cat.getSlug().toLowerCase() : "";
                     int count = countMap.getOrDefault(slug, 0);
-                    // Check canonical aliases if needed
                     if (count == 0) {
                         if ("abu_dawood".equals(slug) && countMap.containsKey("abudawud")) {
                             count = countMap.get("abudawud");
@@ -125,7 +127,7 @@ public class HadithCategoryRepository {
                             count = countMap.get("nawawi40");
                         }
                     }
-                    if (count > 0) {
+                    if (count > cat.getTotalHadith()) {
                         cat.setTotalHadith(count);
                     }
                 }
