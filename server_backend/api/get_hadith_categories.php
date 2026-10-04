@@ -50,7 +50,7 @@ try {
         }
     } catch (Exception $ce) {}
 
-    // 2. Predefined 19 Active Hadith Books Seed with authentic database totals
+    // 2. Predefined 25 Active Hadith Books Seed with authentic database totals
     $seedBooks = [
         ['bukhari', 'সহীহ বুখারী', 'Sahih Bukhari', 'ইমাম বুখারি', 'Imam Bukhari', 'B', '#22C55E', 7589, 1, 1],
         ['muslim', 'সহীহ মুসলিম', 'Sahih Muslim', 'ইমাম মুসলিম', 'Imam Muslim', 'M', '#0284C7', 7563, 2, 1],
@@ -61,20 +61,23 @@ try {
         ['muwatta_malik', 'মুয়াত্তা ইমাম মালিক', 'Muwatta Imam Malik', 'ইমাম মালিক', 'Imam Malik', 'MI', '#38BDF8', 1858, 7, 1],
         ['riyadus_salihin', 'রিয়াদুস সালেহীন', 'Riyadus Salihin', 'ইমাম নববী', 'Imam Nawawi', 'RS', '#EC4899', 616, 8, 1],
         ['bulughul_maram', 'বুলুগুল মারাম', 'Bulughul Maram', 'ইবনে হাজার আসকালানী', 'Ibn Hajar al-Asqalani', 'BM', '#FB923C', 178, 9, 1],
-        ['jal_o_daif_series', 'জাল ও যঈফ হাদীস সিরিজ', 'Jal o Daif Hadith Series', 'আল্লামা নাসিরুদ্দিন আলবানী', 'Allama Nasiruddin Albani', 'JH', '#FCA5A5', 342, 10, 1],
-        ['nawawi_40', 'আন্-নওয়াবীর চল্লিশ হাদীস', "An-Nawawi's 40 Hadith", 'ইমাম নববী', 'Imam Nawawi', '40', '#78716C', 42, 11, 1],
-        ['adabul_mufrad', 'আল-আদাবুল মুফরাদ', 'Al-Adab al-Mufrad', 'ইমাম বুখারি', 'Imam Bukhari', 'AM', '#0F766E', 183, 12, 1],
-        ['hadithe_qudsi', 'সহীহ হাদীসে কুদসী', 'Sahih Hadithe Qudsi', 'আল্লামা নাসিরুদ্দিন আলবানী', 'Allama Nasiruddin Albani', 'HK', '#10B981', 163, 13, 1],
-        ['100_susabbasto_hadith', '১০০ সুসাব্যস্ত হাদীস', '100 Susabbasto Hadith', 'সঙ্কলিত হাদিস', 'Compiled Hadith', '100', '#4F46E5', 197, 14, 1],
-        ['mishkate_daif_hadith', 'মিশকাতে যঈফ হাদীস', 'Mishkate Daif Hadith', 'মুযাফফার বিন মুহসিন', 'Muzaffar Bin Muhsin', 'MJ', '#E11D48', 106, 15, 1],
-        ['sahih_at_targib', 'সহীহ আত-তারগিব ওয়াত তাহরিব', 'Sahih at-Targhib wat-Tahrib', 'আল্লামা নাসিরুদ্দিন আলবানী', 'Allama Nasiruddin Albani', 'TW', '#A855F7', 200, 16, 1],
-        ['sahih_fazayele_amal', 'সহিহ ফাযায়েলে আমল', 'Sahih Fazayele Amal', 'আহসানুল্লাহ বিন সানাউল্লাহ', 'Ahsanullah Bin Sanaullah', 'FA', '#475569', 151, 17, 1],
-        ['upodesh', 'উপদেশ', 'Upodesh', 'আব্দুর রাজ্জাক বিন ইউসুফ', 'Abdur Razzak Bin Yousuf', 'UP', '#22C55E', 234, 18, 1],
-        ['ramadaner_durbol_hadith', 'রমজানের দুর্বল হাদিস', 'Ramadaner Durbol Hadith', 'সানাউল্লাহ নজির আহমদ', 'Sanaullah Nazir Ahmad', 'RH', '#78350F', 34, 19, 1]
+        ['lulu_wal_marjan', "আল-লু'লু ওয়াল মারজান", "Al-Lu'lu wal Marjan", 'মুহাম্মাদ ফুয়াদ আব্দুল বাকী', 'Muhammad Fuad Abdul Baqi', 'LM', '#10B981', 2361, 10, 1],
+        ['hadith_sambhar', 'হাদীস সম্ভার', 'Hadith Sambhar', 'মাওলানা আব্দুল হামিদ ফাইযী', 'Maulana Abdul Hamid Faizi', 'HS', '#6366F1', 1000, 11, 1],
+        ['silsila_sahiha', 'সিলসিলা সহিহা', 'Silsilat al-Ahadith as-Sahihah', 'আল্লামা নাসিরুদ্দিন আলবানী', 'Allama Nasiruddin Albani', 'SS', '#14B8A6', 1000, 12, 1],
+        ['jal_o_daif_series', 'জাল ও যঈফ হাদীস সিরিজ', 'Jal o Daif Hadith Series', 'আল্লামা নাসিরুদ্দিন আলবানী', 'Allama Nasiruddin Albani', 'JH', '#FCA5A5', 342, 13, 1],
+        ['mishkatul_masabih', 'মিশকাতুল মাসাবীহ', 'Mishkat al-Masabih', 'খতীব তাবরেযী', 'Khatib al-Tabrizi', 'MM', '#8B5CF6', 4428, 14, 1],
+        ['nawawi_40', 'আন্-নওয়াবীর চল্লিশ হাদীস', "An-Nawawi's 40 Hadith", 'ইমাম নববী', 'Imam Nawawi', '40', '#78716C', 42, 15, 1],
+        ['adabul_mufrad', 'আল-আদাবুল মুফরাদ', 'Al-Adab al-Mufrad', 'ইমাম বুখারি', 'Imam Bukhari', 'AM', '#0F766E', 183, 16, 1],
+        ['rafayel_yadain', "জুয'উল রাফায়েল ইয়াদাইন", "Juz'ul Raf'ul Yadayn", 'ইমাম বুখারি', 'Imam Bukhari', 'RY', '#D97706', 114, 17, 1],
+        ['hadithe_qudsi', 'সহীহ হাদীসে কুদসী', 'Sahih Hadithe Qudsi', 'আল্লামা নাসিরুদ্দিন আলবানী', 'Allama Nasiruddin Albani', 'HK', '#10B981', 163, 18, 1],
+        ['100_susabbasto_hadith', '১০০ সুসাব্যস্ত হাদীস', '100 Susabbasto Hadith', 'সঙ্কলিত হাদিস', 'Compiled Hadith', '100', '#4F46E5', 197, 19, 1],
+        ['mishkate_daif_hadith', 'মিশকাতে যঈফ হাদীস', 'Mishkate Daif Hadith', 'মুযাফফার বিন মুহসিন', 'Muzaffar Bin Muhsin', 'MJ', '#E11D48', 106, 20, 1],
+        ['shamayele_tirmidhi', 'শামায়েলে তিরমিযি', "Shama'il al-Tirmidhi", 'ইমাম তিরমিজি', 'Imam Tirmidhi', 'ST', '#059669', 402, 21, 1],
+        ['sahih_at_targib', 'সহীহ আত-তারগিব ওয়াত তাহরিব', 'Sahih at-Targhib wat-Tahrib', 'আল্লামা নাসিরুদ্দিন আলবানী', 'Allama Nasiruddin Albani', 'TW', '#A855F7', 200, 22, 1],
+        ['sahih_fazayele_amal', 'সহিহ ফাযায়েলে আমল', 'Sahih Fazayele Amal', 'আহসানুল্লাহ বিন সানাউল্লাহ', 'Ahsanullah Bin Sanaullah', 'FA', '#475569', 151, 23, 1],
+        ['upodesh', 'উপদেশ', 'Upodesh', 'আব্দুর রাজ্জাক বিন ইউসুফ', 'Abdur Razzak Bin Yousuf', 'UP', '#22C55E', 234, 24, 1],
+        ['ramadaner_durbol_hadith', 'রমজানের দুর্বল হাদিস', 'Ramadaner Durbol Hadith', 'সানাউল্লাহ নজির আহমদ', 'Sanaullah Nazir Ahmad', 'RH', '#78350F', 34, 25, 1]
     ];
-
-    // Deactivate books without datasets
-    $pdo->exec("UPDATE hadith_books SET is_active = 0 WHERE book_slug IN ('lulu_wal_marjan', 'hadith_sambhar', 'silsila_sahiha', 'mishkatul_masabih', 'rafayel_yadain', 'shamayele_tirmidhi')");
 
     $upsertStmt = $pdo->prepare("INSERT INTO hadith_books (book_slug, name_bn, name_en, author_bn, author_en, initials, color_hex, total_hadith, display_order, is_active) 
                                  VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
