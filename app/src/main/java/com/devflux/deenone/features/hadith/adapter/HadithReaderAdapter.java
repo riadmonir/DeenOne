@@ -8,7 +8,6 @@ import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
@@ -169,8 +168,13 @@ public class HadithReaderAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
             binding.tvHadithTranslation.setTextSize(TypedValue.COMPLEX_UNIT_SP, translationTextSizeSp);
 
             // Arabic text
-            binding.tvHadithArabicFull.setVisibility(View.VISIBLE);
-            binding.tvHadithArabicFull.setText(item.getArabicText());
+            String arabicText = item.getArabicText();
+            if (arabicText != null && !arabicText.trim().isEmpty()) {
+                binding.tvHadithArabicFull.setVisibility(View.VISIBLE);
+                binding.tvHadithArabicFull.setText(arabicText.trim());
+            } else {
+                binding.tvHadithArabicFull.setVisibility(View.GONE);
+            }
 
             // Narrator
             String narrator = item.getNarrator(isBn);

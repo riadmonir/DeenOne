@@ -16,3 +16,7 @@ local.properties
 __pycache__/
 *.pyc
 scratch/
+*.apk
+*.zip
+server_backend/downloads/*.apk
+write_salah_dialog.py
