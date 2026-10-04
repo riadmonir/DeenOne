@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <group
+        android:scaleX="0.09"
+        android:scaleY="0.09"
+        android:translateX="1.2"
+        android:translateY="1.2">
+
+        <!-- 1. Crescent Moon (Top Centered) -->
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M 120,40 C 106.5,40 95,51.5 95,65 C 95,78.5 106.5,90 120,90 C 128.5,90 136.2,85.6 140.6,78.8 C 127.1,78.2 116.2,67 116.2,53.5 C 116.2,47.3 118.4,41.5 122,37 C 121.3,37 120.7,40 120,40 Z" />
+
+        <!-- 2. Mosque Dome Arch / Mihrab -->
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M 120,87 C 120,94 130,103 143,113 C 157,124 169,138 169,155 L 169,158 L 157,158 L 157,155 C 157,142 147,131 135,121 C 126,113 120,106 120,100 C 120,106 114,113 105,121 C 93,131 83,142 83,155 L 83,158 L 71,158 L 71,155 C 71,138 83,124 97,113 C 110,103 120,94 120,87 Z" />
+
+        <!-- 3. Rehal Crossed Stand Underneath -->
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M 78,211 L 115,192 L 125,197 L 162,217 L 152,223 L 120,206 L 88,223 Z" />
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M 162,211 L 125,192 L 115,197 L 78,217 L 88,223 L 120,206 L 152,223 Z" />
+
+        <!-- 4. Open Holy Quran Book Pages -->
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M 120,193 C 99,178 76,166 55,172 L 53,180 C 74,174 97,186 120,201 Z" />
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M 120,193 C 141,178 164,166 185,172 L 187,180 C 166,174 143,186 120,201 Z" />
+    </group>
+</vector>

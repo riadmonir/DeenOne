@@ -1,0 +1,26 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="28dp"
+    android:height="28dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Faraid / Islamic Inheritance Distribution Scale of Justice (মিজান ও ফারায়েজ বণ্টন) -->
+    <!-- Scale Center Pillar & Top Ring -->
+    <path
+        android:fillColor="#35D99B"
+        android:pathData="M12,2A1.5,1.5 0 1,0 13.5,3.5A1.5,1.5 0 0,0 12,2M11.2,5V19H9V21H15V19H12.8V5H11.2Z" />
+
+    <!-- Horizontal Balance Beam -->
+    <path
+        android:fillColor="#35D99B"
+        android:pathData="M3,7H21V8.5H3V7Z" />
+
+    <!-- Left Scale Pan & Strings -->
+    <path
+        android:fillColor="#35D99B"
+        android:pathData="M5.5,8.5L2.5,14H8.5L5.5,8.5M2,14.5C2,16.4 3.6,18 5.5,18C7.4,18 9,16.4 9,14.5H2Z" />
+
+    <!-- Right Scale Pan & Strings -->
+    <path
+        android:fillColor="#35D99B"
+        android:pathData="M18.5,8.5L15.5,14H21.5L18.5,8.5M15,14.5C15,16.4 16.6,18 18.5,18C20.4,18 22,16.4 22,14.5H15Z" />
+</vector>

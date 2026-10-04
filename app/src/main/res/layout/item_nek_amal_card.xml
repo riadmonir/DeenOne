@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_marginHorizontal="16dp"
+  android:layout_marginBottom="12dp"
+  app:cardBackgroundColor="@color/bg_card"
+  app:cardCornerRadius="18dp"
+  app:cardElevation="0dp"
+  app:strokeColor="@color/border_card"
+  app:strokeWidth="1dp">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Top Row: Title + Category/Leaf Icon -->
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/layoutAmalIcon"
+        android:layout_marginEnd="12dp"
+        android:orientation="vertical">
+
+        <!-- Title -->
+        <TextView
+          android:id="@+id/tvAmalTitle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:fontFamily="sans-serif-medium"
+          android:text="১০০০ বার ইস্তেগফার পাঠ"
+          android:textColor="@color/accent_mint"
+          android:textSize="17sp"
+          android:textStyle="bold" />
+
+        <!-- Badges Row (Target + Points) -->
+        <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="8dp"
+          android:gravity="center_vertical"
+          android:orientation="horizontal">
+
+          <!-- Target Badge -->
+          <TextView
+            android:id="@+id/tvAmalTargetBadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_badge_pill"
+            android:backgroundTint="@color/bg_card_active"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="4dp"
+            android:text="⊙ টার্গেট ১ বার"
+            android:textColor="@color/accent_mint"
+            android:textSize="11.5sp"
+            android:textStyle="bold" />
+
+          <!-- Points Badge -->
+          <TextView
+            android:id="@+id/tvAmalPointsBadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/bg_badge_pill"
+            android:backgroundTint="@color/feat_bg_azkar"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="4dp"
+            android:text="পয়েন্ট +২০"
+            android:textColor="@color/accent_gold"
+            android:textSize="11.5sp"
+            android:textStyle="bold" />
+        </LinearLayout>
+      </LinearLayout>
+
+      <!-- Right Circular Leaf Icon -->
+      <FrameLayout
+        android:id="@+id/layoutAmalIcon"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/circle_progress_bg"
+        android:backgroundTint="@color/bg_card_active">
+
+        <ImageView
+          android:layout_width="22dp"
+          android:layout_height="22dp"
+          android:layout_gravity="center"
+          android:src="@drawable/ic_leaf"
+          app:tint="@color/accent_mint" />
+      </FrameLayout>
+    </RelativeLayout>
+
+    <!-- Stats & Details Toggle Row -->
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="12dp"
+      android:gravity="center_vertical"
+      android:orientation="horizontal">
+
+      <TextView
+        android:id="@+id/tvAmalCompletedStats"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginEnd="8dp"
+        android:text="আজ সম্পন্ন করেছে: ০ জন"
+        android:textColor="@color/text_secondary"
+        android:textSize="12sp" />
+
+      <TextView
+        android:id="@+id/btnToggleDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="4dp"
+        android:text="বিস্তারিত ˅"
+        android:textColor="@color/text_secondary"
+        android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- Expandable Details Section (Arabic + Meaning + Description + Hadith Reference) -->
+    <LinearLayout
+      android:id="@+id/layoutExpandableDetails"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:background="@drawable/bg_card_secondary"
+      android:orientation="vertical"
+      android:padding="12dp"
+      android:visibility="gone">
+
+      <!-- Arabic Text / Dua (if available) -->
+      <TextView
+        android:id="@+id/tvAmalArabicText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="end"
+        android:lineSpacingExtra="4dp"
+        android:text="أَسْتَغْفِرُ اللَّهَ وَأَتُوبُ إِلَيْهِ"
+        android:textColor="@color/accent_mint"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+      <!-- How to perform / instruction -->
+      <TextView
+        android:id="@+id/tvAmalHowToPerform"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:lineSpacingExtra="3dp"
+        android:text="আমলের নিয়ম ও পদ্ধতি..."
+        android:textColor="@color/text_secondary"
+        android:textSize="12.5sp" />
+
+      <!-- Virtue / Description -->
+      <TextView
+        android:id="@+id/tvAmalDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:lineSpacingExtra="3dp"
+        android:text="রাসুলুল্লাহ (সা.) ইরশাদ করেছেন..."
+        android:textColor="@color/text_primary"
+        android:textSize="12.5sp" />
+
+      <!-- Source / Hadith Reference -->
+      <TextView
+        android:id="@+id/tvAmalReference"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="— সহীহ বুখারী"
+        android:textColor="@color/accent_mint"
+        android:textSize="11.5sp"
+        android:textStyle="italic|bold" />
+    </LinearLayout>
+
+    <!-- Action Button: আমি সম্পন্ন করেছি / সম্পন্ন হয়েছে -->
+    <com.google.android.material.button.MaterialButton
+      android:id="@+id/btnCompleteAmalAction"
+      android:layout_width="match_parent"
+      android:layout_height="48dp"
+      android:layout_marginTop="14dp"
+      android:backgroundTint="@color/primary_green"
+      android:insetTop="0dp"
+      android:insetBottom="0dp"
+      android:text="আমি সম্পন্ন করেছি"
+      android:textColor="@color/text_primary"
+      android:textSize="14.5sp"
+      android:textStyle="bold"
+      app:cornerRadius="24dp" />
+
+  </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

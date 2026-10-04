@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/bg_card_secondary"
+    android:backgroundTint="@color/bg_card_secondary"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingHorizontal="14dp"
+    android:paddingVertical="12dp">
+
+    <!-- "আমল" Badge on Left -->
+    <TextView
+        android:id="@+id/tvIbadahTypeBadge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_badge_pill"
+        android:backgroundTint="@color/bg_card_active"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="3dp"
+        android:text="আমল"
+        android:textColor="@color/accent_mint"
+        android:textSize="11sp"
+        android:textStyle="bold" />
+
+    <!-- Title in Center -->
+    <TextView
+        android:id="@+id/tvIbadahTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="8dp"
+        android:layout_weight="1"
+        android:fontFamily="sans-serif"
+        android:lineSpacingExtra="2dp"
+        android:text="২ রাকাত নফল নামাজ"
+        android:textColor="@color/text_primary"
+        android:textSize="13sp" />
+
+    <!-- Count Badge on Right -->
+    <TextView
+        android:id="@+id/tvIbadahCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_badge_pill"
+        android:backgroundTint="@color/bg_card_active"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="3dp"
+        android:text="০ টি"
+        android:textColor="@color/accent_mint"
+        android:textSize="11.5sp"
+        android:textStyle="bold" />
+</LinearLayout>

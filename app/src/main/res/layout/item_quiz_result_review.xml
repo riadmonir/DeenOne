@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="14dp"
+    android:background="@drawable/bg_quiz_card_container"
+    android:orientation="vertical"
+    android:padding="18dp">
+
+    <!-- Question Header: Number + Question Text -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:gravity="top"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/flReviewNumber"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/bg_quiz_number_normal">
+
+            <TextView
+                android:id="@+id/tvReviewNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:includeFontPadding="false"
+                android:text="১"
+                android:textColor="#35D99B"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tvReviewQuestion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:lineSpacingExtra="3.5dp"
+            android:text="ঈমানের মূল বিষয়গুলোর মধ্যে কোনটি রয়েছে?"
+            android:textColor="@color/text_primary"
+            android:textSize="15.5sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Correct Answer (Green) -->
+    <TextView
+        android:id="@+id/tvReviewCorrectAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:text="সঠিক উত্তর: আল্লাহর প্রতি বিশ্বাস"
+        android:textColor="#35D99B"
+        android:textSize="14.5sp"
+        android:textStyle="bold" />
+
+    <!-- User Given Answer (Red - only shown if wrong) -->
+    <TextView
+        android:id="@+id/tvReviewUserAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="আপনার উত্তর: দান করা"
+        android:textColor="#EF4444"
+        android:textSize="14.5sp"
+        android:textStyle="bold" />
+
+    <!-- Explanation Box -->
+    <LinearLayout
+        android:id="@+id/layoutReviewExplanation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_quiz_review_explanation"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/tvReviewExplanation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="3.5dp"
+            android:text="ঈমানের মৌলিক বিষয়গুলোর মধ্যে আল্লাহর প্রতি বিশ্বাস অন্যতম।"
+            android:textColor="#94A3B8"
+            android:textSize="13sp" />
+    </LinearLayout>
+</LinearLayout>

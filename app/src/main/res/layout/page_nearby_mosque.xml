@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/bg_main"
+  android:orientation="vertical">
+
+  <!-- TOP HEADER -->
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:background="@color/bg_top_bar"
+    android:paddingHorizontal="16dp">
+
+    <!-- Back Arrow Button per Rule 13 -->
+    <FrameLayout
+      android:id="@+id/btnCloseNearbyMosque"
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      android:layout_alignParentStart="true"
+      android:layout_centerVertical="true"
+      android:background="@drawable/bg_circular_counter"
+      android:backgroundTint="@color/bg_badge_pill"
+      android:clickable="true"
+      android:focusable="true">
+
+      <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_arrow_back"
+        app:tint="@color/accent_mint" />
+    </FrameLayout>
+
+    <!-- Title: নিকটবর্তী মসজিদ (Nearby Mosques) -->
+    <TextView
+      android:id="@+id/tvPageTitle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerVertical="true"
+      android:layout_marginStart="14dp"
+      android:layout_toEndOf="@+id/btnCloseNearbyMosque"
+      android:layout_toStartOf="@+id/btnRefreshGpsTop"
+      android:fontFamily="sans-serif-medium"
+      android:text="নিকটবর্তী মসজিদ"
+      android:textColor="@color/text_primary"
+      android:textSize="18sp"
+      android:textStyle="bold"
+      android:ellipsize="end"
+      android:maxLines="1" />
+
+    <!-- GPS Refresh Icon on Right per Rule 13 -->
+    <FrameLayout
+      android:id="@+id/btnRefreshGpsTop"
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      android:layout_alignParentEnd="true"
+      android:layout_centerVertical="true"
+      android:background="@drawable/bg_circular_counter"
+      android:backgroundTint="@color/bg_badge_pill"
+      android:clickable="true"
+      android:focusable="true">
+
+      <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_gps_fixed"
+        app:tint="@color/accent_mint" />
+    </FrameLayout>
+  </RelativeLayout>
+
+  <!-- SCROLLABLE CONTENT -->
+  <androidx.core.widget.NestedScrollView
+    android:id="@+id/scrollMosqueContent"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:clipToPadding="false"
+    android:paddingBottom="24dp">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <!-- HERO LOCATION & SEARCH RADIUS CARD (Screenshot Exact) -->
+      <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="16dp">
+
+          <!-- Location Row -->
+          <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- GPS Icon in Circle -->
+            <FrameLayout
+              android:id="@+id/layoutGpsIconFrame"
+              android:layout_width="44dp"
+              android:layout_height="44dp"
+              android:layout_alignParentStart="true"
+              android:layout_centerVertical="true"
+              android:background="@drawable/circle_progress_bg"
+              android:backgroundTint="@color/bg_card_secondary">
+
+              <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_gps_fixed"
+                app:tint="@color/accent_mint" />
+            </FrameLayout>
+
+            <!-- Location Name & Lat/Lng -->
+            <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerVertical="true"
+              android:layout_marginStart="12dp"
+              android:layout_marginEnd="8dp"
+              android:layout_toStartOf="@+id/btnRefreshLocation"
+              android:layout_toEndOf="@+id/layoutGpsIconFrame"
+              android:orientation="vertical">
+
+              <TextView
+                android:id="@+id/tvCurrentLocationName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-medium"
+                android:maxLines="1"
+                android:text="মদিনা মুনাওয়ারা, সৌদি আরব"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+              <TextView
+                android:id="@+id/tvCurrentCoordinates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="GPS: 28.3997°, 36.5775°"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp" />
+            </LinearLayout>
+
+            <!-- Refresh Pill Button -->
+            <TextView
+              android:id="@+id/btnRefreshLocation"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentEnd="true"
+              android:layout_centerVertical="true"
+              android:background="@drawable/bg_badge_pill"
+              android:backgroundTint="@color/bg_card_active"
+              android:clickable="true"
+              android:focusable="true"
+              android:paddingHorizontal="12dp"
+              android:paddingVertical="6dp"
+              android:text="রিফ্রেশ"
+              android:textColor="@color/accent_mint"
+              android:textSize="12sp"
+              android:textStyle="bold" />
+          </RelativeLayout>
+
+          <!-- Search Radius Selector Row -->
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+              android:id="@+id/tvRadiusLabel"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="অনুসন্ধানের ব্যাসার্ধ:"
+              android:textColor="@color/text_secondary"
+              android:textSize="13sp" />
+
+            <!-- Radius Pills Container -->
+            <LinearLayout
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="10dp"
+              android:layout_weight="1"
+              android:gravity="end"
+              android:orientation="horizontal">
+
+              <!-- 1 কিমি -->
+              <TextView
+                android:id="@+id/pillRadius1Km"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_badge_pill"
+                android:backgroundTint="@color/bg_card"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingHorizontal="11dp"
+                android:paddingVertical="5dp"
+                android:text="1 কিমি"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+              <!-- 3 কিমি -->
+              <TextView
+                android:id="@+id/pillRadius3Km"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:background="@drawable/bg_badge_pill"
+                android:backgroundTint="@color/bg_card"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingHorizontal="11dp"
+                android:paddingVertical="5dp"
+                android:text="3 কিমি"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+              <!-- 5 কিমি (Active Mint) -->
+              <TextView
+                android:id="@+id/pillRadius5Km"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:background="@drawable/bg_badge_pill"
+                android:backgroundTint="@color/accent_mint"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="5dp"
+                android:text="5 কিমি"
+                android:textColor="@color/btn_save_text"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+              <!-- 10 কিমি -->
+              <TextView
+                android:id="@+id/pillRadius10Km"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:background="@drawable/bg_badge_pill"
+                android:backgroundTint="@color/bg_card"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingHorizontal="11dp"
+                android:paddingVertical="5dp"
+                android:text="10 কিমি"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+            </LinearLayout>
+          </LinearLayout>
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- SEARCH INPUT BAR (Pill Stadium Shape) -->
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/bg_badge_pill"
+        android:backgroundTint="@color/bg_card"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp">
+
+        <ImageView
+          android:layout_width="20dp"
+          android:layout_height="20dp"
+          android:src="@drawable/ic_search"
+          app:tint="@color/accent_mint" />
+
+        <EditText
+          android:id="@+id/etMosqueSearch"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_marginStart="10dp"
+          android:layout_weight="1"
+          android:background="@null"
+          android:hint="মসজিদের নাম বা রাস্তা খুঁজুন..."
+          android:imeOptions="actionSearch"
+          android:inputType="text"
+          android:textColor="@color/text_primary"
+          android:textColorHint="@color/text_muted"
+          android:textSize="13.5sp" />
+      </LinearLayout>
+
+      <!-- FACILITY FILTER CHIPS ROW -->
+      <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:clipToPadding="false"
+        android:paddingHorizontal="16dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+
+          <!-- Chip: সব -->
+          <TextView
+            android:id="@+id/chipFilterAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_badge_pill"
+            android:backgroundTint="@color/accent_mint"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingHorizontal="18dp"
+            android:paddingVertical="9dp"
+            android:text="সব"
+            android:textColor="@color/btn_save_text"
+            android:textSize="12.5sp"
+            android:textStyle="bold" />
+
+          <!-- Chip: ওযুখানা -->
+          <TextView
+            android:id="@+id/chipFilterWudu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/bg_badge_pill"
+            android:backgroundTint="@color/bg_card"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="9dp"
+            android:text="ওযুখানা"
+            android:textColor="@color/text_secondary"
+            android:textSize="12.5sp"
+            android:textStyle="bold" />
+
+          <!-- Chip: নারী কর্নার -->
+          <TextView
+            android:id="@+id/chipFilterWomen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/bg_badge_pill"
+            android:backgroundTint="@color/bg_card"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="9dp"
+            android:text="নারী কর্নার"
+            android:textColor="@color/text_secondary"
+            android:textSize="12.5sp"
+            android:textStyle="bold" />
+
+          <!-- Chip: জুমা জামাত -->
+          <TextView
+            android:id="@+id/chipFilterJumma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/bg_badge_pill"
+            android:backgroundTint="@color/bg_card"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="9dp"
+            android:text="জুমা জামাত"
+            android:textColor="@color/text_secondary"
+            android:textSize="12.5sp"
+            android:textStyle="bold" />
+        </LinearLayout>
+      </HorizontalScrollView>
+
+      <!-- INTERACTIVE 2D RADAR PROXIMITY MAP CARD -->
+      <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="14dp"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1dp">
+
+        <com.devflux.deenone.features.mosque.view.MosqueProximityRadarView
+          android:id="@+id/radarMosqueProximity"
+          android:layout_width="match_parent"
+          android:layout_height="205dp"
+          android:layout_gravity="center"
+          android:padding="8dp" />
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- MOSQUE LIST HEADER & TRAVEL MODE TOGGLE -->
+      <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="12dp">
+
+        <!-- Left: মসজিদ তালিকা (৬০ টি) -->
+        <TextView
+          android:id="@+id/tvMosqueListCountHeader"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentStart="true"
+          android:layout_centerVertical="true"
+          android:fontFamily="sans-serif-medium"
+          android:text="মসজিদ তালিকা (60 টি)"
+          android:textColor="@color/text_primary"
+          android:textSize="16sp"
+          android:textStyle="bold" />
+
+        <!-- Right: Travel Mode Toggle Pills -->
+        <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentEnd="true"
+          android:layout_centerVertical="true"
+          android:orientation="horizontal">
+
+          <!-- Walking -->
+          <TextView
+            android:id="@+id/btnTravelModeWalking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_badge_pill"
+            android:backgroundTint="@color/accent_mint"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingHorizontal="14dp"
+            android:paddingVertical="6dp"
+            android:text="হাঁটা"
+            android:textColor="@color/btn_save_text"
+            android:textSize="12.5sp"
+            android:textStyle="bold" />
+
+          <!-- Driving -->
+          <TextView
+            android:id="@+id/btnTravelModeDriving"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:background="@drawable/bg_badge_pill"
+            android:backgroundTint="@color/bg_card"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingHorizontal="14dp"
+            android:paddingVertical="6dp"
+            android:text="গাড়ি"
+            android:textColor="@color/text_secondary"
+            android:textSize="12.5sp"
+            android:textStyle="bold" />
+        </LinearLayout>
+      </RelativeLayout>
+
+      <!-- LOADING INDICATOR -->
+      <LinearLayout
+        android:id="@+id/layoutMosqueLoading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="32dp"
+        android:visibility="gone">
+
+        <ProgressBar
+          android:layout_width="36dp"
+          android:layout_height="36dp"
+          android:indeterminateTint="#34D399" />
+
+        <TextView
+          android:id="@+id/tvLoadingMosqueMessage"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="10dp"
+          android:text="নিকটবর্তী মসজিদের অবস্থান অনুসন্ধান করা হচ্ছে..."
+          android:textColor="#849C94"
+          android:textSize="13sp" />
+      </LinearLayout>
+
+      <!-- EMPTY STATE -->
+      <LinearLayout
+        android:id="@+id/layoutMosqueEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="32dp"
+        android:visibility="gone">
+
+        <TextView
+          android:id="@+id/tvEmptyMosqueMessage"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="এই ব্যাসার্ধের মধ্যে কোনো মসজিদ পাওয়া যায়নি"
+          android:textColor="#849C94"
+          android:textSize="14sp" />
+
+        <TextView
+          android:id="@+id/btnEmptyOpenGoogleMap"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="12dp"
+          android:background="@drawable/bg_badge_pill"
+          android:backgroundTint="@color/accent_mint"
+          android:paddingHorizontal="18dp"
+          android:paddingVertical="8dp"
+          android:text="গুগল ম্যাপে অনুসন্ধান করুন"
+          android:textColor="@color/btn_save_text"
+          android:textSize="13sp"
+          android:textStyle="bold" />
+      </LinearLayout>
+
+      <!-- MOSQUE RECYCLERVIEW -->
+      <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvNearbyMosqueList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:nestedScrollingEnabled="false"
+        android:overScrollMode="never" />
+    </LinearLayout>
+  </androidx.core.widget.NestedScrollView>
+</LinearLayout>

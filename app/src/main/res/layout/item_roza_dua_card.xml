@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardDuaItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardBackgroundColor="@color/bg_card"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="0dp"
+    app:strokeColor="@color/border_card"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Top Header Row: Title on Left, 3-dot Menu on Right -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- Dua Item Title -->
+            <TextView
+                android:id="@+id/tvDuaTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/text_primary"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                tools:text="তাশাহহুদ (আত্তাহিয়্যাতু)" />
+
+            <!-- 3-Dot Options Action Button (Right side of card header) -->
+            <FrameLayout
+                android:id="@+id/btnDuaOptions"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="Options"
+                    android:src="@drawable/ic_more_vert"
+                    app:tint="@color/text_secondary" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <!-- Preview Text (Visible when collapsed) matching Screenshot -->
+        <TextView
+            android:id="@+id/tvDuaPreview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:lineSpacingExtra="4dp"
+            android:maxLines="2"
+            android:textColor="@color/text_secondary"
+            android:textSize="14.5sp"
+            tools:text="التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ..." />
+
+        <!-- Detailed Full Content (Visible when expanded) matching Screenshot -->
+        <LinearLayout
+            android:id="@+id/layoutExpandedContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <!-- Full Arabic Text (High contrast, RTL, natural flow, no inner box) -->
+            <TextView
+                android:id="@+id/tvDuaArabic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="end|center_vertical"
+                android:lineSpacingMultiplier="1.5"
+                android:textColor="@color/text_primary"
+                android:textDirection="rtl"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:text="التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ..." />
+
+            <!-- Transliteration (উচ্চারণ: ...) -->
+            <TextView
+                android:id="@+id/tvDuaTransliteration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:lineSpacingExtra="4dp"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp"
+                tools:text="উচ্চারণ: আত্তাহিয়্যাতু লিল্লাহি..." />
+
+            <!-- Translation (অর্থ: ...) -->
+            <TextView
+                android:id="@+id/tvDuaFullTranslation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:lineSpacingExtra="4dp"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp"
+                tools:text="অর্থ: সমস্ত সম্মান, সমস্ত দোয়া এবং সমস্ত পবিত্রতা আল্লাহর জন্য..." />
+
+            <!-- Fazilat (ফজিলত: ...) -->
+            <TextView
+                android:id="@+id/tvDuaFazilat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:lineSpacingExtra="4dp"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp"
+                android:visibility="gone"
+                tools:text="ফজিলত: ..." />
+
+            <!-- Reference (রেফারেন্স: ...) -->
+            <TextView
+                android:id="@+id/tvDuaReference"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp"
+                tools:text="[সুনান আবু দাউদ ২৩৫৮]" />
+
+        </LinearLayout>
+
+        <!-- Toggle Row: বিস্তারিত দেখুন ⌵ / সংক্ষেপ করুন ∧ -->
+        <LinearLayout
+            android:id="@+id/layoutToggleExpand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingVertical="4dp">
+
+            <TextView
+                android:id="@+id/tvToggleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="বিস্তারিত দেখুন"
+                android:textColor="@color/accent_teal"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ivToggleChevron"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/ic_chevron_down"
+                app:tint="@color/accent_teal" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

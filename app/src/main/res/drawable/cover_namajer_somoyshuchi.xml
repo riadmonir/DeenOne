@@ -1,0 +1,61 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="120dp"
+    android:height="160dp"
+    android:viewportWidth="120"
+    android:viewportHeight="160">
+
+    <!-- Background Beige/Soft Yellow -->
+    <path
+        android:pathData="M8,0 L112,0 A8,8 0 0,1 120,8 L120,152 A8,8 0 0,1 112,160 L8,160 A8,8 0 0,1 0,152 L0,8 A8,8 0 0,1 8,0 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:angle="135"
+                android:endColor="#F6E05E"
+                android:startColor="#FEFCBF"
+                android:type="linear" />
+        </aapt:attr>
+    </path>
+
+    <!-- Spine Accent -->
+    <path
+        android:fillColor="#D69E2E"
+        android:pathData="M0,0 L10,0 L10,160 L0,160 Z" />
+    <path
+        android:fillColor="#B7791F"
+        android:pathData="M10,0 L11,0 L11,160 L10,160 Z" />
+
+    <!-- Islamic Top Arch -->
+    <path
+        android:fillColor="#234E52"
+        android:pathData="M25,28 Q60,10 95,28 L95,35 L25,35 Z" />
+
+    <!-- Central Clean White Paper Inset -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:strokeColor="#319795"
+        android:strokeWidth="1.2"
+        android:pathData="M22,42 L98,42 A3,3 0 0,1 101,45 L101,135 A3,3 0 0,1 98,138 L22,138 A3,3 0 0,1 19,135 L19,45 A3,3 0 0,1 22,42 Z" />
+
+    <!-- Sun / Time Dial Silhouette -->
+    <path
+        android:fillColor="#D69E2E"
+        android:pathData="M60,65 A12,12 0 1,0 60,89 A12,12 0 1,0 60,65 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M60,68 A9,9 0 1,0 60,86 A9,9 0 1,0 60,68 Z" />
+    <path
+        android:fillColor="#319795"
+        android:pathData="M59,71 L61,71 L61,77 L66,77 L66,79 L59,79 Z" />
+
+    <!-- Horizontal Lines Representing Text -->
+    <path
+        android:fillColor="#4A5568"
+        android:pathData="M30,100 L90,100 L90,103 L30,103 Z" />
+    <path
+        android:fillColor="#718096"
+        android:pathData="M36,110 L84,110 L84,112 L36,112 Z" />
+    <path
+        android:fillColor="#A0AEC0"
+        android:pathData="M42,120 L78,120 L78,122 L42,122 Z" />
+</vector>

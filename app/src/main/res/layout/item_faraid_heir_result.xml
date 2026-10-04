@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardBackgroundColor="@color/bg_card"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="0dp"
+    app:strokeColor="@color/border_card"
+    app:strokeWidth="1.2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Top Header: Relation Name + Share Fraction Badge + Percent Badge -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/iconContainer"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_badge_pill"
+                android:backgroundTint="@color/bg_card_active">
+
+                <ImageView
+                    android:id="@+id/ivHeirIcon"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_person"
+                    app:tint="@color/primary_green" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvHeirTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="মাতা"
+                    android:textColor="@color/text_primary"
+                    android:textSize="15.5sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvShareFraction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/bg_badge_pill"
+                    android:backgroundTint="@color/bg_card_secondary"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="2dp"
+                    android:text="১/৬ অংশ"
+                    android:textColor="@color/accent_gold"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvHeirPercentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_badge_pill"
+                android:backgroundTint="@color/bg_card_active"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="4dp"
+                android:text="১৬.৬৭%"
+                android:textColor="@color/primary_green"
+                android:textSize="13.5sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:background="@color/border_card" />
+
+        <!-- Calculation Transparency Box (Requirement 21) -->
+        <LinearLayout
+            android:id="@+id/layoutCalculationFormulaBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_badge_pill"
+            android:backgroundTint="@color/bg_card_secondary"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/tvCalculationFormulaTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="গণনা সূত্র ও বিশ্লেষণ:"
+                android:textColor="@color/accent_gold"
+                android:textSize="11.5sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvCalculationFormula"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="১/৬ × ৳ ৬,০০,০০০ = ৳ ১,০০,০০০"
+                android:textColor="@color/primary_green"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvOriginalPrescribedShare"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="মূল নির্ধারিত অংশ: ১/৬"
+                android:textColor="@color/text_secondary"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/tvLegalReason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="প্রাপ্তির কারণ: মৃতের সন্তান জীবিত থাকায় মা নির্ধারিত ১/৬ অংশ পাবেন।"
+                android:textColor="@color/text_primary"
+                android:textSize="11.5sp"
+                android:lineSpacingMultiplier="1.1" />
+        </LinearLayout>
+
+        <!-- Amounts: Total Amount & Individual Amount (Money) -->
+        <LinearLayout
+            android:id="@+id/layoutMoneyShareSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvTotalCategoryAmountLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="সর্বমোট প্রাপ্য অর্থ"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="11.5sp" />
+
+                <TextView
+                    android:id="@+id/tvTotalCategoryAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="৳ ১,০০,০০০"
+                    android:textColor="@color/primary_green"
+                    android:textSize="15.5sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutIndividualAmount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvIndividualAmountLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="প্রতিজন পাবেন অর্থ"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="11.5sp" />
+
+                <TextView
+                    android:id="@+id/tvIndividualAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="৳ ১,০০,০০০"
+                    android:textColor="@color/accent_gold"
+                    android:textSize="14.5sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Land & Real Estate Property Share (স্থাবর সম্পত্তি / জমি বণ্টন) -->
+        <LinearLayout
+            android:id="@+id/layoutPropertyShareBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_badge_pill"
+            android:backgroundTint="@color/bg_card_secondary"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="10dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_eco"
+                app:tint="@color/primary_green" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvTotalPropertyLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="প্রাপ্য জমি / সম্পত্তি"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="11.5sp" />
+
+                <TextView
+                    android:id="@+id/tvTotalPropertyShare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="১২.৫০ শতক"
+                    android:textColor="@color/primary_green"
+                    android:textSize="14.5sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutIndividualProperty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvIndividualPropertyLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="প্রতিজন পাবেন জমি"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/tvIndividualPropertyShare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="৬.২৫ শতক"
+                    android:textColor="@color/accent_gold"
+                    android:textSize="13.5sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Dalil & Reference Box -->
+        <LinearLayout
+            android:id="@+id/layoutDalilBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_badge_pill"
+            android:backgroundTint="@color/bg_card_secondary"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <!-- Reference Header -->
+            <TextView
+                android:id="@+id/tvDalilReference"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="কুরআনুল কারীম: সূরা আন-নিসা: ১১"
+                android:textColor="@color/accent_gold"
+                android:textSize="12.5sp"
+                android:textStyle="bold" />
+
+            <!-- Arabic Dalil Text -->
+            <TextView
+                android:id="@+id/tvArabicDalil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="end"
+                android:lineSpacingMultiplier="1.2"
+                android:text="وَلِأَبَوَيْهِ لِكُلِّ وَاحِدٍ مِّنْهُمَا السُّدُسُ مِمَّا تَرَكَ إِن كَانَ لَهُ وَلَدٌ"
+                android:textColor="@color/primary_green"
+                android:textSize="14.5sp"
+                android:textStyle="bold" />
+
+            <!-- Bangla Pronunciation -->
+            <TextView
+                android:id="@+id/tvDalilPronunciation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="উচ্চারণ: ওয়া লি-আবাওয়াইহি লিকুল্লি ওয়াহিদিম মিনহুমাস সুদুসু মিম্মা তারা কা ইং কানা লাহু ওয়ালাদ..."
+                android:textColor="@color/accent_gold"
+                android:textSize="12sp"
+                android:lineSpacingMultiplier="1.1" />
+
+            <!-- Translation -->
+            <TextView
+                android:id="@+id/tvDalilTranslation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="&quot;মৃত ব্যক্তির সন্তান থাকলে তার পিতা-মাতার প্রত্যেকের জন্য ত্যাজ্য সম্পত্তির এক-ষষ্ঠাংশ (১/৬) নির্ধারিত।&quot;"
+                android:textColor="@color/text_primary"
+                android:textSize="12sp"
+                android:lineSpacingMultiplier="1.1" />
+
+            <!-- Explanation & Madhab Note -->
+            <TextView
+                android:id="@+id/tvHeirExplanation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:visibility="gone"
+                android:textColor="@color/text_secondary"
+                android:textSize="11.5sp"
+                android:lineSpacingMultiplier="1.1" />
+
+            <!-- Madhab Consensus Pill -->
+            <TextView
+                android:id="@+id/tvMadhabNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="চার মাযহাবের সর্বসম্মত ইজমা ও ইসলামিক ফাউন্ডেশন বাংলাদেশ।"
+                android:textColor="@color/accent_mint"
+                android:textSize="11sp" />
+
+            <!-- Bangladesh Law Note -->
+            <TextView
+                android:id="@+id/tvBangladeshLawNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="বাংলাদেশ আইন: মুসলিম পারিবারিক আইন অধ্যাদেশ ১৯৬১ অনুযায়ী কার্যকর।"
+                android:textColor="@color/primary_green"
+                android:textSize="11sp" />
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main"
+    android:orientation="vertical">
+
+    <!-- Top Header Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/bg_top_bar"
+        android:elevation="2dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp">
+
+        <!-- Back Button with Circular Container -->
+        <FrameLayout android:id="@+id/btnBackSunnahMustahab"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_circular_counter"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_arrow_back"
+                app:tint="@color/accent_mint" />
+        </FrameLayout>
+
+        <!-- Header Title -->
+        <TextView
+            android:id="@+id/tvHeaderTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="আজানের সুন্নত ও মুস্তাহাব সমূহ"
+            android:textColor="@color/text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Settings Gear Action Button with Circular Container -->
+        <FrameLayout android:id="@+id/btnSettingsSunnahMustahab"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_circular_counter"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_settings"
+                app:tint="@color/accent_mint" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- Scrollable Content -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="36dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Main Topic Card: আজানের সুন্নত ও মুস্তাহাব সমূহ -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardSunnahMustahabMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@color/bg_card"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/border_card"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Card Header Row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvCardTitle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="আজানের সুন্নত ও মুস্তাহাব সমূহ"
+                            android:textColor="@color/text_primary"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <!-- Three dots button -->
+                        <FrameLayout
+                            android:id="@+id/btnMenuCardSunnahMustahab"
+                            android:layout_width="34dp"
+                            android:layout_height="34dp"
+                            android:layout_marginStart="8dp"
+                            android:background="@drawable/bg_circular_counter"
+                            android:backgroundTint="@color/bg_badge_pill"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <ImageView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_more_horiz"
+                                app:tint="@color/text_primary" />
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <!-- Point 1 -->
+                    <TextView
+                        android:id="@+id/tvPoint1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="• মসজিদের বাইরে উঁচু জায়গায় দাঁড়িয়ে আজান দেয়া।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <!-- Point 2 -->
+                    <TextView
+                        android:id="@+id/tvPoint2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="• যথাসম্ভব উচ্চস্বরে আজান দেয়া দরকার। তবে একা একা নামাজ আদায়ের জন্য স্বাভাবিকভাবে আজান দিলেও চলবে।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <!-- Point 3 -->
+                    <TextView
+                        android:id="@+id/tvPoint3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="• আজানের সময় শাহাদাত আঙ্গুল দ্বারা উভয় কানের ছিদ্র বন্ধ করে রাখা মুস্তাহাব।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <!-- Point 4 -->
+                    <TextView
+                        android:id="@+id/tvPoint4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="• মদ ও গুন্নাহ আদায়পূর্বক আজানের শব্দগুলো লম্বা করে থেমে থেমে বলা সুন্নত, যাতে প্রত্যেক বাক্য উচ্চারণের পর শ্রোতারা জবাব দিতে পারে।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <!-- Point 5 -->
+                    <TextView
+                        android:id="@+id/tvPoint5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="• 'হাইয়্যা আলাস সালাহ' বলার সময় ডান দিকে ও 'হাইয়্যা আলাল ফালাহ' বলার সময় বাম দিকে মুখ ফিরানো সুন্নত।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <!-- Point 6 -->
+                    <TextView
+                        android:id="@+id/tvPoint6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="• আজান ও ইকামতের সময় কিবলার দিকে ফিরে থাকা সুন্নত।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <!-- Point 7 -->
+                    <TextView
+                        android:id="@+id/tvPoint7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="• আজান দেয়ার সময় 'হদসে আকবর' বা বড় নাপাকি—যেমন যৌনকারণে বীর্যপাত হওয়া বা স্বপ্নদোষ হওয়া—থেকে মুক্ত ও পবিত্র হওয়া সুন্নত। এ ধরনের নাপাকি দূর করতে নিয়মানুযায়ী গোসল করা জরুরি, তবে অজু-গোসলের পানি না থাকলে তায়াম্মুম দ্বারাও পবিত্রতা অর্জন করা যায়। গোসল ফরজ অবস্থায় আজান দেওয়া মাকরুহে তাহরীমী।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <!-- Point 8 -->
+                    <TextView
+                        android:id="@+id/tvPoint8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="• ফরজে আইন—অর্থাৎ যে আমল প্রত্যেক বালেগ ও বিবেকবান নর-নারীর ওপর সমানভাবে ফরজ, যেমন পাঁচ ওয়াক্ত নামাজ—ব্যতীত অন্য কোনো নামাজের জন্য আজান ও ইকামত দিতে হয় না। যেমন জানাজার নামাজ, বিতর নামাজ, ঈদের নামাজ, কুসুফ-খুসুফের নামাজ ও ইস্তেস্কার নামাজ।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <!-- Point 9 -->
+                    <TextView
+                        android:id="@+id/tvPoint9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="• আজান বা ইকামত দেয়ার সময় কথা বলা নিষেধ।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

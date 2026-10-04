@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:id="@+id/rootTasbihLayout"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/bg_main"
+  android:orientation="vertical">
+
+  <!-- 1. Top Action Bar -->
+  <RelativeLayout
+    android:id="@+id/layoutTasbihTopBar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_top_bar"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="12dp"
+    android:paddingBottom="12dp">
+
+    <FrameLayout
+      android:id="@+id/btnCloseTasbih"
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      android:layout_alignParentStart="true"
+      android:layout_centerVertical="true"
+      android:background="@drawable/bg_circular_counter"
+      android:backgroundTint="@color/bg_badge_pill"
+      android:clickable="true"
+      android:focusable="true">
+
+      <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_arrow_back"
+        app:tint="@color/text_primary" />
+    </FrameLayout>
+
+    <TextView
+      android:id="@+id/tvTasbihHeaderTitle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerInParent="true"
+      android:text="তাসবিহ"
+      android:textColor="@color/text_primary"
+      android:textSize="20sp"
+      android:textStyle="bold" />
+
+    <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentEnd="true"
+      android:layout_centerVertical="true"
+      android:gravity="center_vertical"
+      android:orientation="horizontal">
+
+      <!-- Sound Toggle -->
+      <FrameLayout
+        android:id="@+id/btnTasbihSoundToggle"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/bg_circular_counter"
+        android:backgroundTint="@color/bg_badge_pill"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageView
+          android:id="@+id/ivTasbihSoundIcon"
+          android:layout_width="20dp"
+          android:layout_height="20dp"
+          android:layout_gravity="center"
+          android:src="@drawable/ic_volume_up"
+          app:tint="@color/accent_mint" />
+      </FrameLayout>
+
+      <!-- Vibration Toggle -->
+      <FrameLayout
+        android:id="@+id/btnTasbihVibrationToggle"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/bg_circular_counter"
+        android:backgroundTint="@color/bg_badge_pill"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageView
+          android:id="@+id/ivTasbihVibrationIcon"
+          android:layout_width="20dp"
+          android:layout_height="20dp"
+          android:layout_gravity="center"
+          android:src="@drawable/ic_vibration"
+          app:tint="@color/accent_mint" />
+      </FrameLayout>
+
+      <!-- Reset Button -->
+      <FrameLayout
+        android:id="@+id/btnTasbihReset"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/bg_circular_counter"
+        android:backgroundTint="@color/bg_badge_pill"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageView
+          android:layout_width="20dp"
+          android:layout_height="20dp"
+          android:layout_gravity="center"
+          android:src="@drawable/ic_refresh"
+          app:tint="@color/accent_mint" />
+      </FrameLayout>
+    </LinearLayout>
+  </RelativeLayout>
+
+  <!-- 2. Horizontal Dhikr Selector Pills -->
+  <HorizontalScrollView
+    android:id="@+id/scrollDhikrPills"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:clipToPadding="false"
+    android:overScrollMode="never"
+    android:paddingHorizontal="16dp"
+    android:scrollbars="none">
+
+    <LinearLayout
+      android:id="@+id/layoutDhikrPillContainer"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:gravity="center_vertical"
+      android:orientation="horizontal" />
+  </HorizontalScrollView>
+
+  <!-- 3. Center Content Area (Arabic Text, Meaning, Circular Counter) -->
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingHorizontal="24dp">
+
+    <!-- Arabic Text -->
+    <TextView
+      android:id="@+id/tvTasbihArabic"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:lineSpacingExtra="6dp"
+      android:text="سُبْحَانَ اللَّهِ"
+      android:textColor="@color/accent_mint"
+      android:textSize="32sp"
+      android:textStyle="bold" />
+
+    <!-- Bengali Meaning -->
+    <TextView
+      android:id="@+id/tvTasbihMeaning"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:gravity="center"
+      android:lineSpacingExtra="2dp"
+      android:text="আল্লাহ অতি পবিত্র ও নিষ্কলুষ"
+      android:textColor="@color/text_secondary"
+      android:textSize="14sp" />
+
+    <!-- Transliteration & Fazilat Subtitle -->
+    <TextView
+      android:id="@+id/tvTasbihFazilat"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="4dp"
+      android:gravity="center"
+      android:text="সুবহানাল্লাহ • মিজানের পাল্লা অর্ধেক পূর্ণ করে"
+      android:textColor="@color/text_secondary"
+      android:textSize="11.5sp" />
+
+    <!-- Big Circular Interactive Counter Ring -->
+    <FrameLayout
+      android:id="@+id/btnCircularCounterContainer"
+      android:layout_width="250dp"
+      android:layout_height="250dp"
+      android:layout_marginTop="28dp"
+      android:layout_marginBottom="16dp"
+      android:clickable="true"
+      android:focusable="true">
+
+      <!-- Custom Canvas Progress Arc -->
+      <com.devflux.deenone.core.tasbih.CircularTasbihProgressView
+        android:id="@+id/circularProgressView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+      <!-- Inner Counter Details -->
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- Counter Large Number -->
+        <TextView
+          android:id="@+id/tvCounterNumber"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="০"
+          android:textColor="@color/text_primary"
+          android:textSize="64sp"
+          android:textStyle="bold" />
+
+        <!-- Target Count Label -->
+        <TextView
+          android:id="@+id/tvCounterTargetSubtitle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="2dp"
+          android:text="টার্গেট: ৩৩"
+          android:textColor="@color/text_secondary"
+          android:textSize="14sp" />
+
+        <!-- Cycle / Lifetime Stats Label -->
+        <TextView
+          android:id="@+id/tvCounterCycleSubtitle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="4dp"
+          android:text="চক্র: ০ • সর্বমোট: ০"
+          android:textColor="@color/accent_mint"
+          android:textSize="11.5sp"
+          android:textStyle="bold" />
+      </LinearLayout>
+    </FrameLayout>
+  </LinearLayout>
+
+  <!-- 4. Bottom Control Bar (Target Selectors + Undo Button) -->
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingHorizontal="18dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="24dp">
+
+    <!-- Target Selector Pills Group -->
+    <LinearLayout
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:gravity="center_vertical"
+      android:orientation="horizontal">
+
+      <!-- Target 33 -->
+      <TextView
+        android:id="@+id/btnTarget33"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:layout_marginEnd="6dp"
+        android:background="@drawable/bg_badge_pill_active"
+        android:gravity="center"
+        android:minWidth="48dp"
+        android:paddingHorizontal="14dp"
+        android:text="৩৩"
+        android:textColor="@color/accent_mint"
+        android:textSize="13.5sp"
+        android:textStyle="bold" />
+
+      <!-- Target 100 -->
+      <TextView
+        android:id="@+id/btnTarget100"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:layout_marginEnd="6dp"
+        android:background="@drawable/bg_badge_pill"
+        android:gravity="center"
+        android:minWidth="54dp"
+        android:paddingHorizontal="14dp"
+        android:text="১০০"
+        android:textColor="@color/text_primary"
+        android:textSize="13.5sp" />
+
+      <!-- Target 1000 -->
+      <TextView
+        android:id="@+id/btnTarget1000"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:layout_marginEnd="6dp"
+        android:background="@drawable/bg_badge_pill"
+        android:gravity="center"
+        android:minWidth="60dp"
+        android:paddingHorizontal="14dp"
+        android:text="১০০০"
+        android:textColor="@color/text_primary"
+        android:textSize="13.5sp" />
+
+      <!-- Target Custom / Infinity -->
+      <TextView
+        android:id="@+id/btnTargetCustom"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:background="@drawable/bg_badge_pill"
+        android:gravity="center"
+        android:paddingHorizontal="12dp"
+        android:text="কাস্টম"
+        android:textColor="@color/text_primary"
+        android:textSize="12.5sp" />
+    </LinearLayout>
+
+    <!-- Undo / Decrement Button -->
+    <ImageButton
+      android:id="@+id/btnTasbihUndo"
+      android:layout_width="44dp"
+      android:layout_height="44dp"
+      android:background="@drawable/bg_badge_pill"
+      android:contentDescription="পূর্বের সংখ্যায় ফিরুন"
+      android:padding="10dp"
+      android:src="@drawable/ic_undo"
+      app:tint="@color/accent_mint" />
+  </LinearLayout>
+
+</LinearLayout>

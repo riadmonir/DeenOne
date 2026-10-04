@@ -1,0 +1,42 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="44dp"
+    android:height="44dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+
+    <!-- Circle Clip Background -->
+    <path
+        android:pathData="M50,50m-48,0a48,48 0,1 1,96 0a48,48 0,1 1,-96 0">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:angle="90"
+                android:endColor="#0284C7"
+                android:startColor="#38BDF8"
+                android:type="linear" />
+        </aapt:attr>
+    </path>
+
+    <!-- Midday Sun -->
+    <path
+        android:fillColor="#FDE047"
+        android:pathData="M50,30m-14,0a14,14 0,1 1,28 0a14,14 0,1 1,-28 0" />
+
+    <!-- Soft Cloud/Hill Layers -->
+    <path
+        android:fillColor="#0369A1"
+        android:fillAlpha="0.4"
+        android:pathData="M0,75 Q25,60 50,72 T100,68 L100,100 L0,100 Z" />
+
+    <path
+        android:fillColor="#075985"
+        android:pathData="M0,85 Q30,70 65,82 T100,78 L100,100 L0,100 Z" />
+
+    <!-- Minaret/Dome in distance -->
+    <path
+        android:fillColor="#0C4A6E"
+        android:pathData="M42,75 Q50,65 58,75 L58,95 L42,95 Z" />
+    <path
+        android:fillColor="#0C4A6E"
+        android:pathData="M49,60 L51,60 L51,66 L49,66 Z" />
+</vector>

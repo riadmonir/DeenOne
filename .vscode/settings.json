@@ -1,0 +1,15 @@
+{
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.import.gradle.enabled": true,
+    "java.import.gradle.wrapper.enabled": true,
+    "java.import.gradle.version": "9.7.1",
+    "java.import.gradle.home": "C:/Users/riyad/.gradle/wrapper/dists/gradle-9.7.1-bin/1w1c7tv4s851m17nbqdsro2tv/gradle-9.7.1",
+    "java.imports.gradle.wrapper.checksums": [
+        {
+            "checksum": "76805e32c009c0cf0dd5d206bddc9fb22ea42e84db904b764f3047de095493f3",
+            "allowed": true
+        }
+    ],
+    "java.autobuild.enabled": true,
+    "java.compile.nullAnalysis.mode": "automatic"
+}

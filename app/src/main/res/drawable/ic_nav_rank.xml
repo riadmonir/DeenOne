@@ -1,0 +1,10 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Rank Trophy Icon -->
+    <path
+        android:fillColor="@color/text_secondary"
+        android:pathData="M18,2H6V4H2V9A4,4 0 0,0 6,13H6.09C6.55,14.65 7.84,15.96 9.5,16.49V19H7V21H17V19H14.5V16.49C16.16,15.96 17.45,14.65 17.91,13H18A4,4 0 0,0 22,9V4H18V2M4,6H6V11A2,2 0 0,1 4,9V6M16,11A4,4 0 0,1 8,11V4H16V11M20,9A2,2 0 0,1 18,11V6H20V9Z" />
+</vector>

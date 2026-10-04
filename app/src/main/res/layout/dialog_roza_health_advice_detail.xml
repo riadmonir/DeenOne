@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main"
+    android:orientation="vertical">
+
+    <!-- Top App Bar: ← Topic Title (Matching screenshot 1:1) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp">
+
+        <FrameLayout
+            android:id="@+id/btnBackRozaHealthAdviceDetail"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:background="@drawable/bg_circle_icon"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_arrow_back"
+                app:tint="@color/text_primary" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tvRozaHealthAdviceDetailTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:textColor="@color/text_primary"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            tools:text="সেহরিতে পুষ্টিকর ও ভারসাম্যপূর্ণ খাবার খাওয়া" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/border_card" />
+
+    <!-- Scrollable Detail Content -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:padding="16dp">
+
+        <!-- Expandable Topic Card matching screenshot 1:1 -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/bg_card"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/border_card"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Topic Heading inside card (Verbatim: পুষ্টিকর ও ভারসাম্যপূর্ণ খাবার খাওয়া) -->
+                <TextView
+                    android:id="@+id/tvDetailHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_primary"
+                    android:textSize="15.5sp"
+                    android:textStyle="bold"
+                    tools:text="পুষ্টিকর ও ভারসাম্যপূর্ণ খাবার খাওয়া" />
+
+                <!-- Collapsed Preview Text -->
+                <TextView
+                    android:id="@+id/tvDetailPreview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:lineSpacingExtra="4dp"
+                    android:textColor="@color/text_primary"
+                    android:textSize="13.5sp"
+                    tools:text="সেহরি এমনভাবে করুন যেন এটি আপনাকে সারাদিন শক্তি জোগায়..." />
+
+                <!-- Expand/Collapse Toggle: বিস্তারিত ∨ / সংক্ষেপ করুন ∧ -->
+                <LinearLayout
+                    android:id="@+id/layoutToggleDetailExpand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingVertical="4dp">
+
+                    <TextView
+                        android:id="@+id/tvToggleDetailText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="বিস্তারিত"
+                        android:textColor="@color/accent_teal"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/ivToggleDetailChevron"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginStart="3dp"
+                        android:src="@drawable/ic_chevron_down"
+                        app:tint="@color/accent_teal" />
+                </LinearLayout>
+
+                <!-- Full Expanded Content (Initially Gone) -->
+                <LinearLayout
+                    android:id="@+id/layoutExpandedDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="12dp"
+                        android:background="@color/border_card" />
+
+                    <TextView
+                        android:id="@+id/tvDetailFullText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="6dp"
+                        android:textColor="@color/text_primary"
+                        android:textIsSelectable="true"
+                        android:textSize="14sp"
+                        tools:text="সেহরি এমনভাবে করুন যেন এটি আপনাকে সারাদিন শক্তি জোগায়...\n\nউচ্চ প্রোটিনসমৃদ্ধ খাবার যেমন ডিম, দই, চিড়া, ওটস ইত্যাদি খান।\nলো গ্লাইসেমিক ইনডেক্স (GI) সম্পন্ন খাবার যেমন বাদাম, শস্যজাতীয় খাবার ও ডাল খান, যা ধীরে ধীরে শক্তি সরবরাহ করে।\nবেশি লবণযুক্ত ও চর্বিযুক্ত খাবার পরিহার করুন, কারণ এটি পিপাসা বাড়াতে পারে।" />
+
+                    <!-- Reference Section if available -->
+                    <TextView
+                        android:id="@+id/tvDetailReference"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:textColor="@color/accent_teal"
+                        android:textSize="12.5sp"
+                        android:textStyle="italic"
+                        tools:text="স্বাস্থ্য ও পুষ্টি বিজ্ঞান বিষয়ক স্বাস্থ্যবিধি" />
+
+                    <!-- Bottom Action Buttons: Copy & Share -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+
+                        <!-- Copy Button -->
+                        <LinearLayout
+                            android:id="@+id/btnCopyDetail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="36dp"
+                            android:background="@drawable/bg_badge_pill"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingHorizontal="14dp">
+
+                            <ImageView
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:src="@drawable/ic_copy"
+                                app:tint="@color/text_primary" />
+
+                            <TextView
+                                android:id="@+id/tvCopyDetailText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="6dp"
+                                android:text="কপি"
+                                android:textColor="@color/text_primary"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <!-- Share Button -->
+                        <LinearLayout
+                            android:id="@+id/btnShareDetail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="36dp"
+                            android:layout_marginStart="8dp"
+                            android:background="@drawable/bg_badge_pill"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingHorizontal="14dp">
+
+                            <ImageView
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:src="@drawable/ic_share"
+                                app:tint="@color/text_primary" />
+
+                            <TextView
+                                android:id="@+id/tvShareDetailText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="6dp"
+                                android:text="শেয়ার"
+                                android:textColor="@color/text_primary"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

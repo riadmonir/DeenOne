@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutWidgetRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_widget_emerald_gradient"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingHorizontal="14dp"
+    android:paddingVertical="8dp">
+
+    <!-- App Logo -->
+    <ImageView
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:src="@drawable/ic_deenone_logo" />
+
+    <!-- Current Waqt & Time Range -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvWidgetCurrentWaqt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="আসর ওয়াক্ত"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvWidgetWaqtRange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="০৪:৩২ PM - ০৬:২৩ PM"
+            android:textColor="#A7F3D0"
+            android:textSize="10.5sp" />
+    </LinearLayout>
+
+    <!-- Remaining Countdown Badge -->
+    <TextView
+        android:id="@+id/tvWidgetRemainingBadge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_badge_pill"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="4dp"
+        android:text="বাকি ১ ঘণ্টা"
+        android:textColor="#F59E0B"
+        android:textSize="11sp"
+        android:textStyle="bold" />
+
+    <!-- Refresh button -->
+    <ImageView
+        android:id="@+id/btnWidgetRefresh"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/bg_badge_pill"
+        android:padding="3dp"
+        android:src="@drawable/ic_refresh" />
+</LinearLayout>

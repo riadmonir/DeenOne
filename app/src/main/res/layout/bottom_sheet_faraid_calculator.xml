@@ -1,0 +1,2659 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main">
+
+    <!-- Global Top Bar -->
+    <RelativeLayout
+        android:id="@+id/layoutFaraidTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/bg_top_bar"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            android:id="@+id/btnFaraidBack"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_badge_pill"
+            android:backgroundTint="@color/bg_card_secondary"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_arrow_back"
+                app:tint="@color/text_primary" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutFaraidTopActions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/btnFaraidAiGuide"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/bg_badge_pill"
+                android:backgroundTint="@color/bg_card_active"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_sparkle"
+                    app:tint="@color/accent_gold" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/btnFaraidInfo"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:background="@drawable/bg_badge_pill"
+                android:backgroundTint="@color/bg_card_secondary"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_info"
+                    app:tint="@color/primary_green" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvFaraidTopTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/btnFaraidBack"
+            android:layout_toStartOf="@id/layoutFaraidTopActions"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="8dp"
+            android:gravity="center"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="উত্তরাধিকার বণ্টন"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutFaraidTopBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="12dp">
+
+            <!-- INTRO HERO BANNER -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                app:cardBackgroundColor="@color/bg_card_active"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/border_card"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="14dp">
+
+                    <FrameLayout
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:background="@drawable/bg_badge_pill"
+                        android:backgroundTint="@color/bg_card">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_scale_justice"
+                            app:tint="@color/primary_green" />
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tvIntroHeroTitle"
+                            android:text="ক্লাসিক্যাল সুন্নি ফারায়েজ ও বাংলাদেশ আইন"
+                            android:textColor="@color/primary_green"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:lineSpacingMultiplier="1.1"
+                            android:id="@+id/tvIntroHeroSubtitle"
+                            android:text="পবিত্র কুরআন, চার মাযহাব, ইসলামিক ফাউন্ডেশন এবং বাংলাদেশ মুসলিম পারিবারিক আইন ১৯৬১ ভিত্তিক নির্ভরযোগ্য সমাধান।"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="11.5sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ==================== CARD 1: DECEASED & ESTATE VALUE ==================== -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                app:cardBackgroundColor="@color/bg_card"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/border_card"
+                app:strokeWidth="1.2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvSec1Title"
+                        android:text="১. মৃত ব্যক্তি, মাযহাব ও মোট সম্পত্তির বিবরণ"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <!-- Calculation Method Header & Selector -->
+                    <LinearLayout
+                        android:id="@+id/layoutCalculationMethodBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/bg_badge_pill"
+                        android:backgroundTint="@color/bg_card_secondary"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="12dp"
+                        android:paddingVertical="8dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvCalculationMethodLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="হিসাব পদ্ধতি: হানাফি"
+                                android:textColor="@color/primary_green"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="1dp"
+                                android:id="@+id/tvCalculationMethodSub"
+                                android:text="হানাফি, শাফেয়ী, মালিকি ও হাম্বলী মাযহাব ভিত্তিক গণনাকারী"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="10.5sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/btnChangeCalculationMethod"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_badge_pill"
+                            android:backgroundTint="@color/bg_card_active"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="5dp"
+                            android:text="পদ্ধতি পরিবর্তন করুন ▾"
+                            android:textColor="@color/accent_gold"
+                            android:textSize="11.5sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- Madhab Selection Chips (Hidden in favor of dropdown menu) -->
+                    <HorizontalScrollView
+                        android:id="@+id/scrollMadhabChips"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:visibility="gone"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/chipMadhabHanafi"
+                                android:layout_width="wrap_content"
+                                android:layout_height="34dp"
+                                android:layout_marginEnd="6dp"
+                                android:background="@drawable/bg_badge_pill"
+                                android:backgroundTint="@color/primary_green"
+                                android:gravity="center"
+                                android:paddingHorizontal="14dp"
+                                android:text="হানাফি"
+                                android:textColor="@color/white"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/chipMadhabShafi"
+                                android:layout_width="wrap_content"
+                                android:layout_height="34dp"
+                                android:layout_marginEnd="6dp"
+                                android:background="@drawable/bg_badge_pill"
+                                android:backgroundTint="@color/bg_card_secondary"
+                                android:gravity="center"
+                                android:paddingHorizontal="14dp"
+                                android:text="শাফেয়ী"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/chipMadhabMaliki"
+                                android:layout_width="wrap_content"
+                                android:layout_height="34dp"
+                                android:layout_marginEnd="6dp"
+                                android:background="@drawable/bg_badge_pill"
+                                android:backgroundTint="@color/bg_card_secondary"
+                                android:gravity="center"
+                                android:paddingHorizontal="14dp"
+                                android:text="মালিকি"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/chipMadhabHanbali"
+                                android:layout_width="wrap_content"
+                                android:layout_height="34dp"
+                                android:background="@drawable/bg_badge_pill"
+                                android:backgroundTint="@color/bg_card_secondary"
+                                android:gravity="center"
+                                android:paddingHorizontal="14dp"
+                                android:text="হাম্বলী"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                    <!-- Gender Selector -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:id="@+id/tvGenderTitle"
+                        android:text="মৃত ব্যক্তির লিঙ্গ:"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12.5sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:layout_marginTop="6dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/btnGenderMale"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="4dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_badge_pill"
+                            android:backgroundTint="@color/primary_green"
+                            android:gravity="center"
+                            android:text="মৃত পুরুষ"
+                            android:textColor="@color/white"
+                            android:textSize="13.5sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/btnGenderFemale"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="4dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_badge_pill"
+                            android:backgroundTint="@color/bg_card_secondary"
+                            android:gravity="center"
+                            android:text="মৃত নারী"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="13.5sp" />
+                    </LinearLayout>
+
+                    <!-- Total Estate Input (Gross Estate) -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:id="@+id/tvEstateCashTitle"
+                        android:text="মোট ত্যাজ্য সম্পদ / নগদ অর্থ (টাকা):"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12.5sp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        app:boxBackgroundColor="@color/bg_card_secondary"
+                        app:boxCornerRadiusBottomEnd="12dp"
+                        app:boxCornerRadiusBottomStart="12dp"
+                        app:boxCornerRadiusTopEnd="12dp"
+                        app:boxCornerRadiusTopStart="12dp"
+                        app:boxStrokeColor="@color/primary_green"
+                        app:hintTextColor="@color/primary_green"
+                        app:startIconDrawable="@drawable/ic_feat_zakat"
+                        app:startIconTint="@color/primary_green">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etTotalEstate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="টাকার পরিমাণ লিখুন (যেমন: 5000000)"
+                            android:inputType="numberDecimal"
+                            android:textColor="@color/text_primary"
+                            android:textSize="15sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Quick Preset Chips (BDT ৳) -->
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/chipPreset5Lakh"
+                                android:layout_width="wrap_content"
+                                android:layout_height="32dp"
+                                android:layout_marginEnd="6dp"
+                                android:background="@drawable/bg_badge_pill"
+                                android:backgroundTint="@color/bg_card_secondary"
+                                android:gravity="center"
+                                android:paddingHorizontal="12dp"
+                                android:text="+ ৫ লাখ"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="11.5sp" />
+
+                            <TextView
+                                android:id="@+id/chipPreset10Lakh"
+                                android:layout_width="wrap_content"
+                                android:layout_height="32dp"
+                                android:layout_marginEnd="6dp"
+                                android:background="@drawable/bg_badge_pill"
+                                android:backgroundTint="@color/bg_card_secondary"
+                                android:gravity="center"
+                                android:paddingHorizontal="12dp"
+                                android:text="+ ১০ লাখ"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="11.5sp" />
+
+                            <TextView
+                                android:id="@+id/chipPreset50Lakh"
+                                android:layout_width="wrap_content"
+                                android:layout_height="32dp"
+                                android:layout_marginEnd="6dp"
+                                android:background="@drawable/bg_badge_pill"
+                                android:backgroundTint="@color/bg_card_secondary"
+                                android:gravity="center"
+                                android:paddingHorizontal="12dp"
+                                android:text="+ ৫০ লাখ"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="11.5sp" />
+
+                            <TextView
+                                android:id="@+id/chipPreset1Crore"
+                                android:layout_width="wrap_content"
+                                android:layout_height="32dp"
+                                android:layout_marginEnd="6dp"
+                                android:background="@drawable/bg_badge_pill"
+                                android:backgroundTint="@color/bg_card_secondary"
+                                android:gravity="center"
+                                android:paddingHorizontal="12dp"
+                                android:text="+ ১ কোটি"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="11.5sp" />
+
+                            <TextView
+                                android:id="@+id/chipPreset5Crore"
+                                android:layout_width="wrap_content"
+                                android:layout_height="32dp"
+                                android:background="@drawable/bg_badge_pill"
+                                android:backgroundTint="@color/bg_card_secondary"
+                                android:gravity="center"
+                                android:paddingHorizontal="12dp"
+                                android:text="+ ৫ কোটি"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="11.5sp" />
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                    <!-- Real Estate / Land Property Input (মোট স্থাবর সম্পত্তি / জমি) -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:id="@+id/tvPropertyLandTitle"
+                        android:text="মোট স্থাবর সম্পত্তি / জমি (Real Estate &amp; Land):"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12.5sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            app:boxBackgroundColor="@color/bg_card_secondary"
+                            app:boxCornerRadiusBottomEnd="12dp"
+                            app:boxCornerRadiusBottomStart="12dp"
+                            app:boxCornerRadiusTopEnd="12dp"
+                            app:boxCornerRadiusTopStart="12dp"
+                            app:boxStrokeColor="@color/primary_green"
+                            app:hintTextColor="@color/primary_green"
+                            app:startIconDrawable="@drawable/ic_eco"
+                            app:startIconTint="@color/primary_green">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etTotalProperty"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="জমির পরিমাণ লিখুন (যেমন: 100)"
+                                android:inputType="numberDecimal"
+                                android:textColor="@color/text_primary"
+                                android:textSize="15sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!-- Unit Selector Spinner -->
+                        <Spinner
+                            android:id="@+id/spinnerPropertyUnit"
+                            android:layout_width="120dp"
+                            android:layout_height="54dp"
+                            android:layout_marginStart="8dp"
+                            android:background="@drawable/bg_badge_pill"
+                            android:backgroundTint="@color/bg_card_secondary"
+                            android:paddingHorizontal="10dp" />
+                    </LinearLayout>
+
+                    <!-- Quick Preset Chips for Land (জমি নির্বাচন প্রিসেট) -->
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/chipPreset5Shatak"
+                                android:layout_width="wrap_content"
+                                android:layout_height="32dp"
+                                android:layout_marginEnd="6dp"
+                                android:background="@drawable/bg_badge_pill"
+                                android:backgroundTint="@color/bg_card_secondary"
+                                android:gravity="center"
+                                android:paddingHorizontal="12dp"
+                                android:text="+ ৫ শতক"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="11.5sp" />
+
+                            <TextView
+                                android:id="@+id/chipPreset10Shatak"
+                                android:layout_width="wrap_content"
+                                android:layout_height="32dp"
+                                android:layout_marginEnd="6dp"
+                                android:background="@drawable/bg_badge_pill"
+                                android:backgroundTint="@color/bg_card_secondary"
+                                android:gravity="center"
+                                android:paddingHorizontal="12dp"
+                                android:text="+ ১০ শতক"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="11.5sp" />
+
+                            <TextView
+                                android:id="@+id/chipPreset20Shatak"
+                                android:layout_width="wrap_content"
+                                android:layout_height="32dp"
+                                android:layout_marginEnd="6dp"
+                                android:background="@drawable/bg_badge_pill"
+                                android:backgroundTint="@color/bg_card_secondary"
+                                android:gravity="center"
+                                android:paddingHorizontal="12dp"
+                                android:text="+ ২০ শতক"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="11.5sp" />
+
+                            <TextView
+                                android:id="@+id/chipPreset33Shatak"
+                                android:layout_width="wrap_content"
+                                android:layout_height="32dp"
+                                android:layout_marginEnd="6dp"
+                                android:background="@drawable/bg_badge_pill"
+                                android:backgroundTint="@color/bg_card_secondary"
+                                android:gravity="center"
+                                android:paddingHorizontal="12dp"
+                                android:text="+ ৩৩ শতক (১ বিঘা)"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="11.5sp" />
+
+                            <TextView
+                                android:id="@+id/chipPreset1Acre"
+                                android:layout_width="wrap_content"
+                                android:layout_height="32dp"
+                                android:background="@drawable/bg_badge_pill"
+                                android:backgroundTint="@color/bg_card_secondary"
+                                android:gravity="center"
+                                android:paddingHorizontal="12dp"
+                                android:text="+ ১০০ শতক (১ একর)"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="11.5sp" />
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                    <!-- Bangladesh Muslim Family Laws Ordinance 1961 (Section 4) Toggle -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/bg_badge_pill"
+                        android:backgroundTint="@color/bg_card_secondary"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="12dp"
+                        android:paddingVertical="8dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/tvLaw1961Title"
+                                    android:text="বাংলাদেশ আইন ১৯৬১ (ধারা ৪ - এতিম নাতি)"
+                                android:textColor="@color/text_primary"
+                                android:textSize="12.5sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="1dp"
+                                android:id="@+id/tvLaw1961Sub"
+                                    android:text="মৃত সন্তানের এতিম নাতি/নাতনির প্রতিনিধিত্বমূলক অংশ"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="10.5sp" />
+                        </LinearLayout>
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/switchBangladeshLaw1961"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            app:useMaterialThemeColors="true" />
+                    </LinearLayout>
+
+                    <!-- Collapsible Deductions Header (Estate Processing Order: Funeral, Debt, Wasiyyah) -->
+                    <LinearLayout
+                        android:id="@+id/layoutToggleDeductions"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:background="@drawable/bg_badge_pill"
+                        android:backgroundTint="@color/bg_card_secondary"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="12dp"
+                        android:paddingVertical="8dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:id="@+id/tvDeductionsHeaderTitle"
+                                android:text="বণ্টনপূর্ব অপরিহার্য কর্তন (কাফন, ঋণ ও অসিয়ত)"
+                            android:textColor="@color/text_primary"
+                            android:textSize="12.5sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/ivDeductionArrow"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:src="@drawable/ic_chevron_down"
+                            app:tint="@color/text_secondary" />
+                    </LinearLayout>
+
+                    <!-- Deductions Input Fields -->
+                    <LinearLayout
+                        android:id="@+id/layoutDeductionFields"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tvFuneralTitle"
+                            android:text="১. কাফন-দাফন ও জানাজা খরচ (টাকা):"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/etFuneralExpense"
+                            android:layout_width="match_parent"
+                            android:layout_height="44dp"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/bg_badge_pill"
+                            android:backgroundTint="@color/bg_card_secondary"
+                            android:hint="০"
+                            android:inputType="numberDecimal"
+                            android:paddingHorizontal="14dp"
+                            android:textColor="@color/text_primary"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:id="@+id/tvDebtTitle"
+                            android:text="২. অপরিশোধিত ঋণ ও স্ত্রীর দেনমোহর (টাকা - অগ্রাধিকারপ্রাপ্ত):"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/etDebtAmount"
+                            android:layout_width="match_parent"
+                            android:layout_height="44dp"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/bg_badge_pill"
+                            android:backgroundTint="@color/bg_card_secondary"
+                            android:hint="০"
+                            android:inputType="numberDecimal"
+                            android:paddingHorizontal="14dp"
+                            android:textColor="@color/text_primary"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:id="@+id/tvWasiyyahTitle"
+                            android:text="৩. অসিয়ত / দান (সর্বোচ্চ অবশিষ্টের ১/৩ অংশ):"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/etWasiyyahAmount"
+                            android:layout_width="match_parent"
+                            android:layout_height="44dp"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/bg_badge_pill"
+                            android:backgroundTint="@color/bg_card_secondary"
+                            android:hint="০"
+                            android:inputType="numberDecimal"
+                            android:paddingHorizontal="14dp"
+                            android:textColor="@color/text_primary"
+                            android:textSize="14sp" />
+
+                        <!-- Wasiyyah to Heir Toggle (লা ওয়াসিয়াতা লি-ওয়ারিস) -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/tvWasiyyahToHeirTitle"
+                                    android:text="অসিয়ত কি কোনো উত্তরাধিকারীর অনুকূলে?"
+                                    android:textColor="@color/accent_gold"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/tvWasiyyahToHeirSub"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="1dp"
+                                    android:text="রাসূলুল্লাহ ﷺ বলেছেন: «لاَ وَصِيَّةَ لِوَارِثٍ» কোনো ওয়ারিশের জন্য অসিয়ত কার্যকর নয় (তিরমিজি: ২১২০)।"
+                                    android:textColor="@color/text_secondary"
+                                    android:textSize="10sp" />
+                            </LinearLayout>
+
+                            <com.google.android.material.switchmaterial.SwitchMaterial
+                                android:id="@+id/switchWasiyyahToHeir"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="false"
+                                app:useMaterialThemeColors="true" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ==================== CARD 2: SURVIVING HEIRS ==================== -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                app:cardBackgroundColor="@color/bg_card"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/border_card"
+                app:strokeWidth="1.2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvSec2Title"
+                        android:text="২. জীবিত ওয়ারিশগণের তালিকা"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <!-- Section A: Spouse -->
+                    <LinearLayout
+                        android:id="@+id/layoutWifeSection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:id="@+id/tvWifeTitle"
+                                android:text="স্ত্রী (সংখ্যা):"
+                            android:textColor="@color/text_primary"
+                            android:textSize="13.5sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/btnWifeMinus"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:background="@drawable/bg_badge_pill"
+                                android:backgroundTint="@color/bg_card_secondary"
+                                android:gravity="center"
+                                android:text="-"
+                                android:textColor="@color/text_primary"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvWifeCount"
+                                android:layout_width="40dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="1"
+                                android:textColor="@color/primary_green"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/btnWifePlus"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:background="@drawable/bg_badge_pill"
+                                android:backgroundTint="@color/bg_card_secondary"
+                                android:gravity="center"
+                                android:text="+"
+                                android:textColor="@color/text_primary"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutHusbandSection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:id="@+id/tvHusbandTitle"
+                                    android:text="স্বামী জীবিত আছেন?"
+                            android:textColor="@color/text_primary"
+                            android:textSize="13.5sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/switchHusbandAlive"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            app:useMaterialThemeColors="true" />
+                    </LinearLayout>
+
+                    <!-- Section B: Parents (পিতা ও মাতা) -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/border_card" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:id="@+id/tvFatherTitle"
+                                    android:text="পিতা জীবিত আছেন?"
+                            android:textColor="@color/text_primary"
+                            android:textSize="13.5sp" />
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/switchFatherAlive"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            app:useMaterialThemeColors="true" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:id="@+id/tvMotherTitle"
+                                    android:text="মাতা জীবিত আছেন?"
+                            android:textColor="@color/text_primary"
+                            android:textSize="13.5sp" />
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/switchMotherAlive"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            app:useMaterialThemeColors="true" />
+                    </LinearLayout>
+
+                    <!-- Section C: Children (পুত্র ও কন্যা) -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/border_card" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:id="@+id/tvSonTitle"
+                                android:text="পুত্র সন্তান সংখ্যা:"
+                            android:textColor="@color/text_primary"
+                            android:textSize="13.5sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/btnSonMinus"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:background="@drawable/bg_badge_pill"
+                                android:backgroundTint="@color/bg_card_secondary"
+                                android:gravity="center"
+                                android:text="-"
+                                android:textColor="@color/text_primary"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvSonCount"
+                                android:layout_width="40dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="1"
+                                android:textColor="@color/primary_green"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/btnSonPlus"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:background="@drawable/bg_badge_pill"
+                                android:backgroundTint="@color/bg_card_secondary"
+                                android:gravity="center"
+                                android:text="+"
+                                android:textColor="@color/text_primary"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:id="@+id/tvDaughterTitle"
+                                android:text="কন্যা সন্তান সংখ্যা:"
+                            android:textColor="@color/text_primary"
+                            android:textSize="13.5sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/btnDaughterMinus"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:background="@drawable/bg_badge_pill"
+                                android:backgroundTint="@color/bg_card_secondary"
+                                android:gravity="center"
+                                android:text="-"
+                                android:textColor="@color/text_primary"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvDaughterCount"
+                                android:layout_width="40dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="1"
+                                android:textColor="@color/primary_green"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/btnDaughterPlus"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:background="@drawable/bg_badge_pill"
+                                android:backgroundTint="@color/bg_card_secondary"
+                                android:gravity="center"
+                                android:text="+"
+                                android:textColor="@color/text_primary"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Section D: Extended Heirs Toggle -->
+                    <LinearLayout
+                        android:id="@+id/layoutToggleExtendedHeirs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/bg_badge_pill"
+                        android:backgroundTint="@color/bg_card_secondary"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="12dp"
+                        android:paddingVertical="8dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:id="@+id/tvExtendedHeirsHeaderTitle"
+                                android:text="অন্যান্য ওয়ারিশ (দাদা-দাদী, নানী, নাতি-নাতনি, সৎ ভাই-বোন, চাচা, ভাতিজা)"
+                            android:textColor="@color/text_primary"
+                            android:textSize="12.5sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/ivExtendedArrow"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:src="@drawable/ic_chevron_down"
+                            app:tint="@color/text_secondary" />
+                    </LinearLayout>
+
+                    <!-- Extended Heirs Panel -->
+                    <LinearLayout
+                        android:id="@+id/layoutExtendedHeirsPanel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <!-- Grandfather -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:id="@+id/tvGrandfatherTitle"
+                                        android:text="পিতামহ (দাদা) জীবিত আছেন?"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="13sp" />
+
+                            <com.google.android.material.switchmaterial.SwitchMaterial
+                                android:id="@+id/switchGrandfather"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:useMaterialThemeColors="true" />
+                        </LinearLayout>
+
+                        <!-- Paternal Grandmother -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:id="@+id/tvPaternalGrandmotherTitle"
+                                        android:text="পৈতৃক দাদী জীবিত আছেন?"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="13sp" />
+
+                            <com.google.android.material.switchmaterial.SwitchMaterial
+                                android:id="@+id/switchPaternalGrandmother"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:useMaterialThemeColors="true" />
+                        </LinearLayout>
+
+                        <!-- Maternal Grandmother -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:id="@+id/tvMaternalGrandmotherTitle"
+                                        android:text="মাতৃক নানী জীবিত আছেন?"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="13sp" />
+
+                            <com.google.android.material.switchmaterial.SwitchMaterial
+                                android:id="@+id/switchMaternalGrandmother"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:useMaterialThemeColors="true" />
+                        </LinearLayout>
+
+                        <!-- Divider -->
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@color/border_card" />
+
+                        <!-- Grandson / Granddaughter -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:id="@+id/tvGrandsonTitle"
+                                    android:text="নাতি (পুত্রের ছেলে) সংখ্যা:"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:id="@+id/btnGrandsonMinus"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:background="@drawable/bg_badge_pill"
+                                android:backgroundTint="@color/bg_card_secondary"
+                                android:gravity="center"
+                                android:text="-"
+                                android:textColor="@color/text_primary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvGrandsonCount"
+                                android:layout_width="36dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="@color/primary_green"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/btnGrandsonPlus"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:background="@drawable/bg_badge_pill"
+                                android:backgroundTint="@color/bg_card_secondary"
+                                android:gravity="center"
+                                android:text="+"
+                                android:textColor="@color/text_primary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:id="@+id/tvGranddaughterTitle"
+                                    android:text="নাতনি (পুত্রের মেয়ে) সংখ্যা:"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:id="@+id/btnGranddaughterMinus"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:background="@drawable/bg_badge_pill"
+                                android:backgroundTint="@color/bg_card_secondary"
+                                android:gravity="center"
+                                android:text="-"
+                                android:textColor="@color/text_primary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvGranddaughterCount"
+                                android:layout_width="36dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="@color/primary_green"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/btnGranddaughterPlus"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:background="@drawable/bg_badge_pill"
+                                android:backgroundTint="@color/bg_card_secondary"
+                                android:gravity="center"
+                                android:text="+"
+                                android:textColor="@color/text_primary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <!-- Divider -->
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@color/border_card" />
+
+                        <!-- Full Siblings -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:id="@+id/tvFullBrotherTitle"
+                                    android:text="সহোদর ভাই সংখ্যা:"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:id="@+id/btnFullBrotherMinus"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:background="@drawable/bg_badge_pill"
+                                android:backgroundTint="@color/bg_card_secondary"
+                                android:gravity="center"
+                                android:text="-"
+                                android:textColor="@color/text_primary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvFullBrotherCount"
+                                android:layout_width="36dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="@color/primary_green"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/btnFullBrotherPlus"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:background="@drawable/bg_badge_pill"
+                                android:backgroundTint="@color/bg_card_secondary"
+                                android:gravity="center"
+                                android:text="+"
+                                android:textColor="@color/text_primary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:id="@+id/tvFullSisterTitle"
+                                    android:text="সহোদর বোন সংখ্যা:"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:id="@+id/btnFullSisterMinus"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:background="@drawable/bg_badge_pill"
+                                android:backgroundTint="@color/bg_card_secondary"
+                                android:gravity="center"
+                                android:text="-"
+                                android:textColor="@color/text_primary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvFullSisterCount"
+                                android:layout_width="36dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="@color/primary_green"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/btnFullSisterPlus"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:background="@drawable/bg_badge_pill"
+                                android:backgroundTint="@color/bg_card_secondary"
+                                android:gravity="center"
+                                android:text="+"
+                                android:textColor="@color/text_primary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <!-- Consanguine Siblings (বৈমাত্রেয় ভাই ও বোন) -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:id="@+id/tvConsanguineBrotherTitle"
+                                    android:text="বৈমাত্রেয় ভাই (সৎ ভাই, পিতার দিক):"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:id="@+id/btnConsanguineBrotherMinus"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:background="@drawable/bg_badge_pill"
+                                android:backgroundTint="@color/bg_card_secondary"
+                                android:gravity="center"
+                                android:text="-"
+                                android:textColor="@color/text_primary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvConsanguineBrotherCount"
+                                android:layout_width="36dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="@color/primary_green"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/btnConsanguineBrotherPlus"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:background="@drawable/bg_badge_pill"
+                                android:backgroundTint="@color/bg_card_secondary"
+                                android:gravity="center"
+                                android:text="+"
+                                android:textColor="@color/text_primary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:id="@+id/tvConsanguineSisterTitle"
+                                    android:text="বৈমাত্রেয় বোন (সৎ বোন, পিতার দিক):"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:id="@+id/btnConsanguineSisterMinus"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:background="@drawable/bg_badge_pill"
+                                android:backgroundTint="@color/bg_card_secondary"
+                                android:gravity="center"
+                                android:text="-"
+                                android:textColor="@color/text_primary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvConsanguineSisterCount"
+                                android:layout_width="36dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="@color/primary_green"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/btnConsanguineSisterPlus"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:background="@drawable/bg_badge_pill"
+                                android:backgroundTint="@color/bg_card_secondary"
+                                android:gravity="center"
+                                android:text="+"
+                                android:textColor="@color/text_primary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <!-- Uterine Siblings (বৈপিত্রীয় ভাই ও বোন) -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:id="@+id/tvUterineBrotherTitle"
+                                    android:text="বৈপিত্রীয় ভাই (সৎ ভাই, মাতার দিক):"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:id="@+id/btnUterineBrotherMinus"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:background="@drawable/bg_badge_pill"
+                                android:backgroundTint="@color/bg_card_secondary"
+                                android:gravity="center"
+                                android:text="-"
+                                android:textColor="@color/text_primary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvUterineBrotherCount"
+                                android:layout_width="36dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="@color/primary_green"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/btnUterineBrotherPlus"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:background="@drawable/bg_badge_pill"
+                                android:backgroundTint="@color/bg_card_secondary"
+                                android:gravity="center"
+                                android:text="+"
+                                android:textColor="@color/text_primary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:id="@+id/tvUterineSisterTitle"
+                                    android:text="বৈপিত্রীয় বোন (সৎ বোন, মাতার দিক):"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:id="@+id/btnUterineSisterMinus"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:background="@drawable/bg_badge_pill"
+                                android:backgroundTint="@color/bg_card_secondary"
+                                android:gravity="center"
+                                android:text="-"
+                                android:textColor="@color/text_primary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvUterineSisterCount"
+                                android:layout_width="36dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="@color/primary_green"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/btnUterineSisterPlus"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:background="@drawable/bg_badge_pill"
+                                android:backgroundTint="@color/bg_card_secondary"
+                                android:gravity="center"
+                                android:text="+"
+                                android:textColor="@color/text_primary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <!-- Divider -->
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@color/border_card" />
+
+                        <!-- Nephews & Uncles -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:id="@+id/tvNephewTitle"
+                                    android:text="ভাতিজা (সহোদর/বৈমাত্রেয় ভাইয়ের পুত্র):"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:id="@+id/btnNephewMinus"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:background="@drawable/bg_badge_pill"
+                                android:backgroundTint="@color/bg_card_secondary"
+                                android:gravity="center"
+                                android:text="-"
+                                android:textColor="@color/text_primary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvNephewCount"
+                                android:layout_width="36dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="@color/primary_green"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/btnNephewPlus"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:background="@drawable/bg_badge_pill"
+                                android:backgroundTint="@color/bg_card_secondary"
+                                android:gravity="center"
+                                android:text="+"
+                                android:textColor="@color/text_primary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:id="@+id/tvUncleTitle"
+                                    android:text="চাচা (পিতার সহোদর/বৈমাত্রেয় ভাই):"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:id="@+id/btnUncleMinus"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:background="@drawable/bg_badge_pill"
+                                android:backgroundTint="@color/bg_card_secondary"
+                                android:gravity="center"
+                                android:text="-"
+                                android:textColor="@color/text_primary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvUncleCount"
+                                android:layout_width="36dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="@color/primary_green"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/btnUnclePlus"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:background="@drawable/bg_badge_pill"
+                                android:backgroundTint="@color/bg_card_secondary"
+                                android:gravity="center"
+                                android:text="+"
+                                android:textColor="@color/text_primary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- CALCULATE ACTION BUTTON -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCalculateFaraid"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="@color/primary_green"
+                android:text="ফারায়েজ বণ্টন হিসাব করুন"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:cornerRadius="14dp"
+                app:icon="@drawable/ic_scale_justice"
+                app:iconGravity="textStart"
+                app:iconPadding="8dp"
+                app:iconSize="20dp"
+                app:iconTint="@color/white" />
+
+                        <!-- ==================== CARD 3: RESULTS SECTION (Requirement 24) ==================== -->
+            <LinearLayout
+                android:id="@+id/layoutResultsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <!-- SCHOLARLY DISPUTE / MADHAB DIFFERENCE NOTICE BANNER -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardMadhabDifference"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="14dp"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="@color/bg_card_active"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="@color/accent_gold"
+                    app:strokeWidth="1.5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="14dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/ic_info"
+                                app:tint="@color/accent_gold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:id="@+id/tvMadhabDiffHeader"
+                                android:text="মাযহাবগত ইখতিলাফ ও ফতোয়া স্পষ্টকরণ"
+                                android:textColor="@color/accent_gold"
+                                android:textSize="13.5sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvMadhabDifferenceNotice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:lineSpacingMultiplier="1.25"
+                            android:text="এই মাসআলায় মাযহাবসমূহের মাঝে মতপার্থক্য রয়েছে। নিম্নের ফলাফল নির্বাচিত মাযহাব অনুযায়ী প্রস্তুত করা হয়েছে।"
+                            android:textColor="@color/text_primary"
+                            android:textSize="12.5sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- 1. Header Card: Faraid Calculation & Net Distributable Estate -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="14dp"
+                    app:cardBackgroundColor="@color/bg_card"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="@color/border_card"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <!-- Header Title & Awl/Radd/Adl Status Badge -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tvResultsHeaderTitle"
+                            android:text="ফারায়েজ বণ্টন হিসাব ও সারসংক্ষেপ"
+                            android:textColor="@color/text_primary"
+                            android:textSize="15.5sp"
+                            android:textStyle="bold" />
+
+                        <!-- Full-width Status Badge Card -->
+                        <LinearLayout
+                            android:id="@+id/layoutAwlRaddBadge"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/bg_badge_pill"
+                            android:backgroundTint="@color/bg_card_active"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingHorizontal="12dp"
+                            android:paddingVertical="8dp">
+
+                            <ImageView
+                                android:id="@+id/ivAwlRaddIcon"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:src="@drawable/ic_check_circle"
+                                app:tint="@color/primary_green" />
+
+                            <TextView
+                                android:id="@+id/tvAwlRaddBadge"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_weight="1"
+                                android:lineSpacingExtra="2dp"
+                                android:text="আদল: নির্ধারিত অংশ ১০০% সঠিকভাবে বণ্টিত হয়েছে।"
+                                android:textColor="@color/primary_green"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <!-- Section Divider -->
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginVertical="12dp"
+                            android:background="@color/border_card" />
+
+                        <!-- MODE A: Financial Breakdown Section (When gross estate or land is entered) -->
+                        <LinearLayout
+                            android:id="@+id/layoutFinancialBreakdownSection"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <!-- Step 1: Gross Estate -->
+                            <LinearLayout
+                                android:id="@+id/layoutResGrossEstate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:layout_marginEnd="8dp"
+                                    android:id="@+id/tvResGrossEstateLabel"
+                                android:text="১. সর্বমোট ত্যাজ্য সম্পদ:"
+                                    android:textColor="@color/text_secondary"
+                                    android:textSize="12.5sp" />
+
+                                <TextView
+                                    android:id="@+id/tvResGrossEstate"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/text_primary"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <!-- Step 2: Funeral Expenses -->
+                            <LinearLayout
+                                android:id="@+id/layoutResFuneral"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:layout_marginEnd="8dp"
+                                    android:id="@+id/tvResFuneralLabel"
+                                android:text="২. দাফন ও কাফন বাবদ খরচ:"
+                                    android:textColor="@color/text_secondary"
+                                    android:textSize="12.5sp" />
+
+                                <TextView
+                                    android:id="@+id/tvResFuneral"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/accent_red"
+                                    android:textSize="13sp" />
+                            </LinearLayout>
+
+                            <!-- Step 3: Debts -->
+                            <LinearLayout
+                                android:id="@+id/layoutResDebt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:layout_marginEnd="8dp"
+                                    android:id="@+id/tvResDebtLabel"
+                                android:text="৩. অপরিশোধিত মোট ঋণ:"
+                                    android:textColor="@color/text_secondary"
+                                    android:textSize="12.5sp" />
+
+                                <TextView
+                                    android:id="@+id/tvResDebt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/accent_red"
+                                    android:textSize="13sp" />
+                            </LinearLayout>
+
+                            <!-- Step 4: Valid Wasiyyah -->
+                            <LinearLayout
+                                android:id="@+id/layoutResWasiyyah"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:layout_marginEnd="8dp"
+                                    android:id="@+id/tvResWasiyyahLabel"
+                                android:text="৪. কার্যকরী অসিয়ত (সর্বোচ্চ ১/৩):"
+                                    android:textColor="@color/text_secondary"
+                                    android:textSize="12.5sp" />
+
+                                <TextView
+                                    android:id="@+id/tvResWasiyyah"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/accent_red"
+                                    android:textSize="13sp" />
+                            </LinearLayout>
+
+                            <!-- Wasiyyah Cap Notice -->
+                            <TextView
+                                android:id="@+id/tvWasiyyahNotice"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:textColor="@color/accent_gold"
+                                android:textSize="11sp"
+                                android:visibility="gone" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginVertical="10dp"
+                                android:background="@color/border_card" />
+
+                            <!-- Step 5: Net Distributable Estate -->
+                            <LinearLayout
+                                android:id="@+id/layoutResNetEstate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:layout_marginEnd="8dp"
+                                    android:id="@+id/tvResNetEstateLabel"
+                                android:text="বণ্টনযোগ্য অবশিষ্ট অর্থ / সম্পদ:"
+                                    android:textColor="@color/primary_green"
+                                    android:textSize="13.5sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/tvResNetEstate"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/primary_green"
+                                    android:textSize="15.5sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <!-- Step 5b: Net Distributable Land / Real Estate (বণ্টনযোগ্য অবশিষ্ট জমি) -->
+                            <LinearLayout
+                                android:id="@+id/layoutResNetProperty"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:layout_marginEnd="8dp"
+                                    android:id="@+id/tvResNetPropertyLabel"
+                                android:text="বণ্টনযোগ্য মোট জমি:"
+                                    android:textColor="@color/accent_mint"
+                                    android:textSize="13.5sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/tvResNetProperty"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/accent_mint"
+                                    android:textSize="15.5sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!-- MODE B: Share Distribution Overview Section (When NO specific cash/land is entered) -->
+                        <LinearLayout
+                            android:id="@+id/layoutShareDistributionInfoSection"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <!-- Row 1: Asl al-Mas'alah (Base Denominator) -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:id="@+id/tvResAslMasalahLabel"
+                                    android:text="আসল মাসআলা:"
+                                    android:textColor="@color/text_secondary"
+                                    android:textSize="12.5sp" />
+
+                                <TextView
+                                    android:id="@+id/tvResAslMasalah"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/bg_badge_pill"
+                                    android:paddingHorizontal="10dp"
+                                    android:paddingVertical="3dp"
+                                    android:text="২৪"
+                                    android:textColor="@color/text_primary"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <!-- Row 2: Total Eligible Heirs -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:id="@+id/tvResEligibleHeirsCountLabel"
+                                    android:text="মোট উপযুক্ত ওয়ারিশ ক্যাটাগরি:"
+                                    android:textColor="@color/text_secondary"
+                                    android:textSize="12.5sp" />
+
+                                <TextView
+                                    android:id="@+id/tvResEligibleHeirsCount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="৩ জন"
+                                    android:textColor="@color/accent_mint"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <!-- Informative Guidance Note -->
+                            <TextView
+                                android:id="@+id/tvPureShareDescription"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:background="@drawable/bg_badge_pill"
+                                android:backgroundTint="@color/bg_secondary"
+                                android:lineSpacingExtra="3dp"
+                                android:padding="10dp"
+                                android:text="কোনো নির্দিষ্ট অর্থ বা জমি উল্লেখ না করায় কুরআন ও সুন্নাহর বিধান অনুযায়ী শুধুমাত্র আনুপাতিক হিস্যা (ভগ্নাংশ ও শতকরা অংশ) নির্ধারণ করা হয়েছে। নিচে সারসংক্ষেপ টেবিলে প্রত্যেকের নির্ধারিত অংশ বিস্তারিত দেওয়া হয়েছে।"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="11.5sp" />
+                        </LinearLayout>
+
+                        <!-- AI Shariah Assistant Prompt Button -->
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnViewAiFatwa"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="44dp"
+                            android:layout_marginTop="12dp"
+                            android:text="শরীয়াহ বিশ্লেষণ ও বিস্তারিত মাসআলা দেখুন"
+                            android:textColor="@color/accent_gold"
+                            android:textSize="12.5sp"
+                            android:textStyle="bold"
+                            app:cornerRadius="12dp"
+                            app:icon="@drawable/ic_sparkle"
+                            app:iconTint="@color/accent_gold"
+                            app:strokeColor="@color/accent_gold"
+                            app:strokeWidth="1dp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- 2. Islamic Finance Summary Table (Requirement 24) -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="14dp"
+                    app:cardBackgroundColor="@color/bg_card"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="@color/border_card"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="14dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tvSummaryTableTitle"
+                        android:text="যোগ্য ওয়ারিশদের সংক্ষিপ্ত হিস্যা বিবরণী"
+                            android:textColor="@color/text_primary"
+                            android:textSize="14.5sp"
+                            android:textStyle="bold" />
+
+                        <TableLayout
+                            android:id="@+id/tableEligibleHeirsSummary"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:stretchColumns="*">
+
+                            <!-- Header Row -->
+                            <TableRow
+                                android:background="@drawable/bg_badge_pill"
+                                android:backgroundTint="@color/bg_card_secondary"
+                                android:paddingVertical="8dp"
+                                android:paddingHorizontal="4dp">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.3"
+                                    android:id="@+id/thHeir"
+                                android:text="ওয়ারিশ"
+                                    android:textColor="@color/text_secondary"
+                                    android:textSize="11.5sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.9"
+                                    android:gravity="center"
+                                    android:id="@+id/thShare"
+                                android:text="অংশ"
+                                    android:textColor="@color/text_secondary"
+                                    android:textSize="11.5sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.9"
+                                    android:gravity="center"
+                                    android:id="@+id/thPercent"
+                                android:text="শতকরা"
+                                    android:textColor="@color/text_secondary"
+                                    android:textSize="11.5sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.2"
+                                    android:gravity="end"
+                                    android:id="@+id/thAmount"
+                                android:text="প্রাপ্য"
+                                    android:textColor="@color/text_secondary"
+                                    android:textSize="11.5sp"
+                                    android:textStyle="bold" />
+                            </TableRow>
+                        </TableLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- ==================== EXCLUDED HEIRS (বঞ্চিত আত্মীয়স্বজন) SECTION ==================== -->
+                <LinearLayout
+                    android:id="@+id/layoutBlockedHeirsSection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:id="@+id/tvBlockedHeirsTitle"
+                            android:text="বঞ্চিত আত্মীয়স্বজন ও শরীয়াহ কারণ:"
+                        android:textColor="@color/accent_red"
+                        android:textSize="13.5sp"
+                        android:textStyle="bold" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvBlockedHeirs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false" />
+                </LinearLayout>
+
+                <!-- Beneficiaries List with Full Breakdown -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:id="@+id/tvBeneficiariesTitle"
+                        android:text="যোগ্য অংশীদারদের পূর্ণাঙ্গ শরীয়াহ হিস্যা ও হিসাব:"
+                    android:textColor="@color/text_primary"
+                    android:textSize="13.5sp"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvFaraidHeirResults"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false" />
+
+                <!-- Step-by-Step Audit Log Card (Collapsible) -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="12dp"
+                    app:cardBackgroundColor="@color/bg_card"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="@color/border_card"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="14dp">
+
+                        <LinearLayout
+                            android:id="@+id/layoutToggleAuditLog"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:id="@+id/tvAuditLogTitle"
+                                android:text="ধাপে ধাপে শরীয়াহ ও আইনি গণনার পূর্ণাঙ্গ অডিট রিপোর্ট"
+                                android:textColor="@color/accent_gold"
+                                android:textSize="13.5sp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/ivAuditArrow"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:src="@drawable/ic_chevron_down"
+                                app:tint="@color/text_secondary" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvAuditLogContent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:lineSpacingMultiplier="1.25"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Clickable Islamic References Section (Requirement 24) -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="14dp"
+                    app:cardBackgroundColor="@color/bg_card"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="@color/border_card"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="14dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tvRefSectionTitle"
+                        android:text="কুরআন ও হাদিসের সরাসরি রেফারেন্সসমূহ (ক্লিক করুন):"
+                            android:textColor="@color/accent_gold"
+                            android:textSize="13.5sp"
+                            android:textStyle="bold" />
+
+                        <HorizontalScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:scrollbars="none">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/chipRefQuran411"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="32dp"
+                                    android:layout_marginEnd="6dp"
+                                    android:background="@drawable/bg_badge_pill"
+                                    android:backgroundTint="@color/bg_card_secondary"
+                                    android:clickable="true"
+                                    android:focusable="true"
+                                    android:gravity="center"
+                                    android:paddingHorizontal="12dp"
+                                    android:text="Qur'an 4:11 ↗"
+                                    android:textColor="@color/primary_green"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/chipRefQuran412"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="32dp"
+                                    android:layout_marginEnd="6dp"
+                                    android:background="@drawable/bg_badge_pill"
+                                    android:backgroundTint="@color/bg_card_secondary"
+                                    android:clickable="true"
+                                    android:focusable="true"
+                                    android:gravity="center"
+                                    android:paddingHorizontal="12dp"
+                                    android:text="Qur'an 4:12 ↗"
+                                    android:textColor="@color/primary_green"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/chipRefQuran4176"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="32dp"
+                                    android:layout_marginEnd="6dp"
+                                    android:background="@drawable/bg_badge_pill"
+                                    android:backgroundTint="@color/bg_card_secondary"
+                                    android:clickable="true"
+                                    android:focusable="true"
+                                    android:gravity="center"
+                                    android:paddingHorizontal="12dp"
+                                    android:text="Qur'an 4:176 ↗"
+                                    android:textColor="@color/primary_green"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/chipRefBukhari6732"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="32dp"
+                                    android:layout_marginEnd="6dp"
+                                    android:background="@drawable/bg_badge_pill"
+                                    android:backgroundTint="@color/bg_card_secondary"
+                                    android:clickable="true"
+                                    android:focusable="true"
+                                    android:gravity="center"
+                                    android:paddingHorizontal="12dp"
+                                    android:text="Bukhari 6732 ↗"
+                                    android:textColor="@color/accent_gold"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/chipRefBukhari6737"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="32dp"
+                                    android:layout_marginEnd="6dp"
+                                    android:background="@drawable/bg_badge_pill"
+                                    android:backgroundTint="@color/bg_card_secondary"
+                                    android:clickable="true"
+                                    android:focusable="true"
+                                    android:gravity="center"
+                                    android:paddingHorizontal="12dp"
+                                    android:text="Bukhari 6737 ↗"
+                                    android:textColor="@color/accent_gold"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/chipRefMuslim1615a"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="32dp"
+                                    android:background="@drawable/bg_badge_pill"
+                                    android:backgroundTint="@color/bg_card_secondary"
+                                    android:clickable="true"
+                                    android:focusable="true"
+                                    android:gravity="center"
+                                    android:paddingHorizontal="12dp"
+                                    android:text="Muslim 1615a ↗"
+                                    android:textColor="@color/accent_gold"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </HorizontalScrollView>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Overall Dalil & Law Summary Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="14dp"
+                    app:cardBackgroundColor="@color/bg_card"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="@color/border_card"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="14dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tvOverallDalilTitle"
+                                android:text="মূলনীতি, চার মাযহাব ও বাংলাদেশ আইন"
+                            android:textColor="@color/accent_gold"
+                            android:textSize="13.5sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvOverallDalilSummary"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:lineSpacingMultiplier="1.2"
+                            android:text="পবিত্র কুরআনুল কারীমের সূরা আন-নিসার ১১, ১২ ও ১৭৬ নম্বর আয়াত, সহীহ হাদিস (বুখারী ৬৭৩২, ৬৭৩৭; মুসলিম ১৬১৫ক), চার মাযহাবের সিদ্ধান্ত এবং বাংলাদেশ মুসলিম পারিবারিক আইন ১৯৬১ অনুযায়ী এই ফারায়েজ বণ্টন গণনাকৃত হয়েছে।"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Official Islamic Educational Disclaimer & Non-Fatwa Mandate Card (Requirement 25) -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardBackgroundColor="@color/bg_card_active"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="@color/border_card"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="14dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:src="@drawable/ic_info"
+                                app:tint="@color/text_secondary" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:id="@+id/tvDisclaimerTitle"
+                                android:text="শরীয়াহ ও আইনি ডিসক্লেইমার"
+                                android:textColor="@color/text_primary"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:lineSpacingMultiplier="1.25"
+                            android:id="@+id/tvDisclaimerBody"
+                                android:text="এই ফারায়েজ ক্যালকুলেটরটি শিক্ষামূলক এবং তথ্যগত উদ্দেশ্যে প্রস্তুত করা হয়েছে। উত্তরাধিকার সম্পত্তিতে জটিল শরয়ী বিধিবিধান, মাযহাবগত মতপার্থক্য, পারিবারিক পরিস্থিতি, ঋণ, অসিয়ত, মালিকানা সংক্রান্ত বিষয় এবং স্থানীয় আইনগত বাধ্যবাধকতা থাকতে পারে। প্রকৃত সম্পত্তি বণ্টনের পূর্বে একজন বিজ্ঞ ইসলামী উত্তরাধিকার বিশেষজ্ঞ (মুফতি/আলেম) এবং প্রযোজ্য ক্ষেত্রে অভিজ্ঞ আইনি পরামর্শকের মাধ্যমে ফলাফল যাচাই করা আবশ্যক।"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="11.5sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:lineSpacingMultiplier="1.25"
+                            android:id="@+id/tvDisclaimerWarning"
+                                android:text="সতর্কতা: শুধুমাত্র এই গণনার উপর ভিত্তি করে সম্পত্তি বণ্টন করবেন না। কোনো বিরোধ বা জটিল ক্ষেত্রে একজন বিজ্ঞ ফারায়েজ বিশেষজ্ঞের মাধ্যমে নিশ্চিত যাচাই গ্রহণ করুন।"
+                            android:textColor="@color/accent_gold"
+                            android:textSize="11.5sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Share & Recalculate Buttons -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton android:id="@+id/btnShareFaraidResult"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_marginEnd="6dp"
+                        android:layout_weight="1"
+                        android:text="কপি ও শেয়ার"
+                        android:textColor="@color/primary_green"
+                        android:textSize="13.5sp"
+                        app:cornerRadius="12dp"
+                        app:icon="@drawable/ic_copy"
+                        app:iconGravity="textStart"
+                        app:iconPadding="6dp"
+                        app:iconSize="18dp"
+                        app:iconTint="@color/primary_green"
+                        app:strokeColor="@color/primary_green"
+                        app:strokeWidth="1.2dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnRecalculateFaraid"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="6dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/accent_gold"
+                        android:text="পুনরায় হিসাব"
+                        android:textColor="@color/text_primary"
+                        android:textSize="13.5sp"
+                        android:textStyle="bold"
+                        app:cornerRadius="12dp"
+                        app:icon="@drawable/ic_refresh"
+                        app:iconGravity="textStart"
+                        app:iconPadding="6dp"
+                        app:iconSize="18dp"
+                        app:iconTint="@color/text_primary" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

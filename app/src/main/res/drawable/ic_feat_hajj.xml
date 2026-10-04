@@ -1,0 +1,41 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="28dp"
+    android:height="28dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Holy Kaaba (পবিত্র কাবা শরীফ - মক্কা মুকাররমা) -->
+    <!-- Kaaba Roof Top -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M12,2L19.5,5.5L12,9L4.5,5.5Z" />
+    
+    <!-- Left Wall (Dark Charcoal / Black Kiswah) -->
+    <path
+        android:fillColor="#1F2937"
+        android:pathData="M4.5,5.5L12,9V19.5L4.5,16Z" />
+    
+    <!-- Right Wall (Charcoal Kiswah) -->
+    <path
+        android:fillColor="#374151"
+        android:pathData="M12,9L19.5,5.5V16L12,19.5Z" />
+    
+    <!-- Golden Kiswah Belt (হিযাম / স্বর্ণালী গিলাফ নকশা) -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M4.5,7.8L12,11.3L19.5,7.8V9.3L12,12.8L4.5,9.3Z" />
+    
+    <!-- Golden Door of Kaaba (বাবুল কাবা) -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M14.2,12.8L17.2,11.4V16.8L14.2,18.2Z" />
+    
+    <!-- Marble Base / Shadharwan -->
+    <path
+        android:fillColor="#9CA3AF"
+        android:pathData="M4,16L12,19.7L20,16V17.2L12,21L4,17.2Z" />
+    
+    <!-- Crescent & Star above Holy Kaaba -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M12,0.5A1.2,1.2 0 1,0 13.2,1.7A0.9,0.9 0 0,1 12,0.5Z" />
+</vector>

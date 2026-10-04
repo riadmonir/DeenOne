@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/btnCarouselQuranItem"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingHorizontal="16dp">
+
+    <!-- Emerald Circular Icon Container -->
+    <FrameLayout
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="14dp"
+        android:background="@drawable/bg_circular_counter"
+        android:backgroundTint="@color/bg_badge_pill">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_feat_ayah"
+            app:tint="@color/accent_mint"
+            android:contentDescription="কুরআন শিক্ষা আইকন" />
+    </FrameLayout>
+
+    <!-- Middle Text Block -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvCarouselQuranTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="সহজ কুরআন শিক্ষা"
+            android:textColor="@color/text_primary"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvCarouselQuranSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="সহীহ কুরআন তিলাওয়াত ও তাজবীদ শিখুন..."
+            android:textColor="@color/text_secondary"
+            android:textSize="12.5sp" />
+    </LinearLayout>
+
+    <!-- Right Chevron -->
+    <ImageView
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:src="@drawable/ic_chevron_right"
+        app:tint="@color/text_secondary"
+        android:contentDescription="বিস্তারিত" />
+</LinearLayout>

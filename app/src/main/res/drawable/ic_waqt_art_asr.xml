@@ -1,0 +1,45 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="44dp"
+    android:height="44dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+
+    <!-- Circle Clip Background -->
+    <path
+        android:pathData="M50,50m-48,0a48,48 0,1 1,96 0a48,48 0,1 1,-96 0">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:angle="90"
+                android:endColor="#6366F1"
+                android:startColor="#C084FC"
+                android:type="linear" />
+        </aapt:attr>
+    </path>
+
+    <!-- Slanting Afternoon Sun -->
+    <path
+        android:fillColor="#FEF08A"
+        android:pathData="M28,34m-12,0a12,12 0,1 1,24 0a12,12 0,1 1,-24 0" />
+
+    <!-- Distant Dunes -->
+    <path
+        android:fillColor="#4338CA"
+        android:fillAlpha="0.5"
+        android:pathData="M0,75 Q40,62 80,78 L100,70 L100,100 L0,100 Z" />
+
+    <!-- Mosque Shadow & Minarets -->
+    <path
+        android:fillColor="#312E81"
+        android:pathData="M0,86 Q50,75 100,85 L100,100 L0,100 Z" />
+
+    <path
+        android:fillColor="#1E1B4B"
+        android:pathData="M70,50 L72,44 L74,50 L73,95 L71,95 Z" />
+    <path
+        android:fillColor="#1E1B4B"
+        android:pathData="M69,58 L75,58 L75,61 L69,61 Z" />
+    <path
+        android:fillColor="#1E1B4B"
+        android:pathData="M80,62 Q86,54 92,62 L92,95 L80,95 Z" />
+</vector>

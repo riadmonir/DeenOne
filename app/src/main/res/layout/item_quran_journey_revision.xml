@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutRevisionItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/bg_goal_item_unselected"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="12dp">
+
+    <!-- Day Badge -->
+    <TextView
+        android:id="@+id/tvRevisionDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_badge_pill"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="5dp"
+        android:text="১ম দিন"
+        android:textColor="@color/accent_mint"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <!-- Arabic Ayah -->
+    <TextView
+        android:id="@+id/tvRevisionArabic"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical|end"
+        android:text="بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ"
+        android:textColor="@color/text_primary"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <!-- Circular Play Button -->
+    <FrameLayout
+        android:id="@+id/btnPlayRevisionAudio"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:background="@drawable/bg_journey_circle_play"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageView
+            android:id="@+id/ivPlayRevisionIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_play_arrow"
+            app:tint="@color/bg_main" />
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,55 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="44dp"
+    android:height="44dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+
+    <!-- Circle Clip Background -->
+    <path
+        android:pathData="M50,50m-48,0a48,48 0,1 1,96 0a48,48 0,1 1,-96 0">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:angle="90"
+                android:endColor="#059669"
+                android:startColor="#6EE7B7"
+                android:type="linear" />
+        </aapt:attr>
+    </path>
+
+    <!-- Sun Halo / Aura -->
+    <path
+        android:fillColor="#FEF08A"
+        android:fillAlpha="0.6"
+        android:pathData="M50,45m-22,0a22,22 0,1 1,44 0a22,22 0,1 1,-44 0" />
+
+    <!-- Grand Mosque Silhouette -->
+    <!-- Central Dome -->
+    <path
+        android:fillColor="#064E3B"
+        android:pathData="M34,68 Q50,46 66,68 L66,95 L34,95 Z" />
+    <path
+        android:fillColor="#047857"
+        android:pathData="M49,42 L51,42 L51,48 L49,48 Z" />
+
+    <!-- Left Minaret -->
+    <path
+        android:fillColor="#065F46"
+        android:pathData="M24,35 L26,30 L28,35 L27,95 L25,95 Z" />
+    <path
+        android:fillColor="#065F46"
+        android:pathData="M23,45 L29,45 L29,48 L23,48 Z" />
+
+    <!-- Right Minaret -->
+    <path
+        android:fillColor="#065F46"
+        android:pathData="M72,35 L74,30 L76,35 L75,95 L73,95 Z" />
+    <path
+        android:fillColor="#065F46"
+        android:pathData="M71,45 L77,45 L77,48 L71,48 Z" />
+
+    <!-- Base Grass/Garden Hill -->
+    <path
+        android:fillColor="#022C22"
+        android:pathData="M0,88 Q50,78 100,88 L100,100 L0,100 Z" />
+</vector>

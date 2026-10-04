@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main"
+    android:orientation="vertical">
+
+    <!-- Top Header Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/bg_top_bar"
+        android:elevation="2dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp">
+
+        <!-- Back Button with Circular Container -->
+        <FrameLayout android:id="@+id/btnBackFiveWaqtsHistory"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_circular_counter"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_arrow_back"
+                app:tint="@color/accent_mint" />
+        </FrameLayout>
+
+        <!-- Header Title -->
+        <TextView
+            android:id="@+id/tvHeaderTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="পাঁচ ওয়াক্ত নামাজের ইতিহাস"
+            android:textColor="@color/text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Settings Gear Action Button with Circular Container -->
+        <FrameLayout android:id="@+id/btnSettingsFiveWaqtsHistory"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_circular_counter"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_settings"
+                app:tint="@color/accent_mint" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- Scrollable Content -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollHistoryContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="36dp">
+
+        <LinearLayout
+            android:id="@+id/containerCards"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- CARD 1: মেরাজের রাতের সম্পূর্ণ ঘটনা -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardMirajStory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                app:cardBackgroundColor="@color/bg_card"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/border_card"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Card Header Row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvMirajCardTitle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="মেরাজের রাতের সম্পূর্ণ ঘটনা"
+                            android:textColor="@color/text_primary"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <!-- Three dots button -->
+                        <FrameLayout
+                            android:id="@+id/btnMenuCardMiraj"
+                            android:layout_width="34dp"
+                            android:layout_height="34dp"
+                            android:background="@drawable/bg_circular_counter"
+                            android:backgroundTint="@color/bg_badge_pill"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <ImageView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_more_horiz"
+                                app:tint="@color/text_primary" />
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <!-- Subtitle -->
+                    <TextView
+                        android:id="@+id/tvMirajCardSubtitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="12dp"
+                        android:text="সিরাতুন নবী (সাঃ) অনুযায়ী-"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13.5sp" />
+
+                    <!-- Section: ইসরা: -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ইসরা:"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvMirajIsraDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:lineSpacingExtra="3.5dp"
+                        android:text="মেরাজের শুরুতে রাসুলুল্লাহ (সাঃ) কে কাবা থেকে বায়তুল মুকাদ্দাস (জেরুজালেম) পর্যন্ত নিয়ে যাওয়া হয়। এই ভ্রমণকে 'ইসরা' বলা হয়।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvRefIsra"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="সূরা আল-ইসরা: ১৭:১"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvMirajIsraAyah"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:lineSpacingExtra="3.5dp"
+                        android:text="পবিত্র এবং মহিমান্বিত তিনি, যিনি তাঁর বান্দাকে এক রাতে মসজিদুল হারাম থেকে মসজিদুল আকসা পর্যন্ত ভ্রমণ করিয়েছেন।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <!-- Section: বুরাকে চড়া: -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:text="বুরাকে চড়া:"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvMirajBuraqDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:lineSpacingExtra="3.5dp"
+                        android:text="রাসুলুল্লাহ (সাঃ) কে 'বুরাক' নামক এক অলৌকিক প্রাণীতে চড়িয়ে নিয়ে যাওয়া হয়। এই প্রাণীটি ছিল ঘোড়া ও খচ্চরের মধ্যবর্তী আকারের।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <!-- Section: বায়তুল মুকাদ্দাসে নামাজ আদায়: -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:text="বায়তুল মুকাদ্দাসে নামাজ আদায়:"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvMirajBaitulMuqaddasDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:lineSpacingExtra="3.5dp"
+                        android:text="বায়তুল মুকাদ্দাসে পৌঁছে রাসুলুল্লাহ (সাঃ) সেখানে নামাজ আদায় করেন। তিনি সেখানে সমস্ত নবীদের ইমাম হিসেবে নামাজ আদায় করেন।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <!-- Section: মেরাজ - আকাশে ভ্রমণ: -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:text="মেরাজ - আকাশে ভ্রমণ:"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvMirajSkyJourneyDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:lineSpacingExtra="3.5dp"
+                        android:text="বায়তুল মুকাদ্দাস থেকে রাসুলুল্লাহ (সাঃ) কে আসমানের ওপর নিয়ে যাওয়া হয়। এই ভ্রমণকে 'মেরাজ' বলা হয়। তিনি সাত আসমান ভ্রমণ করেন এবং প্রত্যেক আসমানে বিভিন্ন নবীর সাথে সাক্ষাৎ করেন।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <!-- 7 Skies List -->
+                    <TextView
+                        android:id="@+id/tvMirajSevenSkiesList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="প্রথম আসমান: আদম (আঃ) এর সাথে সাক্ষাৎ।\nদ্বিতীয় আসমান: ইয়াহইয়া (আঃ) ও ঈসা (আঃ) এর সাথে সাক্ষাৎ।\nতৃতীয় আসমান: ইউসুফ (আঃ) এর সাথে সাক্ষাৎ।\nচতুর্থ আসমান: ইদ্রিস (আঃ) এর সাথে সাক্ষাৎ।\nপঞ্চম আসমান: হারুন (আঃ) এর সাথে সাক্ষাৎ।\nষষ্ঠ আসমান: মুসা (আঃ) এর সাথে সাক্ষাৎ।\nসপ্তম আসমান: ইব্রাহিম (আঃ) এর সাথে সাক্ষাৎ।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <!-- Section: সিদরাতুল মুনতাহা: -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:text="সিদরাতুল মুনতাহা:"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvMirajSidratulMuntahaDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:lineSpacingExtra="3.5dp"
+                        android:text="এরপর রাসুলুল্লাহ (সাঃ) সিদরাতুল মুনতাহায় পৌঁছান, যা সপ্তম আসমানের শেষ সীমা।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <!-- Section: আল্লাহর সাথে সাক্ষাৎ: -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:text="আল্লাহর সাথে সাক্ষাৎ:"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvMirajMeetingAllahDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:lineSpacingExtra="3.5dp"
+                        android:text="সিদরাতুল মুনতাহার পর রাসুলুল্লাহ (সাঃ) আরশে মওলায় পৌঁছান এবং সেখানে আল্লাহ তাআলার সাথে সরাসরি সাক্ষাৎ করেন।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <!-- Section: নামাজের নির্দেশনা: -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:text="নামাজের নির্দেশনা:"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvMirajOrderDesc1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:lineSpacingExtra="3.5dp"
+                        android:text="এই রাতে রাসুলুল্লাহ (সাঃ) এর উপর ৫০ ওয়াক্ত নামাজ ফরজ করা হয়েছিল। পরবর্তীতে মুসা (আঃ)-এর পরামর্শে তিনি আল্লাহর কাছে পুনরায় প্রার্থনা করেন এবং আল্লাহ তা ৫ ওয়াক্তে কমিয়ে দেন।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvRefMirajOrder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="সহীহ বুখারী: ৩৪৯"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvMirajOrderDesc2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:lineSpacingExtra="3.5dp"
+                        android:text="মেরাজের রাতে নবী মুহাম্মদ (সাঃ) আল্লাহর সাথে সাক্ষাৎ করেন এবং আল্লাহ তাকে ৫০ ওয়াক্ত নামাজের আদেশ দেন। পরবর্তীতে মুসা (আঃ)-এর পরামর্শে আল্লাহ তা ৫ ওয়াক্তে কমিয়ে দেন।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- CARD 2: নামাজের সূচনা -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardNamazBeginning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                app:cardBackgroundColor="@color/bg_card"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/border_card"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Card Header Row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvBeginningCardTitle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="নামাজের সূচনা"
+                            android:textColor="@color/text_primary"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <!-- Three dots button -->
+                        <FrameLayout
+                            android:id="@+id/btnMenuCardBeginning"
+                            android:layout_width="34dp"
+                            android:layout_height="34dp"
+                            android:background="@drawable/bg_circular_counter"
+                            android:backgroundTint="@color/bg_badge_pill"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <ImageView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_more_horiz"
+                                app:tint="@color/text_primary" />
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <!-- Paragraph 1 -->
+                    <TextView
+                        android:id="@+id/tvBeginningPara1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="নামাজ বলতে আমরা আল্লাহর উদ্দেশে নিজেদের সমর্পণকে বুঝি। প্রত্যেক মুসলমানের জন্য দিনে ৫ ওয়াক্ত নামাজ পড়া ফরজ বা অবশ্যকর্তব্য। এই পাঁচ ওয়াক্ত হলো ফজর, জোহর, আসর, মাগরিব ও ইশা। এই পাঁচ ওয়াক্ত নামাজ কেমন করে আমাদের জন্য এল, সে কথা বুখারি শরিফে বর্ণনা করা হয়েছে।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <!-- Subheading: আবু যার (রা.) এর বরাতে হাদিস -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:text="হজরত আবু যার (রা.)-এর বরাতে একটি হাদিসে বলা হয়েছে:"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <!-- Paragraph 2 -->
+                    <TextView
+                        android:id="@+id/tvBeginningPara2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="তিনি রাসুলুল্লাহ (সা.)-এর কাছ থেকে বর্ণনা করেন যে, 'তিনি বলেছেন, আমি মক্কায় থাকা অবস্থায় আমার ঘরের ছাদ খুলে দেওয়া হলো। তারপর জিবরাইল (আ.) এসে আমার বক্ষ বিদীর্ণ করলেন। আর তা জমজমের পানি দিয়ে ধুলেন। এরপর হিকমত ও ঈমানে ভর্তি একটি সোনার পাত্র নিয়ে এসে আমার বুকের মধ্যে ঢেলে দিয়ে বন্ধ করে দিলেন। অতঃপর হাত ধরে আমাকে দুনিয়ার আকাশের দিকে নিয়ে চললেন। পরে যখন দুনিয়ার আকাশে আসলাম জিবরাইল (আ.) আসমানের রক্ষককে বললেন, দরজা খোলো। আসমানের রক্ষক বললেন, আপনি কে? জিবরাইল (আ.) বললেন, আমি জিবরাইল (আ.)। (আকাশের রক্ষক) বললেন, আপনার সঙ্গে কি কেউ রয়েছেন? জিবরাইল (আ.) বললেন, হ্যাঁ, মুহাম্মদ (সা.) রয়েছেন। রক্ষক তখন বললেন, তাঁকে কি ডাকা হয়েছে? জিবরাইল (আ.) বললেন, হ্যাঁ। এরপর যখন আমাদের জন্য দুনিয়ার আসমান খুলে দেওয়া হলো, আর আমরা দুনিয়ার আসমানে প্রবেশ করলাম, তখন দেখি সেখানে একজন বসে আছেন যাঁর ডানে এবং বাঁয়ে অনেকগুলো মানুষের আকৃতি রয়েছে। তিনি ডানদিকে তাকালে হেসে উঠছেন, আর বাঁয়ে তাকালে কাঁদছেন। তিনি বললেন, স্বাগত, হে সৎ নবী ও সৎ সন্তান। আমি জিবরাইল (আ.) কে প্রশ্ন করলাম, এই ব্যক্তিটি কে? তিনি জবাব দিলেন, ইনি আদম (আ.)। তাঁর ডানে-বাঁয়ে রয়েছে তাঁর সন্তানদের রুহ। ডান দিকের লোকেরা জান্নাতি, বাঁ দিকের লোকেরা জাহান্নামি। তাই ডানে তাকালে তিনি হাসছেন, বাঁয়ে তাকালে কাঁদছেন। এরপর জিবরাইল (আ.) আমাকে নিয়ে দ্বিতীয় আসমানে উঠলেন। তারপর এর রক্ষককে বললেন, দরজা খোলো। তখন এই রক্ষক প্রথম রক্ষকের মতোই প্রশ্ন করলেন। পরে দরজা খুলে দেওয়া হলো।'"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <!-- Paragraph 3 -->
+                    <TextView
+                        android:id="@+id/tvBeginningPara3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="আনাস (রা.) বলেন, 'আবু যার (রা.) উল্লেখ করেন যে রাসুলুল্লাহ (সা.) আসমানগুলোতে আদম (আ.), ইদ্রিস (আ.), মুসা (আ.), ঈসা (আ.) ও ইব্রাহিম (আ.)-এর সাক্ষাৎ পান। তবে আবু যার (রা.) সেসব স্থান সুনির্দিষ্টভাবে উল্লেখ করেননি। শুধু এটুকু উল্লেখ করেছেন যে তিনি আদম (আ.)-কে দুনিয়ার আকাশে ও ইব্রাহিম (আ.)-কে ষষ্ঠ আকাশে পেয়েছিলেন।' আনাস (রা.) বলেন, 'জিবরাইল (আ.) যখন মহানবী (সা.)-কে নিয়ে ইদ্রিস (আ.)-এর পাশ দিয়ে যাচ্ছিলেন, তখন ইদ্রিস (আ.) বলেন, বাহ্, ও ভাই, ও পুণ্যবান নবী। আমি (রাসুলুল্লাহ) বললাম, তিনি কে? জিবরাইল (আ.) বললেন ইনি হচ্ছেন ইদ্রিস (আ.)।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <!-- Paragraph 4 -->
+                    <TextView
+                        android:id="@+id/tvBeginningPara4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="এরপর আমি মুসা (আ.)-এর পাশ দিয়ে যাওয়ার সময় তিনি বলেন, বাহ্, হে সৎ নবী ও পুণ্যবান ভাই। আমি বললাম, ইনি কে? জিবরাইল (আ.) বললেন, ইনি মুসা (আ.)। অতঃপর আমি ঈসা (আ.)-কে অতিক্রম করার সময় তিনি বললেন, বাহ্, হে সৎ নবী ও পুণ্যবান ভাই। আমি প্রশ্ন করলাম, তিনি কে? জিবরাইল (আ.) বললেন, তিনি ঈসা (আ.)। তারপর আমি ইব্রাহিম (আ.)-কে পেরিয়ে যাওয়ার সময় তিনি বললেন, বাহ্, হে পুণ্যবান নবী ও পুণ্যবান সন্তান। আমি বললাম, ইনি কে? জিবরাইল (আ.) বললেন, ইনি ইব্রাহিম (আ.)।' ইবনে শিহাব বলেন, ইবনে হায্ম (রহ.) আমাকে বলেছেন যে ইবনে আব্বাস ও আবু হাব্বা আল-আনসারী উভয়েই বলতেন, 'নবী (সা.) বলেছেন, এরপর আমাকে আরও ওপরে নিয়ে যাওয়া হলো। এমন একটি সমতল স্থানে নেওয়া হলো যেখানে আমি লেখার শব্দ শুনতে পেলাম।'"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <!-- Paragraph 5 -->
+                    <TextView
+                        android:id="@+id/tvBeginningPara5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="ইবনে হায্ম ও আনাস ইবনে মালিক (রা.) বলেছেন যে 'রাসুলুল্লাহ (সা.) বলেছেন, তারপর আল্লাহ আমার উম্মতের ওপর ৫০ ওয়াক্ত নামাজ ফরজ করে দিলেন। আমি সেটা নিয়ে ফিরে আসি। মুসা (আ.)-কে পার হওয়ার সময় তিনি বললেন, আল্লাহ আপনার উম্মতের ওপর কী ফরজ করেছেন? আমি বললাম, ৫০ ওয়াক্ত নামাজ ফরজ করেছেন। তিনি বললেন, আপনি আপনার পালনকর্তার কাছে ফিরে যান, আপনার উম্মত তো এতটা পালন করতে পারবে না। আমি তখন ফিরে গেলাম। আল্লাহ তাআলা কিছুটা কমিয়ে দিলেন। আমি মুসা (আ.)-কে পার হওয়ার সময় বললাম, কিছুটা অংশ (আল্লাহ) কমিয়ে দিয়েছেন। তিনি বললেন, আপনি আবার আপনার রবের কাছে ফিরে যান। কারণ আপনার উম্মত এটুকুও আদায় করতে পারবে না। আমি ফিরে গেলাম।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <!-- Paragraph 6 -->
+                    <TextView
+                        android:id="@+id/tvBeginningPara6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="তখন আরও কিছু অংশ কমিয়ে দেওয়া হলো। আবারও মুসা (আ.)-এর কাছে গেলাম। এবারও তিনি বললেন, আপনি আবার আপনার প্রতিপালকের কাছে যান। কারণ আপনার উম্মত এও আদায় করতে পারবে না। তখন আমি আবার গেলাম। তখন আল্লাহ বললেন, এই পাঁচটিই (পুণ্যের হিসাবে) ৫০ (বলে গণ্য হবে)। আমার কথার কোনো রদবদল হয় না। আমি আবার মুসা (আ.)-এর কাছে গেলে তিনি আমাকে আবারও বললেন, আপনার প্রতিপালকের কাছে আরেকবার যান। আমি বললাম, আরেকবার আমার প্রতিপালকের কাছে যেতে আমি লজ্জাবোধ করছি। তখন জিবরাইল (আ.) আমাকে সিদরাতুল মুনতাহা পর্যন্ত নিয়ে গেলেন। সে সময় সেটি নানা রঙে রঞ্জিত ছিল। আমি এর তাৎপর্য সম্পর্কে অবগত ছিলাম না।'"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- CARD 3: নামাজ নিয়ে কুরআন এবং হাদিস -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardQuranHadithNamaz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                app:cardBackgroundColor="@color/bg_card"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/border_card"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Card Header Row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvQuranHadithCardTitle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="নামাজ নিয়ে কুরআন এবং হাদিস"
+                            android:textColor="@color/text_primary"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <!-- Three dots button -->
+                        <FrameLayout
+                            android:id="@+id/btnMenuCardQuranHadith"
+                            android:layout_width="34dp"
+                            android:layout_height="34dp"
+                            android:background="@drawable/bg_circular_counter"
+                            android:backgroundTint="@color/bg_badge_pill"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <ImageView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_more_horiz"
+                                app:tint="@color/text_primary" />
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <!-- Section: কোরআন: -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="কোরআন:"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <!-- Verse 1 -->
+                    <TextView
+                        android:id="@+id/tvQuranVerse1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:lineSpacingExtra="3.5dp"
+                        android:text="নামাজ কায়েম কর এবং যাকাত প্রদান কর; এবং রুকু'কারীদের সাথে রুকু' কর।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvRefBaqarah"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="সূরা বাকারা: ২:৪৩"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <!-- Verse 2 -->
+                    <TextView
+                        android:id="@+id/tvQuranVerse2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:lineSpacingExtra="3.5dp"
+                        android:text="নামাজ মুমিনদের জন্য নির্ধারিত সময়ে ফরজ করা হয়েছে।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvRefNisa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="সূরা আন-নিসা: ৪:১০৩"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <!-- Verse 3 -->
+                    <TextView
+                        android:id="@+id/tvQuranVerse3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:lineSpacingExtra="3.5dp"
+                        android:text="নিশ্চয়ই সফলকাম হয়েছে মুমিনগণ, যারা তাদের নামাজে বিনীত হয়।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvRefMuminun"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="সূরা আল-মু'মিনুন: ২৩:১-২"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <!-- Section: হাদিস: -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="হাদিস:"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <!-- Hadith 1 -->
+                    <TextView
+                        android:id="@+id/tvHadith1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:lineSpacingExtra="3.5dp"
+                        android:text="আব্দুল্লাহ ইবনে ওমর (রাঃ) হতে বর্ণিত, তিনি বলেন যে, রাসুলুল্লাহ (সাঃ) বলেছেন, 'ইসলাম পাঁচটি স্তম্ভের উপর প্রতিষ্ঠিত: আল্লাহর একত্ববাদের সাক্ষ্য দেয়া, নামাজ কায়েম করা, যাকাত প্রদান করা, রমযানের সাওম পালন করা এবং বায়তুল্লাহ গমন করা।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvRefBukhariPillars"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="সহীহ বুখারী: ৮:৩৩২"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <!-- Hadith 2 -->
+                    <TextView
+                        android:id="@+id/tvHadith2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:lineSpacingExtra="3.5dp"
+                        android:text="আবু হুরাইরা (রাঃ) হতে বর্ণিত, তিনি বলেন, রাসুলুল্লাহ (সাঃ) বলেছেন, 'নামাজই দ্বীনের স্তম্ভ। যার নামাজ নেই, তার দ্বীন নেই।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvRefMuslimPillars"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="সহীহ মুসলিম: ১৪৭"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

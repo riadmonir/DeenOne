@@ -1,0 +1,10 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Star rosette praising Allah for Sana -->
+    <path
+        android:fillColor="@color/accent_gold"
+        android:pathData="M12,2L14.39,5.42L18.5,4.78L18.42,8.97L22,11.08L19.46,14.36L20.45,18.44L16.42,17.75L14.19,21.24L12,19.3L9.81,21.24L7.58,17.75L3.55,18.44L4.54,14.36L2,11.08L5.58,8.97L5.5,4.78L9.61,5.42L12,2Z" />
+</vector>

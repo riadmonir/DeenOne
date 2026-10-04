@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_marginHorizontal="16dp"
+  android:layout_marginBottom="14dp"
+  app:cardBackgroundColor="@color/bg_card"
+  app:cardCornerRadius="20dp"
+  app:cardElevation="0dp"
+  app:strokeColor="@color/border_card"
+  app:strokeWidth="1dp">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Top Header: Icon + Name/Address + Distance/Bearing -->
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <!-- Mosque Vector Icon Frame -->
+      <FrameLayout
+        android:id="@+id/layoutMosqueIconFrame"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bg_card_secondary"
+        android:backgroundTint="@color/bg_card_secondary">
+
+        <ImageView
+          android:layout_width="26dp"
+          android:layout_height="26dp"
+          android:layout_gravity="center"
+          android:src="@drawable/ic_mosque"
+          app:tint="@color/accent_mint" />
+      </FrameLayout>
+
+      <!-- Name & Address -->
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="8dp"
+        android:layout_toStartOf="@+id/layoutDistanceBearing"
+        android:layout_toEndOf="@+id/layoutMosqueIconFrame"
+        android:orientation="vertical">
+
+        <TextView
+          android:id="@+id/tvMosqueName"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:ellipsize="end"
+          android:fontFamily="sans-serif-medium"
+          android:maxLines="1"
+          android:text="মসজিদ"
+            android:layout_gravity="center"
+          android:textColor="@color/text_primary"
+          android:textSize="17sp"
+          android:textStyle="bold" />
+
+        <TextView
+          android:id="@+id/tvMosqueAddress"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="2dp"
+          android:ellipsize="end"
+          android:maxLines="1"
+          android:text="নিকটবর্তী এলাকা"
+          android:textColor="@color/text_secondary"
+          android:textSize="13sp" />
+      </LinearLayout>
+
+      <!-- Distance & Bearing Badge on Right -->
+      <LinearLayout
+        android:id="@+id/layoutDistanceBearing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:gravity="end"
+        android:orientation="vertical">
+
+        <TextView
+          android:id="@+id/tvMosqueDistanceBadge"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="@drawable/bg_badge_pill"
+          android:backgroundTint="@color/bg_card_active"
+          android:paddingHorizontal="11dp"
+          android:paddingVertical="5dp"
+          android:text="153 মিটার"
+          android:textColor="@color/accent_mint"
+          android:textSize="12sp"
+          android:textStyle="bold" />
+
+        <TextView
+          android:id="@+id/tvMosqueBearing"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="3dp"
+          android:text="পূর্ব"
+          android:textColor="@color/text_secondary"
+          android:textSize="11sp" />
+      </LinearLayout>
+    </RelativeLayout>
+
+    <!-- Distance & Coordinates Row -->
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="14dp">
+
+      <TextView
+        android:id="@+id/tvMosqueEta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:fontFamily="sans-serif-medium"
+        android:text="2 মিনিট হাঁটার দূরত্ব"
+        android:textColor="@color/accent_gold"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+      <TextView
+        android:id="@+id/tvMosqueCoordinates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:text="Lat: 28.400, Lng: 36.579"
+        android:textColor="@color/text_secondary"
+        android:textSize="11.5sp" />
+    </RelativeLayout>
+
+    <!-- Amenities Pills Row -->
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="12dp"
+      android:orientation="horizontal">
+
+      <TextView
+        android:id="@+id/tvBadgeWudu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_badge_pill"
+        android:backgroundTint="@color/bg_card_secondary"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="5dp"
+        android:text="ওযুখানা"
+        android:textColor="@color/text_secondary"
+        android:textSize="12sp" />
+
+      <TextView
+        android:id="@+id/tvBadgeJumma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/bg_badge_pill"
+        android:backgroundTint="@color/bg_card_secondary"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="5dp"
+        android:text="জুমা জামাত"
+        android:textColor="@color/text_secondary"
+        android:textSize="12sp" />
+
+      <TextView
+        android:id="@+id/tvBadgeWomen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/bg_badge_pill"
+        android:backgroundTint="@color/bg_card_secondary"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="5dp"
+        android:text="নারী কর্নার"
+        android:textColor="@color/text_secondary"
+        android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- Action Buttons Row -->
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:gravity="center_vertical"
+      android:orientation="horizontal">
+
+      <!-- Directions Button -->
+      <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnMosqueDirections"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginEnd="10dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/primary_green"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="↗ দিকনির্দেশনা / ম্যাপে দেখুন"
+        android:textColor="@color/text_primary"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:cornerRadius="23dp" />
+
+      <!-- Share Button -->
+      <FrameLayout
+        android:id="@+id/btnMosqueShare"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:background="@drawable/bg_circular_counter"
+        android:backgroundTint="@color/bg_badge_pill"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageView
+          android:layout_width="20dp"
+          android:layout_height="20dp"
+          android:layout_gravity="center"
+          android:src="@drawable/ic_share"
+          app:tint="@color/accent_mint" />
+      </FrameLayout>
+    </LinearLayout>
+  </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

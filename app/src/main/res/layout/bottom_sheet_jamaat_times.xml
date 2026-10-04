@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/bg_main"
+  android:orientation="vertical">
+
+  <!-- Top Action Bar -->
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_top_bar"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="14dp"
+    android:paddingBottom="12dp">
+
+    <ImageButton android:id="@+id/btnCloseJamaatSheet"
+      android:layout_width="38dp"
+      android:layout_height="38dp"
+      android:background="@drawable/bg_badge_pill"
+      android:contentDescription="ফিরে যান"
+      android:src="@drawable/ic_arrow_back"
+      app:tint="@color/accent_mint" />
+
+    <LinearLayout
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="12dp"
+      android:layout_weight="1"
+      android:orientation="vertical">
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="নামাজের জামাত সময়সূচী"
+        android:textColor="@color/text_primary"
+        android:textSize="17.5sp"
+        android:textStyle="bold" />
+
+      <TextView
+        android:id="@+id/tvMosqueNameSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="বায়তুল মুকাররম জাতীয় মসজিদ (ঢাকা)"
+        android:textColor="@color/text_secondary"
+        android:textSize="11.5sp" />
+    </LinearLayout>
+  </LinearLayout>
+
+  <androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="14dp"
+    android:paddingBottom="40dp">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <!-- Mosque Selection Chips -->
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:orientation="horizontal">
+
+        <TextView
+          android:id="@+id/chipMosqueBaitul"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="4dp"
+          android:layout_weight="1"
+          android:background="@drawable/bg_badge_pill"
+          android:gravity="center"
+          android:paddingVertical="8dp"
+          android:text="বায়তুল মুকাররম"
+          android:textColor="@color/accent_mint"
+          android:textSize="12sp"
+          android:textStyle="bold" />
+
+        <TextView
+          android:id="@+id/chipMosqueKakrail"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="4dp"
+          android:layout_weight="1"
+          android:background="@drawable/bg_badge_pill"
+          android:gravity="center"
+          android:paddingVertical="8dp"
+          android:text="কাকরাইল মসজিদ"
+          android:textColor="@color/text_secondary"
+          android:textSize="12sp" />
+
+        <TextView
+          android:id="@+id/chipMosqueCustom"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:background="@drawable/bg_badge_pill"
+          android:gravity="center"
+          android:paddingVertical="8dp"
+          android:text="অন্যান্য মসজিদ"
+          android:textColor="@color/text_secondary"
+          android:textSize="12sp" />
+      </LinearLayout>
+
+      <!-- Table of Waqt vs Jamaat -->
+      <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1.2dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="16dp">
+
+          <!-- Header Row -->
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1.2"
+              android:text="নামাজ"
+              android:textColor="@color/accent_mint"
+              android:textSize="13sp"
+              android:textStyle="bold" />
+
+            <TextView
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1.2"
+              android:gravity="center"
+              android:text="ওয়াক্তের শুরু"
+              android:textColor="@color/text_secondary"
+              android:textSize="12sp" />
+
+            <TextView
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1.6"
+              android:gravity="end"
+              android:text="মসজিদের জামাত"
+              android:textColor="@color/accent_mint"
+              android:textSize="13sp"
+              android:textStyle="bold" />
+          </LinearLayout>
+
+          <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="12dp"
+            android:background="@color/border_card" />
+
+          <!-- Fajr Row -->
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1.2"
+              android:text="ফজর"
+              android:textColor="@color/text_primary"
+              android:textSize="13.5sp"
+              android:textStyle="bold" />
+
+            <TextView
+              android:id="@+id/tvWaqtFajr"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1.2"
+              android:gravity="center"
+              android:text="০৪:৩০ AM"
+              android:textColor="@color/text_secondary"
+              android:textSize="12.5sp" />
+
+            <TextView
+              android:id="@+id/tvJamaatFajr"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1.6"
+              android:gravity="end"
+              android:text="০৫:১৫ AM"
+              android:textColor="#34D399"
+              android:textSize="13sp"
+              android:textStyle="bold" />
+          </LinearLayout>
+
+          <!-- Dhuhr Row -->
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1.2"
+              android:text="জোহর"
+              android:textColor="@color/text_primary"
+              android:textSize="13.5sp"
+              android:textStyle="bold" />
+
+            <TextView
+              android:id="@+id/tvWaqtDhuhr"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1.2"
+              android:gravity="center"
+              android:text="১২:০৫ PM"
+              android:textColor="@color/text_secondary"
+              android:textSize="12.5sp" />
+
+            <TextView
+              android:id="@+id/tvJamaatDhuhr"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1.6"
+              android:gravity="end"
+              android:text="০১:৩০ PM"
+              android:textColor="#34D399"
+              android:textSize="13sp"
+              android:textStyle="bold" />
+          </LinearLayout>
+
+          <!-- Asr Row -->
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1.2"
+              android:text="আসর"
+              android:textColor="@color/text_primary"
+              android:textSize="13.5sp"
+              android:textStyle="bold" />
+
+            <TextView
+              android:id="@+id/tvWaqtAsr"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1.2"
+              android:gravity="center"
+              android:text="০৪:১৫ PM"
+              android:textColor="@color/text_secondary"
+              android:textSize="12.5sp" />
+
+            <TextView
+              android:id="@+id/tvJamaatAsr"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1.6"
+              android:gravity="end"
+              android:text="০৪:৪৫ PM"
+              android:textColor="#34D399"
+              android:textSize="13sp"
+              android:textStyle="bold" />
+          </LinearLayout>
+
+          <!-- Maghrib Row -->
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1.2"
+              android:text="মাগরিব"
+              android:textColor="@color/text_primary"
+              android:textSize="13.5sp"
+              android:textStyle="bold" />
+
+            <TextView
+              android:id="@+id/tvWaqtMaghrib"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1.2"
+              android:gravity="center"
+              android:text="০৬:২০ PM"
+              android:textColor="@color/text_secondary"
+              android:textSize="12.5sp" />
+
+            <TextView
+              android:id="@+id/tvJamaatMaghrib"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1.6"
+              android:gravity="end"
+              android:text="০৬:২৫ PM"
+              android:textColor="#34D399"
+              android:textSize="13sp"
+              android:textStyle="bold" />
+          </LinearLayout>
+
+          <!-- Isha Row -->
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1.2"
+              android:text="এশা"
+              android:textColor="@color/text_primary"
+              android:textSize="13.5sp"
+              android:textStyle="bold" />
+
+            <TextView
+              android:id="@+id/tvWaqtIsha"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1.2"
+              android:gravity="center"
+              android:text="০৭:৩৫ PM"
+              android:textColor="@color/text_secondary"
+              android:textSize="12.5sp" />
+
+            <TextView
+              android:id="@+id/tvJamaatIsha"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1.6"
+              android:gravity="end"
+              android:text="০৮:১৫ PM"
+              android:textColor="#34D399"
+              android:textSize="13sp"
+              android:textStyle="bold" />
+          </LinearLayout>
+
+          <!-- Jumu'ah Row -->
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1.2"
+              android:text="জুমু'আ"
+              android:textColor="@color/text_primary"
+              android:textSize="13.5sp"
+              android:textStyle="bold" />
+
+            <TextView
+              android:id="@+id/tvWaqtJummah"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1.2"
+              android:gravity="center"
+              android:text="১২:০৫ PM"
+              android:textColor="@color/text_secondary"
+              android:textSize="12.5sp" />
+
+            <TextView
+              android:id="@+id/tvJamaatJummah"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1.6"
+              android:gravity="end"
+              android:text="০১:৩০ PM"
+              android:textColor="#34D399"
+              android:textSize="13sp"
+              android:textStyle="bold" />
+          </LinearLayout>
+
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- Policy Warning -->
+      <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:lineSpacingExtra="2.5dp"
+        android:text="* দ্রষ্টব্য: জামাতের সময়সূচী মসজিদ কমিটির সিদ্ধান্তের ওপর নির্ভর করে। কোনো মসজিদের জামাতের সময় তথ্য পাওয়া না গেলে অনুগ্রহ করে সংশ্লিষ্ট মসজিদ থেকে জেনে নিন।"
+        android:textColor="@color/text_secondary"
+        android:textSize="11sp" />
+
+    </LinearLayout>
+  </androidx.core.widget.NestedScrollView>
+</LinearLayout>

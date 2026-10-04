@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:id="@+id/layoutForbiddenTimesSheet"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:background="@drawable/bg_modal_emerald_sheet"
+  android:orientation="vertical"
+  android:paddingBottom="24dp">
+
+  <!-- 1. Top Drag Handle -->
+  <View
+    android:layout_width="44dp"
+    android:layout_height="4dp"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="12dp"
+    android:background="@drawable/bg_badge_pill"
+    android:backgroundTint="@color/border_card" />
+
+  <!-- 2. Header: Warning icon with circular container + Title -->
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="20dp"
+    android:layout_marginTop="16dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <LinearLayout
+      android:layout_width="38dp"
+      android:layout_height="38dp"
+      android:background="@drawable/bg_circle_icon"
+      android:backgroundTint="@color/badge_pill_red_bg"
+      android:gravity="center">
+
+      <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_warning_triangle"
+        app:tint="@color/accent_red" />
+    </LinearLayout>
+
+    <TextView
+      android:id="@+id/tvForbiddenSheetTitle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="10dp"
+      android:fontFamily="sans-serif-medium"
+      android:text="নামাজের নিষিদ্ধ ও মাকরূহ সময়"
+      android:textColor="@color/text_primary"
+      android:textSize="18.5sp"
+      android:textStyle="bold" />
+  </LinearLayout>
+
+  <!-- Subtitle -->
+  <TextView
+    android:id="@+id/tvForbiddenSheetSubtitle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="20dp"
+    android:layout_marginTop="6dp"
+    android:lineSpacingExtra="3dp"
+    android:text="বিশুদ্ধ হাদিস ও ইসলামী শরীয়াহ অনুযায়ী যেসকল সময়ে সালাত আদায় নিষিদ্ধ বা অপছন্দনীয়:"
+    android:textColor="@color/text_secondary"
+    android:textSize="13.5sp" />
+
+  <!-- Scrollable content for all 4 sections -->
+  <androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="14dp"
+    android:overScrollMode="never">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:paddingHorizontal="16dp">
+
+      <!-- Section 1: বিশুদ্ধ মূল হাদিস (সহীহ মুসলিম ৮৩১) -->
+      <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardForbiddenHadith"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/accent_red"
+        app:strokeWidth="1.2dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="16dp">
+
+          <TextView
+            android:id="@+id/tvForbiddenHadithTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="বিশুদ্ধ মূল হাদিস: সহীহ মুসলিম ৮৩১"
+            android:textColor="@color/accent_red"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+          <TextView
+            android:id="@+id/tvForbiddenHadithContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:lineSpacingExtra="4dp"
+            android:text="হযরত উকবাহ ইবনে আমির (রাঃ) বর্ণনা করেন: রাসুলুল্লাহ (সাঃ) আমাদেরকে তিনটি এমন সময়ে সালাত আদায় করতে অথবা আমাদের মৃতদের দাফন ও জানাযা করতে নিষেধ করেছেন:\n১. সূর্যোদয়ের সময় যতক্ষণ না তা স্পষ্ট উপরে ওঠে (১৫-১৮ মিনিট)।\n২. ঠিক দ্বিপ্রহরের সময় যতক্ষণ না সূর্য পশ্চিমাকাশে ঢলে পড়ে (যাওয়াল)।\n৩. সূর্যাস্তের উপক্রম হওয়ার সময় যতক্ষণ না সূর্য পুরোপুরি ডুবে যায়।"
+            android:textColor="@color/text_primary"
+            android:textSize="13.5sp" />
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- Section 2 Header: ৩টি সম্পূর্ণ নিষিদ্ধ সময়: মাকরূহে তাহরীমী -->
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+          android:layout_width="30dp"
+          android:layout_height="30dp"
+          android:background="@drawable/bg_circle_icon"
+          android:backgroundTint="@color/badge_pill_red_bg"
+          android:gravity="center">
+
+          <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/ic_prohibition_slash"
+            app:tint="@color/accent_red" />
+        </LinearLayout>
+
+        <TextView
+          android:id="@+id/tvSectionForbiddenStrictTitle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="8dp"
+          android:fontFamily="sans-serif-medium"
+          android:text="৩টি সম্পূর্ণ নিষিদ্ধ সময়: মাকরূহে তাহরীমী"
+          android:textColor="@color/accent_red"
+          android:textSize="15.5sp"
+          android:textStyle="bold" />
+      </LinearLayout>
+
+      <!-- Card 1: ১. সূর্যোদয়ের সময় (Sunrise) -->
+      <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardForbiddenSunrise"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="16dp">
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+              android:id="@+id/tvForbiddenSunriseTitle"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:text="১. সূর্যোদয়ের সময়"
+              android:textColor="@color/text_primary"
+              android:textSize="14.5sp"
+              android:textStyle="bold" />
+
+            <TextView
+              android:id="@+id/tvForbiddenSunriseRange"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@drawable/bg_badge_pill_red"
+              android:paddingHorizontal="8dp"
+              android:paddingVertical="3dp"
+              android:text="০৬:০৭ - ০৬:২৫"
+              android:textColor="@color/badge_pill_red_text"
+              android:textSize="11.5sp"
+              android:textStyle="bold" />
+          </LinearLayout>
+
+          <TextView
+            android:id="@+id/tvForbiddenSunriseTypes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:lineSpacingExtra="2dp"
+            android:text="নিষিদ্ধ সালাত: ফরজ, নফল, কাযা, জানাযা বা সিজদায়ে তিলাওয়াত"
+            android:textColor="@color/accent_red"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+          <TextView
+            android:id="@+id/tvForbiddenSunriseReason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:lineSpacingExtra="3dp"
+            android:text="কারণ: এ সময় সূর্য শয়তানের দুই শিংয়ের মধ্য দিয়ে উদিত হয় এবং সূর্যপূজকরা সূর্যের পূজা করে।"
+            android:textColor="@color/text_secondary"
+            android:textSize="12.5sp" />
+
+          <TextView
+            android:id="@+id/tvForbiddenSunriseRef"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="রেফারেন্স: সহীহ মুসলিম ৮৩১, সহীহ বুখারী ৫৮২"
+            android:textColor="@color/accent_mint"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- Card 2: ২. ঠিক দ্বিপ্রহর / যাওয়াল (Solar Noon) -->
+      <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardForbiddenZawal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="16dp">
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+              android:id="@+id/tvForbiddenZawalTitle"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:text="২. ঠিক দ্বিপ্রহরের সময়"
+              android:textColor="@color/text_primary"
+              android:textSize="14.5sp"
+              android:textStyle="bold" />
+
+            <TextView
+              android:id="@+id/tvForbiddenZawalRange"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@drawable/bg_badge_pill_red"
+              android:paddingHorizontal="8dp"
+              android:paddingVertical="3dp"
+              android:text="১২:২১ - ১২:৩৬"
+              android:textColor="@color/badge_pill_red_text"
+              android:textSize="11.5sp"
+              android:textStyle="bold" />
+          </LinearLayout>
+
+          <TextView
+            android:id="@+id/tvForbiddenZawalTypes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:lineSpacingExtra="2dp"
+            android:text="নিষিদ্ধ সালাত: জুমার দিন ব্যতীত যেকোনো ফরজ, নফল, কাযা বা জানাযা"
+            android:textColor="@color/accent_red"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+          <TextView
+            android:id="@+id/tvForbiddenZawalReason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:lineSpacingExtra="3dp"
+            android:text="সূর্য ঠিক মাথার ওপর থাকা থেকে সামান্য পশ্চিম আকাশে ঢলে পড়া পর্যন্ত সময়। কারণ: এ সময় জাহান্নামের আগুনকে চরমভাবে উত্তপ্ত ও প্রজ্বলিত করা হয়।"
+            android:textColor="@color/text_secondary"
+            android:textSize="12.5sp" />
+
+          <TextView
+            android:id="@+id/tvForbiddenZawalRef"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="রেফারেন্স: সহীহ মুসলিম ৮৩১, সুনানে আবু দাউদ ১২৭৭"
+            android:textColor="@color/accent_mint"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- Card 3: ৩. সূর্যাস্তের সময় (Sunset) -->
+      <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardForbiddenSunset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="16dp">
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+              android:id="@+id/tvForbiddenSunsetTitle"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:text="৩. সূর্যাস্তের সময়"
+              android:textColor="@color/text_primary"
+              android:textSize="14.5sp"
+              android:textStyle="bold" />
+
+            <TextView
+              android:id="@+id/tvForbiddenSunsetRange"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@drawable/bg_badge_pill_red"
+              android:paddingHorizontal="8dp"
+              android:paddingVertical="3dp"
+              android:text="০৬:৫১ - ০৭:০৭"
+              android:textColor="@color/badge_pill_red_text"
+              android:textSize="11.5sp"
+              android:textStyle="bold" />
+          </LinearLayout>
+
+          <TextView
+            android:id="@+id/tvForbiddenSunsetTypes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:lineSpacingExtra="2dp"
+            android:text="নিষিদ্ধ সালাত: নফল সালাত ও জানাযা"
+            android:textColor="@color/accent_red"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+          <TextView
+            android:id="@+id/tvForbiddenSunsetReason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:lineSpacingExtra="3dp"
+            android:text="কারণ: সূর্য অস্ত যাওয়ার সময় মুশরিকরা পূজা করে। তবে ওই দিনের আসর যদি কারো ভুলবশত না পড়া হয়ে থাকে, তবে তা এ সময় পড়ে নিতে হবে (সহীহ বুখারী ৫৫৩)।"
+            android:textColor="@color/text_secondary"
+            android:textSize="12.5sp" />
+
+          <TextView
+            android:id="@+id/tvForbiddenSunsetRef"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="রেফারেন্স: সহীহ বুখারী ৫৫৩, সহীহ মুসলিম ৮৩১"
+            android:textColor="@color/accent_mint"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- Section 3 Header: ২টি নফল সালাত আদায়ের মাকরূহ সময় -->
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+          android:layout_width="30dp"
+          android:layout_height="30dp"
+          android:background="@drawable/bg_circle_icon"
+          android:backgroundTint="@color/badge_pill_amber_bg"
+          android:gravity="center">
+
+          <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/ic_warning_triangle"
+            app:tint="@color/accent_gold" />
+        </LinearLayout>
+
+        <TextView
+          android:id="@+id/tvSectionMakroohTitle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="8dp"
+          android:fontFamily="sans-serif-medium"
+          android:text="২টি নফল সালাত আদায়ের মাকরূহ সময়"
+          android:textColor="@color/accent_gold"
+          android:textSize="15.5sp"
+          android:textStyle="bold" />
+      </LinearLayout>
+
+      <!-- Card 4: ১. ফজর সালাত আদায়ের পর হতে সূর্যোদয় পর্যন্ত -->
+      <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardMakroohFajr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="16dp">
+
+          <TextView
+            android:id="@+id/tvMakroohFajrTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="১. ফজর সালাত আদায়ের পর হতে সূর্যোদয় পর্যন্ত"
+            android:textColor="@color/text_primary"
+            android:textSize="14.5sp"
+            android:textStyle="bold" />
+
+          <TextView
+            android:id="@+id/tvMakroohFajrTypes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:lineSpacingExtra="2dp"
+            android:text="মাকরূহ সালাত: অতিরিক্ত সাধারণ নফল সালাত"
+            android:textColor="@color/accent_gold"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+          <TextView
+            android:id="@+id/tvMakroohFajrReason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:lineSpacingExtra="3dp"
+            android:text="কারণ: রাসুলুল্লাহ (সাঃ) ফজরের পর সূর্যোদয় পর্যন্ত নফল পড়তে নিষেধ করেছেন।"
+            android:textColor="@color/text_secondary"
+            android:textSize="12.5sp" />
+
+          <TextView
+            android:id="@+id/tvMakroohFajrRef"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="রেফারেন্স: সহীহ বুখারী ৫৮৬, সহীহ মুসলিম ৮২৭"
+            android:textColor="@color/accent_mint"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- Card 5: ২. আসর সালাত আদায়ের পর হতে সূর্যাস্ত শুরু হওয়া পর্যন্ত -->
+      <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardMakroohAsr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="16dp">
+
+          <TextView
+            android:id="@+id/tvMakroohAsrTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="২. আসর সালাত আদায়ের পর হতে সূর্যাস্ত শুরু হওয়া পর্যন্ত"
+            android:textColor="@color/text_primary"
+            android:textSize="14.5sp"
+            android:textStyle="bold" />
+
+          <TextView
+            android:id="@+id/tvMakroohAsrTypes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:lineSpacingExtra="2dp"
+            android:text="মাকরূহ সালাত: অতিরিক্ত সাধারণ নফল সালাত"
+            android:textColor="@color/accent_gold"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+          <TextView
+            android:id="@+id/tvMakroohAsrReason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:lineSpacingExtra="3dp"
+            android:text="কারণ: আসরের পর কেবল পূর্বের কাযা নামাজ পড়া জায়েয, কিন্তু সাধারণ নফল পড়া মাকরূহ।"
+            android:textColor="@color/text_secondary"
+            android:textSize="12.5sp" />
+
+          <TextView
+            android:id="@+id/tvMakroohAsrRef"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="রেফারেন্স: সহীহ বুখারী ৫৮৬, সহীহ মুসলিম ৮২৫"
+            android:textColor="@color/accent_mint"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- Section 4 Header: ফিকহ ও মাযহাবগত বিশুদ্ধ অবস্থান -->
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+          android:layout_width="30dp"
+          android:layout_height="30dp"
+          android:background="@drawable/bg_circle_icon"
+          android:backgroundTint="@color/feat_bg_hadith"
+          android:gravity="center">
+
+          <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/ic_scale_justice"
+            app:tint="@color/accent_blue" />
+        </LinearLayout>
+
+        <TextView
+          android:id="@+id/tvSectionFiqhTitle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="8dp"
+          android:fontFamily="sans-serif-medium"
+          android:text="ফিকহ ও মাযহাবগত বিশুদ্ধ অবস্থান"
+          android:textColor="@color/accent_blue"
+          android:textSize="15.5sp"
+          android:textStyle="bold" />
+      </LinearLayout>
+
+      <!-- Card 6: ফিকহ ও মাযহাবগত অবস্থান -->
+      <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardFiqhPerspectives"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="16dp">
+
+          <TextView
+            android:id="@+id/tvFiqhHanafiTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• হানাফী মাযহাব:"
+            android:textColor="@color/accent_mint"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+          <TextView
+            android:id="@+id/tvFiqhHanafiContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:lineSpacingExtra="3dp"
+            android:text="এই ৩টি সময়ে যেকোনো সালাত (নফল, কাযা, জানাযা, সিজদায়ে তিলাওয়াত) আদায় করা মাকরূহে তাহরীমী (অবৈধ)। কেবল সেদিনের আসর বাকি থাকলে তা সূর্যাস্তের সময় পড়ে নেওয়া যাবে।"
+            android:textColor="@color/text_primary"
+            android:textSize="13sp" />
+
+          <TextView
+            android:id="@+id/tvFiqhShafiTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="• শাফিয়ী ও হাম্বলী মাযহাব:"
+            android:textColor="@color/accent_blue"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+          <TextView
+            android:id="@+id/tvFiqhShafiContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:lineSpacingExtra="3dp"
+            android:text="কারণহীন সাধারণ নফল পড়া নিষিদ্ধ। কিন্তু কারণযুক্ত সালাত (যেমন: কাযা সালাত, জানাযার সালাত, তাহিয়্যাতুল মসজিদ, তাওয়াফের দুই রাকাত) আদায় করা বৈধ।"
+            android:textColor="@color/text_primary"
+            android:textSize="13sp" />
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+  </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutSplashRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash_emerald_gradient"
+    android:fitsSystemWindows="false">
+
+    <!-- 1. Fine Islamic Geometric Pattern (Subtle Watermark) -->
+    <ImageView
+        android:id="@+id/ivSplashPattern"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha="0.0"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_splash_islamic_pattern"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 2. Minimal Crescent Moon (Top Right Quadrant) -->
+    <ImageView
+        android:id="@+id/ivSplashCrescent"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="36dp"
+        android:alpha="0.0"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_splash_crescent_minimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 3. Subtle Distant Mosque Silhouette (Bottom Horizon) -->
+    <ImageView
+        android:id="@+id/ivSplashMosque"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:alpha="0.0"
+        android:contentDescription="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_splash_mosque_silhouette"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 4. Soft Ambient Emerald Glow (Behind Logo) -->
+    <View
+        android:id="@+id/viewAmbientGlow"
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        android:alpha="0.0"
+        android:background="@drawable/bg_ambient_emerald_glow"
+        app:layout_constraintBottom_toBottomOf="@id/ivDeenOneLogo"
+        app:layout_constraintEnd_toEndOf="@id/ivDeenOneLogo"
+        app:layout_constraintStart_toStartOf="@id/ivDeenOneLogo"
+        app:layout_constraintTop_toTopOf="@id/ivDeenOneLogo" />
+
+    <!-- 5. Official DeenOne Brand Logo (Exact Official Asset) -->
+    <ImageView
+        android:id="@+id/ivDeenOneLogo"
+        android:layout_width="112dp"
+        android:layout_height="112dp"
+        android:alpha="0.0"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitCenter"
+        android:scaleX="0.95"
+        android:scaleY="0.95"
+        android:src="@drawable/ic_deenone_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.44" />
+
+    <!-- 6. DeenOne App Name Typography -->
+    <TextView
+        android:id="@+id/tvSplashAppName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:alpha="0.0"
+        android:fontFamily="sans-serif-medium"
+        android:letterSpacing="0.06"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivDeenOneLogo" />
+
+    <!-- 7. Bengali Tagline: “দিনকে সাজাও, দ্বীনকে জানো” -->
+    <TextView
+        android:id="@+id/tvSplashTagline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:alpha="0.0"
+        android:fontFamily="sans-serif"
+        android:letterSpacing="0.02"
+        android:text="দিনকে সাজাও, দ্বীনকে জানো"
+        android:textColor="#9EE8D0"
+        android:textSize="14.5sp"
+        android:translationY="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSplashAppName" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutWidgetRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_widget_emerald_gradient"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:padding="13dp">
+
+    <!-- Header Row -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/ic_feat_ayah" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="দৈনিক কুরআন আয়াত"
+                android:textColor="#34D399"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/btnWidgetRefresh"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_badge_pill"
+            android:padding="3dp"
+            android:src="@drawable/ic_refresh" />
+    </RelativeLayout>
+
+    <!-- Arabic Ayah -->
+    <TextView
+        android:id="@+id/tvWidgetAyahArabic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="end"
+        android:maxLines="2"
+        android:text="إِنَّ مَعَ الْعُسْرِ يُسْرًا"
+        android:textColor="#FFFFFF"
+        android:textSize="14.5sp"
+        android:textStyle="bold" />
+
+    <!-- Bengali Translation -->
+    <TextView
+        android:id="@+id/tvWidgetAyahBengali"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="নিশ্চয়ই কষ্টের সাথে স্বস্তি রয়েছে।"
+        android:textColor="#D1FAE5"
+        android:textSize="11.5sp" />
+
+    <!-- Surah Reference Reference -->
+    <TextView
+        android:id="@+id/tvWidgetAyahReference"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="সূরা আল-ইনশিরাহ (৬)"
+        android:textColor="#FDE047"
+        android:textSize="10sp"
+        android:textStyle="bold" />
+</LinearLayout>

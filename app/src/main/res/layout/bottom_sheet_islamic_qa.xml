@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/bg_main"
+  android:orientation="vertical">
+
+  <!-- Top Header -->
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_top_bar"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="14dp"
+    android:paddingBottom="12dp">
+
+    <ImageButton android:id="@+id/btnCloseQASheet"
+      android:layout_width="38dp"
+      android:layout_height="38dp"
+      android:background="@drawable/bg_badge_pill"
+      android:contentDescription="ফিরে যান"
+      android:src="@drawable/ic_arrow_back"
+      app:tint="@color/accent_mint" />
+
+    <LinearLayout
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="12dp"
+      android:layout_weight="1"
+      android:orientation="vertical">
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ইসলামিক প্রশ্নোত্তর ও ফতোয়া"
+        android:textColor="@color/text_primary"
+        android:textSize="17.5sp"
+        android:textStyle="bold" />
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="বিশ্বস্ত মুফতি বোর্ড ও আলেমদের যাচাইকৃত উত্তর"
+        android:textColor="@color/text_secondary"
+        android:textSize="11.5sp" />
+    </LinearLayout>
+  </LinearLayout>
+
+  <androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="14dp"
+    android:paddingBottom="40dp">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <!-- 1. STRICT NO-AI-FATWA SHARIAH POLICY BANNER -->
+      <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:padding="12dp">
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="16sp" />
+
+          <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:lineSpacingExtra="2dp"
+            android:text="শরীয়াহ নিরাপত্তা নীতি: এই অনুসন্ধান ব্যবস্থা কেবল প্রতিষ্ঠিত ফতোয়া বোর্ড ও আলেমদের যাচাইকৃত উত্তর প্রদর্শন করে। কোনো মনগড়া এআই ফতোয়া তৈরি করা হয় না।"
+            android:textColor="@color/text_secondary"
+            android:textSize="11.5sp" />
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- 2. SEARCH INPUT BAR -->
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/bg_badge_pill"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="12dp">
+
+        <ImageView
+          android:layout_width="20dp"
+          android:layout_height="20dp"
+          android:src="@drawable/ic_search"
+          app:tint="@color/accent_mint" />
+
+        <EditText
+          android:id="@+id/etQASearch"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_marginStart="10dp"
+          android:layout_weight="1"
+          android:background="@null"
+          android:hint="প্রশ্ন বা বিষয় লিখে খুঁজুন (যেমন: কসর, রোজা, যাকাত)..."
+          android:imeOptions="actionSearch"
+          android:inputType="text"
+          android:textColor="@color/text_primary"
+          android:textColorHint="@color/text_secondary"
+          android:textSize="13sp" />
+
+        <ImageView
+          android:id="@+id/btnClearQASearch"
+          android:layout_width="20dp"
+          android:layout_height="20dp"
+          android:background="?attr/selectableItemBackgroundBorderless"
+          android:contentDescription="মুছুন"
+          android:src="@drawable/ic_close"
+          android:visibility="gone"
+          app:tint="@color/text_secondary" />
+      </LinearLayout>
+
+      <!-- 3. CATEGORY FILTER CHIPS -->
+      <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+          android:id="@+id/layoutQACategoryChips"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+
+          <TextView
+            android:id="@+id/chipCatAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:background="@drawable/bg_badge_pill"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="6dp"
+            android:text="সকল"
+            android:textColor="@color/accent_mint"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+          <TextView
+            android:id="@+id/chipCatSalah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:background="@drawable/bg_badge_pill"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="6dp"
+            android:text="সালাত ও তাহারাত"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp" />
+
+          <TextView
+            android:id="@+id/chipCatFasting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:background="@drawable/bg_badge_pill"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="6dp"
+            android:text="সিয়াম ও রমজান"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp" />
+
+          <TextView
+            android:id="@+id/chipCatZakat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:background="@drawable/bg_badge_pill"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="6dp"
+            android:text="যাকাত ও সাদাকাহ"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp" />
+
+          <TextView
+            android:id="@+id/chipCatFinance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:background="@drawable/bg_badge_pill"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="6dp"
+            android:text="হালাল উপার্জন ও লেনদেন"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp" />
+
+          <TextView
+            android:id="@+id/chipCatFamily"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:background="@drawable/bg_badge_pill"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="6dp"
+            android:text="পরিবার ও বিবাহ"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp" />
+
+          <TextView
+            android:id="@+id/chipCatModern"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_badge_pill"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="6dp"
+            android:text="সমকালীন মাসআলা"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp" />
+        </LinearLayout>
+      </HorizontalScrollView>
+
+      <!-- 4. RESULTS STATUS -->
+      <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+          android:id="@+id/tvQACountBadge"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentStart="true"
+          android:layout_centerVertical="true"
+          android:text="১২টি যাচাইকৃত উত্তর পাওয়া গেছে"
+          android:textColor="@color/accent_mint"
+          android:textSize="12sp"
+          android:textStyle="bold" />
+      </RelativeLayout>
+
+      <!-- 5. EMPTY STATE WHEN NO ANSWER FOUND -->
+      <com.google.android.material.card.MaterialCardView
+        android:id="@+id/layoutQAEmptyState"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1.2dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:orientation="vertical"
+          android:padding="24dp">
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="32sp" />
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="কোনো যাচাইকৃত উত্তর পাওয়া যায়নি"
+            android:textColor="@color/text_primary"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+          <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:lineSpacingExtra="3.5dp"
+            android:text="কনফিগার করা বিশ্বস্ত ইসলামিক উৎসসমূহে এই প্রশ্নের কোনো সরাসরি যাচাইকৃত উত্তর পাওয়া যায়নি। অ্যাপটি কোনো স্বয়ংক্রিয় বা কৃত্রিম ফতোয়া তৈরি করে না।\n\nঅনুগ্রহ করে স্থানীয় বিশ্বস্ত মুফতি বা দারুল ইফতা থেকে সরাসরি জেনে নিন।"
+            android:textAlignment="center"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp" />
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- 6. RESULTS LIST CONTAINER -->
+      <LinearLayout
+        android:id="@+id/layoutQAResultsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+    </LinearLayout>
+  </androidx.core.widget.NestedScrollView>
+</LinearLayout>

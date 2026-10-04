@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main"
+    android:orientation="vertical">
+
+    <!-- Top Header Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/bg_top_bar"
+        android:elevation="2dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp">
+
+        <!-- Back Button with Circular Container -->
+        <FrameLayout android:id="@+id/btnBackFiftyToFiveHistory"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_circular_counter"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_arrow_back"
+                app:tint="@color/accent_mint" />
+        </FrameLayout>
+
+        <!-- Header Title -->
+        <TextView
+            android:id="@+id/tvHeaderTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="পঞ্চাশ ওয়াক্ত নামাজের ইতিহাস"
+            android:textColor="@color/text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Settings Gear Action Button with Circular Container -->
+        <FrameLayout android:id="@+id/btnSettingsFiftyToFiveHistory"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_circular_counter"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_settings"
+                app:tint="@color/accent_mint" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- Scrollable Content -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollHistoryContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="36dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Main Card: পঞ্চাশ ওয়াক্ত নামাজের ইতিহাস -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardFiftyToFiveMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@color/bg_card"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/border_card"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Card Header Row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvCardTitle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="পঞ্চাশ ওয়াক্ত নামাজের ইতিহাস"
+                            android:textColor="@color/text_primary"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <!-- Three dots button -->
+                        <FrameLayout
+                            android:id="@+id/btnMenuCardFiftyToFive"
+                            android:layout_width="34dp"
+                            android:layout_height="34dp"
+                            android:background="@drawable/bg_glassy_icon_button"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_more_horiz"
+                                app:tint="@color/text_primary" />
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <!-- Intro Paragraph -->
+                    <TextView
+                        android:id="@+id/tvHistoryIntro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="মেরাজের রাতের ঘটনা ইসলামের ইতিহাসে একটি বিশেষ স্থান অধিকার করে আছে, কারণ এই রাতেই পঞ্চাশ ওয়াক্ত নামাজ ফরজ হয়েছিল এবং পরে তা ৫ ওয়াক্তে কমানো হয়। এখানে মেরাজের রাতে নামাজ ফরজ হওয়ার সম্পূর্ণ ইতিহাস তুলে ধরা হলো -"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <!-- Subheading: মেরাজের রাতের ঘটনা - -->
+                    <TextView
+                        android:id="@+id/tvSubheadingMirajEvent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:text="মেরাজের রাতের ঘটনা -"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvMirajNightDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="মেরাজ হলো রাসুলুল্লাহ (সাঃ)-এর এক অলৌকিক ভ্রমণ, যা ইসরা এবং মেরাজ নামে দুই ভাগে বিভক্ত। ইসরা হলো মক্কা থেকে বায়তুল মুকাদ্দাস পর্যন্ত রাতের ভ্রমণ এবং মেরাজ হলো বায়তুল মুকাদ্দাস থেকে সাত আসমান হয়ে আল্লাহর দরবারে পৌঁছানো।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <!-- Quote 1: সূরা আল-ইসরা -->
+                    <TextView
+                        android:id="@+id/tvIsraQuote"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:lineSpacingExtra="3.5dp"
+                        android:text="&quot;পবিত্র এবং মহিমান্বিত তিনি, যিনি তাঁর বান্দাকে এক রাতে মসজিদুল হারাম থেকে মসজিদুল আকসা পর্যন্ত ভ্রমণ করিয়েছেন।&quot;"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvIsraRef"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="সূরা আল-ইসরা: ১৭:১"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <!-- Subheading: পঞ্চাশ ওয়াক্ত নামাজের আদেশ - -->
+                    <TextView
+                        android:id="@+id/tvSubheadingFiftyOrder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="পঞ্চাশ ওয়াক্ত নামাজের আদেশ -"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvFiftyOrderDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="মেরাজের রাতে আল্লাহ তাআলার সাথে সাক্ষাতের সময়, রাসুলুল্লাহ (সাঃ)-এর উপর প্রথমে পঞ্চাশ ওয়াক্ত নামাজ ফরজ করা হয়। এই সময়ে রাসুলুল্লাহ (সাঃ) সপ্তম আসমানে আল্লাহর সাথে সাক্ষাৎ করেন এবং এই আদেশ পান।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <!-- Quote 2: বুখারি ৩৪৯ -->
+                    <TextView
+                        android:id="@+id/tvFiftyOrderQuote"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:lineSpacingExtra="3.5dp"
+                        android:text="&quot;মেরাজের রাতে নবী মুহাম্মদ (সাঃ) আল্লাহর সাথে সাক্ষাৎ করেন এবং আল্লাহ তাকে পঞ্চাশ ওয়াক্ত নামাজের আদেশ দেন।&quot;"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvFiftyOrderRef"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="সহীহ বুখারী: ৩৪৯"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <!-- Subheading: নামাজ কমানোর প্রক্রিয়া – -->
+                    <TextView
+                        android:id="@+id/tvSubheadingReductionProcess"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="নামাজ কমানোর প্রক্রিয়া -"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvReductionProcessDesc1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="নবী মুহাম্মদ (সাঃ) পঞ্চাশ ওয়াক্ত নামাজের আদেশ পাওয়ার পর মুসা (আঃ)-এর পরামর্শে আল্লাহর কাছে প্রার্থনা করেন এবং ধাপে ধাপে নামাজের সংখ্যা কমানো হয়।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <!-- Quote 3: মুসলিম ১৬২ -->
+                    <TextView
+                        android:id="@+id/tvReductionHadithQuote"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:lineSpacingExtra="3.5dp"
+                        android:text="&quot;নবী মুহাম্মদ (সাঃ) বলেন, 'আমি ফিরে এসে মুসা (আঃ) এর কাছে গেলাম। তিনি বললেন, 'তোমার উম্মতের জন্য ৫০ ওয়াক্ত নামাজ অত্যন্ত কঠিন হবে। তোমার পালনকর্তার কাছে আবার যাও এবং কমানোর অনুরোধ করো।' আমি আল্লাহর কাছে আবার ফিরে গেলাম এবং আল্লাহ তাআলা তা ৪৫ ওয়াক্তে কমিয়ে দিলেন।'&quot;"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvReductionRef"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="সহীহ মুসলিম: ১৬২"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <!-- Reduction paragraph -->
+                    <TextView
+                        android:id="@+id/tvReductionProcessDesc2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="এই প্রক্রিয়া চলতে থাকে এবং প্রতি বারেই মুসা (আঃ)-এর পরামর্শে রাসুলুল্লাহ (সাঃ) আল্লাহর কাছে যান এবং আল্লাহ তাআলা তা কমিয়ে দেন। শেষ পর্যন্ত এটি ৫ ওয়াক্ত নামাজে নির্ধারিত হয়।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <!-- Quote 4: বুখারি ৩৪৯ (৫০ ওয়াক্তের সমান) -->
+                    <TextView
+                        android:id="@+id/tvRewardQuote"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:lineSpacingExtra="3.5dp"
+                        android:text="&quot;শেষে আল্লাহ তাআলা বললেন, 'এই ৫ ওয়াক্ত নামাজ পঞ্চাশ ওয়াক্ত নামাজের সমান হবে এবং আমার কথা কখনও পরিবর্তিত হয় না।'&quot;"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvRewardRef"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="সহীহ বুখারী: ৩৪৯"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <!-- Subheading: ৫ ওয়াক্ত নামাজের প্রতিদান - -->
+                    <TextView
+                        android:id="@+id/tvSubheadingRewardConclusion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="৫ ওয়াক্ত নামাজের প্রতিদান -"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvRewardConclusionDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="আল্লাহ তাআলার করুণা ও দয়া এমন যে, তিনি ৫ ওয়াক্ত নামাজের মাধ্যমে পঞ্চাশ ওয়াক্ত নামাজের সওয়াব প্রদান করবেন। এটি আল্লাহর বিশেষ অনুগ্রহ, যা মুসলিমদের জন্য একটি বড় প্রেরণা।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

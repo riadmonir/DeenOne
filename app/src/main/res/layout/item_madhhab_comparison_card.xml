@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_marginBottom="14dp"
+  app:cardBackgroundColor="@color/bg_card"
+  app:cardCornerRadius="16dp"
+  app:cardElevation="0dp"
+  app:strokeColor="@color/border_card"
+  app:strokeWidth="1.2dp">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+      android:id="@+id/tvIssueTopic"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="১. সালাতে তাকবীরে তাহরীমার পর হাত বাঁধার স্থান"
+      android:textColor="@color/accent_mint"
+      android:textSize="15sp"
+      android:textStyle="bold" />
+
+    <View
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:layout_marginTop="10dp"
+      android:layout_marginBottom="10dp"
+      android:background="@color/border_card" />
+
+    <!-- 1. Hanafi View -->
+    <TextView
+      android:id="@+id/tvHanafiTitle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="হানাফী মাযহাব"
+      android:textColor="#34D399"
+      android:textSize="13sp"
+      android:textStyle="bold" />
+
+    <TextView
+      android:id="@+id/tvHanafiView"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="2dp"
+      android:textColor="@color/text_secondary"
+      android:textSize="12.5sp" />
+
+    <TextView
+      android:id="@+id/tvHanafiRef"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="2dp"
+      android:textColor="@color/text_secondary"
+      android:textSize="11sp"
+      android:textStyle="italic" />
+
+    <!-- 2. Maliki View -->
+    <TextView
+      android:id="@+id/tvMalikiTitle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:text="মালিকী মাযহাব"
+      android:textColor="#60A5FA"
+      android:textSize="13sp"
+      android:textStyle="bold" />
+
+    <TextView
+      android:id="@+id/tvMalikiView"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="2dp"
+      android:textColor="@color/text_secondary"
+      android:textSize="12.5sp" />
+
+    <TextView
+      android:id="@+id/tvMalikiRef"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="2dp"
+      android:textColor="@color/text_secondary"
+      android:textSize="11sp"
+      android:textStyle="italic" />
+
+    <!-- 3. Shafi'i View -->
+    <TextView
+      android:id="@+id/tvShafiiTitle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:text="শাফেয়ী মাযহাব"
+      android:textColor="#FBBF24"
+      android:textSize="13sp"
+      android:textStyle="bold" />
+
+    <TextView
+      android:id="@+id/tvShafiiView"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="2dp"
+      android:textColor="@color/text_secondary"
+      android:textSize="12.5sp" />
+
+    <TextView
+      android:id="@+id/tvShafiiRef"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="2dp"
+      android:textColor="@color/text_secondary"
+      android:textSize="11sp"
+      android:textStyle="italic" />
+
+    <!-- 4. Hanbali View -->
+    <TextView
+      android:id="@+id/tvHanbaliTitle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:text="হাম্বলী মাযহাব"
+      android:textColor="#F472B6"
+      android:textSize="13sp"
+      android:textStyle="bold" />
+
+    <TextView
+      android:id="@+id/tvHanbaliView"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="2dp"
+      android:textColor="@color/text_secondary"
+      android:textSize="12.5sp" />
+
+    <TextView
+      android:id="@+id/tvHanbaliRef"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="2dp"
+      android:textColor="@color/text_secondary"
+      android:textSize="11sp"
+      android:textStyle="italic" />
+
+    <!-- Dalil Summary -->
+    <TextView
+      android:id="@+id/tvDalilSummary"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="12dp"
+      android:background="@color/bg_card_secondary"
+      android:padding="8dp"
+      android:textColor="@color/text_secondary"
+      android:textSize="11.5sp" />
+  </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

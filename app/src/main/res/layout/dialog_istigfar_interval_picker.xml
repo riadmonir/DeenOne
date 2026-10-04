@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_bottom_sheet_surface"
+    android:backgroundTint="@color/bg_card"
+    android:orientation="vertical"
+    android:padding="22dp">
+
+    <TextView
+        android:id="@+id/tvIntervalPickerTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="স্মরণিকার বিরতি নির্বাচন করুন"
+        android:textColor="@color/text_primary"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/itemInterval15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingVertical="13dp">
+
+        <TextView
+            android:id="@+id/tvInterval15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="১৫ মিনিট"
+            android:textColor="@color/text_primary"
+            android:textSize="15.5sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/itemInterval30"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingVertical="13dp">
+
+        <TextView
+            android:id="@+id/tvInterval30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="৩০ মিনিট"
+            android:textColor="@color/text_primary"
+            android:textSize="15.5sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/itemInterval45"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingVertical="13dp">
+
+        <TextView
+            android:id="@+id/tvInterval45"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="৪৫ মিনিট"
+            android:textColor="@color/text_primary"
+            android:textSize="15.5sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/itemInterval60"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingVertical="13dp">
+
+        <TextView
+            android:id="@+id/tvInterval60"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="১ ঘণ্টা"
+            android:textColor="@color/text_primary"
+            android:textSize="15.5sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/itemInterval120"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingVertical="13dp">
+
+        <TextView
+            android:id="@+id/tvInterval120"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="২ ঘণ্টা"
+            android:textColor="@color/text_primary"
+            android:textSize="15.5sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/itemInterval180"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingVertical="13dp">
+
+        <TextView
+            android:id="@+id/tvInterval180"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="৩ ঘণ্টা"
+            android:textColor="@color/text_primary"
+            android:textSize="15.5sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btnCancelIntervalDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="16dp"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="8dp"
+        android:text="বাতিল"
+        android:textColor="@color/accent_mint"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+</LinearLayout>

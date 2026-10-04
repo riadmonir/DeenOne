@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@drawable/bg_card_emerald"
+  android:orientation="vertical"
+  android:padding="16dp">
+
+  <!-- Handle -->
+  <View
+    android:layout_width="@dimen/bottom_sheet_handle_width"
+    android:layout_height="@dimen/bottom_sheet_handle_height"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginBottom="12dp"
+    android:background="#334155" />
+
+  <!-- Header Row -->
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <LinearLayout
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:layout_marginEnd="8dp"
+      android:orientation="vertical">
+
+      <TextView
+        android:id="@+id/tvUmrahSheetTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="উমরাহ পূর্ণাঙ্গ A2Z সহীহ গাইড"
+        android:textColor="@color/text_primary"
+        android:textSize="17.5sp"
+        android:textStyle="bold" />
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="রাসূলুল্লাহ ﷺ এর সুন্নাহ অনুযায়ী বিশুদ্ধ নিয়ম ও দোয়া"
+        android:textColor="@color/text_secondary"
+        android:textSize="11.5sp" />
+    </LinearLayout>
+
+    <FrameLayout android:id="@+id/btnCloseUmrahGuide"
+      android:layout_width="32dp"
+      android:layout_height="32dp"
+      android:background="@drawable/bg_badge_pill">
+
+      <ImageView
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_close"
+        app:tint="@color/accent_mint" />
+    </FrameLayout>
+  </LinearLayout>
+
+  <!-- Stage Tabs Horizontal Scroll -->
+  <HorizontalScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:scrollbars="none">
+
+    <LinearLayout
+      android:id="@+id/layoutUmrahTabs"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+      <TextView
+        android:id="@+id/tabStage1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_card_active"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="6dp"
+        android:text="১. প্রস্তুতি ও ইহরাম"
+        android:textColor="@color/accent_mint"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+      <TextView
+        android:id="@+id/tabStage2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:background="@drawable/bg_card_secondary"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="6dp"
+        android:text="২. মীকাত ও নিয়ত"
+        android:textColor="@color/text_secondary"
+        android:textSize="12sp" />
+
+      <TextView
+        android:id="@+id/tabStage3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:background="@drawable/bg_card_secondary"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="6dp"
+        android:text="৩. তালবিয়া"
+        android:textColor="@color/text_secondary"
+        android:textSize="12sp" />
+
+      <TextView
+        android:id="@+id/tabStage4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:background="@drawable/bg_card_secondary"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="6dp"
+        android:text="৪. বায়তুল্লাহ প্রবেশ ও তাওয়াফ"
+        android:textColor="@color/text_secondary"
+        android:textSize="12sp" />
+
+      <TextView
+        android:id="@+id/tabStage5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:background="@drawable/bg_card_secondary"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="6dp"
+        android:text="৫. মাকামে ইব্রাহিম ও জমজম"
+        android:textColor="@color/text_secondary"
+        android:textSize="12sp" />
+
+      <TextView
+        android:id="@+id/tabStage6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:background="@drawable/bg_card_secondary"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="6dp"
+        android:text="৬. সাফা-মারওয়া সা'য়ী"
+        android:textColor="@color/text_secondary"
+        android:textSize="12sp" />
+
+      <TextView
+        android:id="@+id/tabStage7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:background="@drawable/bg_card_secondary"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="6dp"
+        android:text="৭. হলক ও সমাপ্তি"
+        android:textColor="@color/text_secondary"
+        android:textSize="12sp" />
+    </LinearLayout>
+  </HorizontalScrollView>
+
+  <!-- Scrollable Detail Container -->
+  <androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_marginTop="12dp"
+    android:layout_weight="1">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <!-- Card: Stage Overview & Step Instructions -->
+      <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="16dp">
+
+          <TextView
+            android:id="@+id/tvStageTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="১. উমরাহর পূর্বপ্রস্তুতি ও ইহরাম পরিধান"
+            android:textColor="@color/accent_mint"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+          <TextView
+            android:id="@+id/tvStageDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:lineSpacingExtra="3dp"
+            android:text="উমরাহ শুরুর পূর্বে শারীরিক পরিষ্কার-পরিচ্ছন্নতা (নখ কাটা, অবাঞ্ছিত লোম পরিষ্কার করা) সম্পন্ন করে গোসল (সুন্নাহ) করুন। পুরুষরা সুগন্ধি শুধু শরীরে ব্যবহার করবেন (কাপড়ে নয়)। পুরুষরা দুটি সেলাইবিহীন সাদা চাদর (ইযার ও রিদা) পরবেন। মহিলারা স্বাভাবিক শালীন পোশাক পরবেন (নেকাব ও হাতমোজা ছাড়া)।"
+            android:textColor="@color/text_primary"
+            android:textSize="13sp" />
+
+          <!-- Status Pills (Farz / Wajib / Sunnah / Haram) -->
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <TextView
+              android:id="@+id/tvPillObligatory"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@drawable/bg_badge_pill"
+              android:paddingHorizontal="10dp"
+              android:paddingVertical="4dp"
+              android:text="রুকন / ওয়াজিব: নিয়ত ও মীকাত"
+              android:textColor="@color/accent_mint"
+              android:textSize="11sp"
+              android:textStyle="bold" />
+
+            <TextView
+              android:id="@+id/tvPillSunnah"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="8dp"
+              android:background="@drawable/bg_badge_pill"
+              android:paddingHorizontal="10dp"
+              android:paddingVertical="4dp"
+              android:text="সুন্নাহ: গোসল ও শরীরে সুগন্ধি"
+              android:textColor="@color/accent_gold"
+              android:textSize="11sp"
+              android:textStyle="bold" />
+          </LinearLayout>
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- Card: Arabic Dua, Transliteration, Meaning -->
+      <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardDuaSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="16dp">
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="এই ধাপের সহীহ দোয়া ও জিকির"
+            android:textColor="@color/accent_mint"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+          <!-- Arabic Text -->
+          <TextView
+            android:id="@+id/tvDuaArabic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_card_secondary"
+            android:gravity="end"
+            android:lineSpacingExtra="6dp"
+            android:padding="12dp"
+            android:text="لَبَّيْكَ اللَّهُمَّ عُمْرَةً"
+            android:textColor="@color/text_primary"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+          <!-- Transliteration -->
+          <TextView
+            android:id="@+id/tvDuaTransliteration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="উচ্চারণ: লাব্বাইকা আল্লাহুম্মা উমরাহ।"
+            android:textColor="@color/text_mint_bright"
+            android:textSize="13sp"
+            android:textStyle="italic" />
+
+          <!-- Translation -->
+          <TextView
+            android:id="@+id/tvDuaMeaning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:lineSpacingExtra="2dp"
+            android:text="অর্থ: হে আল্লাহ! উমরাহর উদ্দেশ্যে আমি আপনার দরবারে উপস্থিত।"
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp" />
+
+          <!-- Reference -->
+          <TextView
+            android:id="@+id/tvDuaReference"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="সহীহ মুসলিম: ১২১৮"
+            android:textColor="@color/text_muted"
+            android:textSize="11sp" />
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- Card: Rulings & Prohibitions (Forbidden items) -->
+      <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardRulingsSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="16dp"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="16dp">
+
+          <TextView
+            android:id="@+id/tvRulingsHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="নিষিদ্ধ বিষয়সমূহ ও গুরুত্বপূর্ণ সতর্কতা"
+            android:textColor="@color/accent_red"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+          <TextView
+            android:id="@+id/tvRulingsContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:lineSpacingExtra="3dp"
+            android:text="ইহরাম অবস্থায় চুল-দাঁড়ি-নখ কাটা, সুগন্ধি ব্যবহার করা, মাথা ঢাকা (পুরুষদের), সেলাইযুক্ত কাপড় পরা (পুরুষদের), নেকাব/দস্তানা পরা (নারীদের), যৌনসংসর্গ বা অশ্লীল কাজ সম্পূর্ণ হারাম।"
+            android:textColor="@color/text_primary"
+            android:textSize="12sp" />
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+  </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

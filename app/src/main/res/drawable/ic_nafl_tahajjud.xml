@@ -1,0 +1,115 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+
+    <!-- 1. Outer Soft Shadow / Glow Ring -->
+    <path
+        android:fillColor="#15818CF8"
+        android:pathData="M50,50m-48,0a48,48 0,1 1,96 0a48,48 0,1 1,-96 0" />
+
+    <!-- 2. Circular Base Background: Midnight Indigo Sky -->
+    <path
+        android:pathData="M50,50m-44,0a44,44 0,1 1,88 0a44,44 0,1 1,-88 0">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:angle="135"
+                android:endColor="#0B0F19"
+                android:startColor="#1E1B4B"
+                android:type="linear" />
+        </aapt:attr>
+    </path>
+
+    <!-- 3. Night Stars -->
+    <path
+        android:fillColor="#E0E7FF"
+        android:pathData="M26,24 L27,27 L30,28 L27,29 L26,32 L25,29 L22,28 L25,27 Z" />
+    <path
+        android:fillColor="#C7D2FE"
+        android:pathData="M74,20 L74.5,22 L76.5,22.5 L74.5,23 L74,25 L73.5,23 L71.5,22.5 L73.5,22 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M52,16 A1.5,1.5 0 1,0 52,19 A1.5,1.5 0 1,0 52,16 Z" />
+    <path
+        android:fillColor="#E0E7FF"
+        android:pathData="M80,38 A1.2,1.2 0 1,0 80,40.4 A1.2,1.2 0 1,0 80,38 Z" />
+
+    <!-- 4. Luminous Crescent Moon -->
+    <path
+        android:fillColor="#FEF08A"
+        android:pathData="M38,18 C45,18 51,24 51,32 C51,40 45,46 38,46 C35,46 32,45 30,43 C35,44 42,40 42,32 C42,24 35,20 30,21 C32,19 35,18 38,18 Z" />
+
+    <!-- 5. Distant Mosque Silhouette with Dome and Minaret -->
+    <path
+        android:fillColor="#1E1B4B"
+        android:fillAlpha="0.75"
+        android:pathData="M12,85 L12,68 C12,68 16,63 22,63 C28,63 32,68 32,68 L32,85 Z" />
+    <!-- Minaret -->
+    <path
+        android:fillColor="#2E1065"
+        android:pathData="M28,85 L28,48 L27,48 L27,45 L30,38 L33,45 L33,48 L32,48 L32,85 Z" />
+
+    <!-- 6. Believer in Sajdah (Tahajjud Prayer on Rug) -->
+    <!-- Prayer Mat / জায়নামাজ -->
+    <path
+        android:fillColor="#4338CA"
+        android:pathData="M38,82 L86,82 L82,86 L34,86 Z" />
+    <path
+        android:fillColor="#818CF8"
+        android:pathData="M34,86 L82,86 L80,87 L32,87 Z" />
+
+    <!-- Person in Sujood (সেজদারত মুসল্লি) -->
+    <!-- Torso and Back -->
+    <path
+        android:fillColor="#C7D2FE"
+        android:pathData="M52,78 C52,70 60,65 68,67 C72,68 76,73 78,79 L72,81 C70,77 67,73 63,73 C58,73 56,76 56,80 Z" />
+    <!-- Thigh and Legs -->
+    <path
+        android:fillColor="#A5B4FC"
+        android:pathData="M72,79 C75,76 80,75 82,78 C83,80 80,82 76,82 L70,82 Z" />
+    <!-- Arms reaching forward in prostration -->
+    <path
+        android:fillColor="#E0E7FF"
+        android:pathData="M56,76 L48,81 L42,81 L42,82 L50,82 L58,78 Z" />
+    <!-- Head in prostration Touching Mat -->
+    <path
+        android:fillColor="#DDD6FE"
+        android:pathData="M46,80 A3.5,3.5 0 1,0 46,73 A3.5,3.5 0 1,0 46,80 Z" />
+
+    <!-- 7. GLOSSY Specular Top Arc Reflection) -->
+    <path
+        android:pathData="M16,46 C18,22 32,8 50,8 C68,8 82,22 84,46 C68,54 32,54 16,46 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:angle="270"
+                android:startColor="#65FFFFFF"
+                android:endColor="#00FFFFFF"
+                android:type="linear" />
+        </aapt:attr>
+    </path>
+
+    <!-- Bottom Crystal Rim Reflection -->
+    <path
+        android:fillColor="#35FFFFFF"
+        android:pathData="M30,88 C38,92 62,92 70,88 C62,90 38,90 30,88 Z" />
+
+    <!-- 8. Outer White Glass Bevel Ring -->
+    <path
+        android:pathData="M50,50m-44,0a44,44 0,1 1,88 0a44,44 0,1 1,-88 0"
+        android:strokeColor="#C0FFFFFF"
+        android:strokeWidth="1.2" />
+
+    <!-- 9. Vibrant Themed Glass Rim -->
+    <path
+        android:pathData="M50,50m-42.5,0a42.5,42.5 0,1 1,85 0a42.5,42.5 0,1 1,-85 0"
+        android:strokeColor="#818CF8"
+        android:strokeWidth="1.8" />
+
+    <!-- 10. Inner Specular Glass Hairline -->
+    <path
+        android:pathData="M50,50m-40.5,0a40.5,40.5 0,1 1,81 0a40.5,40.5 0,1 1,-81 0"
+        android:strokeColor="#50FFFFFF"
+        android:strokeWidth="0.8" />
+</vector>

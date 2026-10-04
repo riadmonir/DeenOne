@@ -1,0 +1,1237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/bg_main"
+  android:orientation="vertical">
+
+  <!-- 1. GLOBAL TOP APP BAR (Consistent Across Entire App) -->
+  <RelativeLayout
+    android:id="@+id/layoutTopHeader"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_top_bar"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="12dp"
+    android:paddingBottom="12dp">
+
+    <!-- Left: Back Button -->
+    <FrameLayout
+      android:id="@+id/btnCloseFullProfile"
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      android:layout_alignParentStart="true"
+      android:layout_centerVertical="true"
+      android:background="@drawable/bg_circular_counter"
+      android:backgroundTint="@color/bg_badge_pill"
+      android:clickable="true"
+      android:focusable="true">
+
+      <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_arrow_back"
+        app:tint="@color/accent_mint" />
+    </FrameLayout>
+
+    <!-- Center: DeenOne Brand Logo -->
+    <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerInParent="true"
+      android:gravity="center"
+      android:orientation="horizontal">
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Deen"
+        android:textColor="@color/text_primary"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="One"
+        android:textColor="@color/accent_mint"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Right: Theme Toggle + Standing Divider + Notification Bell -->
+    <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentEnd="true"
+      android:layout_centerVertical="true"
+      android:gravity="center_vertical"
+      android:orientation="horizontal">
+
+      <!-- Theme Toggle Button -->
+      <FrameLayout
+        android:id="@+id/btnProfileThemeToggle"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/bg_circular_counter"
+        android:backgroundTint="@color/bg_badge_pill"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageView
+          android:id="@+id/ivProfileThemeIcon"
+          android:layout_width="20dp"
+          android:layout_height="20dp"
+          android:layout_gravity="center"
+          android:src="@drawable/ic_moon"
+          app:tint="@color/accent_mint" />
+      </FrameLayout>
+
+      <!-- Standing Vertical Divider Bar -->
+      <View
+        android:layout_width="1.5dp"
+        android:layout_height="20dp"
+        android:layout_marginHorizontal="6dp"
+        android:background="@color/border_card" />
+
+      <!-- Notification Bell with Dot Badge -->
+      <FrameLayout
+        android:id="@+id/btnProfileNotifications"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/bg_circular_counter"
+        android:backgroundTint="@color/bg_badge_pill"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageView
+          android:layout_width="20dp"
+          android:layout_height="20dp"
+          android:layout_gravity="center"
+          android:src="@drawable/ic_notifications"
+          app:tint="@color/accent_mint" />
+
+        <View
+          android:id="@+id/viewProfileNotifBadge"
+          android:layout_width="8dp"
+          android:layout_height="8dp"
+          android:layout_gravity="top|end"
+          android:layout_marginTop="7dp"
+          android:layout_marginEnd="7dp"
+          android:background="@drawable/bg_circular_counter"
+          android:backgroundTint="#EF4444"
+          android:visibility="gone" />
+      </FrameLayout>
+    </LinearLayout>
+  </RelativeLayout>
+
+  <androidx.core.widget.NestedScrollView
+    android:id="@+id/scrollProfileContent"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:clipToPadding="false"
+    android:overScrollMode="never"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="12dp"
+    android:paddingBottom="32dp">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <!-- 2. HERO PROFILE CARD -->
+      <androidx.cardview.widget.CardView
+        android:id="@+id/cardHeroProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="26dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1.5dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center_horizontal"
+          android:orientation="vertical"
+          android:paddingHorizontal="20dp"
+          android:paddingTop="18dp"
+          android:paddingBottom="22dp">
+
+          <!-- User Points / Reward Badge (Top Trophy Pill) -->
+          <LinearLayout
+            android:id="@+id/pillUserPoints"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_badge_pill"
+            android:backgroundTint="#FFA000"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="14dp"
+            android:paddingVertical="4dp">
+
+            <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text=""
+              android:textSize="12sp" />
+
+            <TextView
+              android:id="@+id/tvProfilePoints"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="০"
+              android:textColor="#332000"
+              android:textSize="13sp"
+              android:textStyle="bold" />
+          </LinearLayout>
+
+          <!-- Circular Profile Photo with Accent Border & Badges -->
+          <FrameLayout
+            android:layout_width="112dp"
+            android:layout_height="112dp"
+            android:layout_marginTop="14dp">
+
+            <!-- Circular Accent Ring Background Frame -->
+            <FrameLayout
+              android:layout_width="104dp"
+              android:layout_height="104dp"
+              android:layout_gravity="center"
+              android:background="@drawable/circle_progress_bg"
+              android:backgroundTint="#FBC02D">
+
+              <ImageView
+                android:id="@+id/ivProfileAvatarLarge"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_user_circle_avatar" />
+            </FrameLayout>
+
+            <!-- Camera Button (Bottom-Left) -->
+            <FrameLayout
+              android:id="@+id/btnChangePhoto"
+              android:layout_width="32dp"
+              android:layout_height="32dp"
+              android:layout_gravity="bottom|start"
+              android:background="@drawable/bg_badge_pill"
+              android:backgroundTint="@color/accent_mint"
+              android:clickable="true"
+              android:focusable="true">
+
+              <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_edit"
+                app:tint="@color/white" />
+            </FrameLayout>
+
+            <!-- Verification Badge (Bottom-Right) -->
+            <FrameLayout
+              android:id="@+id/badgeVerified"
+              android:layout_width="32dp"
+              android:layout_height="32dp"
+              android:layout_gravity="bottom|end"
+              android:background="@drawable/bg_badge_pill"
+              android:backgroundTint="@color/accent_mint"
+              android:clickable="true"
+              android:focusable="true">
+
+              <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_check_circle"
+                app:tint="@color/white" />
+            </FrameLayout>
+          </FrameLayout>
+
+          <!-- User Name Row with Edit Button -->
+          <LinearLayout
+            android:id="@+id/btnEditUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+              android:id="@+id/tvProfileFullName"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textColor="@color/accent_mint"
+              android:textSize="20sp"
+              android:textStyle="bold"
+              tools:text="Abdullah Al Riad" />
+
+            <ImageView
+              android:layout_width="16dp"
+              android:layout_height="16dp"
+              android:layout_marginStart="8dp"
+              android:src="@drawable/ic_edit"
+              app:tint="@color/accent_mint" />
+          </LinearLayout>
+
+          <!-- Joining Date Pill -->
+          <TextView
+            android:id="@+id/tvProfileJoinedDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/bg_badge_pill"
+            android:backgroundTint="@color/bg_badge_pill"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="5dp"
+            android:textColor="@color/text_secondary"
+            android:textSize="12.5sp"
+            android:textStyle="bold"
+            tools:text="যোগদানের তারিখ: ১৪ আগস্ট, ২০২৬" />
+
+          <!-- Location / Timezone Pill -->
+          <LinearLayout
+            android:id="@+id/btnEditLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_badge_pill"
+            android:backgroundTint="@color/bg_badge_pill"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="14dp"
+            android:paddingVertical="5dp">
+
+            <ImageView
+              android:layout_width="14dp"
+              android:layout_height="14dp"
+              android:src="@drawable/ic_menu_book"
+              app:tint="@color/accent_mint" />
+
+            <TextView
+              android:id="@+id/tvProfileLocation"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="6dp"
+              android:textColor="@color/accent_mint"
+              android:textSize="12.5sp"
+              android:textStyle="bold"
+              tools:text="Asia/Dhaka" />
+          </LinearLayout>
+        </LinearLayout>
+      </androidx.cardview.widget.CardView>
+
+      <!-- 3. 4-GRID ACTIVITY STATS CARDS -->
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:orientation="horizontal">
+
+        <!-- Grid 1: Salah Progress (ওয়াক্ত নামাজ) -->
+        <androidx.cardview.widget.CardView
+          android:id="@+id/cardProfileStatSalah"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="6dp"
+          android:layout_weight="1"
+          android:clickable="true"
+          android:focusable="true"
+          app:cardBackgroundColor="@color/bg_card"
+          app:cardCornerRadius="20dp"
+          app:cardElevation="0dp"
+          app:strokeColor="@color/border_card"
+          app:strokeWidth="1dp">
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <FrameLayout
+              android:layout_width="38dp"
+              android:layout_height="38dp"
+              android:background="@drawable/circle_progress_bg"
+              android:backgroundTint="@color/bg_badge_pill">
+
+              <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_mosque"
+                app:tint="@color/accent_mint" />
+            </FrameLayout>
+
+            <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="10dp"
+              android:gravity="center_vertical"
+              android:orientation="horizontal">
+
+              <TextView
+                android:id="@+id/tvProfileSalahCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="০"
+                android:textColor="@color/accent_mint"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+              <TextView
+                android:id="@+id/tvProfileSalahUnit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="ওয়াক্ত"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+              android:id="@+id/tvProfileSalahLabel"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="3dp"
+              android:text="ওয়াক্ত নামাজ"
+              android:textColor="@color/text_secondary"
+              android:textSize="12sp" />
+          </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Grid 2: Amal Count (নেক আমল) -->
+        <androidx.cardview.widget.CardView
+          android:id="@+id/cardProfileStatAmal"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="6dp"
+          android:layout_weight="1"
+          android:clickable="true"
+          android:focusable="true"
+          app:cardBackgroundColor="@color/bg_card"
+          app:cardCornerRadius="20dp"
+          app:cardElevation="0dp"
+          app:strokeColor="@color/border_card"
+          app:strokeWidth="1dp">
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <FrameLayout
+              android:layout_width="38dp"
+              android:layout_height="38dp"
+              android:background="@drawable/circle_progress_bg"
+              android:backgroundTint="@color/bg_badge_pill">
+
+              <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_favorite"
+                app:tint="@color/accent_mint" />
+            </FrameLayout>
+
+            <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="10dp"
+              android:gravity="center_vertical"
+              android:orientation="horizontal">
+
+              <TextView
+                android:id="@+id/tvProfileAmalCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="০"
+                android:textColor="@color/accent_mint"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+              <TextView
+                android:id="@+id/tvProfileAmalUnit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="বার"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+              android:id="@+id/tvProfileAmalLabel"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="3dp"
+              android:text="নেক আমল"
+              android:textColor="@color/text_secondary"
+              android:textSize="12sp" />
+          </LinearLayout>
+        </androidx.cardview.widget.CardView>
+      </LinearLayout>
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal">
+
+        <!-- Grid 3: Quiz Played (অংশগ্রহণকৃত কুইজ) -->
+        <androidx.cardview.widget.CardView
+          android:id="@+id/cardProfileStatQuiz"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="6dp"
+          android:layout_weight="1"
+          android:clickable="true"
+          android:focusable="true"
+          app:cardBackgroundColor="@color/bg_card"
+          app:cardCornerRadius="20dp"
+          app:cardElevation="0dp"
+          app:strokeColor="@color/border_card"
+          app:strokeWidth="1dp">
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <FrameLayout
+              android:layout_width="38dp"
+              android:layout_height="38dp"
+              android:background="@drawable/circle_progress_bg"
+              android:backgroundTint="@color/bg_badge_pill">
+
+              <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_history"
+                app:tint="#38BDF8" />
+            </FrameLayout>
+
+            <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="10dp"
+              android:gravity="center_vertical"
+              android:orientation="horizontal">
+
+              <TextView
+                android:id="@+id/tvProfileQuizCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="০"
+                android:textColor="#38BDF8"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+              <TextView
+                android:id="@+id/tvProfileQuizUnit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="টি"
+                android:textColor="#38BDF8"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+              android:id="@+id/tvProfileQuizLabel"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="3dp"
+              android:text="অংশগ্রহণকৃত কুইজ"
+              android:textColor="@color/text_secondary"
+              android:textSize="12sp" />
+          </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Grid 4: Total Points (মোট পয়েন্ট) -->
+        <androidx.cardview.widget.CardView
+          android:id="@+id/cardProfileStatPoints"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="6dp"
+          android:layout_weight="1"
+          android:clickable="true"
+          android:focusable="true"
+          app:cardBackgroundColor="@color/bg_card"
+          app:cardCornerRadius="20dp"
+          app:cardElevation="0dp"
+          app:strokeColor="@color/border_card"
+          app:strokeWidth="1dp">
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <FrameLayout
+              android:layout_width="38dp"
+              android:layout_height="38dp"
+              android:background="@drawable/circle_progress_bg"
+              android:backgroundTint="@color/badge_pill_amber_bg">
+
+              <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_star"
+                app:tint="#FF9800" />
+            </FrameLayout>
+
+            <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="10dp"
+              android:gravity="center_vertical"
+              android:orientation="horizontal">
+
+              <TextView
+                android:id="@+id/tvProfileTotalPoints"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="০"
+                android:textColor="#FF9800"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+              <TextView
+                android:id="@+id/tvProfilePointsUnit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="পয়েন্ট"
+                android:textColor="#FF9800"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+              android:id="@+id/tvProfilePointsLabel"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="3dp"
+              android:text="মোট পয়েন্ট"
+              android:textColor="@color/text_secondary"
+              android:textSize="12sp" />
+          </LinearLayout>
+        </androidx.cardview.widget.CardView>
+      </LinearLayout>
+
+      <!-- 4. BLOOD DONOR CALL-TO-ACTION CARD -->
+      <androidx.cardview.widget.CardView
+        android:id="@+id/cardBloodDonorCta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="26dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1.5dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center_horizontal"
+          android:orientation="vertical"
+          android:paddingHorizontal="20dp"
+          android:paddingVertical="24dp">
+
+          <FrameLayout
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:background="@drawable/circle_progress_bg"
+            android:backgroundTint="@color/accent_mint">
+
+            <ImageView
+              android:layout_width="34dp"
+              android:layout_height="34dp"
+              android:layout_gravity="center"
+              android:src="@drawable/ic_heart_hand"
+              app:tint="@color/white" />
+          </FrameLayout>
+
+          <TextView
+            android:id="@+id/tvBloodDonorTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="রক্তদাতা হিসেবে যোগ দিন"
+            android:textColor="@color/accent_mint"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+
+          <TextView
+            android:id="@+id/tvBloodDonorSubtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:lineSpacingExtra="3dp"
+            android:text="আপনার এক ব্যাগ রক্ত বাঁচাতে পারে একটি মুমূর্ষু মানুষের জীবন!"
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp" />
+
+          <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRegisterBloodDonor"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/accent_mint"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:paddingHorizontal="28dp"
+            android:text="নিবন্ধন করুন"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:cornerRadius="22dp" />
+        </LinearLayout>
+      </androidx.cardview.widget.CardView>
+
+      <!-- 5. SOCIAL ACTIVITY SECTION (সামাজিক সক্রিয়তা) -->
+      <androidx.cardview.widget.CardView
+        android:id="@+id/cardSocialActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1.5dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="18dp">
+
+          <!-- Section Header -->
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <FrameLayout
+              android:layout_width="32dp"
+              android:layout_height="32dp"
+              android:background="@drawable/circle_progress_bg"
+              android:backgroundTint="@color/bg_badge_pill">
+
+              <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_nav_community"
+                app:tint="@color/accent_mint" />
+            </FrameLayout>
+
+            <TextView
+              android:id="@+id/tvSocialActivityTitle"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="10dp"
+              android:text="সামাজিক সক্রিয়তা"
+              android:textColor="@color/accent_mint"
+              android:textSize="16sp"
+              android:textStyle="bold" />
+          </LinearLayout>
+
+          <!-- 3 Horizontal Mini Stats Boxes -->
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:orientation="horizontal">
+
+            <!-- Mini Box 1: Posts -->
+            <LinearLayout
+              android:id="@+id/cardSocialPost"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_marginEnd="6dp"
+              android:layout_weight="1"
+              android:background="@drawable/bg_badge_pill"
+              android:backgroundTint="@color/bg_card_secondary"
+              android:clickable="true"
+              android:focusable="true"
+              android:gravity="center"
+              android:orientation="horizontal"
+              android:paddingHorizontal="10dp"
+              android:paddingVertical="10dp">
+
+              <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/ic_document_feed"
+                app:tint="#10B981" />
+
+              <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                  android:id="@+id/tvSocialPostCount"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="০"
+                  android:textColor="#10B981"
+                  android:textSize="14sp"
+                  android:textStyle="bold" />
+
+                <TextView
+                  android:id="@+id/tvSocialPostLabel"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="পোস্ট"
+                  android:textColor="@color/text_secondary"
+                  android:textSize="11sp" />
+              </LinearLayout>
+            </LinearLayout>
+
+            <!-- Mini Box 2: Comments -->
+            <LinearLayout
+              android:id="@+id/cardSocialComment"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_marginHorizontal="3dp"
+              android:layout_weight="1"
+              android:background="@drawable/bg_badge_pill"
+              android:backgroundTint="@color/bg_card_secondary"
+              android:clickable="true"
+              android:focusable="true"
+              android:gravity="center"
+              android:orientation="horizontal"
+              android:paddingHorizontal="10dp"
+              android:paddingVertical="10dp">
+
+              <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/ic_comment"
+                app:tint="#38BDF8" />
+
+              <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                  android:id="@+id/tvSocialCommentCount"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="০"
+                  android:textColor="#38BDF8"
+                  android:textSize="14sp"
+                  android:textStyle="bold" />
+
+                <TextView
+                  android:id="@+id/tvSocialCommentLabel"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="কমেন্ট"
+                  android:textColor="@color/text_secondary"
+                  android:textSize="11sp" />
+              </LinearLayout>
+            </LinearLayout>
+
+            <!-- Mini Box 3: Likes / Amens -->
+            <LinearLayout
+              android:id="@+id/cardSocialLike"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="6dp"
+              android:layout_weight="1"
+              android:background="@drawable/bg_badge_pill"
+              android:backgroundTint="@color/badge_pill_red_bg"
+              android:clickable="true"
+              android:focusable="true"
+              android:gravity="center"
+              android:orientation="horizontal"
+              android:paddingHorizontal="10dp"
+              android:paddingVertical="10dp">
+
+              <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/ic_thumbs_up_feed"
+                app:tint="#F43F5E" />
+
+              <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                  android:id="@+id/tvSocialLikeCount"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="০"
+                  android:textColor="#F43F5E"
+                  android:textSize="14sp"
+                  android:textStyle="bold" />
+
+                <TextView
+                  android:id="@+id/tvSocialLikeLabel"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="লাইক"
+                  android:textColor="@color/text_secondary"
+                  android:textSize="11sp" />
+              </LinearLayout>
+            </LinearLayout>
+          </LinearLayout>
+        </LinearLayout>
+      </androidx.cardview.widget.CardView>
+
+      <!-- 6. MONTHLY STREAK & POINTS CALENDAR CARD (ধারাবাহিকতা) -->
+      <androidx.cardview.widget.CardView
+        android:id="@+id/cardMonthlyCalendar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="26dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1.5dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="18dp">
+
+          <!-- Calendar Header Row with Month Switcher -->
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- Left side: Calendar Icon + Title + Subtitle -->
+            <FrameLayout
+              android:layout_width="38dp"
+              android:layout_height="38dp"
+              android:background="@drawable/bg_badge_pill"
+              android:backgroundTint="@color/badge_pill_amber_bg">
+
+              <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_feat_calendar"
+                app:tint="#FFA000" />
+            </FrameLayout>
+
+            <LinearLayout
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="10dp"
+              android:layout_weight="1"
+              android:orientation="vertical">
+
+              <TextView
+                android:id="@+id/tvMonthlyStreakTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ধারাবাহিকতা ও ক্যালেন্ডার"
+                android:textColor="@color/accent_mint"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+              <TextView
+                android:id="@+id/tvMonthlyStreakSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="মাসিক পয়েন্ট অর্জনের ইতিহাস ও স্ট্রিক..."
+                android:textColor="@color/text_secondary"
+                android:textSize="11sp" />
+            </LinearLayout>
+
+            <!-- Right side: Month Switcher Pill (< আগস্ট ২০২৬ >) -->
+            <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@drawable/bg_badge_pill"
+              android:backgroundTint="@color/bg_badge_pill"
+              android:gravity="center_vertical"
+              android:orientation="horizontal"
+              android:paddingHorizontal="8dp"
+              android:paddingVertical="4dp">
+
+              <ImageButton
+                android:id="@+id/btnPrevMonth"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="পূর্ববর্তী মাস"
+                android:src="@drawable/ic_arrow_back"
+                app:tint="@color/accent_mint" />
+
+              <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingHorizontal="6dp">
+
+                <TextView
+                  android:id="@+id/tvCalendarMonthYear"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="আগস্ট"
+                  android:textColor="@color/accent_mint"
+                  android:textSize="12sp"
+                  android:textStyle="bold" />
+
+                <TextView
+                  android:id="@+id/tvCalendarYear"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="২০২৬"
+                  android:textColor="@color/text_secondary"
+                  android:textSize="9.5sp" />
+              </LinearLayout>
+
+              <ImageButton
+                android:id="@+id/btnNextMonth"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="পরবর্তী মাস"
+                android:src="@drawable/ic_arrow_forward"
+                app:tint="@color/accent_mint" />
+            </LinearLayout>
+          </LinearLayout>
+
+          <!-- Days of Week Header Row (শনি, রবি, সোম, মঙ্গল, বুধ, বৃহঃ, শুক্র) -->
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+              android:id="@+id/tvDaySat"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:gravity="center"
+              android:text="শনি"
+              android:textColor="@color/accent_mint"
+              android:textSize="12.5sp"
+              android:textStyle="bold" />
+
+            <TextView
+              android:id="@+id/tvDaySun"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:gravity="center"
+              android:text="রবি"
+              android:textColor="@color/accent_mint"
+              android:textSize="12.5sp"
+              android:textStyle="bold" />
+
+            <TextView
+              android:id="@+id/tvDayMon"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:gravity="center"
+              android:text="সোম"
+              android:textColor="@color/accent_mint"
+              android:textSize="12.5sp"
+              android:textStyle="bold" />
+
+            <TextView
+              android:id="@+id/tvDayTue"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:gravity="center"
+              android:text="মঙ্গল"
+              android:textColor="@color/accent_mint"
+              android:textSize="12.5sp"
+              android:textStyle="bold" />
+
+            <TextView
+              android:id="@+id/tvDayWed"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:gravity="center"
+              android:text="বুধ"
+              android:textColor="@color/accent_mint"
+              android:textSize="12.5sp"
+              android:textStyle="bold" />
+
+            <TextView
+              android:id="@+id/tvDayThu"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:gravity="center"
+              android:text="বৃহঃ"
+              android:textColor="@color/accent_mint"
+              android:textSize="12.5sp"
+              android:textStyle="bold" />
+
+            <TextView
+              android:id="@+id/tvDayFri"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:gravity="center"
+              android:text="শুক্র"
+              android:textColor="@color/accent_mint"
+              android:textSize="12.5sp"
+              android:textStyle="bold" />
+          </LinearLayout>
+
+          <!-- Dynamic Calendar Grid Container (Populated via Calendar Engine) -->
+          <LinearLayout
+            android:id="@+id/layoutCalendarGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical" />
+
+          <!-- Status Pill with Active Green Dot -->
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_badge_pill"
+            android:backgroundTint="@color/bg_badge_pill"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingHorizontal="14dp"
+            android:paddingVertical="8dp">
+
+            <View
+              android:layout_width="8dp"
+              android:layout_height="8dp"
+              android:background="@drawable/circle_progress_bg"
+              android:backgroundTint="@color/accent_mint" />
+
+            <TextView
+              android:id="@+id/tvCalendarStatusPill"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="8dp"
+              android:text="নিয়মিত আমল করায় দৈনিক ১০ পয়েন্ট অর্জিত"
+              android:textColor="@color/accent_mint"
+              android:textSize="12sp"
+              android:textStyle="bold" />
+          </LinearLayout>
+
+        </LinearLayout>
+      </androidx.cardview.widget.CardView>
+
+      <!-- 7. SPIRITUAL JOURNEY BANNER CARD (আধ্যাত্মিক যাত্রা) -->
+      <androidx.cardview.widget.CardView
+        android:id="@+id/cardSpiritualJourney"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardBackgroundColor="@color/accent_mint"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="0dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center_vertical"
+          android:orientation="horizontal"
+          android:paddingHorizontal="18dp"
+          android:paddingVertical="18dp">
+
+          <FrameLayout
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_badge_pill"
+            android:backgroundTint="#80FFFFFF">
+
+            <ImageView
+              android:layout_width="26dp"
+              android:layout_height="26dp"
+              android:layout_gravity="center"
+              android:src="@drawable/ic_sparkle"
+              app:tint="@color/dark_green" />
+          </FrameLayout>
+
+          <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+              android:id="@+id/tvSpiritualJourneyTitle"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="আধ্যাত্মিক যাত্রা"
+              android:textColor="@color/dark_green"
+              android:textSize="18sp"
+              android:textStyle="bold" />
+
+            <TextView
+              android:id="@+id/tvSpiritualJourneySubtitle"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="3dp"
+              android:lineSpacingExtra="2dp"
+              android:text="নিয়মিত সৎ কাজ করুন, নেক আমল ট্র্যাক করুন এবং ঈমানী শক্তি বৃদ্ধি করুন।"
+              android:textColor="@color/dark_green"
+              android:textSize="12.5sp" />
+          </LinearLayout>
+        </LinearLayout>
+      </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+  </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

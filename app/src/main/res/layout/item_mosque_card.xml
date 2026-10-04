@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_marginBottom="12dp"
+  app:cardBackgroundColor="@color/bg_card"
+  app:cardCornerRadius="16dp"
+  app:cardElevation="0dp"
+  app:strokeColor="@color/border_card"
+  app:strokeWidth="1dp">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Top Row: Name, Rating & Distance Pill -->
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@+id/layoutMosqueDistance"
+        android:orientation="vertical">
+
+        <TextView
+          android:id="@+id/tvMosqueName"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="বায়তুল মোকাররম জাতীয় মসজিদ"
+          android:textColor="@color/text_primary"
+          android:textSize="15.5sp"
+          android:textStyle="bold" />
+
+        <TextView
+          android:id="@+id/tvMosqueAddress"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="3dp"
+          android:text="পল্টন, ঢাকা ১০০০"
+          android:textColor="@color/text_secondary"
+          android:textSize="12sp" />
+      </LinearLayout>
+
+      <LinearLayout
+        android:id="@+id/layoutMosqueDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/bg_badge_pill"
+        android:backgroundTint="@color/bg_badge_pill"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="4dp">
+
+        <TextView
+          android:id="@+id/tvMosqueDistance"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="৩৫০ মিটার"
+          android:textColor="@color/accent_mint"
+          android:textSize="12sp"
+          android:textStyle="bold" />
+      </LinearLayout>
+    </RelativeLayout>
+
+    <!-- Status & Walking / Driving Estimates -->
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:orientation="horizontal">
+
+      <TextView
+        android:id="@+id/tvMosqueWalkingTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_badge_pill"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="3dp"
+        android:text="৫ মিনিট"
+        android:textColor="@color/text_primary"
+        android:textSize="11sp" />
+
+      <TextView
+        android:id="@+id/tvMosqueDrivingTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:background="@drawable/bg_badge_pill"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="3dp"
+        android:text="২ মিনিট"
+        android:textColor="@color/text_primary"
+        android:textSize="11sp" />
+
+      <TextView
+        android:id="@+id/tvMosqueStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:background="@drawable/bg_badge_pill"
+        android:backgroundTint="@color/bg_badge_pill"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="3dp"
+        android:text="● খোলা আছে"
+        android:textColor="@color/accent_mint"
+        android:textSize="11sp" />
+    </LinearLayout>
+
+
+
+    <!-- Bottom Action Buttons -->
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="12dp"
+      android:orientation="horizontal">
+
+      <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnWalkingDirections"
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:layout_width="0dp"
+        android:layout_height="38dp"
+        android:layout_marginEnd="6dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/accent_mint"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="হাঁটার পথ"
+        android:textColor="@color/btn_save_text"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:cornerRadius="10dp" />
+
+      <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnDrivingDirections"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="38dp"
+        android:layout_marginEnd="6dp"
+        android:layout_weight="1"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="ড্রাইভ"
+        android:textColor="@color/text_primary"
+        android:textSize="12sp"
+        app:cornerRadius="10dp"
+        app:strokeColor="@color/border_card" />
+
+      <com.google.android.material.button.MaterialButton android:id="@+id/btnShareMosque"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="42dp"
+        android:layout_height="38dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:padding="0dp"
+        android:text=""
+        android:textColor="@color/text_primary"
+        android:textSize="13sp"
+        app:cornerRadius="10dp"
+        app:strokeColor="@color/border_card" />
+    </LinearLayout>
+  </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

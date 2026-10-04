@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Spacing, Margins & Padding Tokens -->
+    <dimen name="spacing_2xs">2dp</dimen>
+    <dimen name="spacing_xs">4dp</dimen>
+    <dimen name="spacing_sm">8dp</dimen>
+    <dimen name="spacing_md">12dp</dimen>
+    <dimen name="spacing_lg">16dp</dimen>
+    <dimen name="spacing_xl">20dp</dimen>
+    <dimen name="spacing_2xl">24dp</dimen>
+    <dimen name="spacing_3xl">32dp</dimen>
+
+    <dimen name="screen_padding_horizontal">16dp</dimen>
+    <dimen name="screen_padding_top">12dp</dimen>
+    <dimen name="screen_padding_bottom">16dp</dimen>
+    <dimen name="card_padding">16dp</dimen>
+    <dimen name="card_padding_compact">12dp</dimen>
+
+    <!-- Typography Text Sizes -->
+    <dimen name="text_size_2xs">10sp</dimen>
+    <dimen name="text_size_xs">11sp</dimen>
+    <dimen name="text_size_sm">12sp</dimen>
+    <dimen name="text_size_body_sm">13sp</dimen>
+    <dimen name="text_size_body">14sp</dimen>
+    <dimen name="text_size_subtitle">15sp</dimen>
+    <dimen name="text_size_title">16sp</dimen>
+    <dimen name="text_size_title_lg">18sp</dimen>
+    <dimen name="text_size_heading">20sp</dimen>
+    <dimen name="text_size_display">24sp</dimen>
+    <dimen name="text_size_timer">28sp</dimen>
+    <dimen name="text_size_arabic">18sp</dimen>
+
+    <!-- Corner Radius -->
+    <dimen name="radius_xs">4dp</dimen>
+    <dimen name="radius_sm">8dp</dimen>
+    <dimen name="radius_md">12dp</dimen>
+    <dimen name="radius_lg">16dp</dimen>
+    <dimen name="radius_xl">20dp</dimen>
+    <dimen name="radius_pill">999dp</dimen>
+
+    <!-- Elevation -->
+    <dimen name="elevation_none">0dp</dimen>
+    <dimen name="elevation_sm">2dp</dimen>
+    <dimen name="elevation_md">4dp</dimen>
+    <dimen name="elevation_lg">8dp</dimen>
+
+    <!-- Component & Icon Sizes -->
+    <dimen name="icon_size_xs">14dp</dimen>
+    <dimen name="icon_size_sm">16dp</dimen>
+    <dimen name="icon_size_md">20dp</dimen>
+    <dimen name="icon_size_lg">24dp</dimen>
+    <dimen name="icon_size_xl">28dp</dimen>
+    <dimen name="icon_circle_container">48dp</dimen>
+    <dimen name="icon_badge_container">38dp</dimen>
+
+    <!-- Header, Bottom Navigation & Bars -->
+    <dimen name="header_height">60dp</dimen>
+    <dimen name="bottom_nav_height">72dp</dimen>
+    <dimen name="progress_bar_height">8dp</dimen>
+    <dimen name="bottom_sheet_handle_width">40dp</dimen>
+    <dimen name="bottom_sheet_handle_height">4dp</dimen>
+</resources>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardRozaHealthAdviceItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardBackgroundColor="@color/bg_card"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="0dp"
+    app:strokeColor="@color/border_card"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Health Advice Topic Title -->
+        <TextView
+            android:id="@+id/tvRozaHealthAdviceTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_primary"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            tools:text="সেহরিতে পুষ্টিকর ও ভারসাম্যপূর্ণ খাবার খাওয়া" />
+
+        <!-- Preview Text (Visible when collapsed) -->
+        <TextView
+            android:id="@+id/tvRozaHealthAdvicePreview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp"
+            tools:text="সেহরি এমনভাবে করুন যেন এটি আপনাকে সারাদিন শক্তি জোগায়..." />
+
+        <!-- Detailed Full Content (Visible when expanded) -->
+        <TextView
+            android:id="@+id/tvRozaHealthAdviceFullContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:lineSpacingExtra="5dp"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp"
+            android:visibility="gone"
+            tools:text="বিস্তারিত স্বাস্থ্য পরামর্শ ও চিকিৎসা বিজ্ঞান সম্মত ব্যাখ্যা..." />
+
+        <!-- Islamic Reference / Medical Source (Visible when expanded) -->
+        <TextView
+            android:id="@+id/tvRozaHealthAdviceReference"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/accent_teal"
+            android:textSize="13sp"
+            android:textStyle="italic"
+            android:visibility="gone"
+            tools:text="রেফারেন্স: সহীহ বুখারী, হাদিস ১৯২৩; স্বাস্থ্য বিজ্ঞান নির্দেশিকা" />
+
+        <!-- Expand / Collapse Action Row ("বিস্তারিত ⌵") -->
+        <LinearLayout
+            android:id="@+id/layoutRozaHealthAdviceToggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingVertical="4dp">
+
+            <TextView
+                android:id="@+id/tvRozaHealthAdviceToggleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="বিস্তারিত"
+                android:textColor="@color/accent_teal"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ivRozaHealthAdviceToggleChevron"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/ic_chevron_down"
+                app:tint="@color/accent_teal" />
+        </LinearLayout>
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

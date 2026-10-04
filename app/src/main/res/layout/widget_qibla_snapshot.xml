@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutWidgetRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_widget_glass_dark"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <!-- Top Row: Compass Icon & Location -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/ic_qibla" />
+
+        <TextView
+            android:id="@+id/tvWidgetLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="ঢাকা"
+            android:textColor="#94A3B8"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+    <!-- Qibla Angle -->
+    <TextView
+        android:id="@+id/tvWidgetQiblaAngle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="২৭৬°"
+        android:textColor="#34D399"
+        android:textSize="32sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvWidgetQiblaDirection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="কিবলা দিক"
+        android:textColor="#FFFFFF"
+        android:textSize="11sp"
+        android:textStyle="bold" />
+
+    <!-- Current Waqt Badge -->
+    <TextView
+        android:id="@+id/tvWidgetCurrentWaqt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bg_badge_pill"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="2dp"
+        android:text="বর্তমান ওয়াক্ত: আসর"
+        android:textColor="#F59E0B"
+        android:textSize="10sp"
+        android:textStyle="bold" />
+</LinearLayout>

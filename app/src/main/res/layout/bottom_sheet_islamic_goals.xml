@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/bg_main"
+  android:orientation="vertical">
+
+  <!-- Top Action Bar -->
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_top_bar"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="14dp"
+    android:paddingBottom="12dp">
+
+    <ImageButton android:id="@+id/btnCloseGoalsSheet"
+      android:layout_width="38dp"
+      android:layout_height="38dp"
+      android:background="@drawable/bg_badge_pill"
+      android:contentDescription="ফিরে যান"
+      android:src="@drawable/ic_arrow_back"
+      app:tint="@color/accent_mint" />
+
+    <LinearLayout
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="12dp"
+      android:layout_weight="1"
+      android:orientation="vertical">
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ইসলামিক লক্ষ্য ও রুটিন"
+        android:textColor="@color/text_primary"
+        android:textSize="17.5sp"
+        android:textStyle="bold" />
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="কুরআন, সালাত, জিকির ও আমল ট্র্যাকার"
+        android:textColor="@color/text_secondary"
+        android:textSize="11.5sp" />
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+      android:id="@+id/btnAddGoalTop"
+      style="@style/Widget.MaterialComponents.Button"
+      android:layout_width="wrap_content"
+      android:layout_height="36dp"
+      android:backgroundTint="@color/accent_mint"
+      android:text="+ নতুন লক্ষ্য"
+      android:textColor="@color/text_dark"
+      android:textSize="11.5sp"
+      android:textStyle="bold"
+      app:cornerRadius="8dp" />
+  </LinearLayout>
+
+  <androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="14dp"
+    android:paddingBottom="40dp">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <!-- 1. Privacy Banner -->
+      <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        app:cardBackgroundColor="@color/bg_card_secondary"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center_vertical"
+          android:orientation="horizontal"
+          android:padding="12dp">
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="18sp" />
+
+          <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:text="আপনার সমস্ত ইসলামিক লক্ষ্য ও রুটিন ১০০% ব্যক্তিগত এবং সম্পূর্ণ সুরক্ষিতভাবে আপনার ডিভাইসেই সংরক্ষিত।"
+            android:textColor="@color/text_secondary"
+            android:textSize="11.5sp" />
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- 2. Summary Stats Cards -->
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.card.MaterialCardView
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="5dp"
+          android:layout_weight="1"
+          app:cardBackgroundColor="@color/bg_card"
+          app:cardCornerRadius="14dp"
+          app:strokeColor="@color/border_card"
+          app:strokeWidth="1dp">
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+              android:id="@+id/tvActiveGoalsCount"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="৪টি"
+              android:textColor="@color/accent_mint"
+              android:textSize="17sp"
+              android:textStyle="bold" />
+
+            <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="2dp"
+              android:text="সক্রিয় লক্ষ্য"
+              android:textColor="@color/text_secondary"
+              android:textSize="11sp" />
+          </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="5dp"
+          android:layout_weight="1"
+          app:cardBackgroundColor="@color/bg_card"
+          app:cardCornerRadius="14dp"
+          app:strokeColor="@color/border_card"
+          app:strokeWidth="1dp">
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+              android:id="@+id/tvCompletedTodayCount"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="১টি"
+              android:textColor="#34D399"
+              android:textSize="17sp"
+              android:textStyle="bold" />
+
+            <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="2dp"
+              android:text="আজকের সম্পন্ন"
+              android:textColor="@color/text_secondary"
+              android:textSize="11sp" />
+          </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+      </LinearLayout>
+
+      <!-- 3. Dynamic Goals Container -->
+      <LinearLayout
+        android:id="@+id/layoutGoalsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+    </LinearLayout>
+  </androidx.core.widget.NestedScrollView>
+</LinearLayout>

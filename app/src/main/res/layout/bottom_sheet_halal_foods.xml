@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/bg_main"
+  android:orientation="vertical">
+
+  <!-- Top Standard App Bar (Centered with balanced back button) -->
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_main"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="14dp"
+    android:paddingBottom="12dp">
+
+    <ImageButton android:id="@+id/btnCloseHalalSheet"
+      android:layout_width="38dp"
+      android:layout_height="38dp"
+      android:background="@drawable/bg_badge_pill"
+      android:backgroundTint="@color/bg_badge_pill"
+      android:contentDescription="ফিরে যান"
+      android:src="@drawable/ic_arrow_back"
+      app:tint="@color/accent_mint" />
+
+    <LinearLayout
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:gravity="center"
+      android:orientation="vertical">
+
+      <TextView
+        android:id="@+id/tvHalalSheetTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="হালাল ফুড ও পুষ্টি গাইড"
+        android:textColor="@color/text_primary"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+      <TextView
+        android:id="@+id/tvHalalSyncStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="১০০% সহীহ রেফারেন্স ও ফিকহি বিশ্লেষণ"
+        android:textColor="@color/accent_mint"
+        android:textSize="11sp" />
+    </LinearLayout>
+
+    <!-- Invisible placeholder view of same 38dp width to balance back button for exact center alignment -->
+    <View
+      android:layout_width="38dp"
+      android:layout_height="38dp" />
+  </LinearLayout>
+
+  <!-- Search Input -->
+  <FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="12dp"
+    android:paddingBottom="6dp">
+
+    <EditText
+      android:id="@+id/etSearchHalal"
+      android:layout_width="match_parent"
+      android:layout_height="46dp"
+      android:background="@drawable/bg_card_active"
+      android:drawableStart="@drawable/ic_search"
+      android:drawablePadding="10dp"
+      android:drawableTint="@color/accent_mint"
+      android:hint="খাবার, E-Code (যেমন E120), বা উপাদান খুঁজুন..."
+      android:imeOptions="actionSearch"
+      android:inputType="text"
+      android:paddingHorizontal="14dp"
+      android:textColor="@color/text_primary"
+      android:textColorHint="#5A7D73"
+      android:textSize="13.5sp" />
+  </FrameLayout>
+
+  <!-- Status Filters Carousel -->
+  <HorizontalScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:overScrollMode="never"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="4dp"
+    android:paddingBottom="6dp"
+    android:scrollbars="none">
+
+    <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+      <TextView
+        android:id="@+id/tabHalalStatusAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        android:background="@drawable/bg_badge_pill"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="5dp"
+        android:text="সব"
+        android:textColor="@color/text_primary"
+        android:textSize="11.5sp" />
+
+      <TextView
+        android:id="@+id/tabHalalStatusHalal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        android:background="@drawable/bg_badge_pill"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="5dp"
+        android:text="হালাল"
+        android:textColor="@color/text_primary"
+        android:textSize="11.5sp" />
+
+      <TextView
+        android:id="@+id/tabHalalStatusHaram"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        android:background="@drawable/bg_badge_pill"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="5dp"
+        android:text="হারাম"
+        android:textColor="@color/text_primary"
+        android:textSize="11.5sp" />
+
+      <TextView
+        android:id="@+id/tabHalalStatusMushbooh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_badge_pill"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="5dp"
+        android:text="সন্দেহজনক"
+        android:textColor="@color/text_primary"
+        android:textSize="11.5sp" />
+    </LinearLayout>
+  </HorizontalScrollView>
+
+  <!-- Item Count & Summary -->
+  <TextView
+    android:id="@+id/tvHalalListCount"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="18dp"
+    android:paddingTop="2dp"
+    android:paddingBottom="6dp"
+    android:text="মোট রেকর্ড: ৩০টি উপাদান প্রদর্শিত"
+    android:textColor="#7BA79B"
+    android:textSize="11.5sp" />
+
+  <!-- RecyclerView -->
+  <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/rvHalalFoods"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:clipToPadding="false"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="4dp"
+    android:paddingBottom="24dp" />
+
+</LinearLayout>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:id="@+id/cardHalalItem"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_marginBottom="12dp"
+  android:clickable="true"
+  android:focusable="true"
+  app:cardBackgroundColor="@color/bg_card"
+  app:cardCornerRadius="16dp"
+  app:cardElevation="0dp"
+  app:strokeColor="@color/border_card"
+  app:strokeWidth="1.2dp">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="14dp">
+
+    <!-- Top Row: Status Badge & Category Pill -->
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="10dp"
+      android:gravity="center_vertical"
+      android:orientation="horizontal">
+
+      <TextView
+        android:id="@+id/tvHalalStatusBadge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/bg_badge_pill"
+        android:backgroundTint="@color/bg_card_active"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="4dp"
+        android:text="হালাল"
+        android:textColor="@color/accent_mint"
+        android:textSize="11.5sp"
+        android:textStyle="bold" />
+
+      <TextView
+        android:id="@+id/tvHalalCategoryPill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_badge_pill"
+        android:backgroundTint="@color/bg_badge_pill"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="4dp"
+        android:text="সুন্নাহ খাদ্য"
+        android:textColor="@color/text_secondary"
+        android:textSize="11sp" />
+    </LinearLayout>
+
+    <!-- Main Content with Thumbnail & Text -->
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+      <!-- Rounded Thumbnail Image -->
+      <com.google.android.material.card.MaterialCardView
+        android:layout_width="84dp"
+        android:layout_height="84dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1dp">
+
+        <ImageView
+          android:id="@+id/ivHalalFoodThumb"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:contentDescription="খাবারের ছবি"
+          android:scaleType="centerCrop"
+          android:src="@drawable/bg_card_secondary" />
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- Info Column -->
+      <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+          android:id="@+id/tvHalalArabicName"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="عَسَل"
+          android:textColor="#34D399"
+          android:textSize="13sp"
+          android:textStyle="bold" />
+
+        <TextView
+          android:id="@+id/tvHalalTitle"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="2dp"
+          android:text="খাঁটি মধু"
+          android:textColor="@color/text_primary"
+          android:textSize="15.5sp"
+          android:textStyle="bold" />
+
+        <TextView
+          android:id="@+id/tvHalalScientificName"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="2dp"
+          android:ellipsize="end"
+          android:maxLines="1"
+          android:text="উৎস: প্রাকৃতিক মৌ নির্যাস"
+          android:textColor="@color/accent_mint"
+          android:textSize="11.5sp" />
+
+        <TextView
+          android:id="@+id/tvHalalDescription"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="4dp"
+          android:ellipsize="end"
+          android:lineSpacingMultiplier="1.15"
+          android:maxLines="2"
+          android:text="রোগ প্রতিরোধ ক্ষমতা বাড়ায়, হজমে সহায়তা করে এবং পেটের পীড়া দূর করে।"
+          android:textColor="@color/text_secondary"
+          android:textSize="12sp" />
+      </LinearLayout>
+    </LinearLayout>
+
+    <!-- Bottom Row: Reference Citation & Action Link -->
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:gravity="center_vertical"
+      android:orientation="horizontal">
+
+      <TextView
+        android:id="@+id/tvHalalReference"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="সূরা আন-নাহল: ৬৯ • সহীহ বুখারী: ৫৬৮৪"
+        android:textColor="@color/text_secondary"
+        android:textSize="11sp" />
+
+      <TextView
+        android:id="@+id/tvHalalCardAction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="বিস্তারিত "
+        android:textColor="@color/accent_mint"
+        android:textSize="11.5sp"
+        android:textStyle="bold" />
+    </LinearLayout>
+
+  </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,48 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="44dp"
+    android:height="44dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+
+    <!-- Circle Clip Background -->
+    <path
+        android:pathData="M50,50m-48,0a48,48 0,1 1,96 0a48,48 0,1 1,-96 0">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:angle="90"
+                android:endColor="#BE123C"
+                android:startColor="#FB923C"
+                android:type="linear" />
+        </aapt:attr>
+    </path>
+
+    <!-- Sinking Sunset Orb -->
+    <path
+        android:fillColor="#FEF08A"
+        android:pathData="M50,56m-15,0a15,15 0,1 1,30 0a15,15 0,1 1,-30 0" />
+
+    <!-- Twilight Sand Dunes -->
+    <path
+        android:fillColor="#881337"
+        android:fillAlpha="0.7"
+        android:pathData="M0,74 Q35,64 70,76 T100,72 L100,100 L0,100 Z" />
+
+    <path
+        android:fillColor="#4C0519"
+        android:pathData="M0,84 Q45,72 85,82 L100,80 L100,100 L0,100 Z" />
+
+    <!-- Palm Trees Silhouettes -->
+    <path
+        android:fillColor="#28030E"
+        android:pathData="M24,65 Q26,75 28,95 L26,95 Q24,75 22,65 Z" />
+    <path
+        android:fillColor="#28030E"
+        android:pathData="M23,65 Q15,62 10,68 Q18,65 23,65 Z" />
+    <path
+        android:fillColor="#28030E"
+        android:pathData="M23,65 Q30,60 36,66 Q28,64 23,65 Z" />
+    <path
+        android:fillColor="#28030E"
+        android:pathData="M23,65 Q23,55 24,52 Q24,58 23,65 Z" />
+</vector>

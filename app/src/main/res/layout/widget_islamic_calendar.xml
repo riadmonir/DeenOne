@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutWidgetRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_widget_emerald_gradient"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <!-- Month Banner -->
+    <TextView
+        android:id="@+id/tvWidgetHijriMonth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_badge_pill"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="2dp"
+        android:text="রবিউল আউয়াল"
+        android:textColor="#34D399"
+        android:textSize="11sp"
+        android:textStyle="bold" />
+
+    <!-- Giant Day Number -->
+    <TextView
+        android:id="@+id/tvWidgetHijriDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="১৭"
+        android:textColor="#FFFFFF"
+        android:textSize="38sp"
+        android:textStyle="bold" />
+
+    <!-- Day of week & Gregorian date -->
+    <TextView
+        android:id="@+id/tvWidgetGregorianSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="রবিবার • ৩০ আগস্ট"
+        android:textColor="#D1FAE5"
+        android:textSize="11sp" />
+
+    <!-- Event Badge -->
+    <TextView
+        android:id="@+id/tvWidgetEventBadge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="জুমু'আ মোবারক"
+        android:textColor="#FDE047"
+        android:textSize="10sp"
+        android:textStyle="bold" />
+</LinearLayout>

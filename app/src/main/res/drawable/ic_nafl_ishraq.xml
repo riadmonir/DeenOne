@@ -1,0 +1,135 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+
+    <!-- 1. Outer Soft Glow Ring -->
+    <path
+        android:fillColor="#1510B981"
+        android:pathData="M50,50m-48,0a48,48 0,1 1,96 0a48,48 0,1 1,-96 0" />
+
+    <!-- 2. Circular Base Background: Dawn to Morning Emerald & Golden Sun Glow -->
+    <path
+        android:pathData="M50,50m-44,0a44,44 0,1 1,88 0a44,44 0,1 1,-88 0">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:angle="90"
+                android:endColor="#047857"
+                android:startColor="#022C22"
+                android:type="linear" />
+        </aapt:attr>
+    </path>
+
+    <!-- 3. Rising Golden Morning Sun & Radiant Sunbeams -->
+    <path
+        android:fillColor="#FEF08A"
+        android:pathData="M50,42 A14,14 0 1,0 50,14 A14,14 0 1,0 50,42 Z" />
+    <path
+        android:fillColor="#FBBF24"
+        android:fillAlpha="0.6"
+        android:pathData="M50,40 A12,12 0 1,0 50,16 A12,12 0 1,0 50,40 Z" />
+
+    <!-- Sun rays -->
+    <path
+        android:strokeColor="#FDE68A"
+        android:strokeWidth="1.5"
+        android:strokeAlpha="0.7"
+        android:pathData="M50,10 L50,6 M36,15 L32,12 M64,15 L68,12 M28,28 L24,28 M72,28 L76,28 M35,40 L31,43 M65,40 L69,43" />
+
+    <!-- 4. Mosque Complex in Forefront (Mosque & Madrasa Architecture) -->
+    <!-- Base Platform -->
+    <path
+        android:fillColor="#064E3B"
+        android:pathData="M10,88 L90,88 L85,92 L15,92 Z" />
+    <path
+        android:fillColor="#022C22"
+        android:pathData="M15,92 L85,92 L82,94 L18,94 Z" />
+
+    <!-- Central Grand Dome -->
+    <path
+        android:pathData="M34,88 L34,62 C34,48 44,42 50,40 C56,42 66,48 66,62 L66,88 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:angle="90"
+                android:endColor="#34D399"
+                android:startColor="#065F46"
+                android:type="linear" />
+        </aapt:attr>
+    </path>
+
+    <!-- Crescent Pinnacle on Grand Dome -->
+    <path
+        android:fillColor="#FCD34D"
+        android:pathData="M49.5,40 L49.5,35 L50.5,35 L50.5,40 Z" />
+    <path
+        android:fillColor="#FCD34D"
+        android:pathData="M50,33 A2,2 0 1,0 50,37 A2,2 0 1,0 50,33 Z" />
+
+    <!-- Left Minaret -->
+    <path
+        android:fillColor="#047857"
+        android:pathData="M22,88 L22,46 L20,46 L20,44 L23.5,34 L27,44 L27,46 L25,46 L25,88 Z" />
+    <path
+        android:fillColor="#34D399"
+        android:pathData="M20.5,58 L26.5,58 L26.5,60 L20.5,60 Z" />
+    <path
+        android:fillColor="#FDE047"
+        android:pathData="M23,32 A1.2,1.2 0 1,0 23,34.4 A1.2,1.2 0 1,0 23,32 Z" />
+
+    <!-- Right Minaret -->
+    <path
+        android:fillColor="#047857"
+        android:pathData="M75,88 L75,46 L73,46 L73,44 L76.5,34 L80,44 L80,46 L78,46 L78,88 Z" />
+    <path
+        android:fillColor="#34D399"
+        android:pathData="M73.5,58 L79.5,58 L79.5,60 L73.5,60 Z" />
+    <path
+        android:fillColor="#FDE047"
+        android:pathData="M76,32 A1.2,1.2 0 1,0 76,34.4 A1.2,1.2 0 1,0 76,32 Z" />
+
+    <!-- Mosque Arched Windows / Mihrab Gate in Dome -->
+    <path
+        android:fillColor="#022C22"
+        android:pathData="M46,88 L46,74 C46,71 48,69 50,69 C52,69 54,71 54,74 L54,88 Z" />
+    <path
+        android:fillColor="#FDE047"
+        android:fillAlpha="0.7"
+        android:pathData="M48,88 L48,77 C48,75 49,74 50,74 C51,74 52,75 52,77 L52,88 Z" />
+
+    <!-- 5. GLOSSY Specular Top Arc Reflection (কাঁচের ওপরের স্নিগ্ধ চকচকে রিফ্লেকশন) -->
+    <path
+        android:pathData="M16,46 C18,22 32,8 50,8 C68,8 82,22 84,46 C68,54 32,54 16,46 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:angle="270"
+                android:startColor="#65FFFFFF"
+                android:endColor="#00FFFFFF"
+                android:type="linear" />
+        </aapt:attr>
+    </path>
+
+    <!-- Bottom Crystal Rim Reflection -->
+    <path
+        android:fillColor="#35FFFFFF"
+        android:pathData="M30,88 C38,92 62,92 70,88 C62,90 38,90 30,88 Z" />
+
+    <!-- 6. Outer White Glass Bevel Ring -->
+    <path
+        android:pathData="M50,50m-44,0a44,44 0,1 1,88 0a44,44 0,1 1,-88 0"
+        android:strokeColor="#C0FFFFFF"
+        android:strokeWidth="1.2" />
+
+    <!-- 7. Vibrant Themed Glass Rim -->
+    <path
+        android:pathData="M50,50m-42.5,0a42.5,42.5 0,1 1,85 0a42.5,42.5 0,1 1,-85 0"
+        android:strokeColor="#10B981"
+        android:strokeWidth="1.8" />
+
+    <!-- 8. Inner Golden Glass Ring -->
+    <path
+        android:pathData="M50,50m-40.5,0a40.5,40.5 0,1 1,81 0a40.5,40.5 0,1 1,-81 0"
+        android:strokeColor="#55FDE047"
+        android:strokeWidth="0.8" />
+</vector>

@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/bg_main">
+
+  <!-- 1. Top App Bar & Header (Consistent Global Header with Standing Divider) -->
+  <LinearLayout
+    android:id="@+id/layoutNotifHistoryHeader"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_card"
+    android:orientation="vertical"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="12dp"
+    android:paddingBottom="10dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <!-- LEFT: Back / Close Button -->
+      <FrameLayout
+        android:id="@+id/btnCloseNotifHistorySheet"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bg_badge_pill"
+        android:backgroundTint="@color/bg_badge_pill"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageView
+          android:layout_width="20dp"
+          android:layout_height="20dp"
+          android:layout_gravity="center"
+          android:src="@drawable/ic_arrow_back"
+          app:tint="@color/accent_mint" />
+      </FrameLayout>
+
+      <!-- CENTER: DeenOne Brand Title -->
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:fontFamily="sans-serif-medium"
+          android:text="Deen"
+          android:textColor="@color/text_primary"
+          android:textSize="22sp"
+          android:textStyle="bold" />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:fontFamily="sans-serif-medium"
+          android:text="One"
+          android:textColor="@color/accent_mint"
+          android:textSize="22sp"
+          android:textStyle="bold" />
+      </LinearLayout>
+
+      <!-- RIGHT: Theme Toggle, Standing Divider, and Bell Alarm Button -->
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!-- 1. Theme Mode Button (Moon) -->
+        <FrameLayout android:id="@+id/btnNotifThemeToggle"
+          android:layout_width="38dp"
+          android:layout_height="38dp"
+          android:background="@drawable/bg_badge_pill"
+          android:backgroundTint="@color/bg_badge_pill"
+          android:clickable="true"
+          android:focusable="true">
+
+          <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_moon"
+            app:tint="@color/accent_mint" />
+        </FrameLayout>
+
+        <!-- Standing Vertical Divider Bar -->
+        <View
+          android:layout_width="1.5dp"
+          android:layout_height="20dp"
+          android:layout_marginHorizontal="6dp"
+          android:background="@color/border_card" />
+
+        <!-- 2. Notification Bell Button (Active) -->
+        <FrameLayout android:id="@+id/btnNotifBellAction"
+          android:layout_width="38dp"
+          android:layout_height="38dp"
+          android:background="@drawable/bg_badge_pill"
+          android:backgroundTint="@color/bg_badge_pill"
+          android:clickable="true"
+          android:focusable="true">
+
+          <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_notification"
+            app:tint="@color/accent_mint" />
+        </FrameLayout>
+      </LinearLayout>
+    </RelativeLayout>
+  </LinearLayout>
+
+  <androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:fillViewport="true"
+    android:overScrollMode="never"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/layoutNotifHistoryHeader">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:paddingHorizontal="16dp"
+      android:paddingTop="12dp"
+      android:paddingBottom="32dp">
+
+      <!-- 2. Hero Notification Card (Exact Reference UI) -->
+      <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardNotificationHero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="16dp">
+
+          <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentStart="true"
+              android:orientation="vertical">
+
+              <!-- Top Chip Badge -->
+              <TextView
+                android:id="@+id/tvNotifHeroBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_badge_pill"
+                android:backgroundTint="@color/bg_card_active"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="4dp"
+                android:text="• আপডেট ও নোটিশ"
+                android:textColor="@color/accent_mint"
+                android:textSize="11.5sp"
+                android:textStyle="bold" />
+
+              <!-- Main Title -->
+              <TextView
+                android:id="@+id/tvNotifHeroTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="নোটিফিকেশন"
+                android:textColor="@color/accent_mint"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+              <!-- Subtitle -->
+              <TextView
+                android:id="@+id/tvNotifHeroSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="আপনার সর্বশেষ আপডেট"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp" />
+            </LinearLayout>
+
+            <!-- Right Total Count Pill Badge -->
+            <TextView
+              android:id="@+id/tvUnreadCountBadge"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentEnd="true"
+              android:layout_centerVertical="true"
+              android:background="@drawable/bg_badge_pill"
+              android:backgroundTint="@color/bg_badge_pill"
+              android:paddingHorizontal="12dp"
+              android:paddingVertical="6dp"
+              android:text="মোট: ০"
+              android:textColor="@color/accent_mint"
+              android:textSize="12sp"
+              android:textStyle="bold" />
+          </RelativeLayout>
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- 3. Empty State Container -->
+      <LinearLayout
+        android:id="@+id/layoutNotifEmptyState"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="32dp"
+        android:visibility="gone">
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text=""
+          android:textSize="40sp" />
+
+        <TextView
+          android:id="@+id/tvNotifEmptyTitle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="8dp"
+          android:text="কোনো নোটিফিকেশন নেই"
+          android:textColor="@color/text_primary"
+          android:textSize="14sp"
+          android:textStyle="bold" />
+
+        <TextView
+          android:id="@+id/tvNotifEmptySubtitle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="4dp"
+          android:text="পরবর্তী আযান বা আমলের নোটিফিকেশন এখানে সংরক্ষিত হবে"
+          android:textColor="@color/text_secondary"
+          android:textSize="12sp" />
+      </LinearLayout>
+
+      <!-- 4. RecyclerView for Notifications -->
+      <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvNotificationHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:nestedScrollingEnabled="false"
+        android:overScrollMode="never"
+        tools:listitem="@layout/item_notification_history_card" />
+
+    </LinearLayout>
+  </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

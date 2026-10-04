@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/bg_main"
+  android:orientation="vertical">
+
+  <!-- Top Header Bar (Matching Screenshot: লিডারবোর্ড ও দ্বীনি র‍্যাংক) -->
+  <RelativeLayout
+    android:id="@+id/layoutTopHeader"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_top_bar"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="14dp"
+    android:paddingBottom="14dp">
+
+    <FrameLayout
+      android:id="@+id/btnBackLeaderboard"
+      android:layout_width="38dp"
+      android:layout_height="38dp"
+      android:layout_alignParentStart="true"
+      android:layout_centerVertical="true"
+      android:background="@drawable/bg_circular_counter"
+      android:backgroundTint="@color/bg_badge_pill"
+      android:clickable="true"
+      android:focusable="true">
+
+      <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_arrow_back"
+        app:tint="@color/accent_mint" />
+    </FrameLayout>
+
+    <!-- Center: লিডারবোর্ড ও দ্বীনি র‍্যাংক -->
+    <TextView
+      android:id="@+id/tvLeaderboardHeaderTitle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerInParent="true"
+      android:text="লিডারবোর্ড ও দ্বীনি র‍্যাংক"
+      android:textColor="@color/text_primary"
+      android:textSize="19sp"
+      android:textStyle="bold" />
+
+
+  </RelativeLayout>
+
+  <!-- Main Scrollable Content -->
+  <androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:clipToPadding="false"
+    android:overScrollMode="never"
+    android:paddingHorizontal="14dp"
+    android:paddingTop="6dp"
+    android:paddingBottom="24dp">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <!-- 1. TOP 3 PODIUM CONTAINER CARD (Screenshot Golden/Dark Border Matching) -->
+      <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardTopPodiumContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1.2dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:paddingHorizontal="12dp"
+          android:paddingTop="26dp"
+          android:paddingBottom="20dp"
+          android:gravity="bottom">
+
+          <!-- Rank 2 (Left - Silver Medalist) -->
+          <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <!-- Silver Medal Graphic -->
+            <ImageView
+              android:layout_width="32dp"
+              android:layout_height="32dp"
+              android:src="@drawable/ic_medal_reward"
+              app:tint="@color/text_secondary"
+              android:contentDescription="২য় স্থান" />
+
+            <TextView
+              android:id="@+id/tvPodium2Name"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="6dp"
+              android:ellipsize="end"
+              android:gravity="center"
+              android:maxLines="1"
+              android:text="-"
+              android:textColor="@color/text_primary"
+              android:textSize="14sp"
+              android:textStyle="bold" />
+
+            <TextView
+              android:id="@+id/tvPodium2Points"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="2dp"
+              android:text="-"
+              android:textColor="#FFA000"
+              android:textSize="12sp"
+              android:textStyle="bold" />
+
+            <!-- Dark Pedestal Pillar -->
+            <View
+              android:layout_width="match_parent"
+              android:layout_height="65dp"
+              android:layout_marginTop="10dp"
+              android:layout_marginHorizontal="10dp"
+              android:background="@drawable/bg_badge_pill"
+              android:backgroundTint="@color/bg_card_secondary" />
+          </LinearLayout>
+
+          <!-- Rank 1 (Center - Gold Crown Champion - Tallest) -->
+          <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <!-- Gold Champion Medal Graphic -->
+            <ImageView
+              android:layout_width="38dp"
+              android:layout_height="38dp"
+              android:src="@drawable/ic_medal_reward"
+              app:tint="@color/accent_gold"
+              android:contentDescription="১ম স্থান" />
+
+            <TextView
+              android:id="@+id/tvPodium1Name"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="6dp"
+              android:ellipsize="end"
+              android:gravity="center"
+              android:maxLines="1"
+              android:text="-"
+              android:textColor="@color/text_primary"
+              android:textSize="15.5sp"
+              android:textStyle="bold" />
+
+            <TextView
+              android:id="@+id/tvPodium1Points"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="2dp"
+              android:text="-"
+              android:textColor="#FFA000"
+              android:textSize="13sp"
+              android:textStyle="bold" />
+
+            <!-- Tallest Dark Pedestal Pillar -->
+            <View
+              android:layout_width="match_parent"
+              android:layout_height="100dp"
+              android:layout_marginTop="10dp"
+              android:layout_marginHorizontal="10dp"
+              android:background="@drawable/bg_badge_pill"
+              android:backgroundTint="@color/bg_card_secondary" />
+          </LinearLayout>
+
+          <!-- Rank 3 (Right - Bronze Medalist - Shortest) -->
+          <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <!-- Bronze Medal Graphic -->
+            <ImageView
+              android:layout_width="32dp"
+              android:layout_height="32dp"
+              android:src="@drawable/ic_medal_reward"
+              app:tint="#CD7F32"
+              android:contentDescription="৩য় স্থান" />
+
+            <TextView
+              android:id="@+id/tvPodium3Name"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="6dp"
+              android:ellipsize="end"
+              android:gravity="center"
+              android:maxLines="1"
+              android:text="-"
+              android:textColor="@color/text_primary"
+              android:textSize="14sp"
+              android:textStyle="bold" />
+
+            <TextView
+              android:id="@+id/tvPodium3Points"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="2dp"
+              android:text="-"
+              android:textColor="#FFA000"
+              android:textSize="12sp"
+              android:textStyle="bold" />
+
+            <!-- Shortest Dark Pedestal Pillar -->
+            <View
+              android:layout_width="match_parent"
+              android:layout_height="45dp"
+              android:layout_marginTop="10dp"
+              android:layout_marginHorizontal="10dp"
+              android:background="@drawable/bg_badge_pill"
+              android:backgroundTint="@color/bg_card_secondary" />
+          </LinearLayout>
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- 2. LEADERBOARD LIST CONTAINER (Real-time Ranked User Cards) -->
+      <LinearLayout
+        android:id="@+id/layoutLeaderboardList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:orientation="vertical">
+
+        <!-- Dynamically Populated Ranked Cards -->
+      </LinearLayout>
+
+    </LinearLayout>
+  </androidx.core.widget.NestedScrollView>
+
+  <!-- 3. FIXED 5-TAB BOTTOM NAVIGATION BAR (PIXEL-PERFECT MATCH WITH HOME) -->
+  <LinearLayout
+    android:id="@+id/bottomNavContainer"
+    android:layout_width="match_parent"
+    android:layout_height="68dp"
+    android:background="@drawable/bg_bottom_nav_glassy"
+    android:elevation="8dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingHorizontal="6dp"
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp">
+
+    <!-- 1. Home Tab -->
+    <LinearLayout
+      android:id="@+id/tabHome"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:background="@drawable/bg_nav_tab_ripple"
+      android:clickable="true"
+      android:focusable="true"
+      android:gravity="center"
+      android:orientation="vertical">
+
+      <ImageView
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:src="@drawable/ic_nav_home"
+        app:tint="@color/text_secondary" />
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="@string/nav_home"
+        android:textColor="@color/text_secondary"
+        android:textSize="11sp" />
+    </LinearLayout>
+
+    <!-- 2. Salat Tab -->
+    <LinearLayout
+      android:id="@+id/tabSalat"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:background="@drawable/bg_nav_tab_ripple"
+      android:clickable="true"
+      android:focusable="true"
+      android:gravity="center"
+      android:orientation="vertical">
+
+      <ImageView
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:src="@drawable/ic_nav_salat"
+        app:tint="@color/text_secondary" />
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="@string/nav_salat"
+        android:textColor="@color/text_secondary"
+        android:textSize="11sp" />
+    </LinearLayout>
+
+    <!-- 3. Amal Tab -->
+    <LinearLayout
+      android:id="@+id/tabAmal"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:background="@drawable/bg_nav_tab_ripple"
+      android:clickable="true"
+      android:focusable="true"
+      android:gravity="center"
+      android:orientation="vertical">
+
+      <ImageView
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:src="@drawable/ic_nav_amal"
+        app:tint="@color/text_secondary" />
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="@string/nav_amal"
+        android:textColor="@color/text_secondary"
+        android:textSize="11sp" />
+    </LinearLayout>
+
+    <!-- 4. Rank Tab (Active) -->
+    <LinearLayout
+      android:id="@+id/tabRank"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:background="@drawable/bg_nav_tab_ripple"
+      android:clickable="true"
+      android:focusable="true"
+      android:gravity="center"
+      android:orientation="vertical">
+
+      <FrameLayout
+        android:layout_width="52dp"
+        android:layout_height="28dp"
+        android:background="@drawable/bg_bottom_nav_tab_active">
+
+        <ImageView
+          android:layout_width="18dp"
+          android:layout_height="18dp"
+          android:layout_gravity="center"
+          android:src="@drawable/ic_nav_rank"
+          app:tint="@color/text_mint_bright" />
+      </FrameLayout>
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="@string/nav_rank"
+        android:textColor="@color/text_mint_bright"
+        android:textSize="11sp"
+        android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- 5. Community Tab -->
+    <LinearLayout
+      android:id="@+id/tabCommunity"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:background="@drawable/bg_nav_tab_ripple"
+      android:clickable="true"
+      android:focusable="true"
+      android:gravity="center"
+      android:orientation="vertical">
+
+      <ImageView
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:src="@drawable/ic_nav_community"
+        app:tint="@color/text_secondary" />
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="@string/nav_community"
+        android:textColor="@color/text_secondary"
+        android:textSize="11sp" />
+    </LinearLayout>
+  </LinearLayout>
+
+</LinearLayout>

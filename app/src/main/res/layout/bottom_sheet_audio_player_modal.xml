@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/bg_main"
+  android:orientation="vertical">
+
+  <!-- Top Drag Handle & Close Bar -->
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="12dp"
+    android:paddingBottom="8dp">
+
+    <ImageButton
+      android:id="@+id/btnMinimizeAudioModal"
+      android:layout_width="38dp"
+      android:layout_height="38dp"
+      android:background="@drawable/bg_badge_pill"
+      android:contentDescription="মিনিমাইজ"
+      android:src="@drawable/ic_chevron_down"
+      app:tint="@color/accent_mint" />
+
+    <TextView
+      android:id="@+id/tvAudioModalCategoryBadge"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginHorizontal="12dp"
+      android:layout_weight="1"
+      android:gravity="center"
+      android:text="ওয়াজ ও বয়ান • বাংলা"
+      android:textColor="@color/accent_mint"
+      android:textSize="13sp"
+      android:textStyle="bold" />
+
+    <ImageButton
+      android:id="@+id/btnAudioModalFavorite"
+      android:layout_width="38dp"
+      android:layout_height="38dp"
+      android:background="@drawable/bg_badge_pill"
+      android:contentDescription="পছন্দ"
+      android:src="@drawable/ic_favorite_border"
+      app:tint="@color/text_secondary" />
+  </LinearLayout>
+
+  <androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:clipToPadding="false"
+    android:overScrollMode="never"
+    android:paddingHorizontal="24dp"
+    android:paddingTop="12dp"
+    android:paddingBottom="24dp">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center_horizontal"
+      android:orientation="vertical">
+
+      <!-- Album Art / Thumbnail Container with Glow -->
+      <FrameLayout
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_badge_pill"
+        android:backgroundTint="@color/bg_badge_pill">
+
+        <ImageView
+          android:id="@+id/ivAudioModalThumbnail"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_margin="12dp"
+          android:scaleType="centerCrop"
+          android:src="@drawable/ic_feat_audio"
+          app:tint="@color/accent_mint" />
+      </FrameLayout>
+
+      <!-- Audio Title -->
+      <TextView
+        android:id="@+id/tvAudioModalTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="জীবনের সেরা ইসলামিক নসীহত ও ঈমানী বয়ান"
+        android:textColor="@color/text_primary"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+      <!-- Speaker / Author -->
+      <TextView
+        android:id="@+id/tvAudioModalSpeaker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:gravity="center"
+        android:text="মাওলানা মিজানুর রহমান আজহারী"
+        android:textColor="@color/accent_mint"
+        android:textSize="14sp" />
+
+      <!-- Buffering / Status Indicator -->
+      <TextView
+        android:id="@+id/tvAudioModalStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_badge_pill"
+        android:backgroundTint="@color/bg_badge_pill"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="4dp"
+        android:text="● লাইভ চলছে"
+        android:textColor="@color/accent_mint"
+        android:textSize="12sp" />
+
+      <!-- Seeking Slider & Timestamps -->
+      <SeekBar
+        android:id="@+id/seekBarAudioModal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:max="1000"
+        android:progressTint="@color/accent_mint"
+        android:thumbTint="@color/accent_mint" />
+
+      <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:paddingHorizontal="6dp">
+
+        <TextView
+          android:id="@+id/tvAudioModalCurrentTime"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentStart="true"
+          android:text="০০:০০"
+          android:textColor="@color/text_secondary"
+          android:textSize="12sp" />
+
+        <TextView
+          android:id="@+id/tvAudioModalTotalDuration"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentEnd="true"
+          android:text="১০:০০"
+          android:textColor="@color/text_secondary"
+          android:textSize="12sp" />
+      </RelativeLayout>
+
+      <!-- Main Media Control Bar -->
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!-- Rewind 10s -->
+        <FrameLayout
+          android:id="@+id/btnAudioModalRewind10"
+          android:layout_width="48dp"
+          android:layout_height="48dp"
+          android:layout_marginEnd="16dp"
+          android:background="@drawable/bg_badge_pill"
+          android:backgroundTint="@color/bg_badge_pill"
+          android:clickable="true"
+          android:focusable="true">
+
+          <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_replay_10"
+            app:tint="@color/text_primary" />
+        </FrameLayout>
+
+        <!-- Play / Pause Circular Button -->
+        <FrameLayout
+          android:id="@+id/btnAudioModalPlayPause"
+          android:layout_width="68dp"
+          android:layout_height="68dp"
+          android:background="@drawable/circle_progress_bg"
+          android:backgroundTint="@color/accent_mint"
+          android:clickable="true"
+          android:focusable="true">
+
+          <ImageView
+            android:id="@+id/ivAudioModalPlayIcon"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_pause"
+            app:tint="@color/btn_save_text" />
+
+          <ProgressBar
+            android:id="@+id/pbAudioModalLoading"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/btn_save_text"
+            android:visibility="gone" />
+        </FrameLayout>
+
+        <!-- Forward 10s -->
+        <FrameLayout
+          android:id="@+id/btnAudioModalForward10"
+          android:layout_width="48dp"
+          android:layout_height="48dp"
+          android:layout_marginStart="16dp"
+          android:background="@drawable/bg_badge_pill"
+          android:backgroundTint="@color/bg_badge_pill"
+          android:clickable="true"
+          android:focusable="true">
+
+          <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_forward_10"
+            app:tint="@color/text_primary" />
+        </FrameLayout>
+      </LinearLayout>
+
+      <!-- Bottom Tools Bar (Speed, Download, Sleep Timer, Share) -->
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/bg_card_surface"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingVertical="12dp"
+        android:paddingHorizontal="16dp">
+
+        <!-- 1. Playback Speed Selector -->
+        <LinearLayout
+          android:id="@+id/btnAudioModalSpeed"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:clickable="true"
+          android:focusable="true"
+          android:gravity="center"
+          android:orientation="vertical">
+
+          <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_speed"
+            app:tint="@color/text_secondary" />
+
+          <TextView
+            android:id="@+id/tvAudioModalSpeedText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="1.0x"
+            android:textColor="@color/text_secondary"
+            android:textSize="11sp" />
+        </LinearLayout>
+
+        <!-- 2. Download / Offline Mode -->
+        <LinearLayout
+          android:id="@+id/btnAudioModalDownload"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:clickable="true"
+          android:focusable="true"
+          android:gravity="center"
+          android:orientation="vertical">
+
+          <ImageView
+            android:id="@+id/ivAudioModalDownloadIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_download"
+            app:tint="@color/text_secondary" />
+
+          <TextView
+            android:id="@+id/tvAudioModalDownloadText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="ডাউনলোড"
+            android:textColor="@color/text_secondary"
+            android:textSize="11sp" />
+        </LinearLayout>
+
+        <!-- 3. Sleep Timer -->
+        <LinearLayout
+          android:id="@+id/btnAudioModalSleepTimer"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:clickable="true"
+          android:focusable="true"
+          android:gravity="center"
+          android:orientation="vertical">
+
+          <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_feat_sleep"
+            app:tint="@color/text_secondary" />
+
+          <TextView
+            android:id="@+id/tvAudioModalSleepTimerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="স্লিপ টাইমার"
+            android:textColor="@color/text_secondary"
+            android:textSize="11sp" />
+        </LinearLayout>
+
+        <!-- 4. Share Audio -->
+        <LinearLayout
+          android:id="@+id/btnAudioModalShare"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:clickable="true"
+          android:focusable="true"
+          android:gravity="center"
+          android:orientation="vertical">
+
+          <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_share"
+            app:tint="@color/text_secondary" />
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="শেয়ার"
+            android:textColor="@color/text_secondary"
+            android:textSize="11sp" />
+        </LinearLayout>
+      </LinearLayout>
+
+    </LinearLayout>
+  </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

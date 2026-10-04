@@ -1,0 +1,28 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="32dp"
+    android:height="32dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+
+    <!-- Layer 1: Outer Soft Islamic Star Shadow / Halo Contour -->
+    <path
+        android:strokeWidth="5"
+        android:strokeColor="@color/quran_star_halo"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M50,6 Q57.51,12.24 62.44,19.97 Q71.39,17.99 81.11,18.89 Q82.01,28.61 80.03,37.56 Q87.76,42.49 94,50 Q87.76,57.51 80.03,62.44 Q82.01,71.39 81.11,81.11 Q71.39,82.01 62.44,80.03 Q57.51,87.76 50,94 Q42.49,87.76 37.56,80.03 Q28.61,82.01 18.89,81.11 Q17.99,71.39 19.97,62.44 Q12.24,57.51 6,50 Q12.24,42.49 19.97,37.56 Q17.99,28.61 18.89,18.89 Q28.61,17.99 37.56,19.97 Q42.49,12.24 50,6Z" />
+
+    <!-- Layer 2: Main Islamic Rosette Star Body (Solid Theme Fill) -->
+    <path
+        android:fillColor="@color/quran_star_fill"
+        android:pathData="M50,6 Q57.51,12.24 62.44,19.97 Q71.39,17.99 81.11,18.89 Q82.01,28.61 80.03,37.56 Q87.76,42.49 94,50 Q87.76,57.51 80.03,62.44 Q82.01,71.39 81.11,81.11 Q71.39,82.01 62.44,80.03 Q57.51,87.76 50,94 Q42.49,87.76 37.56,80.03 Q28.61,82.01 18.89,81.11 Q17.99,71.39 19.97,62.44 Q12.24,57.51 6,50 Q12.24,42.49 19.97,37.56 Q17.99,28.61 18.89,18.89 Q28.61,17.99 37.56,19.97 Q42.49,12.24 50,6Z" />
+
+    <!-- Layer 3: Inner Crisp Contour Border -->
+    <path
+        android:strokeWidth="1.5"
+        android:strokeColor="@color/quran_star_border"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M50,6 Q57.51,12.24 62.44,19.97 Q71.39,17.99 81.11,18.89 Q82.01,28.61 80.03,37.56 Q87.76,42.49 94,50 Q87.76,57.51 80.03,62.44 Q82.01,71.39 81.11,81.11 Q71.39,82.01 62.44,80.03 Q57.51,87.76 50,94 Q42.49,87.76 37.56,80.03 Q28.61,82.01 18.89,81.11 Q17.99,71.39 19.97,62.44 Q12.24,57.51 6,50 Q12.24,42.49 19.97,37.56 Q17.99,28.61 18.89,18.89 Q28.61,17.99 37.56,19.97 Q42.49,12.24 50,6Z" />
+
+</vector>

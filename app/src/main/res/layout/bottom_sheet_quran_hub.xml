@@ -1,0 +1,865 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main"
+    android:orientation="vertical">
+
+    <!-- Global Top App Bar (Screenshot 2) -->
+    <RelativeLayout
+        android:id="@+id/layoutTopHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_main"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp">
+
+        <!-- Back Button -->
+        <FrameLayout
+            android:id="@+id/btnCloseQuran"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_circular_counter"
+            android:backgroundTint="@color/bg_badge_pill"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_arrow_back"
+                app:tint="@color/text_primary" />
+        </FrameLayout>
+
+        <!-- Title: 📖 আল-কুরআন -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="14dp"
+            android:layout_toEndOf="@id/btnCloseQuran"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="6dp"
+                android:src="@drawable/ic_feat_book"
+                app:tint="@color/accent_gold" />
+
+            <TextView
+                android:id="@+id/tvQuranHubTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="আল-কুরআন"
+                android:textColor="@color/text_primary"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Right Side: Reciter Audio + Theme Toggle -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- Reciter / Audio Recitation -->
+            <FrameLayout
+                android:id="@+id/btnQuranReciter"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:background="@drawable/bg_circular_counter"
+                android:backgroundTint="@color/bg_badge_pill"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_audio_reciter"
+                    app:tint="@color/accent_mint" />
+            </FrameLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="18dp"
+                android:layout_marginHorizontal="6dp"
+                android:background="@color/border_card" />
+
+            <!-- Theme Toggle (Moon / Sun) -->
+            <FrameLayout
+                android:id="@+id/btnQuranThemeToggle"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:background="@drawable/bg_circular_counter"
+                android:backgroundTint="@color/bg_badge_pill"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_moon"
+                    app:tint="@color/accent_gold" />
+            </FrameLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- Coordinator Layout with Collapsible Upper Section & Pinned Search/Tabs -->
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarQuranHub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:elevation="0dp">
+
+            <!-- Collapsible Section: Last Read Card + 3 Feature Cards -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="16dp"
+                android:paddingTop="2dp"
+                app:layout_scrollFlags="scroll|enterAlways">
+
+                <!-- Last Read Banner Card (Screenshot 2) -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardQuranLastRead"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardBackgroundColor="@color/bg_card"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="@color/border_card"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <!-- Row 1: Header + Streak Badge -->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="18dp"
+                                    android:layout_height="18dp"
+                                    android:src="@drawable/ic_feat_book"
+                                    app:tint="@color/accent_gold" />
+
+                                <TextView
+                                    android:id="@+id/tvLastReadHeader"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="6dp"
+                                    android:text="সর্বশেষ পঠিত স্থান"
+                                    android:textColor="@color/text_secondary"
+                                    android:textSize="12.5sp" />
+                            </LinearLayout>
+
+                            <!-- Streak Badge (🔥 / 😢 / 😡) -->
+                            <LinearLayout
+                                android:id="@+id/layoutStreakBadge"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/bg_badge_streak_fire"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:paddingHorizontal="10dp"
+                                android:paddingVertical="4.5dp">
+
+                                <ImageView
+                                    android:id="@+id/ivStreakIcon"
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:src="@drawable/ic_flame" />
+
+                                <TextView
+                                    android:id="@+id/tvStreakText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="4dp"
+                                    android:text="১ দিন স্ট্রিক"
+                                    android:textColor="@color/accent_gold"
+                                    android:textSize="11.5sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <!-- Row 2: Main Surah & Ayah Title -->
+                        <TextView
+                            android:id="@+id/tvLastReadSurahTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="সূরা আল-মুলক (আয়াত ১)"
+                            android:textColor="@color/text_primary"
+                            android:textSize="18.5sp"
+                            android:textStyle="bold" />
+
+                        <!-- Row 3: Daily Goal Progress Text + Edit Icon + Percentage -->
+                        <RelativeLayout
+                            android:id="@+id/layoutGoalRow"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tvDailyGoalProgressText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="দৈনিক লক্ষ্য: ২৫ / ৫ আয়াত"
+                                    android:textColor="@color/text_secondary"
+                                    android:textSize="12sp" />
+
+                                <ImageView
+                                    android:id="@+id/ivEditDailyGoal"
+                                    android:layout_width="14dp"
+                                    android:layout_height="14dp"
+                                    android:layout_marginStart="6dp"
+                                    android:src="@drawable/ic_edit"
+                                    app:tint="@color/accent_mint" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tvDailyGoalPercentage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:text="100%"
+                                android:textColor="@color/accent_gold"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <!-- Row 4: Golden Progress Bar -->
+                        <ProgressBar
+                            android:id="@+id/progressBarDailyGoal"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="6dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="14dp"
+                            android:max="100"
+                            android:progress="100"
+                            android:progressDrawable="@drawable/progress_bar_quran_goal" />
+
+                        <!-- Row 5: Action Buttons (পড়া চালিয়ে যান | কুরআন যাত্রা) -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <!-- Continue Reading -->
+                            <LinearLayout
+                                android:id="@+id/btnContinueReading"
+                                android:layout_width="0dp"
+                                android:layout_height="44dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/bg_btn_mint_pill"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:paddingHorizontal="10dp">
+
+                                <ImageView
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:layout_marginEnd="6dp"
+                                    android:src="@drawable/ic_feat_book"
+                                    app:tint="@color/bg_main" />
+
+                                <TextView
+                                    android:id="@+id/tvContinueReadingText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="পড়া চালিয়ে যান"
+                                    android:textColor="@color/bg_main"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <!-- Quran Journey -->
+                            <LinearLayout
+                                android:id="@+id/btnQuranJourney"
+                                android:layout_width="0dp"
+                                android:layout_height="44dp"
+                                android:layout_marginStart="6dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/bg_goal_item_unselected"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:paddingHorizontal="10dp">
+
+                                <ImageView
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:layout_marginEnd="6dp"
+                                    android:src="@drawable/ic_books_stacked"
+                                    app:tint="@color/accent_mint" />
+
+                                <TextView
+                                    android:id="@+id/tvQuranJourneyText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="কুরআন যাত্রা"
+                                    android:textColor="@color/text_primary"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- 3 Feature Cards: কুরআন বাংলা | হিফজ হাব | স্লিপ মোড -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <!-- Card 1: কুরআন বাংলা (Bangla Quran Translation Audio) -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardBanglaQuranAudio"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:cardBackgroundColor="@color/bg_card"
+                        app:cardCornerRadius="14dp"
+                        app:cardElevation="0dp"
+                        app:strokeColor="@color/border_card"
+                        app:strokeWidth="1dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="12dp">
+
+                            <FrameLayout
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:background="@drawable/bg_circular_counter"
+                                android:backgroundTint="@color/bg_badge_pill">
+
+                                <ImageView
+                                    android:layout_width="18dp"
+                                    android:layout_height="18dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_feat_audio"
+                                    app:tint="@color/accent_mint" />
+                            </FrameLayout>
+
+                            <TextView
+                                android:id="@+id/tvCardBanglaAudio"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:text="কুরআন বাংলা"
+                                android:textColor="@color/text_primary"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Card 2: হিফজ হাব (Hifz Hub) -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardHifzHub"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="4dp"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:cardBackgroundColor="@color/bg_card"
+                        app:cardCornerRadius="14dp"
+                        app:cardElevation="0dp"
+                        app:strokeColor="@color/border_card"
+                        app:strokeWidth="1dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="12dp">
+
+                            <FrameLayout
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:background="@drawable/bg_circular_counter"
+                                android:backgroundTint="@color/bg_badge_pill">
+
+                                <ImageView
+                                    android:layout_width="18dp"
+                                    android:layout_height="18dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_brain_gear"
+                                    app:tint="@color/accent_mint" />
+                            </FrameLayout>
+
+                            <TextView
+                                android:id="@+id/tvCardHifzHub"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:text="হিফজ হাব"
+                                android:textColor="@color/text_primary"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Card 3: স্লিপ মোড (Sleep Mode) -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardSleepMode"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:cardBackgroundColor="@color/bg_card"
+                        app:cardCornerRadius="14dp"
+                        app:cardElevation="0dp"
+                        app:strokeColor="@color/border_card"
+                        app:strokeWidth="1dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="12dp">
+
+                            <FrameLayout
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:background="@drawable/bg_circular_counter"
+                                android:backgroundTint="@color/bg_badge_pill">
+
+                                <ImageView
+                                    android:layout_width="18dp"
+                                    android:layout_height="18dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_moon"
+                                    app:tint="@color/accent_purple" />
+                            </FrameLayout>
+
+                            <TextView
+                                android:id="@+id/tvCardSleepMode"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:text="স্লিপ মোড"
+                                android:textColor="@color/text_primary"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Pinned Sticky Section: Search Bar & 3 Tabs -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_main"
+                android:orientation="vertical"
+                android:paddingHorizontal="16dp"
+                android:paddingBottom="6dp">
+
+                <!-- Search Input: 🔍 সূরা বা পারা খুঁজুন... -->
+                <RelativeLayout
+                    android:id="@+id/layoutQuranSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:background="@drawable/bg_card_secondary"
+                    android:paddingHorizontal="12dp">
+
+                    <ImageView
+                        android:id="@+id/ivSearchIcon"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_search"
+                        app:tint="@color/accent_mint" />
+
+                    <EditText
+                        android:id="@+id/etSearchQuran"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/ivSearchIcon"
+                        android:background="@null"
+                        android:hint="সূরা বা পারা খুঁজুন..."
+                        android:inputType="text"
+                        android:textColor="@color/text_primary"
+                        android:textColorHint="@color/text_secondary"
+                        android:textSize="13sp" />
+                </RelativeLayout>
+
+                <!-- 3 Tabs: ১১৪ টি সূরা | ৩০ টি পারা | কুরআন নোটস -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <!-- Tab 1: 114 Surahs -->
+                    <TextView
+                        android:id="@+id/tabAllSurahs"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_tab_active"
+                        android:gravity="center"
+                        android:paddingVertical="8dp"
+                        android:text="১১৪ টি সূরা"
+                        android:textColor="@color/accent_mint"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <!-- Tab 2: 30 Paras -->
+                    <TextView
+                        android:id="@+id/tabParas"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_card_secondary"
+                        android:gravity="center"
+                        android:paddingVertical="8dp"
+                        android:text="৩০ টি পারা"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp" />
+
+                    <!-- Tab 3: Quran Bookmarks -->
+                    <TextView
+                        android:id="@+id/tabQuranNotes"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_card_secondary"
+                        android:gravity="center"
+                        android:paddingVertical="8dp"
+                        android:text="বুকমার্ক"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <!-- View Pager / Recycler Views Container -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <!-- 114 Surahs Recycler View (Item Layout & UX strictly untouched) -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvQuranSurahs"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingHorizontal="10dp"
+                android:paddingBottom="24dp" />
+
+            <!-- 30 Paras Recycler View -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvQuranParas"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingHorizontal="10dp"
+                android:paddingBottom="24dp"
+                android:visibility="gone" />
+
+            <!-- Unified Quran Bookmarks Container (Surahs, Paras, Ayahs) -->
+            <LinearLayout
+                android:id="@+id/layoutQuranBookmarksContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <!-- Bookmark Sub-Category Filter Chips -->
+                <LinearLayout
+                    android:id="@+id/layoutBookmarkFilterChips"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="10dp"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="8dp">
+
+                    <!-- Chip 1: All (সব) -->
+                    <TextView
+                        android:id="@+id/chipBookmarkAll"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="4dp"
+                        android:background="@drawable/bg_tab_active"
+                        android:gravity="center"
+                        android:paddingVertical="6dp"
+                        android:text="সব"
+                        android:textColor="@color/accent_mint"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <!-- Chip 2: Surahs (সূরা) -->
+                    <TextView
+                        android:id="@+id/chipBookmarkSurahs"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="4dp"
+                        android:background="@drawable/bg_card_secondary"
+                        android:gravity="center"
+                        android:paddingVertical="6dp"
+                        android:text="সূরা"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp" />
+
+                    <!-- Chip 3: Paras (পারা) -->
+                    <TextView
+                        android:id="@+id/chipBookmarkParas"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="4dp"
+                        android:background="@drawable/bg_card_secondary"
+                        android:gravity="center"
+                        android:paddingVertical="6dp"
+                        android:text="পারা"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp" />
+
+                    <!-- Chip 4: Ayahs (আয়াত) -->
+                    <TextView
+                        android:id="@+id/chipBookmarkAyahs"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="4dp"
+                        android:background="@drawable/bg_card_secondary"
+                        android:gravity="center"
+                        android:paddingVertical="6dp"
+                        android:text="আয়াত"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!-- Scrollable Unified Bookmarks List Container -->
+                    <androidx.core.widget.NestedScrollView
+                        android:id="@+id/nsvBookmarksContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clipToPadding="false"
+                        android:paddingHorizontal="10dp"
+                        android:paddingBottom="24dp"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <!-- Section 1: Bookmarked Surahs -->
+                            <LinearLayout
+                                android:id="@+id/layoutBookmarkedSurahsSection"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:id="@+id/tvBookmarkedSurahsHeader"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="6dp"
+                                    android:layout_marginBottom="6dp"
+                                    android:text="বুকমার্ককৃত সূরা"
+                                    android:textColor="@color/text_primary"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/rvBookmarkedSurahs"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:nestedScrollingEnabled="false" />
+                            </LinearLayout>
+
+                            <!-- Section 2: Bookmarked Paras -->
+                            <LinearLayout
+                                android:id="@+id/layoutBookmarkedParasSection"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:id="@+id/tvBookmarkedParasHeader"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="6dp"
+                                    android:text="বুকমার্ককৃত পারা"
+                                    android:textColor="@color/text_primary"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/rvBookmarkedParas"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:nestedScrollingEnabled="false" />
+                            </LinearLayout>
+
+                            <!-- Section 3: Bookmarked Ayahs -->
+                            <LinearLayout
+                                android:id="@+id/layoutBookmarkedAyahsSection"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:id="@+id/tvBookmarkedAyahsHeader"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="6dp"
+                                    android:text="বুকমার্ককৃত আয়াত"
+                                    android:textColor="@color/text_primary"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/rvQuranNotes"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:nestedScrollingEnabled="false" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </androidx.core.widget.NestedScrollView>
+
+                    <!-- Empty Bookmarks State -->
+                    <LinearLayout
+                        android:id="@+id/layoutQuranNotesEmpty"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="24dp"
+                        android:visibility="gone">
+
+                        <FrameLayout
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:background="@drawable/bg_circular_counter"
+                            android:backgroundTint="@color/bg_badge_pill">
+
+                            <ImageView
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_bookmark"
+                                app:tint="@color/accent_mint" />
+                        </FrameLayout>
+
+                        <TextView
+                            android:id="@+id/tvQuranNotesEmptyTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="14dp"
+                            android:text="কোনো বুকমার্ক সংরক্ষিত নেই"
+                            android:textColor="@color/text_primary"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvQuranNotesEmptySubtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:gravity="center"
+                            android:text="সূরা, পারা বা আয়াত বুকমার্ক করলে তা এখানে দেখতে পাবেন।"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                </FrameLayout>
+            </LinearLayout>
+
+        </FrameLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</LinearLayout>

@@ -1,0 +1,68 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="120dp"
+    android:height="160dp"
+    android:viewportWidth="120"
+    android:viewportHeight="160">
+
+    <!-- Background Dark Glow -->
+    <path
+        android:pathData="M8,0 L112,0 A8,8 0 0,1 120,8 L120,152 A8,8 0 0,1 112,160 L8,160 A8,8 0 0,1 0,152 L0,8 A8,8 0 0,1 8,0 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:angle="135"
+                android:endColor="#0F172A"
+                android:startColor="#1E293B"
+                android:type="linear" />
+        </aapt:attr>
+    </path>
+
+    <!-- Spine Accent -->
+    <path
+        android:fillColor="#090D16"
+        android:pathData="M0,0 L10,0 L10,160 L0,160 Z" />
+    <path
+        android:fillColor="#E2E8F0"
+        android:pathData="M10,0 L11,0 L11,160 L10,160 Z" />
+
+    <!-- Light Ray from Above -->
+    <path
+        android:pathData="M60,0 L90,160 L30,160 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:angle="90"
+                android:endColor="#00FFFFFF"
+                android:startColor="#25F1F5F9"
+                android:type="linear" />
+        </aapt:attr>
+    </path>
+
+    <!-- Glowing Lantern / Lamp Silhouette -->
+    <path
+        android:fillColor="#F6AD55"
+        android:pathData="M60,28 L64,36 L56,36 Z" />
+    <path
+        android:fillColor="#DD6B20"
+        android:pathData="M55,36 L65,36 L63,48 L57,48 Z" />
+    <path
+        android:fillColor="#FEFCBF"
+        android:pathData="M57,40 L63,40 L62,46 L58,46 Z" />
+
+    <!-- Praying Person Silhouette in Mihrab -->
+    <path
+        android:fillColor="#334155"
+        android:pathData="M35,145 C35,110 85,110 85,145 Z" />
+    <path
+        android:fillColor="#F8FAFC"
+        android:pathData="M60,118 A4,4 0 1,0 60,110 A4,4 0 1,0 60,118 Z" />
+    <path
+        android:fillColor="#F8FAFC"
+        android:pathData="M54,124 Q60,120 66,124 L68,142 L52,142 Z" />
+
+    <!-- Elegant Gold Border Frame -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#CBD5E1"
+        android:strokeWidth="1.2"
+        android:pathData="M18,14 L106,14 A4,4 0 0,1 110,18 L110,142 A4,4 0 0,1 106,146 L18,146 A4,4 0 0,1 14,142 L14,18 A4,4 0 0,1 18,14 Z" />
+</vector>

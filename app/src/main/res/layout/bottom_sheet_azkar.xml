@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  android:background="@color/bg_main">
+
+  <!-- Handle bar -->
+  <View
+    android:id="@+id/azkarHandleBar"
+    android:layout_width="40dp"
+    android:layout_height="4dp"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="12dp"
+    android:layout_marginBottom="8dp"
+    android:background="@color/border_card" />
+
+  <!-- Header -->
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingHorizontal="16dp"
+    android:paddingBottom="12dp"
+    android:gravity="center_vertical">
+
+    <TextView
+      android:id="@+id/tvAzkarTitle"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:text="আযকার ও দু'আ"
+      android:textSize="20sp"
+      android:textStyle="bold"
+      android:textColor="@color/text_primary" />
+
+    <ImageButton
+      android:id="@+id/btnAzkarReset"
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      android:background="?attr/selectableItemBackgroundBorderless"
+      android:src="@drawable/ic_refresh"
+      android:contentDescription="সব রিসেট"
+      app:tint="@color/text_secondary" />
+  </LinearLayout>
+
+  <!-- Category chips -->
+  <HorizontalScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="none"
+    android:paddingHorizontal="12dp"
+    android:paddingBottom="8dp">
+
+    <com.google.android.material.chip.ChipGroup
+      android:id="@+id/chipGroupAzkarCategory"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:singleSelection="true"
+      app:selectionRequired="true">
+
+      <com.google.android.material.chip.Chip
+        android:id="@+id/chipMorning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="সকাল"
+        android:checked="true"
+        style="@style/Widget.MaterialComponents.Chip.Choice" />
+
+      <com.google.android.material.chip.Chip
+        android:id="@+id/chipEvening"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="সন্ধ্যা"
+        style="@style/Widget.MaterialComponents.Chip.Choice" />
+
+      <com.google.android.material.chip.Chip
+        android:id="@+id/chipAfterSalah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="নামাজের পর"
+        style="@style/Widget.MaterialComponents.Chip.Choice" />
+
+      <com.google.android.material.chip.Chip
+        android:id="@+id/chipBeforeSleep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ঘুমের আগে"
+        style="@style/Widget.MaterialComponents.Chip.Choice" />
+
+      <com.google.android.material.chip.Chip
+        android:id="@+id/chipUponWaking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ঘুম থেকে উঠে"
+        style="@style/Widget.MaterialComponents.Chip.Choice" />
+
+      <com.google.android.material.chip.Chip
+        android:id="@+id/chipProtection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="সুরক্ষা"
+        style="@style/Widget.MaterialComponents.Chip.Choice" />
+
+      <com.google.android.material.chip.Chip
+        android:id="@+id/chipRizq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="রিযক"
+        style="@style/Widget.MaterialComponents.Chip.Choice" />
+
+      <com.google.android.material.chip.Chip
+        android:id="@+id/chipForgiveness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ক্ষমা"
+        style="@style/Widget.MaterialComponents.Chip.Choice" />
+
+      <com.google.android.material.chip.Chip
+        android:id="@+id/chipTravel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="সফর"
+        style="@style/Widget.MaterialComponents.Chip.Choice" />
+
+      <com.google.android.material.chip.Chip
+        android:id="@+id/chipParents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="‍ পিতামাতা"
+        style="@style/Widget.MaterialComponents.Chip.Choice" />
+
+      <com.google.android.material.chip.Chip
+        android:id="@+id/chipRamadan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="রমজান"
+        style="@style/Widget.MaterialComponents.Chip.Choice" />
+    </com.google.android.material.chip.ChipGroup>
+  </HorizontalScrollView>
+
+  <!-- Divider -->
+  <View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="@color/border_card"
+    android:layout_marginHorizontal="16dp" />
+
+  <!-- Azkar list -->
+  <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/recyclerAzkar"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:paddingHorizontal="12dp"
+    android:paddingTop="8dp"
+    android:clipToPadding="false"
+    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+</LinearLayout>

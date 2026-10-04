@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardDhikrRow"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardBackgroundColor="@color/bg_card_secondary"
+    app:cardCornerRadius="14dp"
+    app:cardElevation="0dp"
+    app:strokeColor="@color/border_card"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="14dp"
+        android:paddingVertical="12dp">
+
+        <!-- Number Indicator -->
+        <FrameLayout
+            android:id="@+id/layoutNumberBadge"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/circle_progress_bg"
+            android:backgroundTint="@color/bg_card_active">
+
+            <TextView
+                android:id="@+id/tvDhikrNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-medium"
+                android:text="১"
+                android:textColor="@color/accent_mint"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <!-- Title & Meaning -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvDhikrRowTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:lineSpacingExtra="2dp"
+                android:text="হাসবুনাল্লাহু ওয়া নি'মাল ওয়াকিল"
+                android:textColor="@color/text_primary"
+                android:textSize="13.5sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvDhikrRowMeaning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="“আল্লাহই আমাদের জন্য যথেষ্ট, তিনিই উত্তম অভিভাবক”"
+                android:textColor="@color/text_secondary"
+                android:textSize="11.5sp" />
+        </LinearLayout>
+
+        <!-- Count Badge Pill -->
+        <TextView
+            android:id="@+id/tvDhikrRowCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_badge_pill"
+            android:backgroundTint="@color/bg_card_active"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="4dp"
+            android:text="১০ বার"
+            android:textColor="@color/accent_mint"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <!-- Selected Checkmark -->
+        <ImageView
+            android:id="@+id/ivDhikrSelectedCheck"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_check_circle"
+            android:visibility="gone"
+            app:tint="@color/accent_mint" />
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

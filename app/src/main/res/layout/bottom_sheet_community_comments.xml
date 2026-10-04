@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/bg_main"
+  android:orientation="vertical">
+
+  <!-- Header -->
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="14dp"
+    android:paddingBottom="10dp">
+
+    <ImageButton android:id="@+id/btnCloseComments"
+      android:layout_width="38dp"
+      android:layout_height="38dp"
+      android:background="@drawable/bg_badge_pill"
+      android:contentDescription="বন্ধ"
+      android:src="@drawable/ic_close"
+      app:tint="@color/accent_mint" />
+
+    <TextView
+      android:id="@+id/tvCommentsModalTitle"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="12dp"
+      android:layout_weight="1"
+      android:text="মন্তব্য সমূহ (৭)"
+      android:textColor="@color/text_primary"
+      android:textSize="16sp"
+      android:textStyle="bold" />
+  </LinearLayout>
+
+  <View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="@color/divider_color" />
+
+  <!-- Comments List -->
+  <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/rvCommentsList"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:clipToPadding="false"
+    android:padding="16dp" />
+
+  <!-- Comment Input Bar -->
+  <LinearLayout
+    android:id="@+id/layoutCommentInputBar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_card"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingHorizontal="12dp"
+    android:paddingVertical="8dp">
+
+    <!-- Combined Input Capsule Container (Supports Inline Replying Tag) -->
+    <LinearLayout
+      android:id="@+id/layoutInputContainer"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:background="@drawable/bg_badge_pill"
+      android:gravity="center_vertical"
+      android:minHeight="46dp"
+      android:orientation="horizontal"
+      android:paddingHorizontal="10dp"
+      android:paddingVertical="4dp">
+
+      <!-- Inline Reply Chip -->
+      <LinearLayout
+        android:id="@+id/layoutInlineReplyChip"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginEnd="6dp"
+        android:background="@drawable/bg_badge_pill"
+        android:backgroundTint="@color/bg_card_active"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="8dp"
+        android:visibility="gone">
+
+        <TextView
+          android:id="@+id/tvInlineReplyAuthor"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:ellipsize="end"
+          android:fontFamily="sans-serif-medium"
+          android:maxEms="8"
+          android:maxLines="1"
+          android:text="@মাহমুদুল হাসান"
+          android:textColor="@color/accent_mint"
+          android:textSize="12sp"
+          android:textStyle="bold" />
+
+        <ImageView
+          android:id="@+id/btnCancelInlineReply"
+          android:layout_width="16dp"
+          android:layout_height="16dp"
+          android:layout_marginStart="4dp"
+          android:background="?attr/selectableItemBackgroundBorderless"
+          android:clickable="true"
+          android:contentDescription="বাতিল"
+          android:focusable="true"
+          android:padding="2dp"
+          android:src="@drawable/ic_close"
+          app:tint="@color/text_secondary" />
+      </LinearLayout>
+
+      <EditText
+        android:id="@+id/etNewComment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@null"
+        android:hint="একটি মন্তব্য লিখুন..."
+        android:maxLines="4"
+        android:paddingHorizontal="4dp"
+        android:paddingVertical="6dp"
+        android:textColor="@color/text_primary"
+        android:textColorHint="@color/text_secondary"
+        android:textSize="13.5sp" />
+    </LinearLayout>
+
+    <ImageButton
+      android:id="@+id/btnSendComment"
+      android:layout_width="46dp"
+      android:layout_height="46dp"
+      android:layout_marginStart="8dp"
+      android:background="@drawable/bg_comment_send_btn"
+      android:contentDescription="পাঠান"
+      android:elevation="3dp"
+      android:padding="11dp"
+      android:scaleType="centerInside"
+      android:src="@drawable/ic_send"
+      app:tint="@android:color/white" />
+  </LinearLayout>
+
+</LinearLayout>

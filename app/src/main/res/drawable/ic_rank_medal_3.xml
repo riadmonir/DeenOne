@@ -1,0 +1,31 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="22dp"
+    android:height="26dp"
+    android:viewportWidth="24"
+    android:viewportHeight="28">
+    <!-- Ribbon Left & Right (Teal/Blue) -->
+    <path
+        android:fillColor="#0D9488"
+        android:pathData="M7,2 L12,9 L10,9 L5,2 Z" />
+    <path
+        android:fillColor="#0F766E"
+        android:pathData="M17,2 L12,9 L14,9 L19,2 Z" />
+    <path
+        android:fillColor="#2DD4BF"
+        android:pathData="M10,2 L12,6 L14,2 Z" />
+    <!-- Bronze Medallion Outer Circle -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M12,18m-9,0a9,9 0 1,0 18,0a9,9 0 1,0 -18,0" />
+    <!-- Bronze Medallion Inner Ring -->
+    <path
+        android:fillColor="#B45309"
+        android:pathData="M12,18m-7.5,0a7.5,7.5 0 1,0 15,0a7.5,7.5 0 1,0 -15,0" />
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M12,18m-6,0a6,6 0 1,0 12,0a6,6 0 1,0 -12,0" />
+    <!-- Number 3 Digit -->
+    <path
+        android:fillColor="#78350F"
+        android:pathData="M10.5,14.2 L14,14.2 L12.5,16.8 C13.5,16.8 14.5,17.4 14.5,18.8 C14.5,20.2 13.5,21.2 12,21.2 C10.8,21.2 10.2,20.4 10.2,19.6 L11.4,19.6 C11.4,20 11.7,20.4 12.1,20.4 C12.6,20.4 13.2,20 13.2,19 C13.2,18 12.5,17.6 11.8,17.6 L11.2,17.6 L11.2,16.8 L12.6,14.8 L10.5,14.8 Z" />
+</vector>

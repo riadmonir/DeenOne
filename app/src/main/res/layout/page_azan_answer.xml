@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main"
+    android:orientation="vertical">
+
+    <!-- Top Header Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/bg_top_bar"
+        android:elevation="2dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp">
+
+        <!-- Back Button with Circular Container -->
+        <FrameLayout android:id="@+id/btnBackAzanAnswer"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_circular_counter"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_arrow_back"
+                app:tint="@color/accent_mint" />
+        </FrameLayout>
+
+        <!-- Header Title -->
+        <TextView
+            android:id="@+id/tvHeaderTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="আজানের উত্তর"
+            android:textColor="@color/text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Settings Gear Action Button with Circular Container -->
+        <FrameLayout android:id="@+id/btnSettingsAzanAnswer"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_circular_counter"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_settings"
+                app:tint="@color/accent_mint" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- Scrollable Content -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="36dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Card 1: আজানের উত্তর দেওয়ার নিয়ম -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardAzanAnswerMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@color/bg_card"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/border_card"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Card 1 Header Row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvCard1Title"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="আজানের উত্তর দেওয়ার নিয়ম"
+                            android:textColor="@color/text_primary"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <!-- Three dots button -->
+                        <FrameLayout
+                            android:id="@+id/btnMenuCard1"
+                            android:layout_width="34dp"
+                            android:layout_height="34dp"
+                            android:layout_marginStart="8dp"
+                            android:background="@drawable/bg_circular_counter"
+                            android:backgroundTint="@color/bg_badge_pill"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <ImageView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_more_horiz"
+                                app:tint="@color/text_primary" />
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <!-- Section 1: প্রাথমিক জবাব -->
+                    <TextView
+                        android:id="@+id/tvIntroRule"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="আযান শুরু হলে চুপ থেকে শুনে তার জওয়াব দেওয়া বিধেয় (সুন্নত)। মুআযযিন ‘আল্লাহু আকবার’ বললে, শ্রোতাও তার জবাবে ‘আল্লাহু আকবার’ বলবে। মুআযযিন ‘আশহাদু আল লা ইলাহা ইল্লাল্লাহ্, আশহাদু আন্না মুহাম্মাদার রাসুলুল্লাহ্’ বললে শ্রোতা বলবে, অআনা, অআনা। অর্থাৎ আমিও সাক্ষি দিচ্ছি, আমিও।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvRef1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="সূত্র: সুনানে আবু দাউদ: ৫২৬"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvPrompt1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="এই সময় নিম্নের দুআও বলতে হয় -"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <!-- Shahadah Dua Arabic -->
+                    <TextView
+                        android:id="@+id/tvArabicShahadah"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:gravity="end|center_vertical"
+                        android:lineSpacingExtra="8dp"
+                        android:text="وَ أَنَا أَشْهَدُ أَنْ لَا إِلٰهَ إِلَّا اللهُ وَحْدَهُ لَا شَرِيكَ لَهُ وَ (أَشْهَدُ) أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ، رَضِيتُ بِاللهِ رَبًّا وَبِمُحَمَّدٍ رَّسُولًا وَ بِالإِسْلَامِ دِينًا"
+                        android:textColor="@color/text_primary"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:text="উচ্চারণ:"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvPronunciationShahadah"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="অআনা আশহাদু আল লা ইলাহা ইল্লাল্লাহু অহ্দাহু লা শারীকা লাহ্, অ (আশহাদু) আন্না মুহাম্মাদান আবদুহু অরাসূলুহ্। রাযীতু বিল্লাহি রাব্বাঁ উঅবিমুহাম্মাদিন (সাল্লাল্লাহু আলাইহি অসাল্লামা) রাসূল্লাঁউঅবিল ইসলামি দ্বীনা।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvMeaningShahadah"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="অর্থাৎ, আমিও সাক্ষ্য দিচ্ছি যে, আল্লাহ ছাড়া কেউ সত্য উপাস্য নেই, তিনি একক, তাঁর কোন অংশী নেই এবং মুহাম্মাদ (ﷺ) তাঁর বান্দা ও রসূল। আল্লাহ আমার প্রতিপালক হওয়ার ব্যাপারে, মুহাম্মাদ (ﷺ) রসূল হওয়ার ব্যাপারে এবং ইসলাম আমার দ্বীন হওয়ার ব্যাপারে আমি সন্তুষ্ট। এই দুআ পড়লে গুনাহসমূহ মাফ হয়ে যায়।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvRef2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="সূত্র: সহীহ মুসলিম: ৩৮৬, সুনানে আবু দাউদ: ৫২৫, তিরমিযী, নাসাঈ, ইবনে মাজাহ"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <!-- Section 2: বিদআত সতর্কতা -->
+                    <TextView
+                        android:id="@+id/tvWarningBidah"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="আযানে মহানবী (ﷺ) এর নাম শুনে চোখে আঙ্গুল বুলানো বিদআত। এ ব্যাপারে বর্ণিত হাদীসটি জাল।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvRefBidah"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="সূত্র: তাযকিরাহ্, ইবনে তাহের, রিসালাতুন ইলা মুআযযিন: ৫৬পৃ."
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvHayyaAlaAnswer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="অনুরূপ সেই সময় আঙ্গুলে চুমু খাওয়াও বিদআত। মুআযযিন ‘হাইয়্যা আলাস স্বালাহ্ ও ফালাহ্ বললে জওয়াবে শ্রোতা বলবে,"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <!-- Hawqala Arabic -->
+                    <TextView
+                        android:id="@+id/tvArabicHawqala"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:gravity="end|center_vertical"
+                        android:lineSpacingExtra="8dp"
+                        android:text="لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللهِ"
+                        android:textColor="@color/text_primary"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:text="উচ্চারণ:"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvPronunciationHawqala"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="লাহাওলা অলা ক্বূওয়াতা ইল্লা বিল্লাহ্।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvMeaningHawqala"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="অর্থাৎ, আল্লাহর তওফীক ছাড়া পাপকর্ম ত্যাগ করা এবং সৎকর্ম করার সাধ্য কারো নেই।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvRefHawqala"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="সূত্র: সহীহ মুসলিম, সুনানে আবু দাউদ: ৫২৭"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <!-- Section 3: ফজরের আজানের জবাব -->
+                    <TextView
+                        android:id="@+id/tvFajrRule"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="মুআযযিন ‘আসস্বলাতু খাইরুম মিনান নাউম’ বললে অনুরূপ বলে জওয়াব দিতে হবে। এর জওয়াবে অন্য কোন দুআ (যেমন ‘স্বাদাক্বতা অবারিরতা বা বারারতা--’ বলার হাদীস নেই।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvRefFajr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="সূত্র: সুবুলুস সালাম: ৮৭পৃ., তুহফাতুল আহওয়াযী: ১/৫২৫"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <!-- Section 4: আজান শেষের দরূদ ও দোয়া -->
+                    <TextView
+                        android:id="@+id/tvPromptDurood"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="আযান শেষ হলে মহানবী (ﷺ) এর উপর দরূদ পাঠ করে নিম্নের দুআ পড়লে কিয়ামতে তাঁর সুপারিশ নসীব হবে -"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <!-- Dua Wasilah Arabic -->
+                    <TextView
+                        android:id="@+id/tvArabicWasilah"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:gravity="end|center_vertical"
+                        android:lineSpacingExtra="8dp"
+                        android:text="اللَّهُمَّ رَبَّ هٰذِهِ الدَّعْوَةِ التَّامَّةِ، وَالصَّلَاةِ الْقَائِمَةِ، آتِ مُحَمَّدًا الْوَسِيلَةَ وَالْفَضِيلَةَ، وَابْعَثْهُ مَقَامًا مَّحْمُودًا الَّذِي وَعَدْتَهُ"
+                        android:textColor="@color/text_primary"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:text="উচ্চারণ:"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvPronunciationWasilah"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="আল্লাহুম্মা রাব্বাহা-যিহিদ দা’ওয়াতিত তা-ম্মাতি অসসালা-তিল ক্বা-ইমাহ্, আ-তি মুহাম্মাদানিল অসীলহ্ অলফাযীলাহ্, অবআসহু মাক্বা-মাম মাহমূদানিল্লাযী অআত্তাহ্।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvMeaningWasilah"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="অর্থাৎ, হে আল্লাহ! হে এই পরিপূর্ণ আহবান ও প্রতিষ্ঠালাভকারী নামাযের প্রভু! তুমি মুহাম্মাদ (ﷺ) কে অসীলহ্ (জান্নাতের সুউচ্চ স্থান) এবং মর্যাদা দান কর। আর তাঁকে সেই মাক্বামে মাহমূদ (প্রশংসিত স্থানে) প্রেরণ করো যার প্রতিশ্রুতি তুমি তাঁকে দান করেছ।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvRefWasilah"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="সূত্র: সহীহ বুখারী: ৬১৪, সুনানে আবু দাউদ, তিরমিযী, নাসাঈ, ইবনে মাজাহ"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <!-- Section 5: দোয়ার মাঝে অপ্রমাণিত শব্দাবলি -->
+                    <TextView
+                        android:id="@+id/tvUnprovenPhrases"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="প্রকাশ যে, উক্ত দুআর মাঝে ইবনে সুন্নীর বর্ণনায় ‘অদ্দারাজাতার রাফীআহ্ (তদনুরূপ লোকেদের বর্ণনায় ‘সাইয়্যিদানা মুহাম্মাদান অরযুক্বনা শাফাআতাহু) এবং শেষে বাইহাকীর বর্ণনায় অতিরিক্ত ‘ইন্নাকা লা তুখলিফুল মীআদ প্রভৃতি শুদ্ধ নয়।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <!-- Section 6: দরূদের ফযিলত ও ওসিলা প্রার্থনার হাদিস -->
+                    <TextView
+                        android:id="@+id/tvDuroodHadith"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="আল্লাহর রসূল (ﷺ) বলেন, মুআযযিনকে আযান দিতে শুনলে তোমরাও ওর মতই বল। অতঃপর আমার উপর দরূদ পাঠ কর; কেননা, যে ব্যক্তি আমার উপর একবার দরূদ পাঠ করে, আল্লাহ এর বিনিময়ে তার উপর দশবার রহ্মত বর্ষণ করেন। অতঃপর তোমরা আমার জন্য আল্লাহর নিকট অসীলহ্ প্রার্থনা কর; কারণ, অসীলহ্ হল জান্নাতের এমন এক সুউচ্চ স্থান, যা আল্লাহর বান্দাদের মধ্যে একটি বান্দার জন্য উপযুক্ত। আর আমি আশা রাখি যে, সেই বান্দা আমিই। সুতরাং যে ব্যক্তি আমার জন্য ঐ অসীলহ্ প্রার্থনা করবে, তার জন্য আমার শাফাআত (সুপারিশ) অবধার্য হয়ে যাবে।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvRefDuroodHadith"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="সূত্র: সহীহ মুসলিম, মিশকাতুল মাসাবিহ: ৬৫৭"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <!-- Section 7: পূর্বে বা পরে শব্দ করার বিদআত -->
+                    <TextView
+                        android:id="@+id/tvBidahLoud"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="আযানের পূর্বে শুরুতে (উচ্চস্বরে বা মাইক্রোফোনে) দরূদ বা তাসবীহ পাঠ এবং অনুরূপ শেষেও দরূদ বা উক্ত দুআ (জোরে-শোরে) পাঠ বিদআত। শিখাবার উদ্দেশ্যেও আল্লাহর নবী (ﷺ) বা সলফদের কেউই এরূপ করে যান নি।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvRefBidahLoud"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="সূত্র: ইবনে বায, ফাতহুল বারী: ২/৯২"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <!-- Section 8: শুরুতে বিসমিল্লাহ পড়ার বিধান -->
+                    <TextView
+                        android:id="@+id/tvBismillahBidah"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="যেমন আযান ও ইকামতের শুরুতে ‘বিসমিল্লাহ্ পড়া বিদআত।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvRefBismillah"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="সূত্র: আশ-শারহুল মুমতি, ইবনে উসাইমীন: ১/১৩২"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <!-- Section 9: হাত তোলা, মাথায় কাপড় ও বিভিন্ন অবস্থায় জবাবের বিধান -->
+                    <TextView
+                        android:id="@+id/tvGeneralRules"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="তদ্রূপ উপরোক্ত ঐ দুআ পড়ার সময় হাত তোলাও বিধেয় নয়। বিধেয় নয় আযান শুরু হলে মহিলাদের মাথায় কাপড় নেওয়া। জ্ঞাতব্য যে, আযানের জওয়াব দেবে প্রত্যেক সেই ব্যক্তি যার জন্য আল্লাহর যিক্র করা বৈধ। অতএব পবিত্র অবস্থায়, অপবিত্র বা মাসিক অবস্থায় নারী-পুরুষ সকলের জন্যই আযানের জওয়াব দেওয়া মুস্তাহাব। অবশ্য নামায পড়া অবস্থায়, প্রস্রাব-পায়খানা করা অথবা বাথরুমে থাকা অবস্থায় এবং স্ত্রী-মিলন রত অবস্থায় আযানের উত্তর দেওয়া বৈধ নয়। এসব কাজ থেকে ফারেগ হওয়ার পর বাকী আযানের উত্তর দেওয়া বিধেয়।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <!-- Section 10: কুরআন তেলাওয়াত ও আজানের জবাব -->
+                    <TextView
+                        android:id="@+id/tvQuranPause"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="যে ব্যক্তি কুরআন তেলাওয়াত বা যিক্র করে অথবা দারস দেয় সে ব্যক্তি তা বন্ধ রেখে আযানের জওয়াব দিয়ে পুনরায় তা ছেড়ে রাখা জায়গা থেকে শুরু করবে।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvRefQuranPause"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="সূত্র: ফিকহুস সুন্নাহ: ১/৮৭"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <!-- Section 11: খাওয়ার সময় আজানের জবাব -->
+                    <TextView
+                        android:id="@+id/tvEatingRule"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="খাওয়ার সময় আযান হলে খেতে খেতেও আযানের জওয়াব দিতে এবং তারপর দুআ পড়তে কোন বাধা নেই।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvRefEating"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="সূত্র: ফাতাওয়া ইবনে উসাইমীন: ১/৫৩২"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Card 2: যারা জবাব দেবেন না -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardWhoCannotAnswer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@color/bg_card"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/border_card"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Card 2 Header Row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvCard2Title"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="যারা জবাব দেবেন না"
+                            android:textColor="@color/text_primary"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <FrameLayout
+                            android:id="@+id/btnMenuCard2"
+                            android:layout_width="34dp"
+                            android:layout_height="34dp"
+                            android:layout_marginStart="8dp"
+                            android:background="@drawable/bg_circular_counter"
+                            android:backgroundTint="@color/bg_badge_pill"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <ImageView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_more_horiz"
+                                app:tint="@color/text_primary" />
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvCard2Body1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="নামাজরত, পানাহারে মগ্ন, মলমূত্র ত্যাগকারী ও স্ত্রীর সঙ্গে শারীরিক সম্পর্কে লিপ্ত ব্যক্তি আজানের জবাব দেবে না। ঋতুকালীন সময়ে নারীরাও আজানের উত্তর দেওয়া থেকে বিরত থাকবে।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvCard2Body2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="অনেক ফিকাহবিদদের মতে আজানের পরপর যদি উল্লিখিত কাজ থেকে অবসর হওয়া যায়, তাহলে সঙ্গে সঙ্গে আজানের জবাব দিয়ে দেওয়া উত্তম। কেউ কোরআন তেলাওয়াতে থাকলে সাময়িক তেলাওয়াত বন্ধ রেখে আজানের জবাব দেওয়া উত্তম।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvCard2Ref"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="সূত্র: আদ্দুররুল মুখতার: ১/৩৯৭"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Card 3: আজানের সময় কথা-কাজ না করা -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardSilenceDuringAzan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@color/bg_card"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/border_card"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Card 3 Header Row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvCard3Title"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="আজানের সময় কথা-কাজ না করা"
+                            android:textColor="@color/text_primary"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <FrameLayout
+                            android:id="@+id/btnMenuCard3"
+                            android:layout_width="34dp"
+                            android:layout_height="34dp"
+                            android:layout_marginStart="8dp"
+                            android:background="@drawable/bg_circular_counter"
+                            android:backgroundTint="@color/bg_badge_pill"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <ImageView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_more_horiz"
+                                app:tint="@color/text_primary" />
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvCard3Body"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="চুপ থেকে আজান শোনা সুন্নত। একান্ত প্রয়োজন ছাড়া সাধারণ দ্বীনি-দুনিয়াবি কথা বা কাজে লিপ্ত থাকাও অনুচিত।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

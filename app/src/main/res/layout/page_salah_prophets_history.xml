@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main"
+    android:orientation="vertical">
+
+    <!-- Top Header Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/bg_top_bar"
+        android:elevation="2dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp">
+
+        <!-- Back Button with Circular Container -->
+        <FrameLayout android:id="@+id/btnBackProphetsSalahHistory"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_circular_counter"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_arrow_back"
+                app:tint="@color/accent_mint" />
+        </FrameLayout>
+
+        <!-- Header Title -->
+        <TextView
+            android:id="@+id/tvHeaderTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="কোন নবীর উপর কোন নামাজ ফরজ হয়েছিল"
+            android:textColor="@color/text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Settings Gear Action Button with Circular Container -->
+        <FrameLayout android:id="@+id/btnSettingsProphetsSalahHistory"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_circular_counter"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_settings"
+                app:tint="@color/accent_mint" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- Scrollable Content -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollHistoryContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="36dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Main Topic Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardProphetsSalahMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@color/bg_card"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/border_card"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Card Header Row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvCardTitle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:lineSpacingExtra="3dp"
+                            android:text="কোন নবীর উপর কোন নামাজ ফরজ হয়েছিল"
+                            android:textColor="@color/text_primary"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <!-- Three dots button -->
+                        <FrameLayout
+                            android:id="@+id/btnMenuCardProphetsSalah"
+                            android:layout_width="34dp"
+                            android:layout_height="34dp"
+                            android:layout_marginStart="8dp"
+                            android:background="@drawable/bg_glassy_icon_button"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_more_horiz"
+                                app:tint="@color/text_primary" />
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <!-- Intro Paragraph -->
+                    <TextView
+                        android:id="@+id/tvProphetsIntro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="ইসলামের ইতিহাসে বিভিন্ন নবীদের উপর বিভিন্ন ধরনের নামাজ ফরজ করা হয়েছিল। কিন্তু ইসলামে পাঁচ ওয়াক্ত নামাজের বিধান শুধুমাত্র নবী মুহাম্মদ (সাঃ) এর উপরই ফরজ হয়। কুরআন এবং হাদিসে অন্য নবীদের উপর নামাজের ফরজ হওয়ার বিষয়ে কিছুটা উল্লেখ পাওয়া যায়, তবে তা এতটা বিস্তারিত নয়। এখানে কয়েকজন নবীর উপর নামাজের নির্দেশনা সম্পর্কে আলোচনা করা হলো-"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <!-- 1. ইব্রাহিম (আঃ) -->
+                    <!-- 1. ইব্রাহিম (আঃ) -->
+                    <TextView
+                        android:id="@+id/tvSubheadingIbrahim"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="ইব্রাহিম (আঃ) -"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvIbrahimDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="নবী ইব্রাহিম (আঃ) এর উপর নামাজ ফরজ করা হয়েছিল। কুরআনে বর্ণিত হয়েছে যে, তিনি এবং তার বংশধররা নামাজ কায়েম করতেন।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvIbrahimQuote"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:lineSpacingExtra="3.5dp"
+                        android:text="&quot;হে আমাদের পালনকর্তা! আমি আমার বংশধরদেরকে তোমার পবিত্র গৃহের নিকট এক নির্জন উপত্যকায় বসবাস করিয়েছি-হে আমাদের পালনকর্তা! যাতে তারা নামাজ কায়েম করতে পারে।&quot;"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvRefIbrahim"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="সূরা ইব্রাহিম: ১৪:৩৭"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <!-- 2. ইসমাঈল (আঃ) -->
+                    <TextView
+                        android:id="@+id/tvSubheadingIsmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="ইসমাঈল (আঃ) -"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvIsmailDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="ইব্রাহিম (আঃ) এর পুত্র ইসমাঈল (আঃ) এর উপরও নামাজের নির্দেশনা ছিল।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvIsmailQuote"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:lineSpacingExtra="3.5dp"
+                        android:text="&quot;আর আপনি কিতাবের মধ্যে ইসমাঈলের কথা উল্লেখ করুন। নিশ্চয়ই সে ছিল প্রতিশ্রুতি পালনের ক্ষেত্রে সত্যবাদী এবং ছিল একজন রাসুল, নবী। এবং সে তার পরিবারবর্গকে নামাজ ও যাকাতের আদেশ দিত এবং তার পালনকর্তার কাছে সে ছিল পছন্দনীয়।&quot;"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvRefIsmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="সূরা মারইয়াম: ১৯:৫৪-৫৫"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <!-- 3. মুসা (আঃ) -->
+                    <TextView
+                        android:id="@+id/tvSubheadingMusa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="মুসা (আঃ) -"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvMusaDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="নবী মুসা (আঃ) এর উপরও নামাজের নির্দেশনা ছিল।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvMusaQuote"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:lineSpacingExtra="3.5dp"
+                        android:text="&quot;নিশ্চয়ই আমিই আল্লাহ, আমার ছাড়া আর কোনো উপাস্য নেই। সুতরাং তুমি আমার ইবাদত কর এবং আমার স্মরণে নামাজ কায়েম কর।&quot;"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvRefMusa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="সূরা ত্বহা: ২০:১৪"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <!-- 4. ঈসা (আঃ) -->
+                    <TextView
+                        android:id="@+id/tvSubheadingIsa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="ঈসা (আঃ) -"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvIsaDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="নবী ঈসা (আঃ) এর উপরও নামাজের নির্দেশনা ছিল।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvIsaQuote"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:lineSpacingExtra="3.5dp"
+                        android:text="&quot;সে বলল, 'নিশ্চয়ই আমি আল্লাহর বান্দা। তিনি আমাকে কিতাব দিয়েছেন এবং আমাকে নবী করেছেন। এবং তিনি আমাকে বরকতময় করেছেন যেখানে আমি থাকি এবং তিনি আমাকে নামাজ ও যাকাতের আদেশ দিয়েছেন যতদিন আমি জীবিত থাকি।&quot;"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvRefIsa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="সূরা মারইয়াম: ১৯:৩০-৩১"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <!-- 5. মুহাম্মদ (সাঃ) -->
+                    <TextView
+                        android:id="@+id/tvSubheadingMuhammad"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="মুহাম্মদ (সাঃ) -"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvMuhammadDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="নবী মুহাম্মদ (সাঃ) এর উপর মেরাজের রাতে পাঁচ ওয়াক্ত নামাজ ফরজ করা হয়, যা পুরো মুসলিম উম্মাহর উপরও ফরজ।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvMuhammadQuote"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:lineSpacingExtra="3.5dp"
+                        android:text="&quot;মেরাজের রাতে নবী মুহাম্মদ (সাঃ) আল্লাহর সাথে সাক্ষাৎ করেন এবং আল্লাহ তাকে ৫০ ওয়াক্ত নামাজের আদেশ দেন। পরবর্তীতে মুসা (আঃ)-এর পরামর্শে আল্লাহ তা ৫ ওয়াক্তে কমিয়ে দেন।&quot;"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvRefMuhammad"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="সহীহ বুখারী: ৩৪৯"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

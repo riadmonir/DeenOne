@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:background="@drawable/bg_card_emerald"
+  android:fillViewport="true">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- Global Top App Bar -->
+    <RelativeLayout
+      android:id="@+id/layoutTopHeader"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/bg_card"
+      android:paddingHorizontal="16dp"
+      android:paddingTop="12dp"
+      android:paddingBottom="12dp">
+
+      <FrameLayout
+        android:id="@+id/btnCloseZakat"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bg_circular_counter"
+        android:backgroundTint="@color/bg_badge_pill"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageView
+          android:layout_width="20dp"
+          android:layout_height="20dp"
+          android:layout_gravity="center"
+          android:src="@drawable/ic_arrow_back"
+          app:tint="@color/primary_green" />
+      </FrameLayout>
+
+      <!-- Center: DeenOne Brand Logo -->
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Deen"
+          android:textColor="@color/text_primary"
+          android:textSize="22sp"
+          android:textStyle="bold" />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="One"
+          android:textColor="@color/primary_green"
+          android:textSize="22sp"
+          android:textStyle="bold" />
+      </LinearLayout>
+
+      <!-- Right: Theme Toggle + Standing Divider + Notification Bell -->
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <FrameLayout
+          android:id="@+id/btnZakatThemeToggle"
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:background="@drawable/bg_circular_counter"
+          android:backgroundTint="@color/bg_badge_pill"
+          android:clickable="true"
+          android:focusable="true">
+
+          <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_moon"
+            app:tint="@color/primary_green" />
+        </FrameLayout>
+
+        <View
+          android:layout_width="1.5dp"
+          android:layout_height="20dp"
+          android:layout_marginHorizontal="6dp"
+          android:background="@color/border_card" />
+
+        <FrameLayout
+          android:id="@+id/btnZakatNotification"
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:background="@drawable/bg_circular_counter"
+          android:backgroundTint="@color/bg_badge_pill"
+          android:clickable="true"
+          android:focusable="true">
+
+          <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_notifications"
+            app:tint="@color/primary_green" />
+
+          <View
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_gravity="top|end"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="7dp"
+            android:background="@drawable/bg_circular_counter"
+            android:backgroundTint="@color/accent_red" />
+        </FrameLayout>
+      </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:padding="20dp">
+
+      <TextView
+        android:id="@+id/tvZakatSheetTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="যাকাত ক্যালকুলেটর"
+        android:textColor="@color/text_primary"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+      <TextView
+        android:id="@+id/tvZakatSheetSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="নেসাব এবং বাৎসরিক ২.৫% বাধ্যতামূলক যাকাতের হিসাব"
+        android:textColor="@color/text_secondary"
+        android:textSize="13sp" />
+
+    <!-- Result Card -->
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:background="@drawable/bg_card_active"
+      android:orientation="vertical"
+      android:padding="16dp">
+
+      <TextView
+        android:id="@+id/tvZakatPayableLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="প্রদেয় মোট যাকাত (২.৫%)"
+        android:textColor="@color/text_secondary"
+        android:textSize="12sp" />
+
+      <TextView
+        android:id="@+id/tvZakatPayable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="৳ ০.০০"
+        android:textColor="@color/accent_mint"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+      <TextView
+        android:id="@+id/tvNisabStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="নেসাব থ্রেশহোল্ড: ৳ ১,১০,২২৪ (৫২.৫ তোলা রূপা)"
+        android:textColor="@color/text_muted"
+        android:textSize="11sp" />
+    </LinearLayout>
+
+    <!-- Input Fields -->
+    <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/tilCash"
+      style="@style/DeenOneTextInputLayout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:hint="নগদ টাকা ও ব্যাংক ব্যালেন্স (৳)">
+
+      <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etCash"
+        style="@style/DeenOneTextInputEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/tilGoldSilver"
+      style="@style/DeenOneTextInputLayout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:hint="স্বর্ণ ও রূপার মোট বাজারমূল্য (৳)">
+
+      <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etGoldSilver"
+        style="@style/DeenOneTextInputEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/tilBusiness"
+      style="@style/DeenOneTextInputLayout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:hint="ব্যবসায়িক পণ্য ও বিনিয়োগ (৳)">
+
+      <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etBusiness"
+        style="@style/DeenOneTextInputEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/tilDebts"
+      style="@style/DeenOneTextInputLayout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:hint="তাত্ক্ষণিক ঋণ ও দায়দেনা (৳ - বিয়োগ হবে)">
+
+      <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etDebts"
+        style="@style/DeenOneTextInputEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Calculate Button -->
+    <Button
+      android:id="@+id/btnCalculateZakat"
+      style="@style/DeenOneButtonPill"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="18dp"
+      android:text="যাকাত হিসাব করুন" />
+    </LinearLayout>
+  </LinearLayout>
+</ScrollView>

@@ -1,0 +1,68 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="120dp"
+    android:height="160dp"
+    android:viewportWidth="120"
+    android:viewportHeight="160">
+
+    <!-- Background Cream/Off-white -->
+    <path
+        android:pathData="M8,0 L112,0 A8,8 0 0,1 120,8 L120,152 A8,8 0 0,1 112,160 L8,160 A8,8 0 0,1 0,152 L0,8 A8,8 0 0,1 8,0 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:angle="135"
+                android:endColor="#F7FAFC"
+                android:startColor="#FFFFFF"
+                android:type="linear" />
+        </aapt:attr>
+    </path>
+
+    <!-- Spine Accent -->
+    <path
+        android:fillColor="#E2E8F0"
+        android:pathData="M0,0 L10,0 L10,160 L0,160 Z" />
+    <path
+        android:fillColor="#DD6B20"
+        android:pathData="M10,0 L11,0 L11,160 L10,160 Z" />
+
+    <!-- Islamic Mandala Ornamental Geometry in Center -->
+    <path
+        android:fillColor="#FEEBC8"
+        android:pathData="M60,40 L78,58 L60,76 L42,58 Z" />
+    <path
+        android:fillColor="#C05621"
+        android:pathData="M60,45 L73,58 L60,71 L47,58 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M60,50 L68,58 L60,66 L52,58 Z" />
+
+    <!-- Calligraphic Style Prayer Motif -->
+    <path
+        android:fillColor="#7B341E"
+        android:pathData="M60,53 A5,5 0 1,0 60,63 A5,5 0 1,0 60,53 Z" />
+
+    <!-- Arabesque Corner Flourishes -->
+    <path
+        android:fillColor="#DD6B20"
+        android:pathData="M18,18 L32,18 L32,20 L20,20 L20,32 L18,32 Z" />
+    <path
+        android:fillColor="#DD6B20"
+        android:pathData="M102,18 L88,18 L88,20 L100,20 L100,32 L102,32 Z" />
+    <path
+        android:fillColor="#DD6B20"
+        android:pathData="M18,142 L32,142 L32,140 L20,140 L20,128 L18,128 Z" />
+    <path
+        android:fillColor="#DD6B20"
+        android:pathData="M102,142 L88,142 L88,140 L100,140 L100,128 L102,128 Z" />
+
+    <!-- Title and Subtext Bands -->
+    <path
+        android:fillColor="#7B341E"
+        android:pathData="M28,95 L92,95 L92,98 L28,98 Z" />
+    <path
+        android:fillColor="#C05621"
+        android:pathData="M38,106 L82,106 L82,108 L38,108 Z" />
+    <path
+        android:fillColor="#A0AEC0"
+        android:pathData="M44,118 L76,118 L76,120 L44,120 Z" />
+</vector>

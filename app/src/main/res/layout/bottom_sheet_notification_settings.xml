@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/bg_main">
+
+  <!-- Top Header Bar -->
+  <LinearLayout
+    android:id="@+id/layoutNotifSettingsHeader"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_top_bar"
+    android:orientation="vertical"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="12dp"
+    android:paddingBottom="12dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <ImageButton android:id="@+id/btnCloseNotifSettingsSheet"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bg_badge_pill"
+        android:contentDescription="ফিরে যান"
+        android:src="@drawable/ic_arrow_back"
+        app:tint="@color/accent_mint" />
+
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+          android:id="@+id/tvNotifSettingsTitle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="নোটিফিকেশন সেটিংস"
+          android:textColor="@color/text_primary"
+          android:textSize="16sp"
+          android:textStyle="bold" />
+
+        <TextView
+          android:id="@+id/tvNotifSettingsSubtitle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="2dp"
+          android:text="দৈনিক আমল, হাদিস, কুইজ ও স্মরণিকা ব্যবস্থাপনা"
+          android:textColor="@color/accent_mint"
+          android:textSize="11sp" />
+      </LinearLayout>
+    </RelativeLayout>
+  </LinearLayout>
+
+  <androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:clipToPadding="false"
+    android:overScrollMode="never"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="12dp"
+    android:paddingBottom="24dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/layoutNotifSettingsHeader">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <!-- Section 1: দৈনিক দ্বীনি স্মরণিকা -->
+      <TextView
+        android:id="@+id/tvSectionDailyReminders"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="দৈনিক দ্বীনি স্মরণিকা"
+        android:textColor="@color/accent_mint"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+      <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="14dp"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="14dp">
+
+          <!-- Daily Amal -->
+          <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+              android:id="@+id/tvLabelDailyAmal"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentStart="true"
+              android:layout_centerVertical="true"
+              android:text="দৈনিক আমল স্মরণিকা - সকাল ৮:৩০"
+              android:textColor="@color/text_primary"
+              android:textSize="13sp" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+              android:id="@+id/switchDailyAmal"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentEnd="true"
+              android:layout_centerVertical="true"
+              android:checked="true" />
+          </RelativeLayout>
+
+          <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="8dp"
+            android:background="@color/border_card" />
+
+          <!-- Daily Dua & Hadith -->
+          <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+              android:id="@+id/tvLabelDailyDuaHadith"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentStart="true"
+              android:layout_centerVertical="true"
+              android:text="দৈনিক দোয়া ও হাদিস অ্যালার্ট"
+              android:textColor="@color/text_primary"
+              android:textSize="13sp" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+              android:id="@+id/switchDailyDuaHadith"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentEnd="true"
+              android:layout_centerVertical="true"
+              android:checked="true" />
+          </RelativeLayout>
+
+          <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="8dp"
+            android:background="@color/border_card" />
+
+          <!-- Daily Quiz -->
+          <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+              android:id="@+id/tvLabelDailyQuiz"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentStart="true"
+              android:layout_centerVertical="true"
+              android:text="ইসলামিক কুইজ রিমাইন্ডার - রাত ৮:৩০"
+              android:textColor="@color/text_primary"
+              android:textSize="13sp" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+              android:id="@+id/switchDailyQuiz"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentEnd="true"
+              android:layout_centerVertical="true"
+              android:checked="true" />
+          </RelativeLayout>
+
+          <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="8dp"
+            android:background="@color/border_card" />
+
+          <!-- Quran Recitation -->
+          <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+              android:id="@+id/tvLabelQuranReminder"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentStart="true"
+              android:layout_centerVertical="true"
+              android:text="দৈনিক কুরআন তিলাওয়াত স্মরণিকা"
+              android:textColor="@color/text_primary"
+              android:textSize="13sp" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+              android:id="@+id/switchQuranReminder"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentEnd="true"
+              android:layout_centerVertical="true"
+              android:checked="true" />
+          </RelativeLayout>
+
+          <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="8dp"
+            android:background="@color/border_card" />
+
+          <!-- Morning & Evening Dhikr -->
+          <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+              android:id="@+id/tvLabelDhikrReminder"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentStart="true"
+              android:layout_centerVertical="true"
+              android:text="সকাল ও সন্ধ্যার মাসনূন জিকির"
+              android:textColor="@color/text_primary"
+              android:textSize="13sp" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+              android:id="@+id/switchDhikrReminder"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentEnd="true"
+              android:layout_centerVertical="true"
+              android:checked="true" />
+          </RelativeLayout>
+
+          <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="8dp"
+            android:background="@color/border_card" />
+
+          <!-- Tahajjud -->
+          <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+              android:id="@+id/tvLabelTahajjudReminder"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentStart="true"
+              android:layout_centerVertical="true"
+              android:text="তাহাজ্জুদ ও শেষ রাতের ডাক"
+              android:textColor="@color/text_primary"
+              android:textSize="13sp" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+              android:id="@+id/switchTahajjudReminder"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentEnd="true"
+              android:layout_centerVertical="true"
+              android:checked="true" />
+          </RelativeLayout>
+
+          <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="8dp"
+            android:background="@color/border_card" />
+
+          <!-- Sunnah Fasting (Mon/Thu & White Days) -->
+          <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+              android:id="@+id/tvLabelSunnahFasting"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentStart="true"
+              android:layout_centerVertical="true"
+              android:text="সুন্নাত ও আইয়ামে বীজের রোজা"
+              android:textColor="@color/text_primary"
+              android:textSize="13sp" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+              android:id="@+id/switchSunnahFasting"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentEnd="true"
+              android:layout_centerVertical="true"
+              android:checked="true" />
+          </RelativeLayout>
+
+          <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="8dp"
+            android:background="@color/border_card" />
+
+          <!-- Islamic Events & Jumuah -->
+          <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+              android:id="@+id/tvLabelJumuahReminder"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentStart="true"
+              android:layout_centerVertical="true"
+              android:text="জুমার প্রস্তুতি ও সূরা কাহফ"
+              android:textColor="@color/text_primary"
+              android:textSize="13sp" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+              android:id="@+id/switchJumuahReminder"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentEnd="true"
+              android:layout_centerVertical="true"
+              android:checked="true" />
+          </RelativeLayout>
+
+          <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="8dp"
+            android:background="@color/border_card" />
+
+          <!-- Islamic Events -->
+          <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+              android:id="@+id/tvLabelIslamicEvents"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentStart="true"
+              android:layout_centerVertical="true"
+              android:text="হিজরি ক্যালেন্ডার ও বিশেষ দ্বীনি দিবস"
+              android:textColor="@color/text_primary"
+              android:textSize="13sp" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+              android:id="@+id/switchIslamicEvents"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentEnd="true"
+              android:layout_centerVertical="true"
+              android:checked="true" />
+          </RelativeLayout>
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- Section 2: সিস্টেম ও অন্যান্য -->
+      <TextView
+        android:id="@+id/tvSectionSystemSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="সিস্টেম ও সাধারণ সেটিংস"
+        android:textColor="@color/accent_mint"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+      <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="14dp"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="14dp">
+
+          <!-- Admin & Announcements -->
+          <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+              android:id="@+id/tvLabelAdminNotifs"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentStart="true"
+              android:layout_centerVertical="true"
+              android:text="এডমিন ও জরুরি সিস্টেম ঘোষণা"
+              android:textColor="@color/text_primary"
+              android:textSize="13sp" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+              android:id="@+id/switchAdminNotifs"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentEnd="true"
+              android:layout_centerVertical="true"
+              android:checked="true" />
+          </RelativeLayout>
+
+          <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="8dp"
+            android:background="@color/border_card" />
+
+          <!-- Notification Sound Selector -->
+          <RelativeLayout
+            android:id="@+id/layoutNotificationSound"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true">
+
+            <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentStart="true"
+              android:layout_centerVertical="true"
+              android:orientation="vertical">
+
+              <TextView
+                android:id="@+id/tvLabelNotificationSound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="নোটিফিকেশন রিংটোন"
+                android:textColor="@color/text_primary"
+                android:textSize="13sp" />
+
+              <TextView
+                android:id="@+id/tvCurrentNotificationSound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="ডিফল্ট টিউন"
+                android:textColor="@color/text_secondary"
+                android:textSize="11.5sp" />
+            </LinearLayout>
+
+            <TextView
+              android:id="@+id/btnChangeNotificationSound"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentEnd="true"
+              android:layout_centerVertical="true"
+              android:background="@drawable/bg_badge_pill"
+              android:paddingHorizontal="10dp"
+              android:paddingVertical="4dp"
+              android:text="পরিবর্তন"
+              android:textColor="@color/accent_teal"
+              android:textSize="11.5sp"
+              android:textStyle="bold" />
+          </RelativeLayout>
+
+          <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="8dp"
+            android:background="@color/border_card" />
+
+          <!-- Vibration Toggle -->
+          <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+              android:id="@+id/tvLabelVibration"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentStart="true"
+              android:layout_centerVertical="true"
+              android:text="নোটিফিকেশনে ভাইব্রেশন"
+              android:textColor="@color/text_primary"
+              android:textSize="13sp" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+              android:id="@+id/switchVibration"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentEnd="true"
+              android:layout_centerVertical="true"
+              android:checked="true" />
+          </RelativeLayout>
+
+          <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="8dp"
+            android:background="@color/border_card" />
+
+          <!-- Test Vibration Button -->
+          <RelativeLayout
+            android:id="@+id/layoutTestVibration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true">
+
+            <TextView
+              android:id="@+id/tvTestVibrationLabel"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentStart="true"
+              android:layout_centerVertical="true"
+              android:text="ভাইব্রেশন পরীক্ষা করুন"
+              android:textColor="@color/text_primary"
+              android:textSize="12.5sp" />
+
+            <TextView
+              android:id="@+id/btnTestVibration"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentEnd="true"
+              android:layout_centerVertical="true"
+              android:background="@drawable/bg_badge_pill"
+              android:paddingHorizontal="10dp"
+              android:paddingVertical="4dp"
+              android:text="পরীক্ষা"
+              android:textColor="@color/accent_mint"
+              android:textSize="11.5sp"
+              android:textStyle="bold" />
+          </RelativeLayout>
+
+          <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="8dp"
+            android:background="@color/border_card" />
+
+          <!-- Wear OS & Screen Widget Hub Link -->
+          <RelativeLayout
+            android:id="@+id/layoutOpenWearOsFromNotifSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true">
+
+            <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentStart="true"
+              android:orientation="vertical">
+
+              <TextView
+                android:id="@+id/tvLabelWearOsHub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wear OS ও স্ক্রিন উইজেট"
+                android:textColor="@color/text_primary"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+              <TextView
+                android:id="@+id/tvSubLabelWearOsHub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="স্মার্টওয়াচ সিঙ্ক, থিম ও লকস্ক্রিন উইজেট"
+                android:textColor="@color/accent_mint"
+                android:textSize="11sp" />
+            </LinearLayout>
+
+            <TextView
+              android:id="@+id/btnWearOsHubAction"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentEnd="true"
+              android:layout_centerVertical="true"
+              android:text="সেটিংস"
+              android:textColor="@color/accent_mint"
+              android:textSize="11.5sp"
+              android:textStyle="bold" />
+          </RelativeLayout>
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+  </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

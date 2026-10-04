@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="36dp"
+    android:height="36dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+    <!-- Outer Soft Islamic Star Outline -->
+    <path
+        android:strokeWidth="3"
+        android:strokeColor="#1A000000"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M50,4 Q57.5,10.2 62.4,17.9 Q71.3,15.9 81,16.8 Q81.9,26.5 79.9,35.5 Q87.6,40.4 93.8,47.9 Q87.6,55.4 79.9,60.3 Q81.9,69.3 81,79 Q71.3,79.9 62.4,77.9 Q57.5,85.6 50,91.8 Q42.5,85.6 37.6,77.9 Q28.7,79.9 19,79 Q18.1,69.3 20.1,60.3 Q12.4,55.4 6.2,47.9 Q12.4,40.4 20.1,35.5 Q18.1,26.5 19,16.8 Q28.7,15.9 37.6,17.9 Q42.5,10.2 50,4Z" />
+
+    <!-- Main Solid Fill -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M50,5 Q57.5,11.2 62.4,18.9 Q71.3,16.9 81,17.8 Q81.9,27.5 79.9,36.5 Q87.6,41.4 93.8,48.9 Q87.6,56.4 79.9,61.3 Q81.9,70.3 81,80 Q71.3,80.9 62.4,78.9 Q57.5,86.6 50,92.8 Q42.5,86.6 37.6,78.9 Q28.7,80.9 19,80 Q18.1,70.3 20.1,61.3 Q12.4,56.4 6.2,48.9 Q12.4,41.4 20.1,36.5 Q18.1,27.5 19,17.8 Q28.7,16.9 37.6,18.9 Q42.5,11.2 50,5Z" />
+</vector>

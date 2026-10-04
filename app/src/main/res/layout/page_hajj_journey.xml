@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main">
+
+    <!-- Top Arabesque Banner Background (Matches Reference Screenshot) -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_hajj_top_banner" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.25"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_splash_islamic_pattern"
+            app:tint="@color/accent_teal" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/bg_hajj_header_fade" />
+    </FrameLayout>
+
+    <!-- Root Content Container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Header Bar -->
+        <FrameLayout
+            android:id="@+id/headerBarHajjJourney"
+            android:layout_width="match_parent"
+            android:layout_height="56dp">
+
+            <!-- Back Button with Circular Ripple -->
+            <FrameLayout
+                android:id="@+id/btnBackHajjJourney"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center_vertical|start"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/bg_circular_counter"
+                android:backgroundTint="@color/bg_badge_pill"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="Back"
+                    android:src="@drawable/ic_arrow_back"
+                    app:tint="@color/accent_mint" />
+            </FrameLayout>
+
+            <!-- Section Title -->
+            <TextView
+                android:id="@+id/tvHajjJourneyTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|start"
+                android:layout_marginStart="58dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="হজ যাত্রা"
+                android:textColor="@color/text_primary"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <!-- Main Scrollable Timeline -->
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollHajjJourney"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:overScrollMode="never"
+            android:clipToPadding="false"
+            android:paddingBottom="84dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="12dp"
+                android:paddingTop="6dp">
+
+                <!-- Top Expandable Summary Card (Compact 2-Line Header Matching Screenshot) -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardHajjSummary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    app:cardBackgroundColor="@color/bg_hajj_summary"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="@color/border_hajj_summary"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="12dp">
+
+                        <!-- Main Verbatim Paragraph (2 Lines Compact by Default) -->
+                        <TextView
+                            android:id="@+id/tvSummaryMain"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:lineSpacingMultiplier="1.25"
+                            android:maxLines="2"
+                            android:text="হজ ইসলাম ধর্মের পঞ্চম স্তম্ভ। যারা শারীরিক ও আর্থিকভাবে সক্ষম, অর্থাৎ যাদের নিসাব পরিমাণ সম্পদ রয়েছে, তাদের ওপর জীবনে অন্তত একবার হজ করা ফরজ। হজের প্রতিটি ধাপ সুনির্দিষ্ট নিয়ম ও আহকামে আবদ্ধ।"
+                            android:textColor="@color/text_primary"
+                            android:textSize="13sp" />
+
+                        <!-- Expanded Content (Collapsible) -->
+                        <LinearLayout
+                            android:id="@+id/layoutSummaryExpanded"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            android:paddingTop="8dp">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginBottom="8dp"
+                                android:background="@color/border_hajj_summary" />
+
+                            <TextView
+                                android:id="@+id/tvSummaryExtended"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:lineSpacingMultiplier="1.25"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="12.5sp" />
+                        </LinearLayout>
+
+                        <!-- Expand / Collapse Action Row (Start-Aligned Matching Screenshot) -->
+                        <LinearLayout
+                            android:id="@+id/btnToggleSummary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginTop="6dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center_vertical"
+                            android:minHeight="48dp"
+                            android:orientation="horizontal"
+                            android:paddingVertical="3dp"
+                            android:paddingEnd="6dp">
+
+                            <TextView
+                                android:id="@+id/tvToggleSummary"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="বিস্তারিত"
+                                android:textColor="@color/accent_teal"
+                                android:textSize="12.5sp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/ivToggleSummaryChevron"
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"
+                                android:layout_marginStart="4dp"
+                                android:src="@drawable/ic_chevron_down"
+                                app:tint="@color/accent_teal" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- RecyclerView for 12 Timeline Cards -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvHajjStages"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    android:overScrollMode="never" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+    <!-- Floating Audio Control Button (Bottom-Right, as in Screenshot) -->
+    <FrameLayout
+        android:id="@+id/btnHajjAudioFab"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/bg_hajj_audio_fab"
+        android:clickable="true"
+        android:focusable="true"
+        android:elevation="6dp">
+
+        <!-- Play/Pause Icon -->
+        <ImageView
+            android:id="@+id/ivHajjAudioIcon"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_gravity="center"
+            android:contentDescription="Play/Pause Labbaik"
+            android:src="@drawable/ic_play_arrow"
+            app:tint="@color/text_primary" />
+
+        <!-- Subtle Animated Audio Equalizer Wave Indicator -->
+        <LinearLayout
+            android:id="@+id/layoutAudioWaveIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <View
+                android:id="@+id/waveBar1"
+                android:layout_width="3dp"
+                android:layout_height="12dp"
+                android:layout_marginHorizontal="1.5dp"
+                android:background="@drawable/bg_hajj_indicator_bar" />
+
+            <View
+                android:id="@+id/waveBar2"
+                android:layout_width="3dp"
+                android:layout_height="18dp"
+                android:layout_marginHorizontal="1.5dp"
+                android:background="@drawable/bg_hajj_indicator_bar" />
+
+            <View
+                android:id="@+id/waveBar3"
+                android:layout_width="3dp"
+                android:layout_height="10dp"
+                android:layout_marginHorizontal="1.5dp"
+                android:background="@drawable/bg_hajj_indicator_bar" />
+        </LinearLayout>
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

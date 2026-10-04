@@ -1,0 +1,21 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="28dp"
+    android:height="28dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Asmaul Husna - 99 Names of Allah (আল্লাহর ৯৯ নাম - আসমাউল হুসনা সিল) -->
+    <!-- 8-Pointed Rub-el-Hizb Star -->
+    <path
+        android:fillColor="#34D399"
+        android:pathData="M12,2L14.8,4.8L18.8,4.2L19.2,8.2L22,11L19.2,13.8L18.8,17.8L14.8,17.2L12,20L9.2,17.2L5.2,17.8L4.8,13.8L2,11L4.8,8.2L5.2,4.2L9.2,4.8Z" />
+
+    <!-- Center Calligraphy Medallion -->
+    <path
+        android:fillColor="#0E3827"
+        android:pathData="M12,6A5,5 0 1,1 7,11A5,5 0 0,1 12,6Z" />
+
+    <!-- 'Allah' Calligraphy Motif / Symbol in Gold -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M9,13V9H10V13H9M10.8,13V8H11.8V13H10.8M12.6,13V8.5H13.6V13H12.6M14.5,13C14.5,11.5 15,10.5 15.5,10.5C16,10.5 16,11.5 16,13H14.5M11.5,7L12.5,6L13.5,7H11.5Z" />
+</vector>

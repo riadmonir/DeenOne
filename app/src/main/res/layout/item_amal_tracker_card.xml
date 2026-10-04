@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:id="@+id/cardAmalRoot"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_marginBottom="12dp"
+  app:cardBackgroundColor="@color/bg_card"
+  app:cardCornerRadius="18dp"
+  app:cardElevation="0dp"
+  app:strokeColor="@color/border_card"
+  app:strokeWidth="1dp">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Top Row: Title & Category Icon Badge -->
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <TextView
+        android:id="@+id/tvAmalTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/containerAmalIcon"
+        android:layout_marginEnd="10dp"
+        android:text="জুমার দিনে সূরা কাহফ"
+        android:textColor="@color/accent_mint"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+      <FrameLayout
+        android:id="@+id/containerAmalIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bg_badge_pill">
+
+        <ImageView
+          android:id="@+id/ivAmalIcon"
+          android:layout_width="22dp"
+          android:layout_height="22dp"
+          android:layout_gravity="center"
+          android:src="@drawable/ic_leaf"
+          app:tint="@color/accent_mint" />
+      </FrameLayout>
+    </RelativeLayout>
+
+    <!-- Chips Row: Target and Points -->
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:orientation="horizontal">
+
+      <!-- Target Chip (⊙ টার্গেট ১ বার) -->
+      <LinearLayout
+        android:id="@+id/chipTarget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_badge_pill"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="5dp">
+
+        <ImageView
+          android:layout_width="12dp"
+          android:layout_height="12dp"
+          android:src="@drawable/ic_target_bullseye"
+          app:tint="@color/accent_mint" />
+
+        <TextView
+          android:id="@+id/tvTargetText"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="4dp"
+          android:text="টার্গেট ১ বার"
+          android:textColor="@color/text_primary"
+          android:textSize="11.5sp" />
+      </LinearLayout>
+
+      <!-- Points Chip ( পয়েন্ট +৮০) -->
+      <LinearLayout
+        android:id="@+id/chipPoints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/bg_badge_pill"
+        android:backgroundTint="@color/badge_pill_amber_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="5dp">
+
+        <ImageView
+          android:layout_width="12dp"
+          android:layout_height="12dp"
+          android:src="@drawable/ic_medal_reward"
+          app:tint="#F59E0B" />
+
+        <TextView
+          android:id="@+id/tvPointsText"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="4dp"
+          android:text="পয়েন্ট +৮০"
+          android:textColor="#F59E0B"
+          android:textSize="11.5sp"
+          android:textStyle="bold" />
+      </LinearLayout>
+    </LinearLayout>
+
+    <!-- Social Proof & Details Row -->
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="14dp">
+
+      <!-- Overlapping Avatars and Count -->
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <FrameLayout
+          android:layout_width="40dp"
+          android:layout_height="20dp">
+
+          <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_gravity="start|center_vertical"
+            android:src="@drawable/ic_user_circle_avatar" />
+
+          <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_user_circle_avatar" />
+
+          <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_gravity="end|center_vertical"
+            android:src="@drawable/ic_user_circle_avatar" />
+        </FrameLayout>
+
+        <TextView
+          android:id="@+id/tvCommunityCount"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="6dp"
+          android:text="আজ সম্পন্ন করেছে: ৪ জন"
+          android:textColor="@color/text_secondary"
+          android:textSize="11.5sp" />
+      </LinearLayout>
+
+      <!-- Details Dropdown Toggle (বিস্তারিত ∨) -->
+      <LinearLayout
+        android:id="@+id/btnToggleDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingVertical="4dp">
+
+        <TextView
+          android:id="@+id/tvDetailsLabel"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="বিস্তারিত"
+          android:textColor="@color/text_secondary"
+          android:textSize="11.5sp" />
+
+        <TextView
+          android:id="@+id/tvDetailsChevron"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="3dp"
+          android:text="∨"
+          android:textColor="@color/text_secondary"
+          android:textSize="11sp" />
+      </LinearLayout>
+    </RelativeLayout>
+
+    <!-- Expandable Details View (Hidden by default) -->
+    <LinearLayout
+      android:id="@+id/layoutAmalDetails"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:background="@drawable/bg_card_secondary"
+      android:orientation="vertical"
+      android:padding="12dp"
+      android:visibility="gone">
+
+      <TextView
+        android:id="@+id/tvAmalDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="3dp"
+        android:text="রাসূলুল্লাহ (সা.) বলেছেন: যে ব্যক্তি জুমার দিন সূরা কাহফ পাঠ করবে, তার জন্য এক জুমা থেকে অপর জুমা পর্যন্ত নূর আলোকিত থাকবে। (সহীহ আত-তারগীব)"
+        android:textColor="@color/text_primary"
+        android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- Main Action Pill Button ( আমি সম্পন্ন করেছি) -->
+    <com.google.android.material.button.MaterialButton
+      android:id="@+id/btnCompleteAmal"
+      style="@style/Widget.Material3.Button"
+      android:layout_width="match_parent"
+      android:layout_height="48dp"
+      android:layout_marginTop="14dp"
+      android:background="@drawable/bg_btn_mint_pill"
+      android:insetTop="0dp"
+      android:insetBottom="0dp"
+      android:text=" আমি সম্পন্ন করেছি"
+      android:textColor="@color/text_dark"
+      android:textSize="13.5sp"
+      android:textStyle="bold"
+      app:backgroundTint="@null"
+      app:rippleColor="#30041C15" />
+
+  </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

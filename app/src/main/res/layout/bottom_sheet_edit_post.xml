@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_bottom_sheet_surface"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bg_badge_pill"
+        android:backgroundTint="@color/border_card" />
+
+    <TextView
+        android:id="@+id/tvEditPostHeaderTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="পোস্ট সম্পাদনা করুন"
+        android:textColor="@color/text_primary"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvEditPostHeaderSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="আপনার পোস্টের শিরোনাম, বিবরণ ও বিষয়শ্রেণী হালনাগাদ করুন"
+        android:textColor="@color/text_secondary"
+        android:textSize="12sp" />
+
+    <!-- Category Dropdown / Selector -->
+    <TextView
+        android:id="@+id/tvEditPostCategoryLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="বিষয়শ্রেণী নির্বাচন করুন"
+        android:textColor="@color/accent_mint"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/rgEditPostCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbEditCatDua"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="দোয়া"
+            android:textColor="@color/text_primary"
+            android:textSize="12.5sp" />
+
+        <RadioButton
+            android:id="@+id/rbEditCatAdvice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="নসীহত"
+            android:textColor="@color/text_primary"
+            android:textSize="12.5sp" />
+
+        <RadioButton
+            android:id="@+id/rbEditCatQA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="জিজ্ঞাসা"
+            android:textColor="@color/text_primary"
+            android:textSize="12.5sp" />
+    </RadioGroup>
+
+    <!-- Title Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutEditPostTitle"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="শিরোনাম লিখুন"
+        app:boxStrokeColor="@color/accent_mint">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etEditPostTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Content Body Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutEditPostContent"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="বিস্তারিত বক্তব্য / দোয়া লিখুন..."
+        app:boxStrokeColor="@color/accent_mint">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etEditPostContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:minLines="4"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Action Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCancelEditPost"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:text="বাতিল"
+            android:textColor="@color/text_secondary"
+            app:cornerRadius="12dp"
+            app:strokeColor="@color/border_card" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSubmitEditPost"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1.6"
+            android:backgroundTint="@color/accent_mint"
+            android:text="আপডেট সংরক্ষণ করুন"
+            android:textColor="@color/bg_main"
+            android:textStyle="bold"
+            app:cornerRadius="12dp" />
+    </LinearLayout>
+
+</LinearLayout>

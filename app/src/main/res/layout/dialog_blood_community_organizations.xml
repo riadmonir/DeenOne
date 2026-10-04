@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/bg_main"
+  android:orientation="vertical">
+
+  <!-- Top App Bar -->
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_top_bar"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="12dp">
+
+    <FrameLayout
+      android:id="@+id/btnCloseCommunityOrgs"
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      android:layout_alignParentStart="true"
+      android:layout_centerVertical="true"
+      android:background="@drawable/bg_circular_counter"
+      android:backgroundTint="@color/bg_badge_pill"
+      android:clickable="true"
+      android:focusable="true">
+
+      <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_arrow_back"
+        app:tint="@color/accent_mint" />
+    </FrameLayout>
+
+    <TextView
+      android:id="@+id/tvCommunityOrgsHeaderTitle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerInParent="true"
+      android:text="রক্তদাতা কমিউনিটি"
+      android:textColor="@color/text_primary"
+      android:textSize="18sp"
+      android:textStyle="bold" />
+  </RelativeLayout>
+
+  <!-- Subtitle Note -->
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_top_bar"
+    android:paddingHorizontal="16dp"
+    android:paddingBottom="12dp">
+
+    <TextView
+      android:id="@+id/tvCommunitySubNote"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="আপনার কাছাকাছি রক্তদাতা সংগঠন, স্বেচ্ছাসেবী গ্রুপ ও জরুরি ব্লাড ব্যাংক হটলাইনসমূহ"
+      android:textColor="@color/text_secondary"
+      android:textSize="12.5sp" />
+  </LinearLayout>
+
+  <!-- Organizations List -->
+  <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/rvCommunityOrgs"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="12dp"
+    android:paddingBottom="24dp" />
+</LinearLayout>

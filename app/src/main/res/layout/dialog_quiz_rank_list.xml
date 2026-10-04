@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_quiz_rank_dialog"
+    android:orientation="vertical">
+
+    <!-- 1. TOP HEADER (Trophy Icon + Title + Subtitle + Refresh + Close) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="18dp"
+        android:paddingTop="18dp"
+        android:paddingBottom="14dp">
+
+        <!-- Trophy Icon in Cream Box -->
+        <FrameLayout
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/bg_quiz_trophy_box">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_nav_rank"
+                app:tint="#D97706" />
+        </FrameLayout>
+
+        <!-- Title & Subtitle -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvQuizRankTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="কুইজ র‍্যাংক তালিকা"
+                android:textColor="@color/text_primary"
+                android:textSize="18.5sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvQuizRankSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="কুইজের অর্জিত পয়েন্ট অনুযায়ী"
+                android:textColor="@color/text_secondary"
+                android:textSize="11.5sp" />
+        </LinearLayout>
+
+        <!-- Refresh Button -->
+        <FrameLayout
+            android:id="@+id/btnRefreshQuizRank"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="6dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_refresh"
+                app:tint="@color/text_secondary" />
+        </FrameLayout>
+
+        <!-- Close Button -->
+        <FrameLayout
+            android:id="@+id/btnCloseQuizRank"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_close"
+                app:tint="@color/text_secondary" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/border_card" />
+
+    <!-- 2. SECTION SUBHEADER -->
+    <TextView
+        android:id="@+id/tvAllCompetitorsHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="10dp"
+        android:text="সকল প্রতিযোগীগণ"
+        android:textColor="@color/text_secondary"
+        android:textSize="13.5sp"
+        android:textStyle="bold" />
+
+    <!-- 3. MAIN RECYCLERVIEW / LIST AREA -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingHorizontal="16dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvQuizRankList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:paddingBottom="10dp"
+            android:scrollbars="vertical" />
+
+        <ProgressBar
+            android:id="@+id/pbQuizRankLoading"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/accent_mint"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvQuizRankEmpty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="কোনো প্রতিযোগী পাওয়া যায়নি"
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <!-- 4. BOTTOM STICKY BAR: CURRENT USER RANK & POINTS -->
+    <LinearLayout
+        android:id="@+id/cardCurrentUserBottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bg_quiz_rank_bottom_bar"
+        android:elevation="4dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="14dp"
+        android:paddingVertical="12dp">
+
+        <!-- User Circular Avatar (Purple #9333EA) -->
+        <FrameLayout
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/bg_circular_counter"
+            android:backgroundTint="#9333EA">
+
+            <TextView
+                android:id="@+id/tvCurrentUserAvatar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="r"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <!-- Current User Rank Position -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvMyRankLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="আপনার বর্তমান র‍্যাংক"
+                android:textColor="#6EE7B7"
+                android:textSize="10.5sp" />
+
+            <TextView
+                android:id="@+id/tvMyRankValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:text="অবস্থান: #৫০৯"
+                android:textColor="#FFFFFF"
+                android:textSize="15.5sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Current User Quiz Points Dark Pill -->
+        <LinearLayout
+            android:id="@+id/btnMyPointsPill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_quiz_points_pill_dark"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="7dp">
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/bg_circular_counter"
+                android:backgroundTint="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/tvMyPointsValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="০ পয়েন্ট"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main"
+    android:orientation="vertical">
+
+    <!-- Top Header Bar matching Screenshot (← ফিতরা) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/bg_top_bar"
+        android:elevation="2dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp">
+
+        <!-- Back Button with Spring Touch Animation -->
+        <FrameLayout
+            android:id="@+id/btnBackFitra"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_circular_counter"
+            android:backgroundTint="@color/bg_card"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_arrow_back"
+                app:tint="@color/accent_mint" />
+        </FrameLayout>
+
+        <!-- Header Title -->
+        <TextView
+            android:id="@+id/tvFitraTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="ফিতরা"
+            android:textColor="@color/text_primary"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- Scrollable Single Page Container -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="14dp"
+            android:paddingBottom="28dp">
+
+            <!-- ========================================================= -->
+            <!-- 1. TOP SECTION: LIVE FITRA CALCULATOR (SCREENSHOT 1)       -->
+            <!-- ========================================================= -->
+
+            <!-- Total Payable Fitra Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardTotalFitra"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#1A1815"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="0dp"
+                app:strokeColor="#352C22"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="22dp">
+
+                    <TextView
+                        android:id="@+id/tvTotalFitraSubtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="মোট প্রদেয় ফিতরা"
+                        android:textColor="#A69C8E"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvTotalFitraAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="12dp"
+                        android:textColor="#D49B55"
+                        android:textSize="36sp"
+                        android:textStyle="bold"
+                        tools:text="৳ ৯৯" />
+
+                    <TextView
+                        android:id="@+id/tvPerPersonSubPill"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_fitra_pill_sub"
+                        android:paddingHorizontal="16dp"
+                        android:paddingVertical="7dp"
+                        android:textColor="#D9C3A5"
+                        android:textSize="13.5sp"
+                        android:textStyle="bold"
+                        tools:text="জনপ্রতি ৳ ৯৯ × ১ জন" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Commodity Selection & Input Container Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardCalculatorInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                app:cardBackgroundColor="#121E1B"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="0dp"
+                app:strokeColor="#1F3831"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Title: কোন পণ্যের ভিত্তিতে -->
+                    <TextView
+                        android:id="@+id/tvCommodityHeader"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:text="কোন পণ্যের ভিত্তিতে"
+                        android:textColor="#E1ECE9"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <!-- Commodities Selection Chips Row 1 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/chipWheat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="38dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/bg_fitra_chip_selected"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center"
+                            android:paddingHorizontal="16dp"
+                            android:text="✓  গম / আটা"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/chipDates"
+                            android:layout_width="wrap_content"
+                            android:layout_height="38dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/bg_fitra_chip_unselected"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center"
+                            android:paddingHorizontal="16dp"
+                            android:text="খেজুর"
+                            android:textColor="#A4B7B2"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/chipRaisins"
+                            android:layout_width="wrap_content"
+                            android:layout_height="38dp"
+                            android:background="@drawable/bg_fitra_chip_unselected"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center"
+                            android:paddingHorizontal="16dp"
+                            android:text="কিশমিশ"
+                            android:textColor="#A4B7B2"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <!-- Commodities Selection Chips Row 2 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/chipBarley"
+                            android:layout_width="wrap_content"
+                            android:layout_height="38dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/bg_fitra_chip_unselected"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center"
+                            android:paddingHorizontal="18dp"
+                            android:text="যব"
+                            android:textColor="#A4B7B2"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/chipCheese"
+                            android:layout_width="wrap_content"
+                            android:layout_height="38dp"
+                            android:background="@drawable/bg_fitra_chip_unselected"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center"
+                            android:paddingHorizontal="18dp"
+                            android:text="পনির"
+                            android:textColor="#A4B7B2"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <!-- Weight Description with Hourglass Icon -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/ivHourglass"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:contentDescription="@null"
+                            android:src="@drawable/ic_hourglass_fitra" />
+
+                        <TextView
+                            android:id="@+id/tvWeightDescription"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:textColor="#A4B7B2"
+                            android:textSize="14sp"
+                            tools:text="অর্ধ সা' = জনপ্রতি ১.৬৫ কেজি গম / আটা" />
+
+                    </LinearLayout>
+
+                    <!-- Editable Price Box with Cutout Floating Label -->
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp">
+
+                        <!-- Border Input Box -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="52dp"
+                            android:layout_marginTop="7dp"
+                            android:background="@drawable/bg_fitra_input_border"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingHorizontal="14dp">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:contentDescription="@null"
+                                android:src="@drawable/ic_tag_price" />
+
+                            <TextView
+                                android:id="@+id/tvCurrencyPrefix"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:text="৳ "
+                                android:textColor="#E1ECE9"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/etPricePerKg"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:imeOptions="actionDone"
+                                android:inputType="numberDecimal"
+                                android:text="60"
+                                android:textColor="#FFFFFF"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <!-- Floating Label on Top Border -->
+                        <TextView
+                            android:id="@+id/tvPriceLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="14dp"
+                            android:background="#121E1B"
+                            android:paddingHorizontal="6dp"
+                            android:text="প্রতি কেজির দাম"
+                            android:textColor="#4EA08B"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </FrameLayout>
+
+                    <!-- Persons Counter Stepper -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:contentDescription="@null"
+                            android:src="@drawable/ic_group_people" />
+
+                        <TextView
+                            android:id="@+id/tvPersonsLabel"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_weight="1"
+                            android:text="কতজনের পক্ষ থেকে"
+                            android:textColor="#E1ECE9"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <!-- Minus Button -->
+                        <FrameLayout
+                            android:id="@+id/btnMinusPerson"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:background="@drawable/bg_fitra_circle_btn"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <ImageView
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_gravity="center"
+                                android:contentDescription="@null"
+                                android:src="@drawable/ic_minus_white" />
+                        </FrameLayout>
+
+                        <!-- Count Text -->
+                        <TextView
+                            android:id="@+id/tvPersonCount"
+                            android:layout_width="44dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="১"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <!-- Plus Button -->
+                        <FrameLayout
+                            android:id="@+id/btnPlusPerson"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:background="@drawable/bg_fitra_circle_btn"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <ImageView
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_gravity="center"
+                                android:contentDescription="@null"
+                                android:src="@drawable/ic_plus_white" />
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ========================================================= -->
+            <!-- 2. MIDDLE SECTION: 10 TOPIC CARDS (SCREENSHOT 2)           -->
+            <!-- ========================================================= -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvFitraTopics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:nestedScrollingEnabled="false"
+                tools:itemCount="10"
+                tools:listitem="@layout/item_roza_fitra_topic_row" />
+
+            <!-- ========================================================= -->
+            <!-- 3. BOTTOM SECTION: "জেনে রাখুন" INFO CARD (SCREENSHOT 3)   -->
+            <!-- ========================================================= -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardFitraInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="12dp"
+                app:cardBackgroundColor="#161513"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="0dp"
+                app:strokeColor="#2D2923"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="18dp">
+
+                    <!-- Header with Info Icon -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:contentDescription="@null"
+                            android:src="@drawable/ic_info"
+                            app:tint="#D0D0D0" />
+
+                        <TextView
+                            android:id="@+id/tvInfoCardTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="জেনে রাখুন"
+                            android:textColor="#FFFFFF"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <!-- Paragraph 1 (Verbatim from Screenshot 3) -->
+                    <TextView
+                        android:id="@+id/tvInfoParagraph1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:lineSpacingExtra="5dp"
+                        android:text="ঈদের নামাজের আগে আদায় করতে হয়। পরিবারের প্রত্যেক সদস্যের পক্ষ থেকে – নিজে, স্ত্রী ও নাবালক সন্তানদের জন্য।"
+                        android:textColor="#D0D0D0"
+                        android:textSize="14.5sp" />
+
+                    <!-- Paragraph 2 (Verbatim from Screenshot 3) -->
+                    <TextView
+                        android:id="@+id/tvInfoParagraph2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:lineSpacingExtra="5dp"
+                        android:text="পণ্য নিজেই দেওয়া যায়, অথবা সমমূল্যের টাকা। বাংলাদেশে ইসলামিক ফাউন্ডেশন প্রতি বছর সর্বনিম্ন ও সর্বোচ্চ হার ঘোষণা করে – সামর্থ্য অনুযায়ী যেকোনোটি বেছে নিতে পারেন।"
+                        android:textColor="#D0D0D0"
+                        android:textSize="14.5sp" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutWidgetRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_widget_emerald_gradient"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:padding="14dp">
+
+    <!-- Top Row: App Icon + Hijri/Gregorian Date + Refresh Button & Moon Phase -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivWidgetLogo"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_deenone_logo" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@id/ivWidgetLogo"
+            android:layout_toStartOf="@id/layoutTopRightIcons"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvWidgetHijriDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="১৭ রবিউল আউয়াল, রবিবার"
+                android:textColor="#FFFFFF"
+                android:textSize="12.5sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvWidgetGregorianDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:text="৩০ আগস্ট, ২০২৬"
+                android:textColor="#C3E8DD"
+                android:textSize="10.5sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutTopRightIcons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivWidgetMoon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="6dp"
+                android:src="@drawable/ic_moon_full_vector" />
+
+            <ImageView
+                android:id="@+id/btnWidgetRefresh"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@drawable/bg_badge_pill"
+                android:padding="3dp"
+                android:src="@drawable/ic_refresh" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- Center/Bottom Section: Left Waqt & Range, Right Astronomy times -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <!-- Left: Big Current Waqt Name & Time Range -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvWidgetCurrentWaqt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="এশা"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvWidgetWaqtRange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="০৮:২৮ - ০৪:৪৭"
+                android:textColor="#A7F3D0"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Right: 4 Times (Sunrise, Sunset, Sahri, Iftar) -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvWidgetSunrise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="সূর্যোদয়: ০৬:১১"
+                android:textColor="#D1FAE5"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/tvWidgetSunset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="সূর্যাস্ত: ০৬:৫৮"
+                android:textColor="#D1FAE5"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/tvWidgetSahri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="সাহরি: ০৪:৪৭"
+                android:textColor="#FDE047"
+                android:textSize="11.5sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvWidgetIftar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="ইফতার: ০৬:৫৮"
+                android:textColor="#FDE047"
+                android:textSize="11.5sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

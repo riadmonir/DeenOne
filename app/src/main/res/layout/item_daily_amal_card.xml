@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_marginBottom="10dp"
+  app:cardBackgroundColor="@color/bg_card"
+  app:cardCornerRadius="16dp"
+  app:cardElevation="0dp"
+  app:strokeColor="@color/border_card"
+  app:strokeWidth="1dp">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="14dp">
+
+    <!-- Top Header Row (Title, XP Badge & Complete Action) -->
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <LinearLayout
+        android:id="@+id/layoutAmalHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@+id/btnToggleComplete"
+        android:orientation="vertical">
+
+        <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:gravity="center_vertical"
+          android:orientation="horizontal">
+
+          <TextView
+            android:id="@+id/tvAmalXpBadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_badge_pill"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="2dp"
+            android:text="+২৫ XP"
+            android:textColor="@color/accent_mint"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+          <TextView
+            android:id="@+id/tvAmalTargetCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:textColor="@color/text_secondary"
+            android:textSize="11sp" />
+        </LinearLayout>
+
+        <TextView
+          android:id="@+id/tvAmalTitle"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="6dp"
+          android:text="৫ ওয়াক্ত সালাত সময়মতো ও জামায়াতে আদায়"
+          android:textColor="@color/text_primary"
+          android:textSize="14.5sp"
+          android:textStyle="bold" />
+      </LinearLayout>
+
+      <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnToggleComplete"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:backgroundTint="@color/accent_mint"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:paddingHorizontal="12dp"
+        android:text="সম্পন্ন করুন"
+        android:textAllCaps="false"
+        android:textColor="@color/text_dark"
+        android:textSize="11.5sp"
+        android:textStyle="bold"
+        app:cornerRadius="10dp" />
+    </RelativeLayout>
+
+    <!-- Description (Always Visible Summary) -->
+    <TextView
+      android:id="@+id/tvAmalDescription"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="6dp"
+      android:lineSpacingExtra="2dp"
+      android:text="সময়মতো জামায়াতের সাথে ফরয সালাত আদায় করা ইসলামের দ্বিতীয় স্তম্ভ ও শ্রেষ্ঠতম আমল।"
+      android:textColor="@color/text_secondary"
+      android:textSize="12sp" />
+
+    <!-- Expand / Collapse Button -->
+    <LinearLayout
+      android:id="@+id/btnExpandDetails"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:clickable="true"
+      android:focusable="true"
+      android:gravity="center_vertical"
+      android:orientation="horizontal"
+      android:paddingVertical="4dp">
+
+      <TextView
+        android:id="@+id/tvExpandLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="কীভাবে আমল করবেন ও দলীল দেখুন"
+        android:textColor="@color/accent_mint"
+        android:textSize="11.5sp" />
+
+      <TextView
+        android:id="@+id/tvExpandArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="▼"
+        android:textColor="@color/accent_mint"
+        android:textSize="10sp" />
+    </LinearLayout>
+
+    <!-- Expandable Details Container -->
+    <LinearLayout
+      android:id="@+id/layoutExpandedDetails"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:background="@drawable/bg_card_secondary"
+      android:orientation="vertical"
+      android:padding="12dp"
+      android:visibility="gone">
+
+      <!-- How To Perform -->
+      <TextView
+        android:id="@+id/tvAmalHowToPerformLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="কীভাবে আমল করবেন:"
+        android:textColor="@color/accent_mint"
+        android:textSize="11.5sp"
+        android:textStyle="bold" />
+
+      <TextView
+        android:id="@+id/tvAmalHowToPerform"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:lineSpacingExtra="3dp"
+        android:text="আযান শোনার পর মসজিদে গিয়ে তাকবীরে উলার সাথে সালাত আদায় করুন।"
+        android:textColor="@color/text_primary"
+        android:textSize="12sp" />
+
+      <!-- Relevant Dua / Dhikr -->
+      <TextView
+        android:id="@+id/tvAmalRelevantDuaLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="প্রাসঙ্গিক দোয়া ও জিকির:"
+        android:textColor="@color/accent_mint"
+        android:textSize="11.5sp"
+        android:textStyle="bold" />
+
+      <TextView
+        android:id="@+id/tvAmalRelevantDua"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:lineSpacingExtra="3dp"
+        android:text="সালাতের পর ৩৩ বার সুবহানাল্লাহ, ৩৩ বার আলহামদুলিল্লাহ, ৩৪ বার আল্লাহু আকবার।"
+        android:textColor="@color/text_primary"
+        android:textSize="12sp" />
+
+      <!-- Authentic Hadith Reference -->
+      <TextView
+        android:id="@+id/tvAmalReference"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="সূত্র: সহীহ বুখারী: ৬৪৫, সহীহ মুসলিম: ৬৫৪"
+        android:textColor="@color/text_secondary"
+        android:textSize="11sp" />
+    </LinearLayout>
+
+  </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

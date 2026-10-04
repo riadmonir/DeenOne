@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardMasailItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardBackgroundColor="@color/bg_card"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="0dp"
+    app:strokeColor="@color/border_card"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Masala Topic Title (e.g. অসুস্থ ও রুগীর জন্য তারাবি প্রসঙ্গে) -->
+        <TextView
+            android:id="@+id/tvMasailCardTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="অসুস্থ ও রুগীর জন্য তারাবি প্রসঙ্গে" />
+
+        <!-- Collapsed Preview Text -->
+        <TextView
+            android:id="@+id/tvMasailCardPreview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:lineSpacingExtra="3dp"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp"
+            tools:text="তারাবির নামাজ প্রাপ্ত বয়স্ক পুরষ-মহিলা সবার ওপর সুন্নতে মোয়াক্কাদা..." />
+
+        <!-- Expanded Full Content -->
+        <TextView
+            android:id="@+id/tvMasailCardFullContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:lineSpacingExtra="5dp"
+            android:textColor="@color/text_primary"
+            android:textSize="14.5sp"
+            android:visibility="gone"
+            tools:text="পূর্ণাঙ্গ বিবরণ..." />
+
+        <!-- Expand / Collapse Action Row ("বিস্তারিত ∨") -->
+        <LinearLayout
+            android:id="@+id/layoutMasailToggleExpand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingVertical="4dp">
+
+            <TextView
+                android:id="@+id/tvMasailToggleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="বিস্তারিত"
+                android:textColor="@color/accent_teal"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ivMasailToggleChevron"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/ic_chevron_down"
+                app:tint="@color/accent_teal" />
+        </LinearLayout>
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

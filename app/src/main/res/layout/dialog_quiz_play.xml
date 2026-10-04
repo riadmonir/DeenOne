@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="24dp">
+
+            <!-- ========================================================= -->
+            <!-- 1. TOP HEADER: TIMER + PROGRESS BAR + STEP COUNTER -->
+            <!-- ========================================================= -->
+            <LinearLayout
+                android:id="@+id/cardQuizTopHeader"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:background="@drawable/bg_quiz_card_container"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="16dp">
+
+                <!-- Left: Timer Pill Badge (Count down from 10:00) -->
+                <LinearLayout
+                    android:id="@+id/pillQuizTimer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_quiz_timer_pill"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="6dp">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@drawable/ic_quiz_clock"
+                        app:tint="#35D99B" />
+
+                    <TextView
+                        android:id="@+id/tvQuizTimer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:includeFontPadding="false"
+                        android:text="৯:৫৮"
+                        android:textColor="#35D99B"
+                        android:textSize="14.5sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- Center: Smooth Mint Progress Bar -->
+                <ProgressBar
+                    android:id="@+id/pbQuizProgress"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="6dp"
+                    android:layout_marginHorizontal="14dp"
+                    android:layout_weight="1"
+                    android:max="5"
+                    android:progress="1"
+                    android:progressDrawable="@drawable/progress_quiz_mint" />
+
+                <!-- Right: Step Counter (১/৫ to ৫/৫) -->
+                <TextView
+                    android:id="@+id/tvQuizCounter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="১/৫"
+                    android:textColor="#35D99B"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- ========================================================= -->
+            <!-- 2. MAIN QUIZ QUESTION CARD -->
+            <!-- ========================================================= -->
+            <LinearLayout
+                android:id="@+id/cardQuizMainContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_quiz_card_container"
+                android:orientation="vertical"
+                android:paddingHorizontal="18dp"
+                android:paddingTop="22dp"
+                android:paddingBottom="22dp">
+
+                <!-- Question Heading / Title -->
+                <TextView
+                    android:id="@+id/tvQuizQuestionText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="22dp"
+                    android:lineSpacingExtra="5dp"
+                    android:text="ঈমানের মূল বিষয়গুলোর মধ্যে কোনটি রয়েছে?"
+                    android:textColor="@color/text_primary"
+                    android:textSize="18.5sp"
+                    android:textStyle="bold" />
+
+                <!-- 4 Options (Vertical Stack) -->
+                <!-- Option 0 -->
+                <LinearLayout
+                    android:id="@+id/layoutQuizOption0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/bg_quiz_option_normal"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:minHeight="58dp"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="14dp"
+                    android:paddingVertical="12dp">
+
+                    <FrameLayout
+                        android:id="@+id/flQuizOptionNumber0"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:background="@drawable/bg_quiz_number_normal">
+
+                        <TextView
+                            android:id="@+id/tvQuizOptionNumber0"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:includeFontPadding="false"
+                            android:text="১"
+                            android:textColor="#35D99B"
+                            android:textSize="14.5sp"
+                            android:textStyle="bold" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/tvQuizOptionText0"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:text="দান করা"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15.5sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/ivQuizOptionCheck0"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/ic_quiz_check_circle"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <!-- Option 1 -->
+                <LinearLayout
+                    android:id="@+id/layoutQuizOption1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/bg_quiz_option_normal"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:minHeight="58dp"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="14dp"
+                    android:paddingVertical="12dp">
+
+                    <FrameLayout
+                        android:id="@+id/flQuizOptionNumber1"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:background="@drawable/bg_quiz_number_normal">
+
+                        <TextView
+                            android:id="@+id/tvQuizOptionNumber1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:includeFontPadding="false"
+                            android:text="২"
+                            android:textColor="#35D99B"
+                            android:textSize="14.5sp"
+                            android:textStyle="bold" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/tvQuizOptionText1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:text="রোজা"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15.5sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/ivQuizOptionCheck1"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/ic_quiz_check_circle"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <!-- Option 2 -->
+                <LinearLayout
+                    android:id="@+id/layoutQuizOption2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/bg_quiz_option_normal"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:minHeight="58dp"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="14dp"
+                    android:paddingVertical="12dp">
+
+                    <FrameLayout
+                        android:id="@+id/flQuizOptionNumber2"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:background="@drawable/bg_quiz_number_normal">
+
+                        <TextView
+                            android:id="@+id/tvQuizOptionNumber2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:includeFontPadding="false"
+                            android:text="৩"
+                            android:textColor="#35D99B"
+                            android:textSize="14.5sp"
+                            android:textStyle="bold" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/tvQuizOptionText2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:text="আল্লাহর প্রতি বিশ্বাস"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15.5sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/ivQuizOptionCheck2"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/ic_quiz_check_circle"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <!-- Option 3 -->
+                <LinearLayout
+                    android:id="@+id/layoutQuizOption3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/bg_quiz_option_normal"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:minHeight="58dp"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="14dp"
+                    android:paddingVertical="12dp">
+
+                    <FrameLayout
+                        android:id="@+id/flQuizOptionNumber3"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:background="@drawable/bg_quiz_number_normal">
+
+                        <TextView
+                            android:id="@+id/tvQuizOptionNumber3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:includeFontPadding="false"
+                            android:text="৪"
+                            android:textColor="#35D99B"
+                            android:textSize="14.5sp"
+                            android:textStyle="bold" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/tvQuizOptionText3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:text="নামাজ"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15.5sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/ivQuizOptionCheck3"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/ic_quiz_check_circle"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <!-- ========================================================= -->
+                <!-- 3. BOTTOM BUTTONS: [ আগেরটি ] | [ পরেরটি / কুইজ শেষ করুন ] -->
+                <!-- ========================================================= -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <!-- Previous Button (আগেরটি) -->
+                    <LinearLayout
+                        android:id="@+id/btnPrevQuizQuestion"
+                        android:layout_width="0dp"
+                        android:layout_height="52dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_quiz_btn_prev"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvPrevQuizBtnText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="আগেরটি"
+                            android:textColor="#8EAAA0"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- Next / Finish Quiz Button (পরেরটি / কুইজ শেষ করুন) -->
+                    <LinearLayout
+                        android:id="@+id/btnNextQuizQuestion"
+                        android:layout_width="0dp"
+                        android:layout_height="52dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_quiz_btn_next"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvNextQuizBtnText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="পরেরটি"
+                            android:textColor="#8EAAA0"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,63 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base DayNight Theme (Dark for res/values-night) -->
+    <style name="Base.Theme.DeenOne" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/bg_main</item>
+        <item name="android:statusBarColor">@color/bg_top_bar</item>
+        <item name="android:navigationBarColor">@color/bg_bottom_nav</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+
+        <!-- Exact Dark Theme Colors -->
+        <item name="colorPrimary">@color/primary_green</item>
+        <item name="colorOnPrimary">@color/text_dark</item>
+        <item name="colorSecondary">@color/accent_green</item>
+        <item name="colorSurface">@color/bg_card</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+
+        <!-- Bottom Sheet & Alert Dialog Global Styles -->
+        <item name="bottomSheetDialogTheme">@style/DeenOneBottomSheetDialog</item>
+        <item name="alertDialogTheme">@style/DeenOneAlertDialogTheme</item>
+        <item name="materialAlertDialogTheme">@style/DeenOneAlertDialogTheme</item>
+        <item name="materialButtonStyle">@style/DeenOneMaterialButton</item>
+    </style>
+
+    <style name="Theme.DeenOne" parent="Base.Theme.DeenOne" />
+
+    <!-- Modern Flash-Free Startup Theme using androidx.core.splashscreen -->
+    <style name="Theme.DeenOne.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/bg_splash</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash_logo</item>
+        <item name="postSplashScreenTheme">@style/Theme.DeenOne</item>
+
+        <!-- System bars in startup: zero white/black flash, dark green AMOLED atmosphere -->
+        <item name="android:statusBarColor">@color/bg_splash</item>
+        <item name="android:navigationBarColor">@color/bg_splash</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+    </style>
+
+    <!-- Full-Screen Page Modal Theme (Opens as 100% full-screen immersive page) -->
+    <style name="Theme.DeenOne.FullScreenPage" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@color/bg_main</item>
+        <item name="android:statusBarColor">@color/bg_top_bar</item>
+        <item name="android:navigationBarColor">@color/bg_bottom_nav</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="android:windowAnimationStyle">@style/Animation.DeenOne.FullScreenPage</item>
+    </style>
+
+    <!-- Side Navigation Drawer Theme -->
+    <style name="Theme.DeenOne.SideDrawer" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@style/DeenOneSideDrawerAnimation</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="Animation.DeenOne.FullScreenPage" parent="@android:style/Animation.Activity">
+        <item name="android:windowEnterAnimation">@anim/page_enter_soft</item>
+        <item name="android:windowExitAnimation">@anim/page_exit_soft</item>
+    </style>
+</resources>

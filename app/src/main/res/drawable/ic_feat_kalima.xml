@@ -1,0 +1,25 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="28dp"
+    android:height="28dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- 6 Kalimas (৬ কালিমা - ইসলামিক কালেমা সনদ ও নূর) -->
+    <!-- Open Parchment / Scroll Frame -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M18,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V4A2,2 0 0,0 18,2M18,20H6V4H18V20Z" />
+
+    <!-- Islamic Kalima Shahada Central Seal -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M12,5.5A4.5,4.5 0 1,1 7.5,10A4.5,4.5 0 0,1 12,5.5Z" />
+
+    <path
+        android:fillColor="#382810"
+        android:pathData="M12,7A3,3 0 1,1 9,10A3,3 0 0,1 12,7Z" />
+
+    <!-- Number 6 & Kalima Lines -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M8,16H16V17.2H8V16M9.5,18.2H14.5V19.4H9.5V18.2Z" />
+</vector>

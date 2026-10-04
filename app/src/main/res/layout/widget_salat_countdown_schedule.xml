@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutWidgetRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_widget_white_card"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <!-- Top Row: Time, Waqt Title & Refresh -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvWidgetTimeSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="০৪:৪৫ PM"
+                android:textColor="#64748B"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/tvWidgetCountdownTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:text="আসর ওয়াক্ত শেষ হতে বাকি"
+                android:textColor="#EA580C"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/btnWidgetRefresh"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/bg_badge_pill"
+            android:padding="3dp"
+            android:src="@drawable/ic_refresh" />
+    </RelativeLayout>
+
+    <!-- Big Countdown Timer Display -->
+    <TextView
+        android:id="@+id/tvWidgetBigCountdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="6dp"
+        android:text="০১:২৫:৩০"
+        android:textColor="#0F172A"
+        android:textSize="32sp"
+        android:textStyle="bold" />
+
+    <!-- Horizontal 5-Prayer Timeline Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E2E8F0"
+        android:orientation="horizontal"
+        android:padding="3dp">
+
+        <!-- Fazr -->
+        <LinearLayout
+            android:id="@+id/pillFajr"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingVertical="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ফজর"
+                android:textColor="#475569"
+                android:textSize="9sp" />
+
+            <TextView
+                android:id="@+id/tvWaqtFajr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="০৪:৩০"
+                android:textColor="#0F172A"
+                android:textSize="10.5sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Dhuhr -->
+        <LinearLayout
+            android:id="@+id/pillDhuhr"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingVertical="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="জোহর"
+                android:textColor="#475569"
+                android:textSize="9sp" />
+
+            <TextView
+                android:id="@+id/tvWaqtDhuhr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="১২:০০"
+                android:textColor="#0F172A"
+                android:textSize="10.5sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Asr (Active) -->
+        <LinearLayout
+            android:id="@+id/pillAsr"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_widget_pill_amber"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingVertical="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="আসর"
+                android:textColor="#FFFFFF"
+                android:textSize="9.5sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvWaqtAsr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="০৪:৩০"
+                android:textColor="#FFFFFF"
+                android:textSize="10.5sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Maghrib -->
+        <LinearLayout
+            android:id="@+id/pillMaghrib"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingVertical="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="মাগরিব"
+                android:textColor="#475569"
+                android:textSize="9sp" />
+
+            <TextView
+                android:id="@+id/tvWaqtMaghrib"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="০৬:১৫"
+                android:textColor="#0F172A"
+                android:textSize="10.5sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Isha -->
+        <LinearLayout
+            android:id="@+id/pillIsha"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingVertical="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="এশা"
+                android:textColor="#475569"
+                android:textSize="9sp" />
+
+            <TextView
+                android:id="@+id/tvWaqtIsha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="০৭:৩০"
+                android:textColor="#0F172A"
+                android:textSize="10.5sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

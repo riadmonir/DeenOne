@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutQueueChip"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/bg_badge_pill"
+    android:backgroundTint="@color/bg_card"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="8dp"
+    android:paddingTop="5dp"
+    android:paddingEnd="8dp"
+    android:paddingBottom="5dp">
+
+    <!-- Order Number Badge -->
+    <TextView
+        android:id="@+id/tvQueueItemNumber"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/circle_progress_bg"
+        android:backgroundTint="@color/accent_gold"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="@color/bg_main"
+        android:textSize="11sp"
+        android:textStyle="bold" />
+
+    <!-- Surah Name -->
+    <TextView
+        android:id="@+id/tvQueueItemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="সূরা মুলক"
+        android:textColor="@color/text_primary"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <!-- Close / Remove Button -->
+    <ImageView
+        android:id="@+id/btnRemoveQueueItem"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="8dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="মুছে ফেলুন"
+        android:padding="3dp"
+        android:src="@drawable/ic_close"
+        app:tint="@color/text_secondary" />
+
+</LinearLayout>

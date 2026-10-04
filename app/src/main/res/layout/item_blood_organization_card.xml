@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_marginBottom="12dp"
+  app:cardBackgroundColor="@color/bg_card"
+  app:cardCornerRadius="20dp"
+  app:cardElevation="0dp">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Top: Category Tag + District Badge -->
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center_vertical"
+      android:orientation="horizontal">
+
+      <TextView
+        android:id="@+id/tvOrgCategoryTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_badge_pill"
+        android:backgroundTint="@color/bg_badge_pill"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="3dp"
+        android:text="স্বেচ্ছাসেবী সংস্থা"
+        android:textColor="@color/accent_mint"
+        android:textSize="11sp"
+        android:textStyle="bold" />
+
+      <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_weight="1" />
+
+      <TextView
+        android:id="@+id/tvOrgDistrictBadge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="📍 ঢাকা"
+        android:textColor="@color/text_secondary"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Organization Name -->
+    <TextView
+      android:id="@+id/tvOrgName"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:text="সন্ধানী (কেন্দ্রীয় পরিষদ)"
+      android:textColor="@color/text_primary"
+      android:textSize="16sp"
+      android:textStyle="bold" />
+
+    <!-- Address / Description -->
+    <TextView
+      android:id="@+id/tvOrgAddress"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="4dp"
+      android:text="ঢাকা মেডিকেল কলেজ, ঢাকা"
+      android:textColor="@color/text_secondary"
+      android:textSize="13sp" />
+
+    <!-- Action Buttons Row (Hotline Call Button + Website Button) -->
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="14dp"
+      android:gravity="center_vertical"
+      android:orientation="horizontal">
+
+      <!-- Call Hotline Button -->
+      <LinearLayout
+        android:id="@+id/btnOrgCallHotline"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="6dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_badge_pill"
+        android:backgroundTint="#EF4444"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingHorizontal="12dp">
+
+        <ImageView
+          android:layout_width="16dp"
+          android:layout_height="16dp"
+          android:src="@drawable/ic_phone"
+          app:tint="#FFFFFF" />
+
+        <TextView
+          android:id="@+id/tvOrgHotlineText"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="6dp"
+          android:text="হটলাইন কল"
+          android:textColor="#FFFFFF"
+          android:textSize="12.5sp"
+          android:textStyle="bold" />
+      </LinearLayout>
+
+      <!-- Website / Info Button -->
+      <LinearLayout
+        android:id="@+id/btnOrgWebsite"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:background="@drawable/bg_badge_pill"
+        android:backgroundTint="@color/bg_badge_pill"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp">
+
+        <ImageView
+          android:layout_width="16dp"
+          android:layout_height="16dp"
+          android:src="@drawable/ic_globe"
+          app:tint="@color/text_primary" />
+
+        <TextView
+          android:id="@+id/tvOrgWebsiteText"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="6dp"
+          android:text="ওয়েবসাইট"
+          android:textColor="@color/text_primary"
+          android:textSize="12.5sp"
+          android:textStyle="bold" />
+      </LinearLayout>
+    </LinearLayout>
+
+  </LinearLayout>
+</androidx.cardview.widget.CardView>

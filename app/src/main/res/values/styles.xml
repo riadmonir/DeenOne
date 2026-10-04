@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ================================================================= -->
+    <!-- 1. BUTTON STYLES                                                  -->
+    <!-- ================================================================= -->
+    <style name="DeenOneMaterialButton" parent="Widget.Material3.Button">
+        <item name="cornerRadius">24dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="elevation">0dp</item>
+        <item name="android:elevation">0dp</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="rippleColor">#33FFFFFF</item>
+    </style>
+
+    <style name="DeenOneButtonPill" parent="Widget.Material3.Button">
+        <item name="android:background">@drawable/bg_btn_mint_pill</item>
+        <item name="android:textColor">@color/text_dark</item>
+        <item name="android:textSize">@dimen/text_size_body_sm</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingHorizontal">@dimen/spacing_lg</item>
+        <item name="android:paddingVertical">@dimen/spacing_sm</item>
+        <item name="elevation">0dp</item>
+        <item name="android:elevation">0dp</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <style name="DeenOneButtonOutlined" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:background">@drawable/bg_card_secondary</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">@dimen/text_size_body_sm</item>
+        <item name="android:paddingHorizontal">@dimen/spacing_md</item>
+        <item name="android:paddingVertical">@dimen/spacing_sm</item>
+        <item name="cornerRadius">20dp</item>
+        <item name="elevation">0dp</item>
+        <item name="android:elevation">0dp</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <style name="DeenOneButtonIcon">
+        <item name="android:layout_width">@dimen/icon_badge_container</item>
+        <item name="android:layout_height">@dimen/icon_badge_container</item>
+        <item name="android:background">@drawable/bg_badge_pill</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!-- ================================================================= -->
+    <!-- 2. CARD STYLES                                                    -->
+    <!-- ================================================================= -->
+    <style name="DeenOneCardEmerald">
+        <item name="android:background">@drawable/bg_card_emerald</item>
+        <item name="android:padding">@dimen/card_padding</item>
+        <item name="android:elevation">@dimen/elevation_none</item>
+    </style>
+
+    <style name="DeenOneCardSecondary">
+        <item name="android:background">@drawable/bg_card_secondary</item>
+        <item name="android:padding">@dimen/card_padding</item>
+    </style>
+
+    <style name="DeenOneCardActive">
+        <item name="android:background">@drawable/bg_card_active</item>
+        <item name="android:padding">@dimen/card_padding</item>
+    </style>
+
+    <style name="DeenOneCardPurple">
+        <item name="android:background">@drawable/bg_card_purple_gradient</item>
+        <item name="android:padding">@dimen/card_padding</item>
+    </style>
+
+    <!-- ================================================================= -->
+    <!-- 3. TEXT STYLES                                                    -->
+    <!-- ================================================================= -->
+    <style name="DeenOneTextDisplay">
+        <item name="android:textSize">@dimen/text_size_display</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="DeenOneTextHeading">
+        <item name="android:textSize">@dimen/text_size_heading</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="DeenOneTextTitle">
+        <item name="android:textSize">@dimen/text_size_title</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="DeenOneTextSubtitle">
+        <item name="android:textSize">@dimen/text_size_subtitle</item>
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
+    <style name="DeenOneTextBody">
+        <item name="android:textSize">@dimen/text_size_body</item>
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:lineSpacingExtra">4dp</item>
+    </style>
+
+    <style name="DeenOneTextCaption">
+        <item name="android:textSize">@dimen/text_size_sm</item>
+        <item name="android:textColor">@color/text_muted</item>
+    </style>
+
+    <style name="DeenOneTextDigitalTimer">
+        <item name="android:textSize">@dimen/text_size_timer</item>
+        <item name="android:textColor">@color/accent_mint</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="DeenOneTextArabicAyah">
+        <item name="android:textSize">@dimen/text_size_arabic</item>
+        <item name="android:textColor">@color/text_mint</item>
+        <item name="android:lineSpacingExtra">6dp</item>
+        <item name="android:gravity">end</item>
+    </style>
+
+    <!-- ================================================================= -->
+    <!-- 4. DIALOG & BOTTOM SHEET STYLES                                   -->
+    <!-- ================================================================= -->
+    <style name="DeenOneBottomSheetDialog" parent="Theme.Design.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/DeenOneBottomSheetModal</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@color/transparent</item>
+    </style>
+
+    <style name="DeenOneBottomSheetModal" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bg_card_emerald</item>
+    </style>
+
+    <style name="DeenOneAlertDialogTheme" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="android:background">@color/bg_card</item>
+        <item name="colorSurface">@color/bg_card</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+        <item name="colorPrimary">@color/primary_green</item>
+        <item name="buttonBarPositiveButtonStyle">@style/DeenOneDialogButton</item>
+        <item name="buttonBarNegativeButtonStyle">@style/DeenOneDialogButton</item>
+        <item name="buttonBarNeutralButtonStyle">@style/DeenOneDialogButton</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.DeenOne.Dialog</item>
+    </style>
+
+    <style name="DeenOneDialogButton" parent="Widget.Material3.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/primary_green</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ShapeAppearance.DeenOne.Dialog" parent="">
+        <item name="cornerSize">20dp</item>
+    </style>
+
+    <style name="ShapeAppearance.DeenOne.Circle" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <!-- ================================================================= -->
+    <!-- 5. NAVIGATION STYLES                                              -->
+    <!-- ================================================================= -->
+    <style name="DeenOneBottomNavTab">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="DeenOneBottomNavActivePill">
+        <item name="android:background">@drawable/bg_bottom_nav_tab_active</item>
+        <item name="android:paddingHorizontal">@dimen/spacing_md</item>
+        <item name="android:paddingVertical">@dimen/spacing_2xs</item>
+    </style>
+
+    <!-- ================================================================= -->
+    <!-- 6. INPUT FIELD STYLES                                             -->
+    <!-- ================================================================= -->
+    <style name="DeenOneTextInputLayout" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/border_active</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/radius_md</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/radius_md</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/radius_md</item>
+        <item name="boxCornerRadiusTopStart">@dimen/radius_md</item>
+        <item name="hintTextColor">@color/text_muted</item>
+    </style>
+
+    <style name="DeenOneTextInputEditText" parent="Widget.Material3.TextInputEditText.OutlinedBox">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">@dimen/text_size_body</item>
+        <item name="android:textColorHint">@color/text_muted</item>
+        <item name="android:padding">@dimen/spacing_md</item>
+    </style>
+
+    <style name="DeenOneSideDrawerAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_left</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_left</item>
+    </style>
+</resources>

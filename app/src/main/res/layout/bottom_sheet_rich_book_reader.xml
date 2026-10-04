@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutBookReaderRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    android:orientation="vertical">
+
+    <!-- Top App Bar -->
+    <LinearLayout
+        android:id="@+id/layoutReaderHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_top_bar"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="14dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="10dp">
+
+        <ImageButton android:id="@+id/btnCloseReader"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:background="@drawable/bg_badge_pill"
+            android:contentDescription="ফিরে যান"
+            android:src="@drawable/ic_arrow_back"
+            app:tint="@color/accent_mint" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvReaderTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="রিয়াদুস সালেহীন"
+                android:textColor="@color/text_primary"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvReaderAuthor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="ইমাম আন-নববী (রহ.)"
+                android:textColor="@color/accent_mint"
+                android:textSize="11.5sp" />
+        </LinearLayout>
+
+        <!-- Font Size A- / A+ -->
+        <ImageButton
+            android:id="@+id/btnReaderFontSize"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@drawable/bg_badge_pill"
+            android:contentDescription="ফন্ট সাইজ"
+            android:src="@drawable/ic_format_size"
+            app:tint="@color/text_primary" />
+
+        <!-- Theme Picker (Light / Sepia / Dark / Midnight) -->
+        <ImageButton
+            android:id="@+id/btnReaderThemeToggle"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="6dp"
+            android:background="@drawable/bg_badge_pill"
+            android:contentDescription="রিডিং থিম"
+            android:src="@drawable/ic_palette"
+            app:tint="@color/text_primary" />
+
+        <!-- Jump to Chapter / Page -->
+        <ImageButton
+            android:id="@+id/btnReaderJumpToPage"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="6dp"
+            android:background="@drawable/bg_badge_pill"
+            android:contentDescription="সূচিপত্র / অধ্যায়"
+            android:src="@drawable/ic_menu_book"
+            app:tint="@color/text_primary" />
+    </LinearLayout>
+
+    <!-- Reading Body View (Dual Engine: Rich Text Chapter or PDF) -->
+    <FrameLayout
+        android:id="@+id/containerReaderContent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- 1. Rich Text Chapter View -->
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollReaderText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="18dp"
+            android:paddingBottom="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvChapterHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="অধ্যায় ১: ইখলাস ও নিয়ত"
+                    android:textColor="#1E293B"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/dividerChapter"
+                    android:layout_width="60dp"
+                    android:layout_height="3dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/bg_badge_pill"
+                    android:backgroundTint="@color/accent_mint" />
+
+                <TextView
+                    android:id="@+id/tvChapterBodyText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="6dp"
+                    android:text="সকল আমলের গ্রহণযোগ্যতা নিয়তের উপর নির্ভরশীল..."
+                    android:textColor="#1E293B"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <!-- 2. PDF ViewPager (if viewing PDF mode) -->
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPagerReaderPdf"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <!-- Bottom Navigation & Progress Bar -->
+    <LinearLayout
+        android:id="@+id/layoutReaderBottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_bottom_nav"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="14dp">
+
+        <!-- Progress Scrubber -->
+        <SeekBar
+            android:id="@+id/seekBarReaderProgress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:progressTint="@color/accent_mint"
+            android:thumbTint="@color/accent_mint" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnReaderPrevChapter"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_alignParentStart="true"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="◀ পূর্ববর্তী"
+                android:textColor="@color/text_primary"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tvReaderPageIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="অধ্যায় ১ / ১০ • ১০% সম্পন্ন"
+                android:textColor="@color/accent_mint"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnReaderNextChapter"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_alignParentEnd="true"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="পরবর্তী ▶"
+                android:textColor="@color/text_primary"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

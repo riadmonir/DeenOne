@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main"
+    android:orientation="vertical">
+
+    <!-- Top Header Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/bg_top_bar"
+        android:elevation="2dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp">
+
+        <!-- Back Button with Circular Container -->
+        <FrameLayout android:id="@+id/btnBackWhenStartedHistory"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_circular_counter"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_arrow_back"
+                app:tint="@color/accent_mint" />
+        </FrameLayout>
+
+        <!-- Header Title -->
+        <TextView
+            android:id="@+id/tvHeaderTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="মুসলমানরা কখন থেকে নামাজ পড়া শুরু করে"
+            android:textColor="@color/text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Settings Gear Action Button with Circular Container -->
+        <FrameLayout android:id="@+id/btnSettingsWhenStartedHistory"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_circular_counter"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_settings"
+                app:tint="@color/accent_mint" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- Scrollable Content -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollHistoryContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="36dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Main Topic Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardWhenStartedMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@color/bg_card"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/border_card"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Card Header Row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvCardTitle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="মুসলমানরা কখন থেকে নামাজ পড়া শুরু করে"
+                            android:textColor="@color/text_primary"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <!-- Three dots button -->
+                        <FrameLayout
+                            android:id="@+id/btnMenuCardWhenStarted"
+                            android:layout_width="34dp"
+                            android:layout_height="34dp"
+                            android:layout_marginStart="8dp"
+                            android:background="@drawable/bg_glassy_icon_button"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_more_horiz"
+                                app:tint="@color/text_primary" />
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <!-- Intro Paragraph -->
+                    <TextView
+                        android:id="@+id/tvIntroDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="একজন মানুষের জীবনে কখন থেকে সালাত ফরজ হয়? বিষয়টি জানা জরুরী। কেননা দিন দিন আমাদের বয়স বৃদ্ধি হলেও সালাত আদায়ের পরিমাণ বৃদ্ধি হয়নি। অনেক ক্ষেত্রে বিষয়টি এড়িয়ে যায়। যা একজন মুসলিম হিসেবে কখন কাম্য নয়! চলুন, জেনে নেওয়া যাক কখন থেকে সালাত আদায় করতে হয়। প্রথমিক কথা হচ্ছে, ব্যাক্তি কয়েকটি বিষয় পূর্ণ করলে তার উপর সালাত ফরজ হয়ে যায়।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <!-- Condition Header -->
+                    <TextView
+                        android:id="@+id/tvConditionIntro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:text="যেমন -"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14.5sp"
+                        android:textStyle="bold" />
+
+                    <!-- 1. মুসলিম হওয়া -->
+                    <TextView
+                        android:id="@+id/tvConditionMuslimTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:lineSpacingExtra="3.5dp"
+                        android:text="মুসলিম হওয়া: সালাত ফরজ হওয়ার জন্য প্রথম শর্ত বা আবশ্যক বিষয় হল ব্যক্তিকে মুসলিম হতে হবে। কেননা অবিশ্বাসী বা অমুসলিমদের উপর এই বিধান নয়। পবিত্র কুরআনে আল্লাহ বলেন..."
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <!-- Arabic Ayah -->
+                    <TextView
+                        android:id="@+id/tvAyahArabic1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center"
+                        android:lineSpacingExtra="6dp"
+                        android:text="وَ مَنْ يَّبْتَغِ غَيْرَ الْإِسْلَامِ دِيْنًا فَلَنْ يُّقْبَلَ مِنْهُ"
+                        android:textColor="@color/text_primary"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <!-- Meaning Label -->
+                    <TextView
+                        android:id="@+id/tvMeaningLabel1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="অর্থ:"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <!-- Meaning Content -->
+                    <TextView
+                        android:id="@+id/tvAyahMeaning1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:lineSpacingExtra="3.5dp"
+                        android:text="আর যে ইসলাম ছাড়া অন্য কোন দীন চায় তবে তার কাছ থেকে তা কখনো গ্রহণ করা হবে না।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <!-- Ref -->
+                    <TextView
+                        android:id="@+id/tvAyahRef1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="সূরা আলে ইমরান: ৩:৮৫, সূরা আত-তাওবা: ৯:১৭"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <!-- 2. জ্ঞানসম্পন্ন হওয়া -->
+                    <TextView
+                        android:id="@+id/tvConditionIntellectTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:lineSpacingExtra="3.5dp"
+                        android:text="জ্ঞানসম্পন্ন হওয়া: কোন পাগল বা যে ব্যক্তির পূর্ণ জ্ঞান নেই তার উপর সালাত ফরজ নয়। যদি ব্যক্তি জ্ঞানবান হন তবে তার উপর সালাত ফরজ হবে। রাসূল (সাঃ) বলেন –"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <!-- Arabic Hadith 1 -->
+                    <TextView
+                        android:id="@+id/tvHadithArabic1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center"
+                        android:lineSpacingExtra="6dp"
+                        android:text="رُفِعَ الْقَلَمُ عَنْ ثَلَاثَةٍ: عَنِ النَّائِمِ حَتَّى يَسْتَيْقِظَ وَعَنِ الصَّبِيِّ حَتَّى يَبْلُغَ وَعَنِ الْمَعْتُوهِ حَتَّى يَعْقِلَ"
+                        android:textColor="@color/text_primary"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <!-- Meaning Label -->
+                    <TextView
+                        android:id="@+id/tvMeaningLabel2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="অর্থ:"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <!-- Hadith Meaning 1 with Bullets -->
+                    <TextView
+                        android:id="@+id/tvHadithMeaning1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="তিন ব্যক্তি কিয়ামত দিবসে দায়-দায়িত্বমুক্ত:\n• ঘুমন্ত ব্যক্তি জেগে না ওঠা পর্যন্ত।\n• অপ্রাপ্তবয়স্ক বালেগ না হওয়া পর্যন্ত এবং\n• নির্বোধ ব্যক্তির জ্ঞান ফিরে না আসা পর্যন্ত।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <!-- Ref -->
+                    <TextView
+                        android:id="@+id/tvHadithRef1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="তিরমিযী, আবু দাউদ, মিশকাত: ৩২৮৭"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <!-- 3. বয়ঃপ্রাপ্ত হওয়া -->
+                    <TextView
+                        android:id="@+id/tvConditionPubertyTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:lineSpacingExtra="3.5dp"
+                        android:text="বয়ঃপ্রাপ্ত হওয়া: মুসলিম ব্যক্তি প্রাপ্ত বয়স্ক হলে তার উপর সালাত ফরজ হয়। কেননা শিশুর উপর থেকে কলম উঠিয়ে নেওয়া হয়েছে। অর্থাৎ তার পাপ লিখা হবে না। সেজন্য বালেগ ব্যক্তির উপর এটি ফরজ। যা ছোট বয়স থেকেই অভ্যাস করতে হয়। রাসূল (সাঃ) বলেন -"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <!-- Arabic Hadith 2 -->
+                    <TextView
+                        android:id="@+id/tvHadithArabic2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center"
+                        android:lineSpacingExtra="6dp"
+                        android:text="مُرُوا أَوْلَادَكُمْ بِالصَّلَاةِ وَهُمْ أَبْنَاءُ سَبْعِ سِنِينَ وَاضْرِبُوهُمْ عَلَيْهَا وَهُمْ أَبْنَاءُ عَشْرِ سِنِينَ وَفَرِّقُوا بَيْنَهُمْ فِي الْمَضَاجِعِ"
+                        android:textColor="@color/text_primary"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <!-- Meaning Label -->
+                    <TextView
+                        android:id="@+id/tvMeaningLabel3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="অর্থ:"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <!-- Meaning Content -->
+                    <TextView
+                        android:id="@+id/tvHadithMeaning2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:lineSpacingExtra="3.5dp"
+                        android:text="যখন তোমার সন্তানদের বয়স সাত বছরে পৌঁছবে তখন তাদেরকে সালাত আদায়ের জন্য নির্দেশ দিবে। আর তাদের শাস্তি দিবে যখন তারা দশ বছরে পৌঁছবে এবং তাদের ঘুমানোর স্থান পৃথক করে দিবে।"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <!-- Ref -->
+                    <TextView
+                        android:id="@+id/tvHadithRef2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="মুসনাদে আহমাদ, সুনানে আবু দাউদ"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

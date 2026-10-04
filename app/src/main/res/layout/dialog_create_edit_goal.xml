@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:background="@drawable/bg_bottom_sheet_surface"
+  android:orientation="vertical"
+  android:padding="20dp">
+
+  <TextView
+    android:id="@+id/tvGoalDialogTitle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="নতুন ইসলামিক লক্ষ্য যোগ করুন"
+    android:textColor="@color/text_primary"
+    android:textSize="17sp"
+    android:textStyle="bold" />
+
+  <!-- Category Selector -->
+  <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="14dp"
+    android:layout_marginBottom="6dp"
+    android:text="ক্যাটাগরি নির্বাচন করুন"
+    android:textColor="@color/text_secondary"
+    android:textSize="12sp" />
+
+  <Spinner
+    android:id="@+id/spinnerGoalCategory"
+    android:layout_width="match_parent"
+    android:layout_height="44dp"
+    android:background="@drawable/bg_input_field"
+    android:paddingHorizontal="12dp" />
+
+  <!-- Goal Title -->
+  <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:layout_marginBottom="6dp"
+    android:text="লক্ষ্যের শিরোনাম"
+    android:textColor="@color/text_secondary"
+    android:textSize="12sp" />
+
+  <EditText
+    android:id="@+id/etGoalTitle"
+    android:layout_width="match_parent"
+    android:layout_height="44dp"
+    android:background="@drawable/bg_input_field"
+    android:hint="যেমন: দৈনিক ২০ মিনিট কুরআন তিলাওয়াত"
+    android:inputType="text"
+    android:paddingHorizontal="12dp"
+    android:textColor="@color/text_primary"
+    android:textColorHint="#6B7280"
+    android:textSize="13.5sp" />
+
+  <!-- Target Amount & Unit -->
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:orientation="horizontal">
+
+    <LinearLayout
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="6dp"
+      android:layout_weight="1"
+      android:orientation="vertical">
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:text="দৈনিক টার্গেট"
+        android:textColor="@color/text_secondary"
+        android:textSize="12sp" />
+
+      <EditText
+        android:id="@+id/etGoalTargetAmount"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/bg_input_field"
+        android:hint="যেমন: ২০"
+        android:inputType="number"
+        android:paddingHorizontal="12dp"
+        android:textColor="@color/text_primary"
+        android:textColorHint="#6B7280"
+        android:textSize="13.5sp" />
+    </LinearLayout>
+
+    <LinearLayout
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="6dp"
+      android:layout_weight="1"
+      android:orientation="vertical">
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:text="পরিমাপ একক"
+        android:textColor="@color/text_secondary"
+        android:textSize="12sp" />
+
+      <EditText
+        android:id="@+id/etGoalTargetUnit"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/bg_input_field"
+        android:hint="মিনিট / বার / পৃষ্ঠা"
+        android:inputType="text"
+        android:paddingHorizontal="12dp"
+        android:textColor="@color/text_primary"
+        android:textColorHint="#6B7280"
+        android:textSize="13.5sp" />
+    </LinearLayout>
+  </LinearLayout>
+
+  <!-- Reminder Toggle -->
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="14dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <TextView
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:text="দৈনিক রিমাইন্ডার সক্রিয় রাখুন"
+      android:textColor="@color/text_primary"
+      android:textSize="13sp" />
+
+    <androidx.appcompat.widget.SwitchCompat
+      android:id="@+id/switchGoalReminder"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:checked="true" />
+  </LinearLayout>
+
+  <!-- Action Buttons -->
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:orientation="horizontal">
+
+    <com.google.android.material.button.MaterialButton
+      android:id="@+id/btnCancelGoalDialog"
+      style="@style/Widget.MaterialComponents.Button.TextButton"
+      android:layout_width="0dp"
+      android:layout_height="44dp"
+      android:layout_marginEnd="6dp"
+      android:layout_weight="1"
+      android:text="বাতিল"
+      android:textColor="@color/text_secondary"
+      android:textSize="13sp" />
+
+    <com.google.android.material.button.MaterialButton
+      android:id="@+id/btnSaveGoalDialog"
+      style="@style/Widget.MaterialComponents.Button"
+      android:layout_width="0dp"
+      android:layout_height="44dp"
+      android:layout_marginStart="6dp"
+      android:layout_weight="1"
+      android:backgroundTint="@color/accent_mint"
+      android:text="সেভ করুন"
+      android:textColor="@color/text_dark"
+      android:textSize="13sp"
+      android:textStyle="bold"
+      app:cornerRadius="10dp" />
+  </LinearLayout>
+</LinearLayout>

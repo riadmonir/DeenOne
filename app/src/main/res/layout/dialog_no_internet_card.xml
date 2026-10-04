@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="6dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingHorizontal="24dp"
+            android:paddingTop="28dp"
+            android:paddingBottom="20dp">
+
+            <!-- Top Circular Icon (Wifi Off / Disconnected) -->
+            <FrameLayout
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:background="@drawable/bg_dialog_circle_teal">
+
+                <ImageView
+                    android:id="@+id/ivNoInternetIcon"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_wifi_off_dialog"
+                    app:tint="#FFFFFF" />
+            </FrameLayout>
+
+            <!-- Dialog Title -->
+            <TextView
+                android:id="@+id/tvNoInternetTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="ইন্টারনেট সংযোগ প্রয়োজন"
+                android:textColor="@color/text_primary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Dialog Subtitle -->
+            <TextView
+                android:id="@+id/tvNoInternetSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:lineSpacingExtra="2dp"
+                android:text="ইন্টারনেট সংযোগ বন্ধ রয়েছে। অনলাইন থেকে লোড করতে ইন্টারনেট চালু করুন অথবা অফলাইন ডাটা ডাউনলোড করুন।"
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp" />
+
+            <!-- Primary Action: Retry / Settings Button -->
+            <FrameLayout
+                android:id="@+id/btnRetryInternet"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_btn_dialog_download"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:id="@+id/tvRetryBtnText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="পুনরায় চেষ্টা করুন"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+            <!-- Secondary Action: Cancel / Dismiss Button -->
+            <TextView
+                android:id="@+id/btnCloseNoInternet"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:paddingHorizontal="20dp"
+                android:text="বাতিল করুন"
+                android:textColor="@color/text_secondary"
+                android:textSize="13.5sp"
+                android:clickable="true"
+                android:focusable="true" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</FrameLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:id="@+id/cardLeaderboardUser"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_marginTop="10dp"
+  app:cardBackgroundColor="@color/bg_card"
+  app:cardCornerRadius="16dp"
+  app:cardElevation="0dp"
+  app:strokeColor="@color/border_card"
+  app:strokeWidth="1.2dp">
+
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="14dp">
+
+    <!-- Rank Number: #1, #2, #3, #4 in bold -->
+    <TextView
+      android:id="@+id/tvLeaderboardRank"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentStart="true"
+      android:layout_centerVertical="true"
+      android:minWidth="34dp"
+      android:text="#১"
+      android:textColor="#FFB300"
+      android:textSize="17sp"
+      android:textStyle="bold" />
+
+    <!-- User Information (Username + City • Level) -->
+    <LinearLayout
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_centerVertical="true"
+      android:layout_marginStart="10dp"
+      android:layout_marginEnd="12dp"
+      android:layout_toStartOf="@+id/tvLeaderboardPoints"
+      android:layout_toEndOf="@+id/tvLeaderboardRank"
+      android:orientation="vertical">
+
+      <TextView
+        android:id="@+id/tvLeaderboardName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="xbxbbx"
+        android:textColor="@color/text_primary"
+        android:textSize="15.5sp"
+        android:textStyle="bold" />
+
+      <TextView
+        android:id="@+id/tvLeaderboardStreak"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="ঢাকা • নবাগত"
+        android:textColor="@color/text_secondary"
+        android:textSize="12.5sp" />
+    </LinearLayout>
+
+    <!-- Points Pill: ৪০ পয়েন্ট in mint bold -->
+    <TextView
+      android:id="@+id/tvLeaderboardPoints"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentEnd="true"
+      android:layout_centerVertical="true"
+      android:text="৪০ পয়েন্ট"
+      android:textColor="@color/accent_mint"
+      android:textSize="14sp"
+      android:textStyle="bold" />
+
+  </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <!-- Page Frame Outer Border -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1.2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <!-- Page Top Header -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="6dp">
+
+                <TextView
+                    android:id="@+id/tvPageHeaderSurah"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="সূরা আল-কাহফ"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="11.5sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvPageHeaderJuz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="পারা ১৫: সুবহানাল্লাজি"
+                    android:textColor="@color/accent_gold"
+                    android:textSize="11.5sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <!-- Thin Top Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/border_card" />
+
+            <!-- Page Ayahs Scrollable Container -->
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/scrollPageContent"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:fillViewport="true"
+                android:overScrollMode="never"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/layoutPageAyahs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <!-- Surah Header Banner (Dynamically shown if surah starts on this page) -->
+                    <LinearLayout
+                        android:id="@+id/layoutSurahHeaderBanner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:background="@drawable/bg_table_header_emerald"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingVertical="10dp"
+                        android:paddingHorizontal="16dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tvSurahBannerArabic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="سورة الكهف"
+                            android:textColor="@color/accent_gold"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvSurahBannerMeta"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="সূরা আল-কাহফ • মাক্কী • ১১০ আয়াত"
+                            android:textColor="@color/accent_mint"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                    <!-- Bismillah Calligraphy Banner (Dynamically shown) -->
+                    <TextView
+                        android:id="@+id/tvBismillahBanner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:gravity="center"
+                        android:text="بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ"
+                        android:textColor="@color/text_primary"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <!-- Main Arabic Verses Flow Container -->
+                    <TextView
+                        android:id="@+id/tvPageArabicText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|start"
+                        android:lineSpacingExtra="8dp"
+                        android:lineSpacingMultiplier="1.25"
+                        android:text="بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ ۝١ الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ ۝٢ الرَّحْمَٰنِ الرَّحِيمِ ۝٣ مَالِكِ يَوْمِ الدِّينِ ۝٤ إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ ۝٥ اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ ۝٦ صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ ۝٧"
+                        android:textColor="@color/text_primary"
+                        android:textSize="22sp" />
+
+                    <!-- Mask Mode Overlay Hint (Visible when mask mode is active) -->
+                    <TextView
+                        android:id="@+id/tvMaskModeTapHint"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/bg_badge_pill"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="👁️ হিফজ মাস্ক মোড সক্রিয় • ট্যাপ করে আয়াত দেখুন / লুকান"
+                        android:textColor="@color/accent_mint"
+                        android:textSize="11.5sp"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+            <!-- Thin Bottom Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="6dp"
+                android:background="@color/border_card" />
+
+            <!-- Page Bottom Footer -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvPageFooterManzil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:text="মঞ্জিল ৪"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="11sp" />
+
+                <!-- Page Number Pill -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/bg_badge_pill"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="3dp">
+
+                    <TextView
+                        android:id="@+id/tvPageNumberBadge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="২৯৩"
+                        android:textColor="@color/accent_mint"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvPageFooterRuku"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:text="রুকু ১"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="11sp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

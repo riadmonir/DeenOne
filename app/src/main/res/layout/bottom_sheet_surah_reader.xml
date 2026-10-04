@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main"
+    android:orientation="vertical">
+
+    <!-- Top App Bar (100% Faithful to Screenshot 1) -->
+    <RelativeLayout
+        android:id="@+id/layoutTopHeader"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/bg_card"
+        android:paddingHorizontal="14dp">
+
+        <!-- Back Arrow Button -->
+        <FrameLayout
+            android:id="@+id/btnCloseReader"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_arrow_back"
+                app:tint="@color/text_primary" />
+        </FrameLayout>
+
+        <!-- Surah Title & Meaning: আল-ফাতিহা (সূচনা) -->
+        <TextView
+            android:id="@+id/tvReaderSurahTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="8dp"
+            android:layout_toEndOf="@+id/btnCloseReader"
+            android:layout_toStartOf="@+id/layoutHeaderActions"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="আল-ফাতিহা (সূচনা)"
+            android:textColor="@color/text_primary"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <!-- Header Action Icons (Reciter, Gold Download, Text Settings) -->
+        <LinearLayout
+            android:id="@+id/layoutHeaderActions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- 1. Reciter Selection Icon (Human Profile with Waves) -->
+            <FrameLayout
+                android:id="@+id/btnSelectReciter"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginEnd="6dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@+id/ivSelectReciterIcon"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_audio_reciter"
+                    app:tint="@color/text_primary" />
+            </FrameLayout>
+
+            <!-- 2. Offline Download Icon (Gold Circular Badge) -->
+            <FrameLayout
+                android:id="@+id/btnDownloadSurahAudio"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/bg_badge_circle_gold"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@+id/ivDownloadSurahIcon"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_download"
+                    app:tint="#111827" />
+
+                <ProgressBar
+                    android:id="@+id/pbDownloadSurahProgress"
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_gravity="center"
+                    android:indeterminateTint="#111827"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tvDownloadSurahPercent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:includeFontPadding="false"
+                    android:textColor="#111827"
+                    android:textSize="7.5sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <!-- 3. Quran Settings (TT Font Size Icon) -->
+            <FrameLayout
+                android:id="@+id/btnOpenQuranSettings"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@+id/ivOpenQuranSettingsIcon"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_format_size"
+                    app:tint="@color/text_primary" />
+            </FrameLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- Main Content Container with Recycler View and Sticky Mini-Player -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- Ayahs Recycler View -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSurahAyahs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingHorizontal="6dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="150dp" />
+
+        <!-- Sticky Bottom Quran Audio Mini-Player (100% Faithful to Screenshot 3) -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardQuranMiniPlayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="10dp"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/bg_card"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="12dp"
+            app:strokeColor="@color/border_card"
+            app:strokeWidth="1.2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="14dp"
+                android:paddingVertical="12dp">
+
+                <!-- Row 1: Left Waveform Icon + Metadata (Surah & Ayah, Reciter) + Right Quick Actions (Repeat, Speed) -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!-- Left Waveform Equalizer Box -->
+                    <FrameLayout
+                        android:id="@+id/layoutWaveformIcon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/bg_waveform_container">
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_audio_waveform"
+                            app:tint="@color/accent_mint" />
+                    </FrameLayout>
+
+                    <!-- Middle Column: Title & Reciter Name -->
+                    <LinearLayout
+                        android:id="@+id/layoutMiniPlayerTexts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="6dp"
+                        android:layout_toEndOf="@+id/layoutWaveformIcon"
+                        android:layout_toStartOf="@+id/layoutMiniPlayerTopActions"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvMiniPlayerTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="সূরা আল-ফাতিহা • আয়াত ৭"
+                            android:textColor="@color/text_primary"
+                            android:textSize="14.5sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvMiniPlayerSubtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="মিশারী রশিদ আল-আফাসী"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <!-- Right Quick Actions: Repeat Mode + Speed Pill -->
+                    <LinearLayout
+                        android:id="@+id/layoutMiniPlayerTopActions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <!-- Repeat Mode Button -->
+                        <FrameLayout
+                            android:id="@+id/btnMiniPlayerRepeat"
+                            android:layout_width="34dp"
+                            android:layout_height="34dp"
+                            android:layout_marginEnd="6dp"
+                            android:background="@drawable/bg_badge_pill"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <ImageView
+                                android:id="@+id/ivMiniPlayerRepeatIcon"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_repeat_one"
+                                app:tint="@color/text_primary" />
+                        </FrameLayout>
+
+                        <!-- Playback Speed Button (১× / 1x) -->
+                        <FrameLayout
+                            android:id="@+id/btnMiniPlayerSpeed"
+                            android:layout_width="34dp"
+                            android:layout_height="34dp"
+                            android:background="@drawable/bg_badge_pill"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <TextView
+                                android:id="@+id/tvMiniPlayerSpeedLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="১×"
+                                android:textColor="@color/text_primary"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                        </FrameLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <!-- Row 2: Progress Bar & Timestamps -->
+                <SeekBar
+                    android:id="@+id/sbMiniPlayerProgress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:max="1000"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp"
+                    android:progress="0"
+                    android:progressBackgroundTint="@color/border_card"
+                    android:progressTint="@color/accent_mint"
+                    android:thumbTint="@color/accent_mint" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:paddingHorizontal="2dp">
+
+                    <TextView
+                        android:id="@+id/tvMiniPlayerCurrentTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:text="০০:০০"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/tvMiniPlayerTotalTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:text="০০:০০"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="11sp" />
+                </RelativeLayout>
+
+                <!-- Row 3: Main Controls (|◀ , ▶/⏸ , ▶| , ✕) -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp">
+
+                    <!-- Centered Controls: Prev, Circular Play/Pause, Next -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <!-- Previous Ayah -->
+                        <FrameLayout
+                            android:id="@+id/btnMiniPlayerPrev"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:layout_marginEnd="16dp"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <ImageView
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_skip_previous"
+                                app:tint="@color/text_secondary" />
+                        </FrameLayout>
+
+                        <!-- Play/Pause Mint Circle -->
+                        <FrameLayout
+                            android:id="@+id/btnMiniPlayerPlayPause"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:background="@drawable/bg_circular_counter"
+                            android:backgroundTint="@color/accent_mint"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <ImageView
+                                android:id="@+id/ivMiniPlayerPlayPauseIcon"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_pause"
+                                app:tint="@color/bg_main" />
+                        </FrameLayout>
+
+                        <!-- Next Ayah -->
+                        <FrameLayout
+                            android:id="@+id/btnMiniPlayerNext"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:layout_marginStart="16dp"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <ImageView
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_skip_next"
+                                app:tint="@color/text_secondary" />
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <!-- Close / Dismiss Mini-Player Button -->
+                    <FrameLayout
+                        android:id="@+id/btnMiniPlayerClose"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_close"
+                            app:tint="@color/text_secondary" />
+                    </FrameLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</LinearLayout>

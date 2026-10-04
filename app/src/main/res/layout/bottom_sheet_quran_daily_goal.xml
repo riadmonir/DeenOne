@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_sheet_rounded_top"
+    android:orientation="vertical"
+    android:paddingHorizontal="20dp"
+    android:paddingTop="12dp"
+    android:paddingBottom="28dp">
+
+    <!-- Top Drag Handle -->
+    <View
+        android:layout_width="44dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bg_circular_counter"
+        android:backgroundTint="@color/border_card" />
+
+    <!-- Sheet Title -->
+    <TextView
+        android:id="@+id/tvDailyGoalSheetTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:text="দৈনিক লক্ষ্য নির্ধারণ করুন"
+        android:textColor="@color/text_primary"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <!-- Option 1: 5 Ayahs -->
+    <RelativeLayout
+        android:id="@+id/cardGoalOptionAyahs"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/bg_goal_item_selected"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingHorizontal="16dp">
+
+        <FrameLayout
+            android:id="@+id/flIconGoalAyahs"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_circular_counter"
+            android:backgroundTint="@color/bg_badge_pill">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_target_bullseye"
+                app:tint="@color/accent_mint" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tvGoalTextAyahs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="14dp"
+            android:layout_toEndOf="@id/flIconGoalAyahs"
+            android:text="৫ আয়াত"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/ivCheckGoalAyahs"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_check_circle"
+            android:visibility="visible"
+            app:tint="@color/accent_mint" />
+    </RelativeLayout>
+
+    <!-- Option 2: 1 Page -->
+    <RelativeLayout
+        android:id="@+id/cardGoalOptionPage"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/bg_goal_item_unselected"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingHorizontal="16dp">
+
+        <FrameLayout
+            android:id="@+id/flIconGoalPage"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_circular_counter"
+            android:backgroundTint="@color/bg_badge_pill">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_target_bullseye"
+                app:tint="@color/accent_mint" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tvGoalTextPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="14dp"
+            android:layout_toEndOf="@id/flIconGoalPage"
+            android:text="১ পৃষ্ঠা"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/ivCheckGoalPage"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_check_circle"
+            android:visibility="gone"
+            app:tint="@color/accent_mint" />
+    </RelativeLayout>
+
+    <!-- Option 3: 10 Minutes -->
+    <RelativeLayout
+        android:id="@+id/cardGoalOptionTime"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/bg_goal_item_unselected"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingHorizontal="16dp">
+
+        <FrameLayout
+            android:id="@+id/flIconGoalTime"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_circular_counter"
+            android:backgroundTint="@color/bg_badge_pill">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_timer_stopwatch"
+                app:tint="@color/accent_mint" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tvGoalTextTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="14dp"
+            android:layout_toEndOf="@id/flIconGoalTime"
+            android:text="১০ মিনিট"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/ivCheckGoalTime"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_check_circle"
+            android:visibility="gone"
+            app:tint="@color/accent_mint" />
+    </RelativeLayout>
+
+    <!-- Option 4: 1 Surah -->
+    <RelativeLayout
+        android:id="@+id/cardGoalOptionSurah"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:background="@drawable/bg_goal_item_unselected"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingHorizontal="16dp">
+
+        <FrameLayout
+            android:id="@+id/flIconGoalSurah"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_circular_counter"
+            android:backgroundTint="@color/bg_badge_pill">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_feat_book"
+                app:tint="@color/accent_mint" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tvGoalTextSurah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="14dp"
+            android:layout_toEndOf="@id/flIconGoalSurah"
+            android:text="১ সূরা"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/ivCheckGoalSurah"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_check_circle"
+            android:visibility="gone"
+            app:tint="@color/accent_mint" />
+    </RelativeLayout>
+
+</LinearLayout>

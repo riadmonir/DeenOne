@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/bg_main"
+  android:orientation="vertical">
+
+  <!-- Top App Bar in Reader -->
+  <LinearLayout
+    android:id="@+id/layoutReaderTopBar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_top_bar"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingHorizontal="14dp"
+    android:paddingTop="12dp"
+    android:paddingBottom="12dp">
+
+    <FrameLayout
+      android:id="@+id/btnClosePdfReader"
+      android:layout_width="38dp"
+      android:layout_height="38dp"
+      android:background="@drawable/bg_badge_pill"
+      android:clickable="true"
+      android:focusable="true">
+
+      <ImageView
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_arrow_back"
+        app:tint="@color/text_primary"
+        android:contentDescription="ফিরে যান" />
+    </FrameLayout>
+
+    <LinearLayout
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginHorizontal="12dp"
+      android:layout_weight="1"
+      android:orientation="vertical">
+
+      <TextView
+        android:id="@+id/tvReaderBookTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="বইয়ের শিরোনাম"
+        android:textColor="@color/text_primary"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+      <TextView
+        android:id="@+id/tvReaderBookAuthor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="লেখক ও সূত্র"
+        android:textColor="@color/text_secondary"
+        android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- Jump to page button -->
+    <FrameLayout
+      android:id="@+id/btnReaderJumpPage"
+      android:layout_width="38dp"
+      android:layout_height="38dp"
+      android:background="@drawable/bg_badge_pill"
+      android:clickable="true"
+      android:focusable="true">
+
+      <ImageView
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_feat_book"
+        app:tint="@color/text_primary"
+        android:contentDescription="পৃষ্ঠায় যান" />
+    </FrameLayout>
+  </LinearLayout>
+
+  <!-- Continuous Vertical PDF Container with Floating Corner Page Indicator -->
+  <FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1">
+
+    <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/rvPdfPages"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:clipToPadding="false"
+      android:overScrollMode="never"
+      android:scrollbars="vertical"
+      android:paddingTop="6dp"
+      android:paddingBottom="24dp" />
+
+    <!-- Corner Page Indicator Badge (User: 'এক কোনা দিয়ে পৃষ্ঠা নাম্বার থাকবে এটাই') -->
+    <TextView
+      android:id="@+id/tvCornerPageIndicator"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="bottom|end"
+      android:layout_marginEnd="16dp"
+      android:layout_marginBottom="20dp"
+      android:background="@drawable/bg_badge_pill"
+      android:backgroundTint="#D90F172A"
+      android:elevation="6dp"
+      android:paddingHorizontal="14dp"
+      android:paddingVertical="7dp"
+      android:text="পৃষ্ঠা ১ / ১"
+      android:textColor="@color/accent_mint"
+      android:textSize="12sp"
+      android:textStyle="bold" />
+
+  </FrameLayout>
+
+</LinearLayout>

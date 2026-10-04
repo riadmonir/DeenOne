@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/bg_main"
+  android:orientation="vertical">
+
+  <!-- Top App Bar -->
+  <LinearLayout
+    android:id="@+id/layoutSleepHeader"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_top_bar"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="14dp"
+    android:paddingBottom="12dp">
+
+    <ImageButton
+      android:id="@+id/btnCloseSleepMode"
+      android:layout_width="38dp"
+      android:layout_height="38dp"
+      android:background="@drawable/bg_badge_pill"
+      android:contentDescription="ফিরে যান"
+      android:src="@drawable/ic_arrow_back"
+      app:tint="@color/accent_mint" />
+
+    <TextView
+      android:id="@+id/tvSleepModeTopBarTitle"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="14dp"
+      android:layout_weight="1"
+      android:gravity="center"
+      android:text="কুরআন স্লিপ মোড"
+      android:textColor="@color/text_primary"
+      android:textSize="18sp"
+      android:textStyle="bold" />
+
+    <!-- Placeholder view to center the title perfectly -->
+    <View
+      android:layout_width="38dp"
+      android:layout_height="38dp" />
+  </LinearLayout>
+
+  <androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:clipToPadding="false"
+    android:overScrollMode="never"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="24dp">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center_horizontal"
+      android:orientation="vertical">
+
+      <!-- 1. Top Moon Illustration & Title -->
+      <FrameLayout
+        android:layout_width="84dp"
+        android:layout_height="84dp"
+        android:background="@drawable/circle_progress_bg"
+        android:backgroundTint="#14233C">
+
+        <ImageView
+          android:layout_width="44dp"
+          android:layout_height="44dp"
+          android:layout_gravity="center"
+          android:src="@drawable/ic_moon"
+          app:tint="@color/accent_gold" />
+      </FrameLayout>
+
+      <TextView
+        android:id="@+id/tvSleepModeMainTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:gravity="center"
+        android:text="ঘুমানোর পূর্বে পছন্দসই সূরা তিলাওয়াত"
+        android:textColor="@color/text_primary"
+        android:textSize="16.5sp"
+        android:textStyle="bold" />
+
+      <TextView
+        android:id="@+id/tvSleepModeMainSubtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="টাইমার শেষ হলে অডিও স্বয়ংক্রিয়ভাবে বন্ধ হয়ে যাবে"
+        android:textColor="@color/text_secondary"
+        android:textSize="12sp" />
+
+      <!-- 2. Digital Countdown Timer Display -->
+      <TextView
+        android:id="@+id/tvSleepCountdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="15:00"
+        android:textColor="@color/accent_gold"
+        android:textSize="46sp"
+        android:textStyle="bold" />
+
+      <!-- 3. Duration Selector (15, 30, 60 mins) -->
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+          android:id="@+id/btnDuration15"
+          style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+          android:layout_width="0dp"
+          android:layout_height="44dp"
+          android:layout_marginEnd="6dp"
+          android:layout_weight="1"
+          android:insetTop="0dp"
+          android:insetBottom="0dp"
+          android:text="15 মি."
+          android:textColor="@color/text_primary"
+          android:textSize="13sp"
+          app:cornerRadius="14dp"
+          app:strokeColor="@color/border_card"
+          app:strokeWidth="1.2dp" />
+
+        <com.google.android.material.button.MaterialButton
+          android:id="@+id/btnDuration30"
+          style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+          android:layout_width="0dp"
+          android:layout_height="44dp"
+          android:layout_marginHorizontal="3dp"
+          android:layout_weight="1"
+          android:insetTop="0dp"
+          android:insetBottom="0dp"
+          android:text="30 মি."
+          android:textColor="@color/text_primary"
+          android:textSize="13sp"
+          app:cornerRadius="14dp"
+          app:strokeColor="@color/border_card"
+          app:strokeWidth="1.2dp" />
+
+        <com.google.android.material.button.MaterialButton
+          android:id="@+id/btnDuration60"
+          style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+          android:layout_width="0dp"
+          android:layout_height="44dp"
+          android:layout_marginStart="6dp"
+          android:layout_weight="1"
+          android:insetTop="0dp"
+          android:insetBottom="0dp"
+          android:text="60 মি."
+          android:textColor="@color/text_primary"
+          android:textSize="13sp"
+          app:cornerRadius="14dp"
+          app:strokeColor="@color/border_card"
+          app:strokeWidth="1.2dp" />
+      </LinearLayout>
+
+      <!-- 4. Preset Surahs Section -->
+      <TextView
+        android:id="@+id/tvStartingSurahSectionTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="পছন্দসই সূরা নির্বাচন করুন:"
+        android:textColor="@color/accent_gold"
+        android:textSize="13.5sp"
+        android:textStyle="bold" />
+
+      <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+
+          <com.google.android.material.button.MaterialButton
+            android:id="@+id/chipSurahMulk"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_marginEnd="8dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="❶ সূরা মুলক"
+            android:textColor="@color/text_primary"
+            android:textSize="12.5sp"
+            app:cornerRadius="14dp"
+            app:strokeColor="@color/border_card"
+            app:strokeWidth="1.2dp" />
+
+          <com.google.android.material.button.MaterialButton
+            android:id="@+id/chipSurahRahman"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_marginEnd="8dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="💖 সূরা রহমান"
+            android:textColor="@color/text_primary"
+            android:textSize="12.5sp"
+            app:cornerRadius="14dp"
+            app:strokeColor="@color/border_card"
+            app:strokeWidth="1.2dp" />
+
+          <com.google.android.material.button.MaterialButton
+            android:id="@+id/chipSurahYaseen"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="🕊️ সূরা ইয়াসীন"
+            android:textColor="@color/text_primary"
+            android:textSize="12.5sp"
+            app:cornerRadius="14dp"
+            app:strokeColor="@color/border_card"
+            app:strokeWidth="1.2dp" />
+        </LinearLayout>
+      </HorizontalScrollView>
+
+      <!-- 5. Surah Selector Dropdown Card -->
+      <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardSurahDropdown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1.2dp">
+
+        <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:paddingHorizontal="16dp"
+          android:paddingVertical="14dp">
+
+          <TextView
+            android:id="@+id/tvSelectedSurahName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/ivDropdownArrow"
+            android:layout_centerVertical="true"
+            android:text="সূরা 67. সূরা মুলক"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+          <ImageView
+            android:id="@+id/ivDropdownArrow"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/circle_progress_bg"
+            android:backgroundTint="@color/accent_gold"
+            android:padding="5dp"
+            android:rotation="90"
+            android:src="@drawable/ic_chevron_right"
+            app:tint="@color/bg_main" />
+        </RelativeLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- 6. Playback Queue Section -->
+      <TextView
+        android:id="@+id/tvQueueSectionTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="বাজানোর ক্রম (Playback Queue):"
+        android:textColor="@color/accent_gold"
+        android:textSize="13.5sp"
+        android:textStyle="bold" />
+
+      <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardQueueContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1.2dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="12dp">
+
+          <!-- Dynamic Container for Queue Items -->
+          <LinearLayout
+            android:id="@+id/layoutQueueList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Injected dynamically at runtime via item_sleep_queue_chip -->
+          </LinearLayout>
+
+          <!-- Empty Queue Hint -->
+          <TextView
+            android:id="@+id/tvEmptyQueueHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingVertical="10dp"
+            android:text="কোনো সূরা নির্বাচিত নেই"
+            android:textColor="@color/text_secondary"
+            android:textSize="12.5sp"
+            android:visibility="gone" />
+
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+  </androidx.core.widget.NestedScrollView>
+
+  <!-- 7. Bottom Main CTA Button Bar -->
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_bottom_nav"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingHorizontal="24dp"
+    android:paddingTop="12dp"
+    android:paddingBottom="16dp">
+
+    <com.google.android.material.button.MaterialButton
+      android:id="@+id/btnToggleSleepPlay"
+      style="@style/Widget.MaterialComponents.Button"
+      android:layout_width="match_parent"
+      android:layout_height="48dp"
+      android:backgroundTint="@color/accent_mint"
+      android:insetTop="0dp"
+      android:insetBottom="0dp"
+      android:text="▶ স্লিপ প্লে শুরু করুন"
+      android:textColor="@color/btn_save_text"
+      android:textSize="14sp"
+      android:textStyle="bold"
+      app:cornerRadius="16dp" />
+  </LinearLayout>
+
+</LinearLayout>

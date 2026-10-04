@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/bg_main"
+  android:orientation="vertical">
+
+  <!-- Top Action Bar -->
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_top_bar"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="14dp"
+    android:paddingBottom="12dp">
+
+    <ImageButton android:id="@+id/btnCloseEidMode"
+      android:layout_width="38dp"
+      android:layout_height="38dp"
+      android:background="@drawable/bg_badge_pill"
+      android:contentDescription="ফিরে যান"
+      android:src="@drawable/ic_arrow_back"
+      app:tint="@color/accent_mint" />
+
+    <LinearLayout
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="12dp"
+      android:layout_weight="1"
+      android:orientation="vertical">
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="পবিত্র ঈদ মোড"
+        android:textColor="@color/text_primary"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+      <TextView
+        android:id="@+id/tvEidSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="ঈদের নামাজ, তাকবীর, সুন্নাত ও ফিতরা/কুরবানী"
+        android:textColor="@color/text_secondary"
+        android:textSize="11.5sp" />
+    </LinearLayout>
+
+    <TextView
+      android:id="@+id/badgeEidGreeting"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:background="@drawable/bg_badge_pill"
+      android:paddingHorizontal="10dp"
+      android:paddingVertical="5dp"
+      android:text="ঈদ মুবারক"
+      android:textColor="@color/accent_mint"
+      android:textSize="11.5sp"
+      android:textStyle="bold" />
+  </LinearLayout>
+
+  <androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="14dp"
+    android:paddingBottom="40dp">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <!-- 0. EID TYPE SELECTOR CHIPS -->
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:orientation="horizontal">
+
+        <TextView
+          android:id="@+id/tabEidFitr"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="6dp"
+          android:layout_weight="1"
+          android:background="@drawable/bg_badge_pill"
+          android:gravity="center"
+          android:paddingVertical="10dp"
+          android:text="ঈদুল ফিতর"
+          android:textColor="@color/accent_mint"
+          android:textSize="13sp"
+          android:textStyle="bold" />
+
+        <TextView
+          android:id="@+id/tabEidAdha"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="6dp"
+          android:layout_weight="1"
+          android:background="@drawable/bg_badge_pill"
+          android:gravity="center"
+          android:paddingVertical="10dp"
+          android:text="ঈদুল আজহা (কুরবানী)"
+          android:textColor="@color/text_secondary"
+          android:textSize="13sp"
+          android:textStyle="bold" />
+      </LinearLayout>
+
+      <!-- 1. EID TAKBEER AUDIO & PLAYER CARD -->
+      <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1.2dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="16dp">
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:layout_marginEnd="8dp"
+              android:text="ঈদের তাকবীর (তাকবীরে তাশরীক)"
+              android:textColor="@color/accent_mint"
+              android:textSize="15sp"
+              android:textStyle="bold" />
+
+            <ImageView
+              android:id="@+id/btnCopyTakbeer"
+              android:layout_width="22dp"
+              android:layout_height="22dp"
+              android:background="?attr/selectableItemBackgroundBorderless"
+              android:contentDescription="কপি করুন"
+              android:src="@drawable/ic_copy"
+              app:tint="@color/text_secondary" />
+          </LinearLayout>
+
+          <!-- Arabic Text -->
+          <TextView
+            android:id="@+id/tvTakbeerArabic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:lineSpacingExtra="6dp"
+            android:text="اللَّهُ أَكْبَرُ اللَّهُ أَكْبَرُ لَا إِلَهَ إِلَّا اللَّهُ وَاللَّهُ أَكْبَرُ اللَّهُ أَكْبَرُ وَلِلَّهِ الْحَمْدُ"
+            android:textColor="@color/text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+          <!-- Pronunciation & Meaning -->
+          <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="“আল্লাহু আকবার, আল্লাহু আকবার, লা ইলাহা ইল্লাল্লাহু ওয়াল্লাহু আকবার, আল্লাহু আকবার ওয়া লিল্লাহিল হামদ।”"
+            android:textColor="@color/accent_mint"
+            android:textSize="13sp" />
+
+          <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="অর্থ: “আল্লাহ মহান, আল্লাহ মহান; আল্লাহ ছাড়া কোনো সত্য ইলাহ নেই। আল্লাহ মহান, আল্লাহ মহান; সমস্ত প্রশংসা কেবল আল্লাহর জন্যই।”"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp" />
+
+          <!-- Buttons -->
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+              android:id="@+id/btnPlayTakbeer"
+              style="@style/Widget.MaterialComponents.Button"
+              android:layout_width="0dp"
+              android:layout_height="44dp"
+              android:layout_marginEnd="6dp"
+              android:layout_weight="1"
+              android:backgroundTint="@color/accent_mint"
+              android:text="তাকবীর শুনুন"
+              android:textColor="@color/text_dark"
+              android:textSize="13sp"
+              android:textStyle="bold"
+              app:cornerRadius="10dp" />
+
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnShareGreeting"
+              style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+              android:layout_width="0dp"
+              android:layout_height="44dp"
+              android:layout_marginStart="6dp"
+              android:layout_weight="1"
+              android:text="শুভেচ্ছা পাঠান"
+              android:textColor="@color/accent_mint"
+              android:textSize="13sp"
+              app:cornerRadius="10dp"
+              app:strokeColor="@color/accent_mint" />
+          </LinearLayout>
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- 2. EID PRAYER METHOD (৬ তাকবীর বনাম ১২ তাকবীর) -->
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="8dp"
+        android:text="ঈদের নামাজের নিয়ম ও তাকবীর পদ্ধতি"
+        android:textColor="@color/text_primary"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+      <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1.2dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="16dp">
+
+          <!-- Toggle Method Buttons -->
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+              android:id="@+id/btnMethodHanafi"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_marginEnd="4dp"
+              android:layout_weight="1"
+              android:background="@drawable/bg_badge_pill"
+              android:gravity="center"
+              android:paddingVertical="8dp"
+              android:text="হানাফী (৬ তাকবীর)"
+              android:textColor="@color/accent_mint"
+              android:textSize="12sp"
+              android:textStyle="bold" />
+
+            <TextView
+              android:id="@+id/btnMethodShafii"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="4dp"
+              android:layout_weight="1"
+              android:background="@drawable/bg_badge_pill"
+              android:gravity="center"
+              android:paddingVertical="8dp"
+              android:text="শাফেয়ী/অন্যান্য (১২ তাকবীর)"
+              android:textColor="@color/text_secondary"
+              android:textSize="12sp"
+              android:textStyle="bold" />
+          </LinearLayout>
+
+          <TextView
+            android:id="@+id/tvPrayerMethodText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="3.5dp"
+            android:text="১ম রাকাত:\n• তাকবীরে তাহরীমা বলে হাত বাঁধবেন ও ছানা পড়বেন।\n• এরপর অতিরিক্ত ৩টি তাকবীর বলবেন—প্রথম দুই তাকবীরে হাত কান পর্যন্ত উঠিয়ে ছেড়ে দেবেন এবং ৩য় তাকবীরে হাত বাঁধবেন।\n• এরপর সূরা ফাতিহা ও অন্য সূরা পড়ে রুকু-সিজদা সম্পন্ন করবেন।\n\n২য় রাকাত:\n• দাঁড়িয়ে প্রথমে সূরা ফাতিহা ও অন্য সূরা পড়বেন।\n• রুকুতে যাওয়ার পূর্বে অতিরিক্ত ৩টি তাকবীর বলবেন এবং হাত ছেড়ে দেবেন। ৪র্থ তাকবীর বলে রুকুতে যাবেন।"
+            android:textColor="@color/text_primary"
+            android:textSize="12.5sp" />
+
+          <TextView
+            android:id="@+id/tvPrayerMethodRef"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="উৎস/দলীল: মুসান্নাফে ইবনে আবী শায়বাহ: ৫৬৩৯, ফাতাওয়া হিন্দিয়া ১/১৫০"
+            android:textColor="@color/text_secondary"
+            android:textSize="11sp"
+            android:textStyle="italic" />
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- 3. SPECIAL RITUAL CARD (FITRA OR QURBANI) -->
+      <TextView
+        android:id="@+id/tvSpecialRitualHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="8dp"
+        android:text="সাদাকাতুল ফিতর সংক্রান্ত গুরুত্বপূর্ণ বিধান"
+        android:textColor="@color/text_primary"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+      <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1.2dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="16dp">
+
+          <TextView
+            android:id="@+id/tvSpecialRitualContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="3.5dp"
+            android:text="• ফিতরার পরিমাণ: গম বা আটা ১/২ সা' (প্রায় ১ কেজি ৬৫০ গ্রাম) অথবা খেজুর/কিশমিশ/যব ১ সা' (প্রায় ৩ কেজি ৩০০ গ্রাম) বা সমপরিমাণ বাজারমূল্য।\n• কার ওপর ওয়াজিব: ঈদের দিন সুবহে সাদিকের সময় যার নিকট নিজের ও পরিবারের নিত্যপ্রয়োজনীয় খরচের অতিরিক্ত নেসাব পরিমাণ সম্পদ থাকে।\n• আদায়ের সময়: ঈদের নামাজের উদ্দেশ্যে ঈদগাহে যাওয়ার পূর্বেই গরীবদের হাতে পৌঁছে দেওয়া সুন্নাত।"
+            android:textColor="@color/text_primary"
+            android:textSize="12.5sp" />
+
+          <TextView
+            android:id="@+id/tvSpecialRitualRef"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="— সহীহ বুখারী: ১৫০৩, সহীহ মুসলিম: ৯৮৪"
+            android:textColor="@color/text_secondary"
+            android:textSize="11sp" />
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- 4. 10 VERIFIED EID SUNNAHS CHECKLIST -->
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="8dp"
+        android:text="ঈদের ১০টি গুরুত্বপূর্ণ প্রমাণিত সুন্নাত"
+        android:textColor="@color/text_primary"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+      <LinearLayout
+        android:id="@+id/layoutEidSunnahsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+    </LinearLayout>
+  </androidx.core.widget.NestedScrollView>
+</LinearLayout>

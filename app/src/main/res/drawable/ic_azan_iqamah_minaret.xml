@@ -1,0 +1,10 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Azan & Iqamah Minaret Tower with Soundwaves / Loudspeaker style -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M12,2L9,5v2H8v2h8V7h-1V5L12,2zM10,9h4v12h-4V9zM7,20h10v2H7v-2zM5,11v3c0,0.55 0.45,1 1,1h1v-5H6C5.45,10 5,10.45 5,11zM18,10v5h1c0.55,0 1,-0.45 1,-1v-3c0,-0.55 -0.45,-1 -1,-1h-1z"/>
+</vector>

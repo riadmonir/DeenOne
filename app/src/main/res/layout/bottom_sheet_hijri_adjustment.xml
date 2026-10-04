@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:background="@drawable/bg_bottom_sheet_surface"
+  android:orientation="vertical"
+  android:padding="20dp">
+
+  <!-- Header Row -->
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp">
+
+    <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentStart="true"
+      android:orientation="vertical">
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="হিজরী তারিখ সমন্বয়"
+        android:textColor="@color/text_primary"
+        android:textSize="17.5sp"
+        android:textStyle="bold" />
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="চাঁদ দেখা অনুযায়ী স্থানীয় কর্তৃপক্ষের তারিখ মেলান"
+        android:textColor="@color/text_secondary"
+        android:textSize="11.5sp" />
+    </LinearLayout>
+
+    <ImageButton android:id="@+id/btnCloseHijriAdjustSheet"
+      android:layout_width="32dp"
+      android:layout_height="32dp"
+      android:layout_alignParentEnd="true"
+      android:background="@drawable/bg_badge_pill"
+      android:contentDescription="বন্ধ করুন"
+      android:src="@drawable/ic_close"
+      app:tint="@color/accent_mint" />
+  </RelativeLayout>
+
+  <!-- Scholarly & Authority Notice -->
+  <com.google.android.material.card.MaterialCardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    app:cardBackgroundColor="@color/bg_card"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="0dp"
+    app:strokeColor="@color/border_card"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:padding="12dp">
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ℹ প্রদর্শন ও হিসাব সমন্বয়ের নিয়ম:"
+        android:textColor="@color/accent_mint"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+      <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="এই অপশনটি শুধুমাত্র আপনার স্থানীয় ইসলামিক চাঁদ দেখা কর্তৃপক্ষের (যেমন: ইসলামিক ফাউন্ডেশন বাংলাদেশ) ঘোষিত তারিখের সাথে প্রদর্শন মেলানোর জন্য। এটি কোনো ঐতিহাসিক রেকর্ড পরিবর্তন করে না।"
+        android:textColor="@color/text_secondary"
+        android:textSize="11sp" />
+    </LinearLayout>
+  </com.google.android.material.card.MaterialCardView>
+
+  <!-- Live Preview Card -->
+  <com.google.android.material.card.MaterialCardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    app:cardBackgroundColor="@color/bg_card"
+    app:cardCornerRadius="14dp"
+    app:strokeColor="@color/border_card"
+    app:strokeWidth="1.2dp">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:orientation="vertical"
+      android:padding="14dp">
+
+      <TextView
+        android:id="@+id/tvHijriAdjustmentPreviewLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="প্রদর্শিত হবে এমন তারিখ:"
+        android:textColor="@color/text_secondary"
+        android:textSize="11.5sp" />
+
+      <TextView
+        android:id="@+id/tvHijriPreviewDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="১ রবিউল আউয়াল ১৪৪৮ হিজরী ↗"
+        android:textColor="@color/accent_mint"
+        android:textSize="16.5sp"
+        android:textStyle="bold" />
+    </LinearLayout>
+  </com.google.android.material.card.MaterialCardView>
+
+  <!-- Adjustment Options (Radio / Pills) -->
+  <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:text="সমন্বয়ের পরিমাণ নির্বাচন করুন:"
+    android:textColor="@color/text_primary"
+    android:textSize="13sp"
+    android:textStyle="bold" />
+
+  <RadioGroup
+    android:id="@+id/radioGroupHijriAdjustment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RadioButton
+      android:id="@+id/rbHijriMinus2"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingVertical="6dp"
+      android:text="-২ দিন (২ দিন পিছিয়ে)"
+      android:textColor="@color/text_primary"
+      android:textSize="13sp" />
+
+    <RadioButton
+      android:id="@+id/rbHijriMinus1"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingVertical="6dp"
+      android:text="-১ দিন (১ দিন পিছিয়ে / পূর্ববর্তী দিন)"
+      android:textColor="@color/text_primary"
+      android:textSize="13sp" />
+
+    <RadioButton
+      android:id="@+id/rbHijriZero"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:checked="true"
+      android:paddingVertical="6dp"
+      android:text="০ দিন (স্বাভাবিক জ্যোতির্বৈজ্ঞানিক হিসাব - ডিফল্ট)"
+      android:textColor="@color/text_primary"
+      android:textSize="13sp" />
+
+    <RadioButton
+      android:id="@+id/rbHijriPlus1"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingVertical="6dp"
+      android:text="+১ দিন (১ দিন এগিয়ে / পরবর্তী দিন)"
+      android:textColor="@color/text_primary"
+      android:textSize="13sp" />
+
+    <RadioButton
+      android:id="@+id/rbHijriPlus2"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingVertical="6dp"
+      android:text="+২ দিন (২ দিন এগিয়ে)"
+      android:textColor="@color/text_primary"
+      android:textSize="13sp" />
+  </RadioGroup>
+
+  <!-- Action Button -->
+  <com.google.android.material.button.MaterialButton
+    android:id="@+id/btnSaveHijriAdjustment"
+    style="@style/Widget.MaterialComponents.Button"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:layout_marginTop="16dp"
+    android:backgroundTint="@color/accent_mint"
+    android:text="সমন্বয় প্রয়োগ করুন"
+    android:textColor="@color/text_dark"
+    android:textSize="14sp"
+    android:textStyle="bold"
+    app:cornerRadius="12dp" />
+</LinearLayout>

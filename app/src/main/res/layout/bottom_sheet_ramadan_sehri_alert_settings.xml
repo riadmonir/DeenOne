@@ -1,0 +1,1070 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main"
+    android:orientation="vertical">
+
+    <!-- Top Header Bar -->
+    <LinearLayout
+        android:id="@+id/layoutSehriHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_top_bar"
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="10dp">
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/bg_badge_pill" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:id="@+id/btnBackSehriSheet"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bg_badge_pill"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_arrow_back"
+                    app:tint="@color/text_primary" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvSehriSheetTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="সেহরির সময় অ্যালার্ট"
+                    android:textColor="@color/text_primary"
+                    android:textSize="17.5sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvSehriSheetSubtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:text="সেহরি অ্যালার্ম, ঘড়ির সময় ও সুর নির্বাচন"
+                    android:textColor="@color/accent_gold"
+                    android:textSize="11.5sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="28dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Subtitle Description -->
+            <TextView
+                android:id="@+id/tvSehriSheetDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:lineSpacingExtra="3dp"
+                android:text="ফজরের পূর্বে সেহরি শেষ করার অ্যালার্ম, নির্ধারিত সময় এবং ব্যাকগ্রাউন্ড রিংটোন।"
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp" />
+
+            <!-- Master Trigger Switch Row -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                app:cardBackgroundColor="@color/bg_card"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/border_card"
+                app:strokeWidth="1.2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <FrameLayout
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:background="@drawable/bg_badge_pill"
+                        android:backgroundTint="@color/feat_bg_azkar">
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_clock"
+                            app:tint="@color/accent_gold" />
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvLabelSehriAlertMaster"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="সেহরি অ্যালার্ট সক্রিয় করুন"
+                            android:textColor="@color/text_primary"
+                            android:textSize="15.5sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvDescSehriAlertMaster"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="নির্ধারিত সময়ে সেহরির অ্যালার্ম ও সুর বাজবে"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switchSehriAlertMaster"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        app:useMaterialThemeColors="true" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Active Options (Visible only when switch is ON) -->
+            <LinearLayout
+                android:id="@+id/layoutSehriActiveOptions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <!-- 1. DYNAMIC DIGITAL CLOCK & TIME PICKER CARD -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardSehriTimePicker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardBackgroundColor="@color/bg_card"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="@color/accent_mint"
+                    app:strokeWidth="1.2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:layout_marginEnd="8dp"
+                                android:src="@drawable/ic_clock"
+                                app:tint="@color/accent_mint" />
+
+                            <TextView
+                                android:id="@+id/tvLabelSehriAlarmTime"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="সেহরি অ্যালার্মের সময়"
+                                android:textColor="@color/text_primary"
+                                android:textSize="14.5sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/badgeSehriTimeMode"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bg_badge_pill"
+                                android:backgroundTint="@color/bg_card_active"
+                                android:paddingHorizontal="10dp"
+                                android:paddingVertical="4dp"
+                                android:text="১ ঘণ্টা পূর্বে"
+                                android:textColor="@color/accent_mint"
+                                android:textSize="11sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <!-- Large Glowing Digital Time Display -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="14dp"
+                            android:background="@drawable/bg_card_surface"
+                            android:backgroundTint="@color/bg_badge_pill"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingHorizontal="16dp"
+                            android:paddingVertical="16dp">
+
+                            <TextView
+                                android:id="@+id/tvSehriAlarmTimeDisplay"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-medium"
+                                android:letterSpacing="0.05"
+                                android:text="০৩:৩০ AM"
+                                android:textColor="@color/accent_mint"
+                                android:textSize="32sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvSehriAlarmContext"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:gravity="center"
+                                android:text="আজকের সেহরি শেষ: ০৪:৩০ AM • ১ ঘণ্টা পূর্বে বাজবে"
+                                android:textColor="@color/accent_gold"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <!-- Quick Presets / Actions (Balanced Equal Height) -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/btnPreset1HourBefore"
+                                android:layout_width="0dp"
+                                android:layout_height="42dp"
+                                android:layout_weight="1"
+                                android:layout_marginEnd="6dp"
+                                android:background="@drawable/bg_btn_mint_pill"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:ellipsize="end"
+                                android:paddingHorizontal="8dp"
+                                android:text="১ ঘণ্টা পূর্বে"
+                                android:textColor="@color/btn_save_text"
+                                android:textSize="12.5sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/btnOpenTimeClockPicker"
+                                android:layout_width="0dp"
+                                android:layout_height="42dp"
+                                android:layout_weight="1"
+                                android:layout_marginStart="6dp"
+                                android:background="@drawable/bg_badge_pill"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:ellipsize="end"
+                                android:paddingHorizontal="8dp"
+                                android:text="ঘড়ি থেকে সেট করুন"
+                                android:textColor="@color/text_primary"
+                                android:textSize="12.5sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- 2. SEHRI RINGTONE SELECTION CARD -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardBackgroundColor="@color/bg_card"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="@color/border_card"
+                    app:strokeWidth="1.2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:id="@+id/tvTitleSehriRingtone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="সেহরি রিংটোন"
+                            android:textColor="@color/text_primary"
+                            android:textSize="14.5sp"
+                            android:textStyle="bold" />
+
+
+
+                        <!-- 1. Default: read_allah_hu_allah_default.mp3 -->
+                        <LinearLayout
+                            android:id="@+id/rowSoundDefault"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="?attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingVertical="8dp">
+
+                            <FrameLayout
+                                android:id="@+id/btnPlaySoundDefault"
+                                android:layout_width="38dp"
+                                android:layout_height="38dp"
+                                android:background="@drawable/bg_circle_icon"
+                                android:backgroundTint="@color/bg_badge_pill"
+                                android:clickable="true"
+                                android:focusable="true">
+
+                                <ImageView
+                                    android:id="@+id/ivPlayIconDefault"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_play_arrow"
+                                    app:tint="@color/accent_mint" />
+                            </FrameLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="14dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tvSoundDefaultLabel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="আল্লাহু আল্লাহ"
+                                    android:textColor="@color/text_primary"
+                                    android:textSize="14.5sp"
+                                    android:textStyle="bold" />
+
+
+                            </LinearLayout>
+
+                            <ImageView
+                                android:id="@+id/ivSelectSoundDefault"
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:src="@drawable/ic_check_circle"
+                                app:tint="@color/accent_mint" />
+                        </LinearLayout>
+
+
+
+
+
+                        <!-- 2. read_islamic_ringtone.mp3 -->
+                        <LinearLayout
+                            android:id="@+id/rowSoundIslamicRingtone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="?attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingVertical="8dp">
+
+                            <FrameLayout
+                                android:id="@+id/btnPlaySoundIslamicRingtone"
+                                android:layout_width="38dp"
+                                android:layout_height="38dp"
+                                android:background="@drawable/bg_circle_icon"
+                                android:backgroundTint="@color/bg_badge_pill"
+                                android:clickable="true"
+                                android:focusable="true">
+
+                                <ImageView
+                                    android:id="@+id/ivPlayIconIslamicRingtone"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_play_arrow"
+                                    app:tint="@color/accent_mint" />
+                            </FrameLayout>
+
+                            <TextView
+                                android:id="@+id/tvSoundIslamicRingtoneLabel"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="14dp"
+                                android:layout_weight="1"
+                                android:text="ইসলামিক রিংটোন"
+                                android:textColor="@color/text_primary"
+                                android:textSize="14.5sp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/ivSelectSoundIslamicRingtone"
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:src="@drawable/circle_progress_bg"
+                                app:tint="@color/text_secondary" />
+                        </LinearLayout>
+
+                        <!-- 3. read_alhamdulillah_khabib.mp3 -->
+                        <LinearLayout
+                            android:id="@+id/rowSoundAlhamdulillah"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:background="?attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingVertical="8dp">
+
+                            <FrameLayout
+                                android:id="@+id/btnPlaySoundAlhamdulillah"
+                                android:layout_width="38dp"
+                                android:layout_height="38dp"
+                                android:background="@drawable/bg_circle_icon"
+                                android:backgroundTint="@color/bg_badge_pill"
+                                android:clickable="true"
+                                android:focusable="true">
+
+                                <ImageView
+                                    android:id="@+id/ivPlayIconAlhamdulillah"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_play_arrow"
+                                    app:tint="@color/accent_mint" />
+                            </FrameLayout>
+
+                            <TextView
+                                android:id="@+id/tvSoundAlhamdulillahLabel"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="14dp"
+                                android:layout_weight="1"
+                                android:text="আলহামদুলিল্লাহ - খাবিব"
+                                android:textColor="@color/text_primary"
+                                android:textSize="14.5sp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/ivSelectSoundAlhamdulillah"
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:src="@drawable/circle_progress_bg"
+                                app:tint="@color/text_secondary" />
+                        </LinearLayout>
+
+                        <!-- 4. read_allah_ho_allah_beautiful.mp3 -->
+                        <LinearLayout
+                            android:id="@+id/rowSoundAllahHuBeautiful"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:background="?attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingVertical="8dp">
+
+                            <FrameLayout
+                                android:id="@+id/btnPlaySoundAllahHuBeautiful"
+                                android:layout_width="38dp"
+                                android:layout_height="38dp"
+                                android:background="@drawable/bg_circle_icon"
+                                android:backgroundTint="@color/bg_badge_pill"
+                                android:clickable="true"
+                                android:focusable="true">
+
+                                <ImageView
+                                    android:id="@+id/ivPlayIconAllahHuBeautiful"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_play_arrow"
+                                    app:tint="@color/accent_mint" />
+                            </FrameLayout>
+
+                            <TextView
+                                android:id="@+id/tvSoundAllahHuBeautifulLabel"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="14dp"
+                                android:layout_weight="1"
+                                android:text="আল্লাহু আল্লাহ - সুমধুর সুর"
+                                android:textColor="@color/text_primary"
+                                android:textSize="14.5sp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/ivSelectSoundAllahHuBeautiful"
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:src="@drawable/circle_progress_bg"
+                                app:tint="@color/text_secondary" />
+                        </LinearLayout>
+
+                        <!-- 5. read_awesome_ramadan.mp3 -->
+                        <LinearLayout
+                            android:id="@+id/rowSoundAwesomeRamadan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:background="?attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingVertical="8dp">
+
+                            <FrameLayout
+                                android:id="@+id/btnPlaySoundAwesomeRamadan"
+                                android:layout_width="38dp"
+                                android:layout_height="38dp"
+                                android:background="@drawable/bg_circle_icon"
+                                android:backgroundTint="@color/bg_badge_pill"
+                                android:clickable="true"
+                                android:focusable="true">
+
+                                <ImageView
+                                    android:id="@+id/ivPlayIconAwesomeRamadan"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_play_arrow"
+                                    app:tint="@color/accent_mint" />
+                            </FrameLayout>
+
+                            <TextView
+                                android:id="@+id/tvSoundAwesomeRamadanLabel"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="14dp"
+                                android:layout_weight="1"
+                                android:text="অসাধারণ রমাদান সুর"
+                                android:textColor="@color/text_primary"
+                                android:textSize="14.5sp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/ivSelectSoundAwesomeRamadan"
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:src="@drawable/circle_progress_bg"
+                                app:tint="@color/text_secondary" />
+                        </LinearLayout>
+
+                        <!-- 6. read_fs_ramadan.mp3 -->
+                        <LinearLayout
+                            android:id="@+id/rowSoundFsRamadan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:background="?attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingVertical="8dp">
+
+                            <FrameLayout
+                                android:id="@+id/btnPlaySoundFsRamadan"
+                                android:layout_width="38dp"
+                                android:layout_height="38dp"
+                                android:background="@drawable/bg_circle_icon"
+                                android:backgroundTint="@color/bg_badge_pill"
+                                android:clickable="true"
+                                android:focusable="true">
+
+                                <ImageView
+                                    android:id="@+id/ivPlayIconFsRamadan"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_play_arrow"
+                                    app:tint="@color/accent_mint" />
+                            </FrameLayout>
+
+                            <TextView
+                                android:id="@+id/tvSoundFsRamadanLabel"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="14dp"
+                                android:layout_weight="1"
+                                android:text="রমাদান কারীম স্পেশাল"
+                                android:textColor="@color/text_primary"
+                                android:textSize="14.5sp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/ivSelectSoundFsRamadan"
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:src="@drawable/circle_progress_bg"
+                                app:tint="@color/text_secondary" />
+                        </LinearLayout>
+
+                        <!-- 7. read_islamic_spiritual.mp3 -->
+                        <LinearLayout
+                            android:id="@+id/rowSoundIslamicSpiritual"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:background="?attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingVertical="8dp">
+
+                            <FrameLayout
+                                android:id="@+id/btnPlaySoundIslamicSpiritual"
+                                android:layout_width="38dp"
+                                android:layout_height="38dp"
+                                android:background="@drawable/bg_circle_icon"
+                                android:backgroundTint="@color/bg_badge_pill"
+                                android:clickable="true"
+                                android:focusable="true">
+
+                                <ImageView
+                                    android:id="@+id/ivPlayIconIslamicSpiritual"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_play_arrow"
+                                    app:tint="@color/accent_mint" />
+                            </FrameLayout>
+
+                            <TextView
+                                android:id="@+id/tvSoundIslamicSpiritualLabel"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="14dp"
+                                android:layout_weight="1"
+                                android:text="ইসলামিক স্পিরিচুয়াল সুর"
+                                android:textColor="@color/text_primary"
+                                android:textSize="14.5sp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/ivSelectSoundIslamicSpiritual"
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:src="@drawable/circle_progress_bg"
+                                app:tint="@color/text_secondary" />
+                        </LinearLayout>
+
+                        <!-- 8. read_muhammad_saw.mp3 -->
+                        <LinearLayout
+                            android:id="@+id/rowSoundMuhammadSaw"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:background="?attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingVertical="8dp">
+
+                            <FrameLayout
+                                android:id="@+id/btnPlaySoundMuhammadSaw"
+                                android:layout_width="38dp"
+                                android:layout_height="38dp"
+                                android:background="@drawable/bg_circle_icon"
+                                android:backgroundTint="@color/bg_badge_pill"
+                                android:clickable="true"
+                                android:focusable="true">
+
+                                <ImageView
+                                    android:id="@+id/ivPlayIconMuhammadSaw"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_play_arrow"
+                                    app:tint="@color/accent_mint" />
+                            </FrameLayout>
+
+                            <TextView
+                                android:id="@+id/tvSoundMuhammadSawLabel"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="14dp"
+                                android:layout_weight="1"
+                                android:text="মুহাম্মাদুর রাসূলুল্লাহ (ﷺ)"
+                                android:textColor="@color/text_primary"
+                                android:textSize="14.5sp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/ivSelectSoundMuhammadSaw"
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:src="@drawable/circle_progress_bg"
+                                app:tint="@color/text_secondary" />
+                        </LinearLayout>
+
+                        <!-- 9. read_salam_e_ajizana.mp3 -->
+                        <LinearLayout
+                            android:id="@+id/rowSoundSalamEajizana"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:background="?attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingVertical="8dp">
+
+                            <FrameLayout
+                                android:id="@+id/btnPlaySoundSalamEajizana"
+                                android:layout_width="38dp"
+                                android:layout_height="38dp"
+                                android:background="@drawable/bg_circle_icon"
+                                android:backgroundTint="@color/bg_badge_pill"
+                                android:clickable="true"
+                                android:focusable="true">
+
+                                <ImageView
+                                    android:id="@+id/ivPlayIconSalamEajizana"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_play_arrow"
+                                    app:tint="@color/accent_mint" />
+                            </FrameLayout>
+
+                            <TextView
+                                android:id="@+id/tvSoundSalamEajizanaLabel"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="14dp"
+                                android:layout_weight="1"
+                                android:text="সালামে আজিজানা"
+                                android:textColor="@color/text_primary"
+                                android:textSize="14.5sp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/ivSelectSoundSalamEajizana"
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:src="@drawable/circle_progress_bg"
+                                app:tint="@color/text_secondary" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- 3. ALARM REPEAT COUNT CARD -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardBackgroundColor="@color/bg_card"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="@color/border_card"
+                    app:strokeWidth="1.2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tvTitleSehriRepeatCount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="অ্যালার্ম রিপিট সংখ্যা"
+                                    android:textColor="@color/text_primary"
+                                    android:textSize="14.5sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/tvDescSehriRepeatCount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2dp"
+                                    android:text="সেহরি অ্যালার্ম বাজার পর সুর কতবার প্লে হবে"
+                                    android:textColor="@color/text_secondary"
+                                    android:textSize="11.5sp" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/badgeSehriRepeatCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bg_badge_pill"
+                                android:backgroundTint="@color/bg_card_active"
+                                android:paddingHorizontal="10dp"
+                                android:paddingVertical="4dp"
+                                android:text="৩ বার - ডিফল্ট"
+                                android:textColor="@color/accent_mint"
+                                android:textSize="11.5sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <!-- Repeat Count Selector Pills (1 to 5) -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="14dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/btnRepeat1"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_marginEnd="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/bg_badge_pill"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:text="১ বার"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/btnRepeat2"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_marginHorizontal="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/bg_badge_pill"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:text="২ বার"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/btnRepeat3"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_marginHorizontal="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/bg_btn_mint_pill"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:text="৩ বার"
+                                android:textColor="@color/btn_save_text"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/btnRepeat4"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_marginHorizontal="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/bg_badge_pill"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:text="৪ বার"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/btnRepeat5"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="3dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/bg_badge_pill"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:text="৫ বার"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- 4. VIBRATION ROW -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardBackgroundColor="@color/bg_card"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="@color/border_card"
+                    app:strokeWidth="1.2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="16dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvLabelSehriVibration"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="অ্যালার্ম ভাইব্রেশন"
+                                android:textColor="@color/text_primary"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvDescSehriVibration"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:text="অ্যালার্ম রিংটোন বাজার সময় ভাইব্রেশন হবে"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/switchSehriVibration"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            app:useMaterialThemeColors="true" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- 4. Test Notification Button -->
+                <LinearLayout
+                    android:id="@+id/btnTestSehriAlert"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_badge_pill"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="16dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/ic_audio_play"
+                        app:tint="@color/accent_gold" />
+
+                    <TextView
+                        android:id="@+id/tvTestSehriAlertLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="সেহরি অ্যালার্ম ও সুর টেস্ট করুন"
+                        android:textColor="@color/accent_gold"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Bottom Sticky Action Bar: Cancel & Save Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_card"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="16dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnCancelSehriSheet"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_btn_cancel_pill"
+            android:text="বাতিল"
+            android:textAllCaps="false"
+            android:textColor="@color/text_primary"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSaveSehriSheet"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_btn_save_pill"
+            android:text="সেভ করুন"
+            android:textAllCaps="false"
+            android:textColor="@color/btn_save_text"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

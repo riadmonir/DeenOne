@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_marginBottom="12dp"
+  app:cardBackgroundColor="@color/bg_card"
+  app:cardCornerRadius="16dp"
+  app:cardElevation="0dp"
+  app:strokeColor="@color/border_card"
+  app:strokeWidth="1dp">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Top Header: Category Badge + Title + Action Icons -->
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center_vertical"
+      android:orientation="horizontal">
+
+      <!-- Category Pill -->
+      <LinearLayout
+        android:id="@+id/layoutDuaCategory"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/bg_badge_pill"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="4dp">
+
+        <TextView
+          android:id="@+id/tvDuaCategoryPill"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Morning Dua"
+          android:textColor="@color/accent_mint"
+          android:textSize="11sp"
+          android:textStyle="bold" />
+      </LinearLayout>
+
+      <!-- Action Buttons: Copy, Share, Favorite -->
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+          android:id="@+id/btnCopyDua"
+          android:layout_width="36dp"
+          android:layout_height="36dp"
+          android:layout_marginEnd="6dp"
+          android:background="@drawable/bg_circular_counter"
+          android:backgroundTint="@color/bg_badge_pill"
+          android:clickable="true"
+          android:focusable="true"
+          android:padding="8dp"
+          android:src="@drawable/ic_copy"
+          app:tint="@color/text_secondary" />
+
+        <ImageView
+          android:id="@+id/btnShareDua"
+          android:layout_width="36dp"
+          android:layout_height="36dp"
+          android:layout_marginEnd="6dp"
+          android:background="@drawable/bg_circular_counter"
+          android:backgroundTint="@color/bg_badge_pill"
+          android:clickable="true"
+          android:focusable="true"
+          android:padding="8dp"
+          android:src="@drawable/ic_share"
+          app:tint="@color/accent_mint" />
+
+        <ImageView
+          android:id="@+id/btnFavDua"
+          android:layout_width="36dp"
+          android:layout_height="36dp"
+          android:background="@drawable/bg_circular_counter"
+          android:backgroundTint="@color/bg_badge_pill"
+          android:clickable="true"
+          android:focusable="true"
+          android:padding="8dp"
+          android:src="@drawable/ic_favorite_outline"
+          app:tint="@color/text_secondary" />
+      </LinearLayout>
+    </LinearLayout>
+
+    <!-- Dua Title -->
+    <TextView
+      android:id="@+id/tvDuaTitle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:text="সকালের আশ্রয় ও তাওহীদের দোয়া"
+      android:textColor="@color/text_primary"
+      android:textSize="14.5sp"
+      android:textStyle="bold" />
+
+    <!-- When & Why To Read Chips -->
+    <LinearLayout
+      android:id="@+id/layoutWhenWhy"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="6dp"
+      android:orientation="vertical">
+
+      <TextView
+        android:id="@+id/tvWhenToRead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="কখন পড়বেন: ফজরের পর থেকে সূর্যোদয়ের পূর্ব পর্যন্ত"
+        android:textColor="@color/accent_mint"
+        android:textSize="11.5sp" />
+
+      <TextView
+        android:id="@+id/tvWhyToRead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="ফজিলত: সারাদিনের যাবতীয় অনিষ্ট থেকে নিরাপত্তা ও রহমত"
+        android:textColor="@color/text_secondary"
+        android:textSize="11.5sp" />
+    </LinearLayout>
+
+    <!-- Arabic Text -->
+    <TextView
+      android:id="@+id/tvDuaArabic"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="12dp"
+      android:background="@drawable/bg_card_secondary"
+      android:gravity="end|center_vertical"
+      android:textDirection="rtl"
+      android:lineSpacingExtra="8dp"
+      android:padding="12dp"
+      android:text="أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ..."
+      android:textColor="@color/accent_mint"
+      android:textSize="18sp"
+      android:textStyle="bold" />
+
+    <!-- Transliteration -->
+    <TextView
+      android:id="@+id/tvDuaTransliteration"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:lineSpacingExtra="4dp"
+      android:text="উচ্চারণ: আসবাহনা ওয়া আসবাহাল মুলকু লিল্লাহ..."
+      android:textColor="@color/text_primary"
+      android:textSize="13sp" />
+
+    <!-- Meaning (Bangla / English / Urdu) -->
+    <TextView
+      android:id="@+id/tvDuaMeaning"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:lineSpacingExtra="4dp"
+      android:text="অর্থ: আমরা সকালে উপনীত হলাম এবং সমস্ত রাজত্ব আল্লাহরই রইল..."
+      android:textColor="@color/text_primary"
+      android:textSize="13.5sp" />
+
+    <View
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:layout_marginTop="10dp"
+      android:layout_marginBottom="8dp"
+      android:background="@color/border_card" />
+
+    <!-- Bottom Footer: Reference & Mark as Read -->
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center_vertical"
+      android:orientation="horizontal">
+
+      <TextView
+        android:id="@+id/tvDuaReference"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginEnd="8dp"
+        android:lineSpacingExtra="1dp"
+        android:text="সূত্র: সহীহ মুসলিম: ২৭২৩, সুনান আবু দাউদ: ৫০৬৮"
+        android:textColor="@color/text_secondary"
+        android:textSize="11sp" />
+
+      <LinearLayout
+        android:id="@+id/btnMarkDuaRead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_card_active"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="5dp">
+
+        <TextView
+          android:id="@+id/tvMarkDuaReadLabel"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="পড়া হয়েছে"
+          android:textColor="@color/accent_mint"
+          android:textSize="11sp"
+          android:textStyle="bold" />
+      </LinearLayout>
+    </LinearLayout>
+
+  </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

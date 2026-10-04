@@ -1,0 +1,26 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="28dp"
+    android:height="28dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Knowledge Battle (ইসলামিক জ্ঞান প্রতিযোগিতা ও নলেজ ব্যাটেল) -->
+    <!-- Knowledge Shield Outline -->
+    <path
+        android:fillColor="#C084FC"
+        android:pathData="M12,2L4,5V11C4,16.5 7.4,21.7 12,23C16.6,21.7 20,16.5 20,11V5L12,2M12,4.2L18,6.4V11C18,15.4 15.4,19.6 12,20.8C8.6,19.6 6,15.4 6,11V6.4L12,4.2Z" />
+
+    <!-- Crescent Moon inside Shield -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M11.5,7C9.6,7 8,8.6 8,10.5C8,12.4 9.6,14 11.5,14C12.4,14 13.2,13.6 13.8,13C12,12.8 10.6,11.3 10.6,9.4C10.6,8.4 11,7.5 11.8,6.8C11.7,6.9 11.6,7 11.5,7Z" />
+
+    <!-- Knowledge Star -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M14.5,8L15,8.8L15.9,8.9L15.2,9.6L15.4,10.5L14.5,10L13.6,10.5L13.8,9.6L13.1,8.9L14,8.8Z" />
+
+    <!-- Crossed Qalam / Pens at bottom of shield -->
+    <path
+        android:fillColor="#C084FC"
+        android:pathData="M9,15L15,17V18L9,16V15M15,15L9,17V18L15,16V15Z" />
+</vector>

@@ -1,0 +1,51 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="44dp"
+    android:height="44dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+
+    <!-- Circle Clip Background -->
+    <path
+        android:pathData="M50,50m-48,0a48,48 0,1 1,96 0a48,48 0,1 1,-96 0">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:angle="90"
+                android:endColor="#0F172A"
+                android:startColor="#1E293B"
+                android:type="linear" />
+        </aapt:attr>
+    </path>
+
+    <!-- Crescent Moon -->
+    <path
+        android:fillColor="#FEF08A"
+        android:pathData="M65,30 A12,12 0 1,1 55,42 A9,9 0 0,0 65,30 Z" />
+
+    <!-- Stars -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.9"
+        android:pathData="M30,30 L31,32 L33,32 L31.5,33.5 L32,35.5 L30,34 L28,35.5 L28.5,33.5 L27,32 L29,32 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.7"
+        android:pathData="M45,20 L45.5,21.5 L47,21.5 L46,22.5 L46.5,24 L45,23 L43.5,24 L44,22.5 L43,21.5 L44.5,21.5 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.8"
+        android:pathData="M78,22 L78.5,23.5 L80,23.5 L79,24.5 L79.5,26 L78,25 L76.5,26 L77,24.5 L76,23.5 L77.5,23.5 Z" />
+
+    <!-- Night City / Mosque Horizon Silhouette -->
+    <path
+        android:fillColor="#020617"
+        android:pathData="M0,80 L15,70 L20,80 L35,65 L45,80 L55,60 L65,80 L80,68 L88,78 L100,66 L100,100 L0,100 Z" />
+
+    <!-- Central Dome & Minaret Silhouette -->
+    <path
+        android:fillColor="#090D16"
+        android:pathData="M40,78 Q50,60 60,78 L60,100 L40,100 Z" />
+    <path
+        android:fillColor="#090D16"
+        android:pathData="M49,52 L51,52 L51,60 L49,60 Z" />
+</vector>

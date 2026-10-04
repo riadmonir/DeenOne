@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/bg_main"
+  android:orientation="vertical">
+
+  <!-- Top Action Bar -->
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_top_bar"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="14dp"
+    android:paddingBottom="12dp">
+
+    <ImageButton android:id="@+id/btnCloseAyahSheet"
+      android:layout_width="38dp"
+      android:layout_height="38dp"
+      android:background="@drawable/bg_badge_pill"
+      android:contentDescription="ফিরে যান"
+      android:src="@drawable/ic_arrow_back"
+      app:tint="@color/accent_mint" />
+
+    <LinearLayout
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="12dp"
+      android:layout_weight="1"
+      android:orientation="vertical">
+
+      <TextView
+        android:id="@+id/tvAyahSheetTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="আজকের নির্বাচিত আয়াত"
+        android:layout_gravity="center"
+        android:textColor="@color/text_primary"
+        android:textSize="17.5sp"
+        android:textStyle="bold" />
+
+      <TextView
+        android:id="@+id/tvDailyAyahDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+          android:layout_gravity="center"
+        android:text="প্রতিদিনের জন্য সহীহ কুরআন আয়াত ও তাফসীর"
+        android:textColor="@color/text_secondary"
+        android:textSize="11.5sp" />
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+    <ImageButton
+      android:id="@+id/btnAyahBookmarkTop"
+      android:layout_width="38dp"
+      android:layout_height="38dp"
+      android:background="@drawable/bg_badge_pill"
+      android:backgroundTint="@color/bg_badge_pill"
+      android:contentDescription="বুকমার্ক"
+      android:src="@drawable/ic_bookmark"
+      app:tint="@color/accent_mint" />
+  </LinearLayout>
+
+  <androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="14dp"
+    android:paddingBottom="40dp">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <!-- 1. Surah Name & Ayah Number Header Badge -->
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginBottom="12dp">
+
+        <TextView
+          android:id="@+id/tvAyahSurahBadge"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="@drawable/bg_card_active"
+          android:paddingHorizontal="12dp"
+          android:paddingVertical="5dp"
+          android:text="সূরা আল-ইনশিরাহ"
+          android:textColor="@color/accent_mint"
+          android:textSize="13sp"
+          android:textStyle="bold" />
+
+        <TextView
+          android:id="@+id/tvAyahNumberBadge"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="8dp"
+          android:background="@drawable/bg_badge_pill"
+          android:paddingHorizontal="10dp"
+          android:paddingVertical="5dp"
+          android:text="আয়াত: ৫-৬"
+          android:textColor="@color/text_secondary"
+          android:textSize="12sp"
+          android:textStyle="bold" />
+      </LinearLayout>
+
+      <!-- 2. Arabic Calligraphy Card -->
+      <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1.2dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="20dp">
+
+          <TextView
+            android:id="@+id/tvAyahArabicText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:lineSpacingExtra="8dp"
+            android:text="فَإِنَّ مَعَ الْعُسْرِ يُسْرًا ۝ إِنَّ مَعَ الْعُسْرِ يُسْرًا"
+            android:textColor="@color/text_primary"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- 3. Bengali Translation Card -->
+      <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1.2dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="18dp">
+
+          <TextView
+            android:id="@+id/tvAyahTranslationLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="অনুবাদ"
+            android:textColor="@color/accent_mint"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+          <TextView
+            android:id="@+id/tvAyahBengaliText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:lineSpacingExtra="4dp"
+            android:text="“নিশ্চয়ই কষ্টের সাথেই স্বস্তি রয়েছে।”"
+            android:textColor="@color/text_secondary"
+            android:textSize="15sp" />
+
+          <TextView
+            android:id="@+id/tvAyahReferenceText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="— সূরা আল-ইনশিরাহ: ৫-৬"
+            android:textColor="@color/accent_mint"
+            android:textSize="12.5sp"
+            android:textStyle="bold" />
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- 4. Tafsir Section Card -->
+      <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        app:cardBackgroundColor="@color/bg_card_secondary"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="16dp">
+
+          <TextView
+            android:id="@+id/tvAyahTafsirLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="প্রাসঙ্গিক তাফসীর সংক্ষেপ"
+            android:textColor="@color/accent_mint"
+            android:textSize="13.5sp"
+            android:textStyle="bold" />
+
+          <TextView
+            android:id="@+id/tvAyahTafsirText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:lineSpacingExtra="4dp"
+            android:text="মুমিনের জীবনে যে কোনো পার্থিব ও আত্মিক সংকটের পরপরই মহান আল্লাহ দ্বিগুণ স্বস্তি ও সমাধানের দ্বার উন্মোচন করেন। (তাফসীরে ইবনে কাসীর)"
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp" />
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- 5. Action Buttons (Favorite, Copy, Share, Read Surah) -->
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+          android:id="@+id/btnAyahFavorite"
+          style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+          android:layout_width="0dp"
+          android:layout_height="44dp"
+          android:layout_marginEnd="5dp"
+          android:layout_weight="1"
+          android:text="প্রিয়"
+          android:textColor="@color/accent_mint"
+          android:textSize="12sp"
+          app:cornerRadius="10dp"
+          app:strokeColor="@color/accent_mint" />
+
+        <com.google.android.material.button.MaterialButton
+          android:id="@+id/btnAyahCopy"
+          style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+          android:layout_width="0dp"
+          android:layout_height="44dp"
+          android:layout_marginHorizontal="3dp"
+          android:layout_weight="1"
+          android:text="কপি"
+          android:textColor="@color/accent_mint"
+          android:textSize="12sp"
+          app:cornerRadius="10dp"
+          app:strokeColor="@color/accent_mint" />
+
+        <com.google.android.material.button.MaterialButton
+          android:id="@+id/btnAyahShare"
+          style="@style/Widget.MaterialComponents.Button"
+          android:layout_width="0dp"
+          android:layout_height="44dp"
+          android:layout_marginStart="5dp"
+          android:layout_weight="1"
+          android:backgroundTint="@color/accent_mint"
+          android:text="শেয়ার"
+          android:textColor="@color/text_dark"
+          android:textSize="12sp"
+          android:textStyle="bold"
+          app:cornerRadius="10dp" />
+      </LinearLayout>
+
+      <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnOpenFullSurah"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="সম্পূর্ণ সূরাটি তিলাওয়াত করুন →"
+        android:textColor="@color/accent_mint"
+        android:textSize="13sp" />
+
+    </LinearLayout>
+  </androidx.core.widget.NestedScrollView>
+</LinearLayout>

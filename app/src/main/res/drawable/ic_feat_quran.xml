@@ -1,0 +1,24 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="28dp"
+    android:height="28dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Holy Quran on Rehal (রেহালে পবিত্র কুরআনুল কারীম) -->
+    <!-- Open Holy Quran Book Pages -->
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M12,4.5C10.5,3.4 8.2,3 6,3C3.8,3 2,3.5 1,4.5V16C2,15 3.8,14.5 6,14.5C8.2,14.5 10.5,15 12,16C13.5,15 15.8,14.5 18,14.5C20.2,14.5 22,15 23,16V4.5C22,3.5 20.2,3 18,3C15.8,3 13.5,3.4 12,4.5Z" />
+
+    <!-- Quran Center Spine & Golden Bookmark Ribbon -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M11.3,4V15.5L12,16.5L12.7,15.5V4H11.3Z" />
+
+    <!-- Wooden Rehal / X-Stand Legs -->
+    <path
+        android:fillColor="#047857"
+        android:pathData="M4.5,15.5L11,21L8.5,21L3,16.5L4.5,15.5M19.5,15.5L13,21L15.5,21L21,16.5L19.5,15.5Z" />
+    <path
+        android:fillColor="#065F46"
+        android:pathData="M9.5,16.5L3.5,21.5L5.5,21.5L11,17.2L9.5,16.5M14.5,16.5L20.5,21.5L18.5,21.5L13,17.2L14.5,16.5Z" />
+</vector>

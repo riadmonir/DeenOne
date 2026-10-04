@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardBattleCategoryRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardBackgroundColor="@color/bg_card"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="0dp"
+    app:strokeColor="@color/border_card"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingHorizontal="12dp"
+        android:paddingTop="22dp"
+        android:paddingBottom="18dp">
+
+        <!-- Top Circular Golden Badge with Cap/Study Icon -->
+        <FrameLayout
+            android:layout_width="62dp"
+            android:layout_height="62dp"
+            android:background="@drawable/bg_battle_category_circle_gold">
+
+            <ImageView
+                android:id="@+id/ivCategoryIconGrid"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_mortarboard"
+                app:tint="#0D2E24" />
+        </FrameLayout>
+
+        <!-- Category Title (e.g. সীরাতুন্নবী ﷺ, সাহাবিদের জীবন, জান্নাত) -->
+        <TextView
+            android:id="@+id/tvCategoryTitleGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:minLines="2"
+            android:text="সীরাতুন্নবী ﷺ"
+            android:textColor="@color/text_primary"
+            android:textSize="15.5sp"
+            android:textStyle="bold" />
+
+        <!-- Question Count Pill (e.g. ১০০ টি প্রশ্ন) -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_badge_pill"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingHorizontal="14dp"
+            android:paddingVertical="5dp">
+
+            <TextView
+                android:id="@+id/tvCategoryQuestionCountGrid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="১০০ টি প্রশ্ন"
+                android:textColor="@color/accent_mint"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

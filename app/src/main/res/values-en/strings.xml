@@ -1,0 +1,177 @@
+<resources>
+  <!-- App & General -->
+  <string name="app_name">DeenOne</string>
+  <string name="app_tagline">Your Daily Islamic Companion</string>
+  <string name="version_info">Version 2.1.0</string>
+  <string name="loading">Loading...</string>
+  <string name="syncing_deenone">SYNCING DEENONE</string>
+  <string name="error_occurred">An error occurred</string>
+  <string name="retry">Retry</string>
+  <string name="copied_to_clipboard">Copied to clipboard</string>
+
+  <!-- Header & Dates -->
+  <string name="hijri_date_default">4 Rabi al-Awwal 1448 AH ↗</string>
+  <string name="gregorian_date_default">Tuesday, 18 August 2026</string>
+  <string name="location_default">Madinah Munawwarah</string>
+
+  <!-- Location Picker Dialog -->
+  <string name="dialog_title_location">Select Location</string>
+  <string name="dialog_desc_location">Ensure accurate prayer schedules for your current location</string>
+  <string name="loc_gps_current">Current GPS Location</string>
+  <string name="loc_gps_auto">Auto-detect Location</string>
+  <string name="loc_popular_cities">Popular Cities</string>
+  <string name="loc_makkah">Makkah al-Mukarramah, Saudi Arabia</string>
+  <string name="loc_madinah">Madinah Munawwarah</string>
+  <string name="loc_dhaka">Dhaka, Bangladesh</string>
+  <string name="loc_active_badge">Active</string>
+
+  <!-- Current Waqt Section -->
+  <string name="title_current_waqt">Current Waqt</string>
+  <string name="waqt_chasht">Duha • 06:19 am - 12:22 pm</string>
+  <string name="waqt_remaining_sample">Time Remaining: 32 min 59 sec</string>
+
+  <!-- Next Prayer Countdown -->
+  <string name="title_next_prayer">Next Prayer</string>
+  <string name="prayer_zohr">Dhuhr</string>
+  <string name="prayer_zohr_time">12:37 pm</string>
+  <string name="label_zohr_remaining">Dhuhr in</string>
+  <string name="sample_countdown_zohr">00:47:59</string>
+
+  <!-- Fasting / Sehri & Iftar -->
+  <string name="label_sehri_end">Suhoor Ends 4:33 am</string>
+  <string name="label_iftar">Iftar 7:12 pm</string>
+  <string name="label_iftar_remaining">Iftar in</string>
+  <string name="sample_countdown_iftar">07 : 22 : 57</string>
+
+  <!-- Prayer Schedule Strip -->
+  <string name="title_prayer_schedule">Prayer Times</string>
+  <string name="waqt_fajr">Fajr</string>
+  <string name="waqt_fajr_time">4:38 AM</string>
+  <string name="waqt_zohr">Dhuhr</string>
+  <string name="waqt_asr">Asr</string>
+  <string name="waqt_asr_time">4:11 PM</string>
+  <string name="waqt_maghrib">Maghrib</string>
+  <string name="waqt_maghrib_time">7:12 PM</string>
+  <string name="waqt_isha">Isha</string>
+  <string name="waqt_isha_time">8:40 PM</string>
+
+  <!-- 24 Features -->
+  <string name="feat_tasbih">Tasbih Counter</string>
+  <string name="feat_azkar">Daily Azkar</string>
+  <string name="feat_qibla">Qibla Compass</string>
+  <string name="feat_marriage">Muslim Marriage</string>
+  <string name="feat_marriage_desc">Islamic Nikah, Mahr, Shariah &amp; Marriage Guide</string>
+  <string name="feat_faraid">Inheritance Calculator</string>
+  <string name="feat_sleep">Quran Sleep Mode</string>
+  <string name="feat_blood">Blood Donation</string>
+  <string name="feat_audio">Islamic Audio Hub</string>
+  <string name="feat_book">Islamic Books</string>
+  <string name="feat_hadith">Hadith Sharif</string>
+  <string name="feat_dua">Dua Collection</string>
+  <string name="feat_amal">Amal Tracker</string>
+  <string name="feat_quiz">Quiz Hub</string>
+  <string name="feat_mosque">Mosque Finder</string>
+  <string name="feat_safar">Safar Mode</string>
+  <string name="feat_jumma">Jummah Mode</string>
+  <string name="feat_eid">Eid Mode</string>
+  <string name="feat_janaza">Janazah Guide</string>
+  <string name="feat_roza">Fasting Tracker</string>
+  <string name="feat_khatam">Khatam Planner</string>
+  <string name="feat_ayah">Daily Ayah</string>
+  <string name="feat_hajj">Hajj &amp; Umrah</string>
+  <string name="feat_zakat">Zakat Calculator</string>
+  <string name="feat_kalema">6 Kalimas</string>
+  <string name="feat_99names">99 Names of Allah</string>
+  <string name="feat_calendar">Islamic Calendar</string>
+
+  <!-- Last Read Quran -->
+  <string name="title_quran_last_read">Quran Recitation • Last Read</string>
+  <string name="last_surah_name">Surah Al-Baqarah • Ayah 128</string>
+  <string name="last_surah_info">Juz 1 • 286 Ayat</string>
+  <string name="btn_read">Read →</string>
+
+  <!-- Daily Islamic Goals & Streak -->
+  <string name="title_daily_goals">Daily Islamic Goals &amp; Progress</string>
+  <string name="badge_streak">3 Days Streak</string>
+  <string name="label_goals_achieved">Today\'s Completed Goals: 3 / 3</string>
+  <string name="label_goals_percentage">100%</string>
+  <string name="btn_open_goal_tracker">Open Goal Tracker ></string>
+
+  <!-- Today's Selected Dua -->
+  <string name="title_selected_dua">Today\'s Selected Dua</string>
+  <string name="label_dua_read">Read</string>
+  <string name="dua_title_sample">Dua for Good in This World &amp; Hereafter</string>
+  <string name="dua_arabic_sample">رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ</string>
+  <string name="dua_meaning_sample">Our Lord, give us in this world that which is good and in the Hereafter that which is good and protect us from the punishment of the Fire...</string>
+  <string name="dua_reference_sample">Reference: Surah Al-Baqarah: 201 (Sahih Bukhari: 4522)</string>
+  <string name="link_all_duas">All Duas →</string>
+
+  <!-- Amal Tracker Metric Labels -->
+  <string name="label_prayer_count">Prayers</string>
+  <string name="label_points">Points</string>
+
+  <!-- Daily Ayah & Hadith -->
+  <string name="title_daily_ayah_hadith">Daily Ayah &amp; Sahih Hadith</string>
+  <string name="header_al_quran">Al-Quran</string>
+  <string name="ayah_text_sample">"Allah does not burden a soul beyond that it can bear. It will have [the consequence of] what [good] it has gained, and it will bear [the consequence of] what [evil] it has earned. Our Lord, do not impose blame upon us if we have forgotten or erred. Our Lord, and lay not upon us a burden like that which You laid upon those before us. Our Lord, and burden us not with that which we have no ability to bear. And pardon us; and forgive us; and have mercy upon us. You are our protector, so give us victory over the disbelieving people."</string>
+  <string name="ayah_ref_sample">— Surah Al-Baqarah: 286</string>
+
+  <string name="header_sahih_hadith">Sahih Hadith</string>
+  <string name="hadith_text_sample">“Islam is built upon five pillars: 1. Testifying that there is no god but Allah and Muhammad (ﷺ) is His servant and messenger, 2. Establishing prayer, 3. Paying Zakat, 4. Performing Hajj, and 5. Fasting during Ramadan.”</string>
+  <string name="hadith_ref_sample">— Sahih Bukhari: 8, Sahih Muslim: 16</string>
+
+  <!-- Challenge and Guides -->
+  <string name="btn_full_profile">Full Profile</string>
+  <string name="title_quiz_challenge">Daily Islamic Quiz Challenge</string>
+  <string name="desc_quiz_challenge">Test your knowledge in Quran, Hadith, and Fiqh &amp; earn points!</string>
+  <string name="title_nearby_mosque">Nearby Mosque</string>
+  <string name="desc_nearby_mosque">Loading nearby mosques...</string>
+  <string name="title_hajj_guide">Complete Hajj &amp; Umrah A-Z Guide</string>
+  <string name="desc_hajj_guide">Rules of Ihram, Miqat, Tawaf, Sai, Arafah, and Rami Jamarat.</string>
+  <string name="badge_special_gift">Special Gift</string>
+  <string name="title_redeem_points">Redeem Points for Gifts</string>
+  <string name="desc_redeem_points">Use your earned points to win exciting rewards!</string>
+
+  <!-- Halal Food & Nutrition -->
+  <string name="title_halal_food_guide">Halal Food &amp; Nutrition Guide</string>
+  <string name="desc_halal_food_guide">Sunnah Foods &amp; E-Code Verification Guide</string>
+  <string name="link_see_all">See All →</string>
+  <string name="badge_barakah_food">Barakah Food of the Day</string>
+  <string name="title_barakah_food">Pomegranate Fruit</string>
+  <string name="desc_barakah_food">Delicious Fruit of Jannah</string>
+  <string name="pill_ecode_checker">E120, E471 Code Checker</string>
+  <string name="pill_halal_zabiha">Halal Zabiha Guidelines</string>
+
+  <!-- Action Banners -->
+  <string name="title_muhasabah">Self-Accountability</string>
+  <string name="desc_muhasabah">Evaluate your deeds and spiritual state today</string>
+  <string name="title_fajr_call">Fajr Wake-up Call</string>
+  <string name="desc_fajr_call">Remind and call loved ones for Fajr prayer</string>
+  <string name="title_audio_hub">Islamic Audio Hub</string>
+  <string name="desc_audio_hub">Quran recitation, Hadith readings, Khutbahs &amp; Scholar talks</string>
+  <string name="title_quran_sleep">Quran Sleep Mode</string>
+  <string name="desc_quran_sleep">Listen to peaceful Quran recitations for restful sleep</string>
+
+  <!-- Sidebar Menu -->
+  <string name="menu_profile">Profile &amp; Achievements</string>
+  <string name="menu_settings">Prayer Waqt Settings</string>
+  <string name="menu_share">Share App</string>
+
+  <!-- Quran Sources & Attribution -->
+  <string name="quran_sources_title">Sources &amp; Attribution</string>
+  <string name="quran_sources_verbatim">Sources &amp; Attribution: Arabic Quran Text – Tanzil Project (tanzil.net), CC BY 3.0, Unmodified Copy · Bangla Translation – quran-api Collection · Native Bengali Transliteration – DeenOne App · Audio Recitation – everyayah.com &amp; quran.com (Reciter: Mishary Rashid Al-Afasy)</string>
+  <string name="quran_sources_sub">Arabic Quran Text – Tanzil Project (tanzil.net), CC BY 3.0, Unmodified Copy · Bangla Translation – quran-api Collection · Native Bengali Transliteration – DeenOne App · Audio Recitation – everyayah.com &amp; quran.com (Reciter: Mishary Rashid Al-Afasy)</string>
+
+  <!-- Bottom Navigation -->
+  <string name="nav_home">Home</string>
+  <string name="nav_salat">Salat</string>
+  <string name="nav_amal">Amal</string>
+  <string name="nav_rank">Rank</string>
+  <string name="nav_community">Community</string>
+
+  <!-- Quiz Hub Hero Banner -->
+  <string name="quiz_hero_tag">Iman Boost &amp; Assessment</string>
+  <string name="quiz_hero_title">Gain Knowledge by Playing Quiz</string>
+  <string name="quiz_hero_subtitle">Participate in Islamic quiz competitions, test your intellect, and earn reward points.</string>
+  <string name="quiz_hero_btn_rank">Quiz Rank List</string>
+</resources>

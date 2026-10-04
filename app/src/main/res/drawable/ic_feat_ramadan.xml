@@ -1,0 +1,27 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="28dp"
+    android:height="28dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Ramadan Mode (পবিত্র মাহে রমজান - হেলাল ও ফানুস) -->
+    <!-- Ramadan Crescent Moon -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M11,2C6.5,2 2.8,5.7 2.8,10.2C2.8,14.7 6.5,18.4 11,18.4C13.2,18.4 15.3,17.5 16.8,16C12.3,15.6 8.8,11.8 8.8,7.3C8.8,4.7 10,2.5 11.8,1.2C11.5,1.2 11.2,1.2 11,1.2V2Z" />
+
+    <!-- Ramadan Star -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M12,6.5L12.6,7.8L14,8L13,9L13.2,10.4L12,9.7L10.8,10.4L11,9L10,8L11.4,7.8Z" />
+
+    <!-- Hanging Fanous Lantern -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M18.5,1V6H19.5V1H18.5M19,6A1,1 0 0,0 18,7H20A1,1 0 0,0 19,6Z" />
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M17,8L16,13L18,16H20L22,13L21,8H17Z" />
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M17.5,16L19,20L20.5,16H17.5Z" />
+</vector>

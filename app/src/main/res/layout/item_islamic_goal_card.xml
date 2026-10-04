@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_marginBottom="12dp"
+  app:cardBackgroundColor="@color/bg_card"
+  app:cardCornerRadius="16dp"
+  app:cardElevation="0dp"
+  app:strokeColor="@color/border_card"
+  app:strokeWidth="1.2dp">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Top Row: Category Badge, Streak & More Menu -->
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="8dp"
+      android:gravity="center_vertical"
+      android:orientation="horizontal">
+
+      <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+          android:id="@+id/tvGoalCategoryBadge"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="@drawable/bg_card_active"
+          android:paddingHorizontal="10dp"
+          android:paddingVertical="4dp"
+          android:text="কুরআন তিলাওয়াত"
+          android:textColor="@color/accent_mint"
+          android:textSize="11.5sp"
+          android:textStyle="bold" />
+
+        <TextView
+          android:id="@+id/tvGoalStreakBadge"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="8dp"
+          android:background="@drawable/bg_badge_pill"
+          android:paddingHorizontal="8dp"
+          android:paddingVertical="4dp"
+          android:text="৩ দিন স্ট্রিক"
+          android:textColor="#F59E0B"
+          android:textSize="11sp"
+          android:textStyle="bold" />
+      </LinearLayout>
+
+      <ImageButton
+        android:id="@+id/btnGoalOptions"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="অপশন"
+        android:src="@drawable/ic_more_vert"
+        app:tint="@color/text_secondary" />
+    </LinearLayout>
+
+    <!-- Goal Title -->
+    <TextView
+      android:id="@+id/tvGoalTitle"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="দৈনিক ২০ মিনিট কুরআন তিলাওয়াত"
+      android:textColor="@color/text_primary"
+      android:textSize="15.5sp"
+      android:textStyle="bold" />
+
+    <!-- Target & Progress Status Text -->
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp">
+
+      <TextView
+        android:id="@+id/tvGoalProgressText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:text="১৫ / ২০ মিনিট সম্পন্ন"
+        android:textColor="@color/accent_mint"
+        android:textSize="12.5sp"
+        android:textStyle="bold" />
+
+      <TextView
+        android:id="@+id/tvGoalPercentText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:text="৭৫%"
+        android:textColor="@color/text_secondary"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+    </RelativeLayout>
+
+    <!-- Progress Bar -->
+    <ProgressBar
+      android:id="@+id/progressBarGoal"
+      style="?android:attr/progressBarStyleHorizontal"
+      android:layout_width="match_parent"
+      android:layout_height="7dp"
+      android:layout_marginTop="8dp"
+      android:layout_marginBottom="12dp"
+      android:max="100"
+      android:progress="75"
+      android:progressDrawable="@drawable/progress_bar_custom" />
+
+    <!-- Action Row: Quick Add Button & Reminder Indicator -->
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center_vertical"
+      android:orientation="horizontal">
+
+      <TextView
+        android:id="@+id/tvGoalReminderTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="রিমাইন্ডার: ০৬:০০ AM"
+        android:textColor="@color/text_secondary"
+        android:textSize="11.5sp" />
+
+      <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnGoalQuickAdd"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:backgroundTint="@color/accent_mint"
+        android:paddingHorizontal="14dp"
+        android:text="+ অগ্রগতি যোগ"
+        android:textColor="@color/text_dark"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:cornerRadius="8dp" />
+    </LinearLayout>
+  </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

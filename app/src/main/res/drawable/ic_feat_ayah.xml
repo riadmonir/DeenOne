@@ -1,0 +1,21 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="28dp"
+    android:height="28dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Today's Ayah Medallion (আজকের আয়াত - ইসলামিক আয়াত বৃত্ত ও নকশা) -->
+    <!-- 8-Pointed Islamic Star Medallion (রুব এল হিজব / আয়াত মার্কার) -->
+    <path
+        android:fillColor="#2DD4BF"
+        android:pathData="M12,2L14.8,4.8L18.8,4.2L19.2,8.2L22,11L19.2,13.8L18.8,17.8L14.8,17.2L12,20L9.2,17.2L5.2,17.8L4.8,13.8L2,11L4.8,8.2L5.2,4.2L9.2,4.8Z" />
+
+    <!-- Inner Circle -->
+    <path
+        android:fillColor="#103834"
+        android:pathData="M12,5.5A5.5,5.5 0 1,1 6.5,11A5.5,5.5 0 0,1 12,5.5Z" />
+
+    <!-- Ayah Arabic Calligraphy Stylized Letter -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M12,7.5C10.5,7.5 9.5,8.5 9.5,9.8C9.5,11.5 11.2,12.2 12.5,12.8C13.5,13.2 14.2,13.8 14.2,14.5C14.2,15.2 13.5,15.8 12.3,15.8C11,15.8 10.2,15.2 9.8,14.5H8.2C8.8,16 10.2,17 12.3,17C14.5,17 15.8,15.8 15.8,14.2C15.8,12.2 14,11.5 12.8,11C11.8,10.6 11.2,10.2 11.2,9.5C11.2,8.9 11.8,8.5 12.5,8.5C13.5,8.5 14.2,9 14.5,9.8H16C15.5,8.5 14.2,7.5 12,7.5Z" />
+</vector>

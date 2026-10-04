@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="6dp"
+    android:paddingVertical="4dp">
+
+    <ImageView
+        android:id="@+id/ivPdfPage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:background="#FFFFFF"
+        android:contentDescription="PDF Page"
+        android:scaleType="fitCenter" />
+
+    <ProgressBar
+        android:id="@+id/progressPageLoading"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="center"
+        android:indeterminateTint="@color/accent_mint"
+        android:visibility="gone" />
+
+</FrameLayout>

@@ -1,0 +1,70 @@
+# ==============================================================================
+# DEEN ONE - ENTERPRISE GRADE HARDENED SERVER SECURITY RULES (.htaccess)
+# ==============================================================================
+
+# 1. Disable Directory Browsing
+Options -Indexes
+
+# 2. Block direct web access to sensitive file extensions
+<FilesMatch "\.(sql|zip|tar|gz|bak|config|env|log|md|sh|git|svn)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# 3. Explicitly deny direct browser access to config and secret files
+<Files "config.php">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# 4. UTF-8 Character Set
+AddDefaultCharset UTF-8
+
+# 5. Advanced Web Application Firewall (WAF) Filters via mod_rewrite
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Block Common SQL Injection Patterns in Query Strings
+    RewriteCond %{QUERY_STRING} (?:concat|union|select|insert|update|delete|drop|benchmark|waitfor\s+delay) [NC,OR]
+    RewriteCond %{QUERY_STRING} (?:--|#|/\*|;|\%27|\%22|\%3D|\%3B) [NC,OR]
+    
+    # Block XSS and Remote Code Injections
+    RewriteCond %{QUERY_STRING} (<|%3C)([^s]*s)+cript.*(>|%3E) [NC,OR]
+    RewriteCond %{QUERY_STRING} (javascript:|document\.cookie|base64_encode|GLOBALS|_REQUEST) [NC,OR]
+    RewriteCond %{QUERY_STRING} (\.\./|\.\.\\) [NC]
+    RewriteRule ^.*$ - [F,L]
+
+    # Block Known Malicious Scanners & User-Agents
+    RewriteCond %{HTTP_USER_AGENT} (sqlmap|nikto|wpscan|dirbuster|acunetix|havij|nessus) [NC]
+    RewriteRule ^.*$ - [F,L]
+</IfModule>
+
+# 6. HTTP Enterprise Security Headers
+<IfModule mod_headers.c>
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule>
+
+# 7. Image Caching & Cloudflare CDN Optimization
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+</IfModule>
+
+<IfModule mod_headers.c>
+    <FilesMatch "\.(jpg|jpeg|png|webp|gif|svg)$">
+        Header set Cache-Control "public, max-age=31536000, must-revalidate"
+        Header set Access-Control-Allow-Origin "*"
+    </FilesMatch>
+</IfModule>
+
+# 8. Dynamic ETag for In-Place Image Updates (Revalidation without URL change)
+FileETag MTime Size

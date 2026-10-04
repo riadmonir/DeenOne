@@ -1,0 +1,1178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/bg_main"
+  android:orientation="vertical">
+
+  <!-- Top Action Bar -->
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_top_bar"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="14dp"
+    android:paddingBottom="12dp">
+
+    <ImageButton android:id="@+id/btnCloseTravelMode"
+      android:layout_width="38dp"
+      android:layout_height="38dp"
+      android:background="@drawable/bg_badge_pill"
+      android:contentDescription="ফিরে যান"
+      android:src="@drawable/ic_arrow_back"
+      app:tint="@color/accent_mint" />
+
+    <LinearLayout
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="12dp"
+      android:layout_weight="1"
+      android:orientation="vertical">
+
+      <TextView
+        android:id="@+id/tvTravelHeaderTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ইসলামিক সফর মোড"
+        android:textColor="@color/text_primary"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+      <TextView
+        android:id="@+id/tvTravelHeaderSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="কসর, জমা, মাসনূন দোয়া ও গন্তব্যের নামাজের সময়সূচী"
+        android:textColor="@color/text_secondary"
+        android:textSize="11.5sp" />
+    </LinearLayout>
+
+    <ImageView
+      android:id="@+id/btnTravelQiblaQuick"
+      android:layout_width="38dp"
+      android:layout_height="38dp"
+      android:background="@drawable/bg_badge_pill"
+      android:clickable="true"
+      android:focusable="true"
+      android:padding="8dp"
+      android:src="@drawable/ic_feat_qibla"
+      android:contentDescription="কিবলা"
+      app:tint="@color/accent_mint" />
+  </LinearLayout>
+
+  <androidx.core.widget.NestedScrollView
+    android:id="@+id/scrollTravelMode"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="14dp"
+    android:paddingBottom="48dp">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <!-- 1. LIVE ROUTE & DYNAMIC SAFAR CALCULATOR CARD -->
+      <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1.2dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="16dp">
+
+          <!-- Section Header -->
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:layout_marginEnd="8dp"
+              android:gravity="center_vertical"
+              android:orientation="horizontal">
+
+              <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/ic_route"
+                app:tint="@color/accent_mint" />
+
+              <TextView
+                android:id="@+id/tvRouteHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="যাত্রাপথ ও লাইভ শরয়ী হিসাব"
+                android:textColor="@color/accent_mint"
+                android:textSize="13.5sp"
+                android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+              android:id="@+id/badgeTravelStatus"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@drawable/bg_badge_pill_active"
+              android:paddingHorizontal="10dp"
+              android:paddingVertical="4dp"
+              android:text="মুসাফির (কসর সক্রিয়)"
+              android:textColor="@color/accent_mint"
+              android:textSize="11.5sp"
+              android:textStyle="bold" />
+          </LinearLayout>
+
+          <!-- Origin & Destination Inputs Box -->
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/bg_card_secondary"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <!-- Origin Row -->
+            <LinearLayout
+              android:id="@+id/rowOriginLocation"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:clickable="true"
+              android:focusable="true"
+              android:gravity="center_vertical"
+              android:orientation="horizontal">
+
+              <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_gps_fixed"
+                app:tint="@color/accent_mint" />
+
+              <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                  android:id="@+id/tvOriginLabel"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="যাত্রার শুরুর স্থান (উৎস):"
+                  android:textColor="@color/text_secondary"
+                  android:textSize="10.5sp" />
+
+                <TextView
+                  android:id="@+id/tvOriginLocationName"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="1dp"
+                  android:text="ঢাকা (বর্তমান জিপিএস)"
+                  android:textColor="@color/text_primary"
+                  android:textSize="14sp"
+                  android:textStyle="bold" />
+              </LinearLayout>
+
+              <TextView
+                android:id="@+id/btnChangeOrigin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_badge_pill"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="3dp"
+                android:text="পরিবর্তন"
+                android:textColor="@color/text_secondary"
+                android:textSize="11sp" />
+            </LinearLayout>
+
+            <!-- Swap and Connecting Line -->
+            <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="28dp"
+              android:layout_marginVertical="2dp">
+
+              <View
+                android:layout_width="1.5dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="9dp"
+                android:background="#2034D399" />
+
+              <ImageView
+                android:id="@+id/btnSwapLocations"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bg_badge_pill"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="6dp"
+                android:src="@drawable/ic_swap_vert"
+                app:tint="@color/accent_mint" />
+            </RelativeLayout>
+
+            <!-- Destination Row -->
+            <LinearLayout
+              android:id="@+id/rowDestLocation"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:clickable="true"
+              android:focusable="true"
+              android:gravity="center_vertical"
+              android:orientation="horizontal">
+
+              <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_location_pin"
+                app:tint="#F59E0B" />
+
+              <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                  android:id="@+id/tvDestLabel"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="ভ্রমণ গন্তব্য (ম্যাপ থেকে):"
+                  android:textColor="@color/text_secondary"
+                  android:textSize="10.5sp" />
+
+                <TextView
+                  android:id="@+id/tvDestLocationName"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="1dp"
+                  android:text="চট্টগ্রাম (বাছাই করুন)"
+                  android:textColor="@color/text_primary"
+                  android:textSize="14sp"
+                  android:textStyle="bold" />
+              </LinearLayout>
+
+              <TextView
+                android:id="@+id/btnChangeDestination"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_badge_pill_active"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="4dp"
+                android:text="অনুসন্ধান ও ম্যাপ"
+                android:textColor="@color/accent_mint"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+            </LinearLayout>
+          </LinearLayout>
+
+          <!-- Distance & Explanation Banner -->
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+              android:id="@+id/tvTravelDistance"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:text="মোট ভ্রমণ দূরত্ব: ২৪৫.৫ কিমি"
+              android:textColor="@color/accent_mint"
+              android:textSize="13sp"
+              android:textStyle="bold" />
+
+            <TextView
+              android:id="@+id/tvSharaiMiles"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="(১৫২.৫ শরয়ী মাইল)"
+              android:textColor="@color/text_secondary"
+              android:textSize="11.5sp" />
+          </LinearLayout>
+
+          <TextView
+            android:id="@+id/tvTravelStatusExplanation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:lineSpacingExtra="3dp"
+            android:text="আপনার ভ্রমণ দূরত্ব সফরের শরয়ী সীমা (৭৭.২৫ কিমি) অতিক্রম করেছে। সুতরাং ৪ রাকাতের ফরজ নামাজে কসর (২ রাকাত) ওয়াজিব।"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp" />
+
+          <!-- Vehicle / Mode Selector Strip -->
+          <TextView
+            android:id="@+id/tvTransportModeSectionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="যাতায়াতের মাধ্যম ও আনুমানিক সময়:"
+            android:textColor="@color/text_primary"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal">
+
+            <!-- Car/Bus -->
+            <LinearLayout
+              android:id="@+id/modeBtnCar"
+              android:layout_width="0dp"
+              android:layout_height="36dp"
+              android:layout_marginEnd="4dp"
+              android:layout_weight="1"
+              android:background="@drawable/bg_badge_pill_active"
+              android:gravity="center"
+              android:orientation="horizontal">
+
+              <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_directions_car"
+                app:tint="@color/accent_mint" />
+
+              <TextView
+                android:id="@+id/tvModeCar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="বাস/কার"
+                android:textColor="@color/accent_mint"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Train -->
+            <LinearLayout
+              android:id="@+id/modeBtnTrain"
+              android:layout_width="0dp"
+              android:layout_height="36dp"
+              android:layout_marginEnd="4dp"
+              android:layout_weight="1"
+              android:background="@drawable/bg_badge_pill"
+              android:gravity="center"
+              android:orientation="horizontal">
+
+              <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_directions_transit"
+                app:tint="@color/text_secondary" />
+
+              <TextView
+                android:id="@+id/tvModeTrain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="ট্রেন"
+                android:textColor="@color/text_secondary"
+                android:textSize="11sp" />
+            </LinearLayout>
+
+            <!-- Flight -->
+            <LinearLayout
+              android:id="@+id/modeBtnFlight"
+              android:layout_width="0dp"
+              android:layout_height="36dp"
+              android:layout_marginEnd="4dp"
+              android:layout_weight="1"
+              android:background="@drawable/bg_badge_pill"
+              android:gravity="center"
+              android:orientation="horizontal">
+
+              <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_flight"
+                app:tint="@color/text_secondary" />
+
+              <TextView
+                android:id="@+id/tvModeFlight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="বিমান"
+                android:textColor="@color/text_secondary"
+                android:textSize="11sp" />
+            </LinearLayout>
+
+            <!-- Walk -->
+            <LinearLayout
+              android:id="@+id/modeBtnWalk"
+              android:layout_width="0dp"
+              android:layout_height="36dp"
+              android:layout_weight="1"
+              android:background="@drawable/bg_badge_pill"
+              android:gravity="center"
+              android:orientation="horizontal">
+
+              <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_directions_walk"
+                app:tint="@color/text_secondary" />
+
+              <TextView
+                android:id="@+id/tvModeWalk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="হেঁটে"
+                android:textColor="@color/text_secondary"
+                android:textSize="11sp" />
+            </LinearLayout>
+          </LinearLayout>
+
+          <TextView
+            android:id="@+id/tvEstimatedDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="আনুমানিক সময়: ৪ ঘণ্টা ৫ মিনিট"
+            android:textColor="@color/accent_mint"
+            android:textSize="11.5sp" />
+
+          <!-- Stay Duration Stepper -->
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/bg_card_secondary"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <LinearLayout
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:orientation="vertical">
+
+              <TextView
+                android:id="@+id/tvStayNiyyahTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="গন্তব্যে অবস্থানের নিয়ত:"
+                android:textColor="@color/text_primary"
+                android:textSize="12.5sp"
+                android:textStyle="bold" />
+
+              <TextView
+                android:id="@+id/tvStayNiyyahSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="১৫ দিনের কম হলে মুসাফির থাকবেন"
+                android:textColor="@color/text_secondary"
+                android:textSize="10.5sp" />
+            </LinearLayout>
+
+            <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:gravity="center_vertical"
+              android:orientation="horizontal">
+
+              <ImageButton
+                android:id="@+id/btnDecreaseStay"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/bg_badge_pill"
+                android:src="@drawable/ic_chevron_down"
+                app:tint="@color/accent_mint" />
+
+              <TextView
+                android:id="@+id/tvStayDaysValue"
+                android:layout_width="56dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="৩ দিন"
+                android:textColor="@color/text_primary"
+                android:textSize="13.5sp"
+                android:textStyle="bold" />
+
+              <ImageButton
+                android:id="@+id/btnIncreaseStay"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/bg_badge_pill"
+                android:src="@drawable/ic_chevron_right"
+                app:tint="@color/accent_mint" />
+            </LinearLayout>
+          </LinearLayout>
+
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- 2. DESTINATION PRAYER SCHEDULE & QIBLA CARD -->
+      <TextView
+        android:id="@+id/tvDestPrayerSectionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="8dp"
+        android:text="গন্তব্যস্থলের নামাজের সময়সূচী ও কিবলা দিক"
+        android:textColor="@color/text_primary"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+      <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1.2dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="14dp">
+
+          <!-- Destination Waqt Grid (Horizontal scrollable with generous padding to prevent squishing) -->
+          <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:scrollbars="none">
+
+            <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:gravity="center_vertical"
+              android:orientation="horizontal">
+
+              <!-- Fajr -->
+              <LinearLayout
+                android:id="@+id/cardDestWaqtFajr"
+                android:layout_width="74dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/bg_badge_pill"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="6dp">
+
+                <TextView
+                  android:id="@+id/tvDestWaqtFajrTitle"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="ফজর"
+                  android:textColor="@color/text_secondary"
+                  android:textSize="12sp" />
+
+                <TextView
+                  android:id="@+id/tvDestWaqtFajr"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="4dp"
+                  android:includeFontPadding="false"
+                  android:maxLines="1"
+                  android:text="04:35 am"
+                  android:textColor="@color/text_primary"
+                  android:textSize="11.5sp"
+                  android:textStyle="bold" />
+              </LinearLayout>
+
+              <!-- Dhuhr -->
+              <LinearLayout
+                android:id="@+id/cardDestWaqtDhuhr"
+                android:layout_width="74dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/bg_badge_pill_active"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="6dp">
+
+                <TextView
+                  android:id="@+id/tvDestWaqtDhuhrTitle"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="যোহর"
+                  android:textColor="@color/accent_mint"
+                  android:textSize="12sp"
+                  android:textStyle="bold" />
+
+                <TextView
+                  android:id="@+id/tvDestWaqtDhuhr"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="4dp"
+                  android:includeFontPadding="false"
+                  android:maxLines="1"
+                  android:text="12:05 pm"
+                  android:textColor="@color/accent_mint"
+                  android:textSize="11.5sp"
+                  android:textStyle="bold" />
+              </LinearLayout>
+
+              <!-- Asr -->
+              <LinearLayout
+                android:id="@+id/cardDestWaqtAsr"
+                android:layout_width="74dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/bg_badge_pill_active"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="6dp">
+
+                <TextView
+                  android:id="@+id/tvDestWaqtAsrTitle"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="আসর"
+                  android:textColor="@color/accent_mint"
+                  android:textSize="12sp"
+                  android:textStyle="bold" />
+
+                <TextView
+                  android:id="@+id/tvDestWaqtAsr"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="4dp"
+                  android:includeFontPadding="false"
+                  android:maxLines="1"
+                  android:text="04:32 pm"
+                  android:textColor="@color/accent_mint"
+                  android:textSize="11.5sp"
+                  android:textStyle="bold" />
+              </LinearLayout>
+
+              <!-- Maghrib -->
+              <LinearLayout
+                android:id="@+id/cardDestWaqtMaghrib"
+                android:layout_width="74dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/bg_badge_pill"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="6dp">
+
+                <TextView
+                  android:id="@+id/tvDestWaqtMaghribTitle"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="মাগরিব"
+                  android:textColor="@color/text_secondary"
+                  android:textSize="12sp" />
+
+                <TextView
+                  android:id="@+id/tvDestWaqtMaghrib"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="4dp"
+                  android:includeFontPadding="false"
+                  android:maxLines="1"
+                  android:text="06:28 pm"
+                  android:textColor="@color/text_primary"
+                  android:textSize="11.5sp"
+                  android:textStyle="bold" />
+              </LinearLayout>
+
+              <!-- Isha -->
+              <LinearLayout
+                android:id="@+id/cardDestWaqtIsha"
+                android:layout_width="74dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_badge_pill_active"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="6dp">
+
+                <TextView
+                  android:id="@+id/tvDestWaqtIshaTitle"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="এশা"
+                  android:textColor="@color/accent_mint"
+                  android:textSize="12sp"
+                  android:textStyle="bold" />
+
+                <TextView
+                  android:id="@+id/tvDestWaqtIsha"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="4dp"
+                  android:includeFontPadding="false"
+                  android:maxLines="1"
+                  android:text="07:48 pm"
+                  android:textColor="@color/accent_mint"
+                  android:textSize="11.5sp"
+                  android:textStyle="bold" />
+              </LinearLayout>
+            </LinearLayout>
+          </HorizontalScrollView>
+
+          <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="10dp"
+            android:background="@color/border_card" />
+
+          <!-- Destination Qibla & Kaaba Distance -->
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:layout_marginEnd="10dp"
+              android:orientation="vertical">
+
+              <TextView
+                android:id="@+id/tvDestQiblaBearing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="গন্তব্যের কিবলা দিক: ২৬৭.৫° পশ্চিম"
+                android:textColor="@color/text_primary"
+                android:textSize="12.5sp"
+                android:textStyle="bold" />
+
+              <TextView
+                android:id="@+id/tvDestDistanceToMakkah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="পবিত্র কাবা হতে দূরত্ব: ৫,১০০ কিমি"
+                android:textColor="@color/text_secondary"
+                android:textSize="11sp" />
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+              android:id="@+id/btnLaunchQiblaFromTravel"
+              style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+              android:layout_width="wrap_content"
+              android:layout_height="36dp"
+              android:paddingHorizontal="10dp"
+              android:text="কিবলা কম্পাস"
+              android:textColor="@color/accent_mint"
+              android:textSize="11sp"
+              app:cornerRadius="10dp"
+              app:icon="@drawable/ic_feat_qibla"
+              app:iconSize="14dp"
+              app:iconTint="@color/accent_mint"
+              app:strokeColor="@color/accent_mint" />
+          </LinearLayout>
+
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- 3. QASR PRAYER QUICK TABLE -->
+      <TextView
+        android:id="@+id/tvQasrTableSectionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="8dp"
+        android:text="সফরে নামাজের রাকাত ও কসরের নিয়ম"
+        android:textColor="@color/text_primary"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+      <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1.2dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="14dp">
+
+          <!-- Prayer Rows Grid with generous spacing and distinct rounded cards -->
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Fajr -->
+            <LinearLayout
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:layout_marginHorizontal="2dp"
+              android:background="@drawable/bg_badge_pill"
+              android:gravity="center"
+              android:orientation="vertical"
+              android:paddingVertical="8dp">
+
+              <TextView
+                android:id="@+id/tvQasrFajrName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ফজর"
+                android:textColor="@color/text_secondary"
+                android:textSize="11.5sp" />
+
+              <TextView
+                android:id="@+id/tvQasrFajrRakats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="২ রাকাত"
+                android:textColor="@color/text_primary"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+              <TextView
+                android:id="@+id/tvQasrFajrStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="পূর্ণ"
+                android:textColor="@color/text_secondary"
+                android:textSize="10.5sp" />
+            </LinearLayout>
+
+            <!-- Dhuhr (Qasr) -->
+            <LinearLayout
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:layout_marginHorizontal="2dp"
+              android:background="@drawable/bg_badge_pill_active"
+              android:gravity="center"
+              android:orientation="vertical"
+              android:paddingVertical="8dp">
+
+              <TextView
+                android:id="@+id/tvQasrDhuhrName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="যোহর"
+                android:textColor="@color/accent_mint"
+                android:textSize="11.5sp" />
+
+              <TextView
+                android:id="@+id/tvQasrDhuhrRakats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="২ রাকাত"
+                android:textColor="@color/accent_mint"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+              <TextView
+                android:id="@+id/tvQasrDhuhrStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="কসর"
+                android:textColor="@color/accent_mint"
+                android:textSize="10.5sp"
+                android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Asr (Qasr) -->
+            <LinearLayout
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:layout_marginHorizontal="2dp"
+              android:background="@drawable/bg_badge_pill_active"
+              android:gravity="center"
+              android:orientation="vertical"
+              android:paddingVertical="8dp">
+
+              <TextView
+                android:id="@+id/tvQasrAsrName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="আসর"
+                android:textColor="@color/accent_mint"
+                android:textSize="11.5sp" />
+
+              <TextView
+                android:id="@+id/tvQasrAsrRakats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="২ রাকাত"
+                android:textColor="@color/accent_mint"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+              <TextView
+                android:id="@+id/tvQasrAsrStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="কসর"
+                android:textColor="@color/accent_mint"
+                android:textSize="10.5sp"
+                android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Maghrib -->
+            <LinearLayout
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:layout_marginHorizontal="2dp"
+              android:background="@drawable/bg_badge_pill"
+              android:gravity="center"
+              android:orientation="vertical"
+              android:paddingVertical="8dp">
+
+              <TextView
+                android:id="@+id/tvQasrMaghribName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="মাগরিব"
+                android:textColor="@color/text_secondary"
+                android:textSize="11.5sp" />
+
+              <TextView
+                android:id="@+id/tvQasrMaghribRakats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="৩ রাকাত"
+                android:textColor="@color/text_primary"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+              <TextView
+                android:id="@+id/tvQasrMaghribStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="পূর্ণ"
+                android:textColor="@color/text_secondary"
+                android:textSize="10.5sp" />
+            </LinearLayout>
+
+            <!-- Isha (Qasr) -->
+            <LinearLayout
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:layout_marginHorizontal="2dp"
+              android:background="@drawable/bg_badge_pill_active"
+              android:gravity="center"
+              android:orientation="vertical"
+              android:paddingVertical="8dp">
+
+              <TextView
+                android:id="@+id/tvQasrIshaName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="এশা"
+                android:textColor="@color/accent_mint"
+                android:textSize="11.5sp" />
+
+              <TextView
+                android:id="@+id/tvQasrIshaRakats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="২ রাকাত"
+                android:textColor="@color/accent_mint"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+              <TextView
+                android:id="@+id/tvQasrIshaStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="কসর"
+                android:textColor="@color/accent_mint"
+                android:textSize="10.5sp"
+                android:textStyle="bold" />
+            </LinearLayout>
+          </LinearLayout>
+
+          <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/border_card" />
+
+          <TextView
+            android:id="@+id/tvQasrFootnote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="2dp"
+            android:text="• বিতর নামাজ ৩ রাকাত অপরিবর্তিত থাকবে।\n• ভ্রমণের গতিশীল অবস্থায় সুন্নত নামাজ ছেড়ে দেওয়ার অবকাশ রয়েছে, তবে অবস্থানকালে সুন্নত পড়া মুস্তাহাব।"
+            android:textColor="@color/text_secondary"
+            android:textSize="11.5sp" />
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- 4. SPECIAL TRAVEL JURISPRUDENCE RULES -->
+      <TextView
+        android:id="@+id/tvJurisprudenceSectionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="8dp"
+        android:text="সফরকালীন বিশেষ শরয়ী বিধান"
+        android:textColor="@color/text_primary"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Roza / Fasting Rule -->
+        <com.google.android.material.card.MaterialCardView
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="4dp"
+          android:layout_weight="1"
+          app:cardBackgroundColor="@color/bg_card"
+          app:cardCornerRadius="14dp"
+          app:cardElevation="0dp"
+          app:strokeColor="@color/border_card"
+          app:strokeWidth="1.2dp">
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+              android:id="@+id/tvRuleRozaTitle"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="রমজানের রোজা"
+              android:textColor="@color/accent_mint"
+              android:textSize="12.5sp"
+              android:textStyle="bold" />
+
+            <TextView
+              android:id="@+id/tvRuleRozaDesc"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="4dp"
+              android:lineSpacingExtra="2dp"
+              android:text="সফররত অবস্থায় রোজা ভাঙা ও পরবর্তীতে কাজা আদায়ের অনুমতি রয়েছে। তবে কষ্ট না হলে রোজা রাখাই উত্তম।"
+              android:textColor="@color/text_secondary"
+              android:textSize="11sp" />
+          </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Masah on Socks Rule -->
+        <com.google.android.material.card.MaterialCardView
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="4dp"
+          android:layout_weight="1"
+          app:cardBackgroundColor="@color/bg_card"
+          app:cardCornerRadius="14dp"
+          app:cardElevation="0dp"
+          app:strokeColor="@color/border_card"
+          app:strokeWidth="1.2dp">
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+              android:id="@+id/tvRuleMasahTitle"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="মোজা মাসাহ"
+              android:textColor="@color/accent_mint"
+              android:textSize="12.5sp"
+              android:textStyle="bold" />
+
+            <TextView
+              android:id="@+id/tvRuleMasahDesc"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="4dp"
+              android:lineSpacingExtra="2dp"
+              android:text="মুসাফিরের জন্য চামড়া/বিশেষ মোজার ওপর মাসাহ করার মেয়াদ ৩ দিন ৩ রাত (৭২ ঘণ্টা)। মুক্বীমের জন্য ২৪ ঘণ্টা।"
+              android:textColor="@color/text_secondary"
+              android:textSize="11sp" />
+          </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+      </LinearLayout>
+
+      <!-- 5. 4-MADHHAB COMPARATIVE GUIDELINES -->
+      <TextView
+        android:id="@+id/tvMadhhabSectionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="8dp"
+        android:text="৪ মাযহাবের তুলনামূলক ফিকহী নীতিমালা"
+        android:textColor="@color/text_primary"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+      <LinearLayout
+        android:id="@+id/layoutMadhhabContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+      <!-- 6. MASNOON TRAVEL DUAS -->
+      <TextView
+        android:id="@+id/tvDuasSectionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="8dp"
+        android:text="সফরের মাসনূন দোয়া ভাণ্ডার"
+        android:textColor="@color/text_primary"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+      <LinearLayout
+        android:id="@+id/layoutTravelDuasContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+    </LinearLayout>
+  </androidx.core.widget.NestedScrollView>
+</LinearLayout>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutVerticalReaderRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main"
+    android:orientation="vertical">
+
+    <!-- Top Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/layoutReaderTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/bg_card"
+        android:elevation="2dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="10dp">
+
+        <ImageButton
+            android:id="@+id/btnBackVerticalReader"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/app_name"
+            android:padding="8dp"
+            android:src="@drawable/ic_arrow_back"
+            app:tint="@color/text_primary" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvReaderBookTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/text_primary"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                tools:text="নামাযের মাসায়েল" />
+
+            <TextView
+                android:id="@+id/tvReaderBookAuthor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp"
+                tools:text="মুহাম্মদ ইকবাল কিলানী" />
+        </LinearLayout>
+
+        <!-- Jump to Page Button -->
+        <ImageButton
+            android:id="@+id/btnJumpPage"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/app_name"
+            android:padding="9dp"
+            android:src="@drawable/ic_search"
+            app:tint="@color/text_primary" />
+
+        <!-- Night Mode Invert Button -->
+        <ImageButton
+            android:id="@+id/btnNightModeToggle"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/app_name"
+            android:padding="9dp"
+            android:src="@drawable/ic_settings"
+            app:tint="@color/text_primary" />
+
+        <!-- Share Book Button -->
+        <ImageButton
+            android:id="@+id/btnShareBook"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/app_name"
+            android:padding="9dp"
+            android:src="@drawable/ic_share"
+            app:tint="@color/text_primary" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:background="@color/border_card" />
+
+    <!-- Main Content Frame -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- Continuous Vertical Scrolling RecyclerView for PDF Pages -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvVerticalPdfPages"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingBottom="80dp"
+            android:scrollbars="vertical" />
+
+        <!-- Rich Text Fallback Reader (when PDF is loading or offline) -->
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollRichTextFallback"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="80dp">
+
+                <TextView
+                    android:id="@+id/tvFallbackChapterHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/accent_teal"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:text="ভূমিকা ও সূচিপত্র" />
+
+                <TextView
+                    android:id="@+id/tvFallbackChapterBody"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:lineSpacingExtra="5dp"
+                    android:textColor="@color/text_primary"
+                    android:textSize="15.5sp"
+                    tools:text="বইয়ের বিস্তারিত অধ্যায়..." />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <!-- Loading / Progress Overlay -->
+        <LinearLayout
+            android:id="@+id/layoutReaderLoading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_card_surface"
+            android:elevation="6dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:indeterminateTint="@color/accent_teal" />
+
+            <TextView
+                android:id="@+id/tvReaderLoadingStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="বই প্রস্তুত করা হচ্ছে..."
+                android:textColor="@color/text_primary"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <!-- Bottom Scrubber and Progress Bar -->
+    <LinearLayout
+        android:id="@+id/layoutReaderBottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_card"
+        android:elevation="4dp"
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvPageProgressText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/text_primary"
+                android:textSize="13sp"
+                tools:text="পৃষ্ঠা ১ / ১২ • ৮% সম্পন্ন" />
+
+            <TextView
+                android:id="@+id/tvScrollDirectionHint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ভার্টিক্যাল স্ক্রল"
+                android:textColor="@color/accent_teal"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <SeekBar
+            android:id="@+id/seekBarVerticalProgress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:progressTint="@color/accent_teal"
+            android:thumbTint="@color/accent_teal" />
+
+    </LinearLayout>
+
+</LinearLayout>

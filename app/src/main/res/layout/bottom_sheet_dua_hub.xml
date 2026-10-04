@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/bg_main">
+
+  <!-- Top Header -->
+  <LinearLayout
+    android:id="@+id/layoutDuaHeader"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_card"
+    android:orientation="vertical"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <!-- Global Top App Bar -->
+    <RelativeLayout
+      android:id="@+id/layoutTopHeader"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/bg_card"
+      android:paddingHorizontal="16dp"
+      android:paddingTop="12dp"
+      android:paddingBottom="12dp">
+
+      <FrameLayout
+        android:id="@+id/btnCloseDua"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bg_circular_counter"
+        android:backgroundTint="@color/bg_badge_pill"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageView
+          android:layout_width="20dp"
+          android:layout_height="20dp"
+          android:layout_gravity="center"
+          android:src="@drawable/ic_arrow_back"
+          app:tint="#34D399" />
+      </FrameLayout>
+
+      <!-- Center: DeenOne Brand Logo -->
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Deen"
+          android:textColor="@color/text_primary"
+          android:textSize="22sp"
+          android:textStyle="bold" />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="One"
+          android:textColor="#34D399"
+          android:textSize="22sp"
+          android:textStyle="bold" />
+      </LinearLayout>
+
+      <!-- Right: Theme Toggle + Standing Divider + Notification Bell -->
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <FrameLayout
+          android:id="@+id/btnDuaThemeToggle"
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:background="@drawable/bg_circular_counter"
+          android:backgroundTint="@color/bg_badge_pill"
+          android:clickable="true"
+          android:focusable="true">
+
+          <ImageView
+            android:id="@+id/ivDuaThemeIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_moon"
+            app:tint="@color/accent_mint" />
+        </FrameLayout>
+
+        <View
+          android:layout_width="1.5dp"
+          android:layout_height="20dp"
+          android:layout_marginHorizontal="6dp"
+          android:background="@color/border_card" />
+
+        <FrameLayout
+          android:id="@+id/btnDuaNotification"
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:background="@drawable/bg_circular_counter"
+          android:backgroundTint="@color/bg_badge_pill"
+          android:clickable="true"
+          android:focusable="true">
+
+          <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_notifications"
+            app:tint="#34D399" />
+
+          <View
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_gravity="top|end"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="7dp"
+            android:background="@drawable/bg_circular_counter"
+            android:backgroundTint="#EF4444" />
+        </FrameLayout>
+      </LinearLayout>
+    </RelativeLayout>
+
+    <!-- Subheader: Page Title & Tracker Button -->
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/bg_card"
+      android:gravity="center_vertical"
+      android:orientation="horizontal"
+      android:paddingHorizontal="16dp"
+      android:paddingBottom="6dp">
+
+      <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginEnd="8dp"
+        android:orientation="vertical">
+
+        <TextView
+          android:id="@+id/tvDuaHubMainTitle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="দোয়া ভাণ্ডার"
+          android:textColor="@color/text_primary"
+          android:textSize="16.5sp"
+          android:textStyle="bold" />
+
+        <TextView
+          android:id="@+id/tvDuaHubMainSubtitle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="2dp"
+          android:text="কুরআন ও সুন্নাহর প্রামাণ্য মাসনুন দোয়া"
+          android:textColor="@color/text_secondary"
+          android:textSize="11sp" />
+      </LinearLayout>
+
+      <LinearLayout
+        android:id="@+id/btnOpenDuaTracker"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:background="@drawable/bg_card_active"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingHorizontal="12dp">
+
+        <TextView
+          android:id="@+id/tvOpenDuaTracker"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="ট্র্যাকার"
+          android:textColor="@color/accent_mint"
+          android:textSize="11.5sp"
+          android:textStyle="bold" />
+      </LinearLayout>
+    </LinearLayout>
+
+    <!-- Live Counter Badge & Online Sync Control Bar -->
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/bg_card"
+      android:gravity="center_vertical"
+      android:orientation="horizontal"
+      android:paddingHorizontal="16dp"
+      android:paddingVertical="4dp">
+
+      <TextView
+        android:id="@+id/tvDuaCountBadge"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/bg_badge_pill"
+        android:backgroundTint="@color/bg_badge_pill"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="4dp"
+        android:text="২৫০+ প্রামাণ্য দোয়া সংরক্ষিত"
+        android:textColor="@color/accent_mint"
+        android:textSize="11sp"
+        android:textStyle="bold" />
+
+      <LinearLayout
+        android:id="@+id/btnSyncOnlineDua"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/bg_card_active"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingHorizontal="10dp">
+
+        <ImageView
+          android:layout_width="14dp"
+          android:layout_height="14dp"
+          android:layout_marginEnd="4dp"
+          android:src="@drawable/ic_refresh"
+          app:tint="@color/accent_mint" />
+
+        <TextView
+          android:id="@+id/tvSyncOnlineDua"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="অনলাইন সিঙ্ক"
+          android:textColor="@color/accent_mint"
+          android:textSize="11sp"
+          android:textStyle="bold" />
+      </LinearLayout>
+    </LinearLayout>
+
+    <!-- Sync Progress & Status -->
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/bg_card"
+      android:orientation="horizontal"
+      android:gravity="center_vertical"
+      android:paddingHorizontal="16dp"
+      android:paddingBottom="4dp">
+
+      <ProgressBar
+        android:id="@+id/pbDuaSync"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/accent_mint"
+        android:visibility="gone"
+        android:layout_marginEnd="6dp" />
+
+      <TextView
+        android:id="@+id/tvDuaSyncStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="সকল প্রামাণ্য দোয়া সংরক্ষিত ও আপ-টু-ডেট আছে"
+        android:textColor="@color/text_secondary"
+        android:textSize="10.5sp" />
+    </LinearLayout>
+
+    <!-- Search Bar -->
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="42dp"
+      android:layout_marginHorizontal="16dp"
+      android:layout_marginTop="8dp"
+      android:background="@drawable/bg_badge_pill"
+      android:gravity="center_vertical"
+      android:orientation="horizontal"
+      android:paddingHorizontal="12dp">
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="14sp" />
+
+      <EditText
+        android:id="@+id/etSearchDua"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_weight="1"
+        android:background="@null"
+        android:hint="দোয়া, আরবি বা ফজিলত দিয়ে অনুসন্ধান করুন..."
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:textColor="@color/text_primary"
+        android:textColorHint="@color/text_secondary"
+        android:textSize="13sp" />
+    </LinearLayout>
+
+    <!-- Category Dropdown Selector (Replaced Horizontal Chips per User Request) -->
+    <LinearLayout
+      android:id="@+id/btnDuaCategoryDropdown"
+      android:layout_width="match_parent"
+      android:layout_height="44dp"
+      android:layout_marginHorizontal="16dp"
+      android:layout_marginTop="8dp"
+      android:layout_marginBottom="10dp"
+      android:background="@drawable/bg_badge_pill"
+      android:backgroundTint="@color/bg_badge_pill"
+      android:clickable="true"
+      android:focusable="true"
+      android:gravity="center_vertical"
+      android:orientation="horizontal"
+      android:paddingHorizontal="14dp">
+
+      <FrameLayout
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:background="@drawable/bg_circular_counter"
+        android:backgroundTint="@color/bg_card">
+
+        <ImageView
+          android:layout_width="16dp"
+          android:layout_height="16dp"
+          android:layout_gravity="center"
+          android:src="@drawable/ic_feat_dua"
+          app:tint="@color/accent_mint" />
+      </FrameLayout>
+
+      <TextView
+        android:id="@+id/tvSelectedCategory"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_weight="1"
+        android:text="সকল দোয়া"
+        android:textColor="@color/text_primary"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+      <ImageView
+        android:id="@+id/ivDuaCategoryChevron"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_chevron_down"
+        app:tint="@color/text_secondary" />
+    </LinearLayout>
+  </LinearLayout>
+
+  <!-- Dua RecyclerView -->
+  <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/rvDuaList"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:clipToPadding="false"
+    android:overScrollMode="never"
+    android:paddingHorizontal="14dp"
+    android:paddingTop="12dp"
+    android:paddingBottom="24dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/layoutDuaHeader" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

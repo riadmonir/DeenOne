@@ -1,0 +1,111 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="160dp"
+    android:height="160dp"
+    android:viewportWidth="160"
+    android:viewportHeight="160">
+
+    <group
+        android:scaleX="0.55"
+        android:scaleY="0.55"
+        android:translateX="14"
+        android:translateY="14">
+
+        <!-- 1. Crescent Moon (Top Centered) -->
+        <path
+            android:pathData="M 120,40 C 106.5,40 95,51.5 95,65 C 95,78.5 106.5,90 120,90 C 128.5,90 136.2,85.6 140.6,78.8 C 127.1,78.2 116.2,67 116.2,53.5 C 116.2,47.3 118.4,41.5 122,37 C 121.3,37 120.7,40 120,40 Z">
+            <aapt:attr name="android:fillColor">
+                <gradient
+                    android:startX="95"
+                    android:startY="40"
+                    android:endX="140"
+                    android:endY="90"
+                    android:type="linear">
+                    <item android:color="#4FF2B4" android:offset="0.0" />
+                    <item android:color="#35D99B" android:offset="1.0" />
+                </gradient>
+            </aapt:attr>
+        </path>
+
+        <!-- 2. Mosque Dome Arch / Mihrab -->
+        <path
+            android:fillColor="#1C000000"
+            android:pathData="M 120,89 C 120,96 130,105 143,115 C 158,126 170,140 170,157 L 170,161 L 157,161 L 157,157 C 157,144 147,133 135,123 C 126,115 120,108 120,102 C 120,108 114,115 105,123 C 93,133 83,144 83,157 L 83,161 L 70,161 L 70,157 C 70,140 82,126 97,115 C 110,105 120,96 120,89 Z" />
+
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M 120,87 C 120,94 130,103 143,113 C 157,124 169,138 169,155 L 169,158 L 157,158 L 157,155 C 157,142 147,131 135,121 C 126,113 120,106 120,100 C 120,106 114,113 105,121 C 93,131 83,142 83,155 L 83,158 L 71,158 L 71,155 C 71,138 83,124 97,113 C 110,103 120,94 120,87 Z" />
+
+        <!-- 3. Rehal Crossed Stand Underneath -->
+        <path
+            android:fillColor="#2A000000"
+            android:pathData="M 80,215 L 120,195 L 160,215 L 150,223 L 120,208 L 90,223 Z" />
+
+        <path
+            android:pathData="M 78,211 L 115,192 L 125,197 L 162,217 L 152,223 L 120,206 L 88,223 Z">
+            <aapt:attr name="android:fillColor">
+                <gradient
+                    android:startX="78"
+                    android:startY="192"
+                    android:endX="162"
+                    android:endY="223"
+                    android:type="linear">
+                    <item android:color="#24B37D" android:offset="0.0" />
+                    <item android:color="#147550" android:offset="1.0" />
+                </gradient>
+            </aapt:attr>
+        </path>
+
+        <path
+            android:pathData="M 162,211 L 125,192 L 115,197 L 78,217 L 88,223 L 120,206 L 152,223 Z">
+            <aapt:attr name="android:fillColor">
+                <gradient
+                    android:startX="162"
+                    android:startY="192"
+                    android:endX="78"
+                    android:endY="223"
+                    android:type="linear">
+                    <item android:color="#35D99B" android:offset="0.0" />
+                    <item android:color="#1B8C61" android:offset="1.0" />
+                </gradient>
+            </aapt:attr>
+        </path>
+
+        <!-- 4. Open Holy Quran Book -->
+        <path
+            android:fillColor="#0D543A"
+            android:pathData="M 120,196 C 98,181 74,168 52,175 L 50,183 C 72,176 96,189 120,204 C 144,189 168,176 190,183 L 188,175 C 166,168 142,181 120,196 Z" />
+
+        <path
+            android:pathData="M 120,193 C 99,178 76,166 55,172 L 53,180 C 74,174 97,186 120,201 Z">
+            <aapt:attr name="android:fillColor">
+                <gradient
+                    android:startX="53"
+                    android:startY="172"
+                    android:endX="120"
+                    android:endY="201"
+                    android:type="linear">
+                    <item android:color="#4DF5B3" android:offset="0.0" />
+                    <item android:color="#2DC489" android:offset="0.75" />
+                    <item android:color="#1A8A5E" android:offset="1.0" />
+                </gradient>
+            </aapt:attr>
+        </path>
+
+        <path
+            android:pathData="M 120,193 C 141,178 164,166 185,172 L 187,180 C 166,174 143,186 120,201 Z">
+            <aapt:attr name="android:fillColor">
+                <gradient
+                    android:startX="187"
+                    android:startY="172"
+                    android:endX="120"
+                    android:endY="201"
+                    android:type="linear">
+                    <item android:color="#4DF5B3" android:offset="0.0" />
+                    <item android:color="#2DC489" android:offset="0.75" />
+                    <item android:color="#1A8A5E" android:offset="1.0" />
+                </gradient>
+            </aapt:attr>
+        </path>
+    </group>
+</vector>

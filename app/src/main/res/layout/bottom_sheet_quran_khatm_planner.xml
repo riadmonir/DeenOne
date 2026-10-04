@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/bg_main"
+  android:orientation="vertical">
+
+  <!-- Top Action Bar -->
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_top_bar"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="14dp"
+    android:paddingBottom="12dp">
+
+    <ImageButton android:id="@+id/btnCloseKhatmSheet"
+      android:layout_width="38dp"
+      android:layout_height="38dp"
+      android:background="@drawable/bg_badge_pill"
+      android:contentDescription="ফিরে যান"
+      android:src="@drawable/ic_arrow_back"
+      app:tint="@color/accent_mint" />
+
+    <LinearLayout
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="12dp"
+      android:layout_weight="1"
+      android:orientation="vertical">
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="কুরআন খতম প্ল্যানার"
+        android:textColor="@color/text_primary"
+        android:textSize="17.5sp"
+        android:textStyle="bold" />
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="৭, ১৫ ও ৩০ দিনের দৈনিক পৃষ্ঠা টার্গেট ক্যালকুলেটর"
+        android:textColor="@color/text_secondary"
+        android:textSize="11.5sp" />
+    </LinearLayout>
+  </LinearLayout>
+
+  <androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="14dp"
+    android:paddingBottom="40dp">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <!-- Plan Selector Chips -->
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:orientation="horizontal">
+
+        <TextView
+          android:id="@+id/chipPlan7Days"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="4dp"
+          android:layout_weight="1"
+          android:background="@drawable/bg_badge_pill"
+          android:gravity="center"
+          android:paddingVertical="9dp"
+          android:text="৭ দিন"
+          android:textColor="@color/text_secondary"
+          android:textSize="13sp"
+          android:textStyle="bold" />
+
+        <TextView
+          android:id="@+id/chipPlan15Days"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="4dp"
+          android:layout_weight="1"
+          android:background="@drawable/bg_badge_pill"
+          android:gravity="center"
+          android:paddingVertical="9dp"
+          android:text="১৫ দিন"
+          android:textColor="@color/text_secondary"
+          android:textSize="13sp"
+          android:textStyle="bold" />
+
+        <TextView
+          android:id="@+id/chipPlan30Days"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:background="@drawable/bg_badge_pill"
+          android:gravity="center"
+          android:paddingVertical="9dp"
+          android:text="৩০ দিন"
+          android:textColor="@color/accent_mint"
+          android:textSize="13sp"
+          android:textStyle="bold" />
+      </LinearLayout>
+
+      <!-- Overall Progress Card -->
+      <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1.2dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="16dp">
+
+          <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+              android:id="@+id/tvKhatmProgressText"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentStart="true"
+              android:text="খতম প্রগ্রেস: ০%"
+              android:textColor="@color/accent_mint"
+              android:textSize="15sp"
+              android:textStyle="bold" />
+
+            <TextView
+              android:id="@+id/tvKhatmPagesCount"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentEnd="true"
+              android:text="০ / ৬০৪ পৃষ্ঠা"
+              android:textColor="@color/text_primary"
+              android:textSize="13sp"
+              android:textStyle="bold" />
+          </RelativeLayout>
+
+          <ProgressBar
+            android:id="@+id/progressBarKhatm"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="12dp"
+            android:max="604"
+            android:progress="0"
+            android:progressDrawable="@drawable/progress_bar_custom" />
+
+          <TextView
+            android:id="@+id/tvEstimatedFinishDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="সম্ভাব্য সমাপ্তি: ৩০ দিন পর"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp" />
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- Daily Target Breakdown Card -->
+      <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1.2dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="16dp">
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="আপনার পড়ার দৈনিক টার্গেট"
+            android:textColor="@color/accent_mint"
+            android:textSize="14.5sp"
+            android:textStyle="bold" />
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:background="@color/bg_card_secondary"
+              android:gravity="center"
+              android:orientation="vertical"
+              android:padding="10dp">
+
+              <TextView
+                android:id="@+id/tvDailyTargetPages"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="২০ পৃষ্ঠা"
+                android:textColor="@color/accent_mint"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+              <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="প্রতিদিন (১ পারা)"
+                android:textColor="@color/text_secondary"
+                android:textSize="11sp" />
+            </LinearLayout>
+
+            <View
+              android:layout_width="8dp"
+              android:layout_height="match_parent" />
+
+            <LinearLayout
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:background="@color/bg_card_secondary"
+              android:gravity="center"
+              android:orientation="vertical"
+              android:padding="10dp">
+
+              <TextView
+                android:id="@+id/tvPerPrayerTargetPages"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="৪ পৃষ্ঠা"
+                android:textColor="@color/accent_mint"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+              <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="প্রতি নামাজের পর"
+                android:textColor="@color/text_secondary"
+                android:textSize="11sp" />
+            </LinearLayout>
+          </LinearLayout>
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- Quick Add Pages & Actions -->
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+          android:id="@+id/btnAdd4Pages"
+          style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+          android:layout_width="0dp"
+          android:layout_height="44dp"
+          android:layout_marginEnd="6dp"
+          android:layout_weight="1"
+          android:text="+৪ পৃষ্ঠা পড়লাম"
+          android:textColor="@color/accent_mint"
+          android:textSize="12.5sp"
+          app:cornerRadius="10dp"
+          app:strokeColor="@color/accent_mint" />
+
+        <com.google.android.material.button.MaterialButton
+          android:id="@+id/btnAdd20Pages"
+          style="@style/Widget.MaterialComponents.Button"
+          android:layout_width="0dp"
+          android:layout_height="44dp"
+          android:layout_marginStart="6dp"
+          android:layout_weight="1"
+          android:backgroundTint="@color/accent_mint"
+          android:text="+১ পারা (+২০ পৃষ্ঠা)"
+          android:textColor="@color/text_dark"
+          android:textSize="12.5sp"
+          android:textStyle="bold"
+          app:cornerRadius="10dp" />
+      </LinearLayout>
+
+      <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnResetKhatmPlan"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="প্ল্যান রিসেট করুন"
+        android:textColor="@color/text_secondary"
+        android:textSize="12sp" />
+
+    </LinearLayout>
+  </androidx.core.widget.NestedScrollView>
+</LinearLayout>

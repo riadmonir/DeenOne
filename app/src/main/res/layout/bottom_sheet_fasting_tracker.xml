@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/bg_main"
+  android:orientation="vertical">
+
+  <!-- Top Action Bar -->
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_top_bar"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="14dp"
+    android:paddingBottom="12dp">
+
+    <ImageButton android:id="@+id/btnCloseFastingSheet"
+      android:layout_width="38dp"
+      android:layout_height="38dp"
+      android:background="@drawable/bg_badge_pill"
+      android:contentDescription="ফিরে যান"
+      android:src="@drawable/ic_arrow_back"
+      app:tint="@color/accent_mint" />
+
+    <LinearLayout
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="12dp"
+      android:layout_weight="1"
+      android:orientation="vertical">
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="সিয়াম ও রোজা ট্র্যাকার"
+        android:textColor="@color/text_primary"
+        android:textSize="17.5sp"
+        android:textStyle="bold" />
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="রমজান, সুন্নাত ও কাজা রোজা ব্যবস্থাপনা"
+        android:textColor="@color/text_secondary"
+        android:textSize="11.5sp" />
+    </LinearLayout>
+  </LinearLayout>
+
+  <androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="14dp"
+    android:paddingBottom="40dp">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <!-- 1. Today Fasting Card -->
+      <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1.2dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center_vertical"
+          android:orientation="horizontal"
+          android:padding="16dp">
+
+          <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="আজকের রোজা"
+              android:textColor="@color/accent_mint"
+              android:textSize="14.5sp"
+              android:textStyle="bold" />
+
+            <TextView
+              android:id="@+id/tvTodayFastingStatus"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="2dp"
+              android:text="আপনি কি আজ রোজা রেখেছেন?"
+              android:textColor="@color/text_secondary"
+              android:textSize="12sp" />
+          </LinearLayout>
+
+          <CheckBox
+            android:id="@+id/cbTodayFasting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/accent_mint" />
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- 2. Statistics Grid -->
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.card.MaterialCardView
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="6dp"
+          android:layout_weight="1"
+          app:cardBackgroundColor="@color/bg_card"
+          app:cardCornerRadius="14dp"
+          app:strokeColor="@color/border_card"
+          app:strokeWidth="1dp">
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+              android:id="@+id/tvMonthlyFastsCount"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="০"
+              android:textColor="@color/accent_mint"
+              android:textSize="18sp"
+              android:textStyle="bold" />
+
+            <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="2dp"
+              android:text="এই মাসের রোজা"
+              android:textColor="@color/text_secondary"
+              android:textSize="11sp" />
+          </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="6dp"
+          android:layout_weight="1"
+          app:cardBackgroundColor="@color/bg_card"
+          app:cardCornerRadius="14dp"
+          app:strokeColor="@color/border_card"
+          app:strokeWidth="1dp">
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+              android:id="@+id/tvYearlyFastsCount"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="০"
+              android:textColor="@color/accent_mint"
+              android:textSize="18sp"
+              android:textStyle="bold" />
+
+            <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="2dp"
+              android:text="এই বছরের রোজা"
+              android:textColor="@color/text_secondary"
+              android:textSize="11sp" />
+          </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+      </LinearLayout>
+
+      <!-- 3. Qaza Fast Tracker -->
+      <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1.2dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="16dp">
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:layout_marginEnd="8dp"
+              android:text="কাজা রোজা ট্র্যাকার"
+              android:textColor="@color/accent_mint"
+              android:textSize="14.5sp"
+              android:textStyle="bold" />
+
+            <TextView
+              android:id="@+id/tvQazaRemaining"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@drawable/bg_badge_pill"
+              android:paddingHorizontal="8dp"
+              android:paddingVertical="3dp"
+              android:text="০টি বাকি"
+              android:textColor="@color/accent_mint"
+              android:textSize="11.5sp"
+              android:textStyle="bold" />
+          </LinearLayout>
+
+          <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="অতীতের কোনো রোজা ছুটে গিয়ে থাকলে তা পূরণ করে কাজা কাউন্টার আপডেট করুন।"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp" />
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+              android:id="@+id/btnAddQaza"
+              style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+              android:layout_width="0dp"
+              android:layout_height="40dp"
+              android:layout_marginEnd="6dp"
+              android:layout_weight="1"
+              android:text="+ কাজা যোগ করুন"
+              android:textColor="@color/accent_mint"
+              android:textSize="12sp"
+              app:cornerRadius="8dp"
+              app:strokeColor="@color/accent_mint" />
+
+            <com.google.android.material.button.MaterialButton
+              android:id="@+id/btnCompleteQaza"
+              style="@style/Widget.MaterialComponents.Button"
+              android:layout_width="0dp"
+              android:layout_height="40dp"
+              android:layout_marginStart="6dp"
+              android:layout_weight="1"
+              android:backgroundTint="@color/accent_mint"
+              android:text="১টি আদায় সম্পন্ন"
+              android:textColor="@color/text_dark"
+              android:textSize="12sp"
+              android:textStyle="bold"
+              app:cornerRadius="8dp" />
+          </LinearLayout>
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- 4. Verified Sunnah Fasting Days Info -->
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="8dp"
+        android:text="প্রমাণিত সুন্নাত ও নফল রোজার ফযিলত"
+        android:textColor="@color/text_primary"
+        android:textSize="14.5sp"
+        android:textStyle="bold" />
+
+      <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1.2dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="16dp">
+
+          <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="3.5dp"
+            android:text="• সোমবার ও বৃহস্পতিবারের রোজা: নবীজী (ﷺ) এই দুই দিন রোজা রাখতেন। (সহীহ মুসলিম: ১১৬২, তিরমিযী: ৭৪৭)\n\n• আইয়ামে বীজ: প্রতি চান্দ্র মাসের ১৩, ১৪ ও ১৫ তারিখের রোজা। (সহীহ বুখারী: ১৯৮১)\n\n• আরাফার দিনের রোজা: ৯ই জিলহজের রোজা বিগত ও আগামী বছরের গুনাহ মাফ করায়। (সহীহ মুসলিম: ১১৬২)\n\n• আশুরার রোজা: ৯ ও ১০ই মুহাররমের রোজা। (সহীহ মুসলিম: ১১৬২)\n\n• শাওয়ালের ৬ রোজা: রমজানের পর শাওয়ালের ৬ রোজা পূর্ণ এক বছরের সমান সওয়াব। (সহীহ মুসলিম: ১১৬৪)"
+            android:textColor="@color/text_secondary"
+            android:textSize="12.5sp" />
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+  </androidx.core.widget.NestedScrollView>
+</LinearLayout>

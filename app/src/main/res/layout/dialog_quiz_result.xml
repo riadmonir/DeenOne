@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="24dp">
+
+            <!-- ========================================================= -->
+            <!-- 1. RESULT HERO SUMMARY CARD -->
+            <!-- ========================================================= -->
+            <LinearLayout
+                android:id="@+id/cardResultSummary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/bg_quiz_card_container"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingHorizontal="18dp"
+                android:paddingTop="26dp"
+                android:paddingBottom="24dp">
+
+                <!-- Golden Trophy Circle Badge -->
+                <FrameLayout
+                    android:id="@+id/flResultTrophyBadge"
+                    android:layout_width="74dp"
+                    android:layout_height="74dp"
+                    android:background="@drawable/bg_quiz_trophy_circle">
+
+                    <ImageView
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_quiz_trophy" />
+                </FrameLayout>
+
+                <!-- Main Status Heading -->
+                <TextView
+                    android:id="@+id/tvResultMainTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="মাশাআল্লাহ! সম্পন্ন হয়েছে"
+                    android:textColor="#35D99B"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <!-- Subtitle -->
+                <TextView
+                    android:id="@+id/tvResultSubtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="22dp"
+                    android:text="আপনি সফলভাবে দ্বীনি কুইজটি সম্পন্ন করেছেন।"
+                    android:textColor="#94A3B8"
+                    android:textSize="13.5sp" />
+
+                <!-- Two Metric Boxes (অর্জিত পয়েন্ট & সরাসরি সঠিক) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <!-- Box 1: Earned Points -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="6dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_quiz_metric_card"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingVertical="18dp">
+
+                        <TextView
+                            android:id="@+id/tvEarnedPointsLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="অর্জিত পয়েন্ট"
+                            android:textColor="#8EAAA0"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/tvEarnedPointsValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="+৩০"
+                            android:textColor="#35D99B"
+                            android:textSize="25sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- Box 2: Correct Count Ratio -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_quiz_metric_card"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingVertical="18dp">
+
+                        <TextView
+                            android:id="@+id/tvCorrectRatioLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="সরাসরি সঠিক"
+                            android:textColor="#8EAAA0"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/tvCorrectRatioValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="৩/৫"
+                            android:textColor="@color/text_primary"
+                            android:textSize="25sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Accuracy Progress Indicator -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvAccuracyLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="নির্ভুলতা"
+                        android:textColor="#8EAAA0"
+                        android:textSize="13sp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/tvAccuracyPercent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="৬০%"
+                        android:textColor="#35D99B"
+                        android:textSize="13.5sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/pbResultAccuracy"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="6dp"
+                    android:max="100"
+                    android:progress="60"
+                    android:progressDrawable="@drawable/progress_quiz_mint" />
+            </LinearLayout>
+
+            <!-- ========================================================= -->
+            <!-- 2. QUESTION REVIEWS CONTAINER (১ to ৫) -->
+            <!-- ========================================================= -->
+            <LinearLayout
+                android:id="@+id/layoutQuestionReviewsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- ============================================================= -->
+    <!-- 3. BOTTOM PINNED ACTION BUTTON: [ কুইজ তালিকায় ফিরে যান ] -->
+    <!-- ============================================================= -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_main"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="16dp">
+
+        <LinearLayout
+            android:id="@+id/btnReturnToQuizList"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:background="@drawable/bg_quiz_btn_primary_mint"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvReturnBtnText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="কুইজ তালিকায় ফিরে যান"
+                android:textColor="#061915"
+                android:textSize="16.5sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

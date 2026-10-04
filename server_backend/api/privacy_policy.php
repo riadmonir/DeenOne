@@ -1,0 +1,144 @@
+<?php
+/**
+ * ==============================================================================
+ * DEEN ONE (দ্বীন ওয়ান) - PRIVACY POLICY & COMPLIANCE REST API
+ * Consumed by Android Client, WebView, and Third-party Audit/Compliance Checkers
+ * ==============================================================================
+ */
+
+header('Content-Type: application/json; charset=UTF-8');
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: GET, OPTIONS');
+header('Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With');
+
+if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'OPTIONS') {
+    http_response_code(200);
+    exit;
+}
+
+require_once __DIR__ . '/db.php';
+
+$pdo = getDbConnection();
+
+try {
+    $keys = [
+        'privacy_title_bn',
+        'privacy_title_en',
+        'privacy_updated_at_bn',
+        'privacy_updated_at_en',
+        'privacy_policy_content',
+        'privacy_policy_content_en',
+        'privacy_policy_url',
+        'privacy_policy_updated_at',
+        'privacy_contact_email',
+        'privacy_organization_name',
+        'privacy_data_deletion_info',
+        'support_email',
+        'support_whatsapp',
+        'app_name'
+    ];
+
+    $inQuery = implode(',', array_fill(0, count($keys), '?'));
+    $stmt = $pdo->prepare("SELECT setting_key, setting_value FROM app_settings WHERE setting_key IN ($inQuery)");
+    $stmt->execute($keys);
+
+    $settings = [];
+    while ($row = $stmt->fetch()) {
+        $settings[$row['setting_key']] = $row['setting_value'];
+    }
+
+    $defaultBn = <<<HTML
+<p>দ্বীনওয়ান (DeenOne) ব্যবহারকারীদের ব্যক্তিগত তথ্যের সর্বোচ্চ সুরক্ষা ও গোপনীয়তা বজায় রাখতে প্রতিশ্রুতিবদ্ধ। আমরা একটি বিশুদ্ধ, বিজ্ঞাপনমুক্ত ও খাঁটি ইসলামিক জীবনধারা অ্যাপ্লিকেশন হিসেবে ব্যবহারকারীর তথ্যের নিরাপত্তা ও সুরক্ষায় সর্বোচ্চ মানদণ্ড অনুসরণ করি।</p>
+
+<h3>১. আমরা কী কী তথ্য সংগ্রহ করি</h3>
+<p>সঠিক নামাজের সময়সূচি, কিবলা দিক এবং বিশুদ্ধ ইসলামিক লাইফস্টাইল ট্র্যাকিং নিশ্চিত করতে আমরা শুধুমাত্র প্রয়োজনীয় তথ্য সংগ্রহ করি:</p>
+<ul>
+  <li><strong>প্রোফাইল তথ্য:</strong> নাম, ইমেইল বা ফোন নম্বর (অ্যাকাউন্ট ব্যাকআপ ও মাল্টি-ডিভাইস ডেটা সিঙ্কের জন্য)।</li>
+  <li><strong>লোকেশন ডাটা:</strong> শুধুমাত্র সালাতের ওয়াক্ত ও কিবলা কম্পাসের দিক নির্ধারণে ডিভাইসে স্থানীয়ভাবে ব্যবহৃত হয়। এটি আমাদের সার্ভারে স্থায়ীভাবে জমা বা তৃতীয় পক্ষের সাথে ট্র্যাক করা হয় না।</li>
+  <li><strong>ইবাদত ও সালাত ট্র্যাকিং:</strong> দৈনিক সালাত, কুরআন তিলাওয়াত ও তাসবীহ জিকিরের পরিসংখ্যান (যা সম্পূর্ণ ব্যক্তিগত ও সুরক্ষিত)।</li>
+  <li><strong>রক্তদান নেটওয়ার্ক:</strong> স্বেচ্ছায় নিবন্ধিত রক্তদাতাদের রক্তের গ্রুপ, জেলা ও যোগাযোগের নম্বর শুধুমাত্র জরুরি রক্তপ্রয়োজনে সহমর্মী ভাইদের সুবিধার্থে প্রদর্শিত হয়।</li>
+</ul>
+
+<h3>২. ফোরগ্রাউন্ড ও মিডিয়া সার্ভিস</h3>
+<p>পবিত্র কুরআন অডিও তিলাওয়াত, স্লিপ মোড টাইমার ও আজান রিমাইন্ডার ব্যাকগ্রাউন্ডে নিরবচ্ছিন্নভাবে পরিচালনার সুবিধার্থে স্ট্যান্ডার্ড অ্যান্ড্রয়েড মিডিয়া সার্ভিস ব্যবহৃত হয়।</p>
+
+<h3>৩. তথ্যের নিরাপত্তা ও এনক্রিপশন</h3>
+<p>আপনার সমস্ত নেটওয়ার্ক ডেটা আধুনিক SSL/TLS ২৫৬-বিট এনক্রিপশনের মাধ্যমে সুরক্ষিত থাকে। বাণিজ্যিক বিজ্ঞাপনদাতার কাছে তথ্য বিক্রি বা বিনিময় সম্পূর্ণভাবে নিষিদ্ধ।</p>
+
+<h3>৪. অ্যাকাউন্ট ও ডেটা স্থায়ীভাবে মুছে ফেলা (Data Deletion)</h3>
+<p>ব্যবহারকারী যেকোনো সময় অ্যাপের প্রোফাইল সেটিংস থেকে অথবা privacy@deenone.top এ যোগাযোগ করে তার সংরক্ষিত সমস্ত ডেটা স্থায়ীভাবে মুছে ফেলতে পারেন।</p>
+HTML;
+
+    $defaultEn = <<<HTML
+<p>DeenOne is committed to ensuring the maximum security, confidentiality, and integrity of users' personal information. As an authentic, distraction-free Islamic lifestyle application, we adhere to the highest privacy and ethical data protection standards.</p>
+
+<h3>1. Information We Collect</h3>
+<p>To deliver an authentic Islamic lifestyle experience and accurate prayer timings, DeenOne collects minimal necessary information:</p>
+<ul>
+  <li><strong>Account & Profile:</strong> Name, phone number or email for account authentication, streak progress, and cloud backup across devices.</li>
+  <li><strong>Location Data:</strong> Accessed on-device strictly to calculate accurate prayer times, sunrise/sunset, and Qibla compass direction. Location coordinates are never sold or permanently tracked on our servers.</li>
+  <li><strong>Worship & Habits Activity:</strong> Daily Salah logs, Quran reading progress, and Tasbih counts stored with end-to-end security.</li>
+  <li><strong>Blood Donor Registry:</strong> Blood group, district, and contact numbers shared voluntarily for emergency blood requests.</li>
+</ul>
+
+<h3>2. Foreground & Media Services</h3>
+<p>Android Foreground Media Services are utilized strictly to ensure uninterrupted Quran audio playback, sleep mode timer scheduling, and precise Adhan reminders.</p>
+
+<h3>3. Data Security & Encryption</h3>
+<p>All sensitive transmissions are secured using modern SSL/TLS 256-bit encryption. We never sell, rent, or trade user personal information to commercial advertisers.</p>
+
+<h3>4. Data Retention & Permanent Deletion</h3>
+<p>You have full ownership of your data. You may request permanent deletion of your account and all associated data at any time directly through app settings or by contacting privacy@deenone.top.</p>
+HTML;
+
+    $titleBn = !empty($settings['privacy_title_bn']) ? $settings['privacy_title_bn'] : 'প্রাইভেসি পলিসি';
+    $titleEn = !empty($settings['privacy_title_en']) ? $settings['privacy_title_en'] : 'PRIVACY POLICY';
+
+    $updatedAtBn = !empty($settings['privacy_updated_at_bn']) ? $settings['privacy_updated_at_bn'] : 'সর্বশেষ হালনাগাদ: ২০২৬';
+    $updatedAtEn = !empty($settings['privacy_updated_at_en']) ? $settings['privacy_updated_at_en'] : (!empty($settings['privacy_policy_updated_at']) ? $settings['privacy_policy_updated_at'] : 'Last update: September 2026');
+
+    $bnContent = !empty($settings['privacy_policy_content']) ? $settings['privacy_policy_content'] : $defaultBn;
+    $enContent = !empty($settings['privacy_policy_content_en']) ? $settings['privacy_policy_content_en'] : $defaultEn;
+
+    $contactEmail = !empty($settings['privacy_contact_email']) ? $settings['privacy_contact_email'] : ($settings['support_email'] ?? 'privacy@deenone.top');
+    $privacyUrl = !empty($settings['privacy_policy_url']) ? $settings['privacy_policy_url'] : 'https://deenone.top/privacy';
+    $orgName = !empty($settings['privacy_organization_name']) ? $settings['privacy_organization_name'] : 'DeenOne Technologies & Foundation';
+    $dataDeletionInfo = !empty($settings['privacy_data_deletion_info']) ? $settings['privacy_data_deletion_info'] : 'ব্যবহারকারী অ্যাপের সেটিংস থেকে অথবা ' . $contactEmail . ' এ ইমেইল পাঠিয়ে যেকোনো সময় তাদের অ্যাকাউন্ট ও ক্লাউডে সংরক্ষিত সমস্ত তথ্য স্থায়ীভাবে মুছে ফেলার আবেদন করতে পারেন।';
+
+    // Requested language parameter
+    $lang = strtolower(trim($_GET['lang'] ?? 'all'));
+
+    $response = [
+        'success' => true,
+        'app_name' => $settings['app_name'] ?? 'DeenOne',
+        'organization' => $orgName,
+        'title_bn' => $titleBn,
+        'title_en' => $titleEn,
+        'updated_at_bn' => $updatedAtBn,
+        'updated_at_en' => $updatedAtEn,
+        'contact_email' => $contactEmail,
+        'privacy_url' => $privacyUrl,
+        'data_deletion_info' => $dataDeletionInfo,
+        'content_bn' => $bnContent,
+        'content_en' => $enContent
+    ];
+
+    if ($lang === 'bn') {
+        $response['title'] = $titleBn;
+        $response['content'] = $bnContent;
+        $response['updated_at'] = $updatedAtBn;
+        $response['language'] = 'bn';
+    } elseif ($lang === 'en') {
+        $response['title'] = $titleEn;
+        $response['content'] = $enContent;
+        $response['updated_at'] = $updatedAtEn;
+        $response['language'] = 'en';
+    }
+
+    sendJsonResponse($response);
+} catch (Exception $e) {
+    sendJsonResponse([
+        'success' => false,
+        'error' => 'Failed to load privacy policy: ' . $e->getMessage()
+    ], 500);
+}

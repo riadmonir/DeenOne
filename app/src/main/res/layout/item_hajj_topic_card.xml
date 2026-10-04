@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardHajjTopic"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardBackgroundColor="@color/bg_card"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="0dp"
+    app:cardMaxElevation="0dp"
+    app:strokeColor="@color/border_card"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:minHeight="112dp"
+        android:orientation="vertical"
+        android:paddingHorizontal="6dp"
+        android:paddingVertical="14dp">
+
+        <!-- Topic Icon with Circular Container matching Rule 12 -->
+        <FrameLayout
+            android:id="@+id/flHajjTopicIconContainer"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_circle_icon">
+
+            <ImageView
+                android:id="@+id/ivHajjTopicIcon"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_gravity="center"
+                android:contentDescription="@null"
+                android:scaleType="fitCenter"
+                tools:src="@drawable/ic_hajj_1_hajj" />
+        </FrameLayout>
+
+        <!-- Topic Title Bengali / English -->
+        <TextView
+            android:id="@+id/tvHajjTopicTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:lineSpacingExtra="1.5dp"
+            android:maxLines="2"
+            android:textAlignment="center"
+            android:textColor="@color/text_primary"
+            android:textSize="12.5sp"
+            android:textStyle="bold"
+            tools:text="ফজিলত ও\nতাৎপর্য" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

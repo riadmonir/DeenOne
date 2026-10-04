@@ -1,0 +1,52 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="36dp"
+    android:height="36dp"
+    android:viewportWidth="36"
+    android:viewportHeight="36">
+
+    <!-- Twilight Evening Atmospheric Aura -->
+    <path
+        android:fillColor="#33EA580C"
+        android:pathData="M4,24 A14,14 0 0,1 32,24 Z" />
+
+    <!-- Radiant Sunset Beams -->
+    <path
+        android:fillColor="#F97316"
+        android:pathData="M17,4 L19,4 L18.6,9 L17.4,9 Z" />
+    <path
+        android:fillColor="#FB923C"
+        android:pathData="M8.2,9.2 L9.6,7.8 L13,11.8 L11.6,13.2 Z" />
+    <path
+        android:fillColor="#FB923C"
+        android:pathData="M26.4,7.8 L27.8,9.2 L24.4,13.2 L23,11.8 Z" />
+
+    <!-- Half Sun Setting Outer Rim -->
+    <path
+        android:fillColor="#EA580C"
+        android:pathData="M8,24 C8,18.48 12.48,14 18,14 C23.52,14 28,18.48 28,24 Z" />
+
+    <!-- Luminous Warm Amber Inner Core -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M11,24 C11,20.13 14.13,17 18,17 C21.87,17 25,20.13 25,24 Z" />
+
+    <!-- White-Hot Sun Center -->
+    <path
+        android:fillColor="#FFFBEB"
+        android:pathData="M14,24 C14,21.79 15.79,20 18,20 C20.21,20 22,21.79 22,24 Z" />
+
+    <!-- Crisp Horizon Line -->
+    <path
+        android:strokeColor="#F59E0B"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round"
+        android:pathData="M4,26 L32,26" />
+
+    <!-- Subtle Secondary Sea/Ground Reflection -->
+    <path
+        android:strokeColor="#B45309"
+        android:strokeWidth="1.5"
+        android:strokeLineCap="round"
+        android:pathData="M9,30 L27,30" />
+
+</vector>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:orientation="vertical"
+  android:paddingStart="14dp"
+  android:paddingEnd="14dp"
+  android:paddingTop="10dp"
+  android:paddingBottom="10dp"
+  android:background="?attr/selectableItemBackground">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical">
+
+    <!-- Category/Speaker Avatar Icon -->
+    <ImageView
+      android:id="@+id/ivAudioCategoryIcon"
+      android:layout_width="44dp"
+      android:layout_height="44dp"
+      android:src="@drawable/ic_feat_audio"
+      android:padding="10dp"
+      android:background="@drawable/bg_circular_counter"
+      android:backgroundTint="@color/bg_badge_pill"
+      app:tint="@color/accent_mint"
+      android:scaleType="centerInside" />
+
+    <!-- Title, Speaker, Duration -->
+    <LinearLayout
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:orientation="vertical"
+      android:paddingStart="12dp"
+      android:paddingEnd="8dp">
+
+      <TextView
+        android:id="@+id/tvAudioTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="শিরোনাম"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textColor="@color/text_primary" />
+
+      <TextView
+        android:id="@+id/tvAudioSpeaker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="বক্তা"
+        android:textSize="12sp"
+        android:textColor="@color/text_secondary"
+        android:layout_marginTop="2dp" />
+
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="4dp">
+
+        <TextView
+          android:id="@+id/tvAudioCategory"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="ক্যাটাগরি"
+          android:textSize="10sp"
+          android:paddingStart="8dp"
+          android:paddingEnd="8dp"
+          android:paddingTop="2dp"
+          android:paddingBottom="2dp"
+          android:background="@drawable/bg_badge_pill"
+          android:backgroundTint="@color/bg_badge_pill"
+          android:textColor="@color/accent_mint"
+          android:layout_marginEnd="6dp" />
+
+        <TextView
+          android:id="@+id/tvAudioDuration"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="--:--"
+          android:textSize="11sp"
+          android:textColor="@color/text_secondary"
+          android:layout_marginEnd="6dp" />
+
+      </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Download Action Container with Circular Background (Rule 13) -->
+    <FrameLayout
+      android:id="@+id/containerAudioDownload"
+      android:layout_width="36dp"
+      android:layout_height="36dp"
+      android:layout_marginEnd="8dp"
+      android:background="@drawable/bg_circular_counter"
+      android:backgroundTint="@color/bg_badge_pill">
+
+      <ImageButton
+        android:id="@+id/btnAudioDownload"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="8dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_download"
+        app:tint="@color/accent_mint"
+        android:contentDescription="ডাউনলোড করুন" />
+
+      <ProgressBar
+        android:id="@+id/pbAudioDownloadProgress"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_gravity="center"
+        android:indeterminateTint="@color/accent_mint"
+        android:visibility="gone" />
+
+      <ImageView
+        android:id="@+id/ivDownloadedCheck"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_check_circle"
+        app:tint="@color/accent_mint"
+        android:visibility="gone"
+        android:contentDescription="ডাউনলোড সম্পন্ন" />
+    </FrameLayout>
+
+    <!-- Favorite Button Container with Circular Background (Rule 13) -->
+    <FrameLayout
+      android:id="@+id/containerAudioFavorite"
+      android:layout_width="36dp"
+      android:layout_height="36dp"
+      android:background="@drawable/bg_circular_counter"
+      android:backgroundTint="@color/bg_badge_pill">
+
+      <ImageButton
+        android:id="@+id/btnAudioFavorite"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="8dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_favorite_outline"
+        app:tint="@color/text_secondary"
+        android:contentDescription="প্রিয়তে যোগ করুন" />
+    </FrameLayout>
+
+  </LinearLayout>
+
+  <View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:layout_marginTop="8dp"
+    android:alpha="0.4"
+    android:background="@color/border_card" />
+
+</LinearLayout>

@@ -1,0 +1,900 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/bg_main"
+  android:orientation="vertical">
+
+  <!-- TOP BAR (Title + Back Arrow on Right per User Request) -->
+  <RelativeLayout
+    android:id="@+id/layoutTopHeader"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:background="@color/bg_top_bar"
+    android:paddingHorizontal="16dp">
+
+    <!-- Left: Page Title "আমল ও জিকির ড্যাশবোর্ড" -->
+    <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentStart="true"
+      android:layout_centerVertical="true"
+      android:layout_toStartOf="@+id/btnCloseAnalytics"
+      android:layout_marginEnd="12dp"
+      android:gravity="center_vertical"
+      android:orientation="horizontal">
+
+      <FrameLayout
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:background="@drawable/bg_circular_counter"
+        android:backgroundTint="@color/bg_badge_pill">
+
+        <ImageView
+          android:layout_width="18dp"
+          android:layout_height="18dp"
+          android:layout_gravity="center"
+          android:src="@drawable/ic_feat_amal"
+          app:tint="@color/accent_mint" />
+      </FrameLayout>
+
+      <TextView
+        android:id="@+id/tvAnalyticsHeaderTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="আমল ও জিকির ড্যাশবোর্ড"
+        android:textColor="@color/text_primary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:ellipsize="end"
+        android:maxLines="1" />
+    </LinearLayout>
+
+    <!-- Right: Back Arrow Button with Circular Background per Rule 13 -->
+    <FrameLayout
+      android:id="@+id/btnCloseAnalytics"
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      android:layout_alignParentEnd="true"
+      android:layout_centerVertical="true"
+      android:background="@drawable/bg_circular_counter"
+      android:backgroundTint="@color/bg_badge_pill"
+      android:clickable="true"
+      android:focusable="true">
+
+      <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_arrow_back"
+        android:rotation="180"
+        app:tint="@color/accent_mint" />
+    </FrameLayout>
+  </RelativeLayout>
+
+  <!-- SCROLLABLE CONTENT -->
+  <androidx.core.widget.NestedScrollView
+    android:id="@+id/scrollAnalyticsContent"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:clipToPadding="false"
+    android:paddingBottom="24dp">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <!-- HERO DASHBOARD BANNER (Screenshot 1) -->
+      <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="16dp">
+
+          <!-- Top Row: Badge + Points -->
+          <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+              android:id="@+id/tvAnalyticsBadge"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentStart="true"
+              android:layout_centerVertical="true"
+              android:background="@drawable/bg_badge_pill"
+              android:backgroundTint="@color/bg_card_active"
+              android:paddingHorizontal="10dp"
+              android:paddingVertical="5dp"
+              android:text="বিস্তারিত অ্যানালিটিক্স"
+              android:textColor="@color/accent_mint"
+              android:textSize="12sp"
+              android:textStyle="bold" />
+
+            <TextView
+              android:id="@+id/tvAnalyticsPointsPill"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentEnd="true"
+              android:layout_centerVertical="true"
+              android:background="@drawable/bg_badge_pill"
+              android:backgroundTint="@color/badge_pill_amber_bg"
+              android:paddingHorizontal="12dp"
+              android:paddingVertical="5dp"
+              android:text="২২০ pts"
+              android:textColor="@color/badge_pill_amber_text"
+              android:textSize="12sp"
+              android:textStyle="bold" />
+          </RelativeLayout>
+
+          <!-- Title -->
+          <TextView
+            android:id="@+id/tvAnalyticsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="আমল ও জিকির ড্যাশবোর্ড"
+            android:textColor="@color/text_primary"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+          <!-- Subtitle -->
+          <TextView
+            android:id="@+id/tvAnalyticsSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="আপনার প্রতিদিনের জিকির ও নেক আমলের সার্বিক অগ্রগতি"
+            android:textColor="@color/text_secondary"
+            android:textSize="12.5sp" />
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- TIME FILTER TABS ROW (আজকে / এই মাসে / এই বছর / কাস্টম তারিখ) -->
+      <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:clipToPadding="false"
+        android:paddingHorizontal="16dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+
+          <!-- Tab: আজকে -->
+          <TextView
+            android:id="@+id/tabFilterToday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_badge_pill"
+            android:backgroundTint="@color/accent_mint"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingHorizontal="18dp"
+            android:paddingVertical="9dp"
+            android:text="আজকে"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+          <!-- Tab: এই মাসে -->
+          <TextView
+            android:id="@+id/tabFilterMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/bg_badge_pill"
+            android:backgroundTint="@color/bg_badge_pill"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingHorizontal="18dp"
+            android:paddingVertical="9dp"
+            android:text="এই মাসে"
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+          <!-- Tab: এই বছর -->
+          <TextView
+            android:id="@+id/tabFilterYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/bg_badge_pill"
+            android:backgroundTint="@color/bg_badge_pill"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingHorizontal="18dp"
+            android:paddingVertical="9dp"
+            android:text="এই বছর"
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+          <!-- Tab: কাস্টম তারিখ -->
+          <TextView
+            android:id="@+id/tabFilterCustom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/bg_badge_pill"
+            android:backgroundTint="@color/bg_badge_pill"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingHorizontal="18dp"
+            android:paddingVertical="9dp"
+            android:text="কাস্টম তারিখ"
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+        </LinearLayout>
+      </HorizontalScrollView>
+
+      <!-- SECTION 1: জিকির রিপোর্ট (Screenshot 1 & 4) -->
+      <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="16dp">
+
+          <!-- Section Title -->
+          <TextView
+            android:id="@+id/tvZikirReportHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="জিকির রিপোর্ট"
+            android:textColor="@color/accent_mint"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+          <!-- Summary 2-Card Row -->
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:orientation="horizontal">
+
+            <!-- Card 1: মোট জিকির -->
+            <com.google.android.material.card.MaterialCardView
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_marginEnd="6dp"
+              android:layout_weight="1"
+              app:cardBackgroundColor="@color/bg_card_secondary"
+              app:cardCornerRadius="14dp"
+              app:cardElevation="0dp">
+
+              <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <TextView
+                  android:id="@+id/tvTotalZikirLabel"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="মোট জিকির"
+                  android:textColor="@color/text_secondary"
+                  android:textSize="12sp" />
+
+                <TextView
+                  android:id="@+id/tvTotalZikirCount"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="4dp"
+                  android:fontFamily="sans-serif-medium"
+                  android:text="০ বার"
+                  android:textColor="@color/accent_mint"
+                  android:textSize="20sp"
+                  android:textStyle="bold" />
+              </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Card 2: দৈনিক গড় জিকির -->
+            <com.google.android.material.card.MaterialCardView
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="6dp"
+              android:layout_weight="1"
+              app:cardBackgroundColor="@color/bg_card_secondary"
+              app:cardCornerRadius="14dp"
+              app:cardElevation="0dp">
+
+              <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <TextView
+                  android:id="@+id/tvAvgZikirLabel"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="দৈনিক গড় জিকির"
+                  android:textColor="@color/text_secondary"
+                  android:textSize="12sp" />
+
+                <TextView
+                  android:id="@+id/tvAvgZikirCount"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="4dp"
+                  android:fontFamily="sans-serif-medium"
+                  android:text="০.০ / দিন"
+                  android:textColor="@color/accent_mint"
+                  android:textSize="20sp"
+                  android:textStyle="bold" />
+              </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+          </LinearLayout>
+
+          <!-- Subtitle -->
+          <TextView
+            android:id="@+id/tvZikirBreakdownLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="10dp"
+            android:text="জিকির টাইপ অনুযায়ী পরিসংখ্যান:"
+            android:textColor="@color/text_secondary"
+            android:textSize="12.5sp" />
+
+          <!-- Zikir Stats List Container -->
+          <LinearLayout
+            android:id="@+id/layoutZikirStatsList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- SECTION 2: অন্যান্য ইবাদত রিপোর্ট (Screenshot 2 & 5) -->
+      <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="16dp">
+
+          <!-- Section Title -->
+          <TextView
+            android:id="@+id/tvIbadahReportHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="অন্যান্য ইবাদত রিপোর্ট"
+            android:textColor="@color/accent_gold"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+          <!-- Summary 2-Card Row -->
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:orientation="horizontal">
+
+            <!-- Card 1: মোট ইবাদত টি -->
+            <com.google.android.material.card.MaterialCardView
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_marginEnd="6dp"
+              android:layout_weight="1"
+              app:cardBackgroundColor="@color/bg_card_secondary"
+              app:cardCornerRadius="14dp"
+              app:cardElevation="0dp">
+
+              <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <TextView
+                  android:id="@+id/tvTotalIbadahLabel"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="মোট ইবাদত"
+                  android:textColor="@color/text_secondary"
+                  android:textSize="12sp" />
+
+                <TextView
+                  android:id="@+id/tvTotalIbadahCount"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="4dp"
+                  android:fontFamily="sans-serif-medium"
+                  android:text="৩ টি"
+                  android:textColor="@color/accent_gold"
+                  android:textSize="20sp"
+                  android:textStyle="bold" />
+              </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Card 2: সম্পন্ন ক্যাটাগরি -->
+            <com.google.android.material.card.MaterialCardView
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="6dp"
+              android:layout_weight="1"
+              app:cardBackgroundColor="@color/bg_card_secondary"
+              app:cardCornerRadius="14dp"
+              app:cardElevation="0dp">
+
+              <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <TextView
+                  android:id="@+id/tvCompletedCategoryLabel"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="সম্পন্ন ক্যাটাগরি"
+                  android:textColor="@color/text_secondary"
+                  android:textSize="12sp" />
+
+                <TextView
+                  android:id="@+id/tvCompletedCategoryCount"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="4dp"
+                  android:fontFamily="sans-serif-medium"
+                  android:text="৩ টি"
+                  android:textColor="@color/accent_teal"
+                  android:textSize="20sp"
+                  android:textStyle="bold" />
+              </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+          </LinearLayout>
+
+          <!-- Subtitle -->
+          <TextView
+            android:id="@+id/tvIbadahBreakdownLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="10dp"
+            android:text="ইবাদতের নাম অনুযায়ী পরিসংখ্যান:"
+            android:textColor="@color/text_secondary"
+            android:textSize="12.5sp" />
+
+          <!-- Ibadah Stats List Container -->
+          <LinearLayout
+            android:id="@+id/layoutIbadahStatsList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- SECTION 3: সাপ্তাহিক ট্রেন্ড চিত্র (Screenshot 3) -->
+      <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="16dp">
+
+          <TextView
+            android:id="@+id/tvWeeklyTrendHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="সাপ্তাহিক ট্রেন্ড চিত্র"
+            android:textColor="@color/accent_mint"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+          <TextView
+            android:id="@+id/tvWeeklyTrendSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="গত ৭ দিনের আমল ও জিকির ট্রেন্ড"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp" />
+
+          <!-- 7 Bar Columns Row -->
+          <LinearLayout
+            android:id="@+id/layoutWeeklyTrendBars"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginTop="16dp"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:weightSum="7">
+
+            <!-- Sun -->
+            <LinearLayout
+              android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:layout_weight="1"
+              android:gravity="bottom|center_horizontal"
+              android:orientation="vertical">
+
+              <TextView
+                android:id="@+id/tvBarVal0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="০"
+                android:textColor="@color/text_secondary"
+                android:textSize="11sp" />
+
+              <View
+                android:id="@+id/viewBar0"
+                android:layout_width="14dp"
+                android:layout_height="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/bg_badge_pill"
+                android:backgroundTint="@color/bg_card_active" />
+
+              <TextView
+                android:id="@+id/tvBarLabel0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="রবি\n১৬"
+                android:textColor="@color/text_secondary"
+                android:textSize="10.5sp" />
+            </LinearLayout>
+
+            <!-- Mon -->
+            <LinearLayout
+              android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:layout_weight="1"
+              android:gravity="bottom|center_horizontal"
+              android:orientation="vertical">
+
+              <TextView
+                android:id="@+id/tvBarVal1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="১"
+                android:textColor="#34D399"
+                android:textSize="11sp" />
+
+              <View
+                android:id="@+id/viewBar1"
+                android:layout_width="14dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/bg_badge_pill"
+                android:backgroundTint="#34D399" />
+
+              <TextView
+                android:id="@+id/tvBarLabel1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="সোম\n১৭"
+                android:textColor="@color/text_secondary"
+                android:textSize="10.5sp" />
+            </LinearLayout>
+
+            <!-- Tue -->
+            <LinearLayout
+              android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:layout_weight="1"
+              android:gravity="bottom|center_horizontal"
+              android:orientation="vertical">
+
+              <TextView
+                android:id="@+id/tvBarVal2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="০"
+                android:textColor="@color/text_secondary"
+                android:textSize="11sp" />
+
+              <View
+                android:id="@+id/viewBar2"
+                android:layout_width="14dp"
+                android:layout_height="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/bg_badge_pill"
+                android:backgroundTint="@color/bg_card_active" />
+
+              <TextView
+                android:id="@+id/tvBarLabel2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="মঙ্গল\n১৮"
+                android:textColor="@color/text_secondary"
+                android:textSize="10.5sp" />
+            </LinearLayout>
+
+            <!-- Wed -->
+            <LinearLayout
+              android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:layout_weight="1"
+              android:gravity="bottom|center_horizontal"
+              android:orientation="vertical">
+
+              <TextView
+                android:id="@+id/tvBarVal3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="০"
+                android:textColor="@color/text_secondary"
+                android:textSize="11sp" />
+
+              <View
+                android:id="@+id/viewBar3"
+                android:layout_width="14dp"
+                android:layout_height="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/bg_badge_pill"
+                android:backgroundTint="@color/bg_card_active" />
+
+              <TextView
+                android:id="@+id/tvBarLabel3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="বুধ\n১৯"
+                android:textColor="@color/text_secondary"
+                android:textSize="10.5sp" />
+            </LinearLayout>
+
+            <!-- Thu -->
+            <LinearLayout
+              android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:layout_weight="1"
+              android:gravity="bottom|center_horizontal"
+              android:orientation="vertical">
+
+              <TextView
+                android:id="@+id/tvBarVal4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="০"
+                android:textColor="@color/text_secondary"
+                android:textSize="11sp" />
+
+              <View
+                android:id="@+id/viewBar4"
+                android:layout_width="14dp"
+                android:layout_height="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/bg_badge_pill"
+                android:backgroundTint="@color/bg_card_active" />
+
+              <TextView
+                android:id="@+id/tvBarLabel4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="বৃহঃ\n২০"
+                android:textColor="@color/text_secondary"
+                android:textSize="10.5sp" />
+            </LinearLayout>
+
+            <!-- Fri -->
+            <LinearLayout
+              android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:layout_weight="1"
+              android:gravity="bottom|center_horizontal"
+              android:orientation="vertical">
+
+              <TextView
+                android:id="@+id/tvBarVal5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="০"
+                android:textColor="@color/text_secondary"
+                android:textSize="11sp" />
+
+              <View
+                android:id="@+id/viewBar5"
+                android:layout_width="14dp"
+                android:layout_height="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/bg_badge_pill"
+                android:backgroundTint="@color/bg_card_active" />
+
+              <TextView
+                android:id="@+id/tvBarLabel5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="শুক্র\n২১"
+                android:textColor="@color/text_secondary"
+                android:textSize="10.5sp" />
+            </LinearLayout>
+
+            <!-- Sat -->
+            <LinearLayout
+              android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:layout_weight="1"
+              android:gravity="bottom|center_horizontal"
+              android:orientation="vertical">
+
+              <TextView
+                android:id="@+id/tvBarVal6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="৩"
+                android:textColor="#34D399"
+                android:textSize="11sp" />
+
+              <View
+                android:id="@+id/viewBar6"
+                android:layout_width="14dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/bg_badge_pill"
+                android:backgroundTint="#34D399" />
+
+              <TextView
+                android:id="@+id/tvBarLabel6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="শনি\n২২"
+                android:textColor="#34D399"
+                android:textSize="10.5sp"
+                android:textStyle="bold" />
+            </LinearLayout>
+          </LinearLayout>
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- SECTION 4: ইবাদত ও জিকির অ্যাক্টিভিটি লগ (Screenshot 3) -->
+      <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="16dp">
+
+          <!-- Title Row with Records Count Badge -->
+          <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+              android:id="@+id/tvActivityLogHeader"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentStart="true"
+              android:layout_centerVertical="true"
+              android:fontFamily="sans-serif-medium"
+              android:text="ইবাদত ও জিকির অ্যাক্টিভিটি লগ"
+              android:textColor="@color/accent_mint"
+              android:textSize="15.5sp"
+              android:textStyle="bold" />
+
+            <TextView
+              android:id="@+id/tvActivityRecordCountBadge"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentEnd="true"
+              android:layout_centerVertical="true"
+              android:background="@drawable/bg_badge_pill"
+              android:backgroundTint="@color/bg_card_active"
+              android:paddingHorizontal="10dp"
+              android:paddingVertical="4dp"
+              android:text="৩ টি রেকর্ড"
+              android:textColor="@color/accent_mint"
+              android:textSize="11.5sp"
+              android:textStyle="bold" />
+          </RelativeLayout>
+
+          <!-- Activity Log Items Container -->
+          <LinearLayout
+            android:id="@+id/layoutActivityLogList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:orientation="vertical" />
+
+          <!-- Activity Log Empty State (Screenshot 4) -->
+          <LinearLayout
+            android:id="@+id/layoutActivityLogEmpty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingVertical="32dp"
+            android:visibility="gone">
+
+            <ImageView
+              android:layout_width="48dp"
+              android:layout_height="48dp"
+              android:src="@drawable/ic_history"
+              app:tint="@color/text_secondary" />
+
+            <TextView
+              android:id="@+id/tvActivityLogEmptyMessage"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="12dp"
+              android:gravity="center"
+              android:text="নির্বাচন করা সময়ের মধ্যে কোনো আমল রেকর্ড করা হয়নি।"
+              android:textColor="@color/text_secondary"
+              android:textSize="13sp" />
+          </LinearLayout>
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+  </androidx.core.widget.NestedScrollView>
+</LinearLayout>

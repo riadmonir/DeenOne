@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/bg_main"
+  android:orientation="vertical">
+
+  <!-- Top Action Bar -->
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_top_bar"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="14dp"
+    android:paddingBottom="12dp">
+
+    <ImageButton android:id="@+id/btnCloseJummahMode"
+      android:layout_width="38dp"
+      android:layout_height="38dp"
+      android:background="@drawable/bg_badge_pill"
+      android:contentDescription="ফিরে যান"
+      android:src="@drawable/ic_arrow_back"
+      app:tint="@color/accent_mint" />
+
+    <LinearLayout
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="12dp"
+      android:layout_weight="1"
+      android:orientation="vertical">
+
+      <TextView
+        android:id="@+id/tvJummahHeaderTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="পবিত্র জুমু'আ মোড"
+        android:textColor="@color/text_primary"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+      <TextView
+        android:id="@+id/tvJummahHeaderSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="সূরা কাহাফ, দরূদ কাউন্টার, সুন্নাত ও সা'আতুল ইজাবাহ"
+        android:textColor="@color/text_secondary"
+        android:textSize="11.5sp" />
+    </LinearLayout>
+
+    <TextView
+      android:id="@+id/tvJummahMubarakBadge"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:background="@drawable/bg_badge_pill"
+      android:paddingHorizontal="10dp"
+      android:paddingVertical="5dp"
+      android:text="জুমু'আ মুবারক"
+      android:textColor="@color/accent_mint"
+      android:textSize="11.5sp"
+      android:textStyle="bold" />
+  </LinearLayout>
+
+  <androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="14dp"
+    android:paddingBottom="40dp">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <!-- 0. FRIDAY PHASE TRACKER & NOTIFICATION SWITCH -->
+      <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1.2dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="16dp">
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+              android:id="@+id/tvFridayPhaseTitle"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:layout_marginEnd="8dp"
+              android:text="সকালের আমল ও সূরা কাহাফ"
+              android:textColor="@color/accent_mint"
+              android:textSize="15.5sp"
+              android:textStyle="bold" />
+
+            <TextView
+              android:id="@+id/tvCurrentPhaseBadge"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@drawable/bg_badge_pill"
+              android:paddingHorizontal="8dp"
+              android:paddingVertical="3dp"
+              android:text="বর্তমান পর্ব"
+              android:textColor="@color/accent_mint"
+              android:textSize="11sp"
+              android:textStyle="bold" />
+          </LinearLayout>
+
+          <TextView
+            android:id="@+id/tvFridayPhaseDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:lineSpacingExtra="3dp"
+            android:text="সকালের সময় সূরা আল-কাহাফ তিলাওয়াত করুন এবং জুমার প্রস্তুতির জন্য প্রস্তুত হোন।"
+            android:textColor="@color/text_secondary"
+            android:textSize="12.5sp" />
+
+          <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/border_card" />
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:layout_marginEnd="8dp"
+              android:orientation="vertical">
+
+              <TextView
+                android:id="@+id/tvJummahLockscreenTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="জুমার লকস্ক্রিন রিমাইন্ডার"
+                android:textColor="@color/text_primary"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+              <TextView
+                android:id="@+id/tvJummahLockscreenSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="গোসল, খুতবা ও সা'আতুল ইজাবাহ নোটিফিকেশন"
+                android:textColor="@color/text_secondary"
+                android:textSize="11sp" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.SwitchCompat
+              android:id="@+id/switchJummahNotif"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:checked="true"
+              app:thumbTint="@color/accent_mint"
+              app:trackTint="#0E4334" />
+          </LinearLayout>
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- 1. SURAH AL-KAHF CARD -->
+      <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1.2dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="16dp">
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+              android:id="@+id/tvSurahKahfCardTitle"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:layout_marginEnd="8dp"
+              android:text="সূরা আল-কাহাফ (سورة الكهف)"
+              android:textColor="@color/accent_mint"
+              android:textSize="15.5sp"
+              android:textStyle="bold" />
+
+            <CheckBox
+              android:id="@+id/cbKahfCompleted"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:buttonTint="@color/accent_mint"
+              android:text="পড়া হয়েছে"
+              android:textColor="@color/text_secondary"
+              android:textSize="12sp" />
+          </LinearLayout>
+
+          <TextView
+            android:id="@+id/tvKahfHadithText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:lineSpacingExtra="3dp"
+            android:text="“যে ব্যক্তি জুমার দিন সূরা আল-কাহাফ তিলাওয়াত করবে, তার জন্য এক জুমা থেকে অপর জুমা পর্যন্ত একটি বিশেষ নূর চমকাতে থাকবে।”"
+            android:textColor="@color/text_primary"
+            android:textSize="13sp" />
+
+          <TextView
+            android:id="@+id/tvKahfHadithRef"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="— সুনানে বায়হাকী: ৫৯৯৬, সহীহুল জামি': ৬৪৭০ (সহীহ)"
+            android:textColor="@color/text_secondary"
+            android:textSize="11sp" />
+
+          <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnReadSurahKahf"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/accent_mint"
+            android:text="সম্পূর্ণ সূরা আল-কাহাফ পড়ুন"
+            android:textColor="@color/text_dark"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:cornerRadius="10dp" />
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- 2. SALAWAT (দরূদ শরীফ) INTERACTIVE COUNTER -->
+      <TextView
+        android:id="@+id/tvSalawatSectionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="8dp"
+        android:text="জুমার বিশেষ দরূদ পাঠ কাউন্টার"
+        android:textColor="@color/text_primary"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+      <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1.2dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center_horizontal"
+          android:orientation="vertical"
+          android:padding="16dp">
+
+          <TextView
+            android:id="@+id/tvSalawatHadithText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="“তোমরা জুমার দিনে আমার ওপর অধিক দরূদ পড়, কেননা তোমাদের দরূদ আমার সামনে পেশ করা হয়।”"
+            android:textAlignment="center"
+            android:textColor="@color/text_secondary"
+            android:textSize="12.5sp" />
+
+          <TextView
+            android:id="@+id/tvSalawatHadithRef"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="— সুনানে আবু দাউদ: ১০৪৭ (সহীহ)"
+            android:textColor="@color/text_secondary"
+            android:textSize="11sp" />
+
+          <!-- Salawat Text in Arabic -->
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ"
+            android:textColor="@color/accent_mint"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+          <!-- Count Display -->
+          <TextView
+            android:id="@+id/tvSalawatCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="০"
+            android:textColor="@color/text_primary"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+          <TextView
+            android:id="@+id/tvSalawatCompletedLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="বার পাঠ সম্পন্ন হয়েছে"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp" />
+
+          <!-- Buttons Row -->
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+              android:id="@+id/btnTapSalawat"
+              style="@style/Widget.MaterialComponents.Button"
+              android:layout_width="0dp"
+              android:layout_height="48dp"
+              android:layout_marginEnd="8dp"
+              android:layout_weight="1"
+              android:backgroundTint="@color/accent_mint"
+              android:text="দরূদ পাঠ করুন (+১)"
+              android:textColor="@color/text_dark"
+              android:textSize="13.5sp"
+              android:textStyle="bold"
+              app:cornerRadius="10dp" />
+
+            <com.google.android.material.button.MaterialButton
+              android:id="@+id/btnResetSalawat"
+              style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+              android:layout_width="wrap_content"
+              android:layout_height="48dp"
+              android:text="রিসেট"
+              android:textColor="@color/text_secondary"
+              android:textSize="12.5sp"
+              app:cornerRadius="10dp"
+              app:strokeColor="@color/border_card" />
+          </LinearLayout>
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- 3. SA'ATUL IJABAH (দোয়া কবুলের বিশেষ মুহূর্ত) -->
+      <TextView
+        android:id="@+id/tvSaatSectionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="8dp"
+        android:text="সা'আতুল ইজাবাহ (দোয়া কবুলের বিশেষ মুহূর্ত)"
+        android:textColor="@color/text_primary"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+      <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1.2dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="16dp">
+
+          <TextView
+            android:id="@+id/tvSaatHadithText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="“জুমার দিনে এমন একটি সময় আছে, যখন কোনো মুসলিম বান্দা দাঁড়িয়ে নামাজরত অবস্থায় বা দোয়ারত অবস্থায় আল্লাহর কাছে যা কিছু চায়, আল্লাহ তা অবশ্যই দেন। তোমরা সেটিকে আসরের পর থেকে সূর্যাস্ত পর্যন্ত সময়ে অনুসন্ধান করো।”"
+            android:lineSpacingExtra="3dp"
+            android:textColor="@color/text_primary"
+            android:textSize="12.5sp" />
+
+          <TextView
+            android:id="@+id/tvSaatHadithRef"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="— সহীহ বুখারী: ৯৩৫, সুনানে আবু দাউদ: ১০৪৮ (সহীহ)"
+            android:textColor="@color/text_secondary"
+            android:textSize="11sp" />
+
+          <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/border_card" />
+
+          <TextView
+            android:id="@+id/tvSpecialDuaHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="জুমার বিশেষ দোয়া:"
+            android:textColor="@color/accent_mint"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+          <TextView
+            android:id="@+id/tvJummahSpecialDuaArabic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="end"
+            android:text="اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي الدُّنْيَا وَالآخِرَةِ"
+            android:textColor="@color/text_primary"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+          <TextView
+            android:id="@+id/tvJummahSpecialDuaMeaning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="“হে আল্লাহ! আমি আপনার নিকট দুনিয়া ও আখিরাতে ক্ষমা এবং সার্বিক নিরাপত্তা/কল্যাণ প্রার্থনা করছি।”"
+            android:textColor="@color/text_secondary"
+            android:textSize="12.5sp" />
+
+          <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCopyJummahDua"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_marginTop="8dp"
+            android:text="দোয়াটি কপি করুন"
+            android:textColor="@color/accent_mint"
+            android:textSize="12sp"
+            app:cornerRadius="8dp"
+            app:strokeColor="@color/accent_mint" />
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- 4. 8 VERIFIED FRIDAY SUNNAHS CHECKLIST -->
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+          android:id="@+id/tvSunnahChecklistHeader"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:layout_marginEnd="8dp"
+          android:text="জুমার ৮টি সুন্নাত ও আদব চেকলিস্ট"
+          android:textColor="@color/text_primary"
+          android:textSize="15sp"
+          android:textStyle="bold" />
+
+        <TextView
+          android:id="@+id/tvSunnahProgress"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="@drawable/bg_badge_pill"
+          android:paddingHorizontal="8dp"
+          android:paddingVertical="4dp"
+          android:text="০/৮ সম্পন্ন"
+          android:textColor="@color/accent_mint"
+          android:textSize="11.5sp"
+          android:textStyle="bold" />
+      </LinearLayout>
+
+      <LinearLayout
+        android:id="@+id/layoutSunnahChecklistContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+    </LinearLayout>
+  </androidx.core.widget.NestedScrollView>
+</LinearLayout>

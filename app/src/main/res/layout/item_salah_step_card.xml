@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:id="@+id/cardSalahStep"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_marginBottom="12dp"
+  app:cardBackgroundColor="@color/bg_card"
+  app:cardCornerRadius="16dp"
+  app:cardElevation="0dp"
+  app:strokeColor="@color/border_card"
+  app:strokeWidth="1dp">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Top Header: Step Number & Title -->
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+          android:id="@+id/tvStepNumberBadge"
+          android:layout_width="28dp"
+          android:layout_height="28dp"
+          android:background="@drawable/bg_badge_pill"
+          android:backgroundTint="@color/bg_badge_pill"
+          android:gravity="center"
+          android:text="১"
+          android:textColor="@color/accent_mint"
+          android:textSize="12.5sp"
+          android:textStyle="bold" />
+
+        <TextView
+          android:id="@+id/tvStepTitle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="10dp"
+          android:text="তাকবীরে তাহরীমা ও নিয়ত"
+          android:textColor="@color/text_primary"
+          android:textSize="14.5sp"
+          android:textStyle="bold" />
+      </LinearLayout>
+
+      <!-- Action Buttons: Copy & Share -->
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal">
+
+        <ImageView
+          android:id="@+id/btnCopyStep"
+          android:layout_width="28dp"
+          android:layout_height="28dp"
+          android:layout_marginEnd="6dp"
+          android:background="@drawable/bg_badge_pill"
+          android:padding="6dp"
+          android:src="@drawable/ic_copy"
+          app:tint="@color/text_secondary" />
+
+        <ImageView android:id="@+id/btnShareStep"
+          android:layout_width="28dp"
+          android:layout_height="28dp"
+          android:background="@drawable/bg_badge_pill"
+          android:padding="6dp"
+          android:src="@drawable/ic_share"
+          app:tint="@color/accent_mint" />
+      </LinearLayout>
+    </RelativeLayout>
+
+    <!-- Instruction Text -->
+    <TextView
+      android:id="@+id/tvStepInstruction"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:lineSpacingExtra="3dp"
+      android:text="মনে মনে নির্দিষ্ট সালাতের সংকল্প করে দুই হাত কান পর্যন্ত উঠিয়ে 'আল্লাহু আকবার' বলে হাত বাঁধা।"
+      android:textColor="@color/text_secondary"
+      android:textSize="13sp" />
+
+    <!-- Arabic Recitation Box (Visible if arabicText is available) -->
+    <LinearLayout
+      android:id="@+id/layoutArabicRecitation"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="12dp"
+      android:background="@drawable/bg_badge_pill"
+      android:backgroundTint="@color/bg_badge_pill"
+      android:orientation="vertical"
+      android:padding="14dp">
+
+      <TextView
+        android:id="@+id/tvStepArabic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:lineSpacingExtra="6dp"
+        android:text="اللَّهُ أَكْبَرُ"
+        android:textColor="@color/accent_mint"
+        android:textSize="19sp"
+        android:textStyle="bold" />
+
+      <TextView
+        android:id="@+id/tvStepTransliteration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="উচ্চারণ: আল্লাহু আকবার"
+        android:textColor="@color/text_primary"
+        android:textSize="12.5sp"
+        android:textStyle="bold" />
+
+      <TextView
+        android:id="@+id/tvStepTranslation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:lineSpacingExtra="2dp"
+        android:text="অর্থ: আল্লাহ মহান।"
+        android:textColor="@color/text_secondary"
+        android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- Authentic Reference Badge -->
+    <LinearLayout
+      android:id="@+id/layoutStepReference"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:background="@drawable/bg_badge_pill"
+      android:gravity="center_vertical"
+      android:orientation="horizontal"
+      android:paddingHorizontal="10dp"
+      android:paddingVertical="4dp">
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="11sp" />
+
+      <TextView
+        android:id="@+id/tvStepReference"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="সহীহ বুখারী ৭৩৮"
+        android:textColor="@color/text_secondary"
+        android:textSize="11sp" />
+    </LinearLayout>
+  </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

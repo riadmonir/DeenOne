@@ -1,0 +1,31 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="360dp"
+    android:height="120dp"
+    android:viewportWidth="360"
+    android:viewportHeight="120">
+
+    <path
+        android:pathData="M 0,120 L 0,95
+        L 20,95 L 20,60 L 25,60 L 22.5,45 L 25,45 L 22.5,25 L 20,25 L 22.5,15 L 25,25 L 22.5,45 L 25,60 L 30,60 L 30,95
+        L 55,95 C 55,80 65,70 75,70 C 85,70 95,80 95,95
+        L 115,95 L 115,50 L 120,50 L 117.5,35 L 120,35 L 117.5,10 L 115,10 L 117.5,2 L 120,10 L 117.5,35 L 120,50 L 125,50 L 125,95
+        L 145,95 C 145,72 160,55 180,55 C 200,55 215,72 215,95
+        L 235,95 L 235,50 L 240,50 L 237.5,35 L 240,35 L 237.5,10 L 235,10 L 237.5,2 L 240,10 L 237.5,35 L 240,50 L 245,50 L 245,95
+        L 265,95 C 265,80 275,70 285,70 C 295,70 305,80 305,95
+        L 330,95 L 330,60 L 335,60 L 332.5,45 L 335,45 L 332.5,25 L 330,25 L 332.5,15 L 335,25 L 332.5,45 L 335,60 L 340,60 L 340,95
+        L 360,95 L 360,120 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="180"
+                android:startY="0"
+                android:endX="180"
+                android:endY="120"
+                android:type="linear">
+                <item android:color="#00072018" android:offset="0.0" />
+                <item android:color="#1A24B37D" android:offset="0.6" />
+                <item android:color="#330D3528" android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+</vector>

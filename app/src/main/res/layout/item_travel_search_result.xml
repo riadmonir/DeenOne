@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:id="@+id/cardLocationResult"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_marginHorizontal="2dp"
+  android:layout_marginVertical="4dp"
+  android:clickable="true"
+  android:focusable="true"
+  app:cardBackgroundColor="@color/bg_card"
+  app:cardCornerRadius="14dp"
+  app:cardElevation="0dp"
+  app:strokeColor="@color/border_card"
+  app:strokeWidth="1dp"
+  app:rippleColor="#2034D399">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="12dp">
+
+    <!-- Icon Badge -->
+    <FrameLayout
+      android:id="@+id/badgeLocationIcon"
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      android:background="@drawable/circle_progress_bg"
+      android:backgroundTint="@color/bg_badge_pill">
+
+      <ImageView
+        android:id="@+id/ivLocationCategoryIcon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_location_pin"
+        app:tint="@color/accent_mint" />
+    </FrameLayout>
+
+    <!-- Text Information -->
+    <LinearLayout
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="12dp"
+      android:layout_marginEnd="8dp"
+      android:layout_weight="1"
+      android:orientation="vertical">
+
+      <TextView
+        android:id="@+id/tvLocationTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="মক্কা মুকাররমা"
+        android:textColor="@color/text_primary"
+        android:textSize="14.5sp"
+        android:textStyle="bold" />
+
+      <TextView
+        android:id="@+id/tvLocationSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="সৌদি আরব • পবিত্র কাবা শরীফ"
+        android:textColor="@color/text_secondary"
+        android:textSize="11.5sp" />
+    </LinearLayout>
+
+    <!-- Distance from Origin Badge -->
+    <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:gravity="end"
+      android:orientation="vertical">
+
+      <TextView
+        android:id="@+id/tvLocationDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_badge_pill"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="3dp"
+        android:text="২৪৫ কিমি"
+        android:textColor="@color/accent_mint"
+        android:textSize="11sp"
+        android:textStyle="bold" />
+
+      <ImageView
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/ic_arrow_forward"
+        app:tint="@color/text_secondary" />
+    </LinearLayout>
+  </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/bg_main"
+  android:orientation="vertical">
+
+  <!-- 1. GLOBAL TOP APP BAR (Standard DeenOne Style) -->
+  <RelativeLayout
+    android:id="@+id/layoutTopHeader"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_top_bar"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="12dp"
+    android:paddingBottom="12dp">
+
+    <FrameLayout
+      android:id="@+id/btnCloseBloodNetwork"
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      android:layout_alignParentStart="true"
+      android:layout_centerVertical="true"
+      android:background="@drawable/bg_circular_counter"
+      android:backgroundTint="@color/bg_badge_pill"
+      android:clickable="true"
+      android:focusable="true">
+
+      <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_arrow_back"
+        app:tint="@color/accent_mint" />
+    </FrameLayout>
+
+    <!-- Center: DeenOne Brand Logo -->
+    <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerInParent="true"
+      android:gravity="center"
+      android:orientation="horizontal">
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Deen"
+        android:textColor="@color/text_primary"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="One"
+        android:textColor="@color/accent_mint"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Right: Theme Toggle + Standing Divider + Notification Bell -->
+    <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentEnd="true"
+      android:layout_centerVertical="true"
+      android:gravity="center_vertical"
+      android:orientation="horizontal">
+
+      <FrameLayout
+        android:id="@+id/btnBloodThemeToggle"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/bg_circular_counter"
+        android:backgroundTint="@color/bg_badge_pill"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageView
+          android:id="@+id/ivBloodThemeIcon"
+          android:layout_width="20dp"
+          android:layout_height="20dp"
+          android:layout_gravity="center"
+          android:src="@drawable/ic_moon"
+          app:tint="@color/accent_mint" />
+      </FrameLayout>
+
+      <View
+        android:layout_width="1.5dp"
+        android:layout_height="20dp"
+        android:layout_marginHorizontal="6dp"
+        android:background="@color/border_card" />
+
+      <FrameLayout
+        android:id="@+id/btnBloodNotification"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/bg_circular_counter"
+        android:backgroundTint="@color/bg_badge_pill"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageView
+          android:layout_width="20dp"
+          android:layout_height="20dp"
+          android:layout_gravity="center"
+          android:src="@drawable/ic_notifications"
+          app:tint="@color/accent_mint" />
+
+        <View
+          android:layout_width="8dp"
+          android:layout_height="8dp"
+          android:layout_gravity="top|end"
+          android:layout_marginTop="7dp"
+          android:layout_marginEnd="7dp"
+          android:background="@drawable/bg_circular_counter"
+          android:backgroundTint="#EF4444" />
+      </FrameLayout>
+    </LinearLayout>
+  </RelativeLayout>
+
+  <!-- SCROLLABLE BODY CONTENT (100% VERBATIM MATCH TO SCREENSHOTS) -->
+  <androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:overScrollMode="never"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="12dp"
+    android:paddingBottom="32dp">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <!-- 2. TOP HERO CRIMSON/RED CARD -->
+      <LinearLayout
+        android:id="@+id/cardBloodHero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_blood_hero_card"
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="18dp">
+
+        <!-- Pill Badge: DEENONE BLOOD HUB -->
+        <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="@drawable/bg_badge_pill"
+          android:backgroundTint="#33FFFFFF"
+          android:paddingHorizontal="10dp"
+          android:paddingVertical="4dp">
+
+          <TextView
+            android:id="@+id/tvBloodHeroBadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:letterSpacing="0.06"
+            android:text="DEENONE BLOOD HUB"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Main Title: রক্তদান করুন, মানুষের পাশে থাকুন -->
+        <TextView
+          android:id="@+id/tvBloodHeroTitle"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="10dp"
+          android:lineSpacingExtra="3dp"
+          android:text="রক্তদান করুন, মানুষের পাশে\nথাকুন"
+          android:textColor="#FFFFFF"
+          android:textSize="18sp"
+          android:textStyle="bold" />
+      </LinearLayout>
+
+      <!-- 3. 2x2 FEATURE GRID (Uniform compact size for all 4 action buttons) -->
+      <!-- Row 1: ডোনার খুঁজুন | জরুরী রক্ত প্রয়োজন -->
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <!-- Card 1: ডোনার খুঁজুন -->
+        <androidx.cardview.widget.CardView
+          android:id="@+id/cardFindDonor"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_marginEnd="5dp"
+          android:layout_weight="1"
+          app:cardBackgroundColor="@color/bg_card"
+          app:cardCornerRadius="16dp"
+          app:cardElevation="0dp">
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingHorizontal="14dp"
+            android:paddingVertical="14dp">
+
+            <ImageView
+              android:layout_width="26dp"
+              android:layout_height="26dp"
+              android:src="@drawable/ic_blood_user_search" />
+
+            <TextView
+              android:id="@+id/tvFindDonorTitle"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="10dp"
+              android:ellipsize="end"
+              android:maxLines="1"
+              android:text="ডোনার খুঁজুন"
+              android:textColor="@color/text_primary"
+              android:textSize="14sp"
+              android:textStyle="bold" />
+
+            <TextView
+              android:id="@+id/tvFindDonorSubtitle"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="2dp"
+              android:ellipsize="end"
+              android:maxLines="1"
+              android:text="আশেপাশে ডোনার সন্ধান করুন"
+              android:textColor="@color/text_secondary"
+              android:textSize="11sp" />
+          </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card 2: জরুরী রক্ত প্রয়োজন -->
+        <androidx.cardview.widget.CardView
+          android:id="@+id/cardEmergencyNeed"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_marginStart="5dp"
+          android:layout_weight="1"
+          app:cardBackgroundColor="@color/bg_card"
+          app:cardCornerRadius="16dp"
+          app:cardElevation="0dp">
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingHorizontal="14dp"
+            android:paddingVertical="14dp">
+
+            <ImageView
+              android:layout_width="26dp"
+              android:layout_height="26dp"
+              android:src="@drawable/ic_emergency_asterisk" />
+
+            <TextView
+              android:id="@+id/tvEmergencyNeedTitle"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="10dp"
+              android:ellipsize="end"
+              android:maxLines="1"
+              android:text="জরুরী রক্ত প্রয়োজন"
+              android:textColor="@color/text_primary"
+              android:textSize="14sp"
+              android:textStyle="bold" />
+
+            <TextView
+              android:id="@+id/tvEmergencyNeedSubtitle"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="2dp"
+              android:ellipsize="end"
+              android:maxLines="1"
+              android:text="রক্তের আবেদন পোস্ট করুন"
+              android:textColor="@color/text_secondary"
+              android:textSize="11sp" />
+          </LinearLayout>
+        </androidx.cardview.widget.CardView>
+      </LinearLayout>
+
+      <!-- Row 2: ডোনার হন | সব আবেদন -->
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <!-- Card 3: ডোনার হন -->
+        <androidx.cardview.widget.CardView
+          android:id="@+id/cardBecomeDonor"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_marginEnd="5dp"
+          android:layout_weight="1"
+          app:cardBackgroundColor="@color/bg_card"
+          app:cardCornerRadius="16dp"
+          app:cardElevation="0dp">
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingHorizontal="14dp"
+            android:paddingVertical="14dp">
+
+            <ImageView
+              android:layout_width="26dp"
+              android:layout_height="26dp"
+              android:src="@drawable/ic_blood_donor_hand" />
+
+            <TextView
+              android:id="@+id/tvBecomeDonorTitle"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="10dp"
+              android:ellipsize="end"
+              android:maxLines="1"
+              android:text="ডোনার হন"
+              android:textColor="@color/text_primary"
+              android:textSize="14sp"
+              android:textStyle="bold" />
+
+            <TextView
+              android:id="@+id/tvBecomeDonorSubtitle"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="2dp"
+              android:ellipsize="end"
+              android:maxLines="1"
+              android:text="রক্তদাতা হিসেবে নিবন্ধন করুন"
+              android:textColor="@color/text_secondary"
+              android:textSize="11sp" />
+          </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card 4: সব আবেদন -->
+        <androidx.cardview.widget.CardView
+          android:id="@+id/cardAllRequests"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_marginStart="5dp"
+          android:layout_weight="1"
+          app:cardBackgroundColor="@color/bg_card"
+          app:cardCornerRadius="16dp"
+          app:cardElevation="0dp">
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingHorizontal="14dp"
+            android:paddingVertical="14dp">
+
+            <ImageView
+              android:layout_width="26dp"
+              android:layout_height="26dp"
+              android:src="@drawable/ic_blood_all_requests" />
+
+            <TextView
+              android:id="@+id/tvAllRequestsTitle"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="10dp"
+              android:ellipsize="end"
+              android:maxLines="1"
+              android:text="সব আবেদন"
+              android:textColor="@color/text_primary"
+              android:textSize="14sp"
+              android:textStyle="bold" />
+
+            <TextView
+              android:id="@+id/tvAllRequestsSubtitle"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="2dp"
+              android:ellipsize="end"
+              android:maxLines="1"
+              android:text="রক্তের সব রিকোয়েস্ট দেখুন"
+              android:textColor="@color/text_secondary"
+              android:textSize="11sp" />
+          </LinearLayout>
+        </androidx.cardview.widget.CardView>
+      </LinearLayout>
+
+      <!-- 4. 3 FULL-WIDTH ACTION ROWS (Exact Match to Screenshot 1 & 2) -->
+      <!-- Action Row 1: রক্তদাতা কমিউনিটি -->
+      <androidx.cardview.widget.CardView
+        android:id="@+id/cardDonorCommunity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center_vertical"
+          android:orientation="horizontal"
+          android:paddingHorizontal="16dp"
+          android:paddingVertical="16dp">
+
+          <!-- Icon Container (Indigo/Purple Circle or Rounded Square) -->
+          <FrameLayout
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="@drawable/bg_badge_pill"
+            android:backgroundTint="#1E1B4B">
+
+            <ImageView
+              android:layout_width="22dp"
+              android:layout_height="22dp"
+              android:layout_gravity="center"
+              android:src="@drawable/ic_group_people"
+              app:tint="#818CF8" />
+          </FrameLayout>
+
+          <!-- Text Block -->
+          <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+              android:id="@+id/tvDonorCommunityTitle"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="রক্তদাতা কমিউনিটি"
+              android:textColor="@color/text_primary"
+              android:textSize="15sp"
+              android:textStyle="bold" />
+
+            <TextView
+              android:id="@+id/tvDonorCommunitySubtitle"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="3dp"
+              android:text="আপনার কাছাকাছি রক্তদাতা সংগঠন ও স্বেচ্ছাসেবী গ্রুপসমূহ"
+              android:textColor="@color/text_secondary"
+              android:textSize="12sp" />
+          </LinearLayout>
+
+          <!-- Chevron Right Icon -->
+          <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_chevron_right"
+            app:tint="@color/text_secondary" />
+        </LinearLayout>
+      </androidx.cardview.widget.CardView>
+
+      <!-- Action Row 2: রক্তদান নির্দেশিকা -->
+      <androidx.cardview.widget.CardView
+        android:id="@+id/cardDonationGuideline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center_vertical"
+          android:orientation="horizontal"
+          android:paddingHorizontal="16dp"
+          android:paddingVertical="16dp">
+
+          <!-- Icon Container (Blue Square) -->
+          <FrameLayout
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="@drawable/bg_badge_pill"
+            android:backgroundTint="#2563EB">
+
+            <ImageView
+              android:layout_width="22dp"
+              android:layout_height="22dp"
+              android:layout_gravity="center"
+              android:src="@drawable/ic_menu_book"
+              app:tint="#FFFFFF" />
+          </FrameLayout>
+
+          <!-- Text Block -->
+          <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+              android:id="@+id/tvDonationGuidelineTitle"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="রক্তদান নির্দেশিকা"
+              android:textColor="@color/text_primary"
+              android:textSize="15sp"
+              android:textStyle="bold" />
+
+            <TextView
+              android:id="@+id/tvDonationGuidelineSubtitle"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="3dp"
+              android:text="রক্তদানের নিয়ম ও যোগ্যতা জানুন"
+              android:textColor="@color/text_secondary"
+              android:textSize="12sp" />
+          </LinearLayout>
+
+          <!-- Chevron Right Icon -->
+          <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_chevron_right"
+            app:tint="@color/text_secondary" />
+        </LinearLayout>
+      </androidx.cardview.widget.CardView>
+
+      <!-- Action Row 3: নিরাপত্তা ও সতর্কতা -->
+      <androidx.cardview.widget.CardView
+        android:id="@+id/cardSafetyCaution"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center_vertical"
+          android:orientation="horizontal"
+          android:paddingHorizontal="16dp"
+          android:paddingVertical="16dp">
+
+          <!-- Icon Container (Amber / Orange Square) -->
+          <FrameLayout
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="@drawable/bg_badge_pill"
+            android:backgroundTint="#F59E0B">
+
+            <ImageView
+              android:layout_width="22dp"
+              android:layout_height="22dp"
+              android:layout_gravity="center"
+              android:src="@drawable/ic_shield_alert"
+              app:tint="#FFFFFF" />
+          </FrameLayout>
+
+          <!-- Text Block -->
+          <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+              android:id="@+id/tvSafetyCautionTitle"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="নিরাপত্তা ও সতর্কতা"
+              android:textColor="@color/text_primary"
+              android:textSize="15sp"
+              android:textStyle="bold" />
+
+            <TextView
+              android:id="@+id/tvSafetyCautionSubtitle"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="3dp"
+              android:text="প্রতারণা রোধ করতে নিয়মাবলি পড়ুন"
+              android:textColor="@color/text_secondary"
+              android:textSize="12sp" />
+          </LinearLayout>
+
+          <!-- Chevron Right Icon -->
+          <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_chevron_right"
+            app:tint="@color/text_secondary" />
+        </LinearLayout>
+      </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+  </androidx.core.widget.NestedScrollView>
+</LinearLayout>

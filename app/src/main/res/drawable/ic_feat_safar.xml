@@ -1,0 +1,21 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="28dp"
+    android:height="28dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Safar Traveler Mode (সফর মোড ও মুসাফির সালাত গাইড) -->
+    <!-- Travel Bag / Suitcase Frame -->
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M17,6V4C17,2.9 16.1,2 15,2H9C7.9,2 7,2.9 7,4V6H3C1.9,6 1,6.9 1,8V19C1,20.1 1.9,21 3,21H21C22.1,21 23,20.1 23,19V8C23,6.9 22.1,6 21,6H17M9,4H15V6H9V4M21,19H3V8H21V19Z" />
+
+    <!-- Safar Qibla/Direction Compass Star inside Bag -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M12,9L13,11.5L15.5,12.5L13,13.5L12,16L11,13.5L8.5,12.5L11,11.5L12,9Z" />
+
+    <!-- Travel Straps -->
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M7,8H8.5V19H7V8M15.5,8H17V19H15.5V8Z" />
+</vector>

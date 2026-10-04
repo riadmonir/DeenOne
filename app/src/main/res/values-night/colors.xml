@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- DARK THEME SEMANTIC COLORS (res/values-night/colors.xml) -->
+    <color name="bg_splash">#061915</color>
+    <color name="bg_main">#061915</color>
+    <color name="bg_top_bar">#061915</color>
+    <color name="bg_secondary">#041411</color>
+    <color name="bg_card">#081F19</color>
+    <color name="bg_card_secondary">#0E2B23</color>
+    <color name="bg_card_active">#103B2E</color>
+    <color name="bg_card_alt">#0E2B23</color>
+    <color name="bg_card_subtle">#041411</color>
+    <color name="bg_green_tint">#0A2B22</color>
+    <color name="bg_bottom_nav">#061914</color>
+    <color name="bg_tab_active">#104436</color>
+    <color name="bg_badge_pill">#0A2B22</color>
+    <color name="bg_hajj_summary">#0D2E26</color>
+    <color name="border_hajj_summary">#1A4D41</color>
+
+    <!-- Borders and Dividers -->
+    <color name="border_card">#123D32</color>
+    <color name="border_card_glass">#245849</color>
+    <color name="border_color">#123D32</color>
+    <color name="border_active">#35D99B</color>
+    <color name="border_subtle">#123D32</color>
+    <color name="border_pill">#144A3C</color>
+    <color name="divider_color">#123D32</color>
+
+    <!-- Brand & Accent Colors -->
+    <color name="primary_green">#35D99B</color>
+    <color name="bright_green">#42E6A6</color>
+    <color name="dark_green">#123D32</color>
+    <color name="accent_mint">#35D99B</color>
+    <color name="mint_accent">#35D99B</color>
+    <color name="accent_green">#35D99B</color>
+    <color name="accent_cyan">#38BDF8</color>
+    <color name="accent_blue">#3B82F6</color>
+    <color name="accent_gold">#F59E0B</color>
+    <color name="accent_orange">#F97316</color>
+    <color name="accent_red">#EF4444</color>
+    <color name="accent_purple">#A855F7</color>
+    <color name="accent_teal">#2DD4BF</color>
+    <color name="bukhari_emerald_header">#0E7051</color>
+    <color name="bukhari_hexagon_badge">#0D8A61</color>
+    <color name="table_header_bg">#115E59</color>
+    <color name="gold_badge_bg">#78350F</color>
+    <color name="gold_badge_text">#FDE68A</color>
+    <color name="badge_pill_red_bg">#3B1215</color>
+    <color name="badge_pill_red_text">#F87171</color>
+    <color name="badge_pill_red_border">#7F1D1D</color>
+    <color name="badge_pill_amber_bg">#2E1B05</color>
+    <color name="badge_pill_amber_text">#F59E0B</color>
+
+    <!-- Feature Grid Specific Tint Backgrounds -->
+    <color name="feat_bg_tasbih">#0F3A30</color>
+    <color name="feat_bg_azkar">#381F0A</color>
+    <color name="feat_bg_qibla">#152D32</color>
+    <color name="feat_bg_journey">#0E3B27</color>
+    <color name="feat_bg_sleep">#171E3C</color>
+    <color name="feat_bg_blood">#3C1215</color>
+    <color name="feat_bg_audio">#0F3A2C</color>
+    <color name="feat_bg_book">#103833</color>
+    <color name="feat_bg_hadith">#102838</color>
+    <color name="feat_bg_dua">#381028</color>
+    <color name="feat_bg_amal">#102738</color>
+    <color name="feat_bg_quiz">#291238</color>
+    <color name="feat_bg_mosque">#103338</color>
+    <color name="feat_bg_safar">#102B38</color>
+    <color name="feat_bg_jumma">#0E3827</color>
+    <color name="feat_bg_eid">#38320E</color>
+    <color name="feat_bg_janaza">#103538</color>
+    <color name="feat_bg_roza">#38230E</color>
+    <color name="feat_bg_khatam">#0E3827</color>
+    <color name="feat_bg_ayah">#103834</color>
+    <color name="feat_bg_hajj">#382B10</color>
+    <color name="feat_bg_zakat">#281238</color>
+    <color name="feat_bg_99names">#383110</color>
+    <color name="feat_bg_calendar">#102B38</color>
+
+    <!-- Quiz Card Purple Shades -->
+    <color name="quiz_bg_start">#26103D</color>
+    <color name="quiz_bg_end">#160724</color>
+    <color name="quiz_border">#50237C</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#F5F7F6</color>
+    <color name="text_secondary">#A8B7B2</color>
+    <color name="text_muted">#6E807A</color>
+    <color name="text_mint">#42E6A6</color>
+    <color name="text_mint_bright">#35D99B</color>
+    <color name="text_cyan">#38BDF8</color>
+    <color name="text_gold">#FBBF24</color>
+    <color name="text_dark">#061915</color>
+
+    <!-- Al-Quran Surah Star Rosette Badge Colors (Dark Theme) -->
+    <color name="quran_star_halo">#3035D99B</color>
+    <color name="quran_star_fill">#0F3D35</color>
+    <color name="quran_star_border">#4035D99B</color>
+    <color name="quran_star_text">#35D99B</color>
+
+    <!-- Makki / Madani Surah Revelation Badge Colors (Dark Theme) -->
+    <color name="bg_surah_makki">#2E200B</color>
+    <color name="border_surah_makki">#5C3E10</color>
+    <color name="text_surah_makki">#FB923C</color>
+    <color name="bg_surah_madani">#0C2B38</color>
+    <color name="border_surah_madani">#164E63</color>
+    <color name="text_surah_madani">#38BDF8</color>
+
+    <!-- Button Semantic Lighting & Contrast Tokens (Dark Theme) -->
+    <color name="btn_save_bg_start">#10B981</color>
+    <color name="btn_save_bg_end">#047857</color>
+    <color name="btn_save_border">#8034D399</color>
+    <color name="btn_save_text">#FFFFFF</color>
+    <color name="btn_cancel_bg">#0F2D25</color>
+    <color name="btn_cancel_border">#1D4D3F</color>
+    <color name="btn_cancel_text">#F5F7F6</color>
+
+    <!-- Standard Basics -->
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
+</resources>

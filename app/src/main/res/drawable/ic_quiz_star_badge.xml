@@ -1,0 +1,18 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="36dp"
+    android:height="36dp"
+    android:viewportWidth="36"
+    android:viewportHeight="36">
+    <!-- Rounded rect background with warm tint -->
+    <path
+        android:fillColor="#FEF3C7"
+        android:pathData="M8,0 H28 A8,8 0 0 1 36,8 V28 A8,8 0 0 1 28,36 H8 A8,8 0 0 1 0,28 V8 A8,8 0 0 1 8,0 Z" />
+    <!-- Center circular badge in orange -->
+    <path
+        android:fillColor="#EA580C"
+        android:pathData="M18,18m-11.5,0a11.5,11.5 0 1,0 23,0a11.5,11.5 0 1,0 -23,0" />
+    <!-- White 5-point Star -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M18,22.36L22.33,25L21.18,20.08L25,16.67L19.97,16.24L18,11.6L16.03,16.24L11,16.67L14.82,20.08L13.67,25Z" />
+</vector>

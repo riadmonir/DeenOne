@@ -1,0 +1,21 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="28dp"
+    android:height="28dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Khatam Planner (কুরআন খতম প্ল্যানার ও বুকমার্ক) -->
+    <!-- Quran Book Structure -->
+    <path
+        android:fillColor="#34D399"
+        android:pathData="M18,2H6C4.9,2 4,2.9 4,4V20C4,21.1 4.9,22 6,22H18C19.1,22 20,21.1 20,20V4C20,2.9 19.1,2 18,2M18,20H6V4H7V20H18Z" />
+
+    <!-- Khatam Bookmark Ribbon Hanging Down -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M10,2V14L13,11.5L16,14V2H10Z" />
+
+    <!-- Islamic Star on Quran Cover -->
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M11.5,16L12.1,17.2L13.5,17.4L12.5,18.4L12.7,19.8L11.5,19.1L10.3,19.8L10.5,18.4L9.5,17.4L10.9,17.2Z" />
+</vector>

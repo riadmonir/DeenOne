@@ -1,0 +1,94 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="160dp"
+    android:viewportWidth="200"
+    android:viewportHeight="160">
+
+    <!-- Foreground / Background Hill Base Layer -->
+    <path
+        android:fillColor="#260F14"
+        android:pathData="M 60,160 Q 110,110 180,115 Q 200,117 200,160 Z" />
+
+    <path
+        android:fillColor="#38151D"
+        android:pathData="M 80,160 Q 130,125 200,130 L 200,160 Z" />
+
+    <!-- Left Small Minaret -->
+    <path
+        android:fillColor="#7F2D3A"
+        android:pathData="M 124,120 L 128,120 L 128,145 L 124,145 Z" />
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M 123,120 L 126,95 L 129,120 Z" />
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M 126,93 L 126,95 Z" />
+
+    <!-- Right Small Minaret -->
+    <path
+        android:fillColor="#7F2D3A"
+        android:pathData="M 174,120 L 178,120 L 178,145 L 174,145 Z" />
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M 173,120 L 176,95 L 179,120 Z" />
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M 176,93 L 176,95 Z" />
+
+    <!-- Mosque Wall Base Structure -->
+    <path
+        android:fillColor="#5A1E27"
+        android:pathData="M 130,105 L 172,105 L 174,148 L 128,148 Z" />
+
+    <!-- Arch Windows / Entrance on Main Structure -->
+    <path
+        android:fillColor="#150B0D"
+        android:pathData="M 148,122 Q 151,114 154,122 L 154,148 L 148,148 Z" />
+    <path
+        android:fillColor="#150B0D"
+        android:pathData="M 134,128 Q 137,122 140,128 L 140,145 L 134,145 Z" />
+    <path
+        android:fillColor="#150B0D"
+        android:pathData="M 162,128 Q 165,122 168,128 L 168,145 L 162,145 Z" />
+
+    <!-- Mosque Cornice / Balcony Rim -->
+    <path
+        android:fillColor="#8C2C3B"
+        android:pathData="M 127,103 L 175,103 L 175,106 L 127,106 Z" />
+
+    <!-- Dome Base Cylindrical Drum -->
+    <path
+        android:fillColor="#8C2C3B"
+        android:pathData="M 136,95 L 166,95 L 168,103 L 134,103 Z" />
+
+    <!-- Main Dome Body Curve -->
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M 133,96 C 133,70 144,52 151,46 C 158,52 169,70 169,96 Z" />
+
+    <!-- Dome Shading / Highlight Layer -->
+    <path
+        android:fillColor="#DC2626"
+        android:pathData="M 151,46 C 158,52 169,70 169,96 L 151,96 Z" />
+    <path
+        android:fillColor="#F87171"
+        android:pathData="M 137,88 C 138,72 144,58 148,50 C 147,60 142,76 141,88 Z" />
+
+    <!-- Spire on Top of Dome -->
+    <path
+        android:fillColor="#F59E0B"
+        android:strokeColor="#F59E0B"
+        android:strokeWidth="2"
+        android:pathData="M 151,46 L 151,32" />
+
+    <!-- Golden Crescent Moon -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M 151,32 C 148,32 146,30 146,27 C 146,24 148,22 151,22 C 150,23 149.5,25 149.5,27 C 149.5,29 150.5,30.5 151,32 Z" />
+
+    <!-- Foreground Dunes Overlay -->
+    <path
+        android:fillColor="#1C0A0E"
+        android:pathData="M 100,160 Q 150,135 200,140 L 200,160 Z" />
+
+</vector>

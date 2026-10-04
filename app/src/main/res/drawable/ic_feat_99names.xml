@@ -1,0 +1,10 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="28dp"
+    android:height="28dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- 99 Names of Allah Crescent and Star -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 17,20.73C15.54,19.67 14.6,17.95 14.6,16C14.6,12.69 17.29,10 20.6,10C21.09,10 21.56,10.06 22,10.17C21.84,5.6 17.38,2 12,2M19,12L19.63,13.62L21.25,14.25L19.63,14.88L19,16.5L18.38,14.88L16.75,14.25L18.38,13.62L19,12Z" />
+</vector>

@@ -1,0 +1,747 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/bg_main">
+
+  <!-- Top Header Bar in Sheet -->
+  <LinearLayout
+    android:id="@+id/layoutRamadanHeader"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_card"
+    android:orientation="vertical"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <!-- Global Top App Bar -->
+    <RelativeLayout
+      android:id="@+id/layoutTopHeader"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/bg_card"
+      android:paddingHorizontal="16dp"
+      android:paddingTop="12dp"
+      android:paddingBottom="12dp">
+
+      <FrameLayout
+        android:id="@+id/btnCloseRamadanSheet"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bg_circular_counter"
+        android:backgroundTint="@color/bg_badge_pill"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageView
+          android:layout_width="20dp"
+          android:layout_height="20dp"
+          android:layout_gravity="center"
+          android:src="@drawable/ic_arrow_back"
+          app:tint="@color/accent_mint" />
+      </FrameLayout>
+
+      <!-- Center: DeenOne Brand Logo -->
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Deen"
+          android:textColor="@color/text_primary"
+          android:textSize="22sp"
+          android:textStyle="bold" />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="One"
+          android:textColor="@color/accent_mint"
+          android:textSize="22sp"
+          android:textStyle="bold" />
+      </LinearLayout>
+
+      <!-- Right: Theme Toggle + Standing Divider + Notification Bell -->
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <FrameLayout
+          android:id="@+id/btnRamadanThemeToggle"
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:background="@drawable/bg_circular_counter"
+          android:backgroundTint="@color/bg_badge_pill"
+          android:clickable="true"
+          android:focusable="true">
+
+          <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_moon"
+            app:tint="@color/accent_mint" />
+        </FrameLayout>
+
+        <View
+          android:layout_width="1.5dp"
+          android:layout_height="20dp"
+          android:layout_marginHorizontal="6dp"
+          android:background="@color/border_card" />
+
+        <FrameLayout
+          android:id="@+id/btnRamadanNotification"
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:background="@drawable/bg_circular_counter"
+          android:backgroundTint="@color/bg_badge_pill"
+          android:clickable="true"
+          android:focusable="true">
+
+          <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_notifications"
+            app:tint="@color/accent_mint" />
+
+          <View
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_gravity="top|end"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="7dp"
+            android:background="@drawable/bg_circular_counter"
+            android:backgroundTint="@color/accent_mint" />
+        </FrameLayout>
+      </LinearLayout>
+    </RelativeLayout>
+
+    <!-- Subheader: Page Title & Ramadan Status Badge -->
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/bg_card"
+      android:paddingHorizontal="16dp"
+      android:paddingBottom="12dp">
+
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="পবিত্র মাহে রমজান ও রোজা"
+          android:textColor="@color/text_primary"
+          android:textSize="16.5sp"
+          android:textStyle="bold" />
+
+        <TextView
+          android:id="@+id/tvRamadanLiveDateBadge"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="2dp"
+          android:text="রিয়েল-টাইম সেহরি, ইফতার ও সহীহ গাইড"
+          android:textColor="@color/accent_gold"
+          android:textSize="11sp" />
+      </LinearLayout>
+
+      <TextView
+        android:id="@+id/tvRamadanStatusBadge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bg_badge_pill"
+        android:backgroundTint="#2E1C05"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="5dp"
+        android:text="রমজান মাস"
+        android:textColor="@color/accent_gold"
+        android:textSize="11.5sp"
+        android:textStyle="bold" />
+    </RelativeLayout>
+
+    <!-- Horizontal Topics Tabs -->
+    <HorizontalScrollView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="12dp"
+      android:overScrollMode="never"
+      android:scrollbars="none">
+
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+          android:id="@+id/tabRamadan1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="6dp"
+          android:background="@drawable/bg_card_active"
+          android:paddingHorizontal="12dp"
+          android:paddingVertical="6dp"
+          android:text="১. বিধান ও ফরজ"
+          android:textColor="@color/accent_mint"
+          android:textSize="11.5sp"
+          android:textStyle="bold" />
+
+        <TextView
+          android:id="@+id/tabRamadan2"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="6dp"
+          android:background="@drawable/bg_badge_pill"
+          android:paddingHorizontal="12dp"
+          android:paddingVertical="6dp"
+          android:text="২. রোজা ভঙ্গ"
+          android:textColor="@color/text_secondary"
+          android:textSize="11.5sp" />
+
+        <TextView
+          android:id="@+id/tabRamadan3"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="6dp"
+          android:background="@drawable/bg_badge_pill"
+          android:paddingHorizontal="12dp"
+          android:paddingVertical="6dp"
+          android:text="৩. অনুমোদিত বিষয়"
+          android:textColor="@color/text_secondary"
+          android:textSize="11.5sp" />
+
+        <TextView
+          android:id="@+id/tabRamadan4"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="6dp"
+          android:background="@drawable/bg_badge_pill"
+          android:paddingHorizontal="12dp"
+          android:paddingVertical="6dp"
+          android:text="৪. মাকরুহ বিষয়"
+          android:textColor="@color/text_secondary"
+          android:textSize="11.5sp" />
+
+        <TextView
+          android:id="@+id/tabRamadan5"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="6dp"
+          android:background="@drawable/bg_badge_pill"
+          android:paddingHorizontal="12dp"
+          android:paddingVertical="6dp"
+          android:text="৫. সেহরি ও ইফতার"
+          android:textColor="@color/text_secondary"
+          android:textSize="11.5sp" />
+
+        <TextView
+          android:id="@+id/tabRamadan6"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="6dp"
+          android:background="@drawable/bg_badge_pill"
+          android:paddingHorizontal="12dp"
+          android:paddingVertical="6dp"
+          android:text="৬. তারাবীহ ও কিয়াম"
+          android:textColor="@color/text_secondary"
+          android:textSize="11.5sp" />
+
+        <TextView
+          android:id="@+id/tabRamadan7"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="6dp"
+          android:background="@drawable/bg_badge_pill"
+          android:paddingHorizontal="12dp"
+          android:paddingVertical="6dp"
+          android:text="৭. লাইলাতুল কদর"
+          android:textColor="@color/text_secondary"
+          android:textSize="11.5sp" />
+
+        <TextView
+          android:id="@+id/tabRamadan8"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="6dp"
+          android:background="@drawable/bg_badge_pill"
+          android:paddingHorizontal="12dp"
+          android:paddingVertical="6dp"
+          android:text="৮. যাকাত ও ফিতরাহ"
+          android:textColor="@color/text_secondary"
+          android:textSize="11.5sp" />
+
+        <TextView
+          android:id="@+id/tabRamadan9"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="6dp"
+          android:background="@drawable/bg_badge_pill"
+          android:paddingHorizontal="12dp"
+          android:paddingVertical="6dp"
+          android:text="৯. বিশেষ আমল"
+          android:textColor="@color/text_secondary"
+          android:textSize="11.5sp" />
+
+        <TextView
+          android:id="@+id/tabRamadan10"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="@drawable/bg_badge_pill"
+          android:paddingHorizontal="12dp"
+          android:paddingVertical="6dp"
+          android:text="১০. কুরআন লক্ষ্য"
+          android:textColor="@color/text_secondary"
+          android:textSize="11.5sp" />
+      </LinearLayout>
+    </HorizontalScrollView>
+  </LinearLayout>
+
+  <!-- Scrollable Content -->
+  <androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:overScrollMode="never"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="12dp"
+    android:paddingBottom="24dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/layoutRamadanHeader">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <!-- Real-Time Fasting Countdown Card -->
+      <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardRamadanLiveCountdown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="16dp">
+
+          <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+              android:id="@+id/tvRamadanCountdownTitle"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentStart="true"
+              android:layout_centerVertical="true"
+              android:text="ইফতারের বাকি"
+              android:textColor="@color/accent_mint"
+              android:textSize="13sp"
+              android:textStyle="bold" />
+
+            <TextView
+              android:id="@+id/tvRamadanDaysRemainingPill"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentEnd="true"
+              android:layout_centerVertical="true"
+              android:background="@drawable/bg_badge_pill"
+              android:backgroundTint="@color/bg_badge_pill"
+              android:paddingHorizontal="8dp"
+              android:paddingVertical="3dp"
+              android:text="রমজান বাকি: ১৮ দিন"
+              android:textColor="@color/accent_mint"
+              android:textSize="11sp" />
+          </RelativeLayout>
+
+          <TextView
+            android:id="@+id/tvRamadanCountdownTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:text="০৩:৪৫"
+            android:textColor="@color/text_primary"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+          <!-- Fasting Progress Bar -->
+          <ProgressBar
+            android:id="@+id/progressFastingDay"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:layout_marginTop="8dp"
+            android:max="100"
+            android:progress="65"
+            android:progressDrawable="@drawable/progress_custom_horizontal" />
+
+          <TextView
+            android:id="@+id/tvRamadanDateInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="বর্তমানে পবিত্র রমজান মাস চলমান (১২ই রমজান ১৪৪৭ হিজরী)"
+            android:textColor="@color/text_secondary"
+            android:textSize="11.5sp" />
+
+          <!-- Real-time Times Grid -->
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_badge_pill"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <LinearLayout
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:gravity="center"
+              android:orientation="vertical">
+
+              <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="সেহরি শেষ"
+                android:textColor="@color/text_secondary"
+                android:textSize="10.5sp" />
+
+              <TextView
+                android:id="@+id/tvLiveSehriTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="০৪:৫২"
+                android:textColor="@color/accent_gold"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+            </LinearLayout>
+
+            <View
+              android:layout_width="1dp"
+              android:layout_height="match_parent"
+              android:background="@color/border_card" />
+
+            <LinearLayout
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:gravity="center"
+              android:orientation="vertical">
+
+              <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ফজর শুরু"
+                android:textColor="@color/text_secondary"
+                android:textSize="10.5sp" />
+
+              <TextView
+                android:id="@+id/tvLiveFajrTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="০৪:৫৫"
+                android:textColor="@color/text_primary"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+            </LinearLayout>
+
+            <View
+              android:layout_width="1dp"
+              android:layout_height="match_parent"
+              android:background="@color/border_card" />
+
+            <LinearLayout
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:gravity="center"
+              android:orientation="vertical">
+
+              <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="সূর্যাস্ত"
+                android:textColor="@color/text_secondary"
+                android:textSize="10.5sp" />
+
+              <TextView
+                android:id="@+id/tvLiveSunsetTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="০৫:৫৫"
+                android:textColor="@color/text_primary"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+            </LinearLayout>
+
+            <View
+              android:layout_width="1dp"
+              android:layout_height="match_parent"
+              android:background="@color/border_card" />
+
+            <LinearLayout
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:gravity="center"
+              android:orientation="vertical">
+
+              <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ইফতার শুরু"
+                android:textColor="@color/text_secondary"
+                android:textSize="10.5sp" />
+
+              <TextView
+                android:id="@+id/tvLiveIftarTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="০৫:৫৫"
+                android:textColor="@color/accent_mint"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+            </LinearLayout>
+          </LinearLayout>
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- Topic Title & Category Card -->
+      <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="16dp">
+
+          <TextView
+            android:id="@+id/tvRamadanTopicCategoryPill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card_active"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="3dp"
+            android:text="হুকুম: প্রাপ্তবয়স্ক সুস্থ মুসলিমের ওপর ফরজ"
+            android:textColor="@color/accent_mint"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+          <TextView
+            android:id="@+id/tvRamadanTopicTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="১. সিয়ামের সংজ্ঞা, হুকুম ও আবশ্যক শর্তসমূহ"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+          <TextView
+            android:id="@+id/tvRamadanTopicSummary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:lineSpacingExtra="4dp"
+            android:text="সিয়াম (রোজা) ইসলামের পঞ্চ স্তম্ভের অন্যতম মৌলিক ফরজ ইবাদত..."
+            android:textColor="@color/text_primary"
+            android:textSize="13sp" />
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- Detailed Instructions Card -->
+      <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:cardBackgroundColor="@color/bg_card_secondary"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="14dp">
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="বিস্তারিত আমল ও সুন্নাহ নির্দেশিকা:"
+            android:textColor="@color/accent_mint"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+          <TextView
+            android:id="@+id/tvRamadanTopicInstructions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:lineSpacingExtra="4dp"
+            android:text="• নিয়ত করা: মনে সংকল্প করা..."
+            android:textColor="@color/text_primary"
+            android:textSize="12.5sp" />
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- Allowed / Prohibited Rules Card -->
+      <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:cardBackgroundColor="@color/bg_card_secondary"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="14dp">
+
+          <TextView
+            android:id="@+id/tvRamadanRulesWarningTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="শরয়ী বিধান ও সতর্কতা:"
+            android:textColor="@color/accent_gold"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+          <TextView
+            android:id="@+id/tvRamadanTopicAllowedOrProhibited"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:lineSpacingExtra="3dp"
+            android:text="গর্ভবতী ও দুগ্ধদানকারী মা সন্তানের ক্ষতির আশঙ্কা থাকলে..."
+            android:textColor="@color/text_primary"
+            android:textSize="12.5sp" />
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- Authentic Masnoon Dua Card -->
+      <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:cardBackgroundColor="@color/bg_card_secondary"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/border_card"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="16dp">
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="সংশ্লিষ্ট প্রামাণ্য মাসনূন দোয়া বা কুরআনের আয়াত:"
+            android:textColor="@color/accent_mint"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+          <!-- Arabic -->
+          <TextView
+            android:id="@+id/tvRamadanTopicArabicDua"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_card_emerald"
+            android:gravity="center"
+            android:lineSpacingExtra="6dp"
+            android:padding="14dp"
+            android:text="يَا أَيُّهَا الَّذِينَ آمَنُوا كُتِبَ عَلَيْكُمُ الصِّيَامُ..."
+            android:textColor="@color/text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+          <!-- Transliteration -->
+          <TextView
+            android:id="@+id/tvRamadanTopicTransliteration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:lineSpacingExtra="3dp"
+            android:text="উচ্চারণ: ইয়া আইয়্যুহাল্লাযীনা আমানু..."
+            android:textColor="@color/text_primary"
+            android:textSize="13sp" />
+
+          <!-- Translation -->
+          <TextView
+            android:id="@+id/tvRamadanTopicTranslation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:lineSpacingExtra="3dp"
+            android:text="অর্থ: হে মুমিনগণ! তোমাদের ওপর রোজা ফরজ করা হয়েছে..."
+            android:textColor="@color/text_secondary"
+            android:textSize="12.5sp" />
+
+          <!-- Reference -->
+          <TextView
+            android:id="@+id/tvRamadanTopicReference"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="সূত্র: সূরা আল-বাকারা: ১৮৩, সহীহ বুখারী: ৮"
+            android:textColor="@color/accent_mint"
+            android:textSize="11.5sp"
+            android:textStyle="bold" />
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+  </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

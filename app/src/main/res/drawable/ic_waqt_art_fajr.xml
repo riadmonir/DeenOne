@@ -1,0 +1,42 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="44dp"
+    android:height="44dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+
+    <!-- Circle Clip Background -->
+    <path
+        android:pathData="M50,50m-48,0a48,48 0,1 1,96 0a48,48 0,1 1,-96 0">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:angle="90"
+                android:endColor="#FCA5A5"
+                android:startColor="#FED7AA"
+                android:type="linear" />
+        </aapt:attr>
+    </path>
+
+    <!-- Sun Glow at Dawn -->
+    <path
+        android:fillColor="#FEF08A"
+        android:pathData="M50,52m-16,0a16,16 0,1 1,32 0a16,16 0,1 1,-32 0" />
+
+    <!-- Mountain Silhouettes -->
+    <path
+        android:fillColor="#9333EA"
+        android:fillAlpha="0.3"
+        android:pathData="M2,80 L35,50 L65,75 L100,45 L100,100 L2,100 Z" />
+
+    <path
+        android:fillColor="#6B21A8"
+        android:pathData="M0,88 L30,62 L58,85 L85,60 L100,72 L100,100 L0,100 Z" />
+
+    <!-- Minaret Spire Silhouette -->
+    <path
+        android:fillColor="#4C1D95"
+        android:pathData="M72,40 L74,32 L76,40 L75,90 L73,90 Z" />
+    <path
+        android:fillColor="#4C1D95"
+        android:pathData="M71,46 L77,46 L77,50 L71,50 Z" />
+</vector>

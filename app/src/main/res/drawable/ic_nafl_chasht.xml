@@ -1,0 +1,120 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+
+    <!-- 1. Outer Soft Glow Ring -->
+    <path
+        android:fillColor="#1538BDF8"
+        android:pathData="M50,50m-48,0a48,48 0,1 1,96 0a48,48 0,1 1,-96 0" />
+
+    <!-- 2. Circular Base Background: Bright Morning Sapphire Sky -->
+    <path
+        android:pathData="M50,50m-44,0a44,44 0,1 1,88 0a44,44 0,1 1,-88 0">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:angle="90"
+                android:endColor="#0284C7"
+                android:startColor="#0C4A6E"
+                android:type="linear" />
+        </aapt:attr>
+    </path>
+
+    <!-- 3. Brilliant Mid-Morning Sun (Chasht / Duha Time) -->
+    <path
+        android:fillColor="#FEF08A"
+        android:pathData="M28,34 A10,10 0 1,0 28,14 A10,10 0 1,0 28,34 Z" />
+    <path
+        android:strokeColor="#BAE6FD"
+        android:strokeWidth="1.2"
+        android:strokeAlpha="0.6"
+        android:pathData="M28,10 L28,7 M17,16 L14,14 M39,16 L42,14 M13,24 L10,24 M43,24 L46,24 M17,32 L14,34 M39,32 L42,34" />
+
+    <!-- 4. Islamic Archway (মিহরাব ও তোরণ) framing the holy view -->
+    <path
+        android:strokeColor="#38BDF8"
+        android:strokeWidth="2.0"
+        android:pathData="M24,88 L24,52 C24,36 40,24 50,18 C60,24 76,36 76,52 L76,88" />
+    <path
+        android:strokeColor="#7DD3FC"
+        android:strokeWidth="1.0"
+        android:pathData="M28,88 L28,54 C28,40 42,30 50,24 C58,30 72,40 72,54 L72,88" />
+
+    <!-- 5. Central Mosque Minaret Spire & Dome inside Arch -->
+    <path
+        android:fillColor="#0369A1"
+        android:pathData="M44,88 L44,60 C44,54 48,50 50,48 C52,50 56,54 56,60 L56,88 Z" />
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M49,48 L49,38 L51,38 L51,48 Z" />
+    <path
+        android:fillColor="#FDE047"
+        android:pathData="M50,36 A1.8,1.8 0 1,0 50,39.6 A1.8,1.8 0 1,0 50,36 Z" />
+
+    <!-- 6. Hanging Prayer Beads / Tasbih (জিকির ও নফল সালাত) -->
+    <!-- Hanging Chain from Apex -->
+    <path
+        android:strokeColor="#FDE047"
+        android:strokeWidth="0.9"
+        android:pathData="M50,24 L50,32" />
+
+    <!-- Ornate Tasbih Arc at Bottom -->
+    <path
+        android:fillColor="#E0F2FE"
+        android:pathData="M32,82 A2,2 0 1,0 32,78 A2,2 0 1,0 32,82 Z" />
+    <path
+        android:fillColor="#E0F2FE"
+        android:pathData="M38,83 A2,2 0 1,0 38,79 A2,2 0 1,0 38,83 Z" />
+    <path
+        android:fillColor="#E0F2FE"
+        android:pathData="M44,84 A2,2 0 1,0 44,80 A2,2 0 1,0 44,84 Z" />
+    <path
+        android:fillColor="#FDE047"
+        android:pathData="M50,84.5 A2.2,2.2 0 1,0 50,80.1 A2.2,2.2 0 1,0 50,84.5 Z" />
+    <path
+        android:fillColor="#E0F2FE"
+        android:pathData="M56,84 A2,2 0 1,0 56,80 A2,2 0 1,0 56,84 Z" />
+    <path
+        android:fillColor="#E0F2FE"
+        android:pathData="M62,83 A2,2 0 1,0 62,79 A2,2 0 1,0 62,83 Z" />
+    <path
+        android:fillColor="#E0F2FE"
+        android:pathData="M68,82 A2,2 0 1,0 68,78 A2,2 0 1,0 68,82 Z" />
+
+    <!-- 7. GLOSSY Specular Top Arc Reflection (কাঁচের ওপরের স্নিগ্ধ চকচকে রিফ্লেকশন) -->
+    <path
+        android:pathData="M16,46 C18,22 32,8 50,8 C68,8 82,22 84,46 C68,54 32,54 16,46 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:angle="270"
+                android:startColor="#65FFFFFF"
+                android:endColor="#00FFFFFF"
+                android:type="linear" />
+        </aapt:attr>
+    </path>
+
+    <!-- Bottom Crystal Rim Reflection -->
+    <path
+        android:fillColor="#35FFFFFF"
+        android:pathData="M30,88 C38,92 62,92 70,88 C62,90 38,90 30,88 Z" />
+
+    <!-- 8. Outer White Glass Bevel Ring -->
+    <path
+        android:pathData="M50,50m-44,0a44,44 0,1 1,88 0a44,44 0,1 1,-88 0"
+        android:strokeColor="#C0FFFFFF"
+        android:strokeWidth="1.2" />
+
+    <!-- 9. Vibrant Themed Glass Rim -->
+    <path
+        android:pathData="M50,50m-42.5,0a42.5,42.5 0,1 1,85 0a42.5,42.5 0,1 1,-85 0"
+        android:strokeColor="#38BDF8"
+        android:strokeWidth="1.8" />
+
+    <!-- 10. Inner Specular Glass Hairline -->
+    <path
+        android:pathData="M50,50m-40.5,0a40.5,40.5 0,1 1,81 0a40.5,40.5 0,1 1,-81 0"
+        android:strokeColor="#50FFFFFF"
+        android:strokeWidth="0.8" />
+</vector>

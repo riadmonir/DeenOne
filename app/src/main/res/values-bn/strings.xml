@@ -1,0 +1,177 @@
+<resources>
+  <!-- App & General -->
+  <string name="app_name">DeenOne</string>
+  <string name="app_tagline">আপনার দ্বীনি জীবনের নিত্যসঙ্গী</string>
+  <string name="version_info">ভার্সন ২.১.০</string>
+  <string name="loading">লোড হচ্ছে...</string>
+  <string name="syncing_deenone">দিনওয়ান সিঙ্ক হচ্ছে...</string>
+  <string name="error_occurred">একটি সমস্যা হয়েছে</string>
+  <string name="retry">পুনরায় চেষ্টা করুন</string>
+  <string name="copied_to_clipboard">ক্লিপবোর্ডে কপি করা হয়েছে</string>
+
+  <!-- Header & Dates -->
+  <string name="hijri_date_default">৪ রবিউল আউয়াল ১৪৪৮ হিজরী ↗</string>
+  <string name="gregorian_date_default">মঙ্গলবার, ১৮ আগস্ট ২০২৬</string>
+  <string name="location_default">মদিনা মুনাওয়ারা</string>
+
+  <!-- Location Picker Dialog -->
+  <string name="dialog_title_location">লোকেশন নির্বাচন করুন</string>
+  <string name="dialog_desc_location">আপনার বর্তমান অবস্থান অনুযায়ী সঠিক নামাজের সময়সূচী নিশ্চিত করুন</string>
+  <string name="loc_gps_current">বর্তমান জিপিএস অবস্থান</string>
+  <string name="loc_gps_auto">অটো ডিটেক্ট লোকেশন</string>
+  <string name="loc_popular_cities">জনপ্রিয় শহরসমূহ</string>
+  <string name="loc_makkah">মক্কা মুকাররমা, সৌদি আরব</string>
+  <string name="loc_madinah">মদিনা মুনাওয়ারা</string>
+  <string name="loc_dhaka">ঢাকা, বাংলাদেশ</string>
+  <string name="loc_active_badge">সক্রিয়</string>
+
+  <!-- Current Waqt Section -->
+  <string name="title_current_waqt">বর্তমান ওয়াক্ত</string>
+  <string name="waqt_chasht">চাশত... 06:19 am - 12:22 pm</string>
+  <string name="waqt_remaining_sample">ওয়াক্ত শেষ হতে বাকি: ৩২ মিনিট ৫৯ সেকেন্ড</string>
+
+  <!-- Next Prayer Countdown -->
+  <string name="title_next_prayer">পরবর্তী নামাজ</string>
+  <string name="prayer_zohr">যোহর</string>
+  <string name="prayer_zohr_time">12:37 pm</string>
+  <string name="label_zohr_remaining">যোহর বাকি</string>
+  <string name="sample_countdown_zohr">00:47:59</string>
+
+  <!-- Fasting / Sehri & Iftar -->
+  <string name="label_sehri_end">সেহরি শেষ 4:33 am</string>
+  <string name="label_iftar">ইফতার 7:12 pm</string>
+  <string name="label_iftar_remaining">ইফতারের বাকি</string>
+  <string name="sample_countdown_iftar">07 : 22 : 57</string>
+
+  <!-- Prayer Schedule Strip -->
+  <string name="title_prayer_schedule">নামাজের সময়সূচী</string>
+  <string name="waqt_fajr">ফজর</string>
+  <string name="waqt_fajr_time">4:38 AM</string>
+  <string name="waqt_zohr">যোহর</string>
+  <string name="waqt_asr">আসর</string>
+  <string name="waqt_asr_time">4:11 PM</string>
+  <string name="waqt_maghrib">মাগরিব</string>
+  <string name="waqt_maghrib_time">7:12 PM</string>
+  <string name="waqt_isha">এশা</string>
+  <string name="waqt_isha_time">8:40 PM</string>
+
+  <!-- 24 Features -->
+  <string name="feat_tasbih">তাসবিহ কাউন্টার</string>
+  <string name="feat_azkar">দৈনিক আজকার</string>
+  <string name="feat_qibla">কিবলা কম্পাস</string>
+  <string name="feat_marriage">মুসলিম বিবাহ</string>
+  <string name="feat_marriage_desc">ইসলামিক নিকাহ্, দেনমোহর, সুন্নাহ ও দাম্পত্য বিধান</string>
+  <string name="feat_faraid">উত্তরাধিকার বণ্টন</string>
+  <string name="feat_sleep">কুরআন স্লিপ মোড</string>
+  <string name="feat_blood">রক্তদান সেকশন</string>
+  <string name="feat_audio">ইসলামিক অডিও হাব</string>
+  <string name="feat_book">ইসলামিক বই</string>
+  <string name="feat_hadith">হাদিস শরিফ</string>
+  <string name="feat_dua">দোয়া ভাণ্ডার</string>
+  <string name="feat_amal">আমল ট্র্যাকার</string>
+  <string name="feat_quiz">কুইজ হাব</string>
+  <string name="feat_mosque">মসজিদ সন্ধান</string>
+  <string name="feat_safar">সফর মোড</string>
+  <string name="feat_jumma">জুম্মা মোড</string>
+  <string name="feat_eid">ঈদ মোড</string>
+  <string name="feat_janaza">জানাযা গাইড</string>
+  <string name="feat_roza">রোজা ট্র্যাকার</string>
+  <string name="feat_khatam">খতম প্ল্যানার</string>
+  <string name="feat_ayah">আজকের আয়াত</string>
+  <string name="feat_hajj">হজ ও উমরাহ</string>
+  <string name="feat_zakat">যাকাত ক্যালকুলেটর</string>
+  <string name="feat_kalema">৬টি কালেমা</string>
+  <string name="feat_99names">আল্লাহর ৯৯ নাম</string>
+  <string name="feat_calendar">ইসলামিক ক্যালেন্ডার</string>
+
+  <!-- Last Read Quran -->
+  <string name="title_quran_last_read">কুরআন তিলাওয়াত • সর্বশেষ পঠিত</string>
+  <string name="last_surah_name">সূরা আল-বাকারা • আয়াত ১২৮</string>
+  <string name="last_surah_info">পারা ১ • ২৮৬ আয়াত</string>
+  <string name="btn_read">পড়ুন →</string>
+
+  <!-- Daily Islamic Goals & Streak -->
+  <string name="title_daily_goals">দৈনিক ইসলামিক লক্ষ্য ও প্রগ্রেস</string>
+  <string name="badge_streak">৩ দিন স্ট্রিক</string>
+  <string name="label_goals_achieved">আজকের অর্জিত লক্ষ্য: ৩ / ৩</string>
+  <string name="label_goals_percentage">১০০%</string>
+  <string name="btn_open_goal_tracker">লক্ষ্য ট্র্যাকার খুলুন ></string>
+
+  <!-- Today's Selected Dua -->
+  <string name="title_selected_dua">আজকের নির্বাচিত দোয়া</string>
+  <string name="label_dua_read">পড়েছি</string>
+  <string name="dua_title_sample">দুনিয়া ও আখিরাতে কল্যাণের দোয়া</string>
+  <string name="dua_arabic_sample">رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ</string>
+  <string name="dua_meaning_sample">হে আমাদের পালনকর্তা! আমাদেরকে দুনিয়াতে কল্যাণ দিন এবং আখিরাতেও কল্যাণ দান করুন এবং আমাদেরকে জাহান্নামের আগুন থেকে রক্ষা করুন...</string>
+  <string name="dua_reference_sample">রেফারেন্স: সূরা আল-বাকারা: ২০১ (সহীহ বুখারী: ৪৫২২)</string>
+  <string name="link_all_duas">সব দোয়া →</string>
+
+  <!-- Amal Tracker Metric Labels -->
+  <string name="label_prayer_count">নামাজ</string>
+  <string name="label_points">পয়েন্ট</string>
+
+  <!-- Daily Ayah & Hadith -->
+  <string name="title_daily_ayah_hadith">দৈনিক আয়াত ও সহীহ হাদিস</string>
+  <string name="header_al_quran">আল কুরআন</string>
+  <string name="ayah_text_sample">"আল্লাহ কোনো ব্যক্তির ওপর তার সামর্থ্যের অতিরিক্ত বোঝা চাপিয়ে দেন না। সে যা ভালো অর্জন করেছে তার ফল সে-ই পাবে এবং যা মন্দ অর্জন করেছে তার প্রতিফলও সে-ই ভোগ করবে। হে আমাদের প্রতিপালক! যদি আমরা ভুলে যাই কিংবা ভুল করি, তবে আমাদের পাকড়াও করবেন না। হে আমাদের প্রতিপালক! আমাদের ওপর এমন ভারী বোঝা অর্পণ করবেন না যা আমাদের পূর্ববর্তীদের ওপর চাপিয়েছিলেন। হে আমাদের প্রতিপালক! আমাদের এমন বোঝা বহন করাবেন না যার সামর্থ্য আমাদের নেই। আমাদের ক্ষমা করুন, আমাদের মার্জনা করুন এবং আমাদের প্রতি দয়া করুন। আপনিই আমাদের অভিভাবক; অতএব সত্যপ্রত্যাখ্যানকারী সম্প্রদায়ের বিরুদ্ধে আমাদের সাহায্য করুন।"</string>
+  <string name="ayah_ref_sample">— সূরা আল-বাকারা: ২৮৬</string>
+
+  <string name="header_sahih_hadith">সহীহ হাদিস</string>
+  <string name="hadith_text_sample">“ইসলামের ভিত্তি পাঁচটি স্তম্ভের ওপর প্রতিষ্ঠিত: ১. এ সাক্ষ্য দেওয়া যে আল্লাহ ছাড়া কোনো সত্য উপাস্য নেই এবং মুহাম্মদ (ﷺ) আল্লাহর বান্দা ও রাসূল, ২. সালাত কায়েম করা, ৩. যাকাত আদায় করা, ৪. হজ করা এবং ৫. রমজানের রোজা রাখা।”</string>
+  <string name="hadith_ref_sample">— সহীহ বুখারী: ৮, সহীহ মুসলিম: ১৬</string>
+
+  <!-- Challenge and Guides -->
+  <string name="btn_full_profile">পূর্ণাঙ্গ প্রোফাইল</string>
+  <string name="title_quiz_challenge">দৈনিক ইসলামিক কুইজ চ্যালেঞ্জ</string>
+  <string name="desc_quiz_challenge">কুরআন, হাদিস ও ফিকহের জ্ঞান যাচাই করুন ও পয়েন্ট অর্জন করুন!</string>
+  <string name="title_nearby_mosque">নিকটবর্তী মসজিদ</string>
+  <string name="desc_nearby_mosque">আশেপাশের মসজিদ লোড হচ্ছে...</string>
+  <string name="title_hajj_guide">হজ ও উমরাহ সম্পূর্ণ A-Z গাইড</string>
+  <string name="desc_hajj_guide">ইহরাম, মিকাত, তাওয়াফ, সাঈ, আরাফাহ ও মিনায় কঙ্কর নিক্ষেপের নিয়মাবলী।</string>
+  <string name="badge_special_gift">বিশেষ উপহার</string>
+  <string name="title_redeem_points">পয়েন্ট রিডিম করে প্রোডাক্ট কিনুন</string>
+  <string name="desc_redeem_points">আপনার অর্জিত পয়েন্ট ব্যবহার করুন এবং জিতে নিন আকর্ষণীয় সব পুরস্কার!</string>
+
+  <!-- Halal Food & Nutrition -->
+  <string name="title_halal_food_guide">হালাল ফুড ও পুষ্টি গাইড</string>
+  <string name="desc_halal_food_guide">সুন্নতী খাবার ও E-Code যাচাই নির্দেশিকা</string>
+  <string name="link_see_all">সব দেখুন →</string>
+  <string name="badge_barakah_food">আজকের বরকতময় খাবার</string>
+  <string name="title_barakah_food">ডালিম ও আনার ফল</string>
+  <string name="desc_barakah_food">জান্নাতের সুস্বাদু ফল</string>
+  <string name="pill_ecode_checker">E120, E471 কোড চেকার</string>
+  <string name="pill_halal_zabiha">হালাল জবেহ ও রক্তক্ষরণ</string>
+
+  <!-- Action Banners -->
+  <string name="title_muhasabah">আত্মসমালোচনা</string>
+  <string name="desc_muhasabah">আজ আপনার আত্মশুদ্ধি ও আমলের হিসাব নিন</string>
+  <string name="title_fajr_call">ফজরের ডাক</string>
+  <string name="desc_fajr_call">নামাজের জন্য প্রিয়জনদের ডাক দিন</string>
+  <string name="title_audio_hub">ইসলামিক অডিও হাব</string>
+  <string name="desc_audio_hub">কুরআন তিলাওয়াত, হাদিস পাঠ, জুমার খুতবা ও স্কলার অডিও</string>
+  <string name="title_quran_sleep">কুরআন স্লিপ মোড</string>
+  <string name="desc_quran_sleep">শান্তিময় ঘুমের জন্য কুরআন তেলাওয়াত শুনুন</string>
+
+  <!-- Sidebar Menu -->
+  <string name="menu_profile">প্রোফাইল ও অর্জন</string>
+  <string name="menu_settings">নামাজের ওয়াক্ত সেটিংস</string>
+  <string name="menu_share">সাদাকাহ ও প্রচার</string>
+
+  <!-- Quran Sources & Attribution -->
+  <string name="quran_sources_title">উৎস ও কৃতজ্ঞতা</string>
+  <string name="quran_sources_verbatim">উৎস ও কৃতজ্ঞতা: আরবি কুরআন টেক্সট – Tanzil Project (tanzil.net), CC BY 3.0, অবিকৃত কপি · বাংলা অনুবাদ – quran-api সংগ্রহ কুরআনের বাংলা উচ্চারণ – এই অ্যাপের নিজস্ব, everyayah.com ও quran.com (ক্বারী: মিশারী রশিদ আল-আফাসী)</string>
+  <string name="quran_sources_sub">আরবি কুরআন টেক্সট – Tanzil Project (tanzil.net), CC BY 3.0, অবিকৃত কপি · বাংলা অনুবাদ – quran-api সংগ্রহ কুরআনের বাংলা উচ্চারণ – এই অ্যাপের নিজস্ব, everyayah.com ও quran.com (ক্বারী: মিশারী রশিদ আল-আফাসী)</string>
+
+  <!-- Bottom Navigation -->
+  <string name="nav_home">হোম</string>
+  <string name="nav_salat">সালাত</string>
+  <string name="nav_amal">আমল</string>
+  <string name="nav_rank">র‍্যাঙ্ক</string>
+  <string name="nav_community">কমিউনিটি</string>
+
+  <!-- Quiz Hub Hero Banner -->
+  <string name="quiz_hero_tag">ঈমান বৃদ্ধি ও যাচাই</string>
+  <string name="quiz_hero_title">কুইজ খেলে জ্ঞান অর্জন করুন</string>
+  <string name="quiz_hero_subtitle">ইসলামিক কুইজ প্রতিযোগিতায় অংশ নিয়ে আপনার মেধা যাচাই করুন এবং পয়েন্ট অর্জন করুন।</string>
+  <string name="quiz_hero_btn_rank">কুইজ র‍্যাংক তালিকা</string>
+</resources>

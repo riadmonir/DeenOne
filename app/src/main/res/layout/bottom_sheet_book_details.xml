@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/bg_main"
+  android:orientation="vertical">
+
+  <!-- Top Header Bar -->
+  <LinearLayout
+    android:id="@+id/layoutBookDetailsHeader"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_top_bar"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="12dp"
+    android:paddingBottom="12dp">
+
+    <FrameLayout
+      android:id="@+id/btnCloseBookDetails"
+      android:layout_width="38dp"
+      android:layout_height="38dp"
+      android:background="@drawable/bg_badge_pill"
+      android:clickable="true"
+      android:focusable="true">
+
+      <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_arrow_back"
+        app:tint="@color/text_primary"
+        android:contentDescription="ফিরে যান" />
+    </FrameLayout>
+
+    <TextView
+      android:id="@+id/tvDetailsHeaderTitle"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="14dp"
+      android:layout_weight="1"
+      android:text="বইয়ের বিস্তারিত তথ্য"
+      android:textColor="@color/text_primary"
+      android:textSize="17sp"
+      android:gravity="center"
+      android:textStyle="bold" />
+
+    <!-- Favorite Button -->
+    <FrameLayout
+      android:id="@+id/btnDetailsFavorite"
+      android:layout_width="38dp"
+      android:layout_height="38dp"
+      android:layout_marginEnd="6dp"
+      android:background="@drawable/bg_badge_pill"
+      android:clickable="true"
+      android:focusable="true">
+
+      <ImageView
+        android:id="@+id/ivDetailsFavoriteIcon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_favorite_border"
+        app:tint="@color/text_secondary"
+        android:contentDescription="বুকমার্ক" />
+    </FrameLayout>
+
+    <!-- Share Button -->
+    <FrameLayout
+      android:id="@+id/btnDetailsShare"
+      android:layout_width="38dp"
+      android:layout_height="38dp"
+      android:background="@drawable/bg_badge_pill"
+      android:clickable="true"
+      android:focusable="true">
+
+      <ImageView
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_share"
+        app:tint="@color/text_primary"
+        android:contentDescription="শেয়ার করুন" />
+    </FrameLayout>
+  </LinearLayout>
+
+  <androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:fillViewport="true">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:paddingHorizontal="18dp"
+      android:paddingTop="16dp"
+      android:paddingBottom="24dp">
+
+      <!-- Book Cover Hero Box -->
+      <com.google.android.material.card.MaterialCardView
+        android:layout_width="140dp"
+        android:layout_height="190dp"
+        android:layout_gravity="center_horizontal"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="6dp"
+        app:strokeColor="@color/accent_mint"
+        app:strokeWidth="1.5dp">
+
+        <FrameLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:padding="8dp">
+
+          <ImageView
+            android:id="@+id/ivDetailsCoverIcon"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_feat_book"
+            app:tint="@color/accent_mint"
+            android:contentDescription="বইয়ের কভার আইকন" />
+
+          <TextView
+            android:id="@+id/tvDetailsCoverFormatBadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@drawable/bg_btn_mint_pill"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="2dp"
+            android:text="PDF • E-BOOK"
+            android:textColor="@color/bg_main"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+        </FrameLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- Book Title & Author -->
+      <TextView
+        android:id="@+id/tvDetailsBookTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="বইয়ের পূর্ণাঙ্গ শিরোনাম"
+        android:textColor="@color/text_primary"
+        android:textSize="19sp"
+        android:textStyle="bold" />
+
+      <TextView
+        android:id="@+id/tvDetailsBookAuthor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="লেখক: ইমাম ইবনে কাসীর (রহ.)"
+        android:textColor="@color/accent_mint"
+        android:textSize="13.5sp" />
+
+      <!-- Badges Row (Category, Language, Source) -->
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+          android:id="@+id/tvDetailsCategoryBadge"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="6dp"
+          android:background="@drawable/bg_badge_pill"
+          android:paddingHorizontal="10dp"
+          android:paddingVertical="4dp"
+          android:text="তাফসীর"
+          android:textColor="@color/text_primary"
+          android:textSize="11sp" />
+
+        <TextView
+          android:id="@+id/tvDetailsLanguageBadge"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="6dp"
+          android:background="@drawable/bg_badge_pill"
+          android:paddingHorizontal="10dp"
+          android:paddingVertical="4dp"
+          android:text="বাংলা"
+          android:textColor="@color/text_primary"
+          android:textSize="11sp" />
+
+        <TextView
+          android:id="@+id/tvDetailsVerifiedBadge"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="@drawable/bg_badge_pill"
+          android:paddingHorizontal="10dp"
+          android:paddingVertical="4dp"
+          android:text="বিশ্বস্ত সূত্র"
+          android:textColor="@color/accent_mint"
+          android:textSize="11sp"
+          android:textStyle="bold" />
+      </LinearLayout>
+
+      <!-- Metrics Card (Pages, File Size, Reading Progress) -->
+      <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="16dp"
+        app:strokeColor="@color/border_subtle"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:paddingVertical="14dp">
+
+          <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+              android:id="@+id/tvDetailsTotalPages"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="৮২০"
+              android:textColor="@color/text_primary"
+              android:textSize="16sp"
+              android:textStyle="bold" />
+
+            <TextView
+              android:id="@+id/tvDetailsTotalPagesLabel"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="2dp"
+              android:text="মোট পৃষ্ঠা"
+              android:textColor="@color/text_secondary"
+              android:textSize="11sp" />
+          </LinearLayout>
+
+          <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/border_subtle" />
+
+          <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+              android:id="@+id/tvDetailsFileSize"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="১৮.৪ MB"
+              android:textColor="@color/text_primary"
+              android:textSize="16sp"
+              android:textStyle="bold" />
+
+            <TextView
+              android:id="@+id/tvDetailsFileSizeLabel"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="2dp"
+              android:text="সাইজ"
+              android:textColor="@color/text_secondary"
+              android:textSize="11sp" />
+          </LinearLayout>
+
+          <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/border_subtle" />
+
+          <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+              android:id="@+id/tvDetailsReadingPercent"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="৪২%"
+              android:textColor="@color/accent_mint"
+              android:textSize="16sp"
+              android:textStyle="bold" />
+
+            <TextView
+              android:id="@+id/tvDetailsReadingPercentLabel"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="2dp"
+              android:text="পড়ার অগ্রগতি"
+              android:textColor="@color/text_secondary"
+              android:textSize="11sp" />
+          </LinearLayout>
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- Book Synopsis / Description Card -->
+      <TextView
+        android:id="@+id/tvDetailsDescriptionHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="বইয়ের পরিচিতি ও বিষয়বস্তু"
+        android:textColor="@color/text_primary"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+      <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="16dp"
+        app:strokeColor="@color/border_subtle"
+        app:strokeWidth="1dp">
+
+        <TextView
+          android:id="@+id/tvDetailsDescription"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:lineSpacingExtra="4dp"
+          android:padding="16dp"
+          android:text="বইয়ের বিস্তারিত বিবরণ..."
+          android:textColor="@color/text_secondary"
+          android:textSize="13.5sp" />
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- Publisher & License Information Card -->
+      <TextView
+        android:id="@+id/tvDetailsPublisherHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="প্রকাশনা ও লাইসেন্স তথ্য"
+        android:textColor="@color/text_primary"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+      <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="16dp"
+        app:strokeColor="@color/border_subtle"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="16dp">
+
+          <TextView
+            android:id="@+id/tvDetailsPublisher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="মূল প্রকাশনা: ইসলামিক ফাউন্ডেশন"
+            android:textColor="@color/text_primary"
+            android:textSize="13sp" />
+
+          <TextView
+            android:id="@+id/tvDetailsSource"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="যাচাইকৃত উৎস: কিং ফাহাদ কুরআন প্রিন্টিং কমপ্লেক্স"
+            android:textColor="@color/text_primary"
+            android:textSize="13sp" />
+
+          <TextView
+            android:id="@+id/tvDetailsLicense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="লাইসেন্স: পাবলিক ডোমেইন / উন্মুক্ত ইসলামিক বিতরণ"
+            android:textColor="@color/accent_mint"
+            android:textSize="12.5sp" />
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <!-- Download Progress in Details (when downloading) -->
+      <LinearLayout
+        android:id="@+id/layoutDetailsDownloadProgress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+
+          <TextView
+            android:id="@+id/tvDetailsDownloadStatus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ডাউনলোড হচ্ছে..."
+            android:textColor="@color/accent_mint"
+            android:textSize="12sp" />
+
+          <TextView
+            android:id="@+id/tvDetailsDownloadPercent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="০%"
+            android:textColor="@color/accent_mint"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+        </LinearLayout>
+
+        <ProgressBar
+          android:id="@+id/progressBarDetailsDownload"
+          style="?android:attr/progressBarStyleHorizontal"
+          android:layout_width="match_parent"
+          android:layout_height="8dp"
+          android:layout_marginTop="6dp"
+          android:max="100"
+          android:progress="0"
+          android:progressBackgroundTint="@color/bg_card_secondary"
+          android:progressTint="@color/accent_mint" />
+      </LinearLayout>
+
+      <!-- Sticky Bottom Action Buttons -->
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.button.MaterialButton
+          android:id="@+id/btnDetailsReadBook"
+          android:layout_width="match_parent"
+          android:layout_height="48dp"
+          android:backgroundTint="@color/accent_mint"
+          android:text="বইটি পড়ুন"
+          android:textColor="@color/white"
+          android:textSize="14sp"
+          android:textStyle="bold"
+          app:cornerRadius="12dp" />
+
+        <com.google.android.material.button.MaterialButton
+          android:id="@+id/btnDetailsDownloadBook"
+          android:layout_width="match_parent"
+          android:layout_height="48dp"
+          android:layout_marginTop="8dp"
+          android:backgroundTint="@color/bg_card_secondary"
+          android:text="বইটি ডাউনলোড করুন"
+          android:textColor="@color/accent_mint"
+          android:textSize="14sp"
+          android:textStyle="bold"
+          app:cornerRadius="12dp" />
+
+        <com.google.android.material.button.MaterialButton
+          android:id="@+id/btnDetailsDeleteBook"
+          android:layout_width="match_parent"
+          android:layout_height="44dp"
+          android:layout_marginTop="8dp"
+          android:visibility="gone"
+          android:backgroundTint="@color/bg_card_secondary"
+          android:text="অফলাইন ফাইল মুছুন"
+          android:textColor="@color/accent_red"
+          android:textSize="13sp"
+          android:textStyle="bold"
+          app:cornerRadius="12dp" />
+      </LinearLayout>
+
+    </LinearLayout>
+  </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
