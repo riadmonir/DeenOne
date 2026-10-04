@@ -13,28 +13,47 @@ function getHadithDbPdo() {
     }
     $dbPath = __DIR__ . '/../data/hadithbd.db';
     
-    // Auto-fetch from GitHub CDN / Raw if database file is not present on web host
+    // Auto-fetch/extract from local GZ or GitHub CDN if uncompressed database is not present
     if (!file_exists($dbPath) || filesize($dbPath) < 1000000) {
         $dir = dirname($dbPath);
         if (!is_dir($dir)) {
             @mkdir($dir, 0755, true);
         }
-        $githubUrls = [
-            'https://raw.githubusercontent.com/riadmonir/DeenOne/main/server_backend/data/hadithbd.db',
-            'https://cdn.jsdelivr.net/gh/riadmonir/DeenOne@main/server_backend/data/hadithbd.db',
-            'https://raw.githubusercontent.com/riadmonir/DeenOne1/main/server_backend/data/hadithbd.db'
-        ];
-        foreach ($githubUrls as $url) {
-            $ctx = stream_context_create([
-                'http' => [
-                    'timeout' => 30,
-                    'user_agent' => 'DeenOne-Server/1.0'
-                ]
-            ]);
-            $content = @file_get_contents($url, false, $ctx);
-            if ($content !== false && strlen($content) > 1000000) {
-                @file_put_contents($dbPath, $content);
-                break;
+        $gzPath = $dir . '/hadithbd.db.gz';
+        if (file_exists($gzPath) && filesize($gzPath) > 5000000) {
+            $uncompressed = @gzdecode(file_get_contents($gzPath));
+            if ($uncompressed !== false && strlen($uncompressed) > 10000000) {
+                @file_put_contents($dbPath, $uncompressed);
+            }
+        }
+        
+        if (!file_exists($dbPath) || filesize($dbPath) < 1000000) {
+            $githubUrls = [
+                'https://raw.githubusercontent.com/riadmonir/DeenOne/main/server_backend/data/hadithbd.db.gz',
+                'https://cdn.jsdelivr.net/gh/riadmonir/DeenOne@main/server_backend/data/hadithbd.db.gz',
+                'https://raw.githubusercontent.com/riadmonir/DeenOne/main/server_backend/data/hadithbd.db',
+                'https://cdn.jsdelivr.net/gh/riadmonir/DeenOne@main/server_backend/data/hadithbd.db'
+            ];
+            foreach ($githubUrls as $url) {
+                $ctx = stream_context_create([
+                    'http' => [
+                        'timeout' => 45,
+                        'user_agent' => 'DeenOne-Server/1.0'
+                    ]
+                ]);
+                $content = @file_get_contents($url, false, $ctx);
+                if ($content !== false && strlen($content) > 1000000) {
+                    if (str_ends_with($url, '.gz')) {
+                        $decomp = @gzdecode($content);
+                        if ($decomp !== false) {
+                            @file_put_contents($dbPath, $decomp);
+                            break;
+                        }
+                    } else {
+                        @file_put_contents($dbPath, $content);
+                        break;
+                    }
+                }
             }
         }
     }
@@ -57,17 +76,33 @@ function getHadithDbBookId($bookSlug) {
     $map = [
         'bukhari' => 1,
         'muslim' => 2,
-        'riyadus_salihin' => 3,
+        'nasai' => 3,
         'abu_dawood' => 4,
         'abudawud' => 4,
-        'nasai' => 6,
-        'ibn_majah' => 9,
-        'ibnmajah' => 9,
-        'tirmidhi' => 11,
-        'hadithe_qudsi' => 13,
-        'nawawi_40' => 14,
-        'nawawi40' => 14,
-        'ramadaner_durbol_hadith' => 15
+        'tirmidhi' => 5,
+        'ibn_majah' => 6,
+        'ibnmajah' => 6,
+        'muwatta_malik' => 7,
+        'malik' => 7,
+        'riyadus_salihin' => 8,
+        'bulughul_maram' => 9,
+        'lulu_wal_marjan' => 10,
+        'hadith_sambhar' => 11,
+        'silsila_sahiha' => 12,
+        'jal_o_daif_series' => 13,
+        'mishkatul_masabih' => 14,
+        'nawawi_40' => 15,
+        'nawawi40' => 15,
+        'adabul_mufrad' => 16,
+        'rafayel_yadain' => 17,
+        'hadithe_qudsi' => 18,
+        '100_susabbasto_hadith' => 19,
+        'mishkate_daif_hadith' => 20,
+        'shamayele_tirmidhi' => 21,
+        'sahih_at_targib' => 22,
+        'sahih_fazayele_amal' => 23,
+        'upodesh' => 24,
+        'ramadaner_durbol_hadith' => 25
     ];
     return $map[$normalized] ?? null;
 }

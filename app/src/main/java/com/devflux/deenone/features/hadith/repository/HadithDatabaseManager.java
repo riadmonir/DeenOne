@@ -40,6 +40,9 @@ public class HadithDatabaseManager {
     private static final String DB_FILE_NAME = "hadithbd.db";
     private static final long MIN_VALID_DB_SIZE = 10_000_000L; // ~10MB minimum valid size
 
+    public static final String GITHUB_CDN_GZ_URL = "https://raw.githubusercontent.com/riadmonir/DeenOne/main/server_backend/data/hadithbd.db.gz";
+    public static final String JSDELIVR_CDN_GZ_URL = "https://cdn.jsdelivr.net/gh/riadmonir/DeenOne@main/server_backend/data/hadithbd.db.gz";
+    public static final String GITHUB_CDN_ZIP_URL = "https://raw.githubusercontent.com/riadmonir/DeenOne/main/server_backend/data/hadithbd.db.zip";
     public static final String GITHUB_CDN_URL = "https://raw.githubusercontent.com/riadmonir/DeenOne/main/server_backend/data/hadithbd.db";
     public static final String JSDELIVR_CDN_URL = "https://cdn.jsdelivr.net/gh/riadmonir/DeenOne@main/server_backend/data/hadithbd.db";
 
@@ -56,21 +59,33 @@ public class HadithDatabaseManager {
     static {
         BOOK_SLUG_MAP.put("bukhari", 1);
         BOOK_SLUG_MAP.put("muslim", 2);
-        BOOK_SLUG_MAP.put("riyadus_salihin", 3);
+        BOOK_SLUG_MAP.put("nasai", 3);
         BOOK_SLUG_MAP.put("abu_dawood", 4);
         BOOK_SLUG_MAP.put("abudawud", 4);
-        BOOK_SLUG_MAP.put("bulughul_maram", 5);
-        BOOK_SLUG_MAP.put("nasai", 6);
-        BOOK_SLUG_MAP.put("jal_o_daif_series", 8);
-        BOOK_SLUG_MAP.put("ibn_majah", 9);
-        BOOK_SLUG_MAP.put("ibnmajah", 9);
-        BOOK_SLUG_MAP.put("100_susabbasto_hadith", 10);
-        BOOK_SLUG_MAP.put("tirmidhi", 11);
-        BOOK_SLUG_MAP.put("adabul_mufrad", 12);
-        BOOK_SLUG_MAP.put("hadithe_qudsi", 13);
-        BOOK_SLUG_MAP.put("nawawi_40", 14);
-        BOOK_SLUG_MAP.put("nawawi40", 14);
-        BOOK_SLUG_MAP.put("ramadaner_durbol_hadith", 15);
+        BOOK_SLUG_MAP.put("tirmidhi", 5);
+        BOOK_SLUG_MAP.put("ibn_majah", 6);
+        BOOK_SLUG_MAP.put("ibnmajah", 6);
+        BOOK_SLUG_MAP.put("muwatta_malik", 7);
+        BOOK_SLUG_MAP.put("malik", 7);
+        BOOK_SLUG_MAP.put("riyadus_salihin", 8);
+        BOOK_SLUG_MAP.put("bulughul_maram", 9);
+        BOOK_SLUG_MAP.put("lulu_wal_marjan", 10);
+        BOOK_SLUG_MAP.put("hadith_sambhar", 11);
+        BOOK_SLUG_MAP.put("silsila_sahiha", 12);
+        BOOK_SLUG_MAP.put("jal_o_daif_series", 13);
+        BOOK_SLUG_MAP.put("mishkatul_masabih", 14);
+        BOOK_SLUG_MAP.put("nawawi_40", 15);
+        BOOK_SLUG_MAP.put("nawawi40", 15);
+        BOOK_SLUG_MAP.put("adabul_mufrad", 16);
+        BOOK_SLUG_MAP.put("rafayel_yadain", 17);
+        BOOK_SLUG_MAP.put("hadithe_qudsi", 18);
+        BOOK_SLUG_MAP.put("100_susabbasto_hadith", 19);
+        BOOK_SLUG_MAP.put("mishkate_daif_hadith", 20);
+        BOOK_SLUG_MAP.put("shamayele_tirmidhi", 21);
+        BOOK_SLUG_MAP.put("sahih_at_targib", 22);
+        BOOK_SLUG_MAP.put("sahih_fazayele_amal", 23);
+        BOOK_SLUG_MAP.put("upodesh", 24);
+        BOOK_SLUG_MAP.put("ramadaner_durbol_hadith", 25);
     }
 
     private static final Map<String, String[]> BOOK_NAMES = new HashMap<>();
@@ -190,45 +205,88 @@ public class HadithDatabaseManager {
     }
 
     private boolean downloadDatabaseFromCdn() {
-        String[] urls = new String[]{GITHUB_CDN_URL, JSDELIVR_CDN_URL};
+        String[] urls = new String[]{GITHUB_CDN_GZ_URL, JSDELIVR_CDN_GZ_URL, GITHUB_CDN_ZIP_URL, GITHUB_CDN_URL, JSDELIVR_CDN_URL};
         File tempFile = new File(context.getFilesDir(), DB_FILE_NAME + ".tmp");
 
         for (String urlStr : urls) {
             HttpURLConnection conn = null;
-            InputStream is = null;
+            InputStream rawStream = null;
             FileOutputStream fos = null;
             try {
                 URL url = new URL(urlStr);
                 conn = (HttpURLConnection) url.openConnection();
                 conn.setConnectTimeout(15000);
-                conn.setReadTimeout(30000);
+                conn.setReadTimeout(35000);
                 conn.setRequestProperty("User-Agent", "DeenOne-Android/1.0");
 
                 if (conn.getResponseCode() == HttpURLConnection.HTTP_OK) {
                     long totalLength = conn.getContentLengthLong();
                     if (totalLength <= 0) {
-                        totalLength = 41_000_000L;
+                        totalLength = (urlStr.endsWith(".gz") || urlStr.endsWith(".zip")) ? 24_000_000L : 139_000_000L;
                     }
-                    is = new BufferedInputStream(conn.getInputStream(), 32768);
-                    fos = new FileOutputStream(tempFile);
-                    byte[] buffer = new byte[32768];
-                    int len;
-                    long totalRead = 0;
-                    long lastProgressUpdate = 0;
 
-                    while ((len = is.read(buffer)) != -1) {
-                        fos.write(buffer, 0, len);
-                        totalRead += len;
-                        long now = System.currentTimeMillis();
-                        if (now - lastProgressUpdate > 120) {
-                            lastProgressUpdate = now;
-                            int percent = (int) Math.min(99, (totalRead * 100) / totalLength);
-                            notifyProgress(percent, totalRead, totalLength);
+                    rawStream = new BufferedInputStream(conn.getInputStream(), 65536);
+                    fos = new FileOutputStream(tempFile);
+
+                    if (urlStr.endsWith(".gz")) {
+                        try (java.util.zip.GZIPInputStream gzis = new java.util.zip.GZIPInputStream(rawStream, 65536)) {
+                            byte[] buffer = new byte[65536];
+                            int len;
+                            long totalRead = 0;
+                            long lastProgressUpdate = 0;
+
+                            while ((len = gzis.read(buffer)) != -1) {
+                                fos.write(buffer, 0, len);
+                                totalRead += len;
+                                long now = System.currentTimeMillis();
+                                if (now - lastProgressUpdate > 100) {
+                                    lastProgressUpdate = now;
+                                    int percent = (int) Math.min(99, (totalRead * 100) / 139_000_000L);
+                                    notifyProgress(percent, totalRead, 139_000_000L);
+                                }
+                            }
+                        }
+                    } else if (urlStr.endsWith(".zip")) {
+                        try (java.util.zip.ZipInputStream zis = new java.util.zip.ZipInputStream(rawStream)) {
+                            java.util.zip.ZipEntry entry = zis.getNextEntry();
+                            if (entry != null) {
+                                byte[] buffer = new byte[65536];
+                                int len;
+                                long totalRead = 0;
+                                long lastProgressUpdate = 0;
+                                while ((len = zis.read(buffer)) != -1) {
+                                    fos.write(buffer, 0, len);
+                                    totalRead += len;
+                                    long now = System.currentTimeMillis();
+                                    if (now - lastProgressUpdate > 100) {
+                                        lastProgressUpdate = now;
+                                        int percent = (int) Math.min(99, (totalRead * 100) / 139_000_000L);
+                                        notifyProgress(percent, totalRead, 139_000_000L);
+                                    }
+                                }
+                            }
+                        }
+                    } else {
+                        byte[] buffer = new byte[65536];
+                        int len;
+                        long totalRead = 0;
+                        long lastProgressUpdate = 0;
+
+                        while ((len = rawStream.read(buffer)) != -1) {
+                            fos.write(buffer, 0, len);
+                            totalRead += len;
+                            long now = System.currentTimeMillis();
+                            if (now - lastProgressUpdate > 100) {
+                                lastProgressUpdate = now;
+                                int percent = (int) Math.min(99, (totalRead * 100) / totalLength);
+                                notifyProgress(percent, totalRead, totalLength);
+                            }
                         }
                     }
+
                     fos.flush();
                     fos.close();
-                    is.close();
+                    if (rawStream != null) rawStream.close();
 
                     if (tempFile.length() >= MIN_VALID_DB_SIZE) {
                         if (dbFile.exists()) {
@@ -238,7 +296,7 @@ public class HadithDatabaseManager {
                         boolean renamed = tempFile.renameTo(dbFile);
                         if (renamed && isDatabaseReady()) {
                             notifyProgress(100, dbFile.length(), dbFile.length());
-                            Log.i(TAG, "Hadith database successfully downloaded from CDN: " + dbFile.length() + " bytes");
+                            Log.i(TAG, "Master Hadith database successfully synced: " + dbFile.length() + " bytes");
                             return true;
                         }
                     }
@@ -247,7 +305,7 @@ public class HadithDatabaseManager {
                 Log.w(TAG, "Download attempt failed from " + urlStr + ": " + e.getMessage());
             } finally {
                 try { if (fos != null) fos.close(); } catch (Exception ignored) {}
-                try { if (is != null) is.close(); } catch (Exception ignored) {}
+                try { if (rawStream != null) rawStream.close(); } catch (Exception ignored) {}
                 if (conn != null) conn.disconnect();
                 if (tempFile.exists() && !isDatabaseReady()) {
                     //noinspection ResultOfMethodCallIgnored
