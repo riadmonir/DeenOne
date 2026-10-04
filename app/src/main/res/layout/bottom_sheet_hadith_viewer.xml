@@ -252,6 +252,44 @@
                     android:textSize="13.5sp" />
             </LinearLayout>
 
+            <!-- Empty State Container for Chapters -->
+            <LinearLayout
+                android:id="@+id/layoutEmptyChapters"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="32dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/ic_open_book_dialog"
+                    app:tint="@color/text_secondary"
+                    android:alpha="0.6"
+                    android:contentDescription="@null" />
+
+                <TextView
+                    android:id="@+id/tvEmptyChaptersTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="এই কিতাবের অধ্যায়সমূহ শীঘ্রই যুক্ত হচ্ছে"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvEmptyChaptersSubtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="অনুগ্রহ করে অন্য কিতাব নির্বাচন করুন"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
             <!-- Chapters List RecyclerView -->
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvHadithChapters"
@@ -354,6 +392,44 @@
             android:orientation="vertical"
             android:background="@color/bg_main">
 
+            <!-- Empty State Container for Hadiths -->
+            <LinearLayout
+                android:id="@+id/layoutEmptyHadiths"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="32dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/ic_open_book_dialog"
+                    app:tint="@color/text_secondary"
+                    android:alpha="0.6"
+                    android:contentDescription="@null" />
+
+                <TextView
+                    android:id="@+id/tvEmptyHadithsTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="এই অধ্যায়ের হাদিসসমূহ শীঘ্রই যুক্ত হচ্ছে"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvEmptyHadithsSubtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="অনুগ্রহ করে অন্য অধ্যায় নির্বাচন করুন"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
             <!-- Hadith Reader RecyclerView -->
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvChapterHadithReader"
@@ -367,5 +443,16 @@
         </LinearLayout>
 
     </LinearLayout>
+
+    <!-- Centered DeenOne Official Loading View Overlay -->
+    <com.devflux.deenone.core.ui.loading.DeenOneLoadingView
+        android:id="@+id/loadingViewHadith"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

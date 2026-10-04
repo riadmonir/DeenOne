@@ -1984,6 +1984,7 @@ public class MainActivity extends AppCompatActivity {
     sheetBinding.rvChapterHadithReader.setAdapter(hadithReaderAdapter);
 
     sheetBinding.btnBackFromReader.setOnClickListener(v -> {
+      sheetBinding.loadingViewHadith.hide();
       sheetBinding.layoutHadithReaderView.setVisibility(View.GONE);
       sheetBinding.layoutChapterView.setVisibility(View.VISIBLE);
     });
@@ -2004,14 +2005,28 @@ public class MainActivity extends AppCompatActivity {
           String chapTitle = isBn ? chapter.getTitleBn() : chapter.getTitleEn();
           sheetBinding.tvReaderChapterTitle.setText(chapTitle);
 
+          // Clear previous hadiths immediately to avoid stale data
+          hadithReaderAdapter.setItems(new ArrayList<>());
+          sheetBinding.rvChapterHadithReader.setVisibility(View.GONE);
+          sheetBinding.layoutEmptyHadiths.setVisibility(View.GONE);
+          sheetBinding.loadingViewHadith.show();
+          sheetBinding.loadingViewHadith.setMessage(isBn ? "হাদিস লোড হচ্ছে..." : "Loading Hadiths...");
+
           // Fetch and display Hadiths & Section Headers for this chapter
           com.devflux.deenone.features.hadith.repository.ChapterHadithRepository.getInstance().getChapterHadiths(
               MainActivity.this,
               chapter.getBookSlug(),
               chapter.getChapterNumber(),
               readerItems -> {
+                sheetBinding.loadingViewHadith.hide();
                 if (readerItems != null && !readerItems.isEmpty()) {
                   hadithReaderAdapter.setItems(readerItems);
+                  sheetBinding.rvChapterHadithReader.setVisibility(View.VISIBLE);
+                  sheetBinding.layoutEmptyHadiths.setVisibility(View.GONE);
+                } else {
+                  hadithReaderAdapter.setItems(new ArrayList<>());
+                  sheetBinding.rvChapterHadithReader.setVisibility(View.GONE);
+                  sheetBinding.layoutEmptyHadiths.setVisibility(View.VISIBLE);
                 }
               }
           );
@@ -2029,25 +2044,34 @@ public class MainActivity extends AppCompatActivity {
           sheetBinding.tvChapterBookTitle.setText(category.getDisplayName(isBn));
           sheetBinding.etSearchChapter.setText("");
 
+          // Clear previous chapters immediately to avoid cross-category duplicate pollution
+          chapterAdapter.setChapters(new ArrayList<>());
+          sheetBinding.rvHadithChapters.setVisibility(View.GONE);
+          sheetBinding.layoutEmptyChapters.setVisibility(View.GONE);
+
           // Switch to Chapter View
           sheetBinding.layoutHadithHeader.setVisibility(View.GONE);
           sheetBinding.rvHadithCategories.setVisibility(View.GONE);
           sheetBinding.rvHadithList.setVisibility(View.GONE);
           sheetBinding.layoutChapterView.setVisibility(View.VISIBLE);
 
-          // Load Chapters from Room + Background Sync
-          com.devflux.deenone.features.hadith.repository.HadithChapterRepository.getInstance()
-              .getChaptersLiveData(this, category.getSlug())
-              .observe(this, chapters -> {
-                if (chapters != null && !chapters.isEmpty()) {
-                  chapterAdapter.setChapters(chapters);
-                }
-              });
+          if (!com.devflux.deenone.features.hadith.repository.HadithDatabaseManager.getInstance(MainActivity.this).isDatabaseReady()) {
+            sheetBinding.loadingViewHadith.show();
+            sheetBinding.loadingViewHadith.setMessage(isBn ? "হাদিস ডাটাবেজ প্রস্তুত হচ্ছে..." : "Preparing Hadith Database...");
+          }
 
+          // Load Chapters strictly for this specific book
           com.devflux.deenone.features.hadith.repository.HadithChapterRepository.getInstance()
               .loadChapters(this, category.getSlug(), chapters -> {
-                if (chapters != null) {
+                sheetBinding.loadingViewHadith.hide();
+                if (chapters != null && !chapters.isEmpty()) {
                   chapterAdapter.setChapters(chapters);
+                  sheetBinding.rvHadithChapters.setVisibility(View.VISIBLE);
+                  sheetBinding.layoutEmptyChapters.setVisibility(View.GONE);
+                } else {
+                  chapterAdapter.setChapters(new ArrayList<>());
+                  sheetBinding.rvHadithChapters.setVisibility(View.GONE);
+                  sheetBinding.layoutEmptyChapters.setVisibility(View.VISIBLE);
                 }
               });
         });
@@ -2055,8 +2079,21 @@ public class MainActivity extends AppCompatActivity {
     sheetBinding.rvHadithCategories.setLayoutManager(new LinearLayoutManager(this));
     sheetBinding.rvHadithCategories.setAdapter(categoryAdapter);
 
+    // Progress Listener for background SQLite Database download from GitHub CDN
+    com.devflux.deenone.features.hadith.repository.HadithDatabaseManager.DownloadProgressListener progressListener =
+        (percent, currentBytes, totalBytes) -> {
+          if (sheetBinding.loadingViewHadith.getVisibility() == View.VISIBLE) {
+            String msg = isBn
+                ? ("হাদিস ডাটাবেজ ডাউনলোড ও প্রস্তুত হচ্ছে... " + com.devflux.deenone.utils.BengaliNumberUtil.toBengali(percent) + "%")
+                : ("Downloading Hadith Database... " + percent + "%");
+            sheetBinding.loadingViewHadith.setMessage(msg);
+          }
+        };
+    com.devflux.deenone.features.hadith.repository.HadithDatabaseManager.getInstance(this).addProgressListener(progressListener);
+
     // Back from Chapters Screen to 25 Categories Screen
     sheetBinding.btnBackFromChapters.setOnClickListener(v -> {
+      sheetBinding.loadingViewHadith.hide();
       sheetBinding.layoutChapterView.setVisibility(View.GONE);
       sheetBinding.layoutHadithHeader.setVisibility(View.VISIBLE);
       sheetBinding.layoutSelectedCategoryBar.setVisibility(View.GONE);
@@ -2064,10 +2101,13 @@ public class MainActivity extends AppCompatActivity {
       sheetBinding.rvHadithList.setVisibility(View.GONE);
       currentSelectedBookSlug[0] = "";
       categoryAdapter.filter("");
+      com.devflux.deenone.features.hadith.repository.HadithCategoryRepository.getInstance()
+          .getCategories(MainActivity.this, categoryAdapter::setCategories);
     });
 
     // Back to Chapters Screen (or Categories)
     sheetBinding.btnBackToCategories.setOnClickListener(v -> {
+      sheetBinding.loadingViewHadith.hide();
       if (!currentSelectedBookSlug[0].isEmpty()) {
         sheetBinding.layoutSelectedCategoryBar.setVisibility(View.GONE);
         sheetBinding.layoutHadithHeader.setVisibility(View.GONE);
@@ -2097,7 +2137,13 @@ public class MainActivity extends AppCompatActivity {
           categoryAdapter.setCategories(categories);
         });
 
-    sheetBinding.btnCloseHadith.setOnClickListener(v -> dialog.dismiss());
+    sheetBinding.btnCloseHadith.setOnClickListener(v -> {
+      com.devflux.deenone.features.hadith.repository.HadithDatabaseManager.getInstance(MainActivity.this).removeProgressListener(progressListener);
+      dialog.dismiss();
+    });
+    dialog.setOnDismissListener(d -> {
+      com.devflux.deenone.features.hadith.repository.HadithDatabaseManager.getInstance(MainActivity.this).removeProgressListener(progressListener);
+    });
     dialog.show();
   }
 

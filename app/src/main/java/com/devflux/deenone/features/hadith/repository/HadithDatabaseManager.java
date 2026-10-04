@@ -50,6 +50,7 @@ public class HadithDatabaseManager {
     private final ExecutorService backgroundExecutor = Executors.newFixedThreadPool(2);
     private final Handler mainHandler = new Handler(Looper.getMainLooper());
     private final AtomicBoolean isDownloading = new AtomicBoolean(false);
+    private final java.util.List<DownloadProgressListener> progressListeners = new java.util.concurrent.CopyOnWriteArrayList<>();
 
     private static final Map<String, Integer> BOOK_SLUG_MAP = new HashMap<>();
     static {
@@ -58,10 +59,14 @@ public class HadithDatabaseManager {
         BOOK_SLUG_MAP.put("riyadus_salihin", 3);
         BOOK_SLUG_MAP.put("abu_dawood", 4);
         BOOK_SLUG_MAP.put("abudawud", 4);
+        BOOK_SLUG_MAP.put("bulughul_maram", 5);
         BOOK_SLUG_MAP.put("nasai", 6);
+        BOOK_SLUG_MAP.put("jal_o_daif_series", 8);
         BOOK_SLUG_MAP.put("ibn_majah", 9);
         BOOK_SLUG_MAP.put("ibnmajah", 9);
+        BOOK_SLUG_MAP.put("100_susabbasto_hadith", 10);
         BOOK_SLUG_MAP.put("tirmidhi", 11);
+        BOOK_SLUG_MAP.put("adabul_mufrad", 12);
         BOOK_SLUG_MAP.put("hadithe_qudsi", 13);
         BOOK_SLUG_MAP.put("nawawi_40", 14);
         BOOK_SLUG_MAP.put("nawawi40", 14);
@@ -78,15 +83,56 @@ public class HadithDatabaseManager {
         BOOK_NAMES.put("tirmidhi", new String[]{"জামে' আত-তিরমিযী", "Jami' at-Tirmidhi"});
         BOOK_NAMES.put("ibn_majah", new String[]{"সুনানে ইবনে মাজাহ", "Sunan Ibn Majah"});
         BOOK_NAMES.put("ibnmajah", new String[]{"সুনানে ইবনে মাজাহ", "Sunan Ibn Majah"});
+        BOOK_NAMES.put("muwatta_malik", new String[]{"মুয়াত্তা ইমাম মালিক", "Muwatta Imam Malik"});
         BOOK_NAMES.put("riyadus_salihin", new String[]{"রিয়াদুস সালেহীন", "Riyadus Salihin"});
-        BOOK_NAMES.put("hadithe_qudsi", new String[]{"সহীহ হাদীসে কুদসী", "Sahih Hadithe Qudsi"});
+        BOOK_NAMES.put("bulughul_maram", new String[]{"বুলুগুল মারাম", "Bulughul Maram"});
+        BOOK_NAMES.put("lulu_wal_marjan", new String[]{"আল-লু'লু ওয়াল মারজান", "Al-Lu'lu wal Marjan"});
+        BOOK_NAMES.put("hadith_sambhar", new String[]{"হাদীস সম্ভার", "Hadith Sambhar"});
+        BOOK_NAMES.put("silsila_sahiha", new String[]{"সিলসিলা সহিহা", "Silsila Sahiha"});
+        BOOK_NAMES.put("jal_o_daif_series", new String[]{"জাল ও যঈফ হাদীস সিরিজ", "Jal o Daif Hadith Series"});
+        BOOK_NAMES.put("mishkatul_masabih", new String[]{"মিশকাতুল মাসাবীহ", "Mishkat al-Masabih"});
         BOOK_NAMES.put("nawawi_40", new String[]{"আন্-নওয়াবীর চল্লিশ হাদীস", "An-Nawawi's 40 Hadith"});
         BOOK_NAMES.put("nawawi40", new String[]{"আন্-নওয়াবীর চল্লিশ হাদীস", "An-Nawawi's 40 Hadith"});
+        BOOK_NAMES.put("adabul_mufrad", new String[]{"আল-আদাবুল মুফরাদ", "Al-Adab al-Mufrad"});
+        BOOK_NAMES.put("rafayel_yadain", new String[]{"জুয'উল রাফায়েল ইয়াদাইন", "Juz'ul Raf'ul Yadayn"});
+        BOOK_NAMES.put("hadithe_qudsi", new String[]{"সহীহ হাদীসে কুদসী", "Sahih Hadithe Qudsi"});
+        BOOK_NAMES.put("100_susabbasto_hadith", new String[]{"১০০ সুসাব্যস্ত হাদীস", "100 Susabbasto Hadith"});
+        BOOK_NAMES.put("mishkate_daif_hadith", new String[]{"মিশকাতে যঈফ হাদীস", "Mishkate Daif Hadith"});
+        BOOK_NAMES.put("shamayele_tirmidhi", new String[]{"শামায়েলে তিরমিযি", "Shama'il al-Tirmidhi"});
+        BOOK_NAMES.put("sahih_at_targib", new String[]{"সহীহ আত-তারগিব ওয়াত তাহরিব", "Sahih at-Targhib wat-Tahrib"});
+        BOOK_NAMES.put("sahih_fazayele_amal", new String[]{"সহিহ ফাযায়েলে আমল", "Sahih Fazayele Amal"});
+        BOOK_NAMES.put("upodesh", new String[]{"উপদেশ", "Upodesh"});
         BOOK_NAMES.put("ramadaner_durbol_hadith", new String[]{"রমজানের দুর্বল হাদিস", "Ramadaner Durbol Hadith"});
     }
 
     public interface DbReadyCallback {
         void onReady(boolean success);
+    }
+
+    public interface DownloadProgressListener {
+        void onProgress(int percent, long downloadedBytes, long totalBytes);
+    }
+
+    public void addProgressListener(DownloadProgressListener listener) {
+        if (listener != null && !progressListeners.contains(listener)) {
+            progressListeners.add(listener);
+        }
+    }
+
+    public void removeProgressListener(DownloadProgressListener listener) {
+        if (listener != null) {
+            progressListeners.remove(listener);
+        }
+    }
+
+    private void notifyProgress(int percent, long currentBytes, long totalBytes) {
+        mainHandler.post(() -> {
+            for (DownloadProgressListener listener : progressListeners) {
+                try {
+                    listener.onProgress(percent, currentBytes, totalBytes);
+                } catch (Exception ignored) {}
+            }
+        });
     }
 
     private HadithDatabaseManager(Context context) {
@@ -108,6 +154,10 @@ public class HadithDatabaseManager {
 
     public boolean isDatabaseReady() {
         return dbFile != null && dbFile.exists() && dbFile.length() >= MIN_VALID_DB_SIZE;
+    }
+
+    public boolean isDownloading() {
+        return isDownloading.get();
     }
 
     public void ensureDatabaseAvailable(DbReadyCallback callback) {
@@ -155,12 +205,26 @@ public class HadithDatabaseManager {
                 conn.setRequestProperty("User-Agent", "DeenOne-Android/1.0");
 
                 if (conn.getResponseCode() == HttpURLConnection.HTTP_OK) {
-                    is = new BufferedInputStream(conn.getInputStream(), 16384);
+                    long totalLength = conn.getContentLengthLong();
+                    if (totalLength <= 0) {
+                        totalLength = 41_000_000L;
+                    }
+                    is = new BufferedInputStream(conn.getInputStream(), 32768);
                     fos = new FileOutputStream(tempFile);
-                    byte[] buffer = new byte[16384];
+                    byte[] buffer = new byte[32768];
                     int len;
+                    long totalRead = 0;
+                    long lastProgressUpdate = 0;
+
                     while ((len = is.read(buffer)) != -1) {
                         fos.write(buffer, 0, len);
+                        totalRead += len;
+                        long now = System.currentTimeMillis();
+                        if (now - lastProgressUpdate > 120) {
+                            lastProgressUpdate = now;
+                            int percent = (int) Math.min(99, (totalRead * 100) / totalLength);
+                            notifyProgress(percent, totalRead, totalLength);
+                        }
                     }
                     fos.flush();
                     fos.close();
@@ -173,6 +237,7 @@ public class HadithDatabaseManager {
                         }
                         boolean renamed = tempFile.renameTo(dbFile);
                         if (renamed && isDatabaseReady()) {
+                            notifyProgress(100, dbFile.length(), dbFile.length());
                             Log.i(TAG, "Hadith database successfully downloaded from CDN: " + dbFile.length() + " bytes");
                             return true;
                         }
