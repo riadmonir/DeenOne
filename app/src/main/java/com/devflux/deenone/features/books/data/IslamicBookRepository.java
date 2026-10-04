@@ -366,22 +366,31 @@ public class IslamicBookRepository {
 
     private void seedCanonicalBooksIfEmpty() {
         AppDatabase.databaseWriteExecutor.execute(() -> {
-            if (bookDao.getBookCount() < 100) {
-                List<IslamicBookEntity> canonicalBooks = getCanonicalIslamicBooks(context);
-                if (canonicalBooks != null && !canonicalBooks.isEmpty()) {
-                    for (IslamicBookEntity newBook : canonicalBooks) {
-                        IslamicBookEntity existing = bookDao.getBookByIdSync(newBook.getId());
-                        if (existing != null) {
-                            newBook.setDownloaded(existing.isDownloaded());
-                            newBook.setDownloadProgress(existing.getDownloadProgress());
-                            newBook.setFavorite(existing.isFavorite());
-                            newBook.setLastReadPage(existing.getLastReadPage());
-                            newBook.setReadingPercentage(existing.getReadingPercentage());
-                            newBook.setReadingStatus(existing.getReadingStatus());
-                            newBook.setLastOpenedTimestamp(existing.getLastOpenedTimestamp());
+            if (bookDao.getBookCount() < 170) {
+                IslamicBookDatabaseManager dbManager = IslamicBookDatabaseManager.getInstance(context);
+                if (dbManager.isDatabaseReady()) {
+                    List<IslamicBookEntity> canonicalBooks = dbManager.getAllBooks();
+                    if (canonicalBooks != null && !canonicalBooks.isEmpty()) {
+                        for (IslamicBookEntity newBook : canonicalBooks) {
+                            IslamicBookEntity existing = bookDao.getBookByIdSync(newBook.getId());
+                            if (existing != null) {
+                                newBook.setDownloaded(existing.isDownloaded());
+                                newBook.setDownloadProgress(existing.getDownloadProgress());
+                                newBook.setFavorite(existing.isFavorite());
+                                newBook.setLastReadPage(existing.getLastReadPage());
+                                newBook.setReadingPercentage(existing.getReadingPercentage());
+                                newBook.setReadingStatus(existing.getReadingStatus());
+                                newBook.setLastOpenedTimestamp(existing.getLastOpenedTimestamp());
+                            }
                         }
+                        bookDao.insertAll(canonicalBooks);
                     }
-                    bookDao.insertAll(canonicalBooks);
+                } else {
+                    dbManager.ensureDatabaseAvailable(success -> {
+                        if (success) {
+                            seedCanonicalBooksIfEmpty();
+                        }
+                    });
                 }
             }
         });
@@ -396,6 +405,18 @@ public class IslamicBookRepository {
         long now = System.currentTimeMillis();
 
         if (ctx != null) {
+            try {
+                IslamicBookDatabaseManager dbManager = IslamicBookDatabaseManager.getInstance(ctx);
+                if (dbManager.isDatabaseReady()) {
+                    List<IslamicBookEntity> dbBooks = dbManager.getAllBooks();
+                    if (dbBooks != null && !dbBooks.isEmpty()) {
+                        return dbBooks;
+                    }
+                }
+            } catch (Exception e) {
+                Log.w(TAG, "Database manager canonical load fallback: " + e.getMessage());
+            }
+
             try {
                 android.content.res.AssetManager am = ctx.getAssets();
                 java.io.InputStream is = am.open("books/islamic_books.json");
@@ -421,7 +442,7 @@ public class IslamicBookRepository {
                     String dlUrl = obj.has("download_url") ? obj.get("download_url").getAsString() : "";
                     String publisher = obj.has("publisher") ? obj.get("publisher").getAsString() : "হাদীসবিডি ও ইসলামহাউজ";
                     String source = obj.has("verified_source") ? obj.get("verified_source").getAsString() : "www.hadithbd.com";
-                    String format = obj.has("format") ? obj.get("format").getAsString() : "ডিজিটাল কিতাব";
+                    String format = obj.has("format") ? obj.get("format").getAsString() : "ডিজিタル কিতাব";
 
                     int chCount = 1;
                     if (obj.has("chapters") && obj.get("chapters").isJsonArray()) {

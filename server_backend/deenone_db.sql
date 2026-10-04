@@ -6883,3 +6883,43 @@ UNLOCK TABLES;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2026-09-30  0:24:25
+
+
+-- ============================================================================
+-- ISLAMIC BOOKS MASTER TABLES & DATA (21 Categories, 140+ Books)
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS `islamic_books` (
+  `id` varchar(64) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `title_en` varchar(255) DEFAULT NULL,
+  `subtitle` varchar(255) DEFAULT NULL,
+  `author` varchar(255) DEFAULT NULL,
+  `author_en` varchar(255) DEFAULT NULL,
+  `category` varchar(64) DEFAULT NULL,
+  `category_bn` varchar(128) DEFAULT NULL,
+  `category_en` varchar(128) DEFAULT NULL,
+  `language` varchar(10) DEFAULT 'bn',
+  `page_count` int(11) DEFAULT 0,
+  `file_size` varchar(32) DEFAULT NULL,
+  `description` text DEFAULT NULL,
+  `publisher` varchar(255) DEFAULT NULL,
+  `verified_source` varchar(255) DEFAULT NULL,
+  `format` varchar(64) DEFAULT 'ডিজিটাল কিতাব',
+  `download_url` text DEFAULT NULL,
+  `total_chapters` int(11) DEFAULT 0,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `idx_cat` (`category`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS `islamic_book_chapters` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `book_id` varchar(64) NOT NULL,
+  `chapter_number` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `title_en` varchar(255) DEFAULT NULL,
+  `content` longtext NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `idx_book` (`book_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

@@ -143,6 +143,14 @@ public class BookCategoryExpandableAdapter extends RecyclerView.Adapter<BookCate
             }
 
             String catKey = b.getCategory() != null ? b.getCategory().toLowerCase() : "daily_life";
+            if ("salat".equals(catKey)) catKey = "salah";
+            else if ("shirk_bidah".equals(catKey) || "shirk".equals(catKey)) catKey = "bidah";
+            else if ("biography".equals(catKey)) catKey = "seerah";
+            else if ("sects".equals(catKey)) catKey = "firqa";
+            else if ("jadu_ruqyah".equals(catKey)) catKey = "ruqyah";
+            else if ("comparative_religion".equals(catKey)) catKey = "anti_deviation";
+            else if ("family".equals(catKey) || "qurbani_eid".equals(catKey)) catKey = "daily_life";
+
             CategoryGroup grp = groupMap.get(catKey);
             if (grp == null) {
                 grp = groupMap.get("daily_life");
