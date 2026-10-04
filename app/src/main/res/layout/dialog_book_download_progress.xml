@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="24dp"
+    android:background="@drawable/bg_dialog_rounded"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <!-- Title: ডাটাবেস ডাউনলোড হচ্ছে -->
+    <TextView
+        android:id="@+id/tvProgressTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ডাটাবেস ডাউনলোড হচ্ছে"
+        android:textColor="@color/text_primary"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <!-- Subtitle: নির্বাচিত ডাটাবেসের ডাউনলোড অগ্রগতি -->
+    <TextView
+        android:id="@+id/tvProgressSubtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="নির্বাচিত ডাটাবেসের ডাউনলোড অগ্রগতি"
+        android:textColor="@color/text_secondary"
+        android:textSize="13.5sp" />
+
+    <!-- Label: ডাটাবেস -->
+    <TextView
+        android:id="@+id/tvProgressFieldLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="ডাটাবেস"
+        android:textColor="@color/text_secondary"
+        android:textSize="13sp" />
+
+    <!-- Book Title: নাজাত প্রাপ্ত দলের আকীদাহ -->
+    <TextView
+        android:id="@+id/tvProgressBookTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="নাজাত প্রাপ্ত দলের আকীদাহ"
+        android:textColor="@color/text_primary"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <!-- Progress Bar (Green Horizontal) -->
+    <ProgressBar
+        android:id="@+id/progressBarBookDownload"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_marginTop="16dp"
+        android:max="100"
+        android:progress="100"
+        android:progressDrawable="@drawable/progress_waqt_mint_horizontal" />
+
+    <!-- Progress Status & Percent Row -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivProgressStatusIcon"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_check_circle"
+                app:tint="@color/accent_mint" />
+
+            <TextView
+                android:id="@+id/tvProgressStatusText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="সম্পন্ন"
+                android:textColor="@color/text_primary"
+                android:textSize="13.5sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvProgressPercentText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:text="১০০%"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <!-- Dismiss Button: বন্ধ করুন -->
+    <TextView
+        android:id="@+id/btnDismissProgress"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/bg_btn_outline_pill"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:text="বন্ধ করুন"
+        android:textColor="@color/text_primary"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

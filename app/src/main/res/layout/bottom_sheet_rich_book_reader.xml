@@ -1,216 +1,295 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/layoutBookReaderRoot"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FAFAFA"
-    android:orientation="vertical">
+    android:background="@color/bg_main">
 
-    <!-- Top App Bar -->
     <LinearLayout
-        android:id="@+id/layoutReaderHeader"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/bg_top_bar"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:paddingHorizontal="14dp"
-        android:paddingTop="12dp"
-        android:paddingBottom="10dp">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <ImageButton android:id="@+id/btnCloseReader"
-            android:layout_width="38dp"
-            android:layout_height="38dp"
-            android:background="@drawable/bg_badge_pill"
-            android:contentDescription="ফিরে যান"
-            android:src="@drawable/ic_arrow_back"
-            app:tint="@color/accent_mint" />
-
+        <!-- 1. Top Teal Header (Screenshot 5) -->
         <LinearLayout
-            android:layout_width="0dp"
+            android:id="@+id/layoutReaderTopBar"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="10dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            android:background="#0E4D46"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="14dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp">
+
+            <FrameLayout
+                android:id="@+id/btnCloseReader"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:background="@drawable/bg_circular_counter"
+                android:backgroundTint="#1AFFFFFF"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_arrow_back"
+                    app:tint="@color/white" />
+            </FrameLayout>
 
             <TextView
-                android:id="@+id/tvReaderTitle"
-                android:layout_width="match_parent"
+                android:id="@+id/tvReaderTopTitle"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="6dp"
+                android:layout_weight="1"
                 android:ellipsize="end"
                 android:maxLines="1"
-                android:text="রিয়াদুস সালেহীন"
-                android:textColor="@color/text_primary"
-                android:textSize="15sp"
+                android:text="নাজাত প্রাপ্ত দলের আ..."
+                android:textColor="@color/white"
+                android:textSize="17sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/tvReaderAuthor"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:maxLines="1"
-                android:text="ইমাম আন-নববী (রহ.)"
-                android:textColor="@color/accent_mint"
-                android:textSize="11.5sp" />
+            <!-- Swap/Prev-Next Chapter Icon (⇄) -->
+            <ImageView
+                android:id="@+id/btnReaderSync"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="@drawable/bg_circular_counter"
+                android:backgroundTint="#1AFFFFFF"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="8dp"
+                android:src="@drawable/ic_swap_vert"
+                app:tint="@color/white" />
+
+            <!-- Search Icon (🔍) -->
+            <ImageView
+                android:id="@+id/btnReaderSearch"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="6dp"
+                android:background="@drawable/bg_circular_counter"
+                android:backgroundTint="#1AFFFFFF"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="8dp"
+                android:src="@drawable/ic_search"
+                app:tint="@color/white" />
+
+            <!-- TOC / Chapters Menu Icon (☰) -->
+            <ImageView
+                android:id="@+id/btnReaderToc"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="6dp"
+                android:background="@drawable/bg_circular_counter"
+                android:backgroundTint="#1AFFFFFF"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="8dp"
+                android:src="@drawable/ic_menu"
+                app:tint="@color/white" />
+
+            <!-- Settings / Font Size Icon (⚙️) -->
+            <ImageView
+                android:id="@+id/btnReaderSettings"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="6dp"
+                android:background="@drawable/bg_circular_counter"
+                android:backgroundTint="#1AFFFFFF"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="8dp"
+                android:src="@drawable/ic_tune"
+                app:tint="@color/white" />
+
         </LinearLayout>
 
-        <!-- Font Size A- / A+ -->
-        <ImageButton
-            android:id="@+id/btnReaderFontSize"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:background="@drawable/bg_badge_pill"
-            android:contentDescription="ফন্ট সাইজ"
-            android:src="@drawable/ic_format_size"
-            app:tint="@color/text_primary" />
-
-        <!-- Theme Picker (Light / Sepia / Dark / Midnight) -->
-        <ImageButton
-            android:id="@+id/btnReaderThemeToggle"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:layout_marginStart="6dp"
-            android:background="@drawable/bg_badge_pill"
-            android:contentDescription="রিডিং থিম"
-            android:src="@drawable/ic_palette"
-            app:tint="@color/text_primary" />
-
-        <!-- Jump to Chapter / Page -->
-        <ImageButton
-            android:id="@+id/btnReaderJumpToPage"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:layout_marginStart="6dp"
-            android:background="@drawable/bg_badge_pill"
-            android:contentDescription="সূচিপত্র / অধ্যায়"
-            android:src="@drawable/ic_menu_book"
-            app:tint="@color/text_primary" />
-    </LinearLayout>
-
-    <!-- Reading Body View (Dual Engine: Rich Text Chapter or PDF) -->
-    <FrameLayout
-        android:id="@+id/containerReaderContent"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
-
-        <!-- 1. Rich Text Chapter View -->
-        <androidx.core.widget.NestedScrollView
-            android:id="@+id/scrollReaderText"
+        <!-- 2. Sub-header Toolbar (White / Card background) (Screenshot 5) -->
+        <LinearLayout
+            android:id="@+id/layoutReaderSubHeader"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:clipToPadding="false"
-            android:overScrollMode="never"
-            android:paddingHorizontal="20dp"
-            android:paddingTop="18dp"
-            android:paddingBottom="24dp">
+            android:layout_height="48dp"
+            android:background="@color/bg_card"
+            android:elevation="2dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="16dp">
+
+            <TextView
+                android:id="@+id/tvReaderSubtitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="প্রশ্ন এবং তাঁর উত্তরসমূহ"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <!-- Favorite Heart Icon (♡) -->
+            <ImageView
+                android:id="@+id/btnReaderFav"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="7dp"
+                android:src="@drawable/ic_favorite_border"
+                app:tint="@color/text_secondary" />
+
+            <!-- Bookmark Icon (🔖) -->
+            <ImageView
+                android:id="@+id/btnReaderBookmark"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="4dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="7dp"
+                android:src="@drawable/ic_bookmark"
+                app:tint="@color/text_secondary" />
+
+            <!-- Tag Icon (🏷️) -->
+            <ImageView
+                android:id="@+id/btnReaderTag"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="4dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="7dp"
+                android:src="@drawable/ic_tag_price"
+                app:tint="@color/text_secondary" />
+
+            <!-- Theme Toggle Icon (🌙) -->
+            <ImageView
+                android:id="@+id/btnReaderTheme"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="4dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="7dp"
+                android:src="@drawable/ic_moon"
+                app:tint="@color/text_secondary" />
+
+            <!-- More 3-dots Menu (⋮) -->
+            <ImageView
+                android:id="@+id/btnReaderMore"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="4dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="7dp"
+                android:src="@drawable/ic_more_vert"
+                app:tint="@color/text_secondary" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/border_subtle" />
+
+        <!-- 3. Reading Content Area (Screenshot 5) -->
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollReaderContent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true"
+            android:overScrollMode="never">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:paddingHorizontal="20dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="90dp">
 
+                <!-- Chapter / Question Title (Bold 18sp) -->
                 <TextView
                     android:id="@+id/tvChapterHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="অধ্যায় ১: ইখলাস ও নিয়ত"
-                    android:textColor="#1E293B"
+                    android:lineSpacingExtra="4dp"
+                    android:text="(১) বান্দার উপর সর্বপ্রথম ওয়াজিব কোনটি?"
+                    android:textColor="@color/text_primary"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
-                <View
-                    android:id="@+id/dividerChapter"
-                    android:layout_width="60dp"
-                    android:layout_height="3dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="16dp"
-                    android:background="@drawable/bg_badge_pill"
-                    android:backgroundTint="@color/accent_mint" />
-
+                <!-- Chapter Content Body -->
                 <TextView
                     android:id="@+id/tvChapterBodyText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:lineSpacingExtra="6dp"
-                    android:text="সকল আমলের গ্রহণযোগ্যতা নিয়তের উপর নির্ভরশীল..."
-                    android:textColor="#1E293B"
+                    android:layout_marginTop="16dp"
+                    android:lineSpacingExtra="8dp"
+                    android:text="বান্দার উপর সর্বপ্রথম ওয়াজিব হচ্ছে, তাদেরকে আল্লাহ তা'আলা যে উদ্দেশ্যে সৃষ্টি করেছেন, তাদের থেকে যে বিষয়ের অঙ্গীকার নিয়েছেন, যে বিষয় দিয়ে রাসূল প্রেরণ করেছেন এবং কিতাব অবতীর্ণ করেছেন, সে সম্পর্কে জ্ঞান অর্জন করা। এ বিষয়টির জন্যই আল্লাহ্ তাআলা দুনিয়া-আখেরাত, জান্নাত-জাহান্নাম সৃষ্টি করেছেন। এ বিষয়ের জন্যেই কিয়ামত প্রতিষ্ঠিত হবে, দাড়িপাল্লা স্থাপন করা হবে, আমলনামা প্রদান করা হবে। এ বিষয়টির কারণেই কেউ সৌভাগ্যবান হবে আবার কেউ হবে হতভাগা। এ অনুযায়ী কিয়ামতের দিন নূর বণ্টিত হবে। সে দিন আল্লাহ যাকে নূর দান করবেন না, তার কোন নূর থাকবে না।"
+                    android:textColor="@color/text_primary"
                     android:textSize="16sp" />
+
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
 
-        <!-- 2. PDF ViewPager (if viewing PDF mode) -->
-        <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/viewPagerReaderPdf"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:visibility="gone" />
-    </FrameLayout>
-
-    <!-- Bottom Navigation & Progress Bar -->
-    <LinearLayout
-        android:id="@+id/layoutReaderBottomBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/bg_bottom_nav"
-        android:gravity="center_vertical"
-        android:orientation="vertical"
-        android:paddingHorizontal="16dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="14dp">
-
-        <!-- Progress Scrubber -->
-        <SeekBar
-            android:id="@+id/seekBarReaderProgress"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:progressTint="@color/accent_mint"
-            android:thumbTint="@color/accent_mint" />
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp">
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnReaderPrevChapter"
-                style="@style/Widget.MaterialComponents.Button.TextButton"
-                android:layout_width="wrap_content"
-                android:layout_height="36dp"
-                android:layout_alignParentStart="true"
-                android:insetTop="0dp"
-                android:insetBottom="0dp"
-                android:text="◀ পূর্ববর্তী"
-                android:textColor="@color/text_primary"
-                android:textSize="12sp" />
-
-            <TextView
-                android:id="@+id/tvReaderPageIndicator"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="অধ্যায় ১ / ১০ • ১০% সম্পন্ন"
-                android:textColor="@color/accent_mint"
-                android:textSize="12sp"
-                android:textStyle="bold" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnReaderNextChapter"
-                style="@style/Widget.MaterialComponents.Button.TextButton"
-                android:layout_width="wrap_content"
-                android:layout_height="36dp"
-                android:layout_alignParentEnd="true"
-                android:insetTop="0dp"
-                android:insetBottom="0dp"
-                android:text="পরবর্তী ▶"
-                android:textColor="@color/text_primary"
-                android:textSize="12sp" />
-        </RelativeLayout>
     </LinearLayout>
 
-</LinearLayout>
+    <!-- Bottom Floating Controls (Screenshot 5) -->
+    <!-- Floating Left Quick Action Pill (...) -->
+    <FrameLayout
+        android:id="@+id/fabReaderQuickAction"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bg_circular_counter"
+        android:backgroundTint="#0E4D46"
+        android:clickable="true"
+        android:elevation="6dp"
+        android:focusable="true">
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_more_horiz"
+            app:tint="@color/white" />
+    </FrameLayout>
+
+    <!-- Floating Right Font Size / Navigation Controls -->
+    <FrameLayout
+        android:id="@+id/fabReaderFontAdjust"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bg_circular_counter"
+        android:backgroundTint="#0E4D46"
+        android:clickable="true"
+        android:elevation="6dp"
+        android:focusable="true">
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_tune"
+            app:tint="@color/white" />
+    </FrameLayout>
+
+</RelativeLayout>

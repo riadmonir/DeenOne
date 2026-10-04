@@ -16,7 +16,6 @@ import com.devflux.deenone.data.local.entity.IslamicBookEntity;
 import com.devflux.deenone.databinding.BottomSheetBookDetailsBinding;
 import com.devflux.deenone.features.books.adapter.BookListAdapter;
 import com.devflux.deenone.features.books.download.BookDownloadManager;
-import com.devflux.deenone.features.books.pdf.PdfBookReaderDialog;
 import com.devflux.deenone.utils.BengaliNumberUtil;
 
 import java.io.File;
@@ -109,7 +108,7 @@ public class BookDetailsDialog {
     }
 
     binding.btnDetailsReadBook.setOnClickListener(v -> {
-      com.devflux.deenone.features.books.pdf.RichBookReaderDialog.show(context, book, null);
+      com.devflux.deenone.features.books.RichBookReaderDialog.show(context, book, 0);
     });
 
     binding.btnCloseBookDetails.setOnClickListener(v -> dialog.dismiss());
@@ -133,10 +132,10 @@ public class BookDetailsDialog {
       @Override
       public void onSuccess(String bookId, File localFile) {
         book.setDownloaded(true);
-        book.setLocalFilePath(localFile.getAbsolutePath());
+        book.setLocalFilePath(localFile != null ? localFile.getAbsolutePath() : "");
         book.setDownloadProgress(100);
         updateActionButtons.run();
-        PdfBookReaderDialog.show(context, book, localFile);
+        RichBookReaderDialog.show(context, book, 0);
       }
 
       @Override

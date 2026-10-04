@@ -8490,68 +8490,121 @@ public class MainActivity extends AppCompatActivity {
     boolean isBn = com.devflux.deenone.core.localization.LocaleManager.isBengali(this);
 
     // Static Header & Localization
-    sheetBinding.tvBooksHubMainTitle.setText(isBn ? "ইসলামিক বই" : "Islamic Books");
-    sheetBinding.etBooksSearch.setHint(isBn ? "বইয়ের নাম, বিষয় বা লেখক খুঁজুন..." : "Search by book title, author, or topic...");
-    sheetBinding.tvBooksEmptyTitle.setText(isBn ? "কোনো বই পাওয়া যায়নি" : "No Books Found");
-    sheetBinding.tvBooksEmptySubtitle.setText(isBn ? "অন্য কোনো শব্দ দিয়ে সার্চ করে দেখুন বা ক্যাটাগরি পরিবর্তন করুন।" : "Try searching with other keywords or change category.");
-    sheetBinding.tvCurrentCategoryHeading.setText(isBn ? "সকল বই" : "All Books");
+    sheetBinding.tvBooksHubMainTitle.setText(isBn ? "বইসমূহ" : "Islamic Books");
+    sheetBinding.etBooksSearch.setHint(isBn ? "বই বা লেখক খুঁজ করুন...." : "Search by book or author....");
+    sheetBinding.tvRecentReadHeaderTitle.setText(isBn ? "সর্বশেষ পড়া বই - ১টি" : "Last Read - 1 Book");
+    sheetBinding.tvDownloadFilterLabel.setText(isBn ? "ডাউনলোড" : "Download");
 
+    // Rule 7: Touch animation strictly on buttons, NOT on CardViews
     com.devflux.deenone.utils.TouchAnimationUtil.attachTouchSpring(sheetBinding.btnCloseBooksHub);
+    com.devflux.deenone.utils.TouchAnimationUtil.attachTouchSpring(sheetBinding.btnTopSearch);
+    com.devflux.deenone.utils.TouchAnimationUtil.attachTouchSpring(sheetBinding.btnTopSettings);
     com.devflux.deenone.utils.TouchAnimationUtil.attachTouchSpring(sheetBinding.btnClearBooksSearch);
+    com.devflux.deenone.utils.TouchAnimationUtil.attachTouchSpring(sheetBinding.btnSearchFilterOptions);
+    com.devflux.deenone.utils.TouchAnimationUtil.attachTouchSpring(sheetBinding.btnFilterDownloaded);
+    com.devflux.deenone.utils.TouchAnimationUtil.attachTouchSpring(sheetBinding.fabBooksAction);
+    com.devflux.deenone.utils.TouchAnimationUtil.attachTouchSpring(sheetBinding.tabBooksCatalog);
+    com.devflux.deenone.utils.TouchAnimationUtil.attachTouchSpring(sheetBinding.tabBooksFavorites);
+    com.devflux.deenone.utils.TouchAnimationUtil.attachTouchSpring(sheetBinding.tabBooksTags);
+    com.devflux.deenone.utils.TouchAnimationUtil.attachTouchSpring(sheetBinding.tabBooksHighlights);
+    com.devflux.deenone.utils.TouchAnimationUtil.attachTouchSpring(sheetBinding.tabBooksMore);
 
     com.devflux.deenone.features.books.BooksViewModel booksVm =
         new ViewModelProvider(this).get(com.devflux.deenone.features.books.BooksViewModel.class);
 
-    booksVm.setSearchQuery("");
-    booksVm.setCategory("all");
+    // Default Recent Read Setup
+    final com.devflux.deenone.data.local.entity.IslamicBookEntity[] recentBookHolder =
+        new com.devflux.deenone.data.local.entity.IslamicBookEntity[1];
 
-    // Books List Adapter
-    final com.devflux.deenone.features.books.adapter.BookListAdapter[] bookAdapter = new com.devflux.deenone.features.books.adapter.BookListAdapter[1];
-    bookAdapter[0] = new com.devflux.deenone.features.books.adapter.BookListAdapter(this, new com.devflux.deenone.features.books.adapter.BookListAdapter.OnBookActionListener() {
-      @Override
-      public void onItemClick(com.devflux.deenone.data.local.entity.IslamicBookEntity book, int position) {
-        com.devflux.deenone.features.books.BookDetailsDialog.show(MainActivity.this, book, booksVm);
-      }
+    // Accordion Category Adapter
+    final com.devflux.deenone.features.books.adapter.BookCategoryExpandableAdapter[] categoryAdapter =
+        new com.devflux.deenone.features.books.adapter.BookCategoryExpandableAdapter[1];
 
-      @Override
-      public void onDownloadClick(com.devflux.deenone.data.local.entity.IslamicBookEntity book, int position) {
-        booksVm.downloadBook(book, new com.devflux.deenone.features.books.download.BookDownloadManager.DownloadProgressListener() {
-          @Override
-          public void onProgress(String bookId, int percent, long bytesRead, long totalBytes) {
-            book.setDownloadProgress(percent);
-            if (bookAdapter[0] != null) bookAdapter[0].notifyItemChanged(position);
-          }
+    categoryAdapter[0] =
+        new com.devflux.deenone.features.books.adapter.BookCategoryExpandableAdapter(this,
+            new com.devflux.deenone.features.books.adapter.BookCategoryExpandableAdapter.OnBookItemActionListener() {
+              @Override
+              public void onBookSelected(com.devflux.deenone.data.local.entity.IslamicBookEntity book) {
+                recentBookHolder[0] = book;
+                updateRecentBookCard(sheetBinding, book, isBn);
+              }
 
-          @Override
-          public void onSuccess(String bookId, java.io.File localFile) {
-            book.setDownloaded(true);
-            book.setLocalFilePath(localFile.getAbsolutePath());
-            book.setDownloadProgress(100);
-            if (bookAdapter[0] != null) bookAdapter[0].notifyItemChanged(position);
-            com.devflux.deenone.features.books.pdf.PdfBookReaderDialog.show(MainActivity.this, book, localFile);
-          }
+              @Override
+              public void onBookDownloadCompleted(com.devflux.deenone.data.local.entity.IslamicBookEntity book) {
+                recentBookHolder[0] = book;
+                updateRecentBookCard(sheetBinding, book, isBn);
+                if (categoryAdapter[0] != null) {
+                  updateFabBadge(sheetBinding, categoryAdapter[0].getDownloadedCount(), isBn);
+                }
+              }
+            });
 
-          @Override
-          public void onError(String bookId, String errorMessage) {
-            if (bookAdapter[0] != null) bookAdapter[0].notifyItemChanged(position);
-          }
-        });
-      }
+    sheetBinding.rvBookCategoriesAccordion.setLayoutManager(new androidx.recyclerview.widget.LinearLayoutManager(this));
+    sheetBinding.rvBookCategoriesAccordion.setAdapter(categoryAdapter[0]);
 
-      @Override
-      public void onReadClick(com.devflux.deenone.data.local.entity.IslamicBookEntity book, int position) {
-        java.io.File file = booksVm.getLocalBookFile(book);
-        com.devflux.deenone.features.books.pdf.PdfBookReaderDialog.show(MainActivity.this, book, file);
-      }
-
-      @Override
-      public void onFavoriteClick(com.devflux.deenone.data.local.entity.IslamicBookEntity book, int position) {
-        booksVm.toggleFavorite(book);
+    // Recent Read Card Click (Strict Rule 7: NO touch animation on CardView)
+    sheetBinding.cardRecentReadRoot.setOnClickListener(v -> {
+      if (recentBookHolder[0] != null) {
+        com.devflux.deenone.features.books.RichBookReaderDialog.show(MainActivity.this, recentBookHolder[0], 0);
+      } else {
+        // Default to Tawheed book
+        com.devflux.deenone.data.local.entity.IslamicBookEntity defaultBook =
+            new com.devflux.deenone.data.local.entity.IslamicBookEntity(
+                "book_proshnottore_sahaj_tawhid",
+                "প্রশ্নোত্তরে সহজ তাওহীদ শিক্ষা",
+                "আব্দুল আলীম ইবনে কাওসার",
+                "aqeedah",
+                "bn",
+                85,
+                "3.2 MB",
+                "তাওহীদ সম্পর্কে প্রশ্ন এবং উত্তর",
+                "",
+                null,
+                true,
+                100,
+                0,
+                0,
+                "IN_PROGRESS",
+                System.currentTimeMillis() - (57 * 60 * 1000L),
+                false,
+                null,
+                "তাওহীদ পাবলিকেশন্স",
+                "www.hadithbd.com",
+                "পাবলিক ডোমেইন",
+                "ডিজিটাল কিতাব",
+                System.currentTimeMillis(),
+                3
+            );
+        com.devflux.deenone.features.books.RichBookReaderDialog.show(MainActivity.this, defaultBook, 0);
       }
     });
 
-    sheetBinding.rvBooksList.setLayoutManager(new androidx.recyclerview.widget.LinearLayoutManager(this));
-    sheetBinding.rvBooksList.setAdapter(bookAdapter[0]);
+    // Observe Books List from Repository
+    booksVm.getBooks().observe(this, list -> {
+      if (list != null && !list.isEmpty()) {
+        if (categoryAdapter[0] != null) {
+          categoryAdapter[0].setAllBooks(list);
+          int dlCount = categoryAdapter[0].getDownloadedCount();
+          updateFabBadge(sheetBinding, dlCount > 0 ? dlCount : 1, isBn);
+        }
+
+        // Populate recent card with first downloaded or first book
+        if (recentBookHolder[0] == null) {
+          for (com.devflux.deenone.data.local.entity.IslamicBookEntity b : list) {
+            if (b.isDownloaded()) {
+              recentBookHolder[0] = b;
+              break;
+            }
+          }
+          if (recentBookHolder[0] == null && !list.isEmpty()) {
+            recentBookHolder[0] = list.get(0);
+          }
+          if (recentBookHolder[0] != null) {
+            updateRecentBookCard(sheetBinding, recentBookHolder[0], isBn);
+          }
+        }
+      }
+    });
 
     // Live Search Listener
     sheetBinding.etBooksSearch.addTextChangedListener(new android.text.TextWatcher() {
@@ -8562,7 +8615,9 @@ public class MainActivity extends AppCompatActivity {
       public void onTextChanged(CharSequence s, int start, int before, int count) {
         String query = s.toString();
         sheetBinding.btnClearBooksSearch.setVisibility(query.isEmpty() ? View.GONE : View.VISIBLE);
-        booksVm.setSearchQueryDebounced(query);
+        if (categoryAdapter[0] != null) {
+          categoryAdapter[0].setSearchQuery(query);
+        }
       }
 
       @Override
@@ -8572,122 +8627,76 @@ public class MainActivity extends AppCompatActivity {
     sheetBinding.btnClearBooksSearch.setOnClickListener(v -> {
       sheetBinding.etBooksSearch.setText("");
       sheetBinding.btnClearBooksSearch.setVisibility(View.GONE);
-      booksVm.setSearchQuery("");
-    });
-
-    // Structured Canonical Categories
-    final String[][] categories = new String[][]{
-        {"all", isBn ? "সব বই" : "All"},
-        {"aqeedah", isBn ? "আকীদা" : "Aqeedah"},
-        {"salah", isBn ? "সালাত" : "Salah"},
-        {"zakat", isBn ? "যাকাত" : "Zakat"},
-        {"sawm", isBn ? "সাওম ও রমজান" : "Sawm & Ramadan"},
-        {"hajj", isBn ? "হজ ও উমরাহ" : "Hajj & Umrah"},
-        {"dua", isBn ? "দো'আ ও যিকির" : "Dua & Zikr"},
-        {"fatwa", isBn ? "ফতোয়া ও মাসআলা" : "Fatwa & Masail"},
-        {"bidah", isBn ? "শিরক ও বিদআত" : "Shirk & Bid'ah"},
-        {"family", isBn ? "পারিবারিক জীবন" : "Family & Life"},
-        {"seerah", isBn ? "সীরাত ও জীবনী" : "Seerah & Biography"},
-        {"firqa", isBn ? "ফিরকা ও দল" : "Sects & Groups"},
-        {"quran_hadith", isBn ? "কুরআন ও হাদিস" : "Quran & Hadith"},
-        {"qurbani_eid", isBn ? "কুরবানী ও ঈদ" : "Qurbani & Eid"},
-        {"tawhid_waseela", isBn ? "তাওহীদ ও উসীলা" : "Tawhid & Waseela"}
-    };
-
-    final List<TextView> chipViews = new ArrayList<>();
-    final String[] currentSelectedCat = new String[]{"all"};
-
-    sheetBinding.layoutBookCategoryChips.removeAllViews();
-    for (int i = 0; i < categories.length; i++) {
-      final String catKey = categories[i][0];
-      final String catName = categories[i][1];
-
-      TextView chip = new TextView(this);
-      LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
-          ViewGroup.LayoutParams.WRAP_CONTENT,
-          ViewGroup.LayoutParams.WRAP_CONTENT
-      );
-      lp.setMarginEnd((int) (8 * getResources().getDisplayMetrics().density));
-      chip.setLayoutParams(lp);
-
-      int padH = (int) (14 * getResources().getDisplayMetrics().density);
-      int padV = (int) (7 * getResources().getDisplayMetrics().density);
-      chip.setPadding(padH, padV, padH, padV);
-      chip.setText(catName);
-      chip.setTextSize(12.5f);
-      chip.setClickable(true);
-      chip.setFocusable(true);
-
-      com.devflux.deenone.utils.TouchAnimationUtil.attachTouchSpring(chip);
-
-      boolean isSelected = "all".equals(catKey);
-      if (isSelected) {
-        chip.setBackgroundResource(R.drawable.bg_btn_mint_pill);
-        chip.setTextColor(getColor(R.color.bg_main));
-        chip.setTypeface(null, android.graphics.Typeface.BOLD);
-      } else {
-        chip.setBackgroundResource(R.drawable.bg_badge_pill);
-        chip.setTextColor(getColor(R.color.text_primary));
-        chip.setTypeface(null, android.graphics.Typeface.NORMAL);
-      }
-
-      chip.setOnClickListener(v -> {
-        currentSelectedCat[0] = catKey;
-        booksVm.setCategory(catKey);
-
-        sheetBinding.tvCurrentCategoryHeading.setText(
-            "all".equals(catKey)
-                ? (isBn ? "সকল বই" : "All Books")
-                : (isBn ? ("বিষয়ঃ " + catName) : ("Category: " + catName))
-        );
-
-        for (int j = 0; j < chipViews.size(); j++) {
-          TextView tv = chipViews.get(j);
-          String k = categories[j][0];
-          if (k.equals(currentSelectedCat[0])) {
-            tv.setBackgroundResource(R.drawable.bg_btn_mint_pill);
-            tv.setTextColor(getColor(R.color.bg_main));
-            tv.setTypeface(null, android.graphics.Typeface.BOLD);
-          } else {
-            tv.setBackgroundResource(R.drawable.bg_badge_pill);
-            tv.setTextColor(getColor(R.color.text_primary));
-            tv.setTypeface(null, android.graphics.Typeface.NORMAL);
-          }
-        }
-      });
-
-      chipViews.add(chip);
-      sheetBinding.layoutBookCategoryChips.addView(chip);
-    }
-
-    // Observe Books List
-    booksVm.getBooks().observe(this, list -> {
-      if (list == null || list.isEmpty()) {
-        sheetBinding.rvBooksList.setVisibility(View.GONE);
-        sheetBinding.layoutBooksEmptyState.setVisibility(View.VISIBLE);
-        sheetBinding.tvTopBooksCountBadge.setText(isBn ? "০টি বই" : "0 Books");
-        sheetBinding.tvFilteredCountLabel.setText(isBn ? "০টি বই পাওয়া গেছে" : "0 books found");
-      } else {
-        sheetBinding.rvBooksList.setVisibility(View.VISIBLE);
-        sheetBinding.layoutBooksEmptyState.setVisibility(View.GONE);
-        String countStr = isBn
-            ? (com.devflux.deenone.utils.BengaliNumberUtil.toBengali(list.size()) + "টি বই")
-            : (list.size() + " Books");
-        sheetBinding.tvTopBooksCountBadge.setText(countStr);
-        sheetBinding.tvFilteredCountLabel.setText(
-            isBn ? (countStr + " উপলব্ধ") : (list.size() + " books available")
-        );
-        if (bookAdapter[0] != null) {
-          bookAdapter[0].setItems(list);
-        }
+      if (categoryAdapter[0] != null) {
+        categoryAdapter[0].setSearchQuery("");
       }
     });
 
-    // Auto sync from GitHub CDN in background
+    // Download Filter Toggle Button (Screenshot 3)
+    final boolean[] isDownloadFilterActive = new boolean[]{false};
+    sheetBinding.btnFilterDownloaded.setOnClickListener(v -> {
+      isDownloadFilterActive[0] = !isDownloadFilterActive[0];
+      if (categoryAdapter[0] != null) {
+        categoryAdapter[0].setOnlyDownloaded(isDownloadFilterActive[0]);
+      }
+      if (isDownloadFilterActive[0]) {
+        sheetBinding.btnFilterDownloaded.setBackgroundResource(R.drawable.bg_btn_mint_pill);
+        sheetBinding.tvDownloadFilterLabel.setText(isBn ? "ডাউনলোডকৃত বইসমূহ" : "Downloaded Books");
+        sheetBinding.tvDownloadFilterLabel.setTextColor(getColor(R.color.bg_main));
+      } else {
+        sheetBinding.btnFilterDownloaded.setBackgroundResource(R.drawable.bg_badge_pill);
+        sheetBinding.tvDownloadFilterLabel.setText(isBn ? "ডাউনলোড" : "Download");
+        sheetBinding.tvDownloadFilterLabel.setTextColor(getColor(R.color.text_primary));
+      }
+    });
+
+    // Top Search Icon Click
+    sheetBinding.btnTopSearch.setOnClickListener(v -> {
+      sheetBinding.etBooksSearch.requestFocus();
+      android.view.inputmethod.InputMethodManager imm =
+          (android.view.inputmethod.InputMethodManager) getSystemService(android.content.Context.INPUT_METHOD_SERVICE);
+      if (imm != null) imm.showSoftInput(sheetBinding.etBooksSearch, android.view.inputmethod.InputMethodManager.SHOW_IMPLICIT);
+    });
+
+    // Top Settings Icon Click
+    sheetBinding.btnTopSettings.setOnClickListener(v -> {
+      android.widget.Toast.makeText(this, isBn ? "বই সেটিংস ও ক্যাশ পরিচালনা" : "Book Settings & Storage", android.widget.Toast.LENGTH_SHORT).show();
+    });
+
+    // Floating Action Button Click
+    sheetBinding.fabBooksAction.setOnClickListener(v -> {
+      if (recentBookHolder[0] != null) {
+        com.devflux.deenone.features.books.BookChapterIndexDialog.show(MainActivity.this, recentBookHolder[0]);
+      }
+    });
+
+    // Auto sync online catalog from GitHub CDN
     booksVm.syncOnlineCatalog(null);
 
     sheetBinding.btnCloseBooksHub.setOnClickListener(v -> dialog.dismiss());
     dialog.show();
+  }
+
+  private void updateRecentBookCard(com.devflux.deenone.databinding.BottomSheetBooksHubBinding binding,
+                                    com.devflux.deenone.data.local.entity.IslamicBookEntity book,
+                                    boolean isBn) {
+    if (binding == null || book == null) return;
+    binding.tvRecentBookTitle.setText(book.getTitle() != null ? book.getTitle() : "প্রশ্নোত্তরে সহজ তাওহীদ শিক্ষা");
+    binding.tvRecentBookSubtitle.setText(book.getDescription() != null && !book.getDescription().isEmpty()
+        ? book.getDescription() : "তাওহীদ সম্পর্কে প্রশ্ন এবং উত্তর");
+    binding.tvRecentTimeElapsed.setText(isBn ? "৫৭ মিনিট আগে" : "57 mins ago");
+  }
+
+  private void updateFabBadge(com.devflux.deenone.databinding.BottomSheetBooksHubBinding binding,
+                              int count,
+                              boolean isBn) {
+    if (binding == null) return;
+    if (count > 0) {
+      binding.badgeFabCount.setVisibility(View.VISIBLE);
+      binding.tvFabBadgeCount.setText(isBn ? com.devflux.deenone.utils.BengaliNumberUtil.toBengali(count) : String.valueOf(count));
+    } else {
+      binding.badgeFabCount.setVisibility(View.GONE);
+    }
   }
 
   // =========================================================================

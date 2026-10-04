@@ -32,6 +32,7 @@ public class IslamicBookEntity {
     private String licenseInfo; // e.g. "Public Domain / Free Islamic Distribution"
     private String format; // "PDF"
     private long addedTimestamp;
+    private int chaptersCount = 1;
 
     public IslamicBookEntity(@NonNull String id, String title, String author, String category,
                              String language, int totalPages, String fileSize, String description,
@@ -63,6 +64,23 @@ public class IslamicBookEntity {
         this.licenseInfo = licenseInfo != null ? licenseInfo : "পাবলিক ডোমেইন / উন্মুক্ত ইসলামিক প্রকাশনা";
         this.format = format != null ? format : "PDF";
         this.addedTimestamp = addedTimestamp;
+        this.chaptersCount = 1;
+    }
+
+    @androidx.room.Ignore
+    public IslamicBookEntity(@NonNull String id, String title, String author, String category,
+                             String language, int totalPages, String fileSize, String description,
+                             String downloadUrl, String localFilePath, boolean isDownloaded,
+                             int downloadProgress, int lastReadPage, int readingPercentage,
+                             String readingStatus, long lastOpenedTimestamp, boolean isFavorite,
+                             String coverImageUrl, String publisher, String verifiedSource,
+                             String licenseInfo, String format, long addedTimestamp,
+                             int chaptersCount) {
+        this(id, title, author, category, language, totalPages, fileSize, description,
+             downloadUrl, localFilePath, isDownloaded, downloadProgress, lastReadPage,
+             readingPercentage, readingStatus, lastOpenedTimestamp, isFavorite,
+             coverImageUrl, publisher, verifiedSource, licenseInfo, format, addedTimestamp);
+        this.chaptersCount = chaptersCount > 0 ? chaptersCount : 1;
     }
 
     @NonNull
@@ -248,5 +266,13 @@ public class IslamicBookEntity {
 
     public void setAddedTimestamp(long addedTimestamp) {
         this.addedTimestamp = addedTimestamp;
+    }
+
+    public int getChaptersCount() {
+        return chaptersCount > 0 ? chaptersCount : 1;
+    }
+
+    public void setChaptersCount(int chaptersCount) {
+        this.chaptersCount = chaptersCount > 0 ? chaptersCount : 1;
     }
 }

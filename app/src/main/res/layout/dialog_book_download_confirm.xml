@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="24dp"
+    android:background="@drawable/bg_dialog_rounded"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <!-- Title: বই ডাউনলোড করুন -->
+    <TextView
+        android:id="@+id/tvDownloadConfirmTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="বই ডাউনলোড করুন"
+        android:textColor="@color/text_primary"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- Body: আপনি কি ডাউনলোড করতে চান "বইয়ের নাম"? এটি বইটি আপনার ডিভাইসে ডাউনলোড করবে। -->
+    <TextView
+        android:id="@+id/tvDownloadConfirmBody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:lineSpacingExtra="4dp"
+        android:text="আপনি কি ডাউনলোড করতে চান &quot;নাজাত প্রাপ্ত দলের আকীদাহ&quot;? এটি বইটি আপনার ডিভাইসে ডাউনলোড করবে।"
+        android:textColor="@color/text_secondary"
+        android:textSize="15sp" />
+
+    <!-- Action Buttons Row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:gravity="end|center_vertical"
+        android:orientation="horizontal">
+
+        <!-- না (Dismiss / Cancel) -->
+        <TextView
+            android:id="@+id/btnDownloadCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="10dp"
+            android:text="না"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- হ্যাঁ (Confirm Pill Button) -->
+        <TextView
+            android:id="@+id/btnDownloadConfirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="96dp"
+            android:background="@drawable/bg_btn_teal_pill"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="10dp"
+            android:text="হ্যাঁ"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

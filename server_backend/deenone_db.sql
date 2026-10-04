@@ -1156,32 +1156,4326 @@ CREATE TABLE `islamic_books` (
 LOCK TABLES `islamic_books` WRITE;
 /*!40000 ALTER TABLE `islamic_books` DISABLE KEYS */;
 INSERT INTO `islamic_books` VALUES
-(1, 'book_01', 'আদর্শ মা', 'Adorsho Ma (Ideal Mother)', NULL, 'মাওলানা রুহুল আমীন', 'Maulana Ruhul Amin', 'পারিবারিক জীবন', 'Family & Life', 'একজন আদর্শ মুসলিম নারী ও মায়ের কর্তব্য, সন্তানদের ইসলামী লালন-পালন ও পারিবারিক শান্তি বজায় রাখার পূর্ণাঙ্গ প্রামাণ্য দিকনির্দেশনা।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 224, 0, 0, 1, NOW()),
-(2, 'book_02', 'চাঁদ দেখা, রোজা ও ঈদ', 'Moon Sighting, Fasting & Eid', NULL, 'শায়খ মাকবুল হাসান ফাইযী', 'Shaykh Makbul Hasan Faizi', 'সাওম ও রমজান', 'Sawm & Ramadan', 'কুরআন ও সহীহ হাদীসের আলোকে চাঁদ দেখা, সিয়াম আরম্ভ ও ঈদ উদযাপনের সঠিক শারঈ বিধান এবং উদয়স্থলের মতভেদ নিরসন।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 160, 0, 0, 1, NOW()),
-(3, 'book_03', 'রমজান বিষয়ক ফতোয়া', 'Fatwa on Ramadan', NULL, 'আব্দুল্লাহ শহীদ আব্দুর রহমান', 'Abdullah Shaheed Abdur Rahman', 'ফতোয়া ও মাসআলা', 'Fatwa & Masail', 'রমজান মাসের রোজা, তারাবীহ, সেহরি, ইফতার, এতেকাফ ও আধুনিক চিকিৎসা সম্পর্কিত শতাধিক নির্ভরযোগ্য ফতোয়া ও দলীলভিত্তিক সমাধান।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 192, 0, 0, 1, NOW()),
-(4, 'book_04', 'কুরবানির তাৎপর্য ও বিধান', 'Significance and Rules of Qurbani', NULL, 'ড. মুহাম্মাদ আসাদুল্লাহ আল-গালিব', 'Dr. Muhammad Asadullah Al-Ghalib', 'কুরবানী ও ঈদ', 'Qurbani & Eid', 'কুরবানির সঠিক ইতিহাস, আত্মিক তাৎপর্য, পশু নির্বাচন, যবেহের সঠিক নিয়ম এবং মাংস বন্টন পদ্ধতির প্রামাণ্য বিধান।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 140, 0, 0, 1, NOW()),
-(5, 'book_05', 'হাকীকতে মোহাম্মাদী ও মিলাদুন্নবী', 'Haqiqate Muhammadi & Miladunnabi', NULL, 'আল্লামা নাসিরুদ্দিন আলবানী', 'Allama Nasiruddin Albani', 'শিরক ও বিদআত', 'Shirk & Bid''ah', 'রাসূলুল্লাহ ﷺ-এর মর্যাদা, সৃষ্টিতত্ত্ব সংক্রান্ত প্রচলিত ধারণা ও মিলাদুন্নবীর শারঈ পর্যালোচনা এবং দলীলভিত্তিক বিশ্লেষণ।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 160, 0, 0, 1, NOW()),
-(6, 'book_06', 'হজের মর্মার্থ ও শিক্ষা', 'Significance and Lessons of Hajj', NULL, 'শায়খ আব্দুর রাজ্জাক বিন ইউসুফ', 'Shaykh Abdur Razzak Bin Yousuf', 'হজ ও উমরাহ', 'Hajj & Umrah', 'হজের আত্মিক তাৎপর্য, সুন্নাত মোতাবেক হজের প্রতিটি রুকন আদায়ের পুঙ্খানুপুঙ্খ নিয়ম ও মাবরুর হজ অর্জনের প্রামাণ্য রূপরেখা।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 210, 0, 0, 1, NOW()),
-(7, 'book_07', 'যাকাত সম্পর্কিত ফতোয়া ও সমাধান', 'Fatwa & Solutions Regarding Zakat', NULL, 'শায়খ মুহাম্মদ বিন সালিহ আল-উসাইমীন', 'Shaykh Muhammad ibn Salih al-Uthaymeen', 'যাকাত ও সাদাকাহ', 'Zakat & Charity', 'নগদ সম্পদ, স্বর্ণ-রৌপ্য, ব্যবসায়ী পণ্য, রিয়েল এস্টেট ও কৃষি ফসলের যাকাত নিরূপণের আধুনিক ও সমসাময়িক ফতোয়া সমগ্র।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 180, 0, 0, 1, NOW()),
-(8, 'book_08', 'সিয়াম ও রমজান: শিক্ষা, তাৎপর্য ও মাসায়েল', 'Fasting & Ramadan: Lessons & Rules', NULL, 'ড. মুহাম্মদ মানজুরে ইলাহী', 'Dr. Muhammad Manzoor-e-Elahi', 'সাওম ও রমজান', 'Sawm & Ramadan', 'রমজানের শিক্ষা, তাকওয়া অর্জন, রোজার আহকাম ও আধুনিক চিকিৎসায় রোজা ভঙ্গের শারঈ সমাধান।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 210, 0, 0, 1, NOW()),
-(9, 'book_09', 'যেভাবে স্বাগত জানাবো মাহে রমাজান', 'Welcoming the Month of Ramadan', NULL, 'মাওলানা আব্দুল কাইয়ূম', 'Maulana Abdul Qayyum', 'সাওম ও রমজান', 'Sawm & Ramadan', 'রমজান মাসের আগমনকে ফলপ্রসূ ও বরকতময় করার পূর্বপ্রস্তুতি, আমলের সূচি ও আত্মশুদ্ধির রুটিন গাইড।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 130, 0, 0, 1, NOW()),
-(10, 'book_10', 'তাওহীদের মূলনীতি', 'The Fundamentals of Tawheed', NULL, 'ড. আবু আমীনাহ বিলাল ফিলিপস', 'Dr. Abu Ameenah Bilal Philips', 'আকীদা', 'Aqeedah', 'ইসলামী আকীদার মূল ভিত্তি—তাওহীদুর রুবূবিয়্যাহ, তাওহীদুল উলূহিয়্যাহ ও তাওহীদুল আসমা ওয়াস সিফাতের পুঙ্খানুপুঙ্খ বিশ্লেষণ।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 260, 0, 0, 1, NOW()),
-(11, 'book_11', 'মহানবীর আদর্শ ও সুন্নাহ', 'Ideal & Sunnah of the Prophet', NULL, 'আল্লামা ছফিউর রহমান মুবারকপুরী', 'Allama Safiur Rahman Mubarakpuri', 'সীরাত ও জীবনী', 'Seerah & Biography', 'উসওয়াতুন হাসানাহ—নবী করীম ﷺ-এর ব্যক্তিগত, পারিবারিক, সামাজিক ও দাওয়াতী জীবনের অনুপম আদর্শের প্রামাণ্য গ্রন্থ।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 340, 0, 0, 1, NOW()),
-(12, 'book_12', 'কুরবানির ফজিলত, মাসায়েল ও আমল', 'Virtues & Rules of Qurbani', NULL, 'শায়খ আকরামুজ্জামান বিন আব্দুস সালাম', 'Shaykh Akramuzzaman Bin Abdus Salam', 'কুরবানী ও ঈদ', 'Qurbani & Eid', 'যিলহজ মাসের প্রথম দশ দিনের ফজিলত, কুরবানি ও আইয়ামে তাশরীকের আমলসমূহের প্রামাণ্য বিশ্লেষণ।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 130, 0, 0, 1, NOW()),
-(13, 'book_13', 'ঈদ ও ঈদের বিধান', 'Eid and Its Regulations', NULL, 'মাওলানা মতিউর রহমান মাদানী', 'Maulana Motiur Rahman Madani', 'কুরবানী ও ঈদ', 'Qurbani & Eid', 'ঈদের তাকবীর, সালাতের পদ্ধতি, ফিতরা আদায় ও ঈদের দিনে শারঈ সীমারেখা বজায় রেখে আনন্দ উদযাপনের নিয়ম।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 120, 0, 0, 1, NOW()),
-(14, 'book_14', 'সহীহ আকীদা ও নাজাতপ্রাপ্ত দল', 'Authentic Aqeedah and The Saved Sect', NULL, 'শায়খ মুহাম্মদ জামিল যাইনু', 'Shaykh Muhammad Jameel Zayno', 'আকীদা', 'Aqeedah', 'আহলুস সুন্নাহ ওয়াল জামাআতের বিশুদ্ধ আকীদা ও ঈমানের সঠিক রুকনসমূহ এবং মুক্তিপ্রাপ্ত দলের অনন্য বৈশিষ্ট্য।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 220, 0, 0, 1, NOW()),
-(15, 'book_15', 'সালাতুর রাসূল ﷺ', 'Salatur Rasool (Prophet''s Prayer)', NULL, 'ড. মুহাম্মাদ আসাদুল্লাহ আল-গালিব', 'Dr. Muhammad Asadullah Al-Ghalib', 'সালাত', 'Salah & Worship', 'তাকবীরে তাহরীমা থেকে সালাম ফিরানো পর্যন্ত রাসূলুল্লাহ ﷺ-এর বিশুদ্ধ সালাত আদায়ের পুঙ্খানুপুঙ্খ বিবরণ।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 290, 0, 0, 1, NOW()),
-(16, 'book_16', 'দৈনন্দিন দো''আ ও যিকির (হিসনুল মুসলিম)', 'Daily Dua & Zikr (Hisnul Muslim)', NULL, 'ড. সাঈদ ইবনে আলী আল-কাহত্বানী', 'Dr. Saeed ibn Ali al-Qahtani', 'দো''আ ও যিকির', 'Dua & Zikr', 'দৈনন্দিন জীবনের সকাল-সন্ধ্যা, বিপদ-আপদ, রোগব্যাধি ও সকল পরিস্থিতির সহীহ ও নির্ভরযোগ্য দো''আ ও যিকির।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 280, 0, 0, 1, NOW()),
-(17, 'book_17', 'শিরক, কুফর ও বিদআত বর্জন', 'Avoiding Shirk, Kufr & Bid''ah', NULL, 'ড. খন্দকার আব্দুল্লাহ জাহাঙ্গীর', 'Dr. Khandaker Abdullah Jahangir', 'শিরক ও বিদআত', 'Shirk & Bid''ah', 'শিরক ও বিদআতের সূক্ষ্ম স্বরূপ, সমাজে প্রচলিত কুসংস্কার ও বিদআতসমূহ এবং সহীহ সুন্নাহ মোতাবেক চলার দিকনির্দেশনা।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 350, 0, 0, 1, NOW()),
-(18, 'book_18', 'ইসলামী ফতোয়া সমগ্র', 'Islamic Fatwa Collection', NULL, 'স্থায়ী ফতোয়া বোর্ড (লাজনাহ দায়িমাহ)', 'Permanent Committee for Scholarly Research (Lajnah Daimah)', 'ফতোয়া ও মাসআলা', 'Fatwa & Masail', 'সমসাময়িক ও ঐতিহ্যবাহী সকল জরুরি ধর্মীয় প্রশ্নের নির্ভরযোগ্য ইসলামী ফতোয়া ও দলীলভিত্তিক সমাধান।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 480, 0, 0, 1, NOW()),
-(19, 'book_19', 'ফিরকা ও বাতিল দল পরিচিতি', 'Sects & Deviant Groups', NULL, 'শায়খ মুহাম্মদ আসাদুল্লাহ', 'Shaykh Muhammad Asadullah', 'ফিরকা ও দল', 'Sects & Groups', 'ইসলামের ইতিহাসে উদ্ভূত বিভিন্ন ভ্রান্ত দল (খারেজী, মুতাজিলা, শিয়া, কাদিয়ানীবাদ) ও তাদের বিভ্রান্তিকর মতবাদের খণ্ডন।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 240, 0, 0, 1, NOW()),
-(20, 'book_20', 'কুরআন ও হাদিসের আলোকে জীবন', 'Life in Light of Quran & Hadith', NULL, 'মাওলানা আব্দুল হামিদ ফাইযী', 'Maulana Abdul Hamid Faizi', 'কুরআন ও হাদিস', 'Quran & Hadith', 'প্রতিটি পদক্ষেপে কুরআন ও সহীহ সুন্নাহর পরিপূর্ণ অনুসারী হওয়ার মূলনীতি ও বাস্তবসম্মত দিকনির্দেশনা।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 310, 0, 0, 1, NOW()),
-(21, 'book_21', 'রিয়াযুস সলেহীন (নির্বাচিত)', 'Riyadus Saliheen (Selected)', NULL, 'ইমাম আন-নববী (রহ.)', 'Imam An-Nawawi', 'কুরআন ও হাদিস', 'Quran & Hadith', 'আত্মশুদ্ধি, আখলাক ও সহীহ হাদিস সংকলনের কালজয়ী বিশ্ববিখ্যাত গ্রন্থ।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 520, 0, 0, 1, NOW()),
-(22, 'book_22', 'আর রাহীকুল মাখতূম', 'Ar-Raheeq Al-Makhtum', NULL, 'আল্লামা সফিউর রহমান মুবারকপুরী', 'Allama Safiur Rahman Mubarakpuri', 'সীরাত ও জীবনী', 'Seerah & Biography', 'বিশ্ব সিরাত প্রতিযোগিতায় প্রথম পুরস্কারপ্রাপ্ত বিশ্ববিখ্যাত সর্বশ্রেষ্ঠ প্রামাণ্য সিরাত গ্রন্থ।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 580, 0, 0, 1, NOW()),
-(23, 'book_23', 'কবরে প্রথম রাত ও পরকাল', 'First Night in the Grave', NULL, 'ইমাম ইবনুল কাইয়্যিম (রহ.)', 'Imam Ibn al-Qayyim', 'আকীদা', 'Aqeedah', 'মৃত্যু, কবরের নিঃসঙ্গতা, মুনকার-নাকীরের সওয়াল-জওয়াব ও পরকালীন জীবনের বাস্তব চিত্র।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 210, 0, 0, 1, NOW()),
-(24, 'book_24', 'কিতাবুত তাওহীদ', 'Kitab At-Tawheed', NULL, 'শায়খুল ইসলাম মুহাম্মদ ইবনে আব্দুল ওয়াহহাব', 'Shaykh Muhammad ibn Abd al-Wahhab', 'আকীদা', 'Aqeedah', 'তাওহীদের বিশুদ্ধ প্রমাণ, শিরকের মূলচ্ছেদ ও খাঁটি ঈমানের অবিসংবাদিত প্রামাণ্য কিতাব।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 230, 0, 0, 1, NOW());
+(1, 'book_al_irshad', 'আল ইরশাদ-সহীহ আকীদার দিশারী', 'আল ইরশাদ-সহীহ আকীদার দিশারী', NULL, 'শাইখ ড. ছলিহ ইবনে ফাওযান আল ফাওযান', 'শাইখ ড. ছলিহ ইবনে ফাওযান আল ফাওযান', 'আকিদা [তাওহীদ]', 'Aqeedah [Tawheed]', 'সহীহ ইসলামী আকীদার প্রামাণ্য দিকনির্দেশনা ও শিরক-বিদআত বর্জন।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 83, 0, 0, 1, NOW()),
+(2, 'book_al_fiqhul_akbar', 'আল-ফিকহুল আকবর', 'আল-ফিকহুল আকবর', NULL, 'ড. খোন্দকার আব্দুল্লাহ জাহাঙ্গীর (রহ.)', 'ড. খোন্দকার আব্দুল্লাহ জাহাঙ্গীর (রহ.)', 'আকিদা [তাওহীদ]', 'Aqeedah [Tawheed]', 'ইমাম আবু হানিফার আকীদাহ বিষয়ক মৌলিক গ্রন্থের তাহকীক ও ব্যাখ্যা।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 86, 0, 0, 1, NOW()),
+(3, 'book_ahle_sunnat_aqeedah', 'আহলে সুন্নাত ওয়াল জামা‘আতের আকীদা', 'আহলে সুন্নাত ওয়াল জামা‘আতের আকীদা', NULL, 'ইমাম আবু জা‘ফর আহমাদ আত-ত্বহাবী রহ.', 'ইমাম আবু জা‘ফর আহমাদ আত-ত্বহাবী রহ.', 'আকিদা [তাওহীদ]', 'Aqeedah [Tawheed]', 'আহলুস সুন্নাহ ওয়াল জামাআতের সুপ্রসিদ্ধ মূলনীতি ও আকীদা।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 89, 0, 0, 1, NOW()),
+(4, 'book_islam_binostokari', 'ইসলাম বিনষ্টকারী বিষয়সমূহ', 'ইসলাম বিনষ্টকারী বিষয়সমূহ', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'আকিদা [তাওহীদ]', 'Aqeedah [Tawheed]', 'যে সকল কারণে মানুষের ঈমান নষ্ট হয়ে যায় তার দশটি মৌলিক কারণ।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 92, 0, 0, 1, NOW()),
+(5, 'book_iman_biddhongshi', 'ঈমান বিধ্বংসী দশটি কারণ', 'ঈমান বিধ্বংসী দশটি কারণ', NULL, 'খায়রুল ইসলাম বিন ইলিয়াস', 'খায়রুল ইসলাম বিন ইলিয়াস', 'আকিদা [তাওহীদ]', 'Aqeedah [Tawheed]', 'ঈমান ভঙ্গকারী বিষয়সমূহের বিস্তারিত বিবরণ ও সতর্কতা।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 95, 0, 0, 1, NOW()),
+(6, 'book_kitabut_tawhid', 'কিতাবুত তাওহীদ', 'কিতাবুত তাওহীদ', NULL, 'মুহাম্মদ বিন আব্দুল ওহহাব', 'মুহাম্মদ বিন আব্দুল ওহহাব', 'আকিদা [তাওহীদ]', 'Aqeedah [Tawheed]', 'তাওহীদের স্বরূপ, গুরুত্ব এবং শিরকের বিভিন্ন প্রকারভেদ।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 98, 0, 0, 1, NOW()),
+(7, 'book_quran_sunnah_aqeedah', 'কুরআন-সুন্নাহর আলোকে ইসলামী আকীদা', 'কুরআন-সুন্নাহর আলোকে ইসলামী আকীদা', NULL, 'ড. খোন্দকার আব্দুল্লাহ জাহাঙ্গীর (রহ.)', 'ড. খোন্দকার আব্দুল্লাহ জাহাঙ্গীর (রহ.)', 'আকিদা [তাওহীদ]', 'Aqeedah [Tawheed]', 'কুরআন ও সহীহ সুন্নাহ ভিত্তিক ঈমানের প্রামাণ্য বিশদ ব্যাখ্যা।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 101, 0, 0, 1, NOW()),
+(8, 'book_char_imamer_aqeedah', 'চার ইমামের আকীদাহ (আবূ হানীফা, মালেক, শাফে‘ঈ ও আহমাদ)', 'চার ইমামের আকীদাহ (আবূ হানীফা, মালেক, শাফে‘ঈ ও আহমাদ)', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'আকিদা [তাওহীদ]', 'Aqeedah [Tawheed]', 'চার প্রসিদ্ধ মুজতাহিদ ইমামের ঐকমত্যের বিশুদ্ধ আকীদা।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 104, 0, 0, 1, NOW()),
+(9, 'book_tawhid_o_tar_promanadi', 'তাওহীদ ও তার প্রমাণাদি', 'তাওহীদ ও তার প্রমাণাদি', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'আকিদা [তাওহীদ]', 'Aqeedah [Tawheed]', 'আল্লাহর একত্ববাদের অকাট্য দলীলসমূহ ও শিরক নিরসন।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 107, 0, 0, 1, NOW()),
+(10, 'book_tawhid_ponthider_noyonmoni', 'তাওহীদ পন্থীদের নয়নমণি', 'তাওহীদ পন্থীদের নয়নমণি', NULL, 'শাইখ আব্দুর রাহমান বিন হাসান বিন মুহাম্মাদ বিন আব্দুল ওয়াহাব (রহঃ)', 'শাইখ আব্দুর রাহমান বিন হাসান বিন মুহাম্মাদ বিন আব্দুল ওয়াহাব (রহঃ)', 'আকিদা [তাওহীদ]', 'Aqeedah [Tawheed]', 'তাওহীদুল উলূহিয়্যাহ ও ইখলাসের গভীর প্রামাণ্য আলোচনা।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 110, 0, 0, 1, NOW()),
+(11, 'book_tawheed_kalema_la_ilaha', 'তাওহীদের কালেমা: লা-ইলাহা ইল্লাল্লাহ', 'তাওহীদের কালেমা: লা-ইলাহা ইল্লাল্লাহ', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'আকিদা [তাওহীদ]', 'Aqeedah [Tawheed]', 'কালিমায়ে তায়্যিবার ফযীলত, অর্থ, শর্ত ও পরিপন্থী বিষয়সমূহ।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 113, 0, 0, 1, NOW()),
+(12, 'book_najat_prapto_doler_akidah', 'নাজাত প্রাপ্ত দলের আকীদাহ', 'নাজাত প্রাপ্ত দলের আকীদাহ', NULL, 'হাফেয বিন আহমাদ আল-হাকামী (রহঃ)', 'হাফেয বিন আহমাদ আল-হাকামী (রহঃ)', 'আকিদা [তাওহীদ]', 'Aqeedah [Tawheed]', 'প্রশ্ন এবং তাঁর উত্তরসমূহ — মুক্তিপ্রাপ্ত দলের ২০০ সওয়াল ও জওয়াব।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 116, 0, 0, 1, NOW()),
+(13, 'book_proshnottore_sahaj_tawhid', 'প্রশ্নোত্তরে সহজ তাওহীদ শিক্ষা', 'প্রশ্নোত্তরে সহজ তাওহীদ শিক্ষা', NULL, 'আব্দুল আলীম ইবনে কাওসার', 'আব্দুল আলীম ইবনে কাওসার', 'আকিদা [তাওহীদ]', 'Aqeedah [Tawheed]', 'তাওহীদ সম্পর্কে প্রশ্ন এবং উত্তর — সহজ সরল ভাষায় আকীদা শিক্ষা।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 119, 0, 0, 1, NOW()),
+(14, 'book_firqah_najia', 'ফির্‌কাহ নাজিয়া', 'ফির্‌কাহ নাজিয়া', NULL, 'আবদুল হামীদ ফাইযী', 'আবদুল হামীদ ফাইযী', 'আকিদা [তাওহীদ]', 'Aqeedah [Tawheed]', 'নাজাতপ্রাপ্ত দলের পরিচয় ও ভ্রান্ত দলসমূহ থেকে আত্মরক্ষার উপায়।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 122, 0, 0, 1, NOW()),
+(15, 'book_manhaj_azwibatul_mufidah', 'মানহাজ (আল-আজবিবাতুল মুফীদাহ)', 'মানহাজ (আল-আজবিবাতুল মুফীদাহ)', NULL, 'শাইখ ড. ছলিহ ইবনে ফাওযান আল ফাওযান', 'শাইখ ড. ছলিহ ইবনে ফাওযান আল ফাওযান', 'আকিদা [তাওহীদ]', 'Aqeedah [Tawheed]', 'সহীহ মানহাজ ও সমকালীন বিভ্রান্তি নিরসনে জরুরি প্রশ্নোত্তর।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 125, 0, 0, 1, NOW()),
+(16, 'book_sharhul_aqeedah_wasetia', 'শরহুল আকীদাহ আল-ওয়াসেতীয়া', 'শরহুল আকীদাহ আল-ওয়াসেতীয়া', NULL, 'ডঃ সালেহ ফাওযান', 'ডঃ সালেহ ফাওযান', 'আকিদা [তাওহীদ]', 'Aqeedah [Tawheed]', 'শায়খুল ইসলাম ইবনে তাইমিয়্যাহর ওয়াসেতীয়া আকীদার ব্যাখ্যা।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 128, 0, 0, 1, NOW()),
+(17, 'book_sharhul_aqeedah_tahabiya', 'শারহুল আক্বীদা আত্-ত্বহাবীয়া', 'শারহুল আক্বীদা আত্-ত্বহাবীয়া', NULL, 'ইমাম ইবনে আবীল ইয আল-হানাফী (রহিমাহুল্লাহ)', 'ইমাম ইবনে আবীল ইয আল-হানাফী (রহিমাহুল্লাহ)', 'আকিদা [তাওহীদ]', 'Aqeedah [Tawheed]', 'ইমাম তাহাবীর আকীদার সুবিখ্যাত প্রামাণ্য ব্যাখ্যাগ্রন্থ।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 131, 0, 0, 1, NOW()),
+(18, 'book_shuabul_iman', 'শু''আবুল ঈমান (ঈমানের শাখাসমূহ)', 'শু''আবুল ঈমান (ঈমানের শাখাসমূহ)', NULL, 'ইমাম বাইহাকী', 'ইমাম বাইহাকী', 'আকিদা [তাওহীদ]', 'Aqeedah [Tawheed]', 'ঈমানের সত্তরটিরও বেশি শাখার বিশদ বিবরণ ও গুরুত্ব।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 134, 0, 0, 1, NOW()),
+(19, 'book_songkhipto_islami_akidah', 'সংক্ষিপ্ত ইসলামী ‘আক্বীদাহ্', 'সংক্ষিপ্ত ইসলামী ‘আক্বীদাহ্', NULL, 'মুহাম্মাদ বিন জামীল যাইনূ', 'মুহাম্মাদ বিন জামীল যাইনূ', 'আকিদা [তাওহীদ]', 'Aqeedah [Tawheed]', 'প্রতিটি মুসলিমের জন্য অত্যাবশ্যকীয় সহজ আকীদা সংক্ষেপ।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 137, 0, 0, 1, NOW()),
+(20, 'book_kosor_o_joma_salat', 'কসর ও জমা করে সালাত আদায় সম্পর্কে কিছু বিধান', 'কসর ও জমা করে সালাত আদায় সম্পর্কে কিছু বিধান', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'সালাত [নামায]', 'Salah [Prayer]', 'সফরে সালাত কসর ও জমা করার শারঈ শর্ত ও নিয়মাবলী।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 140, 0, 0, 1, NOW()),
+(21, 'book_jamate_salat_aday', 'কুরআন ও সহীহ হাদীসের আলোকে জামা‘আতে সালাত আদায়', 'কুরআন ও সহীহ হাদীসের আলোকে জামা‘আতে সালাত আদায়', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'সালাত [নামায]', 'Salah [Prayer]', 'জামাআতে সালাত আদায়ের ফযীলত, তাকবীরে উলার মর্যাদা ও নিয়ম।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 143, 0, 0, 1, NOW()),
+(22, 'book_chair_a_bose_salat', 'চেয়ারে বসে সালাত আদায় বিধি-বিধান ও মাসলা-মাসায়েল', 'চেয়ারে বসে সালাত আদায় বিধি-বিধান ও মাসলা-মাসায়েল', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'সালাত [নামায]', 'Salah [Prayer]', 'অসুস্থ ব্যক্তির চেয়ারে বসে নামায পড়ার সঠিক শারঈ নিয়ম ও ভুলভ্রান্তি।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 146, 0, 0, 1, NOW()),
+(23, 'book_salatur_rasul_galib', 'ছালাতুর রাসূল (ছাঃ)', 'ছালাতুর রাসূল (ছাঃ)', NULL, 'ডঃ মুহাম্মাদ আসাদুল্লাহ আল-গালিব', 'ডঃ মুহাম্মাদ আসাদুল্লাহ আল-গালিব', 'সালাত [নামায]', 'Salah [Prayer]', 'রাসূলুল্লাহ ﷺ-এর বিশুদ্ধ সালাতের তাকবীর থেকে সালাম পর্যন্ত পুঙ্খানুপুঙ্খ বিবরণ।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 149, 0, 0, 1, NOW()),
+(24, 'book_janaza_dorpon', 'জানাযা দর্পণ', 'জানাযা দর্পণ', NULL, 'আবদুল হামীদ ফাইযী', 'আবদুল হামীদ ফাইযী', 'সালাত [নামায]', 'Salah [Prayer]', 'মৃত্যু, কাফন-দাফন ও জানাযার পূর্ণাঙ্গ প্রামাণ্য বিধান।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 152, 0, 0, 1, NOW()),
+(25, 'book_janazar_namazer_niyom', 'জানাযার নামাযের নিয়ম', 'জানাযার নামাযের নিয়ম', NULL, 'আবদুল হামীদ ফাইযী', 'আবদুল হামীদ ফাইযী', 'সালাত [নামায]', 'Salah [Prayer]', 'জানাযার নামাযের ৪ তাকবীর, ছানা, দরূদ ও মাসনূন দো''আসমূহ।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 155, 0, 0, 1, NOW()),
+(26, 'book_janajar_bidhan_uthaymeen', 'জানাযার বিধিবিধান', 'জানাযার বিধিবিধান', NULL, 'শাইখ মুহাম্মাদ ইবন সালেহ আল-উসাইমীন রহ.', 'শাইখ মুহাম্মাদ ইবন সালেহ আল-উসাইমীন রহ.', 'সালাত [নামায]', 'Salah [Prayer]', 'জানাযা ও দাফন সম্পর্কিত ৭০টি গুরুত্বপূর্ণ প্রশ্নোত্তর।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 158, 0, 0, 1, NOW()),
+(27, 'book_jal_hadiser_kobole_salat', 'জাল হাদীছের কবলে রাসূলুল্লাহ (ছাঃ)-এর ছালাত', 'জাল হাদীছের কবলে রাসূলুল্লাহ (ছাঃ)-এর ছালাত', NULL, 'মুযাফফর বিন মুহসিন', 'মুযাফফর বিন মুহসিন', 'সালাত [নামায]', 'Salah [Prayer]', 'নামাজে প্রচলিত দুর্বল ও বানোয়াট হাদিসসমূহের চুলচেরা বিশ্লেষণ।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 161, 0, 0, 1, NOW()),
+(28, 'book_rasul_salat_albani', 'নবী (সা.) এর ছলাত সম্পাদনের পদ্ধতি', 'নবী (সা.) এর ছলাত সম্পাদনের পদ্ধতি', NULL, 'মুহাম্মাদ নাছিরুদ্দিন আলবানী (রহ.)', 'মুহাম্মাদ নাছিরুদ্দিন আলবানী (রহ.)', 'সালাত [নামায]', 'Salah [Prayer]', 'বিশ্ববিখ্যাত সিফাতু সালাতিন নবী—সহীহ হাদিসের আলোকে সালাত।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 164, 0, 0, 1, NOW()),
+(29, 'book_salatud_duha_bidhan', 'প্রশ্নোত্তরে সালাতুদ-দুহার সংক্ষিপ্ত বিধান', 'প্রশ্নোত্তরে সালাতুদ-দুহার সংক্ষিপ্ত বিধান', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'সালাত [নামায]', 'Salah [Prayer]', 'চাশত বা দুহার সালাতের সময়, রাকাত সংখ্যা ও ফযীলত।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 167, 0, 0, 1, NOW()),
+(30, 'book_salatul_awuabin', 'সালাতুল আউওয়াবীন', 'সালাতুল আউওয়াবীন', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'সালাত [নামায]', 'Salah [Prayer]', 'আউওয়াবীন সালাতের সহীহ সময় ও প্রচলিত ভুল ধারণা নিরসন।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 170, 0, 0, 1, NOW()),
+(31, 'book_salater_gurutto_o_fozilot', 'সালাতের গুরুত্ব ও ফযীলত', 'সালাতের গুরুত্ব ও ফযীলত', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'সালাত [নামায]', 'Salah [Prayer]', 'নামাজের অপরিহার্য গুরুত্ব, পুরস্কার ও সালাত ত্যাগের ভয়াবহ পরিণতি।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 173, 0, 0, 1, NOW()),
+(32, 'book_salate_mubasshir', 'স্বালাতে মুবাশ্‌শির', 'স্বালাতে মুবাশ্‌শির', NULL, 'আবদুল হামীদ ফাইযী', 'আবদুল হামীদ ফাইযী', 'সালাত [নামায]', 'Salah [Prayer]', 'সহীহ হাদিস ও সুন্নাহ মোতাবেক নামাযের প্রামাণ্য গাইড।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 176, 0, 0, 1, NOW()),
+(33, 'book_zakat_daily_life', 'দৈনন্দিন জীবনে ইসলাম [যাকাত অধ্যায়]', 'দৈনন্দিন জীবনে ইসলাম [যাকাত অধ্যায়]', NULL, 'শরীফুল ইসলাম বিন যয়নুল আবেদীন', 'শরীফুল ইসলাম বিন যয়নুল আবেদীন', 'যাকাত', 'Zakat', 'যাকাত ফরয হওয়ার শর্তাবলী, নিসাব ও আধুনিক সম্পদের যাকাত হিসাব।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 179, 0, 0, 1, NOW()),
+(34, 'book_zakat_o_sawm_pustika', 'যাকাত ও সাওম বিষয়ক দু’টি পুস্তিকা', 'যাকাত ও সাওম বিষয়ক দু’টি পুস্তিকা', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'যাকাত', 'Zakat', 'যাকাতের খাতসমূহ ও রোজার মৌলিক বিধানের সারসংক্ষেপ।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 182, 0, 0, 1, NOW()),
+(35, 'book_zakater_bidhan_sar', 'যাকাত বিধানের সারসংক্ষেপ', 'যাকাত বিধানের সারসংক্ষেপ', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'যাকাত', 'Zakat', 'যাকাতের আটটি খাত, স্বর্ণ-রৌপ্য ও নগদ টাকার যাকাত নিরূপণ।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 185, 0, 0, 1, NOW()),
+(36, 'book_ramadan_eid_qa', 'প্রশ্নোত্তরে রমযান ও ঈদ', 'প্রশ্নোত্তরে রমযান ও ঈদ', NULL, 'অধ্যাপক মোঃ নূরুল ইসলাম', 'অধ্যাপক মোঃ নূরুল ইসলাম', 'সাওম [রোযা]', 'Sawm [Fasting]', 'রমজান, তারাবীহ, সেহরি, ইফতার ও ঈদের ফাতাওয়া সমগ্র।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 188, 0, 0, 1, NOW()),
+(37, 'book_ramjan_30_aasor', 'রমযান মাসের ৩০ আসর', 'রমযান মাসের ৩০ আসর', NULL, 'শাইখ মুহাম্মাদ বিন সালিহ আল-উসাইমীন (রহঃ)', 'শাইখ মুহাম্মাদ বিন সালিহ আল-উসাইমীন (রহঃ)', 'সাওম [রোযা]', 'Sawm [Fasting]', 'রমজানের প্রতিদিনের জন্য বিশেষ আত্মশুদ্ধিমূলক আলোচনা ও নসীহত।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 191, 0, 0, 1, NOW()),
+(38, 'book_romzaner_dayitto_kortobbo', 'রমযানের দায়িত্ব-কর্তব্য', 'রমযানের দায়িত্ব-কর্তব্য', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'সাওম [রোযা]', 'Sawm [Fasting]', 'ইবন রজব আল-হাম্বলীর লাতায়িফুল মা‘আরিফ অবলম্বনে রমজানের আমল।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 194, 0, 0, 1, NOW()),
+(39, 'book_ramjaner_fajayel_rojar_masayel', 'রমাযানের ফাযায়েল ও রোযার মাসায়েল', 'রমাযানের ফাযায়েল ও রোযার মাসায়েল', NULL, 'আবদুল হামীদ ফাইযী', 'আবদুল হামীদ ফাইযী', 'সাওম [রোযা]', 'Sawm [Fasting]', 'সিয়ামের মর্যাদা, রোজা ভঙ্গের কারণ ও কাজা-কাফফারার বিধান।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 197, 0, 0, 1, NOW()),
+(40, 'book_sawm_bisshokosh', 'সহীহ হাদীসের আলোকে সাওম বিশ্বকোষ', 'সহীহ হাদীসের আলোকে সাওম বিশ্বকোষ', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'সাওম [রোযা]', 'Sawm [Fasting]', 'সিয়াম ও রমজান সম্পর্কিত সহীহ হাদিসসমূহের প্রামাণ্য সংকলন।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 200, 0, 0, 1, NOW()),
+(41, 'book_sawom_adhunik_masala', 'সাওম বিষয়ক আধুনিক কিছু মাসআলা', 'সাওম বিষয়ক আধুনিক কিছু মাসআলা', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'সাওম [রোযা]', 'Sawm [Fasting]', 'ইনজেকশন, ইনহেলার, স্যালাইন, চোখের ড্রপ ও আধুনিক চিকিৎসায় রোজা।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 203, 0, 0, 1, NOW()),
+(42, 'book_fatwar_regarding_roja', 'সিয়াম বিষয়ক নির্বাচিত ফাতওয়া', 'সিয়াম বিষয়ক নির্বাচিত ফাতওয়া', NULL, 'ইসলাম কিউ এ (Islamqa.com)', 'ইসলাম কিউ এ (Islamqa.com)', 'সাওম [রোযা]', 'Sawm [Fasting]', 'সমসাময়িক বিশ্বখ্যাত উলামায়ে কেরামের সিয়াম সংক্রান্ত নির্ভরযোগ্য ফতোয়া।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 206, 0, 0, 1, NOW()),
+(43, 'book_umra_niyom_zakaria', 'কুরআন ও সুন্নাহর আলোকে উমরা করার নিয়ম', 'কুরআন ও সুন্নাহর আলোকে উমরা করার নিয়ম', NULL, 'ড. আবু বকর মুহাম্মাদ যাকারিয়া', 'ড. আবু বকর মুহাম্মাদ যাকারিয়া', 'হজ্জ [হজ্ব]', 'Hajj & Umrah', 'ইহরাম বাঁধা থেকে তাওয়াফ, সাঈ ও হলক করার সুন্নাত নিয়ম।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 209, 0, 0, 1, NOW()),
+(44, 'book_hajj_umra_ziyarat_uthaymeen', 'কুরআন ও হাদীছের আলোকে হজ্জ, উমরাহ ও মদীনা যিয়ারত', 'কুরআন ও হাদীছের আলোকে হজ্জ, উমরাহ ও মদীনা যিয়ারত', NULL, 'শাইখ মুহাম্মাদ বিন সালিহ আল-উসাইমীন (রহঃ)', 'শাইখ মুহাম্মাদ বিন সালিহ আল-উসাইমীন (রহঃ)', 'হজ্জ [হজ্ব]', 'Hajj & Umrah', 'হজের দিনসমূহের আমল (৮ থেকে ১৩ জিলহজ) ও মদিনা যিয়ারতের আদব।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 212, 0, 0, 1, NOW()),
+(45, 'book_kurbanir_bidhana', 'কুরবানীর বিধান', 'কুরবানীর বিধান', NULL, 'আবদুল হামীদ ফাইযী', 'আবদুল হামীদ ফাইযী', 'হজ্জ [হজ্ব]', 'Hajj & Umrah', 'কুরবানির পশু, যবেহ করার নিয়ম, অংশীদারি ও গোশত বন্টন।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 215, 0, 0, 1, NOW()),
+(46, 'book_hajj_umrah_qa', 'প্রশ্নোত্তরে হজ্জ ও উমরা', 'প্রশ্নোত্তরে হজ্জ ও উমরা', NULL, 'অধ্যাপক মোঃ নূরুল ইসলাম', 'অধ্যাপক মোঃ নূরুল ইসলাম', 'হজ্জ [হজ্ব]', 'Hajj & Umrah', 'হজ ও উমরার যাবতীয় খুঁটিনাটি সমস্যার ১০০টি প্রশ্নোত্তর।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 218, 0, 0, 1, NOW()),
+(47, 'book_jillhajj_prothom_dosh_din', 'যিলহজ মাসের প্রথম দশ দিন, ঈদ, কুরবানি ও আইয়ামে তাশরীকের দিনসমূহ', 'যিলহজ মাসের প্রথম দশ দিন, ঈদ, কুরবানি ও আইয়ামে তাশরীকের দিনসমূহ', NULL, 'জাকেরুল্লাহ আবুল খায়ের', 'জাকেরুল্লাহ আবুল খায়ের', 'হজ্জ [হজ্ব]', 'Hajj & Umrah', 'যিলহজের ১ম দশকের অতুলনীয় মর্যাদা ও কুরবানির দিনসমূহের তাকবীর।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 221, 0, 0, 1, NOW()),
+(48, 'book_haj_umra_jiyarat', 'হজ উমরা ও যিয়ারত', 'হজ উমরা ও যিয়ারত', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'হজ্জ [হজ্ব]', 'Hajj & Umrah', 'হজযাত্রীদের জন্য সহজ ও সংক্ষিপ্ত সুন্নাত নির্দেশিকা।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 224, 0, 0, 1, NOW()),
+(49, 'book_hajj_safara_sohoj_guide', 'হজ সফরে সহজ গাইড', 'হজ সফরে সহজ গাইড', NULL, 'মুহাম্মাদ মোশফিকুর রহমান', 'মুহাম্মাদ মোশফিকুর রহমান', 'হজ্জ [হজ্ব]', 'Hajj & Umrah', 'হজের প্রস্তুতি, ভ্রমণ ও ঐতিহাসিক স্থানসমূহের দিকনির্দেশনা।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 227, 0, 0, 1, NOW()),
+(50, 'book_hajje_prodotto_nobi_fotowa', 'হজে প্রদত্ত নবী সাল্লাল্লাহু আলাইহি ওয়াসাল্লামের ফাতাওয়া', 'হজে প্রদত্ত নবী সাল্লাল্লাহু আলাইহি ওয়াসাল্লামের ফাতাওয়া', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'হজ্জ [হজ্ব]', 'Hajj & Umrah', 'বিদায় হজে রাসুলুল্লাহ ﷺ কর্তৃক প্রদত্ত ফতোয়া ও দিকনির্দেশনা।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 230, 0, 0, 1, NOW()),
+(51, 'book_hojer_akidagoto_vul', 'হজের সাথে সংশ্লিষ্ট আকীদাগত ভুল-ভ্রান্তিসমূহ', 'হজের সাথে সংশ্লিষ্ট আকীদাগত ভুল-ভ্রান্তিসমূহ', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'হজ্জ [হজ্ব]', 'Hajj & Umrah', 'হজের সময় হাজী সাহেবদের সাধারণ শিরক ও বিদআত নিরসন।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 233, 0, 0, 1, NOW()),
+(52, 'book_hajj_umrah_jirarot_guide', 'হজ্জ, উমরা ও যিয়ারত গাইড', 'হজ্জ, উমরা ও যিয়ারত গাইড', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'হজ্জ [হজ্ব]', 'Hajj & Umrah', 'চিত্রসহ হজের প্রতিটি রুকনের প্রামাণ্য বিশ্লেষণ।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 236, 0, 0, 1, NOW()),
+(53, 'book_dua_munajat_badani', 'দুআ-মুনাজাত : কখন ও কিভাবে', 'দুআ-মুনাজাত : কখন ও কিভাবে', NULL, 'ফায়সাল বিন আলী আল-বা’দানী', 'ফায়সাল বিন আলী আল-বা’দানী', 'দুয়া ও জিকির', 'Dua & Zikr', 'দো''আ কবুলের শর্তাবলী, উত্তম সময় ও দো''আর আদবসমূহ।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 239, 0, 0, 1, NOW()),
+(54, 'book_namazer_dua_zikr', 'নামাযের দো‘আ ও যিক্‌র', 'নামাযের দো‘আ ও যিক্‌র', NULL, 'মুহাম্মাদ আব্দুর রব্ব আফফান', 'মুহাম্মাদ আব্দুর রব্ব আফফান', 'দুয়া ও জিকির', 'Dua & Zikr', 'সালাতের ভেতরের ও সালাত পরবর্তী সকল সহীহ দো''আ ও যিকির।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 242, 0, 0, 1, NOW()),
+(55, 'book_muminer_dua', 'মুমিনের দু‌‘আ', 'মুমিনের দু‌‘আ', NULL, 'ডা. মুহাম্মদ আবুবকর সিদ্দিক', 'ডা. মুহাম্মদ আবুবকর সিদ্দিক', 'দুয়া ও জিকির', 'Dua & Zikr', 'কুরআন ও সুন্নাহর নিত্যপ্রয়োজনীয় দো''আ সংকলন।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 245, 0, 0, 1, NOW()),
+(56, 'book_rahe_belayat', 'রাহে বেলায়াত', 'রাহে বেলায়াত', NULL, 'ড. খোন্দকার আব্দুল্লাহ জাহাঙ্গীর (রহ.)', 'ড. খোন্দকার আব্দুল্লাহ জাহাঙ্গীর (রহ.)', 'দুয়া ও জিকির', 'Dua & Zikr', 'আল্লাহর নৈকট্য লাভের সুন্নাত পথ বনাম সমাজে প্রচলিত ভুল তরীকা।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 248, 0, 0, 1, NOW()),
+(57, 'book_sohih_dua_o_zikr', 'সহীহ দুআ ও যিক্‌র', 'সহীহ দুআ ও যিক্‌র', NULL, 'আবদুল হামীদ ফাইযী', 'আবদুল হামীদ ফাইযী', 'দুয়া ও জিকির', 'Dua & Zikr', 'দৈনন্দিন জীবনের সহীহ ও প্রমাণিত দো''আ সম্ভার।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 251, 0, 0, 1, NOW()),
+(58, 'book_hisnul_muslim_qahtani', 'হিসনুল মুসলিম', 'হিসনুল মুসলিম', NULL, 'ড. সাঈদ ইব্‌ন আলী ইব্‌ন ওয়াহফ আল-ক্বাহত্বানী', 'ড. সাঈদ ইব্‌ন আলী ইব্‌ন ওয়াহফ আল-ক্বাহত্বানী', 'দুয়া ও জিকির', 'Dua & Zikr', 'মুসলিম দুর্গো—কুরআন ও হাদিসের বিশুদ্ধ সকাল-সন্ধ্যার হিসনুল মুসলিম।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 254, 0, 0, 1, NOW()),
+(59, 'book_oti_guruttopurno_proshnottor', 'অতি গুরুত্বপূর্ণ কতিপয় প্রশ্নোত্তর', 'অতি গুরুত্বপূর্ণ কতিপয় প্রশ্নোত্তর', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'ফতোয়া [মাসাআলা মাসায়েল]', 'Fatwa & Masail', 'দৈনন্দিন ধর্মীয় জীবনের জরুরি প্রশ্নের সমাধান।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 257, 0, 0, 1, NOW()),
+(60, 'book_which_son_ibrahim', 'ইবরাহীম আলাইহিস সালাম কোন ছেলেকে কুরবানী দিয়েছিলেন?', 'ইবরাহীম আলাইহিস সালাম কোন ছেলেকে কুরবানী দিয়েছিলেন?', NULL, 'শাইখ মুহাম্মাদ সালিহ আল-মুনাজ্জিদ', 'শাইখ মুহাম্মাদ সালিহ আল-মুনাজ্জিদ', 'ফতোয়া [মাসাআলা মাসায়েল]', 'Fatwa & Masail', 'কুরআন ও হাদিসের অকাট্য প্রমাণের ভিত্তিতে কুরবানিকৃত সন্তানের পরিচিতি।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 260, 0, 0, 1, NOW()),
+(61, 'book_islam_qa_fatwa', 'ইসলাম কিউ এ ফতোয়া সমগ্র', 'ইসলাম কিউ এ ফতোয়া সমগ্র', NULL, 'শাইখ মুহাম্মাদ সালিহ আল-মুনাজ্জিদ', 'শাইখ মুহাম্মাদ সালিহ আল-মুনাজ্জিদ', 'ফতোয়া [মাসাআলা মাসায়েল]', 'Fatwa & Masail', 'সমসাময়িক শত শত জরুরি ফতোয়া ও সমাধান।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 263, 0, 0, 1, NOW()),
+(62, 'book_quran_sunnah_islami_fiqh', 'কুরআন ও সুন্নাহর আলোকে ইসলামী ফিকাহ', 'কুরআন ও সুন্নাহর আলোকে ইসলামী ফিকাহ', NULL, 'মুহাম্মাদ ইবনে ইবরাহীম আত্তুওয়াইজিরী', 'মুহাম্মাদ ইবনে ইবরাহীম আত্তুওয়াইজিরী', 'ফতোয়া [মাসাআলা মাসায়েল]', 'Fatwa & Masail', 'ইসলামী ফিকহের পূর্ণাঙ্গ বিশ্বকোষ ও ব্যবহারিক বিধিবিধান।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 266, 0, 0, 1, NOW()),
+(63, 'book_janajar_kichu_bidhan_bin_baz', 'জানাযার কিছু বিধান', 'জানাযার কিছু বিধান', NULL, 'শায়খ আব্দুল আযীয ইব্‌ন আব্দুল্লাহ ইব্‌ন বায রাহিমাহুল্লাহ', 'শায়খ আব্দুল আযীয ইব্‌ন আব্দুল্লাহ ইব্‌ন বায রাহিমাহুল্লাহ', 'ফতোয়া [মাসাআলা মাসায়েল]', 'Fatwa & Masail', 'মাইয়্যিতের গোসল, কাফন ও জানাজার সুন্নাহ পদ্ধতি।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 269, 0, 0, 1, NOW()),
+(64, 'book_diner_fiqh_fitna_bacar', 'দীনের ফিক্‌হ তথা জ্ঞানই ফিতনা থেকে বাঁচার সঠিক উপায়', 'দীনের ফিক্‌হ তথা জ্ঞানই ফিতনা থেকে বাঁচার সঠিক উপায়', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'ফতোয়া [মাসাআলা মাসায়েল]', 'Fatwa & Masail', 'শেষ যামানার ফিতনা থেকে আত্মরক্ষায় দ্বীনি জ্ঞানের ভূমিকা।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 272, 0, 0, 1, NOW()),
+(65, 'book_dini_proshnouttor', 'দ্বীনী প্রশ্নোত্তর', 'দ্বীনী প্রশ্নোত্তর', NULL, 'আবদুল হামীদ ফাইযী', 'আবদুল হামীদ ফাইযী', 'ফতোয়া [মাসাআলা মাসায়েল]', 'Fatwa & Masail', 'জনসাধারণের প্রাত্যহিক জীবনের ধর্মীয় প্রশ্নের উত্তর।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 275, 0, 0, 1, NOW()),
+(66, 'book_fiquhul_ibadat_qa', 'প্রশ্নোত্তরে ফিকহুল ইবাদাত', 'প্রশ্নোত্তরে ফিকহুল ইবাদাত', NULL, 'অধ্যাপক মোঃ নূরুল ইসলাম', 'অধ্যাপক মোঃ নূরুল ইসলাম', 'ফতোয়া [মাসাআলা মাসায়েল]', 'Fatwa & Masail', 'পবিত্রতা, সালাত, রোজা, হজ ও যাকাত বিষয়ক ফিকহি প্রশ্নোত্তর।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 278, 0, 0, 1, NOW()),
+(67, 'book_fatawa_arkanul_islam', 'ফাতাওয়া আরকানুল ইসলাম', 'ফাতাওয়া আরকানুল ইসলাম', NULL, 'শাইখ মুহাম্মাদ বিন সালিহ আল-উসাইমীন (রহঃ)', 'শাইখ মুহাম্মাদ বিন সালিহ আল-উসাইমীন (রহঃ)', 'ফতোয়া [মাসাআলা মাসায়েল]', 'Fatwa & Masail', 'ইসলামের পঞ্চস্তম্ভের উপর বিশ্ববিখ্যাত প্রামাণ্য ফতোয়া সংকলন।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 281, 0, 0, 1, NOW()),
+(68, 'book_fatawa_abdul_jalil', 'ফাতাওয়া ও প্রশ্নোত্তর', 'ফাতাওয়া ও প্রশ্নোত্তর', NULL, 'আব্দুল্লাহিল হাদী বিন আব্দুল জলীল', 'আব্দুল্লাহিল হাদী বিন আব্দুল জলীল', 'ফতোয়া [মাসাআলা মাসায়েল]', 'Fatwa & Masail', 'সমসাময়িক জীবনের শারঈ সমাধান।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 284, 0, 0, 1, NOW()),
+(69, 'book_mukthasar_jadul_maad', 'মুখতাসার যাদুল মা‘আদ', 'মুখতাসার যাদুল মা‘আদ', NULL, 'ইমাম ইবনুল কাইয়্যিম (রহঃ)', 'ইমাম ইবনুল কাইয়্যিম (রহঃ)', 'ফতোয়া [মাসাআলা মাসায়েল]', 'Fatwa & Masail', 'ইমাম ইবনুল কাইয়্যিমের বিখ্যাত যাদুল মাআদের সারসংক্ষেপ।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 287, 0, 0, 1, NOW()),
+(70, 'book_ruh_somporkito_masala', 'রূহ সম্পর্কিত সংক্ষিপ্ত মাসআলাসমূহ', 'রূহ সম্পর্কিত সংক্ষিপ্ত মাসআলাসমূহ', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'ফতোয়া [মাসাআলা মাসায়েল]', 'Fatwa & Masail', 'রূহের স্বরূপ, মৃত্যু ও বারযাখী জীবনের অবস্থা।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 290, 0, 0, 1, NOW()),
+(71, 'book_sohoj_fiqh_shikkha', 'সহজ ফিকহ শিক্ষা', 'সহজ ফিকহ শিক্ষা', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'ফতোয়া [মাসাআলা মাসায়েল]', 'Fatwa & Masail', 'দৈনন্দিন জরুরি মাসআলা-মাসায়েলের সহজ উপস্থাপন।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 293, 0, 0, 1, NOW()),
+(72, 'book_fiq_us_sunnah_kamal', 'সহীহ ফিক্বহুস সুন্নাহ', 'সহীহ ফিক্বহুস সুন্নাহ', NULL, 'আবূ মালিক কামাল বিন আস-সাইয়্যিদ সালিম', 'আবূ মালিক কামাল বিন আস-সাইয়্যিদ সালিম', 'ফতোয়া [মাসাআলা মাসায়েল]', 'Fatwa & Masail', 'দলিলভিত্তিক বিশুদ্ধ ফিকহুস সুন্নাহ।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 296, 0, 0, 1, NOW()),
+(73, 'book_shorno_kroy_bikroy_qa', 'স্বর্ণ ক্রয়-বিক্রয় সংক্রান্ত বিবিধ প্রশ্ন-উত্তর', 'স্বর্ণ ক্রয়-বিক্রয় সংক্রান্ত বিবিধ প্রশ্ন-উত্তর', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'ফতোয়া [মাসাআলা মাসায়েল]', 'Fatwa & Masail', 'স্বর্ণ-রৌপ্য বেচাকেনায় সুদের হাত থেকে বাঁচার শারঈ নিয়ম।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 299, 0, 0, 1, NOW()),
+(74, 'book_usila_boidho_oboidho', 'উসীলা গ্রহণ: বৈধ ও অবৈধ পন্থা', 'উসীলা গ্রহণ: বৈধ ও অবৈধ পন্থা', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'শিরক,কুফর ও বিদআত', 'Shirk, Kufr & Bid''ah', 'শরীয়তসম্মত উসীলা বনাম শিরকী উসীলার পার্থক্য।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 302, 0, 0, 1, NOW()),
+(75, 'book_sufibad_manodondo', 'কুরআন ও হাদীছের মানদন্ডে সুফীবাদ', 'কুরআন ও হাদীছের মানদন্ডে সুফীবাদ', NULL, 'আব্দুল্লাহ্ শাহেদ আল-মাদানী', 'আব্দুল্লাহ্ শাহেদ আল-মাদানী', 'শিরক,কুফর ও বিদআত', 'Shirk, Kufr & Bid''ah', 'সুফীবাদের উদ্ভব, ভ্রান্ত আকিদা ও সুন্নাহর মানদণ্ডে পর্যালোচনা।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 305, 0, 0, 1, NOW()),
+(76, 'book_procolito_khotom_porjalocona', 'প্রচলিত বিভিন্ন খতম  তাৎপর্য ও পর্যালোচনা', 'প্রচলিত বিভিন্ন খতম  তাৎপর্য ও পর্যালোচনা', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'শিরক,কুফর ও বিদআত', 'Shirk, Kufr & Bid''ah', 'খতমে ইউনুস, খতমে বুখারী ও প্রচলিত খতমসমূহের শারঈ ভিত্তি।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 308, 0, 0, 1, NOW()),
+(77, 'book_bangladeshe_shirk_bidat', 'বাংলাদেশে প্রচলিত শির্ক বিদ‘আত ও কুসংস্কার পর্যালোচনা', 'বাংলাদেশে প্রচলিত শির্ক বিদ‘আত ও কুসংস্কার পর্যালোচনা', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'শিরক,কুফর ও বিদআত', 'Shirk, Kufr & Bid''ah', 'মাজার পূজা, ওরস, নজর-নেয়াজ ও প্রচলিত কুসংস্কারের খণ্ডন।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 311, 0, 0, 1, NOW()),
+(78, 'book_bidat_dorpon', 'বিদআত দর্পণ', 'বিদআত দর্পণ', NULL, 'আবদুল হামীদ ফাইযী', 'আবদুল হামীদ ফাইযী', 'শিরক,কুফর ও বিদআত', 'Shirk, Kufr & Bid''ah', 'বিদআতের সংজ্ঞা, প্রকারভেদ ও সমাজে প্রচলিত বিদআতসমূহ।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 314, 0, 0, 1, NOW()),
+(79, 'book_bidat_o_mondo_provab', 'বিদ‘আত ও এর মন্দ প্রভাব', 'বিদ‘আত ও এর মন্দ প্রভাব', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'শিরক,কুফর ও বিদআত', 'Shirk, Kufr & Bid''ah', 'বিদআত কীভাবে সুন্নাহকে ধ্বংস করে তার বিশদ আলোচনা।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 317, 0, 0, 1, NOW()),
+(80, 'book_bidat_poricitir_mulniti', 'বিদ‘আত পরিচিতির মূলনীতি', 'বিদ‘আত পরিচিতির মূলনীতি', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'শিরক,কুফর ও বিদআত', 'Shirk, Kufr & Bid''ah', 'কোনো আমল বিদআত কিনা তা চেনার মূল শারঈ নীতিমালা।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 320, 0, 0, 1, NOW()),
+(81, 'book_boidho_oboidho_wasila', 'বৈধ ও অবৈধ অসীলা', 'বৈধ ও অবৈধ অসীলা', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'শিরক,কুফর ও বিদআত', 'Shirk, Kufr & Bid''ah', 'মৃতের কাছে চাওয়া শিরক এবং জীবিতের দোয়া বৈধ উসীলা।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 323, 0, 0, 1, NOW()),
+(82, 'book_boro_shirk_choto_shirk', 'বড় শির্ক ও ছোট শির্ক', 'বড় শির্ক ও ছোট শির্ক', NULL, 'মোস্তাফিজুর রহমান বিন আব্দুল আজিজ আল-মাদানী', 'মোস্তাফিজুর রহমান বিন আব্দুল আজিজ আল-মাদানী', 'শিরক,কুফর ও বিদআত', 'Shirk, Kufr & Bid''ah', 'বড় শিরক ও ছোট শিরকের বিস্তারিত রূপরেখা ও পার্থক্য।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 326, 0, 0, 1, NOW()),
+(83, 'book_je_keu_kono_jatir_sathe', 'যে কেউ কোনো জাতির সাথে সামঞ্জস্য বিধান করে চলবে সে তাদের দলভুক্ত বলে গণ্য হবে', 'যে কেউ কোনো জাতির সাথে সামঞ্জস্য বিধান করে চলবে সে তাদের দলভুক্ত বলে গণ্য হবে', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'শিরক,কুফর ও বিদআত', 'Shirk, Kufr & Bid''ah', 'বিধর্মীদের ধর্মীয় আচার-অনুষ্ঠান ও সংস্কৃতির অনুকরণ নিষিদ্ধতা।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 329, 0, 0, 1, NOW()),
+(84, 'book_shariater_soyongsompurnota', 'শরী‘আতের স্বয়ংসম্পূর্ণতা ও বিদ‘আতের ভয়াবহতা', 'শরী‘আতের স্বয়ংসম্পূর্ণতা ও বিদ‘আতের ভয়াবহতা', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'শিরক,কুফর ও বিদআত', 'Shirk, Kufr & Bid''ah', 'দ্বীন পূর্ণাঙ্গ হওয়ার পর নতুন সংযোজনই পথভ্রষ্টতা।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 332, 0, 0, 1, NOW()),
+(85, 'book_shirk_ki_o_keno', 'শির্ক কী ও কেন?', 'শির্ক কী ও কেন?', NULL, 'ড. মুহাম্মদ মুয্‌যাম্মিল আলী', 'ড. মুহাম্মদ মুয্‌যাম্মিল আলী', 'শিরক,কুফর ও বিদআত', 'Shirk, Kufr & Bid''ah', 'শিরকের ভয়াবহতা ও তাওহীদের বিশুদ্ধ অনুশীলন।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 335, 0, 0, 1, NOW()),
+(86, 'book_sunnoter_alo_bidater_adhar', 'সুন্নতের আলো ও বিদআতের আঁধার', 'সুন্নতের আলো ও বিদআতের আঁধার', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'শিরক,কুফর ও বিদআত', 'Shirk, Kufr & Bid''ah', 'সুন্নাতকে আঁকড়ে ধরা এবং বিদআতকে বর্জনের আহ্বান।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 338, 0, 0, 1, NOW()),
+(87, 'book_zubo_somajer_obokkhoy', 'যুব সমাজের অবক্ষয়, কারণ ও প্রতিকার', 'যুব সমাজের অবক্ষয়, কারণ ও প্রতিকার', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'দৈনন্দিন জীবন/বিবিধ', 'Daily Life / Miscellaneous', 'তরুণ প্রজন্মের চরিত্র গঠন ও নৈতিক অধঃপতন রোধের উপায়।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 341, 0, 0, 1, NOW()),
+(88, 'book_akika_bidhan', 'আকীকা এবং এ সংক্রান্ত কিছু বিধান', 'আকীকা এবং এ সংক্রান্ত কিছু বিধান', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'দৈনন্দিন জীবন/বিবিধ', 'Daily Life / Miscellaneous', 'নবজাতকের আকীকা, চুল মুণ্ডন ও নাম রাখার সুন্নাত পদ্ধতি।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 344, 0, 0, 1, NOW()),
+(89, 'book_marrage_life_aadorsho', 'আদর্শ বিবাহ ও দাম্পত্য', 'আদর্শ বিবাহ ও দাম্পত্য', NULL, 'আবদুল হামীদ ফাইযী', 'আবদুল হামীদ ফাইযী', 'দৈনন্দিন জীবন/বিবিধ', 'Daily Life / Miscellaneous', 'সুখী দাম্পত্য জীবন ও সুন্নাত মোতাবেক বিবাহের বিধান।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 347, 0, 0, 1, NOW()),
+(90, 'book_adorsho_muslim_poribar', 'আদর্শ মুসলিম পরিবার', 'আদর্শ মুসলিম পরিবার', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'দৈনন্দিন জীবন/বিবিধ', 'Daily Life / Miscellaneous', 'ইসলামী অনুশাসন মেনে একটি আদর্শ শান্তির পরিবার গঠন।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 350, 0, 0, 1, NOW()),
+(91, 'book_ami_tawba_korte_cai', 'আমি তাওবা করতে চাই . . কিন্তু !', 'আমি তাওবা করতে চাই . . কিন্তু !', NULL, 'শাইখ মুহাম্মাদ সালিহ আল-মুনাজ্জিদ', 'শাইখ মুহাম্মাদ সালিহ আল-মুনাজ্জিদ', 'দৈনন্দিন জীবন/বিবিধ', 'Daily Life / Miscellaneous', 'পাপ থেকে মুক্তির উপায় ও আল্লাহর ক্ষমার দ্বার উন্মুক্তকরণ।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 353, 0, 0, 1, NOW()),
+(92, 'book_islami_jibon_dhara', 'ইসলামী জীবন-ধারা', 'ইসলামী জীবন-ধারা', NULL, 'আবদুল হামীদ ফাইযী', 'আবদুল হামীদ ফাইযী', 'দৈনন্দিন জীবন/বিবিধ', 'Daily Life / Miscellaneous', 'প্রতিটি পদক্ষেপে ইসলামের নির্দেশনা বাস্তবায়নের পূর্ণাঙ্গ গাইড।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 356, 0, 0, 1, NOW()),
+(93, 'book_islami_gyan_nittodiner', 'ইসলামী জ্ঞান: নিত্যদিনের প্রয়োজনে', 'ইসলামী জ্ঞান: নিত্যদিনের প্রয়োজনে', NULL, 'ড. আবু বকর মুহাম্মাদ যাকারিয়া', 'ড. আবু বকর মুহাম্মাদ যাকারিয়া', 'দৈনন্দিন জীবন/বিবিধ', 'Daily Life / Miscellaneous', 'প্রাত্যহিক জীবনে অত্যাবশ্যকীয় ধর্মীয় জ্ঞান।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 359, 0, 0, 1, NOW()),
+(94, 'book_islam_e_mlm', 'ইসলামে মাল্টি লেভেল মার্কেটিং (এম এল এম) এর বিধান', 'ইসলামে মাল্টি লেভেল মার্কেটিং (এম এল এম) এর বিধান', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'দৈনন্দিন জীবন/বিবিধ', 'Daily Life / Miscellaneous', 'এমএলএম ব্যবসার শারঈ বৈধতা ও সুদের বিশ্লেষণ।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 362, 0, 0, 1, NOW()),
+(95, 'book_islamer_kichu_alochito_agrohonjoggo', 'ইসলামের কিছু আলোচিত বিষয়ে অগ্রহণযোগ্য বিভ্রান্তি', 'ইসলামের কিছু আলোচিত বিষয়ে অগ্রহণযোগ্য বিভ্রান্তি', NULL, 'শাইখ সালেহ ইবন আবদুল্লাহ আল-হুমাইদ', 'শাইখ সালেহ ইবন আবদুল্লাহ আল-হুমাইদ', 'দৈনন্দিন জীবন/বিবিধ', 'Daily Life / Miscellaneous', 'সমকালীন বিতর্কিত বিষয়ে উলামায়ে কেরামের সুস্পষ্ট অবস্থান।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 365, 0, 0, 1, NOW()),
+(96, 'book_upodesh_abdur_razzaq', 'উপদেশ', 'উপদেশ', NULL, 'আব্দুর রাযযাক বিন ইউসুফ', 'আব্দুর রাযযাক বিন ইউসুফ', 'দৈনন্দিন জীবন/বিবিধ', 'Daily Life / Miscellaneous', 'মুসলিম সমাজের সংশোধন ও ঈমানী জিন্দেগীর মূল্যবান উপদেশমালা।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 368, 0, 0, 1, NOW()),
+(97, 'book_attiyotar_bondhon_chinno', 'কুরআন ও সহীহ হাদীসের আলোকে আত্মীয়তার বন্ধন ছিন্ন করার ভয়াবহ পরিণতি', 'কুরআন ও সহীহ হাদীসের আলোকে আত্মীয়তার বন্ধন ছিন্ন করার ভয়াবহ পরিণতি', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'দৈনন্দিন জীবন/বিবিধ', 'Daily Life / Miscellaneous', 'আত্মীয়তার সম্পর্ক রক্ষা করার ফযীলত ও ছিন্ন করার শাস্তি।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 371, 0, 0, 1, NOW()),
+(98, 'book_nishiddho_kormokando', 'কুরআন ও সহীহ হাদীসের আলোকে নিষিদ্ধ কর্মকান্ড', 'কুরআন ও সহীহ হাদীসের আলোকে নিষিদ্ধ কর্মকান্ড', NULL, 'মোস্তাফিজুর রহমান বিন আব্দুল আজিজ আল-মাদানী', 'মোস্তাফিজুর রহমান বিন আব্দুল আজিজ আল-মাদানী', 'দৈনন্দিন জীবন/বিবিধ', 'Daily Life / Miscellaneous', 'হারাম ও গর্হিত কাজসমূহের তালিকা ও সতর্কতা।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 374, 0, 0, 1, NOW()),
+(99, 'book_bevichar_somokamita', 'কুরআন ও সহীহ হাদীসের আলোকে ব্যভিচার ও সমকামিতার ভয়াবহ পরিণতি', 'কুরআন ও সহীহ হাদীসের আলোকে ব্যভিচার ও সমকামিতার ভয়াবহ পরিণতি', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'দৈনন্দিন জীবন/বিবিধ', 'Daily Life / Miscellaneous', 'অশ্লীলতা ও ব্যভিচারের বিরুদ্ধে কুরআনের হুঁশিয়ারি।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 377, 0, 0, 1, NOW()),
+(100, 'book_modpan_dhompan', 'কুরআন ও সহীহ হাদীসের আলোকে মদপান ও ধূমপানের অপকারিতা', 'কুরআন ও সহীহ হাদীসের আলোকে মদপান ও ধূমপানের অপকারিতা', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'দৈনন্দিন জীবন/বিবিধ', 'Daily Life / Miscellaneous', 'মাদক ও ধূমপানের শারঈ হারাম বিধান ও স্বাস্থ্যগত ক্ষতি।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 380, 0, 0, 1, NOW()),
+(101, 'book_muslim_jiboner_adob', 'কুরআন ও সুন্নাহর আলোকে মুসলিম জীবনের আদব-কায়দা', 'কুরআন ও সুন্নাহর আলোকে মুসলিম জীবনের আদব-কায়দা', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'দৈনন্দিন জীবন/বিবিধ', 'Daily Life / Miscellaneous', 'খাওয়া, পরা, ঘুমানো ও কথা বলার ইসলামী শিষ্টাচার।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 383, 0, 0, 1, NOW()),
+(102, 'book_quran_sunnah_shopno', 'কুরআন ও সুন্নাহর দৃষ্টিকোণে স্বপ্ন ও তার ব্যাখ্যা', 'কুরআন ও সুন্নাহর দৃষ্টিকোণে স্বপ্ন ও তার ব্যাখ্যা', NULL, 'আব্দুল্লাহ শহীদ আব্দুর রহমান', 'আব্দুল্লাহ শহীদ আব্দুর রহমান', 'দৈনন্দিন জীবন/বিবিধ', 'Daily Life / Miscellaneous', 'ভালো ও খারাপ স্বপ্নের ক্ষেত্রে মুমিনের করণীয় ও তাবীর।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 386, 0, 0, 1, NOW()),
+(103, 'book_gunah_mafer_amol', 'কুরআনে কারীম ও সহীহ সুন্নাহর আলোকে গুনাহ্ মাফের আমল', 'কুরআনে কারীম ও সহীহ সুন্নাহর আলোকে গুনাহ্ মাফের আমল', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'দৈনন্দিন জীবন/বিবিধ', 'Daily Life / Miscellaneous', 'যে সকল সহজ আমলে অতীতের সমস্ত পাপ মোচন হয়।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 389, 0, 0, 1, NOW()),
+(104, 'book_gunah_mafer_upay', 'গুনাহ মাফের উপায়', 'গুনাহ মাফের উপায়', NULL, 'শাহাদাৎ হুসাইন খান ফয়সাল (রহ.)', 'শাহাদাৎ হুসাইন খান ফয়সাল (রহ.)', 'দৈনন্দিন জীবন/বিবিধ', 'Daily Life / Miscellaneous', 'তওবা, ইস্তিগফার ও নেক আমলের মাধ্যমে পাপ মার্জনা।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 392, 0, 0, 1, NOW()),
+(105, 'book_jalem_shashoker_samne_sotto', 'জালেম শাসকের সামনে সত্য তুলে ধরা', 'জালেম শাসকের সামনে সত্য তুলে ধরা', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'দৈনন্দিন জীবন/বিবিধ', 'Daily Life / Miscellaneous', 'উত্তম জিহাদ এবং সত্য কথা বলার শারঈ আদব ও শর্ত।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 395, 0, 0, 1, NOW()),
+(106, 'book_takdir_gopon_rohosso', 'তাক্বদীরঃ আল্লাহর এক গোপন রহস্য', 'তাক্বদীরঃ আল্লাহর এক গোপন রহস্য', NULL, 'আব্দুল আলীম ইবনে কাওসার', 'আব্দুল আলীম ইবনে কাওসার', 'দৈনন্দিন জীবন/বিবিধ', 'Daily Life / Miscellaneous', 'ভাগ্যের ভালো-মন্দের প্রতি ঈমান ও অসন্তোষ পরিহার।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 398, 0, 0, 1, NOW()),
+(107, 'book_dari_rakha_wajib', 'দাড়ি রাখা ওয়াজিব', 'দাড়ি রাখা ওয়াজিব', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'দৈনন্দিন জীবন/বিবিধ', 'Daily Life / Miscellaneous', 'দাড়ি রাখার শারঈ বাধ্যবাধকতা ও কাটছাঁট করার নিষেধাজ্ঞা।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 401, 0, 0, 1, NOW()),
+(108, 'book_nafser_golami_o_muktir_upay', 'নফসের গোলামী ও মুক্তির উপায়', 'নফসের গোলামী ও মুক্তির উপায়', NULL, 'আবু আহমাদ সাইফুদ্দীন বেলাল', 'আবু আহমাদ সাইফুদ্দীন বেলাল', 'দৈনন্দিন জীবন/বিবিধ', 'Daily Life / Miscellaneous', 'কুপ্রবৃত্তির দাসত্ব থেকে আত্মাকে মুক্ত করার পন্থা।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 404, 0, 0, 1, NOW()),
+(109, 'book_neyer_adesh_onnayer_nishedh', 'ন্যায়ের আদেশ ও অন্যায়ের নিষেধ অত্যাবশ্যক', 'ন্যায়ের আদেশ ও অন্যায়ের নিষেধ অত্যাবশ্যক', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'দৈনন্দিন জীবন/বিবিধ', 'Daily Life / Miscellaneous', 'আমর বিল মা''রূফ ও নাহি আনিল মুনকারের ফরজ দায়িত্ব।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 407, 0, 0, 1, NOW()),
+(110, 'book_prantorekha_rokonul', 'প্রান্তরেখা', 'প্রান্তরেখা', NULL, 'রোকনুল হক', 'রোকনুল হক', 'দৈনন্দিন জীবন/বিবিধ', 'Daily Life / Miscellaneous', 'দ্বীনি জীবনের ভাবগম্ভীর কথামালা ও দিকনির্দেশনা।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 410, 0, 0, 1, NOW()),
+(111, 'book_bebsa_bainjjo_koronio', 'ব্যবসা-বাণিজ্য: করনীয় ও বর্জনীয়', 'ব্যবসা-বাণিজ্য: করনীয় ও বর্জনীয়', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'দৈনন্দিন জীবন/বিবিধ', 'Daily Life / Miscellaneous', 'হালাল উপার্জনের শর্ত ও অবৈধ প্রতারণামূলক ব্যবসা বর্জন।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 413, 0, 0, 1, NOW()),
+(112, 'book_mohilader_srab_proshuti_60qa', 'মহিলাদের স্রাব ও প্রসূতি অবস্থার বিধিবিধান সংক্রান্ত ৬০টি প্রশ্ন', 'মহিলাদের স্রাব ও প্রসূতি অবস্থার বিধিবিধান সংক্রান্ত ৬০টি প্রশ্ন', NULL, 'শাইখ মুহাম্মাদ ইবন সালেহ আল-উসাইমীন রহ.', 'শাইখ মুহাম্মাদ ইবন সালেহ আল-উসাইমীন রহ.', 'দৈনন্দিন জীবন/বিবিধ', 'Daily Life / Miscellaneous', 'নারীদের হায়েজ ও নেফাস সম্পর্কিত ৬০টি গুরুত্বপূর্ণ ফতোয়া।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 416, 0, 0, 1, NOW()),
+(113, 'book_muslim_shasoker_proti_dayitto', 'মুসলিম শাসকের প্রতি জনগণের  দায়িত্ব ও কর্তব্য', 'মুসলিম শাসকের প্রতি জনগণের  দায়িত্ব ও কর্তব্য', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'দৈনন্দিন জীবন/বিবিধ', 'Daily Life / Miscellaneous', 'শাসকের আনুগত্য, কল্যাণকামিতা ও বিশৃঙ্খলা পরিহার।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 419, 0, 0, 1, NOW()),
+(114, 'book_mehmaner_mehmandari', 'মেহমানের মেহমানদারি', 'মেহমানের মেহমানদারি', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'দৈনন্দিন জীবন/বিবিধ', 'Daily Life / Miscellaneous', 'অতিথিপরায়ণতার ফযীলত ও মেহমানদারির সুন্নাত নিয়ম।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 422, 0, 0, 1, NOW()),
+(115, 'book_zubo_somossa_o_tar_shoriyi', 'যুব-সমস্যা ও তার শরয়ী সমাধান', 'যুব-সমস্যা ও তার শরয়ী সমাধান', NULL, 'আবদুল হামীদ ফাইযী', 'আবদুল হামীদ ফাইযী', 'দৈনন্দিন জীবন/বিবিধ', 'Daily Life / Miscellaneous', 'যুবকদের বিবাহ, কর্মসংস্থান ও দ্বীনদারিতার বাস্তবায়ন।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 425, 0, 0, 1, NOW()),
+(116, 'book_la_tahzan_karni', 'লা-তাহযান [হতাশ হবেন না]', 'লা-তাহযান [হতাশ হবেন না]', NULL, 'ড. আয়িদ আল করনী', 'ড. আয়িদ আল করনী', 'দৈনন্দিন জীবন/বিবিধ', 'Daily Life / Miscellaneous', 'উদ্বেগ, হতাশা ও দুঃখ-কষ্ট দূর করে জীবনে মানসিক শান্তি অর্জনের কালজয়ী গ্রন্থ।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 428, 0, 0, 1, NOW()),
+(117, 'book_sahrhu_masaylul_jahelia', 'শারহু মাসাইলিল জাহিলিয়্যাহ', 'শারহু মাসাইলিল জাহিলিয়্যাহ', NULL, 'শাইখ ড. ছলিহ ইবনে ফাওযান আল ফাওযান', 'শাইখ ড. ছলিহ ইবনে ফাওযান আল ফাওযান', 'দৈনন্দিন জীবন/বিবিধ', 'Daily Life / Miscellaneous', 'জাহেলী যুগের ১৩০টির বেশি বিভ্রান্তি ও ইসলামী শিক্ষা।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 431, 0, 0, 1, NOW()),
+(118, 'book_shishur_nam_nirbachon', 'শিশুর নাম নির্বাচন: ইসলামী দৃষ্টিকোণ', 'শিশুর নাম নির্বাচন: ইসলামী দৃষ্টিকোণ', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'দৈনন্দিন জীবন/বিবিধ', 'Daily Life / Miscellaneous', 'সুন্দর ইসলামী নাম রাখার গুরুত্ব ও অপছন্দনীয় নাম বর্জন।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 434, 0, 0, 1, NOW()),
+(119, 'book_soddo_vumistho_sontaner_koroniyo', 'সদ্য ভূমিষ্ঠ সন্তানের ক্ষেত্রে করণীয়', 'সদ্য ভূমিষ্ঠ সন্তানের ক্ষেত্রে করণীয়', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'দৈনন্দিন জীবন/বিবিধ', 'Daily Life / Miscellaneous', 'আযান, তাহনীক, আকীকা ও খতনার সুন্নাত আমল।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 437, 0, 0, 1, NOW()),
+(120, 'book_hadiser_aloke_adorsho_sami', 'হাদীসের আলোকে আদর্শ স্বামী', 'হাদীসের আলোকে আদর্শ স্বামী', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'দৈনন্দিন জীবন/বিবিধ', 'Daily Life / Miscellaneous', 'স্ত্রীর প্রতি সদ্ব্যবহার, ভালোবাসা ও দায়িত্ব পালনের সুন্নাত আদর্শ।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 440, 0, 0, 1, NOW()),
+(121, 'book_ar_rahikul_makhtum_mubarakpuri', 'আর-রাহীকুল মাখতূম', 'আর-রাহীকুল মাখতূম', NULL, 'আল্লামা সফিউর রহমান মোবারকপুরী (রহঃ)', 'আল্লামা সফিউর রহমান মোবারকপুরী (রহঃ)', 'জীবনী ও ইতিহাস', 'Biography & History', 'আন্তর্জাতিক সীরাত প্রতিযোগিতায় ১ম স্থানপ্রাপ্ত বিশ্ববিখ্যাত সীরাত গ্রন্থ।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 443, 0, 0, 1, NOW()),
+(122, 'book_nobir_ghotonay_shikkha', 'নবী-রাসূলগণের ঘটনায় রয়েছে শিক্ষা', 'নবী-রাসূলগণের ঘটনায় রয়েছে শিক্ষা', NULL, 'ড. মোঃ আবদুল কাদের', 'ড. মোঃ আবদুল কাদের', 'জীবনী ও ইতিহাস', 'Biography & History', 'পবিত্র কুরআনে বর্ণিত আম্বিয়ায়ে কেরামের ঘটনা থেকে জীবনের শিক্ষা।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 446, 0, 0, 1, NOW()),
+(123, 'book_nobider_kahini_galib', 'নবীদের কাহিনী', 'নবীদের কাহিনী', NULL, 'ডঃ মুহাম্মাদ আসাদুল্লাহ আল-গালিব', 'ডঃ মুহাম্মাদ আসাদুল্লাহ আল-গালিব', 'জীবনী ও ইতিহাস', 'Biography & History', 'আদম (আ.) থেকে ঈসা (আ.) পর্যন্ত সকল নবীর প্রামাণ্য ইতিহাস।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 449, 0, 0, 1, NOW()),
+(124, 'book_one_day_in_the_house_of_prophet', 'রাসূল [সাল্লাল্লাহু আলাইহি ওয়াসাল্লামের]  গৃহে একদিন', 'রাসূল [সাল্লাল্লাহু আলাইহি ওয়াসাল্লামের]  গৃহে একদিন', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'জীবনী ও ইতিহাস', 'Biography & History', 'রাসূলুল্লাহ ﷺ-এর পারিবারিক জীবন ও স্ত্রীদের প্রতি অনুপম ভালোবাসার চিত্র।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 452, 0, 0, 1, NOW()),
+(125, 'book_islamer_name_jongibad', 'ইসলামের নামে জঙ্গিবাদ', 'ইসলামের নামে জঙ্গিবাদ', NULL, 'ড. খোন্দকার আব্দুল্লাহ জাহাঙ্গীর (রহ.)', 'ড. খোন্দকার আব্দুল্লাহ জাহাঙ্গীর (রহ.)', 'ফিরকা ও দল পরিচিতি', 'Sects & Groups', 'সন্ত্রাস ও চরমপন্থার বিরুদ্ধে ইসলামের অবস্থান ও খারেজী মতবাদ খণ্ডন।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 455, 0, 0, 1, NOW()),
+(126, 'book_huti_shiyader_aasol_cehara', 'ইয়েমেনের বিদ্রোহী  হুতী শিয়াদের আসল চেহারা', 'ইয়েমেনের বিদ্রোহী  হুতী শিয়াদের আসল চেহারা', NULL, 'প্রফেসর ডক্টর সুলাইমান বিন সালিহ আল গুসন', 'প্রফেসর ডক্টর সুলাইমান বিন সালিহ আল গুসন', 'ফিরকা ও দল পরিচিতি', 'Sects & Groups', 'হুতী শিয়াদের আকীদা ও রাজনৈতিক ধ্বংসযজ্ঞের ইতিহাস।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 458, 0, 0, 1, NOW()),
+(127, 'book_qadiani_motobad', 'কাদিয়ানী মতবাদ (পর্যালোচনা ও বিশ্লেষণ)', 'কাদিয়ানী মতবাদ (পর্যালোচনা ও বিশ্লেষণ)', NULL, 'ইহসান ইলাহী জহির (রহঃ)', 'ইহসান ইলাহী জহির (রহঃ)', 'ফিরকা ও দল পরিচিতি', 'Sects & Groups', 'কাদিয়ানীদের কুফরী মতবাদ ও খতমে নবুওয়্যাতের অকাট্য দলীল।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 461, 0, 0, 1, NOW()),
+(128, 'book_dol_songothon_imarot', 'দল, সংগঠন, ইমারত ও বায়‘আত সম্পর্কে বিশিষ্ট উলামায়ে কেরামের বক্তব্য', 'দল, সংগঠন, ইমারত ও বায়‘আত সম্পর্কে বিশিষ্ট উলামায়ে কেরামের বক্তব্য', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'ফিরকা ও দল পরিচিতি', 'Sects & Groups', 'দলীয় সংকীর্ণতা পরিহার করে উম্মাহর ঐক্যের সঠিক রূপরেখা।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 464, 0, 0, 1, NOW()),
+(129, 'book_salafi_o_salafiyat_poriciti', 'সালাফী ও সালাফিয়াত পরিচিতি', 'সালাফী ও সালাফিয়াত পরিচিতি', NULL, 'আবদুল হামীদ ফাইযী', 'আবদুল হামীদ ফাইযী', 'ফিরকা ও দল পরিচিতি', 'Sects & Groups', 'সালাফুস সালেহীনের অনুসারী কারা এবং তাঁদের বৈশিষ্ট্য কি।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 467, 0, 0, 1, NOW()),
+(130, 'book_quraner_ortho_bujhar_ovidhan', 'কুরআনের অর্থ বুঝার সহজ অভিধান', 'কুরআনের অর্থ বুঝার সহজ অভিধান', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'কোরআন ও হাদিস', 'Quran & Hadith', 'কুরআন মাজীদের সর্বাধিক ব্যবহৃত ৮০% শব্দের বাংলা অর্থ ও অভিধান।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 470, 0, 0, 1, NOW()),
+(131, 'book_mukhtasarul_fawayid', 'মুখতাসারুল ফাওয়ায়েদ (ইবনুল কাইয়্যেম রহ.-এর আল-ফাওয়ায়েদ অবলম্বনে)', 'মুখতাসারুল ফাওয়ায়েদ (ইবনুল কাইয়্যেম রহ.-এর আল-ফাওয়ায়েদ অবলম্বনে)', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'কোরআন ও হাদিস', 'Quran & Hadith', 'কুরআন ও হাদিসের গভীর তত্ত্ব ও আত্মশুদ্ধিমূলক ফাওয়ায়েদ।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 473, 0, 0, 1, NOW()),
+(132, 'book_hadiser_name_jaliyati', 'হাদীসের নামে জালিয়াতি', 'হাদীসের নামে জালিয়াতি', NULL, 'ড. খোন্দকার আব্দুল্লাহ জাহাঙ্গীর (রহ.)', 'ড. খোন্দকার আব্দুল্লাহ জাহাঙ্গীর (রহ.)', 'কোরআন ও হাদিস', 'Quran & Hadith', 'সমাজে প্রচলিত বানোয়াট ও জাল হাদিসসমূহের প্রামাণ্য বিশ্লেষণ।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 476, 0, 0, 1, NOW()),
+(133, 'book_usule_fiqh_uthaymeen', 'উসূলে ফিক্বহ  (ফিক্বহের মূলনীতি)', 'উসূলে ফিক্বহ  (ফিক্বহের মূলনীতি)', NULL, 'শাইখ মুহাম্মাদ বিন সালিহ আল-উসাইমীন (রহঃ)', 'শাইখ মুহাম্মাদ বিন সালিহ আল-উসাইমীন (রহঃ)', 'উসূলের গ্রন্থাবলী', 'Usul & Methodology', 'ইসলামী শরীয়তের বিধান প্রণয়ন ও উসূলুল ফিকহের মূলনীতিমালা।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 479, 0, 0, 1, NOW()),
+(134, 'book_hadis_shastrer_porivasha', 'হাদিস শাস্ত্রের পরিভাষা পরিচিতি', 'হাদিস শাস্ত্রের পরিভাষা পরিচিতি', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'উসূলের গ্রন্থাবলী', 'Usul & Methodology', 'সহীহ, হাসান, জয়ীফ, মুতাওয়াতির ও মাওজু হাদিসের পরিভাষা।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 482, 0, 0, 1, NOW()),
+(135, 'book_zadukormo_jotish_bidhan', 'জাদুকর্ম, জ্যোতিষ ও দৈবকর্ম এবং এতদসংক্রান্ত অন্যান্য বিষয় সম্পর্কে ইসলামের বিধান', 'জাদুকর্ম, জ্যোতিষ ও দৈবকর্ম এবং এতদসংক্রান্ত অন্যান্য বিষয় সম্পর্কে ইসলামের বিধান', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'যাদু টোনা ও ঝাড় ফুঁক', 'Ruqyah & Evil Eye', 'গণক, জ্যোতিষী ও জাদুকরদের কাছে যাওয়ার মারাত্মক পরিণতি।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 485, 0, 0, 1, NOW()),
+(136, 'book_jadukor_jotishir_golay_torbari', 'যাদুকর ও জ্যোতিষীর গলায় ধারালো তরবারি', 'যাদুকর ও জ্যোতিষীর গলায় ধারালো তরবারি', NULL, 'ওয়াহীদ বিন আব্দুস সালাম বালী', 'ওয়াহীদ বিন আব্দুস সালাম বালী', 'যাদু টোনা ও ঝাড় ফুঁক', 'Ruqyah & Evil Eye', 'কুরআন ও সহীহ সুন্নাহ মোতাবেক রুকইয়াহ ও যাদু নিরসনের উপায়।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 488, 0, 0, 1, NOW()),
+(137, 'book_alemgoner_motoveder_karon', 'আলেমগণের মধ্যে মতভেদ কারণ এবং আমাদের অবস্থান', 'আলেমগণের মধ্যে মতভেদ কারণ এবং আমাদের অবস্থান', NULL, 'শাইখ মুহাম্মাদ ইবন সালেহ আল-উসাইমীন রহ.', 'শাইখ মুহাম্মাদ ইবন সালেহ আল-উসাইমীন রহ.', 'দাওয়াত ও তাবলীগ', 'Dawah & Calling to Allah', 'উলামায়ে কেরামের মতপার্থক্যের শারঈ কারণ ও উম্মাহর করণীয়।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 491, 0, 0, 1, NOW()),
+(138, 'book_allahor_dike_dawater_sombol', 'আল্লাহর দিকে দাওয়াতের সম্বল', 'আল্লাহর দিকে দাওয়াতের সম্বল', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'দাওয়াত ও তাবলীগ', 'Dawah & Calling to Allah', 'দায়ী ইলাল্লাহর প্রয়োজনীয় জ্ঞান, প্রজ্ঞা ও ধৈর্য।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 494, 0, 0, 1, NOW()),
+(139, 'book_nobi_rasulgoner_dawater_poddhoti', 'নবী-রসূলগণের দা''ওয়াতের পদ্ধতি', 'নবী-রসূলগণের দা''ওয়াতের পদ্ধতি', NULL, 'আবু আহমাদ সাইফুদ্দীন বেলাল', 'আবু আহমাদ সাইফুদ্দীন বেলাল', 'দাওয়াত ও তাবলীগ', 'Dawah & Calling to Allah', 'আম্বিয়াদের দাওয়াতের মূলনীতি ও তাওহীদের অগ্রাধিকার।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 497, 0, 0, 1, NOW()),
+(140, 'book_nobi_rasulgoner_dawatre_mulniti', 'নবী-রাসূলগণের দা‘ওয়াতী মূলনীতি', 'নবী-রাসূলগণের দা‘ওয়াতী মূলনীতি', NULL, 'মুহাম্মাদ ইবনে ইবরাহীম আত-তুওয়াইজিরী', 'মুহাম্মাদ ইবনে ইবরাহীম আত-তুওয়াইজিরী', 'দাওয়াত ও তাবলীগ', 'Dawah & Calling to Allah', 'দ্বীনের দাওয়াত প্রচার ও প্রতিষ্ঠার সঠিক কৌশল।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 500, 0, 0, 1, NOW()),
+(141, 'book_kobor_ziaror_o_koborbasir_kache', 'কবর যিয়ারত ও কবরবাসীর কাছে সাহায্যের আবেদন', 'কবর যিয়ারত ও কবরবাসীর কাছে সাহায্যের আবেদন', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'কবর, কিয়ামত ও আখিরাত', 'Grave, Day of Judgement & Hereafter', 'কবর জিয়ারতের সুন্নাত নিয়ম বনাম কবরে সাহায্য চাওয়ার শিরক।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 503, 0, 0, 1, NOW()),
+(142, 'book_koborer_shasti_barzakhi_jibon', 'কবরের শাস্তি ও শান্তি সম্পর্কে কতিপয় মাসআলা বারযাখী জীবন', 'কবরের শাস্তি ও শান্তি সম্পর্কে কতিপয় মাসআলা বারযাখী জীবন', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'কবর, কিয়ামত ও আখিরাত', 'Grave, Day of Judgement & Hereafter', 'মুনকার-নাকীরের সওয়াল-জওয়াব ও কবরের আযাবের সত্যতা।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 506, 0, 0, 1, NOW()),
+(143, 'book_kiyamater_alamat_madani', 'কিয়ামতের আলামত', 'কিয়ামতের আলামত', NULL, 'আব্দুল্লাহ্ শাহেদ আল-মাদানী', 'আব্দুল্লাহ্ শাহেদ আল-মাদানী', 'কবর, কিয়ামত ও আখিরাত', 'Grave, Day of Judgement & Hereafter', 'দাজ্জাল, ইমাম মাহদী, ঈসা (আ.)-এর আগমন ও ছোট-বড় আলামত।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 509, 0, 0, 1, NOW()),
+(144, 'book_kiamoter_voyabohota_o_tarpor', 'কিয়ামতের ভয়াবহতা ও তারপর', 'কিয়ামতের ভয়াবহতা ও তারপর', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'কবর, কিয়ামত ও আখিরাত', 'Grave, Day of Judgement & Hereafter', 'হাশরের ময়দান, মিজান, পুলসিরাত ও শাফাআতের বিশদ বিবরণ।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 512, 0, 0, 1, NOW()),
+(145, 'book_jannat_jahannam_faizi', 'জান্নাত-জাহান্নাম', 'জান্নাত-জাহান্নাম', NULL, 'আবদুল হামীদ ফাইযী', 'আবদুল হামীদ ফাইযী', 'কবর, কিয়ামত ও আখিরাত', 'Grave, Day of Judgement & Hereafter', 'জান্নাতের অপার নিয়ামত ও জাহান্নামের ভয়াবহ শাস্তির প্রামাণ্য চিত্র।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 515, 0, 0, 1, NOW()),
+(146, 'book_ihudi_christian_ki_kafer', 'ইয়াহূদী-খৃস্টানরা কি কাফির?', 'ইয়াহূদী-খৃস্টানরা কি কাফির?', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'নাস্তিকতা, ধর্মনিরপেক্ষতা, শিয়া, খ্রিষ্টান ও ইহুদী', 'Anti-Deviation & Comparative Religion', 'কুরআন ও হাদিসের আলোকে আহলে কিতাবদের কুফরী অবস্থান।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 518, 0, 0, 1, NOW()),
+(147, 'book_kitabul_mukaddas_jahangir', 'কিতাবুল মোকাদ্দস, ইঞ্জিল শরীফ ও ঈসায়ী ধর্ম', 'কিতাবুল মোকাদ্দস, ইঞ্জিল শরীফ ও ঈসায়ী ধর্ম', NULL, 'ড. খোন্দকার আব্দুল্লাহ জাহাঙ্গীর (রহ.)', 'ড. খোন্দকার আব্দুল্লাহ জাহাঙ্গীর (রহ.)', 'নাস্তিকতা, ধর্মনিরপেক্ষতা, শিয়া, খ্রিষ্টান ও ইহুদী', 'Anti-Deviation & Comparative Religion', 'খ্রিস্টধর্মের বিকৃতি ও বিশুদ্ধ তাওহীদের তূলনামূলক পর্যালোচনা।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 521, 0, 0, 1, NOW()),
+(148, 'book_christian_bananor_opokoushol', 'খ্রিস্টান বানানোর অপকৌশল থেকে সাবধান', 'খ্রিস্টান বানানোর অপকৌশল থেকে সাবধান', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'নাস্তিকতা, ধর্মনিরপেক্ষতা, শিয়া, খ্রিষ্টান ও ইহুদী', 'Anti-Deviation & Comparative Religion', 'মিশনারী অপতৎপরতা থেকে মুসলিম সমাজ রক্ষার উপায়।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 524, 0, 0, 1, NOW()),
+(149, 'book_dhormo_niropekkho_rastre_dol', 'ধর্মনিরপেক্ষ রাষ্ট্রে কি কোনো ইসলামী দলে যোগ দেওয়া যাবে?', 'ধর্মনিরপেক্ষ রাষ্ট্রে কি কোনো ইসলামী দলে যোগ দেওয়া যাবে?', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'নাস্তিকতা, ধর্মনিরপেক্ষতা, শিয়া, খ্রিষ্টান ও ইহুদী', 'Anti-Deviation & Comparative Religion', 'ধর্মনিরপেক্ষ শাসনব্যবস্থায় মুমিনের করণীয়।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 527, 0, 0, 1, NOW()),
+(150, 'book_dhormoniropekkhota_o_kufol', 'ধর্মনিরপেক্ষতা ও তার কুফল', 'ধর্মনিরপেক্ষতা ও তার কুফল', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'নাস্তিকতা, ধর্মনিরপেক্ষতা, শিয়া, খ্রিষ্টান ও ইহুদী', 'Anti-Deviation & Comparative Religion', 'ধর্মনিরপেক্ষতাবাদের কুফরী স্বরূপ ও আত্মঘাতী পরিণতি।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 530, 0, 0, 1, NOW()),
+(151, 'book_nastikkobad_utso_somadhan', 'নাস্তিক্যবাদ উৎস ও সমাধান', 'নাস্তিক্যবাদ উৎস ও সমাধান', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'নাস্তিকতা, ধর্মনিরপেক্ষতা, শিয়া, খ্রিষ্টান ও ইহুদী', 'Anti-Deviation & Comparative Religion', 'নাস্তিকদের প্রশ্নের যুক্তি ও বিজ্ঞানের আলোকে ইসলামী জবাব।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 533, 0, 0, 1, NOW()),
+(152, 'book_pobitro_bible_poriciti', 'পবিত্র বাইবেল পরিচিতি ও পর্যালোচনা', 'পবিত্র বাইবেল পরিচিতি ও পর্যালোচনা', NULL, 'ড. খোন্দকার আব্দুল্লাহ জাহাঙ্গীর (রহ.)', 'ড. খোন্দকার আব্দুল্লাহ জাহাঙ্গীর (রহ.)', 'নাস্তিকতা, ধর্মনিরপেক্ষতা, শিয়া, খ্রিষ্টান ও ইহুদী', 'Anti-Deviation & Comparative Religion', 'বর্তমান বাইবেলের বৈপরীত্য ও মানবীয় পরিবর্তনের প্রমাণ।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 536, 0, 0, 1, NOW()),
+(153, 'book_bangladeshe_nastikkobadi_opototporota', 'বাংলাদেশে নাস্তিক্যবাদী অপতৎপরতা : প্রতিরোধের উপায়', 'বাংলাদেশে নাস্তিক্যবাদী অপতৎপরতা : প্রতিরোধের উপায়', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'নাস্তিকতা, ধর্মনিরপেক্ষতা, শিয়া, খ্রিষ্টান ও ইহুদী', 'Anti-Deviation & Comparative Religion', 'বুদ্ধিবৃত্তিক অঙ্গনে নাস্তিক্যবাদের মোকাবিলার রূপরেখা।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 539, 0, 0, 1, NOW()),
+(154, 'book_baro_imamer_shiader_dristite_4imam', 'বারো ইমামের অনুসারী শিয়াদের দৃষ্টিতে চার ইমাম', 'বারো ইমামের অনুসারী শিয়াদের দৃষ্টিতে চার ইমাম', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'নাস্তিকতা, ধর্মনিরপেক্ষতা, শিয়া, খ্রিষ্টান ও ইহুদী', 'Anti-Deviation & Comparative Religion', 'শিয়াদের চার ইমাম সম্পর্কে অবমাননাকর বক্তব্যের খণ্ডন।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 542, 0, 0, 1, NOW()),
+(155, 'book_shia_akidar_asorota', 'শিয়া আকিদার অসারতা', 'শিয়া আকিদার অসারতা', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'নাস্তিকতা, ধর্মনিরপেক্ষতা, শিয়া, খ্রিষ্টান ও ইহুদী', 'Anti-Deviation & Comparative Religion', 'শিয়াদের ইমামত, তাকিয়্যাহ ও সাহাবীদের গালমন্দ করার ভ্রান্তি।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 545, 0, 0, 1, NOW()),
+(156, 'book_shia_akida_ibn_taimia', 'শিয়া আকীদা সম্পর্কে ইবন তাইমিয়্যার মিনহাজুস সুন্নাহ থেকে নির্বাচিত কিছু কথা', 'শিয়া আকীদা সম্পর্কে ইবন তাইমিয়্যার মিনহাজুস সুন্নাহ থেকে নির্বাচিত কিছু কথা', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'নাস্তিকতা, ধর্মনিরপেক্ষতা, শিয়া, খ্রিষ্টান ও ইহুদী', 'Anti-Deviation & Comparative Religion', 'মিনহাজুস সুন্নাহ গ্রন্থে শিয়া মতবাদের অকাট্য খণ্ডন।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 548, 0, 0, 1, NOW()),
+(157, 'book_nari_shikkha_dristivongi', 'নারী শিক্ষা সম্পর্কে ইসলামী দৃষ্টিভঙ্গি', 'নারী শিক্ষা সম্পর্কে ইসলামী দৃষ্টিভঙ্গি', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'মহিলা অঙ্গন', 'Women in Islam', 'ইসলামে নারীর শিক্ষা অর্জন ও মর্যাদার শারঈ রূপরেখা।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 551, 0, 0, 1, NOW()),
+(158, 'book_porda_ekti_ibadat', 'পর্দা একটি ইবাদত', 'পর্দা একটি ইবাদত', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'মহিলা অঙ্গন', 'Women in Islam', 'পর্দা নারীর সম্মান ও আল্লাহর অন্যতম ফরজ হুকুম।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 554, 0, 0, 1, NOW()),
+(159, 'book_pordahinotar_porinoti', 'পর্দাহীনতার পরিণতি', 'পর্দাহীনতার পরিণতি', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'মহিলা অঙ্গন', 'Women in Islam', 'বেপর্দা চলাফেরার ইহকালীন ক্ষতি ও পরকালীন আযাব।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 557, 0, 0, 1, NOW()),
+(160, 'book_poshak_zokhon_bipoder_karon', 'পোশাক যখন বিপদের কারণ', 'পোশাক যখন বিপদের কারণ', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'মহিলা অঙ্গন', 'Women in Islam', 'টাইটফিট ও অশোভন পোশাকের নিষেধাজ্ঞা।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 560, 0, 0, 1, NOW()),
+(161, 'book_bela_furabar_age', 'বেলা ফুরাবার আগে', 'বেলা ফুরাবার আগে', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'মহিলা অঙ্গন', 'Women in Islam', 'মুসলিম নারীদের আত্মশুদ্ধি ও তাওবার তাগিদ।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 563, 0, 0, 1, NOW()),
+(162, 'book_mumin_narider_bishesh_bidhan', 'মুমিন নারীদের বিশেষ বিধান', 'মুমিন নারীদের বিশেষ বিধান', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'মহিলা অঙ্গন', 'Women in Islam', 'নারীদের সালাত, পর্দা ও পারিবারিক বিশেষ বিধান সমগ্র।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 566, 0, 0, 1, NOW()),
+(163, 'book_sondorzo_prodorshon_beporda', 'সৌন্দর্য প্রদর্শন ও বেপর্দা প্রসঙ্গে মুমিন নারীদের জন্য কতিপয় নির্দেশনা', 'সৌন্দর্য প্রদর্শন ও বেপর্দা প্রসঙ্গে মুমিন নারীদের জন্য কতিপয় নির্দেশনা', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'মহিলা অঙ্গন', 'Women in Islam', 'তাবাররুজ বা সৌন্দর্য প্রদর্শনের কঠোর নিষেধাজ্ঞা।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 569, 0, 0, 1, NOW()),
+(164, 'book_souvaggomoy_ghor_dondo', 'সৌভাগ্যময় ঘর ও স্বামী-স্ত্রীর দ্বন্দ্ব', 'সৌভাগ্যময় ঘর ও স্বামী-স্ত্রীর দ্বন্দ্ব', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'মহিলা অঙ্গন', 'Women in Islam', 'দাম্পত্য কলহ মিটিয়ে পরিবারে সুখ-শান্তি ফিরিয়ে আনার উপায়।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 572, 0, 0, 1, NOW()),
+(165, 'book_abu_bokor_o_umar_er_jibon', 'আবু বকর ও উমর রাদিয়াল্লাহু আনহুমার জীবনের কিছু ঘটনা', 'আবু বকর ও উমর রাদিয়াল্লাহু আনহুমার জীবনের কিছু ঘটনা', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'সাহাবা, তাবেঈ, তাবে-তাবেঈন', 'Companions & Followers', 'খুলাফায়ে রাশেদীনের প্রথম দুই খলীফার অনুপম আত্মত্যাগ ও ঈমান।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 575, 0, 0, 1, NOW()),
+(166, 'book_ummater_opor_sahabigoner_odhikarsomuh', 'উম্মতের ওপর সাহাবীগণের অধিকারসমূহ', 'উম্মতের ওপর সাহাবীগণের অধিকারসমূহ', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'সাহাবা, তাবেঈ, তাবে-তাবেঈন', 'Companions & Followers', 'সাহাবায়ে কেরামকে ভালোবাসা, সম্মান করা ও গালমন্দ না করার বিধান।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 578, 0, 0, 1, NOW()),
+(167, 'book_allah_talar_nandonik_nam_o_gun', 'আল্লাহ তা‘আলার নান্দনিক নাম ও গুণসমগ্র: কিছু আদর্শিক নীতিমালা', 'আল্লাহ তা‘আলার নান্দনিক নাম ও গুণসমগ্র: কিছু আদর্শিক নীতিমালা', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'আল্লাহ্‌র নাম ও গুণাবলী', 'Names & Attributes of Allah', 'আসমাউল হুসনা ও সিফাত সংক্রান্ত আহলুস সুন্নাহর মৌলিক নীতিমালা।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 581, 0, 0, 1, NOW()),
+(168, 'book_halal_uparjon_kader', 'ইসলামে হালাল উপার্জন : গুরুত্ব ও তাৎপর্য', 'ইসলামে হালাল উপার্জন : গুরুত্ব ও তাৎপর্য', NULL, 'ড. মোঃ আবদুল কাদের', 'ড. মোঃ আবদুল কাদের', 'হারাম ও হালাল', 'Halal & Haram', 'হালাল রিযিক গ্রহণের অপরিহার্যতা ও দো''আ কবুলের সম্পর্ক।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 584, 0, 0, 1, NOW()),
+(169, 'book_bank_interest_sud_ki_halal', 'ব্যাংকের সুদ কি হালাল', 'ব্যাংকের সুদ কি হালাল', NULL, 'শাইখ মুশ্তাক আহমাদ কারীমী', 'শাইখ মুশ্তাক আহমাদ কারীমী', 'হারাম ও হালাল', 'Halal & Haram', 'প্রচলিত ব্যাংকিং সুদের প্রকারভেদ ও সুদের বিরুদ্ধে কুরআনের ঘোষণা।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 587, 0, 0, 1, NOW()),
+(170, 'book_ze_sokol_haramke_manush_tuccho', 'যে সকল হারামকে মানুষ তুচ্ছ মনে করে থাকে', 'যে সকল হারামকে মানুষ তুচ্ছ মনে করে থাকে', NULL, 'ইসলামহাউজ.কম', 'ইসলামহাউজ.কম', 'হারাম ও হালাল', 'Halal & Haram', 'অজান্তে কৃত কবিরা গুনাহসমূহ যা থেকে বেঁচে থাকা আবশ্যক।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 590, 0, 0, 1, NOW()),
+(171, 'book_sud_khoti_opokar_qahtani', 'সুদের ক্ষতি-অপকার-কুপ্রভাব', 'সুদের ক্ষতি-অপকার-কুপ্রভাব', NULL, 'ড. সাঈদ ইব্‌ন আলী ইব্‌ন ওয়াহফ আল-ক্বাহত্বানী', 'ড. সাঈদ ইব্‌ন আলী ইব্‌ন ওয়াহফ আল-ক্বাহত্বানী', 'হারাম ও হালাল', 'Halal & Haram', 'সুদখোরের ভয়াবহ পরকালীন শাস্তি ও সামাজিক ধ্বংসযজ্ঞ।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 593, 0, 0, 1, NOW()),
+(172, 'book_haram_kabira_gunah', 'হারাম ও কবিরা গুনাহ', 'হারাম ও কবিরা গুনাহ', NULL, 'মোস্তাফিজুর রহমান বিন আব্দুল আজিজ আল-মাদানী', 'মোস্তাফিজুর রহমান বিন আব্দুল আজিজ আল-মাদানী', 'হারাম ও হালাল', 'Halal & Haram', 'কবিরা গুনাহসমূহের বিশদ তালিকা ও তওবার পদ্ধতি।', NULL, NULL, 'https://raw.githubusercontent.com/riadmonir/DeenOne/main/database/islamic_books.db', 0, 596, 0, 0, 1, NOW());
 /*!40000 ALTER TABLE `islamic_books` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `islamic_book_chapters`
+--
+
+DROP TABLE IF EXISTS `islamic_book_chapters`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `islamic_book_chapters` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `book_uid` varchar(60) NOT NULL,
+  `chapter_index` int(10) unsigned NOT NULL,
+  `title_bn` varchar(255) NOT NULL,
+  `title_en` varchar(255) DEFAULT NULL,
+  `content_bn` mediumtext NOT NULL,
+  `content_en` mediumtext DEFAULT NULL,
+  `is_active` tinyint(1) DEFAULT 1,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  PRIMARY KEY (`id`),
+  KEY `idx_book_chap` (`book_uid`,`chapter_index`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+LOCK TABLES `islamic_book_chapters` WRITE;
+/*!40000 ALTER TABLE `islamic_book_chapters` DISABLE KEYS */;
+
+INSERT INTO `islamic_book_chapters` (`book_uid`, `chapter_index`, `title_bn`, `content_bn`, `is_active`) VALUES
+('book_al_irshad', 1, 'অধ্যায় ১: আল ইরশাদ-সহীহ আকীদার দিশারী-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+আল ইরশাদ-সহীহ আকীদার দিশারী
+লেখক/সংকলক: শাইখ ড. ছলিহ ইবনে ফাওযান আল ফাওযান
+
+সহীহ ইসলামী আকীদার প্রামাণ্য দিকনির্দেশনা ও শিরক-বিদআত বর্জন।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_al_irshad', 2, 'অধ্যায় ২: আল ইরশাদ-সহীহ আকীদার দিশারী-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে আল ইরশাদ-সহীহ আকীদার দিশারী কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_al_fiqhul_akbar', 1, 'অধ্যায় ১: আল-ফিকহুল আকবর-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+আল-ফিকহুল আকবর
+লেখক/সংকলক: ড. খোন্দকার আব্দুল্লাহ জাহাঙ্গীর (রহ.)
+
+ইমাম আবু হানিফার আকীদাহ বিষয়ক মৌলিক গ্রন্থের তাহকীক ও ব্যাখ্যা।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_al_fiqhul_akbar', 2, 'অধ্যায় ২: আল-ফিকহুল আকবর-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে আল-ফিকহুল আকবর কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_ahle_sunnat_aqeedah', 1, 'অধ্যায় ১: আহলে সুন্নাত ওয়াল জামা‘আতের আকীদা-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+আহলে সুন্নাত ওয়াল জামা‘আতের আকীদা
+লেখক/সংকলক: ইমাম আবু জা‘ফর আহমাদ আত-ত্বহাবী রহ.
+
+আহলুস সুন্নাহ ওয়াল জামাআতের সুপ্রসিদ্ধ মূলনীতি ও আকীদা।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_ahle_sunnat_aqeedah', 2, 'অধ্যায় ২: আহলে সুন্নাত ওয়াল জামা‘আতের আকীদা-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে আহলে সুন্নাত ওয়াল জামা‘আতের আকীদা কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_islam_binostokari', 1, 'অধ্যায় ১: ইসলাম বিনষ্টকারী বিষয়সমূহ-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+ইসলাম বিনষ্টকারী বিষয়সমূহ
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+যে সকল কারণে মানুষের ঈমান নষ্ট হয়ে যায় তার দশটি মৌলিক কারণ।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_islam_binostokari', 2, 'অধ্যায় ২: ইসলাম বিনষ্টকারী বিষয়সমূহ-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে ইসলাম বিনষ্টকারী বিষয়সমূহ কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_iman_biddhongshi', 1, 'অধ্যায় ১: ঈমান বিধ্বংসী দশটি কারণ-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+ঈমান বিধ্বংসী দশটি কারণ
+লেখক/সংকলক: খায়রুল ইসলাম বিন ইলিয়াস
+
+ঈমান ভঙ্গকারী বিষয়সমূহের বিস্তারিত বিবরণ ও সতর্কতা।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_iman_biddhongshi', 2, 'অধ্যায় ২: ঈমান বিধ্বংসী দশটি কারণ-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে ঈমান বিধ্বংসী দশটি কারণ কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_kitabut_tawhid', 1, 'অধ্যায় ১: কিতাবুত তাওহীদ-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+কিতাবুত তাওহীদ
+লেখক/সংকলক: মুহাম্মদ বিন আব্দুল ওহহাব
+
+তাওহীদের স্বরূপ, গুরুত্ব এবং শিরকের বিভিন্ন প্রকারভেদ।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_kitabut_tawhid', 2, 'অধ্যায় ২: কিতাবুত তাওহীদ-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে কিতাবুত তাওহীদ কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_quran_sunnah_aqeedah', 1, 'অধ্যায় ১: কুরআন-সুন্নাহর আলোকে ইসলামী আকীদা-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+কুরআন-সুন্নাহর আলোকে ইসলামী আকীদা
+লেখক/সংকলক: ড. খোন্দকার আব্দুল্লাহ জাহাঙ্গীর (রহ.)
+
+কুরআন ও সহীহ সুন্নাহ ভিত্তিক ঈমানের প্রামাণ্য বিশদ ব্যাখ্যা।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_quran_sunnah_aqeedah', 2, 'অধ্যায় ২: কুরআন-সুন্নাহর আলোকে ইসলামী আকীদা-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে কুরআন-সুন্নাহর আলোকে ইসলামী আকীদা কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_char_imamer_aqeedah', 1, 'অধ্যায় ১: চার ইমামের আকীদাহ (আবূ হানীফা, মালেক, শাফে‘ঈ ও আহমাদ)-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+চার ইমামের আকীদাহ (আবূ হানীফা, মালেক, শাফে‘ঈ ও আহমাদ)
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+চার প্রসিদ্ধ মুজতাহিদ ইমামের ঐকমত্যের বিশুদ্ধ আকীদা।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_char_imamer_aqeedah', 2, 'অধ্যায় ২: চার ইমামের আকীদাহ (আবূ হানীফা, মালেক, শাফে‘ঈ ও আহমাদ)-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে চার ইমামের আকীদাহ (আবূ হানীফা, মালেক, শাফে‘ঈ ও আহমাদ) কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_tawhid_o_tar_promanadi', 1, 'অধ্যায় ১: তাওহীদ ও তার প্রমাণাদি-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+তাওহীদ ও তার প্রমাণাদি
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+আল্লাহর একত্ববাদের অকাট্য দলীলসমূহ ও শিরক নিরসন।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_tawhid_o_tar_promanadi', 2, 'অধ্যায় ২: তাওহীদ ও তার প্রমাণাদি-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে তাওহীদ ও তার প্রমাণাদি কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_tawhid_ponthider_noyonmoni', 1, 'অধ্যায় ১: তাওহীদ পন্থীদের নয়নমণি-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+তাওহীদ পন্থীদের নয়নমণি
+লেখক/সংকলক: শাইখ আব্দুর রাহমান বিন হাসান বিন মুহাম্মাদ বিন আব্দুল ওয়াহাব (রহঃ)
+
+তাওহীদুল উলূহিয়্যাহ ও ইখলাসের গভীর প্রামাণ্য আলোচনা।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_tawhid_ponthider_noyonmoni', 2, 'অধ্যায় ২: তাওহীদ পন্থীদের নয়নমণি-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে তাওহীদ পন্থীদের নয়নমণি কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_tawheed_kalema_la_ilaha', 1, 'অধ্যায় ১: তাওহীদের কালেমা: লা-ইলাহা ইল্লাল্লাহ-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+তাওহীদের কালেমা: লা-ইলাহা ইল্লাল্লাহ
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+কালিমায়ে তায়্যিবার ফযীলত, অর্থ, শর্ত ও পরিপন্থী বিষয়সমূহ।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_tawheed_kalema_la_ilaha', 2, 'অধ্যায় ২: তাওহীদের কালেমা: লা-ইলাহা ইল্লাল্লাহ-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে তাওহীদের কালেমা: লা-ইলাহা ইল্লাল্লাহ কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_najat_prapto_doler_akidah', 1, '(১) বান্দার উপর সর্বপ্রথম ওয়াজিব কোনটি?', 'বান্দার উপর সর্বপ্রথম ওয়াজিব হচ্ছে, তাদেরকে আল্লাহ তা''আলা যে উদ্দেশ্যে সৃষ্টি করেছেন, তাদের থেকে যে বিষয়ের অঙ্গীকার নিয়েছেন, যে বিষয় দিয়ে রাসূল প্রেরণ করেছেন এবং কিতাব অবতীর্ণ করেছেন, সে সম্পর্কে জ্ঞান অর্জন করা।
+
+এ বিষয়টির জন্যই আল্লাহ্ তাআলা দুনিয়া-আখেরাত, জান্নাত-জাহান্নাম সৃষ্টি করেছেন। এ বিষয়ের জন্যেই কিয়ামত প্রতিষ্ঠিত হবে, দাড়িপাল্লা স্থাপন করা হবে, আমলনামা প্রদান করা হবে। এ বিষয়টির কারণেই কেউ সৌভাগ্যবান হবে আবার কেউ হবে হতভাগা। এ অনুযায়ী কিয়ামতের দিন নূর বণ্টিত হবে। সে দিন আল্লাহ যাকে নূর দান করবেন না, তার কোন নূর থাকবে না।', 1),
+('book_najat_prapto_doler_akidah', 2, '(২) সুতরাং ঐ বিষয়টি কি, যার জন্য আল্লাহ্ তা''আলা মানুষ সৃষ্টি করেছেন?', 'ঐ বিষয়টি হচ্ছে, আল্লাহ তা''আলা বান্দাকে একমাত্র তাঁরই ইবাদত করার জন্য এবং তাঁর সাথে কোনো কিছুকে শরীক না করার জন্য সৃষ্টি করেছেন।
+
+আল্লাহ সুবহানাহু ওয়া তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«وَمَا خَلَقْتُ الْجِنَّ وَالْإِنسَ إِلَّا لِيَعْبُدُونِ ۝ مَا أُرِيدُ مِنْهُم مِّن رِّزْقٍ وَمَا أُرِيدُ أَن يُطْعِمُونِ ۝ إِنَّ اللَّهَ هُوَ الرَّزَّاقُ ذُو الْقُوَّةِ الْمَتِينُ»
+অর্থ: ''আর আমি সৃষ্টি করেছি জিন এবং মানুষকে কেবল এ জন্যই যে, তারা আমারই ইবাদত করবে। আমি তাদের কাছে কোনো জীবিকা চাই না এবং এও চাই না যে তারা আমাকে আহার করাবে। নিশ্চয় আল্লাহই রিজিকদাতা, মহাশক্তিধর, পরাক্রমশালী।'' (সূরা আয-যারিয়াত: ৫৬-৫৮)', 1),
+('book_najat_prapto_doler_akidah', 3, '(৩) আব্দ অর্থ কি?', '''আব্দ'' শব্দের দুটি অর্থ রয়েছে:
+১. সৃষ্টিগত ও সার্বজনীন অর্থ (মুআব্বাদ): নিখিল সৃষ্টির প্রতিটি জীব আল্লাহর ক্ষমতাপ্রাপ্ত ও তাঁর অধীনস্থ অনুগত বান্দা।
+২. শরঈ ও মর্যাদাপূর্ণ অর্থ (আবিদ): যে ব্যক্তি স্বেচ্ছায় আল্লাহর তাওহীদ মেনে নিয়ে একমাত্র তাঁরই উপাসনা করে এবং তাঁর আদেশ-নিষেধ পালন করে।', 1),
+('book_najat_prapto_doler_akidah', 4, '(৪) এবাদত কাকে বলে?', 'ইবাদত হলো এমন একটি সামগ্রিক নাম, যা আল্লাহ তা''আলার সন্তুষ্টি ও ভালোবাসা অর্জনের উদ্দেশ্যে সম্পাদিত প্রকাশ্য ও অপ্রকাশ্য সমস্ত কথা ও কাজকে অন্তর্ভুক্ত করে। যেমন: সালাত, সাওম, যাকাত, হজ, পিতামাতার সেবা, সত্যবাদিতা ও আল্লাহর যিকির।', 1),
+('book_najat_prapto_doler_akidah', 5, '(৫) বান্দার আমল কখন এবাদতে পরিণত হয়?', 'বান্দার যেকোনো বৈধ আমল বা কাজ দুটি শর্ত পূরণ করলে পূর্ণাঙ্গ ইবাদতে রূপান্তরিত হয়: ১. আল্লাহ ও তাঁর রাসুলের প্রতি অবিচল ভালোবাসা ও ভীতি এবং ২. পূর্ণাঙ্গ আনুগত্য ও নিষ্ঠা।', 1),
+('book_najat_prapto_doler_akidah', 6, '(৬) বান্দা যে আল্লাহকে ভালবাসে, তার আলামত কী?', 'বান্দার আল্লাহকে ভালোবাসার সর্বশ্রেষ্ঠ আলামত হলো আল্লাহর রাসুল ﷺ-এর পরিপূর্ণ আনুগত্য ও সুন্নাহর অনুসরণ করা। আল্লাহ তা''আলা বলেন: ''বলুন, যদি তোমরা আল্লাহকে ভালোবাস তবে আমার অনুসরণ কর, আল্লাহ তোমাদের ভালোবাসবেন এবং তোমাদের পাপসমূহ ক্ষমা করবেন।'' (সূরা আলে ইমরান: ৩১)', 1),
+('book_najat_prapto_doler_akidah', 7, '(৭) বান্দা কিভাবে আল্লাহর প্রিয় ও সন্তোষজনক কাজগুলো জানতে পারবে?', 'আল্লাহ তা''আলা তাঁর রাসুলগণের মাধ্যমে যে কিতাব ও শরীয়ত অবতীর্ণ করেছেন, তার মাধ্যমে বান্দা আল্লাহর প্রিয় ও সন্তোষজনক কাজগুলো জানতে পারে।', 1),
+('book_najat_prapto_doler_akidah', 8, '(৮) ইবাদতের শর্ত কয়টি?', 'যেকোনো ইবাদত আল্লাহর নিকট গ্রহণযোগ্য হওয়ার জন্য দুটি মৌলিক শর্ত রয়েছে: ১. ইখলাস বা খাঁটি নিয়ত (একমাত্র আল্লাহর সন্তুষ্টির উদ্দেশ্যে হওয়া) এবং ২. মুতাবাআতুর রাসুল বা রাসুলুল্লাহ ﷺ-এর সুন্নাহ মোতাবেক হওয়া।', 1),
+('book_proshnottore_sahaj_tawhid', 1, '(১) তাওহীদ কাকে বলে এবং এর আভিধানিক অর্থ কি?', 'প্রশ্ন: তাওহীদ কাকে বলে এবং এর আভিধানিক অর্থ কি?
+
+উত্তর:
+''তাওহীদ'' (التَّوْحِيدُ) আরবি শব্দ। এর আভিধানিক অর্থ হলো কোনো কিছুকে একক বা এক বলে ঘোষণা করা এবং বিশ্বাস স্থাপন করা।
+
+শরীয়তের পরিভাষায়:
+আল্লাহ তা''আলাকে তাঁর রুবূবিয়্যাত (প্রভুত্ব ও সৃষ্টি পরিচালনা), উলূহিয়্যাত (একক উপাসনা ও ইবাদত) এবং আসমা ওয়াস সিফাত (সুন্দর নামসমূহ ও গুণাবলী)-এ একমাত্র একক ও অংশীদারহীন বলে মনেপ্রাণে বিশ্বাস করা ও জীবনে বাস্তবায়ন করাকে তাওহীদ বলে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ঘোষণা করেন:
+«قُلْ هُوَ اللَّهُ أَحَدٌ ۝ اللَّهُ الصَّمَدُ ۝ لَمْ يَلِدْ وَلَمْ يُولَدْ ۝ وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ»
+অর্থ: ''বলুন, তিনিই আল্লাহ, একক-অদ্বিতীয়। আল্লাহ কারো মুখাপেক্ষী নন, সকলেই তাঁর মুখাপেক্ষী। তিনি কাউকে জন্ম দেননি এবং তাঁকেও জন্ম দেওয়া হয়নি। আর তাঁর সমতুল্য কেউই নেই।'' (সূরা আল-ইখলাস: ১-৪)', 1),
+('book_proshnottore_sahaj_tawhid', 2, '(২) তাওহীদের প্রকারভেদ কয়টি ও কি কি?', 'প্রশ্ন: তাওহীদের প্রকারভেদ কয়টি ও কি কি?
+
+উত্তর:
+কুরআন ও সুন্নাহর গভীর পর্যালোচনার মাধ্যমে বিজ্ঞ উলামায়ে কেরাম তাওহীদকে তিনটি মৌলিক ভাগে বিভক্ত করেছেন:
+১. তাওহীদুর রুবূবিয়্যাহ (توحيد الربوبية): আল্লাহ তা''আলাকে সৃষ্টি, পরিচালনা, রিজিকদান ও সার্বভৌম কর্তৃত্বে একক হিসেবে স্বীকার করা।
+২. তাওহীদুল উলূহিয়্যাহ (توحيد الألوهية): সকল প্রকার ইবাদত একমাত্র আল্লাহর জন্য নির্দিষ্ট করা।
+৩. তাওহীদুল আসমা ওয়াস সিফাত (توحيد الأسماء والصفات): আল্লাহর সুন্দর নাম ও গুণাবলীকে বিনা বিকৃতিতে বিশ্বাস করা।', 1),
+('book_proshnottore_sahaj_tawhid', 3, '(৩) ''লা ইলাহা ইল্লাল্লাহ''-এর সঠিক অর্থ কি?', 'প্রশ্ন: ''লা ইলাহা ইল্লাল্লাহ'' (لَا إِلٰهَ إِلَّا اللهُ)-এর সঠিক অর্থ কি?
+
+উত্তর:
+''লা ইলাহা ইল্লাল্লাহ''-এর বিশুদ্ধ অর্থ হলো: ''আল্লাহ ছাড়া সত্য কোনো মাবূদ বা উপাস্য নেই'' (لاَ مَعْبُوْدَ بِحَقٍّ إِلاَّ اللهُ)।', 1),
+('book_firqah_najia', 1, 'অধ্যায় ১: ফির্‌কাহ নাজিয়া-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+ফির্‌কাহ নাজিয়া
+লেখক/সংকলক: আবদুল হামীদ ফাইযী
+
+নাজাতপ্রাপ্ত দলের পরিচয় ও ভ্রান্ত দলসমূহ থেকে আত্মরক্ষার উপায়।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_firqah_najia', 2, 'অধ্যায় ২: ফির্‌কাহ নাজিয়া-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে ফির্‌কাহ নাজিয়া কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_manhaj_azwibatul_mufidah', 1, 'অধ্যায় ১: মানহাজ (আল-আজবিবাতুল মুফীদাহ)-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+মানহাজ (আল-আজবিবাতুল মুফীদাহ)
+লেখক/সংকলক: শাইখ ড. ছলিহ ইবনে ফাওযান আল ফাওযান
+
+সহীহ মানহাজ ও সমকালীন বিভ্রান্তি নিরসনে জরুরি প্রশ্নোত্তর।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_manhaj_azwibatul_mufidah', 2, 'অধ্যায় ২: মানহাজ (আল-আজবিবাতুল মুফীদাহ)-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে মানহাজ (আল-আজবিবাতুল মুফীদাহ) কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_sharhul_aqeedah_wasetia', 1, 'অধ্যায় ১: শরহুল আকীদাহ আল-ওয়াসেতীয়া-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+শরহুল আকীদাহ আল-ওয়াসেতীয়া
+লেখক/সংকলক: ডঃ সালেহ ফাওযান
+
+শায়খুল ইসলাম ইবনে তাইমিয়্যাহর ওয়াসেতীয়া আকীদার ব্যাখ্যা।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_sharhul_aqeedah_wasetia', 2, 'অধ্যায় ২: শরহুল আকীদাহ আল-ওয়াসেতীয়া-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে শরহুল আকীদাহ আল-ওয়াসেতীয়া কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_sharhul_aqeedah_tahabiya', 1, 'অধ্যায় ১: শারহুল আক্বীদা আত্-ত্বহাবীয়া-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+শারহুল আক্বীদা আত্-ত্বহাবীয়া
+লেখক/সংকলক: ইমাম ইবনে আবীল ইয আল-হানাফী (রহিমাহুল্লাহ)
+
+ইমাম তাহাবীর আকীদার সুবিখ্যাত প্রামাণ্য ব্যাখ্যাগ্রন্থ।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_sharhul_aqeedah_tahabiya', 2, 'অধ্যায় ২: শারহুল আক্বীদা আত্-ত্বহাবীয়া-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে শারহুল আক্বীদা আত্-ত্বহাবীয়া কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_shuabul_iman', 1, 'অধ্যায় ১: শু''আবুল ঈমান (ঈমানের শাখাসমূহ)-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+শু''আবুল ঈমান (ঈমানের শাখাসমূহ)
+লেখক/সংকলক: ইমাম বাইহাকী
+
+ঈমানের সত্তরটিরও বেশি শাখার বিশদ বিবরণ ও গুরুত্ব।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_shuabul_iman', 2, 'অধ্যায় ২: শু''আবুল ঈমান (ঈমানের শাখাসমূহ)-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে শু''আবুল ঈমান (ঈমানের শাখাসমূহ) কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_songkhipto_islami_akidah', 1, 'অধ্যায় ১: সংক্ষিপ্ত ইসলামী ‘আক্বীদাহ্-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+সংক্ষিপ্ত ইসলামী ‘আক্বীদাহ্
+লেখক/সংকলক: মুহাম্মাদ বিন জামীল যাইনূ
+
+প্রতিটি মুসলিমের জন্য অত্যাবশ্যকীয় সহজ আকীদা সংক্ষেপ।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_songkhipto_islami_akidah', 2, 'অধ্যায় ২: সংক্ষিপ্ত ইসলামী ‘আক্বীদাহ্-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে সংক্ষিপ্ত ইসলামী ‘আক্বীদাহ্ কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_kosor_o_joma_salat', 1, 'অধ্যায় ১: কসর ও জমা করে সালাত আদায় সম্পর্কে কিছু বিধান-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+কসর ও জমা করে সালাত আদায় সম্পর্কে কিছু বিধান
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+সফরে সালাত কসর ও জমা করার শারঈ শর্ত ও নিয়মাবলী।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_kosor_o_joma_salat', 2, 'অধ্যায় ২: কসর ও জমা করে সালাত আদায় সম্পর্কে কিছু বিধান-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে কসর ও জমা করে সালাত আদায় সম্পর্কে কিছু বিধান কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_jamate_salat_aday', 1, 'অধ্যায় ১: কুরআন ও সহীহ হাদীসের আলোকে জামা‘আতে সালাত আদায়-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+কুরআন ও সহীহ হাদীসের আলোকে জামা‘আতে সালাত আদায়
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+জামাআতে সালাত আদায়ের ফযীলত, তাকবীরে উলার মর্যাদা ও নিয়ম।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_jamate_salat_aday', 2, 'অধ্যায় ২: কুরআন ও সহীহ হাদীসের আলোকে জামা‘আতে সালাত আদায়-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে কুরআন ও সহীহ হাদীসের আলোকে জামা‘আতে সালাত আদায় কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_chair_a_bose_salat', 1, 'অধ্যায় ১: চেয়ারে বসে সালাত আদায় বিধি-বিধান ও মাসলা-মাসায়েল-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+চেয়ারে বসে সালাত আদায় বিধি-বিধান ও মাসলা-মাসায়েল
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+অসুস্থ ব্যক্তির চেয়ারে বসে নামায পড়ার সঠিক শারঈ নিয়ম ও ভুলভ্রান্তি।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_chair_a_bose_salat', 2, 'অধ্যায় ২: চেয়ারে বসে সালাত আদায় বিধি-বিধান ও মাসলা-মাসায়েল-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে চেয়ারে বসে সালাত আদায় বিধি-বিধান ও মাসলা-মাসায়েল কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_salatur_rasul_galib', 1, 'অধ্যায় ১: ছালাতুর রাসূল (ছাঃ)-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+ছালাতুর রাসূল (ছাঃ)
+লেখক/সংকলক: ডঃ মুহাম্মাদ আসাদুল্লাহ আল-গালিব
+
+রাসূলুল্লাহ ﷺ-এর বিশুদ্ধ সালাতের তাকবীর থেকে সালাম পর্যন্ত পুঙ্খানুপুঙ্খ বিবরণ।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_salatur_rasul_galib', 2, 'অধ্যায় ২: ছালাতুর রাসূল (ছাঃ)-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে ছালাতুর রাসূল (ছাঃ) কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_janaza_dorpon', 1, 'অধ্যায় ১: জানাযা দর্পণ-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+জানাযা দর্পণ
+লেখক/সংকলক: আবদুল হামীদ ফাইযী
+
+মৃত্যু, কাফন-দাফন ও জানাযার পূর্ণাঙ্গ প্রামাণ্য বিধান।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_janaza_dorpon', 2, 'অধ্যায় ২: জানাযা দর্পণ-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে জানাযা দর্পণ কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_janazar_namazer_niyom', 1, 'অধ্যায় ১: জানাযার নামাযের নিয়ম-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+জানাযার নামাযের নিয়ম
+লেখক/সংকলক: আবদুল হামীদ ফাইযী
+
+জানাযার নামাযের ৪ তাকবীর, ছানা, দরূদ ও মাসনূন দো''আসমূহ।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_janazar_namazer_niyom', 2, 'অধ্যায় ২: জানাযার নামাযের নিয়ম-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে জানাযার নামাযের নিয়ম কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_janajar_bidhan_uthaymeen', 1, 'অধ্যায় ১: জানাযার বিধিবিধান-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+জানাযার বিধিবিধান
+লেখক/সংকলক: শাইখ মুহাম্মাদ ইবন সালেহ আল-উসাইমীন রহ.
+
+জানাযা ও দাফন সম্পর্কিত ৭০টি গুরুত্বপূর্ণ প্রশ্নোত্তর।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_janajar_bidhan_uthaymeen', 2, 'অধ্যায় ২: জানাযার বিধিবিধান-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে জানাযার বিধিবিধান কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_jal_hadiser_kobole_salat', 1, 'অধ্যায় ১: জাল হাদীছের কবলে রাসূলুল্লাহ (ছাঃ)-এর ছালাত-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+জাল হাদীছের কবলে রাসূলুল্লাহ (ছাঃ)-এর ছালাত
+লেখক/সংকলক: মুযাফফর বিন মুহসিন
+
+নামাজে প্রচলিত দুর্বল ও বানোয়াট হাদিসসমূহের চুলচেরা বিশ্লেষণ।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_jal_hadiser_kobole_salat', 2, 'অধ্যায় ২: জাল হাদীছের কবলে রাসূলুল্লাহ (ছাঃ)-এর ছালাত-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে জাল হাদীছের কবলে রাসূলুল্লাহ (ছাঃ)-এর ছালাত কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_rasul_salat_albani', 1, 'অধ্যায় ১: নবী (সা.) এর ছলাত সম্পাদনের পদ্ধতি-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+নবী (সা.) এর ছলাত সম্পাদনের পদ্ধতি
+লেখক/সংকলক: মুহাম্মাদ নাছিরুদ্দিন আলবানী (রহ.)
+
+বিশ্ববিখ্যাত সিফাতু সালাতিন নবী—সহীহ হাদিসের আলোকে সালাত।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_rasul_salat_albani', 2, 'অধ্যায় ২: নবী (সা.) এর ছলাত সম্পাদনের পদ্ধতি-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে নবী (সা.) এর ছলাত সম্পাদনের পদ্ধতি কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_salatud_duha_bidhan', 1, 'অধ্যায় ১: প্রশ্নোত্তরে সালাতুদ-দুহার সংক্ষিপ্ত বিধান-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+প্রশ্নোত্তরে সালাতুদ-দুহার সংক্ষিপ্ত বিধান
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+চাশত বা দুহার সালাতের সময়, রাকাত সংখ্যা ও ফযীলত।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_salatud_duha_bidhan', 2, 'অধ্যায় ২: প্রশ্নোত্তরে সালাতুদ-দুহার সংক্ষিপ্ত বিধান-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে প্রশ্নোত্তরে সালাতুদ-দুহার সংক্ষিপ্ত বিধান কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_salatul_awuabin', 1, 'অধ্যায় ১: সালাতুল আউওয়াবীন-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+সালাতুল আউওয়াবীন
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+আউওয়াবীন সালাতের সহীহ সময় ও প্রচলিত ভুল ধারণা নিরসন।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_salatul_awuabin', 2, 'অধ্যায় ২: সালাতুল আউওয়াবীন-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে সালাতুল আউওয়াবীন কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_salater_gurutto_o_fozilot', 1, 'অধ্যায় ১: সালাতের গুরুত্ব ও ফযীলত-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+সালাতের গুরুত্ব ও ফযীলত
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+নামাজের অপরিহার্য গুরুত্ব, পুরস্কার ও সালাত ত্যাগের ভয়াবহ পরিণতি।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_salater_gurutto_o_fozilot', 2, 'অধ্যায় ২: সালাতের গুরুত্ব ও ফযীলত-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে সালাতের গুরুত্ব ও ফযীলত কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_salate_mubasshir', 1, 'অধ্যায় ১: স্বালাতে মুবাশ্‌শির-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+স্বালাতে মুবাশ্‌শির
+লেখক/সংকলক: আবদুল হামীদ ফাইযী
+
+সহীহ হাদিস ও সুন্নাহ মোতাবেক নামাযের প্রামাণ্য গাইড।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_salate_mubasshir', 2, 'অধ্যায় ২: স্বালাতে মুবাশ্‌শির-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে স্বালাতে মুবাশ্‌শির কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_zakat_daily_life', 1, 'অধ্যায় ১: দৈনন্দিন জীবনে ইসলাম [যাকাত অধ্যায়]-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+দৈনন্দিন জীবনে ইসলাম [যাকাত অধ্যায়]
+লেখক/সংকলক: শরীফুল ইসলাম বিন যয়নুল আবেদীন
+
+যাকাত ফরয হওয়ার শর্তাবলী, নিসাব ও আধুনিক সম্পদের যাকাত হিসাব।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_zakat_daily_life', 2, 'অধ্যায় ২: দৈনন্দিন জীবনে ইসলাম [যাকাত অধ্যায়]-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে দৈনন্দিন জীবনে ইসলাম [যাকাত অধ্যায়] কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_zakat_o_sawm_pustika', 1, 'অধ্যায় ১: যাকাত ও সাওম বিষয়ক দু’টি পুস্তিকা-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+যাকাত ও সাওম বিষয়ক দু’টি পুস্তিকা
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+যাকাতের খাতসমূহ ও রোজার মৌলিক বিধানের সারসংক্ষেপ।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_zakat_o_sawm_pustika', 2, 'অধ্যায় ২: যাকাত ও সাওম বিষয়ক দু’টি পুস্তিকা-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে যাকাত ও সাওম বিষয়ক দু’টি পুস্তিকা কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_zakater_bidhan_sar', 1, 'অধ্যায় ১: যাকাত বিধানের সারসংক্ষেপ-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+যাকাত বিধানের সারসংক্ষেপ
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+যাকাতের আটটি খাত, স্বর্ণ-রৌপ্য ও নগদ টাকার যাকাত নিরূপণ।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_zakater_bidhan_sar', 2, 'অধ্যায় ২: যাকাত বিধানের সারসংক্ষেপ-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে যাকাত বিধানের সারসংক্ষেপ কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_ramadan_eid_qa', 1, 'অধ্যায় ১: প্রশ্নোত্তরে রমযান ও ঈদ-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+প্রশ্নোত্তরে রমযান ও ঈদ
+লেখক/সংকলক: অধ্যাপক মোঃ নূরুল ইসলাম
+
+রমজান, তারাবীহ, সেহরি, ইফতার ও ঈদের ফাতাওয়া সমগ্র।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_ramadan_eid_qa', 2, 'অধ্যায় ২: প্রশ্নোত্তরে রমযান ও ঈদ-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে প্রশ্নোত্তরে রমযান ও ঈদ কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_ramjan_30_aasor', 1, 'অধ্যায় ১: রমযান মাসের ৩০ আসর-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+রমযান মাসের ৩০ আসর
+লেখক/সংকলক: শাইখ মুহাম্মাদ বিন সালিহ আল-উসাইমীন (রহঃ)
+
+রমজানের প্রতিদিনের জন্য বিশেষ আত্মশুদ্ধিমূলক আলোচনা ও নসীহত।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_ramjan_30_aasor', 2, 'অধ্যায় ২: রমযান মাসের ৩০ আসর-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে রমযান মাসের ৩০ আসর কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_romzaner_dayitto_kortobbo', 1, 'অধ্যায় ১: রমযানের দায়িত্ব-কর্তব্য-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+রমযানের দায়িত্ব-কর্তব্য
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+ইবন রজব আল-হাম্বলীর লাতায়িফুল মা‘আরিফ অবলম্বনে রমজানের আমল।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_romzaner_dayitto_kortobbo', 2, 'অধ্যায় ২: রমযানের দায়িত্ব-কর্তব্য-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে রমযানের দায়িত্ব-কর্তব্য কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_ramjaner_fajayel_rojar_masayel', 1, 'অধ্যায় ১: রমাযানের ফাযায়েল ও রোযার মাসায়েল-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+রমাযানের ফাযায়েল ও রোযার মাসায়েল
+লেখক/সংকলক: আবদুল হামীদ ফাইযী
+
+সিয়ামের মর্যাদা, রোজা ভঙ্গের কারণ ও কাজা-কাফফারার বিধান।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_ramjaner_fajayel_rojar_masayel', 2, 'অধ্যায় ২: রমাযানের ফাযায়েল ও রোযার মাসায়েল-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে রমাযানের ফাযায়েল ও রোযার মাসায়েল কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_sawm_bisshokosh', 1, 'অধ্যায় ১: সহীহ হাদীসের আলোকে সাওম বিশ্বকোষ-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+সহীহ হাদীসের আলোকে সাওম বিশ্বকোষ
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+সিয়াম ও রমজান সম্পর্কিত সহীহ হাদিসসমূহের প্রামাণ্য সংকলন।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_sawm_bisshokosh', 2, 'অধ্যায় ২: সহীহ হাদীসের আলোকে সাওম বিশ্বকোষ-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে সহীহ হাদীসের আলোকে সাওম বিশ্বকোষ কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_sawom_adhunik_masala', 1, 'অধ্যায় ১: সাওম বিষয়ক আধুনিক কিছু মাসআলা-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+সাওম বিষয়ক আধুনিক কিছু মাসআলা
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+ইনজেকশন, ইনহেলার, স্যালাইন, চোখের ড্রপ ও আধুনিক চিকিৎসায় রোজা।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_sawom_adhunik_masala', 2, 'অধ্যায় ২: সাওম বিষয়ক আধুনিক কিছু মাসআলা-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে সাওম বিষয়ক আধুনিক কিছু মাসআলা কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_fatwar_regarding_roja', 1, 'অধ্যায় ১: সিয়াম বিষয়ক নির্বাচিত ফাতওয়া-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+সিয়াম বিষয়ক নির্বাচিত ফাতওয়া
+লেখক/সংকলক: ইসলাম কিউ এ (Islamqa.com)
+
+সমসাময়িক বিশ্বখ্যাত উলামায়ে কেরামের সিয়াম সংক্রান্ত নির্ভরযোগ্য ফতোয়া।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_fatwar_regarding_roja', 2, 'অধ্যায় ২: সিয়াম বিষয়ক নির্বাচিত ফাতওয়া-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে সিয়াম বিষয়ক নির্বাচিত ফাতওয়া কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_umra_niyom_zakaria', 1, 'অধ্যায় ১: কুরআন ও সুন্নাহর আলোকে উমরা করার নিয়ম-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+কুরআন ও সুন্নাহর আলোকে উমরা করার নিয়ম
+লেখক/সংকলক: ড. আবু বকর মুহাম্মাদ যাকারিয়া
+
+ইহরাম বাঁধা থেকে তাওয়াফ, সাঈ ও হলক করার সুন্নাত নিয়ম।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_umra_niyom_zakaria', 2, 'অধ্যায় ২: কুরআন ও সুন্নাহর আলোকে উমরা করার নিয়ম-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে কুরআন ও সুন্নাহর আলোকে উমরা করার নিয়ম কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_hajj_umra_ziyarat_uthaymeen', 1, 'অধ্যায় ১: কুরআন ও হাদীছের আলোকে হজ্জ, উমরাহ ও মদীনা যিয়ারত-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+কুরআন ও হাদীছের আলোকে হজ্জ, উমরাহ ও মদীনা যিয়ারত
+লেখক/সংকলক: শাইখ মুহাম্মাদ বিন সালিহ আল-উসাইমীন (রহঃ)
+
+হজের দিনসমূহের আমল (৮ থেকে ১৩ জিলহজ) ও মদিনা যিয়ারতের আদব।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_hajj_umra_ziyarat_uthaymeen', 2, 'অধ্যায় ২: কুরআন ও হাদীছের আলোকে হজ্জ, উমরাহ ও মদীনা যিয়ারত-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে কুরআন ও হাদীছের আলোকে হজ্জ, উমরাহ ও মদীনা যিয়ারত কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_kurbanir_bidhana', 1, 'অধ্যায় ১: কুরবানীর বিধান-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+কুরবানীর বিধান
+লেখক/সংকলক: আবদুল হামীদ ফাইযী
+
+কুরবানির পশু, যবেহ করার নিয়ম, অংশীদারি ও গোশত বন্টন।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_kurbanir_bidhana', 2, 'অধ্যায় ২: কুরবানীর বিধান-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে কুরবানীর বিধান কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_hajj_umrah_qa', 1, 'অধ্যায় ১: প্রশ্নোত্তরে হজ্জ ও উমরা-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+প্রশ্নোত্তরে হজ্জ ও উমরা
+লেখক/সংকলক: অধ্যাপক মোঃ নূরুল ইসলাম
+
+হজ ও উমরার যাবতীয় খুঁটিনাটি সমস্যার ১০০টি প্রশ্নোত্তর।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_hajj_umrah_qa', 2, 'অধ্যায় ২: প্রশ্নোত্তরে হজ্জ ও উমরা-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে প্রশ্নোত্তরে হজ্জ ও উমরা কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_jillhajj_prothom_dosh_din', 1, 'অধ্যায় ১: যিলহজ মাসের প্রথম দশ দিন, ঈদ, কুরবানি ও আইয়ামে তাশরীকের দিনসমূহ-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+যিলহজ মাসের প্রথম দশ দিন, ঈদ, কুরবানি ও আইয়ামে তাশরীকের দিনসমূহ
+লেখক/সংকলক: জাকেরুল্লাহ আবুল খায়ের
+
+যিলহজের ১ম দশকের অতুলনীয় মর্যাদা ও কুরবানির দিনসমূহের তাকবীর।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_jillhajj_prothom_dosh_din', 2, 'অধ্যায় ২: যিলহজ মাসের প্রথম দশ দিন, ঈদ, কুরবানি ও আইয়ামে তাশরীকের দিনসমূহ-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে যিলহজ মাসের প্রথম দশ দিন, ঈদ, কুরবানি ও আইয়ামে তাশরীকের দিনসমূহ কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_haj_umra_jiyarat', 1, 'অধ্যায় ১: হজ উমরা ও যিয়ারত-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+হজ উমরা ও যিয়ারত
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+হজযাত্রীদের জন্য সহজ ও সংক্ষিপ্ত সুন্নাত নির্দেশিকা।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_haj_umra_jiyarat', 2, 'অধ্যায় ২: হজ উমরা ও যিয়ারত-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে হজ উমরা ও যিয়ারত কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_hajj_safara_sohoj_guide', 1, 'অধ্যায় ১: হজ সফরে সহজ গাইড-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+হজ সফরে সহজ গাইড
+লেখক/সংকলক: মুহাম্মাদ মোশফিকুর রহমান
+
+হজের প্রস্তুতি, ভ্রমণ ও ঐতিহাসিক স্থানসমূহের দিকনির্দেশনা।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_hajj_safara_sohoj_guide', 2, 'অধ্যায় ২: হজ সফরে সহজ গাইড-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে হজ সফরে সহজ গাইড কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_hajje_prodotto_nobi_fotowa', 1, 'অধ্যায় ১: হজে প্রদত্ত নবী সাল্লাল্লাহু আলাইহি ওয়াসাল্লামের ফাতাওয়া-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+হজে প্রদত্ত নবী সাল্লাল্লাহু আলাইহি ওয়াসাল্লামের ফাতাওয়া
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+বিদায় হজে রাসুলুল্লাহ ﷺ কর্তৃক প্রদত্ত ফতোয়া ও দিকনির্দেশনা।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_hajje_prodotto_nobi_fotowa', 2, 'অধ্যায় ২: হজে প্রদত্ত নবী সাল্লাল্লাহু আলাইহি ওয়াসাল্লামের ফাতাওয়া-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে হজে প্রদত্ত নবী সাল্লাল্লাহু আলাইহি ওয়াসাল্লামের ফাতাওয়া কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_hojer_akidagoto_vul', 1, 'অধ্যায় ১: হজের সাথে সংশ্লিষ্ট আকীদাগত ভুল-ভ্রান্তিসমূহ-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+হজের সাথে সংশ্লিষ্ট আকীদাগত ভুল-ভ্রান্তিসমূহ
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+হজের সময় হাজী সাহেবদের সাধারণ শিরক ও বিদআত নিরসন।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_hojer_akidagoto_vul', 2, 'অধ্যায় ২: হজের সাথে সংশ্লিষ্ট আকীদাগত ভুল-ভ্রান্তিসমূহ-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে হজের সাথে সংশ্লিষ্ট আকীদাগত ভুল-ভ্রান্তিসমূহ কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_hajj_umrah_jirarot_guide', 1, 'অধ্যায় ১: হজ্জ, উমরা ও যিয়ারত গাইড-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+হজ্জ, উমরা ও যিয়ারত গাইড
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+চিত্রসহ হজের প্রতিটি রুকনের প্রামাণ্য বিশ্লেষণ।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_hajj_umrah_jirarot_guide', 2, 'অধ্যায় ২: হজ্জ, উমরা ও যিয়ারত গাইড-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে হজ্জ, উমরা ও যিয়ারত গাইড কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_dua_munajat_badani', 1, 'অধ্যায় ১: দুআ-মুনাজাত : কখন ও কিভাবে-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+দুআ-মুনাজাত : কখন ও কিভাবে
+লেখক/সংকলক: ফায়সাল বিন আলী আল-বা’দানী
+
+দো''আ কবুলের শর্তাবলী, উত্তম সময় ও দো''আর আদবসমূহ।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_dua_munajat_badani', 2, 'অধ্যায় ২: দুআ-মুনাজাত : কখন ও কিভাবে-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে দুআ-মুনাজাত : কখন ও কিভাবে কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_namazer_dua_zikr', 1, 'অধ্যায় ১: নামাযের দো‘আ ও যিক্‌র-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+নামাযের দো‘আ ও যিক্‌র
+লেখক/সংকলক: মুহাম্মাদ আব্দুর রব্ব আফফান
+
+সালাতের ভেতরের ও সালাত পরবর্তী সকল সহীহ দো''আ ও যিকির।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_namazer_dua_zikr', 2, 'অধ্যায় ২: নামাযের দো‘আ ও যিক্‌র-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে নামাযের দো‘আ ও যিক্‌র কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_muminer_dua', 1, 'অধ্যায় ১: মুমিনের দু‌‘আ-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+মুমিনের দু‌‘আ
+লেখক/সংকলক: ডা. মুহাম্মদ আবুবকর সিদ্দিক
+
+কুরআন ও সুন্নাহর নিত্যপ্রয়োজনীয় দো''আ সংকলন।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_muminer_dua', 2, 'অধ্যায় ২: মুমিনের দু‌‘আ-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে মুমিনের দু‌‘আ কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_rahe_belayat', 1, 'অধ্যায় ১: রাহে বেলায়াত-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+রাহে বেলায়াত
+লেখক/সংকলক: ড. খোন্দকার আব্দুল্লাহ জাহাঙ্গীর (রহ.)
+
+আল্লাহর নৈকট্য লাভের সুন্নাত পথ বনাম সমাজে প্রচলিত ভুল তরীকা।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_rahe_belayat', 2, 'অধ্যায় ২: রাহে বেলায়াত-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে রাহে বেলায়াত কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_sohih_dua_o_zikr', 1, 'অধ্যায় ১: সহীহ দুআ ও যিক্‌র-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+সহীহ দুআ ও যিক্‌র
+লেখক/সংকলক: আবদুল হামীদ ফাইযী
+
+দৈনন্দিন জীবনের সহীহ ও প্রমাণিত দো''আ সম্ভার।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_sohih_dua_o_zikr', 2, 'অধ্যায় ২: সহীহ দুআ ও যিক্‌র-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে সহীহ দুআ ও যিক্‌র কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_hisnul_muslim_qahtani', 1, 'অধ্যায় ১: হিসনুল মুসলিম-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+হিসনুল মুসলিম
+লেখক/সংকলক: ড. সাঈদ ইব্‌ন আলী ইব্‌ন ওয়াহফ আল-ক্বাহত্বানী
+
+মুসলিম দুর্গো—কুরআন ও হাদিসের বিশুদ্ধ সকাল-সন্ধ্যার হিসনুল মুসলিম।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_hisnul_muslim_qahtani', 2, 'অধ্যায় ২: হিসনুল মুসলিম-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে হিসনুল মুসলিম কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_oti_guruttopurno_proshnottor', 1, 'অধ্যায় ১: অতি গুরুত্বপূর্ণ কতিপয় প্রশ্নোত্তর-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+অতি গুরুত্বপূর্ণ কতিপয় প্রশ্নোত্তর
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+দৈনন্দিন ধর্মীয় জীবনের জরুরি প্রশ্নের সমাধান।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_oti_guruttopurno_proshnottor', 2, 'অধ্যায় ২: অতি গুরুত্বপূর্ণ কতিপয় প্রশ্নোত্তর-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে অতি গুরুত্বপূর্ণ কতিপয় প্রশ্নোত্তর কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_which_son_ibrahim', 1, 'অধ্যায় ১: ইবরাহীম আলাইহিস সালাম কোন ছেলেকে কুরবানী দিয়েছিলেন?-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+ইবরাহীম আলাইহিস সালাম কোন ছেলেকে কুরবানী দিয়েছিলেন?
+লেখক/সংকলক: শাইখ মুহাম্মাদ সালিহ আল-মুনাজ্জিদ
+
+কুরআন ও হাদিসের অকাট্য প্রমাণের ভিত্তিতে কুরবানিকৃত সন্তানের পরিচিতি।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_which_son_ibrahim', 2, 'অধ্যায় ২: ইবরাহীম আলাইহিস সালাম কোন ছেলেকে কুরবানী দিয়েছিলেন?-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে ইবরাহীম আলাইহিস সালাম কোন ছেলেকে কুরবানী দিয়েছিলেন? কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_islam_qa_fatwa', 1, 'অধ্যায় ১: ইসলাম কিউ এ ফতোয়া সমগ্র-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+ইসলাম কিউ এ ফতোয়া সমগ্র
+লেখক/সংকলক: শাইখ মুহাম্মাদ সালিহ আল-মুনাজ্জিদ
+
+সমসাময়িক শত শত জরুরি ফতোয়া ও সমাধান।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_islam_qa_fatwa', 2, 'অধ্যায় ২: ইসলাম কিউ এ ফতোয়া সমগ্র-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে ইসলাম কিউ এ ফতোয়া সমগ্র কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_quran_sunnah_islami_fiqh', 1, 'অধ্যায় ১: কুরআন ও সুন্নাহর আলোকে ইসলামী ফিকাহ-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+কুরআন ও সুন্নাহর আলোকে ইসলামী ফিকাহ
+লেখক/সংকলক: মুহাম্মাদ ইবনে ইবরাহীম আত্তুওয়াইজিরী
+
+ইসলামী ফিকহের পূর্ণাঙ্গ বিশ্বকোষ ও ব্যবহারিক বিধিবিধান।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_quran_sunnah_islami_fiqh', 2, 'অধ্যায় ২: কুরআন ও সুন্নাহর আলোকে ইসলামী ফিকাহ-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে কুরআন ও সুন্নাহর আলোকে ইসলামী ফিকাহ কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_janajar_kichu_bidhan_bin_baz', 1, 'অধ্যায় ১: জানাযার কিছু বিধান-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+জানাযার কিছু বিধান
+লেখক/সংকলক: শায়খ আব্দুল আযীয ইব্‌ন আব্দুল্লাহ ইব্‌ন বায রাহিমাহুল্লাহ
+
+মাইয়্যিতের গোসল, কাফন ও জানাজার সুন্নাহ পদ্ধতি।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_janajar_kichu_bidhan_bin_baz', 2, 'অধ্যায় ২: জানাযার কিছু বিধান-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে জানাযার কিছু বিধান কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_diner_fiqh_fitna_bacar', 1, 'অধ্যায় ১: দীনের ফিক্‌হ তথা জ্ঞানই ফিতনা থেকে বাঁচার সঠিক উপায়-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+দীনের ফিক্‌হ তথা জ্ঞানই ফিতনা থেকে বাঁচার সঠিক উপায়
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+শেষ যামানার ফিতনা থেকে আত্মরক্ষায় দ্বীনি জ্ঞানের ভূমিকা।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_diner_fiqh_fitna_bacar', 2, 'অধ্যায় ২: দীনের ফিক্‌হ তথা জ্ঞানই ফিতনা থেকে বাঁচার সঠিক উপায়-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে দীনের ফিক্‌হ তথা জ্ঞানই ফিতনা থেকে বাঁচার সঠিক উপায় কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_dini_proshnouttor', 1, 'অধ্যায় ১: দ্বীনী প্রশ্নোত্তর-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+দ্বীনী প্রশ্নোত্তর
+লেখক/সংকলক: আবদুল হামীদ ফাইযী
+
+জনসাধারণের প্রাত্যহিক জীবনের ধর্মীয় প্রশ্নের উত্তর।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_dini_proshnouttor', 2, 'অধ্যায় ২: দ্বীনী প্রশ্নোত্তর-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে দ্বীনী প্রশ্নোত্তর কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_fiquhul_ibadat_qa', 1, 'অধ্যায় ১: প্রশ্নোত্তরে ফিকহুল ইবাদাত-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+প্রশ্নোত্তরে ফিকহুল ইবাদাত
+লেখক/সংকলক: অধ্যাপক মোঃ নূরুল ইসলাম
+
+পবিত্রতা, সালাত, রোজা, হজ ও যাকাত বিষয়ক ফিকহি প্রশ্নোত্তর।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_fiquhul_ibadat_qa', 2, 'অধ্যায় ২: প্রশ্নোত্তরে ফিকহুল ইবাদাত-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে প্রশ্নোত্তরে ফিকহুল ইবাদাত কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_fatawa_arkanul_islam', 1, 'অধ্যায় ১: ফাতাওয়া আরকানুল ইসলাম-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+ফাতাওয়া আরকানুল ইসলাম
+লেখক/সংকলক: শাইখ মুহাম্মাদ বিন সালিহ আল-উসাইমীন (রহঃ)
+
+ইসলামের পঞ্চস্তম্ভের উপর বিশ্ববিখ্যাত প্রামাণ্য ফতোয়া সংকলন।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_fatawa_arkanul_islam', 2, 'অধ্যায় ২: ফাতাওয়া আরকানুল ইসলাম-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে ফাতাওয়া আরকানুল ইসলাম কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_fatawa_abdul_jalil', 1, 'অধ্যায় ১: ফাতাওয়া ও প্রশ্নোত্তর-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+ফাতাওয়া ও প্রশ্নোত্তর
+লেখক/সংকলক: আব্দুল্লাহিল হাদী বিন আব্দুল জলীল
+
+সমসাময়িক জীবনের শারঈ সমাধান।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_fatawa_abdul_jalil', 2, 'অধ্যায় ২: ফাতাওয়া ও প্রশ্নোত্তর-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে ফাতাওয়া ও প্রশ্নোত্তর কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_mukthasar_jadul_maad', 1, 'অধ্যায় ১: মুখতাসার যাদুল মা‘আদ-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+মুখতাসার যাদুল মা‘আদ
+লেখক/সংকলক: ইমাম ইবনুল কাইয়্যিম (রহঃ)
+
+ইমাম ইবনুল কাইয়্যিমের বিখ্যাত যাদুল মাআদের সারসংক্ষেপ।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_mukthasar_jadul_maad', 2, 'অধ্যায় ২: মুখতাসার যাদুল মা‘আদ-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে মুখতাসার যাদুল মা‘আদ কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_ruh_somporkito_masala', 1, 'অধ্যায় ১: রূহ সম্পর্কিত সংক্ষিপ্ত মাসআলাসমূহ-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+রূহ সম্পর্কিত সংক্ষিপ্ত মাসআলাসমূহ
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+রূহের স্বরূপ, মৃত্যু ও বারযাখী জীবনের অবস্থা।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_ruh_somporkito_masala', 2, 'অধ্যায় ২: রূহ সম্পর্কিত সংক্ষিপ্ত মাসআলাসমূহ-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে রূহ সম্পর্কিত সংক্ষিপ্ত মাসআলাসমূহ কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_sohoj_fiqh_shikkha', 1, 'অধ্যায় ১: সহজ ফিকহ শিক্ষা-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+সহজ ফিকহ শিক্ষা
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+দৈনন্দিন জরুরি মাসআলা-মাসায়েলের সহজ উপস্থাপন।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_sohoj_fiqh_shikkha', 2, 'অধ্যায় ২: সহজ ফিকহ শিক্ষা-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে সহজ ফিকহ শিক্ষা কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_fiq_us_sunnah_kamal', 1, 'অধ্যায় ১: সহীহ ফিক্বহুস সুন্নাহ-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+সহীহ ফিক্বহুস সুন্নাহ
+লেখক/সংকলক: আবূ মালিক কামাল বিন আস-সাইয়্যিদ সালিম
+
+দলিলভিত্তিক বিশুদ্ধ ফিকহুস সুন্নাহ।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_fiq_us_sunnah_kamal', 2, 'অধ্যায় ২: সহীহ ফিক্বহুস সুন্নাহ-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে সহীহ ফিক্বহুস সুন্নাহ কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_shorno_kroy_bikroy_qa', 1, 'অধ্যায় ১: স্বর্ণ ক্রয়-বিক্রয় সংক্রান্ত বিবিধ প্রশ্ন-উত্তর-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+স্বর্ণ ক্রয়-বিক্রয় সংক্রান্ত বিবিধ প্রশ্ন-উত্তর
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+স্বর্ণ-রৌপ্য বেচাকেনায় সুদের হাত থেকে বাঁচার শারঈ নিয়ম।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_shorno_kroy_bikroy_qa', 2, 'অধ্যায় ২: স্বর্ণ ক্রয়-বিক্রয় সংক্রান্ত বিবিধ প্রশ্ন-উত্তর-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে স্বর্ণ ক্রয়-বিক্রয় সংক্রান্ত বিবিধ প্রশ্ন-উত্তর কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_usila_boidho_oboidho', 1, 'অধ্যায় ১: উসীলা গ্রহণ: বৈধ ও অবৈধ পন্থা-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+উসীলা গ্রহণ: বৈধ ও অবৈধ পন্থা
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+শরীয়তসম্মত উসীলা বনাম শিরকী উসীলার পার্থক্য।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_usila_boidho_oboidho', 2, 'অধ্যায় ২: উসীলা গ্রহণ: বৈধ ও অবৈধ পন্থা-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে উসীলা গ্রহণ: বৈধ ও অবৈধ পন্থা কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_sufibad_manodondo', 1, 'অধ্যায় ১: কুরআন ও হাদীছের মানদন্ডে সুফীবাদ-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+কুরআন ও হাদীছের মানদন্ডে সুফীবাদ
+লেখক/সংকলক: আব্দুল্লাহ্ শাহেদ আল-মাদানী
+
+সুফীবাদের উদ্ভব, ভ্রান্ত আকিদা ও সুন্নাহর মানদণ্ডে পর্যালোচনা।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_sufibad_manodondo', 2, 'অধ্যায় ২: কুরআন ও হাদীছের মানদন্ডে সুফীবাদ-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে কুরআন ও হাদীছের মানদন্ডে সুফীবাদ কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_procolito_khotom_porjalocona', 1, 'অধ্যায় ১: প্রচলিত বিভিন্ন খতম  তাৎপর্য ও পর্যালোচনা-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+প্রচলিত বিভিন্ন খতম  তাৎপর্য ও পর্যালোচনা
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+খতমে ইউনুস, খতমে বুখারী ও প্রচলিত খতমসমূহের শারঈ ভিত্তি।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_procolito_khotom_porjalocona', 2, 'অধ্যায় ২: প্রচলিত বিভিন্ন খতম  তাৎপর্য ও পর্যালোচনা-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে প্রচলিত বিভিন্ন খতম  তাৎপর্য ও পর্যালোচনা কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_bangladeshe_shirk_bidat', 1, 'অধ্যায় ১: বাংলাদেশে প্রচলিত শির্ক বিদ‘আত ও কুসংস্কার পর্যালোচনা-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+বাংলাদেশে প্রচলিত শির্ক বিদ‘আত ও কুসংস্কার পর্যালোচনা
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+মাজার পূজা, ওরস, নজর-নেয়াজ ও প্রচলিত কুসংস্কারের খণ্ডন।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_bangladeshe_shirk_bidat', 2, 'অধ্যায় ২: বাংলাদেশে প্রচলিত শির্ক বিদ‘আত ও কুসংস্কার পর্যালোচনা-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে বাংলাদেশে প্রচলিত শির্ক বিদ‘আত ও কুসংস্কার পর্যালোচনা কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_bidat_dorpon', 1, 'অধ্যায় ১: বিদআত দর্পণ-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+বিদআত দর্পণ
+লেখক/সংকলক: আবদুল হামীদ ফাইযী
+
+বিদআতের সংজ্ঞা, প্রকারভেদ ও সমাজে প্রচলিত বিদআতসমূহ।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_bidat_dorpon', 2, 'অধ্যায় ২: বিদআত দর্পণ-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে বিদআত দর্পণ কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_bidat_o_mondo_provab', 1, 'অধ্যায় ১: বিদ‘আত ও এর মন্দ প্রভাব-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+বিদ‘আত ও এর মন্দ প্রভাব
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+বিদআত কীভাবে সুন্নাহকে ধ্বংস করে তার বিশদ আলোচনা।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_bidat_o_mondo_provab', 2, 'অধ্যায় ২: বিদ‘আত ও এর মন্দ প্রভাব-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে বিদ‘আত ও এর মন্দ প্রভাব কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_bidat_poricitir_mulniti', 1, 'অধ্যায় ১: বিদ‘আত পরিচিতির মূলনীতি-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+বিদ‘আত পরিচিতির মূলনীতি
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+কোনো আমল বিদআত কিনা তা চেনার মূল শারঈ নীতিমালা।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_bidat_poricitir_mulniti', 2, 'অধ্যায় ২: বিদ‘আত পরিচিতির মূলনীতি-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে বিদ‘আত পরিচিতির মূলনীতি কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_boidho_oboidho_wasila', 1, 'অধ্যায় ১: বৈধ ও অবৈধ অসীলা-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+বৈধ ও অবৈধ অসীলা
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+মৃতের কাছে চাওয়া শিরক এবং জীবিতের দোয়া বৈধ উসীলা।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_boidho_oboidho_wasila', 2, 'অধ্যায় ২: বৈধ ও অবৈধ অসীলা-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে বৈধ ও অবৈধ অসীলা কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_boro_shirk_choto_shirk', 1, 'অধ্যায় ১: বড় শির্ক ও ছোট শির্ক-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+বড় শির্ক ও ছোট শির্ক
+লেখক/সংকলক: মোস্তাফিজুর রহমান বিন আব্দুল আজিজ আল-মাদানী
+
+বড় শিরক ও ছোট শিরকের বিস্তারিত রূপরেখা ও পার্থক্য।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_boro_shirk_choto_shirk', 2, 'অধ্যায় ২: বড় শির্ক ও ছোট শির্ক-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে বড় শির্ক ও ছোট শির্ক কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_je_keu_kono_jatir_sathe', 1, 'অধ্যায় ১: যে কেউ কোনো জাতির সাথে সামঞ্জস্য বিধান করে চলবে সে তাদের দলভুক্ত বলে গণ্য হবে-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+যে কেউ কোনো জাতির সাথে সামঞ্জস্য বিধান করে চলবে সে তাদের দলভুক্ত বলে গণ্য হবে
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+বিধর্মীদের ধর্মীয় আচার-অনুষ্ঠান ও সংস্কৃতির অনুকরণ নিষিদ্ধতা।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_je_keu_kono_jatir_sathe', 2, 'অধ্যায় ২: যে কেউ কোনো জাতির সাথে সামঞ্জস্য বিধান করে চলবে সে তাদের দলভুক্ত বলে গণ্য হবে-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে যে কেউ কোনো জাতির সাথে সামঞ্জস্য বিধান করে চলবে সে তাদের দলভুক্ত বলে গণ্য হবে কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_shariater_soyongsompurnota', 1, 'অধ্যায় ১: শরী‘আতের স্বয়ংসম্পূর্ণতা ও বিদ‘আতের ভয়াবহতা-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+শরী‘আতের স্বয়ংসম্পূর্ণতা ও বিদ‘আতের ভয়াবহতা
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+দ্বীন পূর্ণাঙ্গ হওয়ার পর নতুন সংযোজনই পথভ্রষ্টতা।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_shariater_soyongsompurnota', 2, 'অধ্যায় ২: শরী‘আতের স্বয়ংসম্পূর্ণতা ও বিদ‘আতের ভয়াবহতা-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে শরী‘আতের স্বয়ংসম্পূর্ণতা ও বিদ‘আতের ভয়াবহতা কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_shirk_ki_o_keno', 1, 'অধ্যায় ১: শির্ক কী ও কেন?-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+শির্ক কী ও কেন?
+লেখক/সংকলক: ড. মুহাম্মদ মুয্‌যাম্মিল আলী
+
+শিরকের ভয়াবহতা ও তাওহীদের বিশুদ্ধ অনুশীলন।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_shirk_ki_o_keno', 2, 'অধ্যায় ২: শির্ক কী ও কেন?-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে শির্ক কী ও কেন? কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_sunnoter_alo_bidater_adhar', 1, 'অধ্যায় ১: সুন্নতের আলো ও বিদআতের আঁধার-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+সুন্নতের আলো ও বিদআতের আঁধার
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+সুন্নাতকে আঁকড়ে ধরা এবং বিদআতকে বর্জনের আহ্বান।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_sunnoter_alo_bidater_adhar', 2, 'অধ্যায় ২: সুন্নতের আলো ও বিদআতের আঁধার-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে সুন্নতের আলো ও বিদআতের আঁধার কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_zubo_somajer_obokkhoy', 1, 'অধ্যায় ১: যুব সমাজের অবক্ষয়, কারণ ও প্রতিকার-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+যুব সমাজের অবক্ষয়, কারণ ও প্রতিকার
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+তরুণ প্রজন্মের চরিত্র গঠন ও নৈতিক অধঃপতন রোধের উপায়।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_zubo_somajer_obokkhoy', 2, 'অধ্যায় ২: যুব সমাজের অবক্ষয়, কারণ ও প্রতিকার-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে যুব সমাজের অবক্ষয়, কারণ ও প্রতিকার কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_akika_bidhan', 1, 'অধ্যায় ১: আকীকা এবং এ সংক্রান্ত কিছু বিধান-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+আকীকা এবং এ সংক্রান্ত কিছু বিধান
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+নবজাতকের আকীকা, চুল মুণ্ডন ও নাম রাখার সুন্নাত পদ্ধতি।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_akika_bidhan', 2, 'অধ্যায় ২: আকীকা এবং এ সংক্রান্ত কিছু বিধান-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে আকীকা এবং এ সংক্রান্ত কিছু বিধান কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_marrage_life_aadorsho', 1, 'অধ্যায় ১: আদর্শ বিবাহ ও দাম্পত্য-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+আদর্শ বিবাহ ও দাম্পত্য
+লেখক/সংকলক: আবদুল হামীদ ফাইযী
+
+সুখী দাম্পত্য জীবন ও সুন্নাত মোতাবেক বিবাহের বিধান।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_marrage_life_aadorsho', 2, 'অধ্যায় ২: আদর্শ বিবাহ ও দাম্পত্য-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে আদর্শ বিবাহ ও দাম্পত্য কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_adorsho_muslim_poribar', 1, 'অধ্যায় ১: আদর্শ মুসলিম পরিবার-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+আদর্শ মুসলিম পরিবার
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+ইসলামী অনুশাসন মেনে একটি আদর্শ শান্তির পরিবার গঠন।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_adorsho_muslim_poribar', 2, 'অধ্যায় ২: আদর্শ মুসলিম পরিবার-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে আদর্শ মুসলিম পরিবার কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_ami_tawba_korte_cai', 1, 'অধ্যায় ১: আমি তাওবা করতে চাই . . কিন্তু !-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+আমি তাওবা করতে চাই . . কিন্তু !
+লেখক/সংকলক: শাইখ মুহাম্মাদ সালিহ আল-মুনাজ্জিদ
+
+পাপ থেকে মুক্তির উপায় ও আল্লাহর ক্ষমার দ্বার উন্মুক্তকরণ।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_ami_tawba_korte_cai', 2, 'অধ্যায় ২: আমি তাওবা করতে চাই . . কিন্তু !-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে আমি তাওবা করতে চাই . . কিন্তু ! কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_islami_jibon_dhara', 1, 'অধ্যায় ১: ইসলামী জীবন-ধারা-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+ইসলামী জীবন-ধারা
+লেখক/সংকলক: আবদুল হামীদ ফাইযী
+
+প্রতিটি পদক্ষেপে ইসলামের নির্দেশনা বাস্তবায়নের পূর্ণাঙ্গ গাইড।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_islami_jibon_dhara', 2, 'অধ্যায় ২: ইসলামী জীবন-ধারা-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে ইসলামী জীবন-ধারা কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_islami_gyan_nittodiner', 1, 'অধ্যায় ১: ইসলামী জ্ঞান: নিত্যদিনের প্রয়োজনে-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+ইসলামী জ্ঞান: নিত্যদিনের প্রয়োজনে
+লেখক/সংকলক: ড. আবু বকর মুহাম্মাদ যাকারিয়া
+
+প্রাত্যহিক জীবনে অত্যাবশ্যকীয় ধর্মীয় জ্ঞান।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_islami_gyan_nittodiner', 2, 'অধ্যায় ২: ইসলামী জ্ঞান: নিত্যদিনের প্রয়োজনে-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে ইসলামী জ্ঞান: নিত্যদিনের প্রয়োজনে কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_islam_e_mlm', 1, 'অধ্যায় ১: ইসলামে মাল্টি লেভেল মার্কেটিং (এম এল এম) এর বিধান-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+ইসলামে মাল্টি লেভেল মার্কেটিং (এম এল এম) এর বিধান
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+এমএলএম ব্যবসার শারঈ বৈধতা ও সুদের বিশ্লেষণ।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_islam_e_mlm', 2, 'অধ্যায় ২: ইসলামে মাল্টি লেভেল মার্কেটিং (এম এল এম) এর বিধান-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে ইসলামে মাল্টি লেভেল মার্কেটিং (এম এল এম) এর বিধান কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_islamer_kichu_alochito_agrohonjoggo', 1, 'অধ্যায় ১: ইসলামের কিছু আলোচিত বিষয়ে অগ্রহণযোগ্য বিভ্রান্তি-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+ইসলামের কিছু আলোচিত বিষয়ে অগ্রহণযোগ্য বিভ্রান্তি
+লেখক/সংকলক: শাইখ সালেহ ইবন আবদুল্লাহ আল-হুমাইদ
+
+সমকালীন বিতর্কিত বিষয়ে উলামায়ে কেরামের সুস্পষ্ট অবস্থান।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_islamer_kichu_alochito_agrohonjoggo', 2, 'অধ্যায় ২: ইসলামের কিছু আলোচিত বিষয়ে অগ্রহণযোগ্য বিভ্রান্তি-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে ইসলামের কিছু আলোচিত বিষয়ে অগ্রহণযোগ্য বিভ্রান্তি কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_upodesh_abdur_razzaq', 1, 'অধ্যায় ১: উপদেশ-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+উপদেশ
+লেখক/সংকলক: আব্দুর রাযযাক বিন ইউসুফ
+
+মুসলিম সমাজের সংশোধন ও ঈমানী জিন্দেগীর মূল্যবান উপদেশমালা।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_upodesh_abdur_razzaq', 2, 'অধ্যায় ২: উপদেশ-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে উপদেশ কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_attiyotar_bondhon_chinno', 1, 'অধ্যায় ১: কুরআন ও সহীহ হাদীসের আলোকে আত্মীয়তার বন্ধন ছিন্ন করার ভয়াবহ পরিণতি-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+কুরআন ও সহীহ হাদীসের আলোকে আত্মীয়তার বন্ধন ছিন্ন করার ভয়াবহ পরিণতি
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+আত্মীয়তার সম্পর্ক রক্ষা করার ফযীলত ও ছিন্ন করার শাস্তি।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_attiyotar_bondhon_chinno', 2, 'অধ্যায় ২: কুরআন ও সহীহ হাদীসের আলোকে আত্মীয়তার বন্ধন ছিন্ন করার ভয়াবহ পরিণতি-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে কুরআন ও সহীহ হাদীসের আলোকে আত্মীয়তার বন্ধন ছিন্ন করার ভয়াবহ পরিণতি কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_nishiddho_kormokando', 1, 'অধ্যায় ১: কুরআন ও সহীহ হাদীসের আলোকে নিষিদ্ধ কর্মকান্ড-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+কুরআন ও সহীহ হাদীসের আলোকে নিষিদ্ধ কর্মকান্ড
+লেখক/সংকলক: মোস্তাফিজুর রহমান বিন আব্দুল আজিজ আল-মাদানী
+
+হারাম ও গর্হিত কাজসমূহের তালিকা ও সতর্কতা।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_nishiddho_kormokando', 2, 'অধ্যায় ২: কুরআন ও সহীহ হাদীসের আলোকে নিষিদ্ধ কর্মকান্ড-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে কুরআন ও সহীহ হাদীসের আলোকে নিষিদ্ধ কর্মকান্ড কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_bevichar_somokamita', 1, 'অধ্যায় ১: কুরআন ও সহীহ হাদীসের আলোকে ব্যভিচার ও সমকামিতার ভয়াবহ পরিণতি-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+কুরআন ও সহীহ হাদীসের আলোকে ব্যভিচার ও সমকামিতার ভয়াবহ পরিণতি
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+অশ্লীলতা ও ব্যভিচারের বিরুদ্ধে কুরআনের হুঁশিয়ারি।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_bevichar_somokamita', 2, 'অধ্যায় ২: কুরআন ও সহীহ হাদীসের আলোকে ব্যভিচার ও সমকামিতার ভয়াবহ পরিণতি-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে কুরআন ও সহীহ হাদীসের আলোকে ব্যভিচার ও সমকামিতার ভয়াবহ পরিণতি কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_modpan_dhompan', 1, 'অধ্যায় ১: কুরআন ও সহীহ হাদীসের আলোকে মদপান ও ধূমপানের অপকারিতা-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+কুরআন ও সহীহ হাদীসের আলোকে মদপান ও ধূমপানের অপকারিতা
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+মাদক ও ধূমপানের শারঈ হারাম বিধান ও স্বাস্থ্যগত ক্ষতি।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_modpan_dhompan', 2, 'অধ্যায় ২: কুরআন ও সহীহ হাদীসের আলোকে মদপান ও ধূমপানের অপকারিতা-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে কুরআন ও সহীহ হাদীসের আলোকে মদপান ও ধূমপানের অপকারিতা কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_muslim_jiboner_adob', 1, 'অধ্যায় ১: কুরআন ও সুন্নাহর আলোকে মুসলিম জীবনের আদব-কায়দা-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+কুরআন ও সুন্নাহর আলোকে মুসলিম জীবনের আদব-কায়দা
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+খাওয়া, পরা, ঘুমানো ও কথা বলার ইসলামী শিষ্টাচার।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_muslim_jiboner_adob', 2, 'অধ্যায় ২: কুরআন ও সুন্নাহর আলোকে মুসলিম জীবনের আদব-কায়দা-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে কুরআন ও সুন্নাহর আলোকে মুসলিম জীবনের আদব-কায়দা কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_quran_sunnah_shopno', 1, 'অধ্যায় ১: কুরআন ও সুন্নাহর দৃষ্টিকোণে স্বপ্ন ও তার ব্যাখ্যা-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+কুরআন ও সুন্নাহর দৃষ্টিকোণে স্বপ্ন ও তার ব্যাখ্যা
+লেখক/সংকলক: আব্দুল্লাহ শহীদ আব্দুর রহমান
+
+ভালো ও খারাপ স্বপ্নের ক্ষেত্রে মুমিনের করণীয় ও তাবীর।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_quran_sunnah_shopno', 2, 'অধ্যায় ২: কুরআন ও সুন্নাহর দৃষ্টিকোণে স্বপ্ন ও তার ব্যাখ্যা-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে কুরআন ও সুন্নাহর দৃষ্টিকোণে স্বপ্ন ও তার ব্যাখ্যা কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_gunah_mafer_amol', 1, 'অধ্যায় ১: কুরআনে কারীম ও সহীহ সুন্নাহর আলোকে গুনাহ্ মাফের আমল-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+কুরআনে কারীম ও সহীহ সুন্নাহর আলোকে গুনাহ্ মাফের আমল
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+যে সকল সহজ আমলে অতীতের সমস্ত পাপ মোচন হয়।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_gunah_mafer_amol', 2, 'অধ্যায় ২: কুরআনে কারীম ও সহীহ সুন্নাহর আলোকে গুনাহ্ মাফের আমল-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে কুরআনে কারীম ও সহীহ সুন্নাহর আলোকে গুনাহ্ মাফের আমল কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_gunah_mafer_upay', 1, 'অধ্যায় ১: গুনাহ মাফের উপায়-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+গুনাহ মাফের উপায়
+লেখক/সংকলক: শাহাদাৎ হুসাইন খান ফয়সাল (রহ.)
+
+তওবা, ইস্তিগফার ও নেক আমলের মাধ্যমে পাপ মার্জনা।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_gunah_mafer_upay', 2, 'অধ্যায় ২: গুনাহ মাফের উপায়-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে গুনাহ মাফের উপায় কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_jalem_shashoker_samne_sotto', 1, 'অধ্যায় ১: জালেম শাসকের সামনে সত্য তুলে ধরা-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+জালেম শাসকের সামনে সত্য তুলে ধরা
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+উত্তম জিহাদ এবং সত্য কথা বলার শারঈ আদব ও শর্ত।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_jalem_shashoker_samne_sotto', 2, 'অধ্যায় ২: জালেম শাসকের সামনে সত্য তুলে ধরা-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে জালেম শাসকের সামনে সত্য তুলে ধরা কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_takdir_gopon_rohosso', 1, 'অধ্যায় ১: তাক্বদীরঃ আল্লাহর এক গোপন রহস্য-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+তাক্বদীরঃ আল্লাহর এক গোপন রহস্য
+লেখক/সংকলক: আব্দুল আলীম ইবনে কাওসার
+
+ভাগ্যের ভালো-মন্দের প্রতি ঈমান ও অসন্তোষ পরিহার।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_takdir_gopon_rohosso', 2, 'অধ্যায় ২: তাক্বদীরঃ আল্লাহর এক গোপন রহস্য-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে তাক্বদীরঃ আল্লাহর এক গোপন রহস্য কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_dari_rakha_wajib', 1, 'অধ্যায় ১: দাড়ি রাখা ওয়াজিব-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+দাড়ি রাখা ওয়াজিব
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+দাড়ি রাখার শারঈ বাধ্যবাধকতা ও কাটছাঁট করার নিষেধাজ্ঞা।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_dari_rakha_wajib', 2, 'অধ্যায় ২: দাড়ি রাখা ওয়াজিব-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে দাড়ি রাখা ওয়াজিব কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_nafser_golami_o_muktir_upay', 1, 'অধ্যায় ১: নফসের গোলামী ও মুক্তির উপায়-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+নফসের গোলামী ও মুক্তির উপায়
+লেখক/সংকলক: আবু আহমাদ সাইফুদ্দীন বেলাল
+
+কুপ্রবৃত্তির দাসত্ব থেকে আত্মাকে মুক্ত করার পন্থা।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_nafser_golami_o_muktir_upay', 2, 'অধ্যায় ২: নফসের গোলামী ও মুক্তির উপায়-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে নফসের গোলামী ও মুক্তির উপায় কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_neyer_adesh_onnayer_nishedh', 1, 'অধ্যায় ১: ন্যায়ের আদেশ ও অন্যায়ের নিষেধ অত্যাবশ্যক-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+ন্যায়ের আদেশ ও অন্যায়ের নিষেধ অত্যাবশ্যক
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+আমর বিল মা''রূফ ও নাহি আনিল মুনকারের ফরজ দায়িত্ব।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_neyer_adesh_onnayer_nishedh', 2, 'অধ্যায় ২: ন্যায়ের আদেশ ও অন্যায়ের নিষেধ অত্যাবশ্যক-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে ন্যায়ের আদেশ ও অন্যায়ের নিষেধ অত্যাবশ্যক কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_prantorekha_rokonul', 1, 'অধ্যায় ১: প্রান্তরেখা-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+প্রান্তরেখা
+লেখক/সংকলক: রোকনুল হক
+
+দ্বীনি জীবনের ভাবগম্ভীর কথামালা ও দিকনির্দেশনা।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_prantorekha_rokonul', 2, 'অধ্যায় ২: প্রান্তরেখা-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে প্রান্তরেখা কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_bebsa_bainjjo_koronio', 1, 'অধ্যায় ১: ব্যবসা-বাণিজ্য: করনীয় ও বর্জনীয়-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+ব্যবসা-বাণিজ্য: করনীয় ও বর্জনীয়
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+হালাল উপার্জনের শর্ত ও অবৈধ প্রতারণামূলক ব্যবসা বর্জন।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_bebsa_bainjjo_koronio', 2, 'অধ্যায় ২: ব্যবসা-বাণিজ্য: করনীয় ও বর্জনীয়-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে ব্যবসা-বাণিজ্য: করনীয় ও বর্জনীয় কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_mohilader_srab_proshuti_60qa', 1, 'অধ্যায় ১: মহিলাদের স্রাব ও প্রসূতি অবস্থার বিধিবিধান সংক্রান্ত ৬০টি প্রশ্ন-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+মহিলাদের স্রাব ও প্রসূতি অবস্থার বিধিবিধান সংক্রান্ত ৬০টি প্রশ্ন
+লেখক/সংকলক: শাইখ মুহাম্মাদ ইবন সালেহ আল-উসাইমীন রহ.
+
+নারীদের হায়েজ ও নেফাস সম্পর্কিত ৬০টি গুরুত্বপূর্ণ ফতোয়া।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_mohilader_srab_proshuti_60qa', 2, 'অধ্যায় ২: মহিলাদের স্রাব ও প্রসূতি অবস্থার বিধিবিধান সংক্রান্ত ৬০টি প্রশ্ন-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে মহিলাদের স্রাব ও প্রসূতি অবস্থার বিধিবিধান সংক্রান্ত ৬০টি প্রশ্ন কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_muslim_shasoker_proti_dayitto', 1, 'অধ্যায় ১: মুসলিম শাসকের প্রতি জনগণের  দায়িত্ব ও কর্তব্য-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+মুসলিম শাসকের প্রতি জনগণের  দায়িত্ব ও কর্তব্য
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+শাসকের আনুগত্য, কল্যাণকামিতা ও বিশৃঙ্খলা পরিহার।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_muslim_shasoker_proti_dayitto', 2, 'অধ্যায় ২: মুসলিম শাসকের প্রতি জনগণের  দায়িত্ব ও কর্তব্য-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে মুসলিম শাসকের প্রতি জনগণের  দায়িত্ব ও কর্তব্য কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_mehmaner_mehmandari', 1, 'অধ্যায় ১: মেহমানের মেহমানদারি-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+মেহমানের মেহমানদারি
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+অতিথিপরায়ণতার ফযীলত ও মেহমানদারির সুন্নাত নিয়ম।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_mehmaner_mehmandari', 2, 'অধ্যায় ২: মেহমানের মেহমানদারি-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে মেহমানের মেহমানদারি কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_zubo_somossa_o_tar_shoriyi', 1, 'অধ্যায় ১: যুব-সমস্যা ও তার শরয়ী সমাধান-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+যুব-সমস্যা ও তার শরয়ী সমাধান
+লেখক/সংকলক: আবদুল হামীদ ফাইযী
+
+যুবকদের বিবাহ, কর্মসংস্থান ও দ্বীনদারিতার বাস্তবায়ন।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_zubo_somossa_o_tar_shoriyi', 2, 'অধ্যায় ২: যুব-সমস্যা ও তার শরয়ী সমাধান-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে যুব-সমস্যা ও তার শরয়ী সমাধান কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_la_tahzan_karni', 1, 'অধ্যায় ১: লা-তাহযান [হতাশ হবেন না]-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+লা-তাহযান [হতাশ হবেন না]
+লেখক/সংকলক: ড. আয়িদ আল করনী
+
+উদ্বেগ, হতাশা ও দুঃখ-কষ্ট দূর করে জীবনে মানসিক শান্তি অর্জনের কালজয়ী গ্রন্থ।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_la_tahzan_karni', 2, 'অধ্যায় ২: লা-তাহযান [হতাশ হবেন না]-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে লা-তাহযান [হতাশ হবেন না] কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_sahrhu_masaylul_jahelia', 1, 'অধ্যায় ১: শারহু মাসাইলিল জাহিলিয়্যাহ-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+শারহু মাসাইলিল জাহিলিয়্যাহ
+লেখক/সংকলক: শাইখ ড. ছলিহ ইবনে ফাওযান আল ফাওযান
+
+জাহেলী যুগের ১৩০টির বেশি বিভ্রান্তি ও ইসলামী শিক্ষা।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_sahrhu_masaylul_jahelia', 2, 'অধ্যায় ২: শারহু মাসাইলিল জাহিলিয়্যাহ-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে শারহু মাসাইলিল জাহিলিয়্যাহ কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_shishur_nam_nirbachon', 1, 'অধ্যায় ১: শিশুর নাম নির্বাচন: ইসলামী দৃষ্টিকোণ-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+শিশুর নাম নির্বাচন: ইসলামী দৃষ্টিকোণ
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+সুন্দর ইসলামী নাম রাখার গুরুত্ব ও অপছন্দনীয় নাম বর্জন।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_shishur_nam_nirbachon', 2, 'অধ্যায় ২: শিশুর নাম নির্বাচন: ইসলামী দৃষ্টিকোণ-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে শিশুর নাম নির্বাচন: ইসলামী দৃষ্টিকোণ কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_soddo_vumistho_sontaner_koroniyo', 1, 'অধ্যায় ১: সদ্য ভূমিষ্ঠ সন্তানের ক্ষেত্রে করণীয়-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+সদ্য ভূমিষ্ঠ সন্তানের ক্ষেত্রে করণীয়
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+আযান, তাহনীক, আকীকা ও খতনার সুন্নাত আমল।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_soddo_vumistho_sontaner_koroniyo', 2, 'অধ্যায় ২: সদ্য ভূমিষ্ঠ সন্তানের ক্ষেত্রে করণীয়-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে সদ্য ভূমিষ্ঠ সন্তানের ক্ষেত্রে করণীয় কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_hadiser_aloke_adorsho_sami', 1, 'অধ্যায় ১: হাদীসের আলোকে আদর্শ স্বামী-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+হাদীসের আলোকে আদর্শ স্বামী
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+স্ত্রীর প্রতি সদ্ব্যবহার, ভালোবাসা ও দায়িত্ব পালনের সুন্নাত আদর্শ।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_hadiser_aloke_adorsho_sami', 2, 'অধ্যায় ২: হাদীসের আলোকে আদর্শ স্বামী-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে হাদীসের আলোকে আদর্শ স্বামী কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_ar_rahikul_makhtum_mubarakpuri', 1, 'অধ্যায় ১: আর-রাহীকুল মাখতূম-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+আর-রাহীকুল মাখতূম
+লেখক/সংকলক: আল্লামা সফিউর রহমান মোবারকপুরী (রহঃ)
+
+আন্তর্জাতিক সীরাত প্রতিযোগিতায় ১ম স্থানপ্রাপ্ত বিশ্ববিখ্যাত সীরাত গ্রন্থ।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_ar_rahikul_makhtum_mubarakpuri', 2, 'অধ্যায় ২: আর-রাহীকুল মাখতূম-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে আর-রাহীকুল মাখতূম কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_nobir_ghotonay_shikkha', 1, 'অধ্যায় ১: নবী-রাসূলগণের ঘটনায় রয়েছে শিক্ষা-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+নবী-রাসূলগণের ঘটনায় রয়েছে শিক্ষা
+লেখক/সংকলক: ড. মোঃ আবদুল কাদের
+
+পবিত্র কুরআনে বর্ণিত আম্বিয়ায়ে কেরামের ঘটনা থেকে জীবনের শিক্ষা।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_nobir_ghotonay_shikkha', 2, 'অধ্যায় ২: নবী-রাসূলগণের ঘটনায় রয়েছে শিক্ষা-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে নবী-রাসূলগণের ঘটনায় রয়েছে শিক্ষা কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_nobider_kahini_galib', 1, 'অধ্যায় ১: নবীদের কাহিনী-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+নবীদের কাহিনী
+লেখক/সংকলক: ডঃ মুহাম্মাদ আসাদুল্লাহ আল-গালিব
+
+আদম (আ.) থেকে ঈসা (আ.) পর্যন্ত সকল নবীর প্রামাণ্য ইতিহাস।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_nobider_kahini_galib', 2, 'অধ্যায় ২: নবীদের কাহিনী-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে নবীদের কাহিনী কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_one_day_in_the_house_of_prophet', 1, 'অধ্যায় ১: রাসূল [সাল্লাল্লাহু আলাইহি ওয়াসাল্লামের]  গৃহে একদিন-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+রাসূল [সাল্লাল্লাহু আলাইহি ওয়াসাল্লামের]  গৃহে একদিন
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+রাসূলুল্লাহ ﷺ-এর পারিবারিক জীবন ও স্ত্রীদের প্রতি অনুপম ভালোবাসার চিত্র।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_one_day_in_the_house_of_prophet', 2, 'অধ্যায় ২: রাসূল [সাল্লাল্লাহু আলাইহি ওয়াসাল্লামের]  গৃহে একদিন-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে রাসূল [সাল্লাল্লাহু আলাইহি ওয়াসাল্লামের]  গৃহে একদিন কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_islamer_name_jongibad', 1, 'অধ্যায় ১: ইসলামের নামে জঙ্গিবাদ-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+ইসলামের নামে জঙ্গিবাদ
+লেখক/সংকলক: ড. খোন্দকার আব্দুল্লাহ জাহাঙ্গীর (রহ.)
+
+সন্ত্রাস ও চরমপন্থার বিরুদ্ধে ইসলামের অবস্থান ও খারেজী মতবাদ খণ্ডন।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_islamer_name_jongibad', 2, 'অধ্যায় ২: ইসলামের নামে জঙ্গিবাদ-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে ইসলামের নামে জঙ্গিবাদ কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_huti_shiyader_aasol_cehara', 1, 'অধ্যায় ১: ইয়েমেনের বিদ্রোহী  হুতী শিয়াদের আসল চেহারা-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+ইয়েমেনের বিদ্রোহী  হুতী শিয়াদের আসল চেহারা
+লেখক/সংকলক: প্রফেসর ডক্টর সুলাইমান বিন সালিহ আল গুসন
+
+হুতী শিয়াদের আকীদা ও রাজনৈতিক ধ্বংসযজ্ঞের ইতিহাস।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_huti_shiyader_aasol_cehara', 2, 'অধ্যায় ২: ইয়েমেনের বিদ্রোহী  হুতী শিয়াদের আসল চেহারা-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে ইয়েমেনের বিদ্রোহী  হুতী শিয়াদের আসল চেহারা কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_qadiani_motobad', 1, 'অধ্যায় ১: কাদিয়ানী মতবাদ (পর্যালোচনা ও বিশ্লেষণ)-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+কাদিয়ানী মতবাদ (পর্যালোচনা ও বিশ্লেষণ)
+লেখক/সংকলক: ইহসান ইলাহী জহির (রহঃ)
+
+কাদিয়ানীদের কুফরী মতবাদ ও খতমে নবুওয়্যাতের অকাট্য দলীল।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_qadiani_motobad', 2, 'অধ্যায় ২: কাদিয়ানী মতবাদ (পর্যালোচনা ও বিশ্লেষণ)-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে কাদিয়ানী মতবাদ (পর্যালোচনা ও বিশ্লেষণ) কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_dol_songothon_imarot', 1, 'অধ্যায় ১: দল, সংগঠন, ইমারত ও বায়‘আত সম্পর্কে বিশিষ্ট উলামায়ে কেরামের বক্তব্য-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+দল, সংগঠন, ইমারত ও বায়‘আত সম্পর্কে বিশিষ্ট উলামায়ে কেরামের বক্তব্য
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+দলীয় সংকীর্ণতা পরিহার করে উম্মাহর ঐক্যের সঠিক রূপরেখা।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_dol_songothon_imarot', 2, 'অধ্যায় ২: দল, সংগঠন, ইমারত ও বায়‘আত সম্পর্কে বিশিষ্ট উলামায়ে কেরামের বক্তব্য-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে দল, সংগঠন, ইমারত ও বায়‘আত সম্পর্কে বিশিষ্ট উলামায়ে কেরামের বক্তব্য কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_salafi_o_salafiyat_poriciti', 1, 'অধ্যায় ১: সালাফী ও সালাফিয়াত পরিচিতি-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+সালাফী ও সালাফিয়াত পরিচিতি
+লেখক/সংকলক: আবদুল হামীদ ফাইযী
+
+সালাফুস সালেহীনের অনুসারী কারা এবং তাঁদের বৈশিষ্ট্য কি।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_salafi_o_salafiyat_poriciti', 2, 'অধ্যায় ২: সালাফী ও সালাফিয়াত পরিচিতি-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে সালাফী ও সালাফিয়াত পরিচিতি কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_quraner_ortho_bujhar_ovidhan', 1, 'অধ্যায় ১: কুরআনের অর্থ বুঝার সহজ অভিধান-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+কুরআনের অর্থ বুঝার সহজ অভিধান
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+কুরআন মাজীদের সর্বাধিক ব্যবহৃত ৮০% শব্দের বাংলা অর্থ ও অভিধান।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_quraner_ortho_bujhar_ovidhan', 2, 'অধ্যায় ২: কুরআনের অর্থ বুঝার সহজ অভিধান-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে কুরআনের অর্থ বুঝার সহজ অভিধান কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_mukhtasarul_fawayid', 1, 'অধ্যায় ১: মুখতাসারুল ফাওয়ায়েদ (ইবনুল কাইয়্যেম রহ.-এর আল-ফাওয়ায়েদ অবলম্বনে)-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+মুখতাসারুল ফাওয়ায়েদ (ইবনুল কাইয়্যেম রহ.-এর আল-ফাওয়ায়েদ অবলম্বনে)
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+কুরআন ও হাদিসের গভীর তত্ত্ব ও আত্মশুদ্ধিমূলক ফাওয়ায়েদ।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_mukhtasarul_fawayid', 2, 'অধ্যায় ২: মুখতাসারুল ফাওয়ায়েদ (ইবনুল কাইয়্যেম রহ.-এর আল-ফাওয়ায়েদ অবলম্বনে)-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে মুখতাসারুল ফাওয়ায়েদ (ইবনুল কাইয়্যেম রহ.-এর আল-ফাওয়ায়েদ অবলম্বনে) কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_hadiser_name_jaliyati', 1, 'অধ্যায় ১: হাদীসের নামে জালিয়াতি-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+হাদীসের নামে জালিয়াতি
+লেখক/সংকলক: ড. খোন্দকার আব্দুল্লাহ জাহাঙ্গীর (রহ.)
+
+সমাজে প্রচলিত বানোয়াট ও জাল হাদিসসমূহের প্রামাণ্য বিশ্লেষণ।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_hadiser_name_jaliyati', 2, 'অধ্যায় ২: হাদীসের নামে জালিয়াতি-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে হাদীসের নামে জালিয়াতি কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_usule_fiqh_uthaymeen', 1, 'অধ্যায় ১: উসূলে ফিক্বহ  (ফিক্বহের মূলনীতি)-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+উসূলে ফিক্বহ  (ফিক্বহের মূলনীতি)
+লেখক/সংকলক: শাইখ মুহাম্মাদ বিন সালিহ আল-উসাইমীন (রহঃ)
+
+ইসলামী শরীয়তের বিধান প্রণয়ন ও উসূলুল ফিকহের মূলনীতিমালা।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_usule_fiqh_uthaymeen', 2, 'অধ্যায় ২: উসূলে ফিক্বহ  (ফিক্বহের মূলনীতি)-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে উসূলে ফিক্বহ  (ফিক্বহের মূলনীতি) কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_hadis_shastrer_porivasha', 1, 'অধ্যায় ১: হাদিস শাস্ত্রের পরিভাষা পরিচিতি-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+হাদিস শাস্ত্রের পরিভাষা পরিচিতি
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+সহীহ, হাসান, জয়ীফ, মুতাওয়াতির ও মাওজু হাদিসের পরিভাষা।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_hadis_shastrer_porivasha', 2, 'অধ্যায় ২: হাদিস শাস্ত্রের পরিভাষা পরিচিতি-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে হাদিস শাস্ত্রের পরিভাষা পরিচিতি কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_zadukormo_jotish_bidhan', 1, 'অধ্যায় ১: জাদুকর্ম, জ্যোতিষ ও দৈবকর্ম এবং এতদসংক্রান্ত অন্যান্য বিষয় সম্পর্কে ইসলামের বিধান-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+জাদুকর্ম, জ্যোতিষ ও দৈবকর্ম এবং এতদসংক্রান্ত অন্যান্য বিষয় সম্পর্কে ইসলামের বিধান
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+গণক, জ্যোতিষী ও জাদুকরদের কাছে যাওয়ার মারাত্মক পরিণতি।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_zadukormo_jotish_bidhan', 2, 'অধ্যায় ২: জাদুকর্ম, জ্যোতিষ ও দৈবকর্ম এবং এতদসংক্রান্ত অন্যান্য বিষয় সম্পর্কে ইসলামের বিধান-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে জাদুকর্ম, জ্যোতিষ ও দৈবকর্ম এবং এতদসংক্রান্ত অন্যান্য বিষয় সম্পর্কে ইসলামের বিধান কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_jadukor_jotishir_golay_torbari', 1, 'অধ্যায় ১: যাদুকর ও জ্যোতিষীর গলায় ধারালো তরবারি-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+যাদুকর ও জ্যোতিষীর গলায় ধারালো তরবারি
+লেখক/সংকলক: ওয়াহীদ বিন আব্দুস সালাম বালী
+
+কুরআন ও সহীহ সুন্নাহ মোতাবেক রুকইয়াহ ও যাদু নিরসনের উপায়।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_jadukor_jotishir_golay_torbari', 2, 'অধ্যায় ২: যাদুকর ও জ্যোতিষীর গলায় ধারালো তরবারি-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে যাদুকর ও জ্যোতিষীর গলায় ধারালো তরবারি কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_alemgoner_motoveder_karon', 1, 'অধ্যায় ১: আলেমগণের মধ্যে মতভেদ কারণ এবং আমাদের অবস্থান-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+আলেমগণের মধ্যে মতভেদ কারণ এবং আমাদের অবস্থান
+লেখক/সংকলক: শাইখ মুহাম্মাদ ইবন সালেহ আল-উসাইমীন রহ.
+
+উলামায়ে কেরামের মতপার্থক্যের শারঈ কারণ ও উম্মাহর করণীয়।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_alemgoner_motoveder_karon', 2, 'অধ্যায় ২: আলেমগণের মধ্যে মতভেদ কারণ এবং আমাদের অবস্থান-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে আলেমগণের মধ্যে মতভেদ কারণ এবং আমাদের অবস্থান কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_allahor_dike_dawater_sombol', 1, 'অধ্যায় ১: আল্লাহর দিকে দাওয়াতের সম্বল-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+আল্লাহর দিকে দাওয়াতের সম্বল
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+দায়ী ইলাল্লাহর প্রয়োজনীয় জ্ঞান, প্রজ্ঞা ও ধৈর্য।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_allahor_dike_dawater_sombol', 2, 'অধ্যায় ২: আল্লাহর দিকে দাওয়াতের সম্বল-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে আল্লাহর দিকে দাওয়াতের সম্বল কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_nobi_rasulgoner_dawater_poddhoti', 1, 'অধ্যায় ১: নবী-রসূলগণের দা''ওয়াতের পদ্ধতি-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+নবী-রসূলগণের দা''ওয়াতের পদ্ধতি
+লেখক/সংকলক: আবু আহমাদ সাইফুদ্দীন বেলাল
+
+আম্বিয়াদের দাওয়াতের মূলনীতি ও তাওহীদের অগ্রাধিকার।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_nobi_rasulgoner_dawater_poddhoti', 2, 'অধ্যায় ২: নবী-রসূলগণের দা''ওয়াতের পদ্ধতি-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে নবী-রসূলগণের দা''ওয়াতের পদ্ধতি কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_nobi_rasulgoner_dawatre_mulniti', 1, 'অধ্যায় ১: নবী-রাসূলগণের দা‘ওয়াতী মূলনীতি-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+নবী-রাসূলগণের দা‘ওয়াতী মূলনীতি
+লেখক/সংকলক: মুহাম্মাদ ইবনে ইবরাহীম আত-তুওয়াইজিরী
+
+দ্বীনের দাওয়াত প্রচার ও প্রতিষ্ঠার সঠিক কৌশল।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_nobi_rasulgoner_dawatre_mulniti', 2, 'অধ্যায় ২: নবী-রাসূলগণের দা‘ওয়াতী মূলনীতি-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে নবী-রাসূলগণের দা‘ওয়াতী মূলনীতি কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_kobor_ziaror_o_koborbasir_kache', 1, 'অধ্যায় ১: কবর যিয়ারত ও কবরবাসীর কাছে সাহায্যের আবেদন-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+কবর যিয়ারত ও কবরবাসীর কাছে সাহায্যের আবেদন
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+কবর জিয়ারতের সুন্নাত নিয়ম বনাম কবরে সাহায্য চাওয়ার শিরক।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_kobor_ziaror_o_koborbasir_kache', 2, 'অধ্যায় ২: কবর যিয়ারত ও কবরবাসীর কাছে সাহায্যের আবেদন-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে কবর যিয়ারত ও কবরবাসীর কাছে সাহায্যের আবেদন কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_koborer_shasti_barzakhi_jibon', 1, 'অধ্যায় ১: কবরের শাস্তি ও শান্তি সম্পর্কে কতিপয় মাসআলা বারযাখী জীবন-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+কবরের শাস্তি ও শান্তি সম্পর্কে কতিপয় মাসআলা বারযাখী জীবন
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+মুনকার-নাকীরের সওয়াল-জওয়াব ও কবরের আযাবের সত্যতা।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_koborer_shasti_barzakhi_jibon', 2, 'অধ্যায় ২: কবরের শাস্তি ও শান্তি সম্পর্কে কতিপয় মাসআলা বারযাখী জীবন-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে কবরের শাস্তি ও শান্তি সম্পর্কে কতিপয় মাসআলা বারযাখী জীবন কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_kiyamater_alamat_madani', 1, 'অধ্যায় ১: কিয়ামতের আলামত-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+কিয়ামতের আলামত
+লেখক/সংকলক: আব্দুল্লাহ্ শাহেদ আল-মাদানী
+
+দাজ্জাল, ইমাম মাহদী, ঈসা (আ.)-এর আগমন ও ছোট-বড় আলামত।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_kiyamater_alamat_madani', 2, 'অধ্যায় ২: কিয়ামতের আলামত-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে কিয়ামতের আলামত কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_kiamoter_voyabohota_o_tarpor', 1, 'অধ্যায় ১: কিয়ামতের ভয়াবহতা ও তারপর-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+কিয়ামতের ভয়াবহতা ও তারপর
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+হাশরের ময়দান, মিজান, পুলসিরাত ও শাফাআতের বিশদ বিবরণ।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_kiamoter_voyabohota_o_tarpor', 2, 'অধ্যায় ২: কিয়ামতের ভয়াবহতা ও তারপর-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে কিয়ামতের ভয়াবহতা ও তারপর কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_jannat_jahannam_faizi', 1, 'অধ্যায় ১: জান্নাত-জাহান্নাম-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+জান্নাত-জাহান্নাম
+লেখক/সংকলক: আবদুল হামীদ ফাইযী
+
+জান্নাতের অপার নিয়ামত ও জাহান্নামের ভয়াবহ শাস্তির প্রামাণ্য চিত্র।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_jannat_jahannam_faizi', 2, 'অধ্যায় ২: জান্নাত-জাহান্নাম-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে জান্নাত-জাহান্নাম কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_ihudi_christian_ki_kafer', 1, 'অধ্যায় ১: ইয়াহূদী-খৃস্টানরা কি কাফির?-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+ইয়াহূদী-খৃস্টানরা কি কাফির?
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+কুরআন ও হাদিসের আলোকে আহলে কিতাবদের কুফরী অবস্থান।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_ihudi_christian_ki_kafer', 2, 'অধ্যায় ২: ইয়াহূদী-খৃস্টানরা কি কাফির?-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে ইয়াহূদী-খৃস্টানরা কি কাফির? কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_kitabul_mukaddas_jahangir', 1, 'অধ্যায় ১: কিতাবুল মোকাদ্দস, ইঞ্জিল শরীফ ও ঈসায়ী ধর্ম-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+কিতাবুল মোকাদ্দস, ইঞ্জিল শরীফ ও ঈসায়ী ধর্ম
+লেখক/সংকলক: ড. খোন্দকার আব্দুল্লাহ জাহাঙ্গীর (রহ.)
+
+খ্রিস্টধর্মের বিকৃতি ও বিশুদ্ধ তাওহীদের তূলনামূলক পর্যালোচনা।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_kitabul_mukaddas_jahangir', 2, 'অধ্যায় ২: কিতাবুল মোকাদ্দস, ইঞ্জিল শরীফ ও ঈসায়ী ধর্ম-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে কিতাবুল মোকাদ্দস, ইঞ্জিল শরীফ ও ঈসায়ী ধর্ম কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_christian_bananor_opokoushol', 1, 'অধ্যায় ১: খ্রিস্টান বানানোর অপকৌশল থেকে সাবধান-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+খ্রিস্টান বানানোর অপকৌশল থেকে সাবধান
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+মিশনারী অপতৎপরতা থেকে মুসলিম সমাজ রক্ষার উপায়।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_christian_bananor_opokoushol', 2, 'অধ্যায় ২: খ্রিস্টান বানানোর অপকৌশল থেকে সাবধান-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে খ্রিস্টান বানানোর অপকৌশল থেকে সাবধান কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_dhormo_niropekkho_rastre_dol', 1, 'অধ্যায় ১: ধর্মনিরপেক্ষ রাষ্ট্রে কি কোনো ইসলামী দলে যোগ দেওয়া যাবে?-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+ধর্মনিরপেক্ষ রাষ্ট্রে কি কোনো ইসলামী দলে যোগ দেওয়া যাবে?
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+ধর্মনিরপেক্ষ শাসনব্যবস্থায় মুমিনের করণীয়।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_dhormo_niropekkho_rastre_dol', 2, 'অধ্যায় ২: ধর্মনিরপেক্ষ রাষ্ট্রে কি কোনো ইসলামী দলে যোগ দেওয়া যাবে?-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে ধর্মনিরপেক্ষ রাষ্ট্রে কি কোনো ইসলামী দলে যোগ দেওয়া যাবে? কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_dhormoniropekkhota_o_kufol', 1, 'অধ্যায় ১: ধর্মনিরপেক্ষতা ও তার কুফল-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+ধর্মনিরপেক্ষতা ও তার কুফল
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+ধর্মনিরপেক্ষতাবাদের কুফরী স্বরূপ ও আত্মঘাতী পরিণতি।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_dhormoniropekkhota_o_kufol', 2, 'অধ্যায় ২: ধর্মনিরপেক্ষতা ও তার কুফল-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে ধর্মনিরপেক্ষতা ও তার কুফল কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_nastikkobad_utso_somadhan', 1, 'অধ্যায় ১: নাস্তিক্যবাদ উৎস ও সমাধান-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+নাস্তিক্যবাদ উৎস ও সমাধান
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+নাস্তিকদের প্রশ্নের যুক্তি ও বিজ্ঞানের আলোকে ইসলামী জবাব।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_nastikkobad_utso_somadhan', 2, 'অধ্যায় ২: নাস্তিক্যবাদ উৎস ও সমাধান-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে নাস্তিক্যবাদ উৎস ও সমাধান কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_pobitro_bible_poriciti', 1, 'অধ্যায় ১: পবিত্র বাইবেল পরিচিতি ও পর্যালোচনা-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+পবিত্র বাইবেল পরিচিতি ও পর্যালোচনা
+লেখক/সংকলক: ড. খোন্দকার আব্দুল্লাহ জাহাঙ্গীর (রহ.)
+
+বর্তমান বাইবেলের বৈপরীত্য ও মানবীয় পরিবর্তনের প্রমাণ।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_pobitro_bible_poriciti', 2, 'অধ্যায় ২: পবিত্র বাইবেল পরিচিতি ও পর্যালোচনা-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে পবিত্র বাইবেল পরিচিতি ও পর্যালোচনা কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_bangladeshe_nastikkobadi_opototporota', 1, 'অধ্যায় ১: বাংলাদেশে নাস্তিক্যবাদী অপতৎপরতা : প্রতিরোধের উপায়-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+বাংলাদেশে নাস্তিক্যবাদী অপতৎপরতা : প্রতিরোধের উপায়
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+বুদ্ধিবৃত্তিক অঙ্গনে নাস্তিক্যবাদের মোকাবিলার রূপরেখা।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_bangladeshe_nastikkobadi_opototporota', 2, 'অধ্যায় ২: বাংলাদেশে নাস্তিক্যবাদী অপতৎপরতা : প্রতিরোধের উপায়-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে বাংলাদেশে নাস্তিক্যবাদী অপতৎপরতা : প্রতিরোধের উপায় কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_baro_imamer_shiader_dristite_4imam', 1, 'অধ্যায় ১: বারো ইমামের অনুসারী শিয়াদের দৃষ্টিতে চার ইমাম-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+বারো ইমামের অনুসারী শিয়াদের দৃষ্টিতে চার ইমাম
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+শিয়াদের চার ইমাম সম্পর্কে অবমাননাকর বক্তব্যের খণ্ডন।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_baro_imamer_shiader_dristite_4imam', 2, 'অধ্যায় ২: বারো ইমামের অনুসারী শিয়াদের দৃষ্টিতে চার ইমাম-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে বারো ইমামের অনুসারী শিয়াদের দৃষ্টিতে চার ইমাম কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_shia_akidar_asorota', 1, 'অধ্যায় ১: শিয়া আকিদার অসারতা-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+শিয়া আকিদার অসারতা
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+শিয়াদের ইমামত, তাকিয়্যাহ ও সাহাবীদের গালমন্দ করার ভ্রান্তি।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_shia_akidar_asorota', 2, 'অধ্যায় ২: শিয়া আকিদার অসারতা-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে শিয়া আকিদার অসারতা কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_shia_akida_ibn_taimia', 1, 'অধ্যায় ১: শিয়া আকীদা সম্পর্কে ইবন তাইমিয়্যার মিনহাজুস সুন্নাহ থেকে নির্বাচিত কিছু কথা-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+শিয়া আকীদা সম্পর্কে ইবন তাইমিয়্যার মিনহাজুস সুন্নাহ থেকে নির্বাচিত কিছু কথা
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+মিনহাজুস সুন্নাহ গ্রন্থে শিয়া মতবাদের অকাট্য খণ্ডন।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_shia_akida_ibn_taimia', 2, 'অধ্যায় ২: শিয়া আকীদা সম্পর্কে ইবন তাইমিয়্যার মিনহাজুস সুন্নাহ থেকে নির্বাচিত কিছু কথা-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে শিয়া আকীদা সম্পর্কে ইবন তাইমিয়্যার মিনহাজুস সুন্নাহ থেকে নির্বাচিত কিছু কথা কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_nari_shikkha_dristivongi', 1, 'অধ্যায় ১: নারী শিক্ষা সম্পর্কে ইসলামী দৃষ্টিভঙ্গি-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+নারী শিক্ষা সম্পর্কে ইসলামী দৃষ্টিভঙ্গি
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+ইসলামে নারীর শিক্ষা অর্জন ও মর্যাদার শারঈ রূপরেখা।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_nari_shikkha_dristivongi', 2, 'অধ্যায় ২: নারী শিক্ষা সম্পর্কে ইসলামী দৃষ্টিভঙ্গি-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে নারী শিক্ষা সম্পর্কে ইসলামী দৃষ্টিভঙ্গি কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_porda_ekti_ibadat', 1, 'অধ্যায় ১: পর্দা একটি ইবাদত-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+পর্দা একটি ইবাদত
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+পর্দা নারীর সম্মান ও আল্লাহর অন্যতম ফরজ হুকুম।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_porda_ekti_ibadat', 2, 'অধ্যায় ২: পর্দা একটি ইবাদত-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে পর্দা একটি ইবাদত কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_pordahinotar_porinoti', 1, 'অধ্যায় ১: পর্দাহীনতার পরিণতি-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+পর্দাহীনতার পরিণতি
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+বেপর্দা চলাফেরার ইহকালীন ক্ষতি ও পরকালীন আযাব।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_pordahinotar_porinoti', 2, 'অধ্যায় ২: পর্দাহীনতার পরিণতি-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে পর্দাহীনতার পরিণতি কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_poshak_zokhon_bipoder_karon', 1, 'অধ্যায় ১: পোশাক যখন বিপদের কারণ-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+পোশাক যখন বিপদের কারণ
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+টাইটফিট ও অশোভন পোশাকের নিষেধাজ্ঞা।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_poshak_zokhon_bipoder_karon', 2, 'অধ্যায় ২: পোশাক যখন বিপদের কারণ-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে পোশাক যখন বিপদের কারণ কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_bela_furabar_age', 1, 'অধ্যায় ১: বেলা ফুরাবার আগে-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+বেলা ফুরাবার আগে
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+মুসলিম নারীদের আত্মশুদ্ধি ও তাওবার তাগিদ।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_bela_furabar_age', 2, 'অধ্যায় ২: বেলা ফুরাবার আগে-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে বেলা ফুরাবার আগে কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_mumin_narider_bishesh_bidhan', 1, 'অধ্যায় ১: মুমিন নারীদের বিশেষ বিধান-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+মুমিন নারীদের বিশেষ বিধান
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+নারীদের সালাত, পর্দা ও পারিবারিক বিশেষ বিধান সমগ্র।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_mumin_narider_bishesh_bidhan', 2, 'অধ্যায় ২: মুমিন নারীদের বিশেষ বিধান-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে মুমিন নারীদের বিশেষ বিধান কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_sondorzo_prodorshon_beporda', 1, 'অধ্যায় ১: সৌন্দর্য প্রদর্শন ও বেপর্দা প্রসঙ্গে মুমিন নারীদের জন্য কতিপয় নির্দেশনা-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+সৌন্দর্য প্রদর্শন ও বেপর্দা প্রসঙ্গে মুমিন নারীদের জন্য কতিপয় নির্দেশনা
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+তাবাররুজ বা সৌন্দর্য প্রদর্শনের কঠোর নিষেধাজ্ঞা।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_sondorzo_prodorshon_beporda', 2, 'অধ্যায় ২: সৌন্দর্য প্রদর্শন ও বেপর্দা প্রসঙ্গে মুমিন নারীদের জন্য কতিপয় নির্দেশনা-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে সৌন্দর্য প্রদর্শন ও বেপর্দা প্রসঙ্গে মুমিন নারীদের জন্য কতিপয় নির্দেশনা কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_souvaggomoy_ghor_dondo', 1, 'অধ্যায় ১: সৌভাগ্যময় ঘর ও স্বামী-স্ত্রীর দ্বন্দ্ব-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+সৌভাগ্যময় ঘর ও স্বামী-স্ত্রীর দ্বন্দ্ব
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+দাম্পত্য কলহ মিটিয়ে পরিবারে সুখ-শান্তি ফিরিয়ে আনার উপায়।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_souvaggomoy_ghor_dondo', 2, 'অধ্যায় ২: সৌভাগ্যময় ঘর ও স্বামী-স্ত্রীর দ্বন্দ্ব-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে সৌভাগ্যময় ঘর ও স্বামী-স্ত্রীর দ্বন্দ্ব কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_abu_bokor_o_umar_er_jibon', 1, 'অধ্যায় ১: আবু বকর ও উমর রাদিয়াল্লাহু আনহুমার জীবনের কিছু ঘটনা-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+আবু বকর ও উমর রাদিয়াল্লাহু আনহুমার জীবনের কিছু ঘটনা
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+খুলাফায়ে রাশেদীনের প্রথম দুই খলীফার অনুপম আত্মত্যাগ ও ঈমান।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_abu_bokor_o_umar_er_jibon', 2, 'অধ্যায় ২: আবু বকর ও উমর রাদিয়াল্লাহু আনহুমার জীবনের কিছু ঘটনা-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে আবু বকর ও উমর রাদিয়াল্লাহু আনহুমার জীবনের কিছু ঘটনা কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_ummater_opor_sahabigoner_odhikarsomuh', 1, 'অধ্যায় ১: উম্মতের ওপর সাহাবীগণের অধিকারসমূহ-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+উম্মতের ওপর সাহাবীগণের অধিকারসমূহ
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+সাহাবায়ে কেরামকে ভালোবাসা, সম্মান করা ও গালমন্দ না করার বিধান।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_ummater_opor_sahabigoner_odhikarsomuh', 2, 'অধ্যায় ২: উম্মতের ওপর সাহাবীগণের অধিকারসমূহ-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে উম্মতের ওপর সাহাবীগণের অধিকারসমূহ কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_allah_talar_nandonik_nam_o_gun', 1, 'অধ্যায় ১: আল্লাহ তা‘আলার নান্দনিক নাম ও গুণসমগ্র: কিছু আদর্শিক নীতিমালা-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+আল্লাহ তা‘আলার নান্দনিক নাম ও গুণসমগ্র: কিছু আদর্শিক নীতিমালা
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+আসমাউল হুসনা ও সিফাত সংক্রান্ত আহলুস সুন্নাহর মৌলিক নীতিমালা।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_allah_talar_nandonik_nam_o_gun', 2, 'অধ্যায় ২: আল্লাহ তা‘আলার নান্দনিক নাম ও গুণসমগ্র: কিছু আদর্শিক নীতিমালা-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে আল্লাহ তা‘আলার নান্দনিক নাম ও গুণসমগ্র: কিছু আদর্শিক নীতিমালা কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_halal_uparjon_kader', 1, 'অধ্যায় ১: ইসলামে হালাল উপার্জন : গুরুত্ব ও তাৎপর্য-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+ইসলামে হালাল উপার্জন : গুরুত্ব ও তাৎপর্য
+লেখক/সংকলক: ড. মোঃ আবদুল কাদের
+
+হালাল রিযিক গ্রহণের অপরিহার্যতা ও দো''আ কবুলের সম্পর্ক।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_halal_uparjon_kader', 2, 'অধ্যায় ২: ইসলামে হালাল উপার্জন : গুরুত্ব ও তাৎপর্য-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে ইসলামে হালাল উপার্জন : গুরুত্ব ও তাৎপর্য কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_bank_interest_sud_ki_halal', 1, 'অধ্যায় ১: ব্যাংকের সুদ কি হালাল-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+ব্যাংকের সুদ কি হালাল
+লেখক/সংকলক: শাইখ মুশ্তাক আহমাদ কারীমী
+
+প্রচলিত ব্যাংকিং সুদের প্রকারভেদ ও সুদের বিরুদ্ধে কুরআনের ঘোষণা।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_bank_interest_sud_ki_halal', 2, 'অধ্যায় ২: ব্যাংকের সুদ কি হালাল-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে ব্যাংকের সুদ কি হালাল কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_ze_sokol_haramke_manush_tuccho', 1, 'অধ্যায় ১: যে সকল হারামকে মানুষ তুচ্ছ মনে করে থাকে-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+যে সকল হারামকে মানুষ তুচ্ছ মনে করে থাকে
+লেখক/সংকলক: ইসলামহাউজ.কম
+
+অজান্তে কৃত কবিরা গুনাহসমূহ যা থেকে বেঁচে থাকা আবশ্যক।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_ze_sokol_haramke_manush_tuccho', 2, 'অধ্যায় ২: যে সকল হারামকে মানুষ তুচ্ছ মনে করে থাকে-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে যে সকল হারামকে মানুষ তুচ্ছ মনে করে থাকে কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_sud_khoti_opokar_qahtani', 1, 'অধ্যায় ১: সুদের ক্ষতি-অপকার-কুপ্রভাব-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+সুদের ক্ষতি-অপকার-কুপ্রভাব
+লেখক/সংকলক: ড. সাঈদ ইব্‌ন আলী ইব্‌ন ওয়াহফ আল-ক্বাহত্বানী
+
+সুদখোরের ভয়াবহ পরকালীন শাস্তি ও সামাজিক ধ্বংসযজ্ঞ।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_sud_khoti_opokar_qahtani', 2, 'অধ্যায় ২: সুদের ক্ষতি-অপকার-কুপ্রভাব-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে সুদের ক্ষতি-অপকার-কুপ্রভাব কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1),
+('book_haram_kabira_gunah', 1, 'অধ্যায় ১: হারাম ও কবিরা গুনাহ-এর প্রারম্ভিক ভূমিকা', 'বিসমিল্লাহির রাহমানির রাহীম।
+
+হারাম ও কবিরা গুনাহ
+লেখক/সংকলক: মোস্তাফিজুর রহমান বিন আব্দুল আজিজ আল-মাদানী
+
+কবিরা গুনাহসমূহের বিশদ তালিকা ও তওবার পদ্ধতি।
+
+মহান আল্লাহ সুবহানাহু ওয়া তাআলার অশেষ মেহেরবানীতে এই প্রামাণ্য কিতাবটি বিশুদ্ধ কুরআন ও সহীহ সুন্নাহর আলোকে মানবজাতির আত্মিক পরিশুদ্ধি ও দ্বীনের সঠিক বুঝ অর্জনের জন্য সংকলিত হয়েছে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ حَقَّ تُقَاتِهِ وَلَا تَمُوتُنَّ إِلَّا وَأَنتُم مُّسْلِمُونَ»
+অর্থ: ''হে ঈমানদারগণ! তোমরা আল্লাহকে যেমন ভয় করা উচিত ঠিক তেমনিভাবে ভয় কর এবং আত্মসমর্পণকারী (মুসলিম) না হয়ে মৃত্যুবরণ করো না।'' (সূরা আলে ইমরান: ১০২)
+
+রাসুলুল্লাহ ﷺ ইরশাদ করেছেন:
+«مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ»
+অর্থ: ''আল্লাহ যার কল্যাণ চান, তাকে দ্বীনের গভীর প্রজ্ঞা ও সঠিক জ্ঞান দান করেন।'' (সহীহ বুখারী: ৭১, সহীহ মুসলিম: ১০৩৭)', 1),
+('book_haram_kabira_gunah', 2, 'অধ্যায় ২: হারাম ও কবিরা গুনাহ-এর মৌলিক শিক্ষা ও মাসায়েল', 'এই অধ্যায়ে হারাম ও কবিরা গুনাহ কিতাবের মূল শিক্ষা, শারঈ বিধানাবলী ও সমকালীন জীবনে এর বাস্তবসম্মত প্রয়োগের বিশদ দলীলভিত্তিক বিশ্লেষণ করা হয়েছে।
+
+১. সুন্নাহর পরিপূর্ণ আনুগত্য:
+আমল কবুলের অন্যতম প্রধান শর্ত হলো রাসুলুল্লাহ ﷺ-এর প্রদর্শিত তরীকায় আমল সম্পাদন করা।
+
+২. বিদআত ও কুসংস্কার বর্জন:
+দ্বীনের মধ্যে যেকোনো নতুন সংযোজনই পথভ্রষ্টতা যা থেকে বেঁচে থাকা প্রত্যেক মুসলিমের জন্য ঈমানী দায়িত্ব।', 1);
+/*!40000 ALTER TABLE `islamic_book_chapters` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+--
+-- Table structure for table `islamic_book_chapters`
+--
+
+DROP TABLE IF EXISTS `islamic_book_chapters`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `islamic_book_chapters` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `book_uid` varchar(60) NOT NULL,
+  `chapter_index` int(10) unsigned NOT NULL,
+  `title_bn` varchar(255) NOT NULL,
+  `title_en` varchar(255) DEFAULT NULL,
+  `content_bn` mediumtext NOT NULL,
+  `content_en` mediumtext DEFAULT NULL,
+  `is_active` tinyint(1) DEFAULT 1,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  PRIMARY KEY (`id`),
+  KEY `idx_book_chap` (`book_uid`,`chapter_index`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+LOCK TABLES `islamic_book_chapters` WRITE;
+/*!40000 ALTER TABLE `islamic_book_chapters` DISABLE KEYS */;
+
+INSERT INTO `islamic_book_chapters` (`book_uid`, `chapter_index`, `title_bn`, `content_bn`, `is_active`) VALUES
+('book_sahaj_tawhid', 1, '(১) তাওহীদ কাকে বলে এবং এর আভিধানিক অর্থ কি?', 'প্রশ্ন: তাওহীদ কাকে বলে এবং এর আভিধানিক অর্থ কি?
+
+উত্তর:
+''তাওহীদ'' (التَّوْحِيدُ) আরবি শব্দ। এর আভিধানিক অর্থ হলো কোনো কিছুকে একক বা এক বলে ঘোষণা করা এবং বিশ্বাস স্থাপন করা।
+
+শরীয়তের পরিভাষায়:
+আল্লাহ তা''আলাকে তাঁর রুবূবিয়্যাত (প্রভুত্ব ও সৃষ্টি পরিচালনা), উলূহিয়্যাত (একক উপাসনা ও ইবাদত) এবং আসমা ওয়াস সিফাত (সুন্দর নামসমূহ ও গুণাবলী)-এ একমাত্র একক ও অংশীদারহীন বলে মনেপ্রাণে বিশ্বাস করা ও জীবনে বাস্তবায়ন করাকে তাওহীদ বলে।
+
+আল্লাহ তা''আলা পবিত্র কুরআনে ঘোষণা করেন:
+«قُلْ هُوَ اللَّهُ أَحَدٌ ۝ اللَّهُ الصَّمَدُ ۝ لَمْ يَلِدْ وَلَمْ يُولَدْ ۝ وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ»
+অর্থ: ''বলুন, তিনিই আল্লাহ, একক-অদ্বিতীয়। আল্লাহ কারো মুখাপেক্ষী নন, সকলেই তাঁর মুখাপেক্ষী। তিনি কাউকে জন্ম দেননি এবং তাঁকেও জন্ম দেওয়া হয়নি। আর তাঁর সমতুল্য কেউই নেই।'' (সূরা আল-ইখলাস: ১-৪)', 1),
+('book_sahaj_tawhid', 2, '(২) তাওহীদের প্রকারভেদ কয়টি ও কি কি?', 'প্রশ্ন: তাওহীদের প্রকারভেদ কয়টি ও কি কি?
+
+উত্তর:
+কুরআন ও সুন্নাহর গভীর পর্যালোচনার মাধ্যমে বিজ্ঞ উলামায়ে কেরাম তাওহীদকে তিনটি মৌলিক ভাগে বিভক্ত করেছেন:
+
+১. তাওহীদুর রুবূবিয়্যাহ (توحيد الربوبية):
+আল্লাহ তা''আলাকে সৃষ্টি, পরিচালনা, রিজিকদান ও সার্বভৌম কর্তৃত্বে একক হিসেবে স্বীকার করা।
+
+২. তাওহীদুল উলূহিয়্যাহ বা তাওহীদুল ইবাদাহ (توحيد الألوهية):
+সকল প্রকার প্রত্যক্ষ ও পরোক্ষ ইবাদত (যেমন সালাত, দো''আ, কুরবানি, মানত, ভরসা) একমাত্র আল্লাহর জন্য নির্দিষ্ট করা এবং এতে কাউকে শরীক না করা।
+
+৩. তাওহীদুল আসমা ওয়াস সিফাত (توحيد الأسماء والصفات):
+আল্লাহ তা''আলা নিজের জন্য এবং তাঁর রাসুল ﷺ আল্লাহর জন্য যে সকল সুন্দর নাম ও মহান গুণাবলী সাব্যস্ত করেছেন, সেগুলোকে কোনো রূপান্তর, বিকৃতি, বাতিলকরণ বা সৃষ্টির সাথে সাদৃশ্য স্থাপন ব্যতিরেকে বিশ্বাস করা।
+
+আল্লাহ তা''আলা ইরশাদ করেন:
+«رَّبُّ السَّمَاوَاتِ وَالْأَرْضِ وَمَا بَيْنَهُمَا فَاعْبُدْهُ وَاصْطَبِرْ لِعِبَادَتِهِ ۚ هَلْ تَعْلَمُ لَهُ سَمِيًّا»
+অর্থ: ''তিনি আকাশমন্ডলী, পৃথিবী এবং এদের অন্তর্বর্তী সবকিছুর রব; অতএব তাঁরই ইবাদত করুন এবং তাঁর ইবাদতে অবিচল থাকুন। আপনি কি তাঁর সমনামের কাউকে জানেন?'' (সূরা মারিয়াম: ৬৫)', 1),
+('book_sahaj_tawhid', 3, '(৩) ''লা ইলাহা ইল্লাল্লাহ''-এর সঠিক অর্থ কি?', 'প্রশ্ন: ''লা ইলাহা ইল্লাল্লাহ'' (لَا إِلٰهَ إِلَّا اللهُ)-এর সঠিক অর্থ কি?
+
+উত্তর:
+''লা ইলাহা ইল্লাল্লাহ''-এর বিশুদ্ধ অর্থ হলো:
+''আল্লাহ ছাড়া সত্য কোনো মাবূদ বা উপাস্য নেই'' (لاَ مَعْبُوْدَ بِحَقٍّ إِلاَّ اللهُ)।
+
+ভ্রান্ত ধারণা নিরসন:
+অনেকে মনে করেন এর অর্থ ''আল্লাহ ছাড়া কোনো স্রষ্টা নেই''—কিন্তু এটি তাওহীদের আংশিক অর্থ (তাওহীদুর রুবূবিয়্যাহ)। মক্কার কাফেররাও আল্লাহকে একমাত্র সৃষ্টিকর্তা মানতো, কিন্তু তারা মূর্তির পূজা করায় মুশরিক বলে গণ্য হয়েছিল। সুতরাং সঠিক অর্থ হলো একমাত্র আল্লাহ ব্যতীত কোনো সত্য উপাস্য নেই।
+
+এই কালিমার দুটি অবিচ্ছেদ্য রুকন রয়েছে:
+১. নফী বা অস্বীকৃতি (লা ইলাহা): আল্লাহ ছাড়া অন্য সকল বাতিল উপাস্যকে প্রত্যাখ্যান করা।
+২. ইসবাত বা সাব্যস্তকরণ (ইল্লাল্লাহ): এককভাবে সমস্ত ইবাদত একমাত্র সত্য ইলাহ আল্লাহর জন্য নির্ধারিত করা।', 1),
+('book_sahaj_tawhid', 4, '(৪) শিরক কাকে বলে এবং শিরকের পরিণতি কি?', 'প্রশ্ন: শিরক কাকে বলে এবং শিরকের পরিণতি কি?
+
+উত্তর:
+''শিরক'' (الشِّرْكُ) শব্দের অর্থ অংশীদার স্থাপন করা। শরীয়তের পরিভাষায় আল্লাহর একক অধিকার, বৈশিষ্ট্য বা ইবাদতে অন্য কাউকে অংশীদার বা সমকক্ষ মনে করাকে শিরক বলে।
+
+শিরকের পরিণতি:
+শিরক হচ্ছে সর্বাপেক্ষা বড় পাপ (যুলমুন আযীম)। শিরককারী তওবা ছাড়া মারা গেলে আল্লাহ তা''আলা তাকে কখনোই ক্ষমা করবেন না এবং তার ওপর জান্নাত চিরতরে হারাম হয়ে যাবে।
+
+আল্লাহ সুবহানাহু ওয়া তা''আলা ইরশাদ করেন:
+«إِنَّ اللَّهَ لَا يَغْفِرُ أَن يُشْرَكَ بِهِ وَيَغْفِرُ مَا دُونَ ذَٰلِكَ لِمَن يَشَاءُ ۚ وَمَن يُشْرِكْ بِاللَّهِ فَقَدِ افْتَرَىٰ إِثْمًا عَظِيمًا»
+অর্থ: ''নিশ্চয়ই আল্লাহ তাঁর সাথে শরীক করার অপরাধ ক্ষমা করেন না; এ ছাড়া অন্যান্য পাপ যাকে ইচ্ছা তিনি ক্ষমা করে দেন। আর যে কেউ আল্লাহর সাথে শরীক করে, সে এক মহাপাপ রচনা করে।'' (সূরা আন-নিসা: ৪৮)', 1),
+('book_sahaj_tawhid', 5, '(৫) বড় শিরক ও ছোট শিরকের মধ্যে পার্থক্য কি?', 'প্রশ্ন: বড় শিরক ও ছোট শিরকের মধ্যে পার্থক্য কি?
+
+উত্তর:
+১. বড় শিরক: আল্লাহ ছাড়া অন্য কাউকে সিজদা করা, দো''আ করা বা মৃত ব্যক্তির কাছে সন্তান চাওয়া। এতে ব্যক্তি ইসলাম থেকে বের হয়ে যায় এবং সকল আমল বিনষ্ট হয়।
+২. ছোট শিরক: লোক দেখানো আমল (রিয়া) বা আল্লাহ ছাড়া অন্য কারো নামে কসম খাওয়া। এতে আমল বরবাদ হয় কিন্তু ব্যক্তি ইসলাম থেকে সম্পূর্ণ খারিজ হয় না।
+
+রাসুলুল্লাহ ﷺ বলেছেন: «إِنَّ أَخْوَفَ مَا أَخَافُ عَلَيْكُمُ الشِّرْكُ الأَصْغَرُ: الرِّيَاءُ» (তোমাদের ব্যাপারে আমি যে জিনিসটি সবচেয়ে বেশি ভয় করি তা হলো ছোট শিরক—লোক দেখানো আমল বা রিয়া। - মুসনাদে আহমাদ: ২৩৬৮০)', 1),
+('book_najat_prapto_aqeedah', 1, '(১) বান্দার উপর সর্বপ্রথম ওয়াজিব কোনটি?', 'বান্দার উপর সর্বপ্রথম ওয়াজিব হচ্ছে, তাদেরকে আল্লাহ তা''আলা যে উদ্দেশ্যে সৃষ্টি করেছেন, তাদের থেকে যে বিষয়ের অঙ্গীকার নিয়েছেন, যে বিষয় দিয়ে রাসূল প্রেরণ করেছেন এবং কিতাব অবতীর্ণ করেছেন, সে সম্পর্কে জ্ঞান অর্জন করা। এ বিষয়টির জন্যই আল্লাহ্ তাআলা দুনিয়া-আখেরাত, জান্নাত-জাহান্নাম সৃষ্টি করেছেন। এ বিষয়ের জন্যেই কিয়ামত প্রতিষ্ঠিত হবে, দাড়িপাল্লা স্থাপন করা হবে, আমলনামা প্রদান করা হবে। এ বিষয়টির কারণেই কেউ সৌভাগ্যবান হবে আবার কেউ হবে হতভাগা। এ অনুযায়ী কিয়ামতের দিন নূর বণ্টিত হবে। সে দিন আল্লাহ যাকে নূর দান করবেন না, তার কোন নূর থাকবে না।', 1),
+('book_najat_prapto_aqeedah', 2, '(২) সুতরাং ঐ বিষয়টি কি, যার জন্য আল্লাহ্ তা''আলা মানুষ সৃষ্টি করেছেন?', 'ঐ বিষয়টি হচ্ছে, আল্লাহ তা''আলা বান্দাকে একমাত্র তাঁরই ইবাদত করার জন্য এবং তাঁর সাথে কোনো কিছুকে শরীক না করার জন্য সৃষ্টি করেছেন।
+
+আল্লাহ সুবহানাহু ওয়া তা''আলা পবিত্র কুরআনে ইরশাদ করেন:
+«وَمَا خَلَقْتُ الْجِنَّ وَالْإِنسَ إِلَّا لِيَعْبُدُونِ ۝ مَا أُرِيدُ مِنْهُم مِّن رِّزْقٍ وَمَا أُرِيدُ أَن يُطْعِمُونِ ۝ إِنَّ اللَّهَ هُوَ الرَّزَّاقُ ذُو الْقُوَّةِ الْمَتِينُ»
+অর্থ: ''আর আমি সৃষ্টি করেছি জিন এবং মানুষকে কেবল এ জন্যই যে, তারা আমারই ইবাদত করবে। আমি তাদের কাছে কোনো জীবিকা চাই না এবং এও চাই না যে তারা আমাকে আহার করাবে। নিশ্চয় আল্লাহই রিজিকদাতা, মহাশক্তিধর, পরাক্রমশালী।'' (সূরা আয-যারিয়াত: ৫৬-৫৮)', 1),
+('book_najat_prapto_aqeedah', 3, '(৩) আব্দ অর্থ কি?', '''আব্দ'' শব্দের দুটি অর্থ রয়েছে:
+১. সৃষ্টিগত ও সার্বজনীন অর্থ: নিখিল সৃষ্টির প্রতিটি জীব আল্লাহর ক্ষমতাপ্রাপ্ত ও তাঁর অনুগত বান্দা।
+২. শরঈ ও মর্যাদাপূর্ণ অর্থ: যে ব্যক্তি স্বেচ্ছায় আল্লাহর তাওহীদ মেনে নিয়ে একমাত্র তাঁরই উপাসনা করে এবং তাঁর আদেশ-নিষেধ পালন করে।', 1),
+('book_najat_prapto_aqeedah', 4, '(৪) এবাদত কাকে বলে?', 'ইবাদত হলো এমন একটি সামগ্রিক নাম, যা আল্লাহ তা''আলার সন্তুষ্টি ও ভালোবাসা অর্জনের উদ্দেশ্যে সম্পাদিত প্রকাশ্য ও অপ্রকাশ্য সমস্ত কথা ও কাজকে অন্তর্ভুক্ত করে। যেমন: সালাত, সাওম, যাকাত, হজ, পিতামাতার সেবা, সত্যবাদিতা ও আল্লাহর যিকির।', 1),
+('book_najat_prapto_aqeedah', 5, '(৫) বান্দার আমল কখন এবাদতে পরিণত হয়?', 'বান্দার যেকোনো বৈধ আমল বা কাজ দুটি শর্ত পূরণ করলে পূর্ণাঙ্গ ইবাদতে রূপান্তরিত হয়: ১. আল্লাহ ও তাঁর রাসুলের প্রতি অবিচল ভালোবাসা ও ভীতি এবং ২. পূর্ণাঙ্গ আনুগত্য ও নিষ্ঠা।', 1),
+('book_najat_prapto_aqeedah', 6, '(৬) বান্দা যে আল্লাহকে ভালবাসে, তার আলামত কী?', 'বান্দার আল্লাহকে ভালোবাসার সর্বশ্রেষ্ঠ আলামত হলো আল্লাহর রাসুল ﷺ-এর পরিপূর্ণ আনুগত্য ও সুন্নাহর অনুসরণ করা। আল্লাহ তা''আলা বলেন: ''বলুন, যদি তোমরা আল্লাহকে ভালোবাস তবে আমার অনুসরণ কর, আল্লাহ তোমাদের ভালোবাসবেন এবং তোমাদের পাপসমূহ ক্ষমা করবেন।'' (সূরা আলে ইমরান: ৩১)', 1),
+('book_najat_prapto_aqeedah', 7, '(৭) বান্দা কিভাবে আল্লাহর প্রিয় ও সন্তোষজনক কাজগুলো জানতে পারবে?', 'আল্লাহ তা''আলা তাঁর রাসুলগণের মাধ্যমে যে কিতাব ও শরীয়ত অবতীর্ণ করেছেন, তার মাধ্যমে বান্দা আল্লাহর প্রিয় ও সন্তোষজনক কাজগুলো জানতে পারে।', 1),
+('book_najat_prapto_aqeedah', 8, '(৮) ইবাদতের শর্ত কয়টি?', 'যেকোনো ইবাদত আল্লাহর নিকট গ্রহণযোগ্য হওয়ার জন্য দুটি মৌলিক শর্ত রয়েছে: ১. ইখলাস বা খাঁটি নিয়ত (একমাত্র আল্লাহর সন্তুষ্টির উদ্দেশ্যে হওয়া) এবং ২. মুতাবাআতুর রাসুল বা রাসুলুল্লাহ ﷺ-এর সুন্নাহ মোতাবেক হওয়া।', 1),
+('book_tawhid_tar_promanadi', 1, 'অধ্যায় ১: তাওহীদুল উলূহিয়্যাহর অকাট্য দলীলসমূহ', 'তাওহীদুল উলূহিয়্যাহ হলো আল্লাহর একত্ববাদের মূল ভিত্তি যার জন্য যুগে যুগে সকল নবী-রাসুলকে প্রেরণ করা হয়েছিল।
+
+আল্লাহ তা''আলা ইরশাদ করেন:
+«وَلَقَدْ بَعَثْنَا فِي كُلِّ أُمَّةٍ رَّسُولًا أَنِ اعْبُدُوا اللَّهَ وَاجْتَنِبُوا الطَّاغُوتَ»
+অর্থ: ''আর নিশ্চয়ই আমি প্রত্যেক জাতির মাঝে একজন রাসুল প্রেরণ করেছি এই মর্মে যে, তোমরা একমাত্র আল্লাহর ইবাদত কর এবং তাগুতকে বর্জন কর।'' (সূরা আন-নাহল: ৩৬)', 1),
+('book_kitabut_tawhid', 1, 'অধ্যায় ১: তাওহীদের ফজিলত ও মর্যাদা', 'তাওহীদ হলো মানবজীবনের সর্বপ্রধান সম্পদ। যে ব্যক্তি খাঁটি তাওহীদ নিয়ে আল্লাহর দরবারে উপস্থিত হবে, আল্লাহ তার পূর্বের পাপরাশি ক্ষমা করে তাকে জান্নাত দান করবেন। (সহীহ বুখারী: ৩৪৩৫)', 1),
+('book_sahih_aqeedah_najat', 1, 'অধ্যায় ১: মুক্তিপ্রাপ্ত দলের পরিচয়', 'নাজাতপ্রাপ্ত দল হলো যারা কুরআন ও সহীহ সুন্নাহর উপর সাহাবায়ে কেরামের বুঝ অনুযায়ী প্রতিষ্ঠিত থাকে।', 1),
+('book_waseela_tawhid', 1, 'অধ্যায় ১: শারঈ বৈধ উসীলার প্রকারভেদ', 'বৈধ উসীলা ৩ প্রকার: আল্লাহর সুন্দর নামের উসীলা, নিজের নেক আমলের উসীলা, জীবিত নেককার ব্যক্তির দো''আর উসীলা।', 1),
+('book_aqeedah_extra_7', 1, 'অধ্যায় ১: আকীদাহ আত-তাহাবিয়্যাহ-এর ভূমিকা', 'আকীদাহ আত-তাহাবিয়্যাহ গ্রন্থের বিশদ আলোচনা ও বিশুদ্ধ শারঈ রূপরেখা।', 1),
+('book_aqeedah_extra_8', 1, 'অধ্যায় ১: লুম''আতুল ই''তিকাদ-এর ভূমিকা', 'লুম''আতুল ই''তিকাদ গ্রন্থের বিশদ আলোচনা ও বিশুদ্ধ শারঈ রূপরেখা।', 1),
+('book_aqeedah_extra_9', 1, 'অধ্যায় ১: আল-আকীদাহ আল-ওয়াসেত্বীয়াহ-এর ভূমিকা', 'আল-আকীদাহ আল-ওয়াসেত্বীয়াহ গ্রন্থের বিশদ আলোচনা ও বিশুদ্ধ শারঈ রূপরেখা।', 1),
+('book_aqeedah_extra_10', 1, 'অধ্যায় ১: আল-আকীদাহ আত-তাদমুরীয়া-এর ভূমিকা', 'আল-আকীদাহ আত-তাদমুরীয়া গ্রন্থের বিশদ আলোচনা ও বিশুদ্ধ শারঈ রূপরেখা।', 1),
+('book_aqeedah_extra_11', 1, 'অধ্যায় ১: তিনটি মূলনীতি (উসূলুস সালাসাহ)-এর ভূমিকা', 'তিনটি মূলনীতি (উসূলুস সালাসাহ) গ্রন্থের বিশদ আলোচনা ও বিশুদ্ধ শারঈ রূপরেখা।', 1),
+('book_aqeedah_extra_12', 1, 'অধ্যায় ১: চারটি মূলনীতি (কাওয়াইদুল আরবা''আ)-এর ভূমিকা', 'চারটি মূলনীতি (কাওয়াইদুল আরবা''আ) গ্রন্থের বিশদ আলোচনা ও বিশুদ্ধ শারঈ রূপরেখা।', 1),
+('book_aqeedah_extra_13', 1, 'অধ্যায় ১: ঈমানের মূল ভিত্তি ও রুকনসমূহ-এর ভূমিকা', 'ঈমানের মূল ভিত্তি ও রুকনসমূহ গ্রন্থের বিশদ আলোচনা ও বিশুদ্ধ শারঈ রূপরেখা।', 1),
+('book_aqeedah_extra_14', 1, 'অধ্যায় ১: তাকদীর ও ভাগ্যের প্রতি ঈমান-এর ভূমিকা', 'তাকদীর ও ভাগ্যের প্রতি ঈমান গ্রন্থের বিশদ আলোচনা ও বিশুদ্ধ শারঈ রূপরেখা।', 1),
+('book_aqeedah_extra_15', 1, 'অধ্যায় ১: ইসলাম বিনষ্টকারী দশটি কারণ-এর ভূমিকা', 'ইসলাম বিনষ্টকারী দশটি কারণ গ্রন্থের বিশদ আলোচনা ও বিশুদ্ধ শারঈ রূপরেখা।', 1),
+('book_aqeedah_extra_16', 1, 'অধ্যায় ১: সালাফদের আকীদা বনাম সমসাময়িক মতবাদ-এর ভূমিকা', 'সালাফদের আকীদা বনাম সমসাময়িক মতবাদ গ্রন্থের বিশদ আলোচনা ও বিশুদ্ধ শারঈ রূপরেখা।', 1),
+('book_aqeedah_extra_17', 1, 'অধ্যায় ১: কবর আযাব ও আখেরাতের সত্যতা-এর ভূমিকা', 'কবর আযাব ও আখেরাতের সত্যতা গ্রন্থের বিশদ আলোচনা ও বিশুদ্ধ শারঈ রূপরেখা।', 1),
+('book_aqeedah_extra_18', 1, 'অধ্যায় ১: আল্লাহর সুন্দর নাম ও গুণের মর্যাদা-এর ভূমিকা', 'আল্লাহর সুন্দর নাম ও গুণের মর্যাদা গ্রন্থের বিশদ আলোচনা ও বিশুদ্ধ শারঈ রূপরেখা।', 1),
+('book_salah_1', 1, 'অধ্যায় ১: সালাতুর রাসূল ﷺ-এর মৌলিক শিক্ষা', 'সালাতুর রাসূল ﷺ সম্পর্কে কুরআন ও সুন্নাহর প্রামাণ্য বিধান।', 1),
+('book_salah_2', 1, 'অধ্যায় ১: নামাজের সময়সূচি ও নিয়মাবলী-এর মৌলিক শিক্ষা', 'নামাজের সময়সূচি ও নিয়মাবলী সম্পর্কে কুরআন ও সুন্নাহর প্রামাণ্য বিধান।', 1),
+('book_salah_3', 1, 'অধ্যায় ১: সহীহ নামায শিক্ষা-এর মৌলিক শিক্ষা', 'সহীহ নামায শিক্ষা সম্পর্কে কুরআন ও সুন্নাহর প্রামাণ্য বিধান।', 1),
+('book_salah_4', 1, 'অধ্যায় ১: রাসূলুল্লাহ ﷺ-এর সালাত সম্পাদন পদ্ধতি-এর মৌলিক শিক্ষা', 'রাসূলুল্লাহ ﷺ-এর সালাত সম্পাদন পদ্ধতি সম্পর্কে কুরআন ও সুন্নাহর প্রামাণ্য বিধান।', 1),
+('book_salah_5', 1, 'অধ্যায় ১: সালাতে একাগ্রতা অর্জনের উপায়-এর মৌলিক শিক্ষা', 'সালাতে একাগ্রতা অর্জনের উপায় সম্পর্কে কুরআন ও সুন্নাহর প্রামাণ্য বিধান।', 1),
+('book_salah_6', 1, 'অধ্যায় ১: জানাযার নামায ও কাফন-দাফন-এর মৌলিক শিক্ষা', 'জানাযার নামায ও কাফন-দাফন সম্পর্কে কুরআন ও সুন্নাহর প্রামাণ্য বিধান।', 1),
+('book_salah_7', 1, 'অধ্যায় ১: তাহাজ্জুদ ও নফল সালাতের ফজিলত-এর মৌলিক শিক্ষা', 'তাহাজ্জুদ ও নফল সালাতের ফজিলত সম্পর্কে কুরআন ও সুন্নাহর প্রামাণ্য বিধান।', 1),
+('book_salah_8', 1, 'অধ্যায় ১: জুমার সালাত ও আদবসমূহ-এর মৌলিক শিক্ষা', 'জুমার সালাত ও আদবসমূহ সম্পর্কে কুরআন ও সুন্নাহর প্রামাণ্য বিধান।', 1),
+('book_salah_9', 1, 'অধ্যায় ১: সালাত পরিত্যাগের বিধান-এর মৌলিক শিক্ষা', 'সালাত পরিত্যাগের বিধান সম্পর্কে কুরআন ও সুন্নাহর প্রামাণ্য বিধান।', 1),
+('book_salah_10', 1, 'অধ্যায় ১: মুসাফিরের সালাত ও কসর-জম''আ-এর মৌলিক শিক্ষা', 'মুসাফিরের সালাত ও কসর-জম''আ সম্পর্কে কুরআন ও সুন্নাহর প্রামাণ্য বিধান।', 1),
+('book_salah_11', 1, 'অধ্যায় ১: সিজদায়ে সাহুর নিয়মাবলী-এর মৌলিক শিক্ষা', 'সিজদায়ে সাহুর নিয়মাবলী সম্পর্কে কুরআন ও সুন্নাহর প্রামাণ্য বিধান।', 1),
+('book_salah_12', 1, 'অধ্যায় ১: তারাাবীহ ও বিতরের সালাত-এর মৌলিক শিক্ষা', 'তারাাবীহ ও বিতরের সালাত সম্পর্কে কুরআন ও সুন্নাহর প্রামাণ্য বিধান।', 1),
+('book_salah_13', 1, 'অধ্যায় ১: সালাতের দো''আ ও যিকির সমগ্র-এর মৌলিক শিক্ষা', 'সালাতের দো''আ ও যিকির সমগ্র সম্পর্কে কুরআন ও সুন্নাহর প্রামাণ্য বিধান।', 1),
+('book_zakat_1', 1, 'অধ্যায় ১: যাকাত সম্পর্কিত ফতোয়া ও সমাধান-এর গুরুত্ব', 'যাকাত ইসলামের অন্যতম ফরজ অর্থনৈতিক ইবাদত।', 1),
+('book_zakat_2', 1, 'অধ্যায় ১: যাকাত ও সাদাকাতুল ফিতরের বিধান-এর গুরুত্ব', 'যাকাত ইসলামের অন্যতম ফরজ অর্থনৈতিক ইবাদত।', 1),
+('book_zakat_3', 1, 'অধ্যায় ১: সম্পদের যাকাত ও হিসাব নির্দেশিকা-এর গুরুত্ব', 'যাকাত ইসলামের অন্যতম ফরজ অর্থনৈতিক ইবাদত।', 1),
+('book_sawm_1', 1, 'অধ্যায় ১: সিয়াম ও রমজান: শিক্ষা, তাৎপর্য ও মাসায়েল-এর ফজিলত', 'সিয়াম মুমিনের আত্মিক পরিশুদ্ধির সর্বোত্তম মাধ্যম।', 1),
+('book_sawm_2', 1, 'অধ্যায় ১: চাঁদ দেখা, রোজা ও ঈদ-এর ফজিলত', 'সিয়াম মুমিনের আত্মিক পরিশুদ্ধির সর্বোত্তম মাধ্যম।', 1),
+('book_sawm_3', 1, 'অধ্যায় ১: রমজান বিষয়ক ফতোয়া-এর ফজিলত', 'সিয়াম মুমিনের আত্মিক পরিশুদ্ধির সর্বোত্তম মাধ্যম।', 1),
+('book_sawm_4', 1, 'অধ্যায় ১: যেভাবে স্বাগত জানাবো মাহে রমাজান-এর ফজিলত', 'সিয়াম মুমিনের আত্মিক পরিশুদ্ধির সর্বোত্তম মাধ্যম।', 1),
+('book_sawm_5', 1, 'অধ্যায় ১: রোযার সঠিক আহকাম ও আধুনিক মাসায়েল-এর ফজিলত', 'সিয়াম মুমিনের আত্মিক পরিশুদ্ধির সর্বোত্তম মাধ্যম।', 1),
+('book_sawm_6', 1, 'অধ্যায় ১: লাইলাতুল কদর ও ই''তিকাফ নির্দেশিকা-এর ফজিলত', 'সিয়াম মুমিনের আত্মিক পরিশুদ্ধির সর্বোত্তম মাধ্যম।', 1),
+('book_sawm_7', 1, 'অধ্যায় ১: সিয়াম ভঙ্গের কারণ ও কাফফারা-এর ফজিলত', 'সিয়াম মুমিনের আত্মিক পরিশুদ্ধির সর্বোত্তম মাধ্যম।', 1),
+('book_hajj_1', 1, 'অধ্যায় ১: হজের মর্মার্থ ও শিক্ষা-এর ভূমিকা', 'হজ হলো ইসলামের পঞ্চস্তম্ভের অন্যতম প্রধান স্তম্ভ।', 1),
+('book_hajj_2', 1, 'অধ্যায় ১: সহীহ হজ্জ ও উমরাহ নির্দেশিকা-এর ভূমিকা', 'হজ হলো ইসলামের পঞ্চস্তম্ভের অন্যতম প্রধান স্তম্ভ।', 1),
+('book_hajj_3', 1, 'অধ্যায় ১: হজ্জের সফর ও পবিত্র স্থানসমূহের ইতিহাস-এর ভূমিকা', 'হজ হলো ইসলামের পঞ্চস্তম্ভের অন্যতম প্রধান স্তম্ভ।', 1),
+('book_hajj_4', 1, 'অধ্যায় ১: উমরাহ পালনের সহজ নিয়ম-এর ভূমিকা', 'হজ হলো ইসলামের পঞ্চস্তম্ভের অন্যতম প্রধান স্তম্ভ।', 1),
+('book_hajj_5', 1, 'অধ্যায় ১: হজ্জে প্রচলিত ভুল-ত্রুটি ও তার প্রতিকার-এর ভূমিকা', 'হজ হলো ইসলামের পঞ্চস্তম্ভের অন্যতম প্রধান স্তম্ভ।', 1),
+('book_hajj_6', 1, 'অধ্যায় ১: মদিনা যিয়ারতের সুন্নাত আদব-এর ভূমিকা', 'হজ হলো ইসলামের পঞ্চস্তম্ভের অন্যতম প্রধান স্তম্ভ।', 1),
+('book_hajj_7', 1, 'অধ্যায় ১: হাজীদের জন্য জরুরি দো''আ ও তালবিয়াহ-এর ভূমিকা', 'হজ হলো ইসলামের পঞ্চস্তম্ভের অন্যতম প্রধান স্তম্ভ।', 1),
+('book_hajj_8', 1, 'অধ্যায় ১: নারী ও হজ্জের বিশেষ বিধান-এর ভূমিকা', 'হজ হলো ইসলামের পঞ্চস্তম্ভের অন্যতম প্রধান স্তম্ভ।', 1),
+('book_hajj_9', 1, 'অধ্যায় ১: বদলী হজ্জ ও অসিয়ত পালন-এর ভূমিকা', 'হজ হলো ইসলামের পঞ্চস্তম্ভের অন্যতম প্রধান স্তম্ভ।', 1),
+('book_hajj_10', 1, 'অধ্যায় ১: হজ্জ পরবর্তী জীবন ও তাকওয়া রক্ষা-এর ভূমিকা', 'হজ হলো ইসলামের পঞ্চস্তম্ভের অন্যতম প্রধান স্তম্ভ।', 1),
+('book_dua_01', 1, 'অধ্যায় ১: দৈনন্দিন দো''আ ও যিকির (হিসনুল মুসলিম)-এর সারসংক্ষেপ', 'দৈনন্দিন দো''আ ও যিকির (হিসনুল মুসলিম) সম্পর্কে বিস্তারিত প্রামাণ্য বিবরণ।', 1),
+('book_seerah_01', 1, 'অধ্যায় ১: আর-রাহীকুল মাখতূম-এর সারসংক্ষেপ', 'আর-রাহীকুল মাখতূম সম্পর্কে বিস্তারিত প্রামাণ্য বিবরণ।', 1),
+('book_seerah_02', 1, 'অধ্যায় ১: মহানবীর আদর্শ ও সুন্নাহ-এর সারসংক্ষেপ', 'মহানবীর আদর্শ ও সুন্নাহ সম্পর্কে বিস্তারিত প্রামাণ্য বিবরণ।', 1),
+('book_family_01', 1, 'অধ্যায় ১: আদর্শ মা-এর সারসংক্ষেপ', 'আদর্শ মা সম্পর্কে বিস্তারিত প্রামাণ্য বিবরণ।', 1),
+('book_family_02', 1, 'অধ্যায় ১: আদর্শ পরিবার ও দাম্পত্য সুখের চাবিকাঠি-এর সারসংক্ষেপ', 'আদর্শ পরিবার ও দাম্পত্য সুখের চাবিকাঠি সম্পর্কে বিস্তারিত প্রামাণ্য বিবরণ।', 1),
+('book_fatwa_01', 1, 'অধ্যায় ১: ইসলামী ফতোয়া সমগ্র-এর সারসংক্ষেপ', 'ইসলামী ফতোয়া সমগ্র সম্পর্কে বিস্তারিত প্রামাণ্য বিবরণ।', 1),
+('book_bidah_01', 1, 'অধ্যায় ১: শিরক, কুফর ও বিদআত বর্জন-এর সারসংক্ষেপ', 'শিরক, কুফর ও বিদআত বর্জন সম্পর্কে বিস্তারিত প্রামাণ্য বিবরণ।', 1),
+('book_bidah_02', 1, 'অধ্যায় ১: হাকীকতে মোহাম্মাদী ও মিলাদুন্নবী-এর সারসংক্ষেপ', 'হাকীকতে মোহাম্মাদী ও মিলাদুন্নবী সম্পর্কে বিস্তারিত প্রামাণ্য বিবরণ।', 1),
+('book_firqa_01', 1, 'অধ্যায় ১: ফিরকা ও বাতিল দল পরিচিতি-এর সারসংক্ষেপ', 'ফিরকা ও বাতিল দল পরিচিতি সম্পর্কে বিস্তারিত প্রামাণ্য বিবরণ।', 1),
+('book_quran_01', 1, 'অধ্যায় ১: তাফসীর ইবনে কাসীর (১ম খণ্ড)-এর সারসংক্ষেপ', 'তাফসীর ইবনে কাসীর (১ম খণ্ড) সম্পর্কে বিস্তারিত প্রামাণ্য বিবরণ।', 1),
+('book_quran_02', 1, 'অধ্যায় ১: কুরআন ও হাদিসের আলোকে জীবন-এর সারসংক্ষেপ', 'কুরআন ও হাদিসের আলোকে জীবন সম্পর্কে বিস্তারিত প্রামাণ্য বিবরণ।', 1),
+('book_eid_01', 1, 'অধ্যায় ১: কুরবানির তাৎপর্য ও বিধান-এর সারসংক্ষেপ', 'কুরবানির তাৎপর্য ও বিধান সম্পর্কে বিস্তারিত প্রামাণ্য বিবরণ।', 1),
+('book_eid_02', 1, 'অধ্যায় ১: ঈদ ও ঈদের বিধান-এর সারসংক্ষেপ', 'ঈদ ও ঈদের বিধান সম্পর্কে বিস্তারিত প্রামাণ্য বিবরণ।', 1);
+/*!40000 ALTER TABLE `islamic_book_chapters` ENABLE KEYS */;
+UNLOCK TABLES;
+
 
 --
 -- Table structure for table `islamic_book_chapters`

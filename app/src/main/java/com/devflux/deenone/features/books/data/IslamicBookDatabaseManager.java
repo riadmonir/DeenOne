@@ -219,7 +219,16 @@ public class IslamicBookDatabaseManager {
 
         Cursor c = null;
         try {
-            c = db.rawQuery("SELECT id, title, title_en, author, author_en, category, category_bn, category_en, language, page_count, file_size, description, publisher, verified_source, format FROM books ORDER BY id ASC", null);
+            String tableName = "islamic_books";
+            try {
+                c = db.rawQuery("SELECT 1 FROM islamic_books LIMIT 1", null);
+            } catch (Exception ignored) {
+                tableName = "books";
+            } finally {
+                if (c != null) { c.close(); c = null; }
+            }
+
+            c = db.rawQuery("SELECT id, title, title_en, author, author_en, category, category_bn, category_en, language, page_count, file_size, description, publisher, verified_source, format FROM " + tableName + " ORDER BY id ASC", null);
             while (c != null && c.moveToNext()) {
                 String id = c.getString(0);
                 String title = c.getString(1);
@@ -278,7 +287,18 @@ public class IslamicBookDatabaseManager {
 
         Cursor c = null;
         try {
-            c = db.rawQuery("SELECT title, content FROM chapters WHERE book_id = ? ORDER BY chapter_index ASC", new String[]{bookId});
+            String tableName = "islamic_book_chapters";
+            String colOrder = "chapter_number";
+            try {
+                c = db.rawQuery("SELECT 1 FROM islamic_book_chapters LIMIT 1", null);
+            } catch (Exception ignored) {
+                tableName = "chapters";
+                colOrder = "chapter_index";
+            } finally {
+                if (c != null) { c.close(); c = null; }
+            }
+
+            c = db.rawQuery("SELECT title, content FROM " + tableName + " WHERE book_id = ? ORDER BY " + colOrder + " ASC", new String[]{bookId});
             while (c != null && c.moveToNext()) {
                 chapters.add(new BookChapter(c.getString(0), c.getString(1)));
             }
