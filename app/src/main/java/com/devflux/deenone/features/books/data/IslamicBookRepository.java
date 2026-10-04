@@ -98,7 +98,21 @@ public class IslamicBookRepository {
             return CHAPTERS_CACHE.get(bookId);
         }
 
-        // Direct synchronous load if cache not yet populated
+        // 1. Try high-performance SQLite Database Manager
+        if (context != null) {
+            try {
+                List<com.devflux.deenone.features.books.model.BookChapter> sqliteChapters =
+                        IslamicBookDatabaseManager.getInstance(context).getChaptersForBook(bookId);
+                if (sqliteChapters != null && !sqliteChapters.isEmpty()) {
+                    CHAPTERS_CACHE.put(bookId, sqliteChapters);
+                    return sqliteChapters;
+                }
+            } catch (Exception e) {
+                Log.w(TAG, "SQLite chapters lookup: " + e.getMessage());
+            }
+        }
+
+        // 2. Direct synchronous load from bundled assets JSON if cache not yet populated
         if (context != null) {
             try {
                 android.content.res.AssetManager am = context.getAssets();
@@ -229,13 +243,16 @@ public class IslamicBookRepository {
             try {
                 List<IslamicBookEntity> allMergedBooks = new ArrayList<>();
 
-                // 1. Fetch from GitHub CDN JSON
+                // 1. Sync SQLite Database from GitHub CDN
+                IslamicBookDatabaseManager.getInstance(context).ensureDatabaseAvailable(null);
+
+                // 2. Fetch from GitHub CDN JSON
                 List<IslamicBookEntity> cdnBooks = fetchBooksFromGitHubCdn();
                 if (cdnBooks != null && !cdnBooks.isEmpty()) {
                     allMergedBooks.addAll(cdnBooks);
                 }
 
-                // 2. Ensure Canonical baseline is always included
+                // 3. Ensure Canonical baseline is always included
                 List<IslamicBookEntity> canonicalBooks = getCanonicalIslamicBooks();
                 allMergedBooks.addAll(canonicalBooks);
 
